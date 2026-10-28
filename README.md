@@ -47,7 +47,10 @@ compiled boot applier (`installer/custom-webui.applier.elf`) still omits them,
 so a device relying on it needs these two re-mounted after each boot.
 
 The version number and GitHub link shown on **WebUI Options → Info** come from
-`webui/patch/www-custom/cgi-bin/_about.conf`; bump `VERSION` there per release.
+`webui/patch/www-custom/cgi-bin/_about.conf`. Publishing a GitHub release
+(tag `vX.Y.Z`) runs `.github/workflows/release.yml`, which stamps the tag and
+date into that file, builds the `.bin` and attaches it (plus a `.sha256`) to
+the release.
 
 ## How the patch is delivered
 

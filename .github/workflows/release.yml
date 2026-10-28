@@ -1,0 +1,59 @@
+# Build the flashable .bin and attach it to a GitHub release.
+#
+# - Release published: stamps the tag (v1.2.3 -> 1.2.3) and release date into
+#   cgi-bin/_about.conf (shown on WebUI Options > Info), builds with
+#   tools/build-bin.sh and uploads the .bin + .sha256 to that release.
+# - Manual run (Actions > Release > Run workflow): same build, version left as
+#   in _about.conf, published only as a workflow artifact.
+name: Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stamp release info
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+          PUBLISHED: ${{ github.event.release.published_at }}
+        run: |
+          ABOUT=webui/patch/www-custom/cgi-bin/_about.conf
+          if [ -n "$TAG" ]; then
+            echo "$TAG" | grep -Eq '^v?[0-9A-Za-z._-]+$' || { echo "unsupported tag: $TAG" >&2; exit 1; }
+            VERSION="${TAG#v}"
+            sed -i "s|^VERSION=.*|VERSION=\"$VERSION\"|; s|^RELEASED=.*|RELEASED=\"${PUBLISHED%%T*}\"|" "$ABOUT"
+          else
+            VERSION="$(sed -n 's/^VERSION="\(.*\)"/\1/p' "$ABOUT")-dev.${GITHUB_SHA::7}"
+          fi
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          cat "$ABOUT"
+
+      - name: Build
+        run: |
+          OUT="build/socratech-webui-$VERSION.bin"
+          sh tools/build-bin.sh webui/patch/www-custom "$OUT"
+          (cd build && sha256sum "$(basename "$OUT")" > "$(basename "$OUT").sha256")
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: socratech-webui-${{ env.VERSION }}
+          path: |
+            ${{ env.OUT }}
+            ${{ env.OUT }}.sha256
+
+      - name: Attach to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "$TAG" "$OUT" "$OUT.sha256" --clobber
