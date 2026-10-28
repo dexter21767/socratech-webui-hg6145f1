@@ -30,13 +30,11 @@ mount --bind "$TARGET_DIR/html/ddns_new_inter.html" /www/html/ddns_new_inter.htm
 mount --bind "$TARGET_DIR/js/broadband_inter.js" /www/js/broadband_inter.js
 mount --bind "$TARGET_DIR/js/ddns_new_inter.js" /www/js/ddns_new_inter.js
 mount --bind "$TARGET_DIR/js/logView.js" /www/js/logView.js
-mount --bind "$TARGET_DIR/js/page_access_check.js" /www/js/page_access_check.js
 mount --bind "$TARGET_DIR/js/access.js" /www/js/access.js
 mount --bind "$TARGET_DIR/js/admin_management_inter.js" /www/js/admin_management_inter.js
 mount --bind "$TARGET_DIR/js/snpwdauth_inter.js" /www/js/snpwdauth_inter.js
 mount --bind "$TARGET_DIR/js/util.js" /www/js/util.js
 mount --bind "$TARGET_DIR/js/voice_base_inter.js" /www/js/voice_base_inter.js
-mount --bind "$TARGET_DIR/js/xhr.js" /www/js/xhr.js
 mount --bind "$TARGET_DIR/js/wlanAdvancedSettings_inter.js" /www/js/wlanAdvancedSettings_inter.js
 mount --bind "$TARGET_DIR/js/wlanAdvancedSettings_5G_inter.js" /www/js/wlanAdvancedSettings_5G_inter.js
 
