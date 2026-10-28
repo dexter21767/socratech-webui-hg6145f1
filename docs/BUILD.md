@@ -1,8 +1,12 @@
 # How `custom-webui.bin` is built
 
-Verified against both copies in this tree on 2026-10-28. The `.bin` is a FiberHome
-firmware-upgrade file that the stock "Local Upgrade" page accepts; it carries an
-ARM applier program that lays the custom web files over `/www`.
+The `.bin` is a FiberHome firmware-upgrade file that the stock "Local Upgrade"
+page accepts; it carries a payload that lays the custom web files over `/www`.
+The device writes the payload (the `patch_script` section) to `/var/patch_script`
+and runs it via `libLedState.so`'s `run_upgrade_shell` → `system()` — so the
+payload can be an **ARM ELF** (the original repo `.bin`) or a **shell script**
+(what `tools/build-bin.sh` produces, confirmed working via Local Upgrade
+2026-10-28).
 
 ## Two independent delivery shapes, same payload
 
@@ -50,11 +54,12 @@ the stored value:
 - `tools/.../custom-webui.bin` (repo): payload 532696 B, CRC `0xD3D318C8` ✓
 
 The device validates HW/SW compatibility, the ATOS magic, and the CRC32 — then
-executes the payload. There is no signature, which is why an unsigned ARM ELF
-runs. (The two root/repo `.bin`s differ only in header build-date and in which
-payload build they carry.)
+writes the payload to `/var/patch_script` and runs it (`run_upgrade_shell` →
+`system()`). There is no signature and no ELF requirement, so an unsigned ARM
+ELF *or* a shell script runs. (The two root/repo `.bin`s differ only in header
+build-date and in which payload build they carry.)
 
-## The payload (ARM applier)
+## The original payload (ARM applier)
 
 `file`: ELF 32-bit LSB pie, ARM EABI5, static-pie, stripped. Built with
 `GCC (GNU) 11.2.1` for `arm-linux-gnueabi`. Its strings show it is the compiled
@@ -72,24 +77,43 @@ The web files it installs are a **gzipped tar embedded inside the ELF** at
 payload offset `0xa12c` (44 entries = the whole `www-custom` tree in
 `../webui/patch/www-custom`).
 
-## Reproducing it
+## Building a new `.bin` — `tools/build-bin.sh`
+
+`tools/build-bin.sh` builds a flashable `.bin` from the overlay using a
+**shell-script payload** — no ARM toolchain needed:
 
 ```
-# 1. build the ARM applier (C source not in this repo; the shell script is the reference logic)
-arm-linux-gnueabi-gcc -static-pie -Os applier.c -o payload.elf
-#    applier embeds gzip(tar of www-custom) and does extract + bind-mount
-
-# 2. wrap it in the firmware header + CRC
-python3 ../tools/pack_firmware.py payload.elf custom-webui.bin
+tools/build-bin.sh [overlay_dir] [output.bin]
+#   overlay_dir  default: webui/patch/www-custom
+#   output.bin   default: build/custom-webui.bin   (build/ is git-ignored)
 ```
 
-`pack_firmware.py` (in `../tools/`) writes the 3584-byte header with the
-constants above, CRC32s the payload with init=0, and concatenates
-`header + payload`. That is the entire build.
+It:
+1. tars the overlay deterministically (`--sort=name`, fixed mtime/owner) to a
+   gzip archive;
+2. wraps it in a self-extracting `/bin/sh` payload that extracts to
+   `/var/www-custom`, remounts `/www`, bind-mounts the **whole `cgi-bin`
+   directory**, then bind-mounts every other overlay file that has a stock
+   counterpart (skipping `*.back.*`), and bounces the web server;
+3. calls `tools/pack_firmware.py` to prepend the 3584-byte header and the
+   init-0 CRC32.
 
-## What is NOT in this repo
+The whole-`cgi-bin` mount means new CGIs (e.g. `voip-switch`) are served with no
+per-file entry, and the generic file loop also covers the two JS tweaks the
+original ELF applier omitted (`admin_management_inter.js`,
+`wlanAdvancedSettings_5G_inter.js`). The deterministic tar makes the payload —
+and therefore the CRC — reproducible for a given overlay.
 
-- The C source of the ARM applier (only the compiled ELF, recoverable from
-  either `.bin` or `/fhconf/custom-webui`).
-- A Makefile / cross-toolchain setup. The reference behaviour is fully captured
-  by `../installer/custom-webui.sh`.
+Flash the result via **Management → Device Management → Local Upgrade**; the
+"Upgrade failed" message is expected (it runs the payload, then reports failure
+because it isn't real firmware). Refresh/re-login to see the overlay.
+
+## The original ELF payload (reference)
+
+The repo's `installer/custom-webui.bin` instead carries an ARM ELF applier built
+with `arm-linux-gnueabi-gcc -static-pie` that embeds `gzip(tar)` and does the
+same extract + bind-mount. Its C source isn't in the repo (only the compiled
+ELF, recoverable from the `.bin` or `/fhconf/custom-webui`), its bind-mount list
+is baked in (so it omitted the two JS tweaks), and its archive buffer is a fixed
+size (so a larger overlay can't simply be swapped in). `build-bin.sh`'s script
+payload supersedes it for new builds.
