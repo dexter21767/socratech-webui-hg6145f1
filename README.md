@@ -24,6 +24,13 @@
   - **Schedule Reboot**: إعادة تشغيل الموجّه تلقائيًا في وقت تحدده.
   - **Custom WebUI persistence**: الإبقاء على الواجهة بعد إعادة التشغيل.
 
+### تنبيه
+
+> [!WARNING]
+> هذا البرنامج مقدَّم **«كما هو»** دون أي ضمان من أي نوع. باستخدامه فإنك تتحمل **كامل المسؤولية** عن جهازك:
+> القائمون على المشروع والمساهمون فيه **غير مسؤولين** عن أي عطل في الموجّه، أو فقدان للإعدادات أو للاتصال بالإنترنت أو الهاتف، أو أي ضرر آخر قد ينتج عن استخدامه.
+> استخدمه على جهازك فقط. المشروع غير مرتبط بشركة FiberHome ولا باتصالات الجزائر.
+
 ### قبل أن تبدأ
 
 - هذه الواجهة مخصصة **فقط** لموجّه **FiberHome HG6145F1** من اتصالات الجزائر بإصدار البرنامج **RP4423**.
@@ -95,9 +102,9 @@ sh tools/build-bin.sh
 - [MrSmiiith](https://github.com/MrSmiiith): الوصول عبر SSH.
 - مجتمع **Socratech**: الترجمات، الصفحات الجديدة، والصيانة.
 
-### تنبيه
+### الترخيص
 
-استخدم هذه الواجهة على مسؤوليتك الخاصة وعلى جهازك فقط. المشروع غير مرتبط بشركة FiberHome ولا باتصالات الجزائر.
+عمل المساهمين في هذا المشروع مرخّص بموجب [رخصة MIT](LICENSE). ملفات FiberHome الأصلية وأعمال المشروع الأصلي ليست مشمولة؛ التفاصيل في [NOTICE.md](NOTICE.md).
 
 </div>
 
@@ -123,6 +130,16 @@ Join the community: [Facebook group](https://www.facebook.com/groups/socratech) 
   - **Disable TR069**: stop TR-069 from re-enabling itself.
   - **Schedule Reboot**: reboot the router automatically at a set time.
   - **Custom WebUI persistence**: keep the custom UI after a reboot.
+
+### Disclaimer
+
+> [!WARNING]
+> This software is provided **"as is"**, without warranty of any kind. By using
+> it you take **full responsibility** for your device: the maintainers and
+> contributors are **not responsible** for any damage to your router, loss of
+> settings, loss of internet or phone service, or any other harm that may result
+> from using it. Use it on your own device only. This project is not affiliated
+> with FiberHome or Algérie Télécom.
 
 ### Before you start
 
@@ -215,10 +232,11 @@ Translations, fixes and new pages are welcome. Read
 - [MrSmiiith](https://github.com/MrSmiiith): SSH access.
 - The **Socratech** community: translations, new pages and maintenance.
 
-### Disclaimer
+### License
 
-Use at your own risk, on your own device. This project is not affiliated with
-FiberHome or Algérie Télécom.
+The contributors' work in this project is released under the
+[MIT License](LICENSE). FiberHome's original files and the upstream project's
+work are not covered; see [NOTICE.md](NOTICE.md).
 
 ## Documentation
 

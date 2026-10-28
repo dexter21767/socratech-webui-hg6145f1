@@ -166,3 +166,5 @@ If you'd rather not be listed, just say so in your pull request.
 - Keep the stock behaviour working: the custom UI must never stop people from
   managing their router normally.
 - Be kind in issues and reviews.
+- By contributing, you agree that your contribution is released under the
+  [MIT License](LICENSE) (see [NOTICE.md](NOTICE.md) for what it covers).
