@@ -16,6 +16,7 @@ mount /www /www
 chmod +x "$TARGET_DIR/cgi-bin/ajax"
 
 mount --bind "$TARGET_DIR/cgi-bin/ajax" /www/cgi-bin/ajax
+mount --bind "$TARGET_DIR/cgi-bin/voip-switch" /www/cgi-bin/voip-switch
 mount --bind "$TARGET_DIR/menu/sub_menu_admin_inter" /www/menu/sub_menu_admin_inter
 mount --bind "$TARGET_DIR/css/index.css" /www/css/index.css
 mount --bind "$TARGET_DIR/css/main_style.css" /www/css/main_style.css
