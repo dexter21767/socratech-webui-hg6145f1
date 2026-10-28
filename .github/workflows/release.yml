@@ -2,7 +2,8 @@
 #
 # - Release published: stamps the tag (v1.2.3 -> 1.2.3) and release date into
 #   cgi-bin/_about.conf (shown on WebUI Options > Info), builds with
-#   tools/build-bin.sh and uploads the .bin + .sha256 to that release.
+#   tools/build-bin.sh, uploads the .bin + .sha256 to that release and sets
+#   its body to the commit log since the previous tag.
 # - Manual run (Actions > Release > Run workflow): same build, version left as
 #   in _about.conf, published only as a workflow artifact.
 name: Release
@@ -20,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history + tags, for the changelog
 
       - name: Stamp release info
         env:
@@ -57,3 +60,25 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
         run: gh release upload "$TAG" "$OUT" "$OUT.sha256" --clobber
+
+      # release body = the commits since the previous tag (all of them for the
+      # first release); replaces whatever text the release was created with
+      - name: Release notes from commits
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: |
+          PREV=$(git describe --tags --abbrev=0 "$TAG^" 2>/dev/null || true)
+          {
+            if [ -n "$PREV" ]; then echo "## Changes since $PREV"; else echo "## Changes"; fi
+            echo
+            git log --no-merges --format='- %s (%h)' "${PREV:+$PREV..}$TAG"
+            if [ -n "$PREV" ]; then
+              echo
+              echo "**Full changelog**: $REPO_URL/compare/$PREV...$TAG"
+            fi
+          } > notes.md
+          cat notes.md
+          gh release edit "$TAG" --notes-file notes.md
