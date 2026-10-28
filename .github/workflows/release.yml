@@ -1,9 +1,9 @@
 # Build the flashable .bin and attach it to a GitHub release.
 #
-# - Release published: stamps the tag (v1.2.3 -> 1.2.3) and release date into
+# - Release published: stamps the tag (v1.2.3 -> 1.2.3) into
 #   cgi-bin/_about.conf (shown on WebUI Options > Info), builds with
 #   tools/build-bin.sh, uploads the .bin + .sha256 to that release and sets
-#   its body to the commit log since the previous tag.
+#   its body to the webui: commits since the previous tag.
 # - Manual run (Actions > Release > Run workflow): same build, version left as
 #   in _about.conf, published only as a workflow artifact.
 name: Release
@@ -27,13 +27,12 @@ jobs:
       - name: Stamp release info
         env:
           TAG: ${{ github.event.release.tag_name }}
-          PUBLISHED: ${{ github.event.release.published_at }}
         run: |
           ABOUT=webui/patch/www-custom/cgi-bin/_about.conf
           if [ -n "$TAG" ]; then
             echo "$TAG" | grep -Eq '^v?[0-9A-Za-z._-]+$' || { echo "unsupported tag: $TAG" >&2; exit 1; }
             VERSION="${TAG#v}"
-            sed -i "s|^VERSION=.*|VERSION=\"$VERSION\"|; s|^RELEASED=.*|RELEASED=\"${PUBLISHED%%T*}\"|" "$ABOUT"
+            sed -i "s|^VERSION=.*|VERSION=\"$VERSION\"|" "$ABOUT"
           else
             VERSION="$(sed -n 's/^VERSION="\(.*\)"/\1/p' "$ABOUT")-dev.${GITHUB_SHA::7}"
           fi
@@ -61,8 +60,9 @@ jobs:
           TAG: ${{ github.event.release.tag_name }}
         run: gh release upload "$TAG" "$OUT" "$OUT.sha256" --clobber
 
-      # release body = the commits since the previous tag (all of them for the
-      # first release); replaces whatever text the release was created with
+      # release body = the "webui: ..." commits since the previous tag (all of
+      # them for the first release), prefix dropped; replaces whatever text the
+      # release was created with
       - name: Release notes from commits
         if: github.event_name == 'release'
         env:
@@ -74,7 +74,9 @@ jobs:
           {
             if [ -n "$PREV" ]; then echo "## Changes since $PREV"; else echo "## Changes"; fi
             echo
-            git log --no-merges --format='- %s (%h)' "${PREV:+$PREV..}$TAG"
+            LOG=$(git log --no-merges --grep='^webui: ' --format='- %s (%h)' "${PREV:+$PREV..}$TAG" \
+              | sed 's/^- webui: \(.\)/- \u\1/')
+            echo "${LOG:-- No WebUI changes.}"
             if [ -n "$PREV" ]; then
               echo
               echo "**Full changelog**: $REPO_URL/compare/$PREV...$TAG"
