@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/portmapping_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+		
+	</head>
+	<script type="text/javascript">
+		setDomain("application");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="portmapping_prompt">portmapping_prompt</font></p>
+		</div>
+	    </br>
+		<fh-fo-rm id="port_mapping_list_form">
+			<div style="float:right">
+				<input type="button" i18n="app_add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter()">
+				<input type="button" i18n="app_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+	  			<input type="button" i18n="app_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+				<br/>
+			</div>			
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="11"><font i18n="portmapping_list_title">portmapping_list_title</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="3%" align='center'><font i18n="app_id">app_id</font></td>
+					<td width="18%" align='center'><font i18n="app_wan">app_wan</font></td>
+					<td width="16%" align='center'><font i18n="app_description">app_description</font></td>
+					<td width="8%" align='center'><font i18n="app_protocol">app_protocol</font></td>
+					<td width="10%" align='center'><font i18n="app_public_ip">app_public_ip</font></td>
+					<td width="12%" align='center'><font i18n="app_public_port">app_public_port</font></td>
+					<td width="10%" align='center'><font i18n="app_private_ip">app_private_ip</font></td>
+					<td width="12%" align='center'><font i18n="app_private_port">app_private_port</font></td>
+					<td width="7%" align='center'><font i18n="app_enable">app_enable</font></td>
+					<td width="4%" align='center'></td>		
+				</tr>
+				<tbody id='port_mapping_list' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content" id = "fw_config_form" style="display: none;">
+				<div class="main_item" id="user_div">
+					<div class="main_item_name"><font i18n="app_type">app_type</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="type_user_defined" name="app_type_button" value="0" checked="checked"/><font i18n="user_defined">user_defined</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" id="type_application_defined" name="app_type_button" value="1"/><font i18n="application_defined">application_defined</font>
+					</div>
+				</div>
+				<div class="main_item" id="application_div">
+					<div class="main_item_name"><font i18n="app_application">app_application</font></div>
+					<div class="main_item_content">
+						<select id="port_mapping_application" style="width:44%" onchange="load_pre_config(this.value)"></select>
+					</div>
+				</div>
+                <div class="main_item" >
+                	<div class="main_item_name"><font i18n="app_wan">app_wan</font></div>
+                	<div class="main_item_content">
+                		<select id="port_mapping_wan" name="port_mapping_wan" style="width:44%"></select>
+                	</div>
+                </div>
+                <div class="main_item" id="application_div_mytm" style="display: none;">
+                	<div class="main_item_name"><font i18n="app_application">app_application</font></div>
+                	<div class="main_item_content">
+                		<select id="application_my_tm"   style="width:44%">
+                            <option value="1"></option>
+                            <option value="SSH">SSH</option>
+                            <option value="Telnet">Telnet</option>
+                            <option value="FTP">FTP</option> 
+                        </select>
+                	</div>
+                </div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="app_description">app_description</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_description"  name="port_mapping_description" style="width:150px"/><font style="color: #767676" i18n="app_name_tips">app_name_tips</font>
+					</div>
+					<div id="Description-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="protocol_div">
+					<div class="main_item_name"><font i18n="app_protocol">app_protocol</font></div>
+					<div class="main_item_content">
+						<select id="port_mapping_protocol"  style="width:150px">
+							<option value="TCP/UDP">TCP/UDP</option>
+							<option value="TCP">TCP</option>
+							<option value="UDP">UDP</option>
+						</select>
+					</div>
+					<div id="Protocol-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="app_public_ip">app_public_ip</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_public_ip" name="port_mapping_public_ip" style="width:150px"/> 
+					</div>
+					<div id="Public_IP-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="public_port_div">
+					<div class="main_item_name"><font i18n="app_public_port">app_public_port</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_public_port_start" name="port_mapping_public_port_start" style="width:150px">&nbsp;--&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_public_port_end" name="port_mapping_public_port_end" style="width:150px"><span class="redcolorfont">*</span>&nbsp;&nbsp;(1-65535)
+					</div>
+					<div id="Public_port-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="app_private_ip">app_private_ip</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_private_ip" name="port_mapping_private_ip" style="width:150px"/><span class="redcolorfont">*</span>
+                        <select id="host_name" style="width: 40%"></select>
+                    </div>
+					<div id="Private_IP-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="private_port_div">
+					<div class="main_item_name"><font i18n="app_private_port">app_private_port</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_private_port_start" name="port_mapping_private_port_start" style="width:150px">&nbsp;--&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="port_mapping_private_port_end" name="port_mapping_private_port_end" style="width:150px"/><span class="redcolorfont">*</span>&nbsp;&nbsp;(1-65535)
+					</div>
+					<div id="MinDestinationPort-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="app_enable_title">app_enable</font></div>
+					<div class="main_item_content">
+						<select id="port_mapping_enable" style="width:150px">
+						  <option value="1" i18n="app_enable">Enable</option>
+						  <option value="0" i18n="app_disable">Disable</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<div id="telmex_config_form">
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="port_mapping_apply" class="input_button" i18n="app_apply" i18n-set="value" onclick="do_save()"/>
+						<input type="button" id="port_mapping_cancel" class="input_button" i18n="app_cancel" i18n-set="value" onclick = "window.location.reload();"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

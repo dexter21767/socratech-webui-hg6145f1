@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Content-Type' CONTENT='no-cache'>
+	<script language ="javascript" type ="text/javascript">
+        document.write('<script type="text/javascript" src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script type="text/javascript" src="../js/stateOverview_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+		<form id="broadband_form">
+			<div class="main_header">
+				<p class="main_header_hint"><font i18n="deviceinf_prompt">deviceinf_prompt</font></p>
+			</div>
+			<br>
+			<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">	
+	            <tbody>
+                    <tr class="table_title">
+                        <td colspan="2" id="DeInf"><font i18n="DeInf">DeInf</font></td>
+                    </tr>                
+	            	<tr id="tr_softver" >
+			            <td width="25%" class="table_left"><font i18n="softver">softver</font></td>
+			            <td  class="table_right" id="SoftwareVersion"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="hardver">hardver</font></td>
+			            <td class="table_right" id="HardwareVersion"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="device_model">device_model</font></td>
+			            <td class="table_right" id="ModelName"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="device_descrip">device_descrip</font></td>
+			            <td class="table_right" id='pontype'></td>
+		            </tr>
+					<tr id="tr_manufacturer" style="display: none">
+			            <td class="table_left"><font i18n="manufacturer">manufacturer</font></td>
+			            <td class="table_right" id='Manufacturer'></td>
+		            </tr>
+					<tr id="tr_firmware_name" style="display: none">
+			            <td class="table_left"><font i18n="firmware_name">firmware_name</font></td>
+			            <td class="table_right" id='firmware_name'></td>
+		            </tr>
+					<tbody  id="onu_parammeter" style="display: none">
+						<tr>
+							<td class="table_left"><font i18n="serial_number">serial_number</font></td>
+							<td class="table_right" id='serial_number'></td>
+						</tr>		            
+						<tr id="tr_ONU_state">
+							<td class="table_left"><font i18n="ONU_state">ONU_state</font></td>
+							<td class="table_right" id="ONTStatus"></td>
+						</tr>
+						<tr id="tr_ONU_regstate">
+							<td class="table_left"><font i18n="ONU_reg_title">ONU_reg_title</font></td>
+							<td class="table_right" id="ONU_regstate"></td>
+						</tr>
+						<tr>
+							<td class="table_left">LOID</td>
+							<td class="table_right" id="LOID"></td>
+						</tr>
+					</tbody>
+		            <tr>
+			            <td class="table_left"><font i18n="CPU_rate">CPU_rate</font></td>
+			            <td class="table_right" id="CPU_rate"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="mem_rate">mem_rate</font></td>
+			            <td class="table_right" id="mem_rate"></td>
+		            </tr>
+					<tbody  id="flash" style="display: none">
+						<tr>
+						    <td class="table_left"><font i18n="flash_rate">flash_rate</font></td>
+						    <td class="table_right" id="flash_rate"></td>
+						</tr>
+					</tbody>
+		            <tr>
+			            <td class="table_left"><font i18n="server_port">server_port</font></td>
+			            <td class="table_right" id="server_port">80</td>
+		            </tr>
+					<tr>
+					    <td class="table_left"><font i18n="system_uptime">system_uptime</font></td>
+					    <td class="table_right" id="system_uptime"></td>
+					</tr>
+					<tr>
+					    <td class="table_left"><font i18n="mac_addr">mac_addr</font></td>
+					    <td class="table_right" id="mac_addr"></td>
+					</tr>
+					<tr id="tr_usb" style="display: none">
+                        <td class="table_left"><font i18n="usb_status">usb_status</font></td>
+                        <td class="table_right" id='usb_status'></td>
+                    </tr>
+                    <tr id="tr_dongle" style="display: none">
+                        <td class="table_left"><font i18n="dongle_status">dongle_status</font></td>
+                        <td class="table_right" id='dongle_status'></td>
+                    </tr>
+					<tr id="tr_compile_time" style="display: none">
+			            <td class="table_left"><font i18n="compile_time">compile_time</font></td>
+			            <td class="table_right" id='compile_time'></td>
+		            </tr>
+					<tr id="tr_os_version" style="display: none">
+			            <td class="table_left"><font i18n="os_version">os_version</font></td>
+			            <td class="table_right" id='os_version'></td>
+		            </tr>
+					<tr id="tr_bandwidth_usage" style="display: none">
+			            <td class="table_left"><font i18n="bandwidth_usage">bandwidth_usage</font></td>
+			            <td class="table_right" id='bandwidth_usage'></td>
+		            </tr>
+					<tr id="tr_transceivertemperature" style="display: none">
+			            <td class="table_left"><font i18n="transceivertemperature">transceivertemperature</font></td>
+			            <td class="table_right" id='transceivertemperature'></td>
+		            </tr>
+					<tr id="tr_supply_voltage" style="display: none">
+			            <td class="table_left"><font i18n="supply_voltage">supply_voltage</font></td>
+			            <td class="table_right" id='supply_voltage'>12V</td>
+		            </tr>
+					<tbody  id="catv" style="display: none">
+					<tr>
+							
+					    <td class="table_left"><font i18n="catv_state">catv_state</font></td>
+					    <td class="table_right" id="catv_state"></td>
+					</tr>
+					<tr>
+					    <td class="table_left"><font i18n="catv_received_power">catv_received_power</font></td>
+					    <td class="table_right" id="catv_received_power"></td>
+					</tr>
+					<tr>
+					    <td class="table_left"><font i18n="catv_rf_power">catv_rf_power</font></td>
+					    <td class="table_right" id="catv_rf_power"></td>
+					</tr>
+					</tbody >
+					<tr id="tr_uplink_mode" style="display: none">
+			            <td class="table_left"><font i18n="Uplink Mode">Uplink Mode</font></td>
+			            <td class="table_right" id="uplink_mode"></td>
+		            </tr>
+					<tr id="tr_olt_vendor_id" style="display: none">
+			            <td class="table_left"><font i18n="olt_vendor_id">OLT Vendor ID</font></td>
+			            <td class="table_right" id="olt_vendor"></td>
+		            </tr>
+		            <tr id="tr_onur_id" style="display: none">
+			            <td class="table_left"><font i18n="onu_id">ONU ID</font></td>
+			            <td class="table_right" id="onu_id"></td>
+		            </tr>
+                </tbody>
+            </table>
+		</form>
+	</body>
+</html>

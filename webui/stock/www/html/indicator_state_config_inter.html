@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/indicator_state_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("indicator_state_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="indicator_state_prompt">indicator_state_prompt</font></p>
+		</div>
+        <br/>
+		<form id="ddos_form" method="post">
+			<div class="table_bg">
+				<div class="table_title"><font i18n="indicator_switch_head">indicator_switch_head</font></div>
+				<div class="main_content">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="indicator_switch_title">indicator_switch_title</font></div>
+						<div class="main_item_content">
+							<input type="radio" name="indicator_switch" id="indicator_switch_on" value="on" /><font i18n="sw_on">sw_on</font>&nbsp;&nbsp;
+							<input type="radio" name="indicator_switch" id="indicator_switch_off" value="off"/><font i18n="sw_off">sw_off</font>
+							&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						</div>
+					</div>				
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="btn_apply" class="input_button" i18n="btn_apply" i18n-set="value" onclick="save_apply()"/>
+						<input type="button" id="btn_cancel" class="input_button" i18n="btn_cancel" i18n-set="value" onclick="window.location.reload();"/>
+					</div>
+				</div>
+		    </div>
+		</form>
+	</body>
+</html>

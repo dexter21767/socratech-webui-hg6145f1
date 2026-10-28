@@ -1,0 +1,19 @@
+{
+  "portal_configPrompt": "Nesta página você pode configurar o portal. O navegador exibe uma página da web especial com base no tipo de dispositivo quando você acessa a Internet pela primeira vez.",
+  "Enable_Portal_title": "Habilitar Portal",
+  "default_redirection_url_title": "URL de redirecionamento padrão",
+  "inet_apply": "Aplicar",
+  "inet_cancel": "Cancelar",
+  "portal_configListHead": "Lista de configurações do portal",
+  "fw_filterID": "ID",
+  "dev_type": "Tipo de dispositivo",
+  "redirect_url": "Endereço URL de redirecionamento",
+  "illegal_value_alert": "Algum valor é ilegal!",
+  "app_most8RulesAlert": "Você pode configurar até 8 regras!",
+  "no_rules_alert": "Não existem regras neste momento. Você não pode excluí-los.",
+  "no_selected_rules_alert": "No momento não existe nenhuma regra selecionada, não pode ser excluída!",
+  "delete_alert": "Tem certeza de que deseja excluir a regra selecionada?",
+  "repeat_with_the_existing_rules": "Repita com as regras existentes. Por favor, reconfigure-o!",
+  "portal_add": "Adicionar",
+  "portal_delete": "Excluir"
+}

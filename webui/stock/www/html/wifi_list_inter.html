@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');	
+		document.write('<script  src="../js/wifi_list_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<fh-fo-rm>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="wifi_macListPrompt" id="wifi_macListPrompt">wifi_macListPrompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			 <tbody>
+			<tr class="tabal_head">
+				<td colspan="5"><font i18n="wifi_24GmacListHead">wifi_macListHead</font></td>
+			</tr>
+				<tr class="table_head_title" id="wifi_2G_inter">
+					<td id="td_id" width="1%"><font i18n="ID">ID</font></td>
+					<td id="td_ssid" width="12%"><font i18n="SSID">SSID</font></td>
+					<td id="td_hostname" width="12%"><font i18n="Hostname">Hostname</font></td>
+					<td id="td_mac" width="15%"><font i18n="MAC">MAC</font></td>
+					<td id="td_ip" width="11%"><font i18n="IP_ADD">IP_ADD</font></td>
+					<td id="td_negotiationRate"  width="10%"><font i18n="Receiving_rate">Sending_rate</font></td>
+					<td id="td_connectDate"  style="display: none;" width="13%"><font i18n="Connect_date">Connect_date</font></td>
+					<td id="td_channel" style="display: none;" width="7%"><font i18n="Channel">Channel</font></td>
+					<td id="td_receivingRate" style="display: none;" width="8%"> <font i18n="Sending_rate">Receiving_rate</font></td>
+					<td id="td_signal"  style="display: none;" width="7%"><font i18n="Signal">Signal</font></td>
+					<td id="td_Noise" style="display: none;"  width="15%"><font i18n="Noise">Noise</font></td>
+					<td id="td_antenna_number" style="display: none;" width="15%"><font i18n="antenna_number">antenna_number</font></td>
+					<td id="td_uptime"  style="display: none;" width="20%"><font i18n="Up_time">Up_time</font></td>
+                    <td id="td_rssi" style="display: none;" width="15%"><font i18n="rssi">rssi</font></td>
+                    <td id="td_leasetime"  style="display: none;" width="20%"><font i18n="lease_time">lease_time</font></td>
+				</tr>
+				<tr class="table_head_title" id="wifi_2G_rom" style="display: none;">
+					<td  width="3%"><font i18n="ID">ID</font></td>
+					<td  width="11%"><font i18n="SSID">SSID</font></td>
+					<td  width="15%"><font i18n="MAC">MAC</font></td>
+					<td  width="15%"><font i18n="IP_ADD">IP_ADD</font></td>
+					<td  width="15%"><font i18n="Register_Time">Register Time (s)</font></td>
+					<td  width="15%"><font i18n="TX_Rate">TX Rate (Mbit/s)</font></td>
+					<td  width="15%"><font i18n="RX_Rate">RX Rate (Mbit/s)</font></td>
+					<td  width="11%"><font i18n="Receive_Signal">Receive Signal (dBm)</font></td>
+				</tr>
+			</tbody>
+			<tbody id="user_list"></tbody>
+        </table>
+		<br/>
+        <div  id="5g";>
+		<table class="table_bg"; border="0" cellpadding="0" cellspacing="1" width="100%">
+			 <tbody>
+			<tr class="tabal_head">
+				<td colspan="5"><font i18n="wifi_5GmacListHead">wifi_5GmacListHead</font></td>
+			</tr>
+				<tr class="table_head_title" id="wifi_5G_inter">
+					<td id="td_id" width="1%"><font i18n="ID">ID</font></td>
+					<td id="td_ssid" width="12%"><font i18n="SSID">SSID</font></td>
+					<td id="td_hostname" width="12%"><font i18n="Hostname">Hostname</font></td>
+					<td id="td_mac" width="15%"><font i18n="MAC">MAC</font></td>
+					<td id="td_ip" width="11%"><font i18n="IP_ADD">IP_ADD</font></td>
+					<td id="td_negotiationRate" width="10%"><font i18n="Receiving_rate">Sending_rate</font></td>
+					<td id="td_5g_connectDate"  style="display: none;" width="13%"><font i18n="Connect_date">Connect_date</font></td>
+					<td id="td_5g_channel" style="display: none;" width="7%"><font i18n="Channel">Channel</font></td>
+					<td id="td_5g_receivingRate" style="display: none; width="8%"><font i18n="Sending_rate">Receiving_rate</font></td>
+					<td id="td_5g_signal"  style="display: none; width="7%"><font i18n="Signal">Signal</font></td>
+					<td id="td_5g_Noise" style="display: none;  width="15%"><font i18n="Noise">Noise</font></td>
+					<td id="td_5g_antenna_number" style="display: none; width="15%"><font i18n="antenna_number">antenna_number</font></td>
+					<td id="td_5g_uptime"  style="display: none;" width="20%"><font i18n="Up_time">Up_time</font></td>
+                    <td id="td_5g_rssi" style="display: none;" width="15%"><font i18n="rssi">rssi</font></td>
+                    <td id="td_5g_leasetime"  style="display: none;" width="20%"><font i18n="lease_time">lease_time</font></td>
+				</tr>
+				<tr class="table_head_title" id="wifi_5G_rom" style="display: none;">
+					<td  width="3%"><font i18n="ID">ID</font></td>
+					<td  width="11%"><font i18n="SSID">SSID</font></td>
+					<td  width="15%"><font i18n="MAC">MAC</font></td>
+					<td  width="15%"><font i18n="IP_ADD">IP_ADD</font></td>
+					<td  width="15%"><font i18n="Register_Time">Register Time (s)</font></td>
+					<td  width="15%"><font i18n="TX_Rate">TX Rate (Mbit/s)</font></td>
+					<td  width="15%"><font i18n="RX_Rate">RX Rate (Mbit/s)</font></td>
+					<td  width="11%"><font i18n="Receive_Signal">Receive Signal (dBm)</font></td>
+				</tr>
+			</tbody>
+			<tbody id="user_5glist"></tbody>
+		</table>
+        </div>
+    </fh-fo-rm>
+</body>
+</html>

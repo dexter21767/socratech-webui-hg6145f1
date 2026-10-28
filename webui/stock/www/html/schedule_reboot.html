@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/schedule_reboot.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("schedule_reboot");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 160px;}
+		
+		#progress
+		{
+			height: 24px;
+			width: 200px;
+			border: none;
+		}
+		.inner-progress 
+		{
+			background: #2C5EA4;
+		}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="schedule_reboot_Prompt">schedule_reboot_Prompt</font></p>
+		</div>
+		<br/>
+		<form id="schedule_settings_form" method="post">
+			<div class="main_content">
+				<div class="table_title table_bg"><font i18n="schedule_reboot_head">schedule_reboot_head</font></div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="schedule_reboot_head">schedule_reboot_head</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="schedule_reboot_enable" name="schedule_reboot_enable" value="1" checked="checked"><font i18n="schedule_reboot_enableTitle">schedule_reboot_enableTitle</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="schedule_reboot_disable" name="schedule_reboot_enable" value="0"><font i18n="schedule_reboot_disableTitle">schedule_reboot_disableTitle</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="table_bg" id="fw_time_day" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="fw_time">fw_time</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" value="00" autocomplete="off" id="start_hour"  name="start_hour" style="width:150px"/><font i18n="hour">hour</font> :
+							<input type="text" class="input_text" value="00" autocomplete="off" id="start_min" name="start_min" style="width:150px"/> <font i18n="min">min</font> 
+						</div>
+						<div id="Hour-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item" style="height: 56px;">
+						<div class="main_item_name" style="height: 56px;"><font i18n="fw_day">fw_day</font></div>
+						<div class="main_item_content" style="height: 28px;margin :0px">
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='eth0' id='Everyday'><span type='text' id='lantext1' i18n="Everyday">Everyday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='1' id='Mon'><span type='text' id='lantext2' i18n="Monday">Monday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='2' id='Tue'><span type='text' id='lantext3' i18n="Tuesday">Tuesday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='3' id='Wed'><span type='text' id='lantext4' i18n="Wednesday">Wednesday</span></div>
+						</div>
+						<div class="main_item_content" style="height: 28px;">
+							<div class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='4' id='Thu'><span type='text' id='lantext1' i18n="Thursday">Thursday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='5' id='Fri'><span type='text' id='lantext2' i18n="Friday">Friday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='6' id='Sat'><span type='text' id='lantext3' i18n="Saturday">Saturday</span></div>
+							<div  class='week_day' style="width: 108px;"><input type='checkbox' name='dayofweek' value='7' id='Sun'><span type='text' id='lantext4' i18n="Sunday">Sunday</span></div>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>				
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="schedule_reboot_apply" onclick="saveApply()" i18n="schedule_reboot_apply" i18n-set="value" class="input_button">&nbsp;&nbsp;&nbsp;
+						<input type="button" id="schedule_reboot_cancel" onclick="CancelBtn()" i18n="schedule_reboot_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
+
+

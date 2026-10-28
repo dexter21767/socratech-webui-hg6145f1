@@ -1,0 +1,129 @@
+{
+	"status": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "status_overview", "title":"Device_Information", 
+				"thirdmenus": [
+					{"name":"status_overview_ip", "title":"Device_Information", "src": "stateOverview_inter.html"}
+				]
+			},
+			{"name": "status_wifi", "title":"wireless_state", 
+				"thirdmenus": [
+					{"name":"status_wifi_info", "title":"wireless_state", "src": "wifi_info_inter.html"},
+					{"name":"status_wifi_info5g", "title":"5Gwifistate", "src": "wifi_info_inter5g.html"},
+					{"name":"status_wifi_list", "title":"wifi_mac_list", "src": "wifi_list_inter.html"}
+				]
+			},
+			{"name": "status_wan", "title":"wan_state", 
+				"thirdmenus": [
+					{"name":"status_wan_ip", "title":"wan_state", "src": "ipconInfo_inter.html"}
+				]
+			},
+			{"name": "status_lan", "title":"lan_state", 
+				"thirdmenus": [
+					{"name":"status_lan_lan", "title":"lan_state", "src": "statslan_inter.html"},
+					{"name":"ethernetPorts", "title":"ethernetPorts", "src": "ethernetPorts.html"},
+					{"name":"status_dhcp_userlist", "title":"dhcp_userlist", "src": "dhcp_user_list_inter.html"}
+				]
+			},
+			{"name": "status_pon", "title":"Optical_Power", 
+				"thirdmenus": [
+					{"name":"status_pon_link", "title":"Optical_Power", "src": "pon_link_info_inter.html"}
+				]
+			},
+			{"name": "status_voice", "title":"VOIP_State", 
+				"thirdmenus": [
+					{"name":"status_voice_info", "title":"VOIP_State", "src": "voice_info_inter.html"}
+				]
+			}
+		]
+	},
+	"network": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "network_wifi", "title":"wlan_settings",
+				"thirdmenus": [
+					{"name":"network_wifi_base", "title":"basic", "src": "wlanBasicSettings_inter.html"},
+					{"name":"network_wifi_advance", "title":"security", "src": "wlanAdvancedSettings_inter.html"},
+					{"name":"network_wifi_control", "title":"wifiPowercontrol", "src": "wlanControl_inter.html"},
+					{"name":"network_wifi_base5G", "title":"5Gbasic", "src": "wlanBasicSettings_5G_inter.html"},
+					{"name":"network_wifi_advance5G", "title":"5Gsecurity", "src": "wlanAdvancedSettings_5G_inter.html"},
+					{"name":"network_wifi_control5G", "title":"5GwifiPowercontrol", "src": "wlanControl_5G_inter.html"},
+					{"name":"network_wifi_wps", "title":"WPS", "src": "wlanwps_inter.html"},
+					{"name":"network_wifi_acl", "title":"wifi_acl", "src": "wifi_acl_inter.html"}
+				]
+			},
+			{"name": "network_lan", "title":"lan_settings",
+				"thirdmenus": [
+					{"name":"network_lan_v4", "title":"lan_settings", "src": "lan_ipv4_inter.html"},
+					{"name":"network_dhcp_lan", "title":"dhcp_lan_settings", "src": "dhcp_lan_inter.html"}
+				]
+			},
+			{"name": "network_wan", "title":"broadband",
+				"thirdmenus": [
+					{"name":"network_wan_broadbund", "title":"internet", "src": "broadband_inter.html"}
+				]
+			}
+		]
+	},
+	"security": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "security_wan", "title":"firewall",
+				"thirdmenus": [
+					{"name":"security_firewall_firewall", "title":"fw_enable", "src": "firewall_enable_inter.html"},
+					{"name":"security_mac_mac", "title":"macaddr_filter", "src": "mac_filter_inter.html"}
+				]
+			}		
+		]
+	},
+	"app": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "app_ddns", "title":"DDNS",
+				"thirdmenus": [
+					{"name":"app_ddns_ddns", "title":"DDNS_Settings", "src": "ddns_new_inter.html"}
+				]
+			},
+			{"name": "app_port_mapping", "title":"Port_Mapping",
+				"thirdmenus": [
+					{"name":"app_portmapping_portmapping", "title":"Port_Mapping", "src": "portmapping_inter.html"}
+				]
+			},
+			{"name": "app_nat", "title":"NAT",
+				"thirdmenus": [
+					{"name":"app_nat_alg", "title":"NAT", "src": "nat.html"}
+				]
+			},
+			{"name": "app_upnp", "title":"UPNP",
+				"thirdmenus": [
+					{"name":"app_upnp_upnp", "title":"UPNP", "src": "upnp.html"}
+				]
+			},
+			{"name": "app_dmz", "title":"DMZ",
+				"thirdmenus": [
+					{"name":"app_nat_dmz", "title":"DMZ", "src": "dmz_inter.html"}
+				]
+			},
+			{"name": "app_gre_tunnel", "title":"GRE tunnel",
+				"thirdmenus": [
+					{"name":"app_gre_tunnel", "title":"GRE Tunnel", "src": "gre_tunnel_claro.html"}
+				]
+			}
+		]
+	},
+	"manage": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "manage_device", "title":"device_admin",
+				"thirdmenus": [
+					{"name":"manage_device_restore", "title":"restore", "src": "restoreDefault.html"},
+					{"name":"manage_device_upgrade", "title":"update", "src": "ledstate.html"},
+					{"name":"manage_device_cfgfile", "title":"down_cfgfile", "src": "down_cfgfile.html"},
+					{"name":"manage_device_reboot", "title":"reboot", "src": "reboot.html"},
+					{"name":"manage_device_ntp", "title":"checktime", "src": "ntp_inter.html"}
+				]
+			}
+		]
+	}
+}

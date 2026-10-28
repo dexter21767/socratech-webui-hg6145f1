@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+				document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/default_pwdmodify_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("account");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="account_modify_prompt">account_modify_prompt</font></p>
+		</div>
+		<br>
+		<form id="userManagementForm" method="post">
+            <div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+                <div class="table_title">
+                    <div colspan="2"><font i18n="account_manage_title">Account Management</font></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="name_title">name_title</font></div>
+                    <div class="main_item_content"><input autocomplete="off" maxlength="32" name="username" id="username"  disabled="disabled" style="width: 170px"/>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="accountSelf_oldPwdTitle">accountSelf_oldPwdTitle</font></div>
+                    <div class="main_item_content"><input class="fh-text-security"  oncopy="return false" oncut="return false" type="text" maxlength="32" autocomplete="off" name="password_old" id="password_old" style="width: 170px" /><span class="redcolorfont">*</span></div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="ac_pwd">ac_pwd</font></div>
+                    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text" maxlength="32" autocomplete="off" name="password_new" id="password_new" style="width: 170px"/><span class="redcolorfont">*</span><font i18n="passwordTips_8">passwordTips_8</font>
+					<span style="color:grey"></span>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="ac_pwd2">ac_pwd2</font></div>
+                    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text" maxlength="32" autocomplete="off" name="password_new_confirm" id="password_new_confirm" style="width: 170px"/><span class="redcolorfont">*</span>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+				<div class="table_title">
+				    <div colspan="2"><font i18n="bswifi_title">bs_wifi_title</font></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="bandsteering_button">bs_title</font></div>
+					<div class="main_item_content">
+				    <div class="switch_content switch_content_off" id="WlanEnable_container">
+							<input type="hidden" name="WlanEnable_checkbox" id="WlanEnable_checkbox">
+					</div>
+					</div>
+				</div>
+				<div id="bs" style="display: none;">
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_name_title">ssid1_name_title</font></div>
+				    <div class="main_item_content"><input autocomplete="off" maxlength="32" name="ssidname_bs" id="ssidname_bs"  style="width: 170px"/><span class="redcolorfont">*</span><font i18n="ssidNameTips">ssidNameTips</font>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd_title">bs_pwd_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text"  maxlength="64" autocomplete="off" name="password_bs" id="password_bs" style="width: 170px" /><span class="redcolorfont">*</span><font i18n="ssidpasswordTips_8">ssidpasswordTips_8</font></div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd2_title">New bs_pwd2_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text" maxlength="64" autocomplete="off" name="password_confirm_bs" id="password_confirm_bs" style="width: 170px"/><span class="redcolorfont">*</span>
+					<span style="color:grey"></span>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				</div>
+				<div id="2gwifi">
+				<div class="table_title">
+				    <div colspan="2"><font>2.4G SSID</font></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_name_title">ssid1_name_title</font></div>
+				    <div class="main_item_content"><input autocomplete="off" maxlength="32" name="ssidname_2" id="ssidname_2"   style="width: 170px"/><span class="redcolorfont">*</span><font i18n="ssidNameTips">ssidNameTips</font>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd_title">ssid1_pwd_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text"  maxlength="64" autocomplete="off" name="password_2" id="password_2" style="width: 170px" /><span class="redcolorfont">*</span><font i18n="ssidpasswordTips_8">ssidpasswordTips_8</font></div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd2_title">New ssid1_pwd2_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text" maxlength="64" autocomplete="off" name="password_confirm" id="password_confirm" style="width: 170px"/><span class="redcolorfont">*</span>
+					<span style="color:grey"></span>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				</div>
+				<div id="5gwifi">
+				<div class="table_title">
+				    <div colspan="2"><font>5G SSID</font></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_name_title">ssid1_name_title</font></div>
+				    <div class="main_item_content"><input autocomplete="off" maxlength="32" name="ssidname_5" id="ssidname_5"  style="width: 170px"/><span class="redcolorfont">*</span><font i18n="ssidNameTips">ssidNameTips</font>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd_title">ssid1_pwd_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text"  maxlength="64" autocomplete="off" name="password_5" id="password_5" style="width: 170px" /><span class="redcolorfont">*</span><font i18n="ssidpasswordTips_8">ssidpasswordTips_8</font></div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+				    <div class="main_item_name"><font i18n="ssid1_pwd2_title">New ssid1_pwd2_title</font></div>
+				    <div class="main_item_content"><input class="fh-text-security" oncopy="return false" oncut="return false" type="text" maxlength="64" autocomplete="off" name="password_confirm_5" id="password_confirm_5" style="width: 170px"/><span class="redcolorfont">*</span><span style="color:grey"></span>
+				    </div>
+				    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				</div>
+                <div class="main_item">   
+                    <div class="main_submit" style="width: 25%;"></div>             
+                    <div class="main_submit" style="width: 75%;">
+                        <input type="button" id="inet_apply" class="input_button" id="apply" name="apply" onclick="saveApply()" i18n="btnApply1" i18n-set="value">&nbsp; &nbsp;
+                        <input type="button" id="inet_cance" class="input_button" i18n="cancelValue" i18n-set="value" onclick="window.location.reload()"/>
+						<input type="button" id="inet_skip" class="input_button" i18n="skip" i18n-set="value" onclick="gotoMenuPage()" style="margin-left:10px ;"/>
+                    </div>
+                </div>               
+            </div>
+		</form>
+	</body>
+</html>

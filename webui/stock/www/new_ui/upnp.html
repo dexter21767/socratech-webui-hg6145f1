@@ -1,0 +1,107 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/upnp.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+
+<body class='main_config_body'>
+	<form id="upnp_form" method="post">
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="upnp_enable_title">upnp_enable_title</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" id="upnp_enable" name="upnp_enable" value="enable" />
+						<font i18n="upnp_enable">upnp_enable</font>
+						<input type="radio" id="upnp_disable" name="upnp_enable" value="disable" />
+						<font i18n="upnp_disable">upnp_disable</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="WAN_name">WAN_name</font>
+				</div>
+				<div class="main_item_content">
+					<select id="wan_name" class="select">
+
+					</select>
+				</div>
+			</div>
+			<div class="main_item" id="div_advertisement_period" style="display:none">
+				<div class="main_item_name">
+					<font i18n="advertisement_period_title">advertisement_period_title</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" style="width:100px;" disabled="disabled"
+						id="advertisement_period" value="30" />
+					<font i18n="min_tips">Min</font>
+				</div>
+			</div>
+			<div class="main_item" id="div_advertisement_time" style="display:none">
+				<div class="main_item_name">
+					<font i18n="advertisement_time_title">advertisement_time_title</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" style="width:100px;" disabled="disabled"
+						id="advertisement_time_to_live" value="4" />
+					<font i18n="hop_tips">Hop</font>
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_item_content">
+					<input type="button"  class="input_button" i18n="upnp_apply" i18n-set="value" id="upnp_save_apply" onclick="save_apply()" />
+				</div>
+			</div>
+		</div>
+		<br>
+		<table id="tb_upnpInfo" style="display: none" width="100%" class="table_bg" cellspacing="1" cellpadding="0"
+			border="0">
+			<tr class="table_head_title">
+				<td width="8%" align='center'>
+					<font i18n="no_title">no_title</font>
+				</td>
+				<td width="20%" align='center'>
+					<font i18n="ip_addr">ip_addr</font>
+				</td>
+				<td width="15%" align='center'>
+					<font i18n="externalPort">externalPort</font>
+				</td>
+				<td width="15%" align='center'>
+					<font i18n="internalPort">internalPort</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="protocol">protocol</font>
+				</td>
+				<td width="22%" align='center'>
+					<font i18n="description">description</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="status">status</font>
+				</td>
+			</tr>
+			<tbody id='upnp_list' style="font-size: 12px">
+				<tr class="table_01">
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+					<td style="text-align: center;">--</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+
+</html>

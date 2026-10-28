@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/wlanwps_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wps");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="wps_prompt">wps_prompt</font></p>
+		</div>
+		<form id="wlanAdv_settings_form">
+			<br>
+			<div class="main_content">
+				<div class="main_item" id="div_wps_bandSelec">
+					<div class="main_item_name"><font i18n="wps_bandSelec_head">Band Select</font></div>
+					<div class="main_item_content">
+						<select name="wifi_sel" id="wifi_sel" class="select_short" style="width:158px">
+							<option value="1">2.4G</option>
+							<option value="5">5G</option>
+						</select>
+					</div>
+				</div>
+				<br id="br_id"/>
+				<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+					<div class="table_title">
+						<div colspan="2"><font i18n="WPS_enable_head">WPS_enable_head</font></div>
+					</div>
+					<div class="main_item">
+							<div class="main_item_name"><font i18n="WPS_enable_head">WPS_enable_head</font></div>
+							<div class="main_item_content">
+								<input type="checkbox" id="wps_enable" name="wps_enable">
+							</div>
+					</div>
+					<div class="main_button" id="wireless_apply">	
+			                <div class="main_submit" style="width: 25%;"></div>				
+			                <div class="main_submit" style="width: 75%;">
+								<input type="button" class="input_button" id="wps_enable_apply" i18n="wps_apply" i18n-set="value" onclick="saveApplyEnable()"/>&nbsp; &nbsp;
+								<input type="button" class="input_button" id="wps_enable_cancel" i18n="WPSCancel" i18n-set="value" onclick="window.location.reload()"/>
+							</div>
+					</div>
+					<br/>	
+					<br/>	
+				</div>							
+				<br>
+				<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+					<div class="table_title">
+						<div colspan="2"><font i18n="WPS_cfg_head">WPS_cfg_head</font></div>
+					</div>	
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="wps_statetitle">wps_statetitle</font></div>
+						<div class="main_item_content" id="wps_state"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><input type="radio" name="wps_style" value="PIN" checked id="wps_style_p">&nbsp;<font i18n="wps_PINtitel">wps_PINtitel</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short" maxlength="8" autocomplete="off" id="wps_PIN" name="wps_PIN"/>
+						</div>
+						<div id="wps_PIN-error"  class="main_item_error_hint_extra"></div>
+					</div>
+						
+						
+						<!-- <div class="main_item_name"><font i18n="wps_PINer">wps_PINer</font></div> -->
+						<!-- <div class="main_item_content">
+							<input type="text" class="input_text input_short" maxlength="8" autocomplete="off" id="wps_PIN" name="wps_PIN"/>
+						</div> -->
+						
+				
+				</div>
+				<!-- <div class="main_item">
+					<div class="main_item_name"><font i18n="wps_PINer">wps_PINer</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text input_short" maxlength="8" autocomplete="off" id="wps_PIN" name="wps_PIN"/>
+					</div>
+					<div id="wps_PIN-error" class="main_item_error_hint_extra"></div>
+				</div> -->
+				<div class="main_item">
+					<div class="main_item_content" style="width: 100%">
+						<input type="radio" name="wps_style" value="button" id="wps_style_b">&nbsp;<font i18n="wps_buttontitel">wps_buttontitel</font>
+					</div>
+				</div>
+				<div class="main_item_content_tip" style="display: none" id="multiap_tip">
+					<p style="color:red; font-weight: bold">Multi-AP is Enable ! You can't configure wifi parameters !</p>&nbsp;
+				</div>
+				<div class="main_button" id="wireless_apply2">	
+	                <div class="main_submit" style="width: 25%;"></div>				
+	                <div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="WPS_connect" i18n="WPSconnect" i18n-set="value" onclick="saveApply()"/>&nbsp; &nbsp;
+						<input type="button" class="input_button" id="WPS_cancel" i18n="WPSCancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

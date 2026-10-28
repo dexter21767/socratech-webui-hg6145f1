@@ -1,0 +1,66 @@
+{
+"qos_prompt":"On this page, you can config Qos parameters.",
+
+"qos_classDSCPTips":"(0-63)",
+"qos_class802Title2":"802.1p Maked", 
+"qos_class802Tips":"(0-7)",
+"qos_classType1Title":"Class 1",
+"qos_classMin1Title2":"Min Value", 
+"qos_classMax1Title2":"Max Value", 
+"qos_classProtocol1Title2":"Protocol", 
+"qos_classType2Title":"Class 2",
+"qos_classType3Title":"Class 3",
+
+"qos_cfgApplyTitle":"QoS Settings Apply",
+"qos_dixableTitle":"Disable",
+"qos_classRuleListHead":"Data Stream Classification",
+"qos_classNoTitle":"Data Stream Index",
+"qos_classQueueTitle":"Enter Queue",
+"qos_classDSCPTitle2":"DSCP/TC Maked", 
+"qos_classTypeNoTitle":"Class",
+"qos_classTypeTitle":"Type",
+
+"qos_priServiceTitle2":"Service Name", 
+"qos_priRuleListHead":"Service Priority", 
+
+"qos_weiQueueHead":"Queue", 
+"qos_weiWeightHead":"Weight (%)", 
+"qos_weiEnableHead":"Enable", 
+"qos_priPriorityHead":"Priority", 
+"qos_planTitle":"Dispatch Mode", 
+"qos_planPriorityTip":"Priority", 
+"qos_planWeightTip":"Weight", 
+"qos_802FlagTitle":"Enable 802-1_P Maked", 
+"qos_dsctFlagTitle":"Enable DSCT/TC Maked", 
+"qos_bandwidthTitle":"Total Bandwidth", 
+"qos_modeTitle":"QoS Mode", 
+"qos_cfgHead":"Queue Settings", 
+
+"qos_class_add":"Add", 
+"qos_class_delete":"Delete", 
+"qos_class_deleteAll":"DeleteAll",
+
+"qos_classRuleApply":"Apply", 
+"qos_classRuleCancel":"Cancel",
+
+"option_chose":"please select",    
+"qos_802Flag_option":"Maked as 0",
+"qos_802Flag_option2":"Transparent Trans Curren Value",
+"qos_802Flag_option3":"Maked as New Value",
+"qos_classType1_option1":"Source MAC Addr",
+"qos_classType1_option2":"802.1p",
+"qos_classType1_option3":"Source IP Addr",
+"qos_classType1_option4":"Destination IP Addr",
+"qos_classType1_option5":"Source Port",
+"qos_classType1_option6":"Destination Port",
+"qos_classType1_option7":"LANInterface",
+
+ "rule_most4RulesAlert":"You can configure up to 4 rules!",
+ "rule_noRuleAlert":"There are no rules at present. You cannot delete them.",
+ "pf_deleteRuleConfirm":"Are you sure you want to delete the selected rule?",
+ "rule_noChooseAlert":"Please select a rule before deleting!",
+
+ "qos_class_prompt":"On this page, you can check, delete, add classification of QoS. Ps: You can configure up to 6 entries of each QoS, and you can configure 3 conditions for each classification. When you add a new classification, you should configure at least 1 conditions."
+
+}
+

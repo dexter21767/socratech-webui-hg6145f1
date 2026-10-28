@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.formFill.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/wlanControl_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wireless");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="wifipower_prompt">wifipower_prompt</font></p>
+		</div>
+		<br/>
+		<form id="wlanAdv_settings_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wifi_power_title">wifi_power_title</font></div>
+					<div class="main_item_content" id="wifi_power_control">
+						<select id="TransmitPower" >
+							<option value="20">20%</option>
+							<option value="40">40%</option>
+							<option value="60">60%</option>
+							<option value="80">80%</option>
+							<option value="100">100%</option>
+							<option value="120"  style="display:none">120%</option>
+							<option value="140"  style="display:none">140%</option>
+							<option value="160"  style="display:none">160%</option>
+							<option value="180"  style="display:none">180%</option>
+							<option value="200"  style="display:none">200%</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id="wireless_apply">
+					<div class="main_submit" style="width: 25%;"></div>
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="wifi_power_apply" onclick="PowersaveApply()" i18n="wireless_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="wifi_power_cancel" onclick="window.location.reload()" i18n="wireless_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+				<br/>
+				<div id="wifi_con_num_div">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="wifi_conNumTitle">wifi_conNumTitle</font></div>
+					<div id="AssociateNumdiv"></div>
+				</div>
+				<div class="main_item_content_tip" style="display: none" id="multiap_tip">
+					<p style="color:red; font-weight: bold">Multi-AP is Enable ! You can't configure wifi parameters !</p>&nbsp;
+				</div>
+				<div class="main_item" id="wireless_apply2">
+					<div class="main_submit" style="width: 25%;"></div>
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="wifi_conNum_apply" onclick="saveApply()" i18n="wireless_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="wifi_conNum_cancel" onclick="window.location.reload()" i18n="wireless_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

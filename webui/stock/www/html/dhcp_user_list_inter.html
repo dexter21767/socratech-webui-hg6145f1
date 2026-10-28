@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/dhcp_user_list_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<div class="main_header">
+			<p class="main_header_hint"><font id="dhcp_userListPrompt" i18n="dhcp_userListPrompt">dhcp_userListPrompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg"  border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tr class="table_title">
+          		<td colspan="8" id="dhcp_userListHead"><font i18n="dhcp_userListHead">dhcp_userListHead</font></td>
+      		</tr>
+            <tbody>
+				<tr class="table_head_title">
+					<td id="td_id" width="3%"><font i18n="ID">ID</font></td>
+					<td id="td_hostname" width="17%"><font i18n="dhcp_hostnameTitle">dhcp_hostnameTitle</font></td>
+					<td id="td_interface" width="15%" style="display: none"><font i18n="Interface">Interface</font></td>
+					<td id="td_mac" width="15%"><font i18n="MAC">MAC</font></td>
+					<td id="td_ip" width="15%"><font i18n="dhcp_ipTitle">dhcp_ipTitle</font></td>
+					<td id="td_hiredTime" width="11%"><font i18n="dhcp_hiredTimeTitle">dhcp_hiredTimeTitle</font></td>
+					<td id="td_type" width="12%"><font i18n="dhcp_typeTitle">dhcp_typeTitle</font></td>
+				</tr>
+			</tbody>
+			<tbody id="user_list"></tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language ="javascript "type ="text/javascript">
+    	document.write('<link rel="stylesheet" type="text/css" href="../css/common.css?'+new Date().getTime()+'"><'+'/'+'link>');
+    	document.write('<script src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	    document.write('<script src="../topo/lib/d3-tip.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../topo/lib/d3.v5.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+    <script>
+    var operatorname = gOperatorName;
+        $(document).ready(function (e) {
+            $("#fh_menu_more").removeClass("fh_menu_text_active");
+            $("#fh_menu_more").attr("class", "fh_menu_text");
+
+            $("#fh_menu_device").removeClass("fh_menu_text");
+			$("#fh_menu_device").addClass("fh_menu_text_active");
+
+			if(operatorname == "TH_AIS"){
+				$(".fh_content_more_block_common").css("width","200%");
+				$(".fh_content_more_block_common").css("height","200%");
+			}
+        })
+    </script>
+    <style>
+
+    .tooltip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 10px;
+        z-index: 100;
+    }
+    .tooltip strong.title {
+        display: inline-block;
+        width: 150px;
+    }
+    </style>
+    <title></title>
+</head>
+<body>
+
+        <div class="fh_content_common">
+    
+                <div class="fh_content_more_block_common" style="padding-top: 30px; padding-left: 80px;" >
+					<div ><svg id="d3"></svg></div>
+                    
+                </div>
+         
+        </div>
+        
+       
+<script src="../topo/dataToTopo.js" type="text/babel"></script>
+<script src="../topo/treeGraph.js" type="text/babel"></script>
+<script>
+
+var topo = {
+    intervalTime:5000,
+    loading:false,
+    topoTree:new TreeGraph(),
+    init:function(){
+        var that = this
+        this.setTopo(function(topoData){
+            that.topoTree.init(topoData.data,{
+                    height:200 * topoData.deep,
+					width:900 + 50*topoData.maxWidth
+                })
+        })
+        this.upData()
+    },
+	
+	/*XHR.get("get_topology_info", null, initPage);
+	
+	function initPage(data)
+	{
+		if(data.ret == 0)
+		{
+		    var topoData = dataToTopo(data)
+		    call(topoData)
+		    adjustHeightCommon()
+		    that.loading = false
+		}
+		else
+		{
+		    console.error(data.errMsg)
+		}
+	}*/
+	
+    setTopo:function(call){
+        var that = this
+        this.loading = true;
+        $.ajax({
+            url:"../cgi-bin/ajax?ajaxmethod=get_topology_info&_="+Math.random(),
+			//url:"../fake/1111.json",
+			type: "GET",
+			dataType: "json",
+            success: function(data) {
+                if(data)
+                {
+					var top = data.topology_info;
+					top = JSON.parse(JSON.stringify(top).replace(/_point_/g, "."));
+					//console.log(top);
+                    var topoData = dataToTopo(top);
+					console.log(topoData);
+                    call(topoData)
+                   // adjustHeightCommon()
+                    that.loading = false
+                }
+                else
+                {
+                    console.error(data.errMsg)
+                }
+            },
+            error: function(data) {
+                
+            }
+        });
+    },
+    upData:function(){
+        var that = this
+        setInterval(function(){
+            if(!that.loading)
+            {
+                that.setTopo(function(topoData){
+                    that.topoTree.updata(topoData.data,{
+							width:900 + 50*topoData.maxWidth,
+                            height:200 * topoData.deep,
+                        })
+                })
+            }
+            
+        },that.intervalTime)
+    }
+}
+
+topo.init()
+
+</script>
+</body>
+</html>

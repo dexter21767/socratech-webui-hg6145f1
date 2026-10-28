@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ipv4_default_route.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="Ipv4DefaultRoute_prompt">Ipv4DefaultRoute_prompt</font></p>
+		</div>
+        <br/>
+		<form id="firewall_form" method="post">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Ipv4DefaultRoute_title">Ipv4DefaultRoute_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable" name="firewall_enable" value="enable"  />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;			
+						
+					</div>
+					<div class="main_item_name"><font i18n="WanName_title">WanName_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_name"  style="width:300px">
+	
+						</select>
+					</div>
+				</div>
+				<div class="main_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="firewall_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" id="firewall_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="main_content" id="v6_default_route" style="display: none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Ipv6DefaultRoute_title">Ipv6DefaultRoute_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_v6" name="firewall_enable_v6" value="enable"  />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;			
+						
+					</div>
+					<div class="main_item_name"><font i18n="WanName_title">WanName_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_name_v6"  style="width:300px">
+	
+						</select>
+					</div>
+				</div>
+				<div class="main_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="Ipv6DefaultRoute_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="save_apply_v6()"/>&nbsp; &nbsp;
+						<input type="button" id="Ipv6DefaultRoute_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

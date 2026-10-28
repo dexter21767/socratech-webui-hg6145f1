@@ -1,0 +1,42 @@
+{
+ "acl_funcPrompt":"On this page, you could configure ACL enable/disable, and enabled rules.",
+ "acl_usePrompt":"ACL-enabled before configureing rules. You can click on the button to add rules, delete rules after the selected row or full delete, or modify the rule after you selected a row. Finally, please click the submit button to submit all your configuration.",
+  
+ "acl_refresh":"Refresh",
+ "acl_submit":"Submit",
+ "acl_apply":"Apply",
+ "acl_cancel":"Cancel",
+ "acl_add":"Add",
+ "acl_delete":"Delete",
+ "acl_deleteAll":"Delete All",
+  
+ "acl_switchTitle":"ACL Enable",
+ "acl_disableTitle":"Disable",  
+ "acl_enableTitle":"Enable",
+ "acl_modeTitle":"ACL Mode",
+ "acl_modeBlackTitle":"Blacklist",
+ "aacl_modeWhiteTitle":"Whitelist",
+ "acl_typeTitle":"ACL Type",
+ "acl_listHead":"ACL Rules List",
+ "acl_portTitle":"Port",
+  
+ "acl_portTips":" (Each port can create up to eight rules)",
+ "acl_ipTips":" (Decimal format, such as 10.10.10.2)",
+ "acl_macTips":" (such as 00:24:21:19:BD:E4)",
+ "acl_vidTips":" (1 - 4095)",
+  
+ "acl_mostRulesAlert":"You can configure 32 rules at most!",
+ "acl_portMostRulesAlert":"8 rules have been created! No more rule can be created!",
+ "acl_ruleRepeatAlert":"Repeat with the existing rules. Please reconfigure it!",
+ "acl_noRuleAlert":"There are no rules at present. You cannot delete them.",
+ "acl_noChooseAlert":"Please choose a rule at least!",
+ "acl_ipNullAlert":"Please input IP!",
+ "acl_ipIllegalAlert":"Please input a valid IP!",
+ "acl_macNullAlert":"Please input MAC!",
+ "acl_macIllegalAlert":"MAC address format is incorrect! MAC format 00:24:21:19:BD:E4",
+ "acl_vidIllegalAlert1":"Valid vlan ID range is 1 to 4095.",
+ "acl_vidIllegalAlert2":"Please input a positive integer.",  
+  
+ "acl_deleteRuleConfirm":"Are you sure to delete the selected rules?",
+ "acl_changeTypeConfirm":"It will remove the original rules to change ACL type, are you sure to continue?"
+}

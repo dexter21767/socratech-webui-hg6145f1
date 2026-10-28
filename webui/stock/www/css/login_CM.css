@@ -1,0 +1,65 @@
+/* CSS Document */
+
+* {
+	font-family: Roboto;
+	font-size: 14px;
+	font-style: normal;
+}
+div {
+  margin:0; 
+  padding:0;
+}
+
+body{
+	margin: 0px;
+	background-color: #EFF1EE;
+	text-align:center;
+}
+
+.wraplogin_CM{
+	position:absolute;
+	top:20%;
+	left:30%;
+	width:40%;
+	width:500px;
+	height:275px;	
+}
+
+#login_header_CM {
+  width:613px;
+  height:143px;
+	background: url(../image/login_header_CM.png) no-repeat;	
+}
+
+#login_content{
+  width:613px;
+  height:145px;
+	background: url(../image/login_content.png) no-repeat;	 
+}
+
+
+.w_text {
+	display:block;
+	width:94%;
+	margin:0 auto;
+	color:#FFFFFF;
+	font-size:12px;
+	line-height:20px;
+	clear:both;
+	height: 100px;
+	position: relative;
+	top: 20px;
+}
+
+.login_button2_CM {
+	display:block;
+	height:30px;
+	float: left;
+	width:245px;
+	margin-left: 200px;
+	margin-top: 20px;
+}
+
+#login_footer {
+
+}

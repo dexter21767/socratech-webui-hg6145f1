@@ -1,0 +1,41 @@
+{
+  "pps_apply":"Apply",
+  "pps_cancel":"Cancel",
+  
+  "route_qos_prompt":"On this page, you could enable/disable Route QOS!",
+  "route_qos_title":"Route QOS",  
+  "qos_c_enable":"Enable",
+  "qos_c_disable":"Disable",
+
+  "route_qosPrompt":"On this page, you can config Route QOS!",
+  "pf_add":"Add",
+  "pf_delete":"Delete",
+  "pf_deleteAll":"Delete All",
+  "route_qosListHead":"Route QOS List",
+  "qostypetitle":"Type",
+  "qosPrioritytitle":"Priority",
+  "qosprotocoltitle":"Protocol",
+  "qossrciptitle":"Source IP ",
+  "qossrcporttitle":"Source Port",
+  "qosdisiptitle":"Target IP",
+  "qosdisporttitle":"Target Port",
+  "qoscontroltitle":"Enable",
+   "qos_apply":"Apply",
+  "qos_cancel":"Cancel",
+  
+  "pf_mostRulesAlert":"You could add 6 rules at most!",
+  "pf_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "pf_noChooseAlert":"Please select a rule and then delete!",
+  "priority_alert":"Please input priority.",
+
+  "pf_ipIllegalAlert":"Please enter a valid ip!",
+  "pf_PortNullAlert":"Please enter a value of the port!",
+  "pf_endPortTooSmallAlert":"The begining port should not bigger than the end port!",
+  "pf_portIllegalAlert":"Valid port range is 1 to 65535.",
+  "pf_PortNullAlert":"Please enter a value of the port!",
+  "pf_8021PriorityIllegalAlert":"Valid Priority range is 0 to 7.!",
+  "pf_hscpPriorityIllegalAlert":"Valid Priority range is 0 to 63.!",
+  "pf_deleteRuleConfirm":"Are you sure to delete the selected rules?"
+
+}
+

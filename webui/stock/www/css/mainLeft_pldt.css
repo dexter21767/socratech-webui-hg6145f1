@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    /*background-color: #C0C0C0;*/
+    min-width: 955px;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.fir-menu ul,
+.left-meun ul {
+    font-weight: bold;
+    font-size:16px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.logo {
+    width: 200px;
+    height:100%;
+    float: left;
+	background: url(/image/pldt_fibr.png);
+    background-size: 200px 80px;
+    background-position-y: 10px;
+}
+.top-menu{
+    float: left;
+    width: 755px; 
+    height: 100%;
+    position: relative;
+}
+.logout {
+    height: 50px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 50px;
+}
+.fir-menu{
+    height: 30px;
+    width: 100%;
+}
+.fir-menu ul>li {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.fir-menu-open {
+    background-color: #BE0F20;
+    color:#fff;
+}
+
+.fir-menu-close {
+    background-color: #fff;
+    color:#000;
+}
+.left-meun{
+    float: left;
+    width: 200px;
+    height:500px;
+	background-color: #F6F6F6;
+}
+.sec-menu{
+    border-top: 3px solid #BE0F20;
+}
+
+.sec-menu>li{
+    margin-bottom: 1px;
+}
+.sec-menu>li>span{
+    display: block;
+    width: 100%;
+    line-height: 25px;
+    text-indent: 10px;
+    background-color: #BE0F20;
+    color:#fff;
+}
+.thr-menu{
+    display: none;
+}
+.thr-menu-open{
+    display: block;
+}
+
+.thr-menu>li {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-indent: 20px;
+    color: #274F85;
+    font-weight: normal;
+    margin: 1px 0;
+    /*background-color: #E3F5F5;*/
+}
+
+.thr-menu .thr-menu-select{
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    float: left;
+    width: 755px;
+    height: 497px;
+	background-color: #FAFAFA;
+}
+.conter {
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    position: relative;
+}
+
+.nav-title{
+    width: 100%;
+    height: 28px;
+    line-height: 25px;
+    padding-left: 20px;
+    color:#000;
+    /*background-color: #CEE5E5;*/
+    border-top: 3px solid #BE0F20;
+    font-size: 16px;
+}
+
+.main_iframe{
+    width: 100%;
+    height: 95%;
+}
+.footer {
+    width: 100%;
+    height: 25px;
+    background-color: #BE0F20;
+}
+
+#logout{
+    color: #000;
+    float: right;
+}
+
+#logout:hover{
+    color:rgb(153, 0, 0);
+    font-size: 12px;
+}
+
+.body {
+    width: 955px;
+    height: 605px;
+    margin: 0 auto;
+    position: relative;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TIM Wizard</title>
+<!-- Bootstrap -->
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="./css/style_wizard.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/wizard_timeout.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/page_03.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+	function frmLoad(){
+		var operator_name = gOperatorName;
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name != "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body class="pricipal" onLoad='frmLoad();'>
+<div class="wrap">
+  <div class="area2 page_03">
+    <div class="cabecalho" >
+      <h1>Escolha como você quer<br/>
+        se conectar à Internet.</h1>
+      <img src="img/160914_PF01_LOGO_TIM_LIVE.png"  class="log_tim_live_grande">
+      <div class="clearfix"></div>
+    </div>
+    <!-- cabecalho -->
+    <div class="form"> <a class="btn-tim-roteador" id="live_tim_roteador" href="javascript:void(0)">Roteador<br/>
+      (Recomendado)</a>
+      <p>No modo Roteador, a sua conexão é estabelecida<br/>
+        automaticamente e você já sai navegando.</p>
+      <a class="btn-tim-bridge" id="live_tim_bridge" href="javascript:void(0)">Bridge<br/>
+      (Não recomendado)</a>
+      <p>Modo Bridge (para usuários avançados).<br/>
+        O Wi-Fi será automaticamente desligado nesta opção.</p>
+    </div>
+    <!-- form -->
+    <div class="faixa-btn"> <a class="btn-voltar" href="./page_02.html">Voltar</a> </div>
+  </div>
+  <!-- area1 -->
+  <img id="logo_tim_peq" src="img/160914_PF01_LOGO_TIM.png" > </div>
+</body>
+</html>
+<!-- <m> -->

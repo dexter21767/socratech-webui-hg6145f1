@@ -1,0 +1,49 @@
+{
+  "backPage":"Return",
+  "inputTips":"Please enter password provided by operators!",
+  "loidTitle":"LOID",
+  "pwdTitle":"Password",
+  "regist_submit":"Activate",
+  "regist_reset":"Reset",
+  
+  "oltAuthing":"Registering to the OLT.",
+  "oltAuthFailed":"Failed to register to the OLT.",
+ 
+  "oltAuthFailed_info":"Registering to the OLT. Please check LOID and password!",
+  "oltAuthFailed_loid":"Registering to the OLT(LOID error). Please check LOID and password!",
+  "oltAuthFailed_lopwd":"Registering to the OLT(logic password error). Please check LOID and password!",
+  "oltAuthFailed_loid_conflict":"Registering to the OLT(LOID conflict). Please check LOID and password!",
+  "oltAuthFailed_physn_conflict":"Registering to the OLT(Physical SN conflict). Please check the input!",
+  "oltAuthFailed_noresource":"Registering to the OLT(NO RESOURCE), please retry!",
+  "oltAuthFailed_type":"Registering to the OLT(ONU type error).",
+  "oltAuthFailed_physn":"Registering to the OLT(Physical SN error). Please check the input!",
+  "oltAuthFailed_phypwd":"Registering to the OLT(Physical password error). Please check the input!",
+  "oltAuthFailed_phypwd_conflict":"Registering to the OLT(Physical password conflict). Please check the input!",
+  "oltAuthFailed_default":"Registering to the OLT, please retry!",
+
+  "serviceDistributingIncomplete":"Last service distribution isn't complete, please re-register after visiting WEB and restore all configuration.",
+  "registTimeout":"Activation timeout.",
+  "registAlready":"You have successfully registered, without re-registering.",
+  "registAlready2":"You have successfully registered, without re-registering. To re-register, please restore all the configuration and then try again.",
+  
+  "getACSIPing":"Obtaining IP address of management channel.",
+  "getACSIPFailed":"Failed to obtain IP address of management channel.",
+  "getACSIPSuccess":"Obtain IP address of management channel success.",
+  "retryRestTimes":"Please retry(the rest number to attempt: ",
+  "retryExceedMaxTimes":"You have tried the max number of certification, please contact customer service!",
+  "ACSAuthSuccessWaitingDistribute":"Registration successful. Waiting for service distribution.",
+  "ACSAuthSuccess":"Registration successful.",
+  "serviceDistributing":"Registration successful. Service is being distributed.",
+  "serviceDistributeSuccess":"Registration successful. Service distribution successful.",
+  "serviceDistributeFailed":"Failed to distribute service.",
+  
+  "ACSAuthFailed_pwd":"User password doesn't exist!",
+  "ACSAuthFailed_loid":"User LOID doesn't exist!",
+  "ACSAuthFailed_loidpwd":"User LOID and password match failed!",
+  "ACSAuthFailed_password":"Password doesn't exist!",
+  "ACSAuthing":"Being registered with the ACS.",
+  "ACSAuthFailed":"Failed to register to the ACS.",
+ 
+  "loidNullAlert":"LOID is null! Please enter LOID!"
+}
+

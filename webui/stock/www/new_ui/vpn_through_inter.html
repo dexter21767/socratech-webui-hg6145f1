@@ -1,0 +1,69 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/vpn_through_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("firewall");
+</script>
+
+<body class='main_config_body'>
+	<form id="ddos_form">
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="IPSec_Passthrough">IPSec Passthrough</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" id="IPSec_Passthrough_enable" name="IPSec_Passthrough_enable" value="1" />
+						<font i18n="enable">enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" id="IPSec_Passthrough_disable" name="IPSec_Passthrough_enable" value="0" />
+						<font i18n="disable">disable</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="PPTP_Passthrough">PPTP Passthrough</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" id="PPTP_Passthrough_enable" name="PPTP_Passthrough_enable" value="1" />
+						<font i18n="enable">enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" id="PPTP_Passthrough_disable" name="PPTP_Passthrough_enable" value="0" />
+						<font i18n="disable">disable</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_item" id="L2TP_passThrough" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="L2TP_Passthrough">L2TP Passthrough</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" id="L2TP_Passthrough_enable" name="L2TP_Passthrough_enable" value="1" />
+						<font i18n="enable">enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" id="L2TP_Passthrough_disable" name="L2TP_Passthrough_enable" value="0" />
+						<font i18n="disable">disable</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_item_content" >
+					<input type="button" class="input_button" id="vpn_apply" i18n="firewall_apply" i18n-set="value"
+						onclick="save_apply()" />&nbsp; &nbsp;
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "VPN basic apply":"提交",
+  "VPN basic cancel":"取消",
+  "VPN_prompt":"您可以在本页面配置VPN通道开启/关闭。",
+  "VPNEnable_title":"VPN通道",
+  "VPN_enable":"开启",
+  "VPN_disable":"关闭",
+  
+  "Tr069 qos prompt":"您可以在本页面配置QoS通道开启/关闭。",
+  "Tr069 qoS enable title":"QoS 使能"
+  
+}

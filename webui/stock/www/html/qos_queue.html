@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/qos_queue.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">QoS队列设置</p>
+			<p class="main_header_hint">
+				在本页面，您可以修改QoS队列参数。
+				<br />当选择“PQ”作为调度策略时，您需要为每条QoS队列设置优先级，且每条队列的优先级不能相同。
+				<br />当选择“WRR”作为调度策略时，您需要为每条QoS队列设置权重，且所有队列的权重总和为100。
+			</p>
+		</div>
+		<form id="qos_form">
+			<div class="main_content">
+				<div class="main_item" id="bandwidth_div">
+					<div class="main_item_name">总带宽</div>
+					<div class="main_item_content">
+						<input type="text" id="Bandwidth" class="input_text" />Kbps
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">QoS调度策略</div>
+					<div class="main_item_content">
+						<select id="Plan" class="main_select">
+							<option value="priority">PQ</option>
+							<option value="weight">WRR</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">8021P标记使能</div>
+					<div class="main_item_content">
+						<select id="Enable8021P" class="main_select">
+							<option value="0">0:不启用8021P标记</option>
+							<option value="1">1:保持原8021P标记</option>
+							<option value="2">2:修改8021P标记</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">启用DSCP标记</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="EnableDSCPMark"/>&nbsp;
+					</div>
+				</div>
+			</div>
+			<div id="adddiv" style="display:none">
+				<div class="main_save">
+					<input type="button" id="add_btn" class="input_button" value="添加" onclick="addqueue()"/>
+				</div>
+			</div>
+			<br />
+			<table width="60%" style="margin-left: 100px" cellspacing="0" cellpadding="3px" border="1px">
+				<tbody id="priority_table" style="display:none">
+				<tr>
+					<th width="20%">队列名称</th>
+					<th width="40%">优先级(1为最高优先级)</th>
+					<th width="20%">使能</th>
+					<th width="20%">操作</th>
+				</tr>
+				</tbody>	
+				<tbody id="priority_table2">
+				</tbody>
+				<tbody id="weight_table" style="display:none">
+					<tr>
+						<th width="20%">队列名称</th>
+						<th width="40%">权重</th>
+						<th width="20%">使能</th>
+						<th width="20%">操作</th>
+					</tr>
+				</tbody>	
+				<tbody id="weight_table2">
+				</tbody>
+			</table>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

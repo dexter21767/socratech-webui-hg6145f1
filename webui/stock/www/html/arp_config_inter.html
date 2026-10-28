@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/arp_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+		<style type="text/css"> 
+		.linebr { 
+		display: inline-block;
+		clear: both; /* 清除左右浮动 */ 
+		width: calc(75% - 157px); /* 必须定义宽度 */ 
+		word-break: break-word; /* 文本行的任意字内断开 */ 
+		word-wrap: break-word; /* IE */ 
+		white-space: -moz-pre-wrap; /* Mozilla */ 
+		white-space: -hp-pre-wrap; /* HP printers */ 
+		white-space: -o-pre-wrap; /* Opera 7 */ 
+		white-space: -pre-wrap; /* Opera 4-6 */ 
+		white-space: pre; /* CSS2 */ 
+		white-space: pre-wrap; /* CSS 2.1 */ 
+		white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
+		} 
+		</style> 
+	</head>
+	<script type="text/javascript">
+		setDomain("arp");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"></p>
+		
+				<div style="text-overflow: ellipsis;white-space: nowrap; overflow: hidden;">
+				<font i18n="arp_configPrompt">arp_configPrompt</font>
+				</div>
+		</div>
+		
+	    </br>
+		<form id="dhcp_lan_list_form" method="post">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="arp_Enable_title">arp_Enable_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="arp_enable" name="arp_enable" value="1" /><font i18n="arp_Enable">arp_Enable</font>&nbsp;&nbsp;
+						<input type="radio" id="arp_disable" name="arp_enable" value="0" /><font i18n="arp_Disable">arp_Disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="arp_enable_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="EnableApply()"/>
+						<input type="button" id="arp_enable_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="main_content">
+			<br/>
+					<div style="float:right">
+						<input type="button" i18n="arp_add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter()">
+						<input type="button" i18n="arp_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+			  			<input type="button" i18n="arp_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+					<br/>
+				</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="arp_config_ListHead">arp_config_ListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="fw_filterID">fw_filterID</font></td>
+					<td width="60%" align='center'><font i18n="macaddr">macaddr</font></td>
+					<td width="20%" align='center'><font i18n="ipaddr">ipaddr</font></td>
+					<td width="10%" align='center'></td>
+				</tr>
+				<tbody id='dhcp_lan_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id = "fw_config_form" style="display:none">
+				<div class="main_item main_item_lan">
+					<div class="main_item_name main_item_name_lan"><font i18n="macaddr">macaddr</font></div>
+					<div class="main_item_content main_item_content_lan">
+						<input type="text"  class="input_text input_text_lan" autocomplete="off" id="dhcp_lan_mac_address" name="dhcp_lan_mac_address" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						<font class="linebr" i18n="macaddr_macTips">macaddr_macTips</font>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ipaddr">ipaddr</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="dhcp_lan_ip" name="dhcp_lan_ip" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="arp_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="arp_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

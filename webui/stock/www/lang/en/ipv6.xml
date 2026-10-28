@@ -1,0 +1,28 @@
+{
+  "pt_PortTriggerPrompt":"On this page, you could configure IPv6 static route.",
+
+  "fw_filterListHead":"IPv6 Static Route List",
+  "DstPrefix_title":"DstPrefix",
+  "Nexthop_title":"Nexthop",
+  "pf_wannameTitle":"WAN Name",
+
+  "pf_add":"Add",
+  "pf_delete":"Delete",
+  "pf_deleteAll":"Delete All",
+
+  "ipv6_apply":"Apply",
+  "ipv6_cancel":"Cancel",
+
+  "pf_mostRulesAlert":"You can configure 8 rules at most!",
+  "pf_most16RulesAlert":"You can configure 16 rules at most!",
+  "pf_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "pf_noChooseAlert":"Please select a rule and then delete!",
+  "pf_deleteRuleConfirm":"Are you sure to delete the selected rule?",
+
+  "Please enter DstPrefix!":"Please enter dstPrefix!",
+  "Please enter Nexthop!":"Please enter nexthop!",
+  "Nexthop_IllegalAlert":"Next hop Ipv6 IP address is illegal!",
+  "DstPrefix_IllegalAlert":"Destination Ipv6 prefix is illegal!"
+ 
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/dhcp_client_option_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("dhcp_client");
+	</script>
+	<style type="text/css">
+	    .main_item_error_hint {color: red; clear: both;}
+	    .input_text {width: 124px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="dhcp_client_option_prompt" id="dhcp_client_option_prompt">dhcp_client_option_prompt</font></p>
+		</div>
+	    </br>
+		<form id="dhcp_list_form" method="post">
+			<div style="float:right">
+				<input type="button" value="Add" id="fw_add" class="input_button" onClick="addfilter()">
+				<input type="button" value="Delete" id="fw_delete" class="input_button" onClick="click_remove()">
+	  			<input type="button" value="Delete All" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+				<br/>
+			</div>			
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="6"><font i18n="dhcp_client_option_title">dhcp_client_option_title</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="30%" align='center'><font i18n="wan_name">wan_name</font></td>	
+					<td width="10%" align='center'><font i18n="option_id">option_id</font></td>
+					<td width="15%" align='center' id="option_format"><font i18n="option_format">option_format</font></td>
+					<td width="40%" align='center'><font i18n="options_base64" id="options_base64">options_base64</font></td>
+					<td width="5%" align='center'></td>		
+				</tr>
+				<tbody id='dhcp_list' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content" id = "dhcp_config_form" style="display: none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wan_name">wan_name</font></div>
+					<div class="main_item_content">					
+						<select id="dhcp_wan" name="dhcp_wan" size="1" style="width:45%"></select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="option_id">option_id</font></div>
+					<div class="main_item_content">
+						<input name="option_id" id="option_id" class="input_text" type="text" autocomplete="off" value=""><strong style="color:#FF0033">*</strong><span class="gray" id="option_idTips">(1-254)</span>
+					</div>
+					<div id="min_ddns_user_name-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="option_format_div">
+					<div class="main_item_name"><font i18n="option_format">option_format</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="option_format_hex" name="option_format" value="Hexbinary" onchange="ChangeOptionMode(this.value)" /><font i18n="hexadecimal_value">hexadecimal_value</font>&nbsp;&nbsp;
+						<input type="radio" id="option_format_b64" name="option_format" value="Base64" checked onchange="ChangeOptionMode(this.value)" /><font i18n="base64_value">base64_value</font>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="option_value_title">option_value_title</font></div>
+					<div class="main_item_content">					
+						<input name="option_value" id="option_value" class="input_text" type="text" autocomplete="off" value=""><strong style="color:#FF0033">*</strong><span class="gray" id="option_value_tips">(a Base64 string of 1-340 digits or a hexadecimal string)</span>
+					</div>
+					<div id="min_ddns_host-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="btn_apply" class="input_button" i18n="btn_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="btn_cancel" class="input_button" i18n="btn_cancel" i18n-set="value" onclick="window.location.reload();"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

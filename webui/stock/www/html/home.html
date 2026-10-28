@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AIS - FIBER - Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		//document.write('<link rel="stylesheet" type="text/css" href="../css/ais/helvetica.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/font-awesome.min.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/header.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="./css/ais/nav_left.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/home.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/metisMenu.min.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/sliderNav.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/ais/footer.css?'+new Date().getTime()+'"><'+'/'+'link>');
+        document.write('<script  src="../js/jquery-3.1.1.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+        document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	    document.write('<script  src="../js/util_global_vars.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	    document.write('<script  src="../js/access.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+
+<body>
+    <div style="min-height: 85%;">
+        <div class="row">
+            <!--column one-->
+            <div class="col-md-4">
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4> Device Infomation </h4>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Model Name:</p> <span id="mode_name"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Mac-Address:</p> <span id="mac_adress"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Hardware Version:</p> <span id="hw_version"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Firmware Version:</p> <span id="fm_version"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Serial Number:</p> <span id="serial_number"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Software sub-version:</p> <span id="sub_version"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">System Uptime:</p> <span id="system_uptime"></span>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">CPU Usage :</p><span id="cpu_usage_val"></span>
+                            <div class="progress progress-striped active clear small">
+                                <div class="progress-bar" role="progressbar" id="cpu_usage" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                    <span class="sr-only">45% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="title-label text-gray">Memory Usage :</p><span id="memory_usage_val"></span>
+                            <div class="progress progress-striped active clear small">
+                                <div class="progress-bar" role="progressbar"  id="memory_usage" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                    <span class="sr-only">45% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer border-top"><button class="card-btn green" onclick="webreboot()">Reboot</button></div>
+                </div>
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4> Attached Devices </h4>
+                        <div class="text-center">
+                            <img src="../image/ais/home/img_home_attached_devices.png"></div>
+                        <div class="form-group text-center">
+                            &nbsp;
+                        </div>
+                        <div class="form-group text-center">
+                            <p>Link to DHCP client</p>
+                        </div>
+                        <div class="form-group text-center">
+                            <p>Number of devices : <span class="text-green-highlight" id="device_sum" onclick="show_topo()"></span></p>
+                        </div>
+                        <div class="form-group text-center">
+                            <p>Dynamic QoS : <span class="text-green-highlight" id="qos"></span></p>
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer  border-top"><button class="card-btn gray" onclick="window.location.reload()">Refresh</button></div>
+                </div>
+            </div>
+            <!--column one-->
+            <!--column two-->
+            <div class="col-md-4">
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4>Speed Test</h4>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <i class="fa  upload-color" aria-hidden="true"></i> Upload
+                            </div>
+                            <div class="col-xs-6">
+                                <i class="fa  download-color" aria-hidden="true"></i> Download
+                            </div>
+                            <div class="col-xs-6" >
+                                <h4 id="upload_speed">0.00</h4>
+                            </div>
+                            <div class="col-xs-6">
+                                <h4 id="download_speed">0.00</h4>
+                            </div>
+                        </div> 
+                        <!-- <div class="progress progress-striped active large">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                <span class="sr-only">45% Complete</span>
+                            </div>
+                        </div>
+                        <div class="main_item mode_n">
+                        	<div class="main_item_content" style="width: 320px;">
+                        		<select style="width: 320px;" id="speedtest_url_select"  name="data.channelWidth"></select>
+                        	</div>
+                        </div>-->
+                    </div>
+                    <div class="card-footer border-top"><button onclick="speedtest()" class="card-btn gray">Begin Test</button></div>
+                </div>
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4>Internet Status</h4>
+                        <div class="warp-internet-status" >
+                            <div class="pull-left">
+                                <img src="../image/ais/home/Group_24.png">
+                            </div>
+                            <div class="pull-left" style="position:relative;">
+                                <img src="../image/ais/home/Path_231.png">
+                                <!-- <div style="position:absolute;height:3px;top:10px;width:100%;background-color:#eeeff0;z-index:0;"></div> -->
+                            </div>
+                            <div class="pull-left">
+                                <img src="../image/ais/home/Group_34.png">
+                            </div>
+                            <div class="pull-left">
+                                <img id="wan_status" src="../image/ais/home/ico_home_no.png">
+                            </div>
+                            <div class="pull-left">
+                                <img src="../image/ais/home/Group_35.png">
+                            </div>
+                        </div>
+						<div id="wan_info">
+                        <div class="form-group text-center" id="ipv4_div" style="display:none">
+                            <p>IPv4 Address : <span class="text-green-highlight" id="wan_ip4"></span></p>
+                        </div>
+                        <div class="form-group text-center" id="ipv6_div" style="display:none">
+                            <p>IPv6 Address : <span class="text-green-highlight" id="wan_ip6"></span></p>
+                        </div>
+                        <div class="form-group text-center" id="dns4_div" style="display:none">
+                            <p>DNS IPv4 Address : <span class="text-green-highlight"  id="wan_dns4"></span></p>
+                        </div>
+                        <div class="form-group text-center" id="dns6_div" style="display:none">
+                            <p>DNS IPv6 Address : <span class="text-green-highlight"  id="wan_dns6"></span></p>
+                        </div>
+                        <div class="form-group text-center" id="uptime_div" style="display:none">
+                            <p><span id="wan_kind">Wan</span> Uptime : <span class="text-green-highlight"  id="uptime"></span></p>
+                        </div>
+                        </div>
+                        <div class="form-group text-center" id="pppoe_status" style="display:none">
+                            <p>PPPoE status: <span class="text-green-highlight"  id="dial_status"></span></p>
+                        </div>
+                    </div>
+                    <div class="card-footer border-top"><button class="card-btn gray" onclick="window.location.reload()">Re-Connect</button></div>
+                </div>
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4>Wireless</h4>
+                        <div class="line-header"></div>
+                        <div class="row form-group boder-bottom">
+                            <div class="col-xs-3">
+                                <div class="wifi">
+                                    <div class="level-1"></div>
+                                    <div class="level-2"></div>
+                                    <div class="level-3"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <p class="wifi-title">2.4 GHz</p>
+                                <p class="wifi-info"><span id="ssidname2"></span></p>
+                                <p class="wifi-action"><a onclick="gotowlan2()">CHANGE</a></p>
+                            </div>
+							<div class="col-xs-3">
+                                <div class="switch">
+                                    <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                    <label for="cmn-toggle-1"></label>
+                                </div>
+							</div>
+                        </div>
+                        <div class="row form-group boder-bottom">
+                            <div class="col-xs-3">
+                                <div class="wifi">
+                                    <div class="level-1"></div>
+                                    <div class="level-2"></div>
+                                    <div class="level-3"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <p class="wifi-title">5 GHz</p>
+                                <p class="wifi-info"><span id="ssidname5"></span></p>
+                                <p class="wifi-action"><a onclick="gotowlan5()">CHANGE</a></p>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="switch">
+                                    <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round" type="checkbox">
+                                    <label for="cmn-toggle-2"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--column two-->
+            <!--column three-->
+            <div class="col-md-4">
+                <div class="card-panel">
+                    <div class="card-body">
+                        <h4> Easy Diagnostic </h4>
+                        <div class="line-header"></div>
+                        <div class="form-group">
+                            <p>WAN IP Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar" id="wan_ip_bar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                            <span class="sr-only">50% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                   <img id="wan_ip_image" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span class="text-gray label-below" id="wan_ip_check" style="display:none">WAN IP Address : <span id="wan_ip_adress"></span></span>
+                            <span class="text-gray label-below" id="wan_ipv6_check" style="display:none">WAN IPv6 Address : <span id="wan_ipv6_adress"></span></span>
+                        </div>
+                        <div class="form-group">
+                            <p>DNS Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar"  id="dns_ip_bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="dns_ip_image" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+							<span class="text-gray label-below" id="dns_ip_check" style="display:none">DNS IP Address : <span id="dns_ip_adress"></span></span>
+							<span class="text-gray label-below" id="dns_ipv6_check" style="display:none">DNS IPv6 Address : <span id="dns_ipv6_adress"></span></span>
+                        </div>
+                        <div class="form-group">
+                            <p>Ping Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar" id="ping_bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="ping_image" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span class="text-gray label-below" id="ping_ip_check" style="display:none">Ping IP Address : <span id="ping_ip_adress"></span></span>
+                        </div>
+						 <div class="form-group">
+                            <p>LAN1 IP Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar"  id="lan1" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">100% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="image_lan1" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span id="lan_ip_show_1" class="text-gray label-below" style="display:none">LAN1 IP Address : <span id="lan_ip_1"></span></span>
+                            <span id="lan_ipv6_show_1" class="text-gray label-below" style="display:none">LAN1 IPv6 Address : <span id="lan_ipv6_1"></span></span>
+                        </div>
+                        <div class="form-group">
+                            <p>LAN2 IP Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar" id="lan2" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="image_lan2" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span  id="lan_ip_show_2" class="text-gray label-below" style="display:none">LAN2 IP Address : <span id="lan_ip_2"></span></span>
+                            <span id="lan_ipv6_show_2" class="text-gray label-below" style="display:none">LAN2 IPv6 Address : <span id="lan_ipv6_2"></span></span>
+                        </div>
+                        <div class="form-group">
+                            <p>LAN3 IP Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar"  id="lan3" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="image_lan3" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span id="lan_ip_show_3" class="text-gray label-below" style="display:none">LAN3 IP Address : <span id="lan_ip_3"></span></span>
+                            <span id="lan_ipv6_show_3" class="text-gray label-below" style="display:none">LAN3 IPv6 Address : <span id="lan_ipv6_3"></span></span>
+                        </div>
+                        <div class="form-group">
+                            <p>LAN4 IP Check</p>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="progress progress-striped active small no-margin">
+                                        <div class="progress-bar" role="progressbar" id="lan4" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only">0% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <img id="image_lan4" src="../image/ais/home/ico_home_no.png">
+                                </div>
+                            </div>
+                            <span id="lan_ip_show_4"  class="text-gray label-below" style="display:none">LAN4 IP Address : <span id="lan_ip_4"></span></span>
+                            <span id="lan_ipv6_show_4" class="text-gray label-below" style="display:none">LAN4 IPv6 Address : <span id="lan_ipv6_4"></span></span>
+                        </div>
+                    </div>
+                    <div class="card-footer border-top"><button class="card-btn gray" onclick="window.location.reload()">Re-Connect</button></div>
+                </div>
+            </div>
+            <!--column three-->
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="text-center menu-footer">
+                <a href="http://www.ais.co.th/fibre/support.html" target="_blank">FAQ</a>
+                <a href="http://www.ais.co.th/fibre/contact.html" target="_blank">AIS Call Center 1175</a>
+            </div>
+            <p class="text-footer">© 2016 ADVANCED INFO SERVICE PLC. ALL RIGHTS RESERVED. <br> This site is best viewed using Internet Explorer 9, Chrome, Safari and browser later.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script language ="javascript "type ="text/javascript">
+	document.write('<script  src="../js/bootstrap.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/metisMenu.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/nav.js?'+new Date().getTime()+'"><'+'/'+'script>');
+    document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/home.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+

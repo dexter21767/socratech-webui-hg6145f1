@@ -1,0 +1,66 @@
+{
+"qos_prompt":"En esta página, puede configurar los parámetros de Qos.",
+
+"qos_classDSCPTips":"(0-63)",
+"qos_class802Title2":"Marcado 802.1p", 
+"qos_class802Tips":"(0-7)",
+"qos_classType1Title":"Clase 1",
+"qos_classMin1Title2":"Valor mínimo", 
+"qos_classMax1Title2":"Valor máximo", 
+"qos_classProtocol1Title2":"Protocolo", 
+"qos_classType2Title":"Clase 2",
+"qos_classType3Title":"Clase 3",
+
+"qos_cfgApplyTitle":"Se aplica la configuración de QoS",
+"qos_dixableTitle":"Deshabilitar",
+"qos_classRuleListHead":"Clasificación del flujo de datos",
+"qos_classNoTitle":"Índice de flujo de datos",
+"qos_classQueueTitle":"Ingresar cola",
+"qos_classDSCPTitle2":"Marca DSCP/TC", 
+"qos_classTypeNoTitle":"Clase",
+"qos_classTypeTitle":"Tipo",
+
+"qos_priServiceTitle2":"Nombre del servicio", 
+"qos_priRuleListHead":"Prioridad de servicio", 
+
+"qos_weiQueueHead":"Cola", 
+"qos_weiWeightHead":"Peso (%)", 
+"qos_weiEnableHead":"Habilitar", 
+"qos_priPriorityHead":"Prioridad", 
+"qos_planTitle":"Modo de despacho", 
+"qos_planPriorityTip":"Prioridad", 
+"qos_planWeightTip":"Peso", 
+"qos_802FlagTitle":"Habilitar marca 802.1P ", 
+"qos_dsctFlagTitle":"Habilitar marca DSCT/TC", 
+"qos_bandwidthTitle":"Ancho de banda total", 
+"qos_modeTitle":"Modo QoS", 
+"qos_cfgHead":"Configuración de colas", 
+
+"qos_class_add":"Agregar", 
+"qos_class_delete":"Borrar", 
+"qos_class_deleteAll":"Eliminar todo",
+
+"qos_classRuleApply":"Aplicar", 
+"qos_classRuleCancel":"Cancelar",
+
+"option_chose":"Por favor, seleccione",    
+"qos_802Flag_option":"Marcado como 0",
+"qos_802Flag_option2":"Transmisión trasnparente del valor actual",
+"qos_802Flag_option3":"Marcado como nuevo valor",
+"qos_classType1_option1":"Fuente: Direción MAC",
+"qos_classType1_option2":"802.1p",
+"qos_classType1_option3":"Dirección IP de origen",
+"qos_classType1_option4":"Dirección IP de destino",
+"qos_classType1_option5":"Puerto de origen",
+"qos_classType1_option6":"Puerto de destino",
+"qos_classType1_option7":"Interfaz LAN",
+
+ "rule_most4RulesAlert":"¡Puede configurar hasta 4 reglas!",
+ "rule_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+ "pf_deleteRuleConfirm":"¿Está seguro de que desea eliminar la regla seleccionada?",
+ "rule_noChooseAlert":"¡Por favor, seleccione una regla antes de eliminarla!",
+
+ "qos_class_prompt":"En esta página, puede verificar, eliminar y agregar la clasificación de QoS. Nota: Puede configurar hasta 6 entradas de cada QoS y puede configurar 3 condiciones para cada clasificación. Al agregar una nueva clasificación, debe configurar al menos 1 condición."
+
+}
+

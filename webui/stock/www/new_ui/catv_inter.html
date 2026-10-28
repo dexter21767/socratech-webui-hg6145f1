@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/catv_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("catv");
+	</script>
+	<body class='main_config_body'>
+		<form id="catv_form">
+			<div  class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<div class="main_content">
+					<div class="main_item" id="catv_enable_div">
+						<div class="main_item_name"><font i18n="catv_enable_title">catv_enable_title</font></div>
+						<div class="main_item_content">
+							<div class="input_radio">
+								<input type="radio" id="catv_enable" name="catv_enable" value="1" checked="checked"><font i18n="catv_enableTitle">catv_enableTitle</font>&nbsp;&nbsp;&nbsp;
+								<input type="radio" id="catv_disable" name="catv_enable" value="0"><font i18n="catv_disableTitle">catv_disableTitle</font>
+							</div>
+						</div>
+					</div>
+					<div class="main_item" id="RfOffset_div" style="display:none">
+						<div class="main_item_name"><span class="redcolorfont">*</span><font i18n="catv_rfoffset_title">catv_rfoffset_title</font></div>
+						<div class="main_item_content">
+							<div class="tip_text" id="tip_catv_rfoffset" i18n="catv_rfoffset_tips"></div>
+							<input type="text" class="input_text" autocomplete="off" id="catv_rfoffset" name="catv_rfoffset"/>
+						</div>
+					</div>			
+				</div>
+				<div class="main_submit_item" id="catv_button_div">
+					<div class="main_item_content">
+						<input type="button" id="catv_apply" onclick="saveApply()" i18n="catv_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

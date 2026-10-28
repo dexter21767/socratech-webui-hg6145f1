@@ -1,0 +1,15 @@
+{
+  	"schedule_reboot_head":"Schedule Reboot",
+  	"schedule_reboot_enableTitle":"Enable",
+  	"schedule_reboot_disableTitle":"Disable",
+  	"fw_day":"Day",
+  	"fw_time":"Time",
+	"hour":"Hour",
+	"min":"Min",
+  	"invalid_data_alert":"Some value is invalid, please retry it.",
+  	"fw_dayErrorAlert":"Please choose at least one day!",
+  	"schedule_reboot_apply":"Apply",
+  	"schedule_reboot_cancel":"Cancel",
+  	"schedule_reboot_Prompt":"On this page, you could configure Schedule Reboot function."
+}
+

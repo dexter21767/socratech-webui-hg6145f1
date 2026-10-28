@@ -1,0 +1,51 @@
+{
+  "accessHead":"Access Device Notice",
+  "errorCode":"ErrorCode ",
+  "backPage":"Back",
+  "Next":"Next",
+  
+  "timeout":"Your session is timeout, please refresh the page and try again!",
+
+  "0000":"Access successful!",
+  "9999":"Access Failed! Please try again!",
+  
+  "0001":"Access Failed! Internal system error. Please contact the operator.",
+  "0002":"Unknown error!",
+  "0003":"The input parameter is illegal!",
+  
+  "1001":"Failed to establish connection. Please check the connection and connection parameters are correct.",
+  "1002":"Failed to create file!",
+  "1003":"File does not exist!",
+  "1004":"Failed to turn on/off server!",
+  "1005":"Failed to configure parameters!",
+  "1006":"Failed to read parameters!",
+
+  "2001":"Failed to get username from cookie!",
+  "2002":"The old password error! Please enter the correct password of the current account, and then try again!",
+  "2003":"Password error!",
+  "2004":" Username error!",
+  "2005":" Username exists! ",
+  "2006":" SSID name modify error!",
+  "2007":" SSID password modify error!",
+  "2008":"WAN password shouldn't be the same as the LAN password!",
+  "2009":"This is the first time you have created the WAN password, just enter a new password!",
+ 
+  "3001":"Failed to register OLT!",
+  "3002":"Register information has been submitted!",
+
+  "4001":"WAN information changed, please refresh!",
+  "4002":"Inner error, please check cpe.log!",
+  "4003":"Please add internet route PPPoE mode WAN.",
+  "4004":"Please input PPPoE password again.",
+
+  "5001":"The port is being used!",
+  
+  "6001":"Please check VoIP protocol!",
+  
+  "9001":" MAC has been bound.",
+  "9002":" IP has been bound.",
+  "9003":" IP has been distributed. ",
+  "9005":" LAN IP and DHCP binding IP have different segements.",
+  
+  "9004":" Please enter a valid IPv6 address, such as 2001::1, etc. "
+}

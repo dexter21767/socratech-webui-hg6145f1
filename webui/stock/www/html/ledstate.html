@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.form.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ledstate.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("update");
+	</script>
+	<style type="text/css"> 
+		#progress
+		{
+		height: 24px;
+		width: 200px;
+		border: none;
+	}
+	.inner-progress 
+	{
+		background: #2C5EA4;
+	}
+ 	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="update_prompt">update_prompt</font></p>
+		</div>
+		<br/>
+		<form enctype="multipart/form-data" method="post" action="../nginx_upgradecgi?method=upload&action=upgradeimage" id="upgrade_form">
+			<div class="main_content">
+				<div class="main_item" style="height: 30px;" id="file_common">
+					<div class="main_item_name" style="height: 28px;"><font i18n="update_chooseFile" style="line-height: 28px">update_chooseFile</font></div>
+					<div class="main_item_content" style="height: 28px;" ><input type="file" id="upgradefile" name="upgradefile"></div>
+				</div>
+				<div class="main_item" style="height: 30px;" id="file_telmex" style="display:none">
+					<div class="main_item_name" style="height: 28px;"><font i18n="update_chooseFile" style="line-height: 28px">update_chooseFile</font></div>
+					<div class="main_item_content" style="height: 28px;">
+						<input type="file" id="upgradefile_telmex" name="upgradefile_telmex" style="display:none" onchange="upload_file2(this.value)">
+						<input type="button" id="choose_file_telmex" i18n="choose_file" i18n-set="value" onclick="upload_file()">
+						<input id="path" name="path" style="width:300px" readonly>
+					</div>
+				</div>
+			</div>
+			<div class="main_button" id="upgrade_submit">
+				<div class="main_submit" style="width: 25%;"></div>	
+				<div class="main_submit" style="width: 75%;">
+					<input type="submit" class="input_button" id="upgrade_button"  i18n="updata_file" i18n-set="value">
+				</div>
+			</div>
+			<div id="div_info" style="display: none;">
+				</br>
+			    <div id="update_info"></div>
+			    <div id="progress" style="display: none;">
+			    	<div class="inner-progress">&nbsp;</div>
+			    </div>			   
+			</div>
+		</form>
+	</body>
+</html>

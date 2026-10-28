@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script language ="javascript "type ="text/javascript">
+		document.write('<script  src="js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+//		document.write('<script  src="js/landingPage.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="/js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+  <script>
+	loginPageAccessCheck(goperator_name,"LandingPage.html");
+  </script> 
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+        }
+       
+        .logo{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header{
+            width: 100%;
+            height: 45%;
+            display: flex;
+         
+              }
+        .footer{
+            width: 100%;
+            height: 5%;
+            background:rgba(216, 214, 211, 0.856) ;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bodylsit{
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            color: rgb(128, 194, 30);
+        }
+      p{
+          margin: 0;
+          padding: 0;
+      }
+      .text1{
+          padding: 0;
+          margin-top: 25px;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        font-weight: 700;
+      }
+      .text2{
+        padding: 0;
+          margin: 0;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        font-weight: 700;
+      }
+        .button{
+            margin-top: 2%;
+        }
+       .images{
+           width: 40%;
+           height: 60%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+       .image{
+           width: 100%;
+           height: 100%;
+       }
+        .yuyan{
+            position: absolute;
+            top: 5%;
+            right: 0;
+            margin-right: 5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <div class="logo">
+                <div class="images">
+                    <img class="image" src="/image/ais/login/aisfibre.png">
+                </div>
+                <div class="yuyan">
+                    <a href="#" id="say" onclick="print" >TH/EN</a>
+                </div>
+            </div>
+        </div>
+        <div class="bodylsit">
+            <div >
+                <div class="text1">
+                    <p name="liste" id="liste">Attention! You are currently unable to access the Internet.</p>
+                </div>
+                <div class="text2">
+                    <p name="lists" id="lists">Please turn off your router and other devices for 5 minutes, then turn them on again.</p>
+                </div>
+            </div>
+			<div >
+                <div class="text1" >
+                    <p name="listet" id="listet">ขณะนี้ ท่านไม่สามารถใช้งานอินเทอร์เน็ตได้!</p>
+                </div>
+                <div class="text2">
+                    <p name="listst" id="listst">โปรดปิดอุปกรณ์เราท์เตอร์ และอุปกรณ์อื่นๆที่เกี่ยวข้อง เป็นเวลา 5 นาทีหลังจากนั้นให้ทำการเปิดอุปกรณ์อีกครั้ง</p>
+                </div>
+            </div>
+            <div  class="button" >
+                <a  onclick="exitSystem" href="javascript:window.opener=null;window.open('about:blank','_self').close() ;window.close();">Continue</a>
+            </div>
+            
+        </div>
+        <footer class="footer">
+            <div>
+            <p class="text2"> Ais CONTACT CENTER 1175</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/usb_info_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form> 
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="usb_prompt">usb_prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+            <tbody>
+            	<tr class="table_title">
+      				<td colspan="2" id="usb_Inf"><font i18n="usb_Inf">usb_Inf</font></td>
+   				</tr>
+				
+	            <tr>
+		            <td class="table_left" width="25%" ><font i18n="usb1_title">usb1_title</font></td>
+		            <td class="table_right" id="usb1"></td>
+	            </tr>
+				
+	            <tr id="usb_2" style="display: none;">
+		            <td class="table_left"><font i18n="usb2_title">usb2_title</font></td>
+		            <td class="table_right" id="usb2"></td>
+	            </tr>
+				
+	        </tbody>
+	    </table>
+    </form>
+		
+</body>
+</html>

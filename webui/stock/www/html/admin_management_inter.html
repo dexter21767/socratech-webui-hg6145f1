@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+            document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/admin_management_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="admin_account_prompt" id="account_prompt">admin_account_prompt</font></p>
+		</div>
+		<br>
+		<form id="userManagementForm" method="post">
+            <div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+                <div class="table_title">
+                    <div colspan="2"><font i18n="account_management">Account Management</font></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="account_admin">Username</font></div>
+                    <div class="main_item_content"><input autocomplete="off" maxlength="32" name="username" id="username"  class="input_text" disabled="disabled" style="width: 170px"/><span class="redcolorfont">*</span>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="old_pwd_div">
+                    <div class="main_item_name"><font i18n="old_password">Old Password</font></div>
+                    <div class="main_item_content"><input class="fh-text-security" type="text" autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="password_old" id="password_old" oncopy="return false"  onpaste="return false" style="width: 170px;cursor:text;"/><span class="redcolorfont">*</span></div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name" id="new_password_title" ><font i18n="new_password">New Password</font></div>
+                    <div class="main_item_content" id="new_password_value" >
+                        <input class="fh-text-security" type="text" maxlength="32" autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="password_new" id="password_new" oncopy="return false" onpaste="return false"  style="width: 170px;cursor:text;"/>
+                            <span class="redcolorfont">*</span>
+                            <span style="color:grey">
+                                <font id="ed_tips" style="display: none;" i18n="password_tips"></font>
+                                <font id="th_tips" style="display: none;" i18n="password_th_tips"></font>
+                                <font id="common_tips"  i18n="common_password_tips"></font>
+                            </span>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="new_confirm_password">New Password Confirm</font></div>
+                    <div class="main_item_content"><input  class="fh-text-security" type="text" maxlength="32" autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="password_new_confirm" id="password_new_confirm" oncopy="return false" onpaste="return false" style="width: 170px;cursor:text;"/><span class="redcolorfont">*</span>
+                    </div>
+                    <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item">   
+                    <div class="main_submit" style="width: 25%;"></div>             
+                    <div class="main_submit" style="width: 75%;">
+                        <input type="button" class="input_button" id="apply" name="apply" onclick="saveApply()" i18n="modifyPassword" i18n-set="value">&nbsp; &nbsp;
+                        <input type="button" class="input_button" id="cancel" i18n="cancel" i18n-set="value" onclick="window.location.reload()"/>
+                    </div>
+                </div>               
+            </div>
+		</form>
+        <br>
+        <br>
+        <form id="sessionTimeForm" method="post" style="display:none">
+            <div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+                <div class="table_title">
+                    <div colspan="2"><font i18n="sessiontime">sessiontime</font></div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name"><font i18n="sessiontime">sessiontime</font></div>
+                    <div class="main_item_content"><input autocomplete="off" maxlength="2" name="sessiontime" id="sessiontime"  class="input_text"  style="width: 170px"/>
+                        <span class="redcolorfont">*</span>
+                        <span style="color:grey">
+                        <font>min</font>
+                    </span>
+                    </div>
+                </div>
+                <div class="main_item">   
+                    <div class="main_submit" style="width: 25%;"></div>             
+                    <div class="main_submit" style="width: 75%;">
+                        <input type="button" class="input_button" id="apply" name="apply" onclick="saveTimeApply()" i18n="modifyPassword" i18n-set="value">&nbsp; &nbsp;
+                        <input type="button" class="input_button" id="cancel" i18n="cancel" i18n-set="value" onclick="window.location.reload()"/>
+                    </div>
+                </div>               
+            </div>
+		</form>
+	</body>
+</html>

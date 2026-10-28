@@ -1,0 +1,22 @@
+{
+  "upnpEnableApply":"提交",
+  "upnpEnableCancel":"取消",
+  "upnpcfg_remove":"配置清除",
+  "upnp_prompt":" 在本页面上，您可以设置UPnP功能。",
+  
+  "dlna_prompt":" 在本页面上，您可以设置DLNA功能。",
+  "usb_pathTitle":"USB分区",
+  "dlnaEnable_title":"DLNA使能",
+  "dlna_pathTitle":"媒体共享路径",
+  "dlna_path_noalert":"请输入正确格式的媒体共享路径。",
+  
+  "upnp_enable":"开启",
+  "upnp_disable":"关闭",
+  "upnp_wan_title":"WAN 名称",
+  
+  "igmp_prompt":"在本页面上，您可以设置组播模式。 ",
+  "upnpEnable_title":"IGMP 模式",
+  "upnpEnable_title2":"MLD 模式",
+  "igmp_apply":"应用"
+
+}

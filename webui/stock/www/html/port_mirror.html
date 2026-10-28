@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/port_mirror.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+	</head>
+	<script type="text/javascript">
+		setDomain("menu");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint" i18n="port_mirror_hint"></p>
+		</div>
+		<form>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name" i18n="port_mirror_mirror"></div>
+					<div class="main_item_content" id="mirror">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" i18n="port_mirror_direction"></div>
+					<div class="main_item_content">
+						<select id="direction" class="main_select">
+							<option value="1">InDirection</option>
+							<option value="2">OutDirection</option>
+							<option value="3">BothDirection</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" i18n="port_mirror_catch"></div>
+					<div class="main_item_content">
+						<select id="catch" class="main_select">
+							<option value="1">LAN1</option>
+							<option value="2">LAN2</option>
+							<option value="3">LAN3</option>
+							<option value="4">LAN4</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

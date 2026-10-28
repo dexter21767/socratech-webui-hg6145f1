@@ -1,0 +1,293 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+			document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/acs_config.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("internet");
+</script>
+<style type="text/css">
+	.input_text {
+		width: 280px
+	}
+</style>
+
+<body class='main_config_body'>
+	<div class="main_header">
+		<p class="main_header_hint">
+			<font i18n="ACS_prompt">ACS_prompt</font>
+		</p>
+	</div>
+	<br />
+	<form id="Acs_form" method="post">
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="tr069_Enable">tr069_Enable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="radio" id="acs_enable" name="acs_enable" value="1" />
+					<font i18n="acs_enable">acs_enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					&nbsp;
+					<input type="radio" id="acs_disable" name="acs_enable" value="0" />
+					<font i18n="acs_disable">acs_disable</font>
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+			</div>
+			<div class="main_item" id="div_tr069_button">
+				<div class="main_submit" style="width: 25%;"></div>
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" id="acs_enable_apply" class="input_button" i18n="acs_apply" i18n-set="value"
+						onclick="save_enable_apply()" />&nbsp; &nbsp;
+					<input type="button" id="acs_enable_cancel" class="input_button" i18n="acs_cancel" i18n-set="value"
+						onclick="window.location.reload()" />
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_url">acs_url</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_url" id="acs_url" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error1" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_username">acs_username</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_username" id="acs_username" autocomplete="off"
+						disabled />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error2" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_password">acs_password</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text fh-text-security" name="acs_password" id="acs_password"
+						autocomplete="off" oncopy="return false" oncut="return false" onfocus="clearInputValue(this.id)"
+						onblur="resetInputValue(this.id)" />
+					<input id="show_password" type="checkbox" style="height: 12px; display: none;" class="input_button"
+						i18n="change_eye" i18n-set="value" onclick="change_eye()" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error3" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_connetionRequest_path">acs_connetionRequest_path</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_connetionRequest_path"
+						id="acs_connetionRequest_path" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error4" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_connetionRequest_port">acs_connetionRequest_port</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_connetionRequest_port"
+						id="acs_connetionRequest_port" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error5" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_connetionRequest_username">acs_connetionRequest_username</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_connetionRequest_username"
+						id="acs_connetionRequest_username" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error6" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_connetionRequest_password">acs_connetionRequest_password</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text fh-text-security" name="acs_connetionRequest_password"
+						id="acs_connetionRequest_password" autocomplete="off" oncopy="return false" oncut="return false"
+						onfocus="clearInputValue(this.id)" onblur="resetInputValue(this.id)" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error7" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item" id="div_acs_auth" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="acs_auth_enable">acs_auth_enable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="radio" id="acs_auth_enable" name="acs_auth_enable" value="1" />
+					<font i18n="acs_enable">Enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					<input type="radio" id="acs_auth_disable" name="acs_auth_enable" value="0" />
+					<font i18n="acs_disable">Disable</font>
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_inform_enable">acs_inform_enable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="radio" id="acs_infrom_enable" name="acs_infrom_enable" value="1" />
+					<font i18n="acs_enable">Enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					<input type="radio" id="acs_infrom_disable" name="acs_infrom_enable" value="0" />
+					<font i18n="acs_disable">Disable</font>
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="acs_inform_interval">acs_inform_interval</font>
+				</div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" name="acs_inform_interval" id="acs_inform_interval" />
+					&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				</div>
+				<div id="error8" class="main_item_error_hint_extra"></div>
+			</div>
+			<div class="main_item" id="certificate_auth" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="certificate_head">certificate_head</font>
+				</div>
+				<div class="main_item_content">
+					<input type="radio" id="certificate_enable" name="certificate_enable" value="1">
+					<font i18n="certificate_enable">certificate_enable</font>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" id="certificate_disable" name="certificate_enable" value="0">
+					<font i18n="certificate_disable">certificate_disable</font>
+					<span class="redcolorfont">*</span>
+				</div>
+			</div>
+
+			<div id="Stun" style="display: none;">
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="acs_stun_enable">acs_stun_enable</font>
+					</div>
+					<div class="main_item_content">
+						<input type="radio" id="acs_stun_enable" name="acs_stun_enable" value="1" />
+						<font i18n="acs_enable">Enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp;
+						<input type="radio" id="acs_stun_disable" name="acs_stun_enable" value="0" />
+						<font i18n="acs_disable">Disable</font>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="table_bg" id="stun_cfg">
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="acs_stun_url">acs_stun_url</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" name="acs_stun_url" id="acs_stun_url" />
+							&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						</div>
+						<div id="error9" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="acs_stun_service_port">acs_stun_service_port</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" name="acs_stun_service_port"
+								id="acs_stun_service_port" />
+							&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+							<font i18n="portTips">ssidNameTips</font>
+						</div>
+						<div id="error10" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="acs_stun_username">acs_stun_username</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" maxlength="256" name="acs_stun_username"
+								id="acs_stun_username" autocomplete="off" disabled
+								style="cursor:text;background:white" />
+						</div>
+						<div id="error11" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="acs_stun_password">acs_stun_password</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text fh-text-security" maxlength="256"
+								name="acs_stun_password" id="acs_stun_password" autocomplete="off" />
+						</div>
+						<div id="error12" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="acs_serviceID">acs_serviceID</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" name="acs_serviceID" id="acs_serviceID" />
+						</div>
+						<div id="error13" class="main_item_error_hint_extra"></div>
+					</div>
+				</div>
+			</div>
+			<div class="main_item" id="div_other_button">
+				<div class="main_submit" style="width: 25%;"></div>
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" id="acs_apply" class="input_button" i18n="acs_apply" i18n-set="value"
+						onclick="save_apply()" />&nbsp; &nbsp;
+					<input type="button" id="acs_cancel" class="input_button" i18n="acs_cancel" i18n-set="value"
+						onclick="window.location.reload()" />
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	if (gOperatorName != "COL_ETB") {
+		setInterval(function() {
+			if ($("#acs_password").length > 0) {
+				if (!$("#acs_password").hasClass("fh-text-security")) {
+					$("#acs_password").addClass("fh-text-security");
+				}
+			} else {
+				window.location.reload();
+			}
+
+			if ($("#acs_connetionRequest_password").length > 0) {
+				if (!$("#acs_connetionRequest_password").hasClass("fh-text-security")) {
+					$("#acs_connetionRequest_password").addClass("fh-text-security");
+				}
+			} else {
+				window.location.reload();
+			}
+
+			if ($("#acs_stun_password").length > 0) {
+				if (!$("#acs_stun_password").hasClass("fh-text-security")) {
+					$("#acs_stun_password").addClass("fh-text-security");
+				}
+			} else {
+				window.location.reload();
+			}
+		}, 10);
+	}
+</script>
+
+</html>

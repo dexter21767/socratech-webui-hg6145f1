@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/voice_enable_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("voip");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="voipenable_prompt">voipenable_prompt</font></p>
+		</div>
+		</br>
+		<form id="voice_base_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="protocol_title">protocol_title</font></div>
+					<div class="main_item_content">
+						<select id="ServerType_select" class="main_select">
+						</select>
+					</div>
+				</div>
+                <div class="main_item">   
+                    <div class="main_submit" style="width: 25%;"></div>             
+                    <div class="main_submit" style="width: 75%;">
+                        <input type="button" class="input_button" id="voip_ServerType_apply" i18n="voip_apply" i18n-set="value" onclick="saveServerType()"/>&nbsp; &nbsp;
+                        <input type="button" class="input_button" id="voip_ServerType_cancel" i18n="voip_cancel" i18n-set="value" onclick="window.location.reload()"/>
+                    </div>
+                </div> 				
+				<br/>
+				<div class="main_item" id="port_1">
+					<div class="main_item_name"><font i18n="port1_title">port1_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="voip_enable_1" name="voip_enable_1" value="Enabled"/><font i18n="voip_enable">voip_enable</font>&nbsp;
+						<input type="radio" id="voip_disable_1" name="voip_enable_1" value="Disabled"/><font i18n="voip_disable">voip_disable</font>
+					</div>
+				</div>
+				<div class="main_item" id="port_2">
+					<div class="main_item_name"><font i18n="port2_title">port2_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="voip_enable_2" name="voip_enable_2" value="Enabled"/><font i18n="voip_enable">voip_enable</font>&nbsp;
+						<input type="radio" id="voip_disable_2" name="voip_enable_2" value="Disabled"/><font i18n="voip_disable">voip_disable</font>
+					</div>
+				</div>
+				<div class="main_item" id="port_3">
+					<div class="main_item_name"><font i18n="port3_title">port3_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="voip_enable_3" name="voip_enable_3" value="Enabled"/><font i18n="voip_enable">voip_enable</font>&nbsp;
+						<input type="radio" id="voip_disable_3" name="voip_enable_3" value="Disabled"/><font i18n="voip_disable">voip_disable</font>
+					</div>
+				</div>
+				<div class="main_item"  id="port_4">
+					<div class="main_item_name"><font i18n="port4_title">port4_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="voip_enable_4" name="voip_enable_4" value="Enabled"/><font i18n="voip_enable">voip_enable</font>&nbsp;
+						<input type="radio" id="voip_disable_4" name="voip_enable_4" value="Disabled"/><font i18n="voip_disable">voip_disable</font>
+					</div>
+				</div>
+                <div class="main_item">   
+                    <div class="main_submit" style="width: 25%;"></div>             
+                    <div class="main_submit" style="width: 75%;">
+                        <input type="button" class="input_button" id="voip_apply" i18n="voip_apply" i18n-set="value" onclick="saveEnable()"/>&nbsp; &nbsp;
+                        <input type="button" class="input_button" id="voip_cancel" i18n="voip_cancel" i18n-set="value" onclick="window.location.reload()"/>
+                    </div>
+                </div> 				
+			</div>
+		</form>
+	</body>
+</html>

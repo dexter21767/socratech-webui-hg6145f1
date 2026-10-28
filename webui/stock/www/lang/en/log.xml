@@ -1,0 +1,38 @@
+{
+  "log_prompt":"On this page, you could view the logs.",
+  "fault_info_prompt":"On this page, you can collect and view fault information.",
+  "start_btn_text": "Start",
+  "syslog_prompt":"On this page, you could set and view system logs.",
+  "log_download":"Download",
+  "log_listHead":"Log Information",
+  "log_downloaderroralert":"Download Error!",
+
+  "log_apply":"Apply",
+  "log_cancel":"Cancel",
+  
+  "logcfg_prompt":"On this page, you can config web log enable/disable and log level.",
+  "log_title":"LOG",
+  "logEnableTitle":"Enable",
+  "logDisableTitle":"Disable",
+  "logLevelTitle":"Log Level",
+  
+  "log_debugPrompt":"You can view debug logs on this page.",
+  "log_debugListHead":"Debug Log Information",
+  "log_enalbe": "Log Enable",
+  "log_level": "Log Level",
+  "show_level": "Show Level",
+  "clear_log": "Clear Log File",
+  "download_log": "Download Log File",
+  "refresh_log": "Refresh",
+  "unknown_error_alert":"Unknown Error",
+
+  "remote_head":"Remote Syslog Server",
+  "remote_enableTitle":"Enable",
+  "remote_disableTitle":"Disable",
+  "remote_addressTitle":"Remote Server Address",
+  "invalid_data_alert":"Some value is invalid, please retry it!",
+  "remote_portTitle":"Remote Server Port",
+  "remote_apply":"Apply",
+  "remote_cancel":"Cancel"
+}
+

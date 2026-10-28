@@ -1,0 +1,159 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/down_cfgfile.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/jquery.form.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("restore");
+</script>
+<style type="text/css">
+	#progress {
+		height: 24px;
+		width: 200px;
+		border: none;
+	}
+
+	.inner-progress {
+		background: #2C5EA4;
+	}
+
+	.button1 {
+		border-radius: 8px;
+		width: 235px;
+		height: 40px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: #2e2e31;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		background-image: url('../image/new_ui/download_icon.png');
+		background-repeat: no-repeat;
+		background-position-x: 10px;
+		background-position-y: center;
+		text-indent: 20px;
+	}
+
+	.button1:hover {
+		cursor: pointer;
+	}
+</style>
+<style type="text/css">
+	.type-file-box {
+		position: absolute;
+		width: 260px
+	}
+
+	input {
+		vertical-align: middle;
+		margin: 0;
+		padding: 0
+	}
+
+	.type-file-text {
+		height: 32px;
+		border: 1px solid #cdcdcd;
+		width: 300px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		font-family: PingFangSC-Regular;
+		background-color: #2e2e31;
+		outline: none;
+		text-indent: 5px;
+	}
+
+	.type-file-button {
+		background-color: rgba(255, 255, 255, 0.2);
+		border: none;
+		border-radius: 8px;
+		height: 40px;
+		width: 240px;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		background-image: url('../image/new_ui/download.png');
+		background-repeat: no-repeat;
+		background-position-x: 60px;
+		background-position-y: center;
+	}
+	img,.type-file-file2,.type-file-file1,
+	.type-file-button,
+	.type-file-file:hover {
+		cursor: pointer;
+	}
+
+	.type-file-file1 {
+		position: fixed;
+		height: 14px;
+		opacity: 0;
+		width: 14px;
+		margin-left: -16px;
+  		margin-top: 17px;
+	}
+	.type-file-file2 {
+		position: fixed;
+		height: 40px;
+		opacity: 0;
+		width: 250px;
+	}
+
+	.ledstate_tip {
+		height: 54px;
+		line-height: 56px;
+		font-size: 14px;
+		font-family: PingFangSC-Regular;
+		color: rgba(255, 255, 255, 0.8);
+	}
+</style>
+
+<body class='main_config_body'>
+	<div style="float: right;">
+		<input type="button" class="button1" onclick="down_cfgfile()" id="Restart_button"
+			value="Configuration file backup" i18n="cfgfile_button" i18n-set="value">
+	</div>
+	</br>
+	<div style="margin-top: 50px;margin-left: 30%">
+		<div>
+			<img src="../image/new_ui/update2.png">
+		</div>
+		<form enctype="multipart/form-data" method="post" id="file_form">
+			<div class="main_button" id="upgrade_submit" style="margin-left: 70px;">
+				<div>
+					<div>
+						<font i18n="update_config_title" class="ledstate_tip">update_config_title :</font>
+						<input type='text' name='textfield' id='textfield' class='type-file-text'
+							style="visibility: hidden" readonly />
+							<img src="../image/new_ui/edit.png" id="edit" style="margin-left: 10px;visibility: hidden">
+							<input name="fileField" type="file" class="type-file-file1" id="fileField" 
+							onchange="javascript:document.getElementById('textfield').value=this.value.slice(12);document.getElementById('textfield').style.visibility = 'visible';" />
+							<img src="../image/new_ui/delete.png" id="del" style="margin-left: 10px;visibility: hidden"
+							onclick="javascript:document.getElementById('textfield').value='' ">
+					</div>
+					<div>
+						<input name="fileField" type="file" class="type-file-file2" id="fileField" size="28"
+							onchange="javascript:document.getElementById('textfield').value=this.value.slice(12);document.getElementById('textfield').style.visibility = 'visible';
+							document.getElementById('edit').style.visibility = 'visible';document.getElementById('del').style.visibility = 'visible';" />
+					</div>
+				</div>
+				<div>
+					<div>
+						<input type='button' name='button' id='button' value='Import File' class='type-file-button' />
+					</div>
+
+				</div>
+				<div>
+					<input type="submit" class="input_button" i18n="upload_button" i18n-set="value" id="upload_button"
+						style="margin-top: 10px;margin-left: 0px;" />
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

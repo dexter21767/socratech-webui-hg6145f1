@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/speed_test_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint" i18n="speed_test_prompt"></p>
+		</div>
+		<br>
+		<div id='loading_window_div' style='display:none'>
+			<div id="loading_window_content_div" style="margin-left: 200px;">
+				loading......
+			</div>
+		</div>
+		<form>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="destination_url">destination_url</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width: 182px" autocomplete="off" id="url" name="url"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="diagnosis_interface_title">diagnosis_interface_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_connect" name="wan_connect" class="main_select" style="width: 182px">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" i18n="direction_title"></div>
+					<div class="main_item_content">
+						<select id="direction" class="main_select">
+							<option value="1">Upload</option>
+							<option value="2">Download</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id="upload_size_div">
+					<div class="main_item_name" i18n="file_size_title"></div>
+					<div class="main_item_content">
+						<select id="upload_size" class="main_select">
+							<option value="104857600">100M</option>
+							<option value="209715200">200M</option>
+							<option value="524288000">500M</option>
+							<option value="1048576000">1G</option>
+							<option value="2097152000">2G</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id="upload_mode_div">
+					<div class="main_item_name" i18n="uplod_mode_title"></div>
+					<div class="main_item_content">
+						<select id="upload_mode" class="main_select">
+							<option value="PUT">PUT</option>
+							<option value="POST">POST</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" i18n="duration_title"></div>
+					<div class="main_item_content">
+						<select id="duration" class="main_select">
+							<option value="0">0</option>
+							<option value="30">30s</option>
+							<option value="60">60s</option>
+							<option value="120">120s</option>
+							<option value="180">180s</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_button">
+					<div class="main_submit" style="width: 25%;"></div>
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="save_apply" class="input_button" onclick="saveApply()" i18n="inet_apply" i18n-set="value">&nbsp; &nbsp;
+						<input type="button" id="cancel_btn" class="input_button" onclick="window.location.reload()" i18n="inet_cancel" i18n-set="value">
+					</div>
+				</div>
+			</div>
+
+			<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="speed_testListHead">speed_testListHead</font></td>
+				</tr>
+				<tbody> 
+					<tr class="table_head_title">
+						<td width="20%"><font i18n="Attribute">Attribute</font></td>
+						<td width="80%"><font i18n="Result">Result</font></td>
+					</tr>
+				</tbody>
+				<tbody id="result_info">
+				</tbody>
+		  </table>
+		</form>
+	</body>
+</html>

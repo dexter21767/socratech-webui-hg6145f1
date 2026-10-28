@@ -1,0 +1,36 @@
+{
+	"arp_configPrompt": "En esta página, puede configurar parámetros ARP estáticos, incluidas la dirección IP y la dirección MAC.",
+	"arp_config_ListHead": "ARP Configuration List",
+	"fw_filterID": "ID",
+	"ipaddr": "Dirección IP",
+	"macaddr": "Dirección MAC",
+	"macaddr_macTips": "(eg.00:11:22:33:44:55)",
+	"firewall_apply": "Aplicar",
+	"firewall_cancel": "Cancelar",
+	"arp_aging_prompt": "On this page,you can configure the ARP aging time of a WAN port.",
+	"arp_aging_list_title": "ARP Aging List",
+	"app_id": "ID",
+	"wan_name": "Nombre WAN",
+	"arp_aging_time_s": "ARP Aging Time(s)",
+	"arp_aging_time": "ARP Aging Time",
+	
+	"IP_used_Alert":"La dirección IP ya está en uso.",
+	"MAC_used_Alert":"La dirección MAC ya está en uso.",
+	"IP_illegal_Alert":"Esta ip no está en el grupo de ip",
+	"illegal_value_alert":"¡Algún valor es ilegal!",
+	
+	"no_rules_alert":"En la actualidad no hay regla, no se puede eliminar!",
+	"no_selected_rules_alert":"Actualmente no hay ninguna regla que haya sido seleccionada, ¡no se puede eliminar!",
+	"delete_alert":"¿Estás seguro de eliminar la regla seleccionada?",
+	"delete_alert_all":"¿Estás seguro de eliminar todas estas reglas?",
+	"fw_most8RulesAlert":"¡Puedes configurar hasta 8 reglas!",
+	
+	"arp_aging_timeTips": "(5-1440s)",
+	"wan_name_is_empty_alert": "¡El nombre WAN no puede estar vacío!",
+	"arp_add":"Agregar",
+	"arp_delete":"Borrar",
+	"arp_delete_all":"Eliminar todos",
+	"arp_Enable_title":"ARP habilitación",
+	"arp_Enable":"Activar",
+	"arp_Disable":"Desactivar"
+}

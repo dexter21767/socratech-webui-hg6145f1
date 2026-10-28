@@ -1,0 +1,15 @@
+{
+	"WifiCoverageConfig_prompt": "On this page, you can manage smart WiFi coverage. Specifically, you can enable the ONT to work with external APs to construct a WiFi network and extend WiFi coverage.",
+	"ExternalAPListHead": "External AP List",
+	"btn_apply": "Apply",
+	"btn_cancel": "Cancel",
+	"no_title": "No.",
+	"device_model_title": "Device Model",
+	"serial_num_title": "Serial Number",
+	"status_title": "Status",
+	"online_duration": "Online Duration",
+	"time_out": "Time out!",
+	"force_switching_value_invalid": "Force switching value error, please confirm Force switching value between -100 and -66.",
+	"conditioned_switching_value_invalid": "Conditioned switching value error, please confirm Conditioned switching value between -84 and -60.",
+	"config_status": "Configuration Status"
+}

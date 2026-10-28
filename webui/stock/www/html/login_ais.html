@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AIS - FIBER</title>
+    <meta charset="utf-8">
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<script language ="javascript "type ="text/javascript">
+		document.write('<link rel="stylesheet" type="text/css" href="../css/helvetica.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		document.write('<link rel="stylesheet" type="text/css" href="../css/index.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	    document.write('<script  src="../js/jquery-1.11.2.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/login_ais.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script language="javascript" type="text/javascript">
+loginHtmlAccessCheck(goperator_name, "login_ais.html");
+</script>
+<style type="text/css">
+    .wrapper {
+        /* margin: auto; */
+        width: 100%;
+        /* padding: 1px; */
+    }
+
+    .row {
+        /* margin: auto; */
+        /* width: 60%; */
+        /* padding: 1px; */
+    }
+
+    .container-fluid {
+        /* margin: auto; */
+        /* width: 60%; */
+        /* padding: 1px; */
+    }
+
+    .warp-login {
+        padding-top: 4%;
+    }
+
+	.label-verification {
+	    font-family: Roboto;
+		font-style: italic;
+		font-weight: bold;
+		margin_left:15%;
+		padding:20px 18px 10px 18px;
+		width:200px;
+		height:60px;
+		line-height:20px;
+		font-size: 18pt;
+	    background: url(../image/yanzhengma.jpg) no-repeat center top;
+	    display: inline-block;
+	    text-align: right;
+	    color: #000;
+	    cursor:pointer;
+	    background-size: 100% 100%;
+	}
+
+
+    @media only screen and (max-width: 1024px) {
+        .warp-login {
+            /* max-width: 360px; */
+            margin-top: 30%;
+
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .warp-login {
+            /* max-width: 300px; */
+            margin-top: 24%;
+
+        }
+
+        .input-form-login.username {
+            padding-left: 14%;
+        }
+
+        .input-form-login.password {
+            padding-left: 14%;
+        }
+    }
+
+    @media only screen and (max-width: 414px) {
+        .warp-login {
+            max-width: 280px;
+
+        }
+
+        .input-form-login.username {
+            padding-left: 16%;
+        }
+
+        .input-form-login.password {
+            padding-left: 16%;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+
+        .warp-login {
+
+            margin-top: 12%;
+
+        }
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="wrapper">
+                <div class="warp-login">
+                    <div style="text-align: center;padding-bottom:50px; "><img src="../image/ais/login/aisfibre.png"
+                            style="width:200px"></div>
+                    <h3 class="text-center">SIGN IN</h3>
+                    <div class="form-group">
+                        <p class="title">USERNAME</p>
+                        <div><input type="text" class="input-form-login username" id="username" placeholder="USERNAME"></div>
+                    </div>
+                    <div class="form-group">
+                        <p class="title">PASSWORD</p>
+                        <div><input type="password" class="input-form-login password" id="password" placeholder="PASSWORD"></div>
+                    </div>
+
+                    <div class="tr_verifi" style="display:none">
+
+	                    <div class="text-center">
+	                    <div  id="verifiCode" onclick="refresh()" oncopy="return false" class="label-verification" i18n-set="value"></div>
+	                	</div>
+
+						<div class="form-group">
+	                    	<p class="title">VERIFICATIONCODE</p>
+	                    	<div><input  type="text" class="input-form-login captcha" id="validate_code" maxlength="6" ></div>
+	                	</div>
+	                </div>	
+                	
+                    <div class="text-center" style="margin-top:70px;"><button class="btn-signin"  id="myButton">SIGN
+                            IN</button>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

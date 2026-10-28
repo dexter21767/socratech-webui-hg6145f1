@@ -1,0 +1,12 @@
+{
+  "VPN basic apply":"Aplicar",
+  "VPN basic cancel":"Cancelar",
+  "VPN_prompt":"En esta página, puede configurar la habilitación/deshabilitación del paso a través de VPN.", 
+  "VPNEnable_title":"Paso a través de VPN",
+  "VPN_enable":"Habilitar",
+  "VPN_disable":"Deshabilitar",
+  
+  "Tr069 qos prompt":"En esta página, puede configurar la habilitación/deshabilitación del paso a través de QoS.",
+  "Tr069 qoS enable title":"Habilitar Qos"
+   
+}

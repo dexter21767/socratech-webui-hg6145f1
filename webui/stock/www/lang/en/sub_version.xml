@@ -1,0 +1,9 @@
+{
+	"sub_version_prompt":"You could configure Software sub-version enable/disable here.",
+	"rc_enable":"Enable",
+ 	"rc_disable":"Disable",
+ 	"sub_version":"Software sub-version",
+ 	"recontrolApply":"Apply",
+  	"recontrolCancel":"Cancel"
+
+}

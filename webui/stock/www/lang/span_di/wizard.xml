@@ -1,0 +1,49 @@
+{
+  "wizard_prompt":"En esta página, puede realizar la configuración rápida del dispositivo.",
+  "quick_setup":"Configuración rápida",
+  "wan_configuration":"Configuración WAN",
+  "inet_user":"Nombre de usuario",
+  "inet_password":"Contraseña",
+  "operator_mode_combo":"Modo Combo",
+  "operator_mode_bridge":"Modo puente",
+  "operator_mode_rg":"Modo RG",
+  "operator_mode_ap":"AP Mode",
+
+  "wifi_5g_gbit_port1":"LAN 1",
+  "wifi_5g_itv":"LAN 2",
+  "wifi_5g_gbit_port3":"LAN 3",
+  "wifi_5g_gbit_port4":"LAN 4",
+  
+  "wifi_gbit_port":"LAN 1",
+  "wifi_iTV":"LAN 2",
+  "wifi_100m_port2":"LAN 3",
+  "wifi_100m_port3":"LAN 4",
+
+  "wifi_10g_lan":"LAN de 10G",
+
+  "DHCP_FE_title":"Vinculación LAN",
+  "DHCP_SSID_title":"Vinculación del SSID",
+  "wan_SSID_24g_title":"2.4G Vinculación SSID ",
+  "wan_SSID_5g_title":"5G Vinculación SSID",
+
+  "band_steering":"Selección automática de banda Wifi",
+  "bandsteering_button":"Selección automática de banda Wifi activada/desactivada",
+  "security_netName":"Nombre del SSID",
+  "secure_wpa_pass_phrase":"Contraseña",
+  "wpa_passphraseTips":"(Puede ingresar de 8 a 63 caracteres)",
+  "ssidNameTips":"(1-32 caracteres)",
+  "ssid_24g_title":"2.4 GHz Configuración de red inalámbrica",
+  "ssid_5g_title":"5 GHz Configuración de red inalámbrica",
+
+  "repeated_binding_port_alert1":"El puerto al que está vinculado tiene un conflicto con el enlace",
+  "repeated_binding_port_alert2":", modifíquelo e inténtelo de nuevo.",
+  "invalid_value_alert":"Algunos campos tienen valores no válidos, por favor llénelos nuevamente.",
+  "set_quick_setup_failed":"¡Error en la configuración rápida!",
+  "relogin_after_device_reboot":"¡El dispositivo se está reiniciando! Espere un momento y vuelva a iniciar sesión después de reiniciar.",
+  "takes_effect_after_device_restart":"La nueva configuración surte efecto después de reiniciar el dispositivo. ¿Está seguro de enviar y reiniciar el dispositivo?",
+
+
+  "recontrolApply":"Aplicar",
+  "back":"Atrás",
+  "recontrolCancel":"Cancelar"
+}

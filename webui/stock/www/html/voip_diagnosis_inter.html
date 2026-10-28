@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+        	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/voip_diagnosis_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("voip_diagnosis");
+	</script>
+	<style type="text/css">
+	    .main_item_error_hint {color: red; clear: both;}
+	    .input_text {width: 124px;}
+		.main_select{width:126px}
+		.input_text_150{width: 150px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="voip_diagnosis_prompt">voip_diagnosis_prompt</font></p>
+		</div>
+		<form id="lan_ipv4_form">
+			<div class="main_content">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="loop_test_tittle">loop_test_tittle</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="pots_port">pots_port</font></div>
+					<div class="main_item_content">
+						<select class="pots_port" id="loop_pots_port">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="forst_test_on_busy">forst_test_on_busy</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="loop_test_mode"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="loop_start_btn" onclick="loop_start_test()" i18n="start_test" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="loop_obtain_btn" onclick="loop_obtain_result()" i18n="obtain_result" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="test_result">test_result</font></div>
+					<div class="main_item_content" id="loop_test_result"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_ground_ac_v">a_ground_ac_v</font></div>
+					<div class="main_item_content" id="a_ground_ac_v"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="b_ground_ac_v">b_ground_ac_v</font></div>
+					<div class="main_item_content" id="b_ground_ac_v"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_b_ac_vo">a_b_ac_vo</font></div>
+					<div class="main_item_content" id="a_b_ac_vo"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_ground_dc_v">a_ground_dc_v</font></div>
+					<div class="main_item_content" id="a_ground_dc_v"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="b_ground_dc_v">b_ground_dc_v</font></div>
+					<div class="main_item_content" id="b_ground_dc_v"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_b_dc_v">a_b_dc_v</font></div>
+					<div class="main_item_content" id="a_b_dc_v"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_g_r">a_g_r</font></div>
+					<div class="main_item_content" id="a_g_r"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="b_g_r">b_g_r</font></div>
+					<div class="main_item_content" id="b_g_r"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_b_r">a_b_r</font></div>
+					<div class="main_item_content" id="a_b_r"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_g_c">a_g_c</font></div>
+					<div class="main_item_content" id="a_g_c"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="b_g_c">b_g_c</font></div>
+					<div class="main_item_content" id="b_g_c"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="a_b_c">a_b_c</font></div>
+					<div class="main_item_content" id="a_b_c"></div>
+				</div>
+			</div>
+			<br/>
+			<div class="main_content">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="circuit_test_tittle">circuit_test_tittle</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="pots_port">pots_port</font></div>
+					<div class="main_item_content">
+						<select class="pots_port" id="circuit_pots_port">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="forst_test_on_busy">forst_test_on_busy</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="circuit_test_mode"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="circuit_start_btn" onclick="circuit_start_test()" i18n="start_test" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="circuit_obtain_btn" onclick="circuit_obtain_result()" i18n="obtain_result" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="test_result">test_result</font></div>
+					<div class="main_item_content" id="circuit_test_result"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="loop_current_test">loop_current_test</font></div>
+					<div class="main_item_content" id="loop_current_test"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="feed_voltage_test">feed_voltage_test</font></div>
+					<div class="main_item_content" id="feed_voltage_test"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ring_test_result">ring_test_result</font></div>
+					<div class="main_item_content" id="ring_test_result"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="loop_current">loop_current</font></div>
+					<div class="main_item_content" id="loop_current"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="feed_voltage">feed_voltage</font></div>
+					<div class="main_item_content" id="feed_voltage"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ring_voltage">ring_voltage</font></div>
+					<div class="main_item_content" id="ring_voltage"></div>
+				</div>
+			</div>
+			<br/>
+		</form>
+	</body>
+</html>

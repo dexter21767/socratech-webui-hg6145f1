@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" >
+<script language ="javascript "type ="text/javascript">
+	document.write('<script  src="./js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript" type="text/javascript">
+loginPageAccessCheck(goperator_name,"index_th_ais.html");
+
+function formLoad() {
+}
+</script>
+    <style>
+        .lock_center{
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            margin-left: -200px;
+        }
+        .lock_center>img{
+            width: 200px;
+            height: 200px;
+        }
+        .footer{
+            position: absolute;
+            top: 100%;
+            margin-top: -25px;
+        }
+    </style>
+    <title>networklock</title>
+</head>
+<body onLoad="formLoad()">
+<div class="header">
+    <div class="logo"><img src="./image/ais/logo.png"></div>
+</div>
+<div class="lock_center">
+    <img src="./image/ais/networklock.jpg">
+    <p>The network used is not an AIS network, the device is locked</p>
+</div>
+</body>
+</html>

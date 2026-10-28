@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/alg_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("alg");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="alg_prompt">alg_prompt</font></p>
+		</div>
+		<fh-fo-rm id="alg_form" method="post">
+			<div class="main_content">
+				<div class="main_item" id="h323_item">
+					<div class="main_item_name"><font i18n="h323">h323</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="H323Enable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="rtsp">rtsp</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="RTSPEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item" id="l2tp">
+					<div class="main_item_name"><font i18n="l2tp">l2tp</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="L2TPEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item" id="ipsec">
+					<div class="main_item_name"><font i18n="ipsec">ipsec</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="IPSECEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="sip">sip</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="SIPEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ftp">ftp</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="FTPEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_submit" style="width: 25%;"></div>				
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" id="alg_apply" class="input_button" i18n="alg_apply" i18n-set="value" onclick="saveApply()"/>
+					<input type="button" id="alg_cancel" class="input_button" i18n="alg_cancel" i18n-set="value" onclick="window.location.reload()"/>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

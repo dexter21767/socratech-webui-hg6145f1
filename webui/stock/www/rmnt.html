@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<META http-equiv="Content-Type" content="text/html; charset=gbk">
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="../css/style.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="../js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="js/rmnt.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<title>RMNT Setting</title>
+<script language="javascript" type="text/javascript">
+loginPageAccessCheck(goperator_name, "rmnt.html");
+</script>
+<style type="text/css">
+.text {font-family: "Roboto";font-size: 12px;color: #333333;}
+</style>
+
+<STYLE type="text/css">
+.STYLE1 {
+	color: #FF0000;
+	text-align: center;	
+	font-size: 13px;
+}
+
+.STYLE7 {
+    font-family:Roboto;  
+    font-style:italic;  
+    font-weight:bold;  
+    text-align: center;
+    border:0;  
+    letter-spacing:10px;  
+    font-size: 15px;
+    color:blue;
+	background-color:#999999;
+}
+table{
+	border:0px;
+}
+</style>
+</head>
+<body >
+  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td align="center" valign="middle" bgcolor="#FFFFFF"><table width="747" height="591" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+            <tbody>
+              <tr>
+                <td valign="top" background="image/bg_rmnt.gif"><table width="747" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td height="221" valign="top"><table width="747" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="663">&nbsp;</td>
+                                <td width="84"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="747" height="60" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="250"></td>
+                                <td width="289" align="center" class="text"><font size="3" style="FONT-SIZE:15pt;FONT-FAMILY:Roboto, sans-serif">Remote Management</font></td>
+                                <td width="208"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="747" height="40" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="335" align ="right">Validate Code:&nbsp;&nbsp;&nbsp;</td>
+                                <td width="134" height="25" align="left"><input name="jiaoyanma" id="jiaoyanma" onpaste="return false;" oncontextmenu="return false;" value="" type="text"></td>
+                                <td width="278"></td>
+                              </tr>
+                              <tr>
+                                <td width="335" align="right"></td>
+                                <td width="134" height="25" align="center" id="checkCode" name="checkCode" oncopy="return false;" oncontextmenu="return false;" onMouseDown="return false;" onMouseUp="return false;" class="STYLE7"></td>
+                                <td width="278">&nbsp;&nbsp;
+                                  <input type="button" align="left" id="refresh" value="Refresh" class="button" onClick="refresh();"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="747" height="35" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="325"></td>
+                                <td width="67" align="left"><input type="BUTTON" id="wizardRmntDisable" name="wizardRmntDisable" value="Disable" class="text" onClick="save_disable_apply();"></td><td width="20"></td>
+                                <td width="67" align="right" valign="middle"><input type="BUTTON" id="wizardRmntEnable" name="wizardRmntEnable" value="&nbsp;Enable" class="text" onClick="save_enable_apply();">
+                                  <input type="HIDDEN" name="recontrol_check" value="0"></td>
+                                <td width="268" align="center" valign="middle"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="747" height="30" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="300"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                      <tr>
+                        <td><table width="747" height="45" border="0" cellpadding="0" cellspacing="0">
+                            <tbody>
+                              <tr>
+                                <td width="300"></td>
+                                <td width="189" align="center" id="set_complete" class="STYLE1" valign="middle"></td>
+                                <td width="258" height="30"></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+

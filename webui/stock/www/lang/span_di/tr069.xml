@@ -1,0 +1,63 @@
+{
+  "tr069_basic_apply":"Aplicar",
+  "tr069_basic_cancel":"Cancelar",
+
+  "tr069_title":"TR069 Ajustes básicos",
+  "tr069_prompt":"En esta página, puede configurar la URL, el nombre de usuario, la contraseña, el nombre de usuario de la solicitud de conexión, la contraseña de la solicitud de conexión de la configuración básica de TR069.",
+  "tr069_prompt_readonly":"Puede ver la URL, el nombre de usuario, la contraseña, el nombre de usuario de la solicitud de conexión, la contraseña de la solicitud de conexión de la configuración básica de TR069 aquí.",
+  "tr069_prompt_cfgfile":"En esta página, puede configurar la configuración efectiva de TR069.",
+
+  "tr069_basic":"TR069 Básico",
+  
+  "tr069url_title":"URL",
+  "tr069userName_title":"Nombre de usuario",
+  "tr069password_title":"Contraseña",
+  "tr069conReqUsr_title":"Nombre de usuario de la solicitud de conexión",
+  "tr069conReqPwd_title":"Contraseña de la solicitud de conexión",
+  
+  "tr069_noURL":"¡Por favor, introduzca la URL!",
+  "tr069_urlillegal":"¡La URL es ilegal!",
+  "tr069_nousername":"¡Por favor, introduzca el nombre de usuario!",
+  "tr069_noRequestUsername":"¡Por favor, introduzca el nombre de usuario de la solicitud de conexión!",
+  "tr069_noinforminterval":"¡Por favor, introduzca el intervalo del informe tr069!",
+
+  "tr069InformEnable_title":"Habilitar Informe",
+  "tr069InformInterval_title":"Intervalo del Informe",
+  "tr069Enable_title":"TR069 Habilitar",
+  "tr069CertificateEnable_title":"Habilitar certificado",
+  
+  "tr069_enable":"Habilitar",
+  "tr069_disable":"Deshabilitar",
+  
+  "tr069auth_Title":"Autenticación de solicitud de conexión",
+  "tr069_getRPCMethods":"Obtener Metodos RPC",
+  "ConnectionRequestPath_title":"Ruta de solicitud de conexión",
+  "ConnectionRequestPort_title":"Puerto de solicitud de conexión",
+  "InformInterval_alert":"ngrese la informacion TR069 valido(1 - 2147483647)! ",
+  "Please_enter_valid_port_value":"¡Por favor, introduzca un valor de puerto válido: 1-65535!",
+  "Please_enter_connectionRequestPassword":"¡Por favor, introduzca la contraseña de solicitud de conexión!",
+  "Please_input_path":"¡Por favor, introduzca la ruta!",
+  "Please_input_password!":"¡Por favor, introduzca la contraseña!",
+  
+  "certi_prompt":"Puede importar el certificado TR069.",
+  "certi_title":"TR069 Importación de certificados",
+  "certi_import":"Importación",
+  "certi_load":"Cargando",
+  "certi_fileIllegalAlert":"¡Por favor, seleccione el archivo de certificado correcto!",
+  "certi_complete":"¡Importación de certificados completa!",
+
+  "tr069_inform_prompt":"En esta página, puede activar la informe manual de TR069.",
+  "NoWan_alert":"¡La WAN TR069 no existe!",
+  "NoIP_alert":"¡La WAN TR069 no tiene IP!",
+  "Timeout_alert":"¡Tiempo de espera del informe agotado!",
+  "InformSuccess_infor":"¡Informe exitoso! Tiempo de informe:",
+  "tr069ManualTriggerInform_title":"TR069 Informe manual",
+  "ManualTriggerInform":"Informe",
+
+  "remote_manage_prompt":"En esta página, puede ver el estado de la conexión remota y el estado del aprovisionamiento del servicio.",
+  "ur_status_title":"Estado de reportes no solicitados",
+  "asc_status_title":"Estado de conexión de ACS",
+  "sp_status_title":"Estado de aprovisionamiento de servicios"
+  
+}
+

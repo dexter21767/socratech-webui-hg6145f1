@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/call_history.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	
+	<form>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="callhistoryprompt">callhistoryprompt</font></p>
+		</div>
+		<br/>
+		<div class="main_item">
+			<div class="main_item_name"><font i18n="call_history_enable_title">call_history_enable_title</font></div>
+			<div class="main_item_content">
+				<input type="radio" id="call_history_enable" name="call_history_enable" value="1"/><font i18n="state_Enable">state_Enable</font>&nbsp;&nbsp;
+				<input type="radio" id="call_history_disable" name="call_history_enable" value="0"/><font i18n="state_Disable">state_Disable</font>
+				&nbsp;&nbsp;<span class="redcolorfont">*</span>
+				<font i18n="call_historyTips">call_historyTips</font>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_submit" style="width: 25%;"></div>				
+			<div class="main_submit" style="width: 75%;">
+				<input type="button" id="firewall_mode_apply" class="input_button" i18n="state_apply" i18n-set="value" onclick="EnableApply()"/>
+				<input type="button" id="firewall_mode_cancel" class="input_button" i18n="state_cancel" i18n-set="value" onclick="EnableCancel()"/>
+			</div>
+		</div>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			 <tbody>
+			<tr class="tabal_head">
+				<td colspan="5"><font i18n="voip_callhistoryHead">voip_callhistoryHead</font></td>
+			</tr>
+				<tr class="table_head_title">
+					<td id="td_date" width="3%"><font i18n="voip_dateTitle">voip_dateTitle</font></td>
+					<td id="td_time" width="18%"><font i18n="voip_timeTitle">voip_timeTitle</font></td>
+					<td id="td_outnumber" width="15%"><font i18n="voip_outnumberTitle">voip_outnumberTitle</font></td>
+					<td id="td_direction" width="15%"><font i18n="voip_directionTitle">voip_directionTitle</font></td>
+					<td id="td_localnumber" width="15%"><font i18n="voip_localnumberTitle">voip_localnumberTitle</font></td>
+					<td id="td_duration" width="15%"><font i18n="voip_durationTitle">voip_durationTitle</font></td>
+				</tr>
+			</tbody>
+			<tbody id="call_history_list"></tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "restore_prompt":"Nesta página, você pode restaurar várias configurações de dispositivos.",
+    "restore_confirm":"Se você restaurar a configuração padrão, sua configuração pessoal será perdida. Tem certeza de que deseja restaurar a configuração padrão?",
+    "restore_error":"Falha ao restaurar!",
+	"restore_apply":"Restaurar",
+
+    "file_error_alert":"Por Favor Selecione o Arquivo",
+    "upload_path_empty_error":"O caminho do upload está vazio",
+    "upload_error_alert":"Falha no upload do arquivo. Por favor, tente novamente!",
+    "unknown_error_alert":"Erro desconhecido",
+
+    "reboot_Prompt":"Nesta página você pode reiniciar o dispositivo clicando no botão abaixo.",
+    "reboot_apply":"Reiniciar",
+    "reboot_confirm":"Leva algum tempo para reiniciar o dispositivo e o sistema de gerenciamento de rede baseado em Web será desconectado automaticamente. Por favor faça login novamente mais tarde. Tem certeza de que deseja reiniciar o dispositivo?",
+
+    "cfgfile_title":"Nesta página, você pode fazer backup do arquivo de configuração no computador",
+    "cfgfile_button":"Configuração de backup do arquivo",
+    "update_config_prompt":"Se você entrar com o caminho do arquivo de configuração, seu terminal será atualizado com o arquivo de configuração salvo.",
+    "upload_button":"Atualizar arquivo",
+	"update_config_title":"Actualizar Ficheiro de Configuração"
+
+
+
+}

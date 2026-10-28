@@ -1,0 +1,68 @@
+{
+	  "checktime_prompt":"On this page, you could configure NTP related functions.",
+	  "ntpchecktime_title":"NTP Check Time",
+
+	  "checkboxTips":"Enable NTP Check Time",
+	  "firstNTPServer_Title":"First NTP Server",
+	  "secondNTPServer_Title":"Second NTP Server",
+	  "thirdNTPServer_Title":"Third NTP Server",
+	  "fourthNTPServer_Title":"Fourth NTP Server",
+	  "fifthNTPServer_Title":"Fifth NTP Server",
+	  
+	  "timeZoneTitle":"Time Zone",
+	  "secondsTips":"Seconds (1-99999)",
+
+	  "GMTm12title":"(GMT-12:00)Dateline West",
+	  "GMTm11title":"(GMT-11:00)Midway Island, Samoa",
+	  "GMTm10title":"(GMT-10:00)Hawaii",
+	  "GMTm9title":"(GMT-09:00)Alaska",
+	  "GMTm8title":"(GMT-08:00)Pacific Time",
+	  "GMTm7title":"(GMT-07:00)Mountain Time",
+	  "GMTm6title":"(GMT-06:00)Middle America",
+	  "GMTm5title":"(GMT-05:00)Indiana East, Colombia",
+	  "GMTm4title":"(GMT-04:00)Atlantic Time, Brazil West",
+	  "GMTm3title":"(GMT-03:00)Brazil East, Greenland",
+	  "GMTm3title_arg":"(GMT-03:00)Buenos Aires, Argentina",
+	  "GMTm2title":"(GMT-02:00)Mid-Atlantic",
+	  "GMTm1title":"(GMT-01:00)Azores Islands",
+	  "GMT0title":"(GMT)Gambia, Liberia, Morocco",
+
+	  "GMT1title":"(GMT+01:00)Germany",
+	  "GMT2title":"(GMT+02:00)Greece, Ukraine, Turkey",
+	  "GMT2title_ple":"(GMT+02:00)Jerusalem",
+	  "GMT2title_eg":"(GMT+02:00)Cairo",
+	  "GMT3title":"(GMT+03:00)Moscow Winter Time",
+	  "GMT4title":"(GMT+04:00)Armenia",
+	  "GMT5title":"(GMT+05:00)Pakistan, Russia",
+
+	  "GMT6title":"(GMT+06:00)Bangladesh, Russia",
+	  "GMT7title":"(GMT+07:00)Bangkok, Hanoi, Jakarta",
+	  "GMT8title":"(GMT+08:00)Beijing,Chongqing,HongKong,Urumqi",
+	  "GMT9title":"(GMT+09:00)Japan, Korea",
+	  "GMT10title":"(GMT+10:00)Guam, Russia",
+	  "GMT11title":"(GMT+11:00)Solomon Islands",
+	  "GMT12title":"(GMT+12:00)New Zealand",
+	  
+	  "GMT13title":"(GMT+13:00)Nukualofa",
+
+	  "ntpCurTime_Title":"Current Time",
+	  "ntpWanChannelTitle":"Binding WAN Connections",
+	  "checkDaylight":"Daylight Savings Time",
+	  "checkDaylight_Tip":"(such as 2017-08-01T13:50:00)",
+	  "start_Time":"Start Time",
+	  "end_Time":"End Time",
+	  
+	  "ntp_nofirstserveralert":"Please input the first NTP server.",
+	  "ntp_nosecondserveralert":"Please input the second NTP server.",
+	  "ntp_noperiodalert":"please input the auto check time period.",
+	  "ntp_illegalperiodalert":"Please input a valid auto check time period.",
+	  "daylightsavingstimeIllegalAlert":"Please input a valid daylight savings time.",
+	  
+  	  "ntpsave_apply":"Check Time", 
+  	  "ntp_cancel":"System Check Time",
+  	  "ntp_check_time":"NTP Check Time",
+  	  "invalid_data_alert":"Some value is invalid, please retry it!",
+	  "app_wan":"Binding WAN Connections"
+
+}
+

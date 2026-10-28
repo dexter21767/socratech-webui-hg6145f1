@@ -1,0 +1,16 @@
+{
+	"telnet_prompt": "En esta pagina, puede configurar la habilitación/deshabilitación del servicio Telnet",
+  	"telnet_head":"Servicio Telnet",
+  	"telnet_enable":"Habilitar",
+  	"telnet_disable":"Deshabilitar",
+  	"telnet_apply":"Aplicar",
+  	"telnet_cancel":"Cancelar",
+
+  	"ssh_prompt": "En esta pagina, puede configurar la habilitación/deshabilitación del servicio SSH",
+  	"ssh_head":"Servicio SSH",
+  	"ssh_enable":"Habilitar",
+  	"ssh_disable":"Deshabilitar",
+  	"ssh_apply":"Aplicar",
+  	"ssh_cancel":"Cancelar"
+}
+

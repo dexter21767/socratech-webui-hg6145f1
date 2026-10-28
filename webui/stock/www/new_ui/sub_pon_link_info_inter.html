@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript" type="text/javascript">
+		document.write('<script type="text/javascript" src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script type="text/javascript" src="../js/sub_pon_link_info_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+
+<body class='main_config_body' id="ponlinkInfo_box">
+	<div id="container">
+		<!--div class="main_item" id="batch_botton" style="display: none;">
+			<div class="main_item_content">
+				<input type="button" class="input_button" id="restart_button" value="批量重启" onclick="restartAll()" />
+				<input type="button" class="input_button" id="upgrade_button" value="批量升级" onclick="upgradeAll()" />
+			</div>
+		</div-->
+		<table class="table_title_bg" cellspacing="0px" cellpadding="0" border="0" width="100%">
+			<tr class="table_head_title">
+				<td width="5%"  align='center' id="td_id" class="ponlink_info_td">ID</td>
+				<td width="10%" align='center' id="sub_gateway" class="ponlink_info_td">Sub Gateway</td>
+				<td width="15%" align='center' id="gpon_sn" class="ponlink_info_td">GPON SN</td>
+				<td width="20%" align='center' id="td_ip" class="ponlink_info_td">IP</td>
+				<td width="10%" align='center' id="online_state" class="ponlink_info_td">Online State</td>
+				<td width="15%" align='center' id="authorization_state" class="ponlink_info_td">Authorization State</td>
+				<td width="10%" align='center' id="operate" class="ponlink_info_td operation" style="display: none;">Operate</td>
+			</tr>
+			<tbody id="ponlink_info">
+			</tbody>
+		</table>
+		<br>
+		<div id="background" class="back" style="display: none;">
+			<div id="div1" class="content">
+				<!--div id="close">
+					<span id="close-button">×</span>
+				</div-->
+				<div id="div2">
+					<table id="open_table" width="100%" cellspacing="0" cellpadding="3px" border="0" class="table_bg">
+						<tbody>
+							<tr>
+								<td class="table_left"width="35%">Sub Gateway ID</td>
+								<td class="table_right" width="65%" id="PON_ONTID"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Sub Gateway MAC</td>
+								<td class="table_right" id="PON_MAC"></td>
+							</tr>
+							<!--tr>
+								<td class="table_left">Manufacturer</td>
+								<td class="table_right" id="PON_Manufacturer"></td>
+							</tr-->
+							<tr>
+								<td class="table_left">Device Model</td>
+								<td class="table_right" id="PON_ProductClass"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Hardware Version</td>
+								<td class="table_right" id="PON_HardwareVersion"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Software Version</td>
+								<td class="table_right" id="PON_SoftwareVersion"></td>
+							</tr>
+							<!--tr>
+								<td class="table_left">Distance(m)</td>
+								<td class="table_right" id="PON_ONTDistance"></td>
+							</tr-->
+							<tr>
+								<td class="table_left">Transmitted Power(dBm)</td>
+								<td class="table_right" id="PON_TXPower"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Received Power(dBm)</td>
+								<td class="table_right" id="PON_RXPower"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Last Down Cause</td>
+								<td class="table_right" id="PON_LastDownCause"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Last Up Time</td>
+								<td class="table_right" id="PON_LastUpTime"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Last Down Time</td>
+								<td class="table_right" id="PON_LastDownTime"></td>
+							</tr>
+							<tr>
+								<td class="table_left">Last Dying Gasp Time</td>
+								<td class="table_right" id="PON_LastDyingGaspTime"></td>
+							</tr>
+							<!--tr>
+								<td class="table_left">Accumulated Online Duration(s)</td>
+								<td class="table_right" id="PON_OnlineDuration"></td>
+							</tr-->
+							<tr>
+								<td class="table_left">Alarm Information</td>
+								<td class="table_right" id="PON_Alarm"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

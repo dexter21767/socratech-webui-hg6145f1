@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/wifi_info.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<body class='main_config_body'>
+	<form>
+	    <label><b>在本页面上，您可以查询无线网络工作状态，以及SSID统计信息与配置信息</b></label>
+		<br><br>
+		<label><b>无线网络状态</b></label>
+		<br>
+		<table width="100%" cellspacing="0" cellpadding="3px" border="1px">
+            <tbody>
+				<tr>
+					<td width="38%"><b>无线网络连接状态</b></td>
+					<td width="62%" id="enable"></td>
+				</tr>
+				<tr>
+					<td><b>无线网络信道</b></td>
+					<td id="channel"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br>
+		<label><b>无线网络包统计</b></label>
+		<br>
+		<table width="100%" cellspacing="0" cellpadding="3px" border="1px">
+            <tbody>
+            	<tr>
+	            <th width="10%" rowspan="2">SSID索引</th>
+	            <th width="22%" rowspan="2">SSID名称</th>
+				<th width="34%" colspan="2">接收</th>
+				<th width="34%" colspan="2">发送</th>
+            </tr>
+            <tr>
+				<th width="17%">字节数</th>
+				<th width="17%">帧数</th>
+				<th width="17%">字节数</th>
+				<th width="17%">帧数</th>
+            </tr>
+			</tbody>
+			<tbody id="packinfo">
+				<tr>
+			</tbody>
+        </table>
+		<br><br> 
+		<label><b>SSID信息</b></label>
+		<br>
+		<table width="100%" cellspacing="0" cellpadding="3px" border="1px">
+            <tbody><tr>
+			    <th width="10%">SSID索引</th>
+	            <th width="22%">SSID名称</th>
+				<th width="17%">安全配置</th>
+				<th width="27%">认证模式</th>
+	            <th width="24%">加密模式</th>
+            </tr>
+			</tbody>
+			<tbody id="ssidinfo">
+			</tbody>
+        </table>
+    </form>
+		
+</body>
+</html>

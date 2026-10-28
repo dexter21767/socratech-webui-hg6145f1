@@ -1,0 +1,12 @@
+{
+  "localmanagement_Prompt": "Na página, você pode ativar/desativar o telnet e o web switch.",
+  "localmanagement_enable": "Habilitado",
+  "localmanagement_disable": "Desabilitado",
+  "localmanagement_apply": "Aplicar",
+  "localmanagement_cancel": "Cancelar",
+  "lan_telnet_title": "Switch Lan Telnet",
+  "wan_telnet_title": "Switch Wan Telnet",
+  "lan_web_title": "Switch Web LAN",
+  "wan_web_title": "Switch Web Wan",
+  "lan_web_disable_tips": "Se você desabilitar o switch lan web, não será capaz de acessar a WEB via LAN."
+}

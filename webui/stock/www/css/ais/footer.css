@@ -1,0 +1,22 @@
+.text-footer {
+    text-align: center;
+    font-size: 10px;
+    color: #95989A;
+}
+
+.menu-footer {
+    margin-bottom: 20px;
+}
+
+.menu-footer a {
+    color: #4D4D4D;
+}
+
+.menu-footer a:last-child {
+    margin-left: 25px;
+}
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}

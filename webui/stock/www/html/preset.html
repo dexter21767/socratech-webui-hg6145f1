@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/preset.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("catv");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 150px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="preset_prompt" id="preset_prompt">preset_prompt</font></p>
+		</div>
+		<br/>
+		<form id="preset_form">
+			<div  class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<div class="main_content">
+					<div class="main_item" id="preset_enable_div">
+						<div class="main_item_name"><font i18n="preset_enable_title">preset_enable_title</font></div>
+						<div class="main_item_content">
+							<input type="radio" id="preset_enable" name="preset_enable" value="1" checked="checked"><font i18n="catv_enableTitle">catv_enableTitle</font>&nbsp;&nbsp;&nbsp;
+							<input type="radio" id="preset_disable" name="preset_enable" value="0"><font i18n="catv_disableTitle">catv_disableTitle</font>
+							<span class="redcolorfont">*</span>&nbsp;&nbsp;<font i18n="restart_tips">restart_tips</font>
+						</div>
+					</div>
+					<div class="main_item" id="preset_time_div">
+						<div class="main_item_name"><font i18n="preset_time_title">preset_time_title</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="preset_time" name="preset_time"/>
+							<font i18n="preset_time_tips">preset_time_tips</font>
+						</div>
+					</div>			
+				</div>
+				<div class="main_item" id="catv_button_div">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="catv_apply" onclick="saveApply()" i18n="catv_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="catv_cancel" onclick="CancelBtn()" i18n="catv_cancel" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+			</div>
+		</form>
+		<form id="deviceRebootForm">
+			<div class="main_save">
+				<input type="button" class="input_button" onclick="restoreDefault()" id="Restart_button" i18n="restore_apply" i18n-set="value" />
+			</div>
+		</form>
+	</body>
+</html>

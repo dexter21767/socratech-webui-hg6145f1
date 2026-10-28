@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/statslan_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="lanstate_prompt">lanstate_prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tbody>
+				<tr class="table_title">
+      				<td colspan="2" id="lState"><font i18n="lState">lState</font></td>
+    			</tr>
+            	<tr>
+					<td class="table_left" width="25%"><font i18n="lanIp">lanIp</font></td>
+					<td class="table_right" id="ip_addr"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="lanNetmask">lanNetmask</font></td>
+					<td class="table_right" id="lan_mast"></td>
+				</tr>
+				<tr  id="lan_mac_tr" style="display: none">
+					<td class="table_left">LAN MAC</td>
+					<td class="table_right" id="lan_mac"></td>
+				</tr>
+	        </tbody>
+        </table>
+		<br>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+            <tbody>
+				<tr class="table_title">
+      				<td colspan="2" id="lState"><font i18n="v6State">v6State</font></td>
+    			</tr> 
+    			<tr id="ipv6_global_addr_tr" style="display: none">
+					<td class="table_left" width="25%"><font i18n="ipv6_global_addr_title">ipv6_global_addr_title</font></td>
+					<td class="table_right" id="ipv6_global_addr"></td>
+				</tr>
+            	<tr>
+					<td class="table_left" width="25%"><font i18n="lanIpv6">lanIpv6</font></td>
+					<td class="table_right" id="v6_addr"></td>
+				</tr>
+	        </tbody>
+        </table>
+        <br><br>
+    </form>
+		
+</body>
+</html>

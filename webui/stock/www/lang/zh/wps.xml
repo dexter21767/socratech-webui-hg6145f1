@@ -1,0 +1,30 @@
+{
+  "WPSconnect":"连接",
+  "WPSCancel":"取消",
+  "wps_apply":"应用",
+
+  "wps_prompt":"您可以在这里配置WPS. ",
+  "WPS_enable_head":"WPS使能",
+  "wps_enable_title":"打开",
+  "wps_disable_title":"关闭",
+  "WPS_cfg_head":"WPS配置",
+  "wps_statetitle":"WPS状态",
+  "wps_PINtitel":"请输入PIN码.",
+  "Please enter pin code!":"请输入PIN码!",
+  "PIN code is illegal!":"您输入的PIN码不合法",
+  "wps_PINTips":"请输入数字0-9(8位字符).",
+  "wps_PINer":"PIN码",
+  "wps_buttontitel":"请打开设备开关.",
+  "wps_nopinalert":"请输入PIN码!",
+  "wps_pinillegal":"PIN码非法!",
+  "Connecting":"连接中",
+  "Time_Out":"超时",
+  "connection_Successful":"连接成功",
+  "connection_fail":"连接失败",
+
+  "wps_PIN1_prompt":"(你可以输入数字0-9(8位字符))",
+  "wps_bandSelec_head":"WPS频段切换"
+  
+}
+
+

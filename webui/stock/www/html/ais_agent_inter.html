@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ais_agent_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<style type="text/css">
+		.input_text {width: 280px}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="ais_agent_prompt">ais_agent_prompt</font></p>
+		</div>
+        <br/>
+		<form id="agent_form" method="post">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="first_server_enable_title">first_server_enable_title</font></div>
+					<div class="main_item_content">
+						<div class="switch_content switch_content_off" id="first_server_enable">
+							<input type="hidden" name="first_server_enable_value" id="first_server_enable_value">
+						</div>
+					</div>
+				</div>
+				<div id="first_server_info">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="first_server_address_title">first_server_address_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" name="first_server_address" id="first_server_address" maxlength="255"/>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error1" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="first_server_interval_title">first_server_interval_title</font></div>
+					<div class="main_item_content">
+						<input type="number" class="input_text" name="first_server_interval" id="first_server_interval" autocomplete="off"  style="cursor:text;background:white" />
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error2" class="main_item_error_hint_extra"></div>
+				</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="second_server_enable_title">second_server_enable_title</font></div>
+					<div class="main_item_content">
+						<div class="switch_content switch_content_off" id="second_server_enable">
+							<input type="hidden" name="second_server_enable_value" id="second_server_enable_value">
+						</div>
+					</div>
+				</div>
+				<div id="second_server_info">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="second_server_address_title">second_server_address_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" name="second_server_address" id="second_server_address" maxlength="255"/>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error4" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="second_server_interval_title">second_server_interval_title</font></div>
+					<div class="main_item_content">
+						<input type="number" class="input_text" name="second_server_interval" id="second_server_interval"/>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error6" class="main_item_error_hint_extra"></div>
+				</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="secret_key_version_title">secret_key_version_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" name="secret_key_version" id="secret_key_version" maxlength="255"/>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error6" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="secret_key_title">secret_key_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" name="secret_key" id="secret_key" maxlength="255"/>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="error6" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="div_other_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="acs_apply" class="input_button" i18n="acs_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" id="acs_cancel" class="input_button" i18n="acs_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+		</form>
+		<hr>
+		<div class="main_item_name" style="width:50%">Send Information to Server Immediately</div>
+		<br>
+		<br>
+		<input type="button" id="sendInfo_btn" class="input_button" i18n="acs_apply" i18n-set="value" onclick="sendInfo()"/>
+	</body>
+	<script type="text/javascript">
+	</script>
+</html>

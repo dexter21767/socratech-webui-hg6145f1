@@ -1,0 +1,12 @@
+{
+	"iptv_prompt":"在本页面上，您可以配置IPTV组播VLAN。",
+
+	"iptv_infoHead":"IPTV基本参数",
+	"iptv_vlanTitle":"组播VLAN",
+	"iptv_vlanTips":"(请输入数字-1、1～4094)",
+
+	"iptv_apply":"应用",
+	"iptv_cancel":"取消",
+
+	"iptv_vlanIllegalAlert":"组播VLAN范围为-1 及 1～4094。"
+}

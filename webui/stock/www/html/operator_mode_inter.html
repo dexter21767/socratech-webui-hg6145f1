@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/operator_mode_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("state");
+        
+	</script>
+	<body class='main_config_body'>
+		<fh-fo-rm id="operator_mode_form">
+			<div class="main_content">
+				<div>
+                    <table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+                    	<tbody>
+                            <tr>
+                    			<td class="table_left" width="226px">
+                                    <font i18n="current_mode">current_mode</font>
+                                </td>
+                    			<td class="table_right" style="margin-left: 10px;" id="current_mode"></td>
+                    		</tr>
+
+                        </tbody>
+                    </table>
+                    <div class="main_item" id="operator_mode_auto_div">
+                        <div class="main_item_name" id="operator_mode_title"><font i18n="operator_mode_title">operator_mode_title</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="operator_mode_auto"  name="operator_mode" value="0"/><font i18n="operator_mode_auto">operator_mode_auto</font></br>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="operator_mode_tagged"  name="operator_mode" value="1"/><font i18n="operator_mode_tagged">operator_mode_tagged</font></br>
+                        </div>
+                    </div>
+                    <div  class="main_item">
+                       <div class="main_item_name"></div>
+                       <div class="main_item_content">
+                           <input type="radio" id="operator_mode_untagged"  name="operator_mode" value="2"/><font i18n="operator_mode_untagged">operator_mode_untagged</font></br>
+                       </div> 
+                    </div>
+                    <div  class="main_item" id="operator_mode_ap_div">
+                        <div class="main_item_name"></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="operator_mode_ap"  name="operator_mode" value="3"/><font i18n="operator_mode_ap">operator_mode_ap</font></br>
+                        </div>
+                    </div>
+				</div>
+				<div class="main_button" id="save_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="operator_mode_apply" class="input_button" i18n="state_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" id="operator_mode_cancel" class="input_button" i18n="state_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/resetrouter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">USB备份配置</p>
+		</div>
+		<form>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">快速恢复</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="restore_checkbox" name="restore_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">USB分区选择</div>
+					<div class="main_item_content">
+						<select id="usb_device" class="main_select">
+						</select>
+						/HG_Config_Backup
+					</div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="备份配置" onclick="saveApply()"/>
+			</div>
+		</form>
+		
+		<br/><br/>
+		<div class="main_header">
+			<p class="main_header_title">恢复出厂配置</p>
+			<p class="main_header_hint">点击如下按钮恢复路由器到出厂默认设置
+			</p>
+		</div>
+		<form>
+			<div class="main_save">
+				<input type="button" id="restore_button" class="input_button" onclick="restore_factory()" value="恢复出厂配置">
+			</div>
+		</form>
+		
+		<br/><br/>
+		<div class="main_header">
+			<p class="main_header_title">重启设备</p>
+			<p class="main_header_hint">点击如下按钮重启路由器
+			</p>
+		</div>
+		<form id="deviceRebootForm">
+			<div class="main_save">
+				<input type="button" class="input_button" onclick="webreboot()" id="Restart_button" value="重启">
+			</div>
+		</form>
+	</body>
+</html>

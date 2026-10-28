@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/dns_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+		<style type="text/css"> 
+		.linebr { 
+		display: inline-block;
+		clear: both; /* 清除左右浮动 */ 
+		width: calc(75% - 157px); /* 必须定义宽度 */ 
+		word-break: break-word; /* 文本行的任意字内断开 */ 
+		word-wrap: break-word; /* IE */ 
+		white-space: -moz-pre-wrap; /* Mozilla */ 
+		white-space: -hp-pre-wrap; /* HP printers */ 
+		white-space: -o-pre-wrap; /* Opera 7 */ 
+		white-space: -pre-wrap; /* Opera 4-6 */ 
+		white-space: pre; /* CSS2 */ 
+		white-space: pre-wrap; /* CSS 2.1 */ 
+		white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
+		} 
+		</style> 
+	</head>
+	<script type="text/javascript">
+		setDomain("dns_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="dns_configPrompt">dns_configPrompt</font></p>
+		</div>
+		<div class="main_item">
+			<div class="main_item_name"><font i18n="dns_template">dns_template</font></div>
+			<div class="main_item_content">
+				<select id="dns_template"  style="width:150px">
+					<option value="0">PRIORITY</option>
+				</select>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_submit" style="width: 25%;"></div>				
+			<div class="main_submit" style="width: 75%;">
+				<input type="button" id="dns_template_apply" class="input_button" i18n="dns_apply" i18n-set="value" onclick="window.location.reload()"/>
+				<input type="button" id="dns_template_cancel" class="input_button" i18n="dns_cancel" i18n-set="value" onclick="window.location.reload()"/>
+			</div>
+		</div>
+	    </br>
+		<form id="dns_search_list_form" method="post">
+		    <div class="table_title"><font i18n="dns_search_listHead">dns_search_listHead</font></div>
+		    <div class="main_header">
+			    <p class="main_header_hint"><font i18n="dns_searchPrompt">dns_searchPrompt</font></p>
+		    </div>
+			<div class="main_content">
+					<div style="float:right">
+						<input type="button" i18n="dns_add" i18n-set="value" id="dns_search_add" class="input_button" onClick="addfilter_dns_search()">
+						<input type="button" i18n="dns_delete" i18n-set="value" id="dns_search_delete" class="input_button" onClick="click_remove_dns_search()">
+					<br/>
+				</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="fw_filterID">fw_filterID</font></td>
+					<td width="40%" align='center'><font i18n="domain_name">domain_name</font></td>
+					<td width="30%" align='center'><font i18n="wan_name">wan_name</font></td>
+					<td width="10%" align='center'><font i18n="dns_server">dns_server</font></td>
+					<td width="10%" align='center'></td>
+				</tr>
+				<tbody id='dns_search_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id="dns_search_form" style="display:none">
+				<div class="main_item main_item_lan">
+					<div class="main_item_name main_item_name_lan"><font i18n="domain_name">domain_name</font></div>
+					<div class="main_item_content main_item_content_lan">
+						<input type="text"  class="input_text input_text_lan" autocomplete="off" id="dns_search_domain" name="dns_search_domain" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						<font class="linebr redcolorfont" i18n="domain_name">domain_name</font>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wan_name">wan_name</font></div>
+					<div class="main_item_content">
+						<select name="dns_wan" id="dns_wan" style="width:250px"></select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dns_server">dns_server</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="dns_server" name="dns_server" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="dnsSearch_apply" class="input_button" i18n="dns_apply" i18n-set="value" onclick="doSave_dnsSearch()"/>
+						<input type="button" id="dnsSearch_cancel" class="input_button" i18n="dns_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+		<form id="static_dns_list_form" method="post">	
+			</br>
+		    <div class="table_title"><font i18n="static_dns_configHead">static_dns_configHead</font></div>
+			<div class="main_header">
+			    <p class="main_header_hint"><font i18n="static_dnsPrompt">static_dnsPrompt</font></p>
+		    </div>
+			<div class="main_content">
+					<div style="float:right">
+						<input type="button" i18n="dns_add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter_static_dns()">
+						<input type="button" i18n="dns_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove_static_dns()">
+					<br/>
+				</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="fw_filterID">fw_filterID</font></td>
+					<td width="60%" align='center'><font i18n="domain_name">domain_name</font></td>
+					<td width="20%" align='center'><font i18n="ipaddr">ipaddr</font></td>
+					<td width="10%" align='center'></td>
+				</tr>
+				<tbody id='static_dns_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id="static_dns_form" style="display:none">
+				<div class="main_item main_item_lan">
+					<div class="main_item_name main_item_name_lan"><font i18n="domain_name">domain_name</font></div>
+					<div class="main_item_content main_item_content_lan">
+						<input type="text"  class="input_text input_text_lan" autocomplete="off" id="static_dns_domain" name="static_dns_domain" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						<font class="linebr redcolorfont" i18n="domain_name">domain_name</font>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ipaddr">ipaddr</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="static_dns_ip" name="static_dns_ip" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="staticDNS_apply" class="input_button" i18n="dns_apply" i18n-set="value" onclick="doSave_staticDNS()"/>
+						<input type="button" id="staticDNS_cancel" class="input_button" i18n="dns_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

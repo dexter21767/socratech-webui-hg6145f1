@@ -1,0 +1,10 @@
+{
+  "VPN basic apply": "Aplicar",
+  "VPN basic cancel": "Cancelar",
+  "VPN_prompt": "Nesta página, você pode configurar a ativação/desativação do passagem VPN Pass-through.",
+  "VPNEnable_title": "VPN Pass-through",
+  "VPN_enable": "Habilitado",
+  "VPN_disable": "Desabilitado",
+  "Tr069 qos prompt": "Nesta página, você pode configurar a ativação/desativação o QoS Pass-through.",
+  "Tr069 qoS enable title": "Habilitar QoS"
+}

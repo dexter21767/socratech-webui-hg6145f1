@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+    <script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+            document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/fast_settings_voip_ECU_CNT.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		
+	</script>
+</head>
+<script type="text/javascript">
+    setDomain("initSet");
+</script>
+<body class='main_config_body'>
+<div class="main_header">
+    <p class="main_header_hint"><font i18n="voip_title_tip">voip_title_tip</font></p>
+</div>
+<br/>
+<form id="wifi_form" method="post">
+    <div class="main_content">
+        <div class="table_bg">
+            <div class="table_title"><font i18n="voip_title">voip_title</font></div>
+            <div class="main_item">
+                <div class="main_item_name" style="width: 20%;"><font i18n="Telephone_Port">Telephone_Port</font></div>
+                <div class="main_item_content" style="width: calc(80% - 3px);">
+                    <select name="BeaconType" class="select_short" id="BeaconType" style="width: 136px">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name" style="width: 20%;"><font
+                        i18n="Telephone_Username">Telephone_Username</font></div>
+                <div class="main_item_content" style="width: calc(80% - 3px);">
+                    <input type="text" class="input_text" style="width: 130px;cursor:text;background:white"
+                           autocomplete="off" name="AuthUserName_text_1" id="AuthUserName_text_1"/>
+                    <span class="redcolorfont">*</span>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name" style="width: 20%;"><font
+                        i18n="Telephone_Password">Telephone_Password</font></div>
+                <div class="main_item_content" style="width: calc(80% - 3px);">
+                    <input type="text" class="input_text fh-text-security" style="width: 130px;cursor:text;"
+                           autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="AuthPassword1"
+                           id="AuthPassword1"/>
+                    <input type="button" id="change_eye_btn" class="input_button" i18n="change_eye" i18n-set="value"
+                           onclick="change_eye()"/>&nbsp; &nbsp;
+                    <span class="redcolorfont">*</span>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name" style="width: 20%;"><font i18n="Telephone_Number">Telephone_Number</font>
+                </div>
+                <div class="main_item_content" style="width: calc(80% - 3px);">
+                    <input type="text" class="input_text" style="width: 130px;cursor:text;background:white"
+                           autocomplete="off" name="DirectoryNumber1" id="DirectoryNumber1"/>
+                </div>
+            </div>
+        </div>
+        <div class="main_item">
+            <div class="main_submit" style="width: 20%;"></div>
+            <div class="main_submit" style="width: 80%;">
+                <input type="button" id="loid_cancle" class="input_button" i18n="wifi_cancel" i18n-set="value"
+                       onclick="wifiCancel()"/>
+                <input type="button" id="loid_save" class="input_button" i18n="wifi_apply" i18n-set="value"
+                       onclick="wifiApply()"/>
+            </div>
+        </div>
+        <br/>
+    </div>
+</form>
+</body>
+</html>

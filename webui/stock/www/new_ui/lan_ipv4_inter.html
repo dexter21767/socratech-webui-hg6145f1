@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/lan_ipv4_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/base64.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<fh-fo-rm id="lan_ipv4_form">
+			<div class="main_content">
+				<div class="main_item" id="DIV_HostName" style="display: none;">
+					<div class="main_item_name"><font i18n="inet_hostname">inet_hostname</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="HostName_text" name="HostName_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="gateway_ip">gateway_ip</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text changetxt" autocomplete="off" id="LanIP_Address_text" name="LanIP_Address_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="inet_netmask">inet_netmask</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanSubmask_text" name="LanSubmask_text"/>
+					</div>
+				</div>
+				<div class="main_item" id="domain_name" style="display:none">
+					<div class="main_item_name"><font i18n="domain_name">domain_name</font></div>
+					<div class="main_item_content" id="ModelName">
+					</div>
+				</div>
+				<div class="main_item" id="div_second_ip_enable" style="display:none">
+					<div class="main_item_name"><font i18n="second_ip_enable">second_ip_enable</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="second_ip_enable"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item" id="div_second_ip" style="display:none">
+					<div class="main_item_name"><font i18n="second_ip">second_ip</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="second_ip" name="second_ip" />
+					</div>
+					<div id="SecAddress-error" class="error-conter"></div>
+				</div>
+				<div class="main_item" id="lan_isloation_div" style="display: none;">
+					<div class="main_item_name"><font i18n="lan_isloation_title">LAN Isolation</font></div>
+					<div class="main_item_content" id="div_lan_isloation">
+						<input id="lan_isolation_enable" type="radio" name="lan_isolation" value="1">On&nbsp;&nbsp;&nbsp;
+						<input id="lan_isolation_disable" type="radio" name="lan_isolation" value="0" checked="checked">Off&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				<div id="lan_ipv6_cfg">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ipv6_static_addr_title">ipv6_static_addr_title</font></div>
+						<div class="main_item_content">
+							<div class="tip_text" id="tip_ipv6_static_addr" i18n="ipv6_static_addr_tips">ipv6_static_addr_tips</div>
+							<input type="text" class="input_text" autocomplete="off" id="ipv6_static_addr" name="ipv6_static_addr"/>
+						</div>
+					</div>
+				<div class="main_item" id="ipv6_enable_div" style="display: none;">
+					<div class="main_item_name"><font  i18n="ipv6_enable_title">IPv6 Enable</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="ipv6_eanble"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Managed_Flag_title">Managed_Flag_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="Managed_Flag"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="other_Flag_title">other_Flag_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="other_Flag"/>&nbsp;
+					</div>
+				</div>				
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="max_Interval_title">max_Interval_title</font></div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_max_Interval" >4 - 1800</div>
+						<input type="text" class="input_text" autocomplete="off" id="max_Interval" name="max_Interval"/>
+						<font class="unit_tip" i18n="seconds">Seconds</font>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="min_Interval_title">min_Interval_title</font></div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_min_Interval" >3 - 1350</div>
+						<input type="text" class="input_text" autocomplete="off" id="min_Interval" name="min_Interval"/>
+						<font class="unit_tip" i18n="seconds">Seconds</font>
+					</div>
+					<div id="RA-error" class="error-conter"></div>
+				</div>
+				<div class="main_item" id="LinkMTU_div" style="display:none">
+					<div class="main_item_name"><font i18n="Link_MTU_title">Link_MTU_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LinkMTU" name="LinkMTU"/>
+						<font i18n="Link_MTU_tips">Link_MTU_tips</font>
+					</div>
+					<div id="Link_MTU-error" class="error-conter"></div>
+				</div>				
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dns_source_title">dns_source_title</font></div>
+					<div class="main_item_content">
+						<select id="dns_source_sel" class="select">
+							<option value="WANConnection" i18n="network_connection"></option>
+							<option value="Static" i18n="static_setting"></option>
+							<option value="HGWProxy" i18n="dns_proxy"></option>
+						</select>
+					</div>
+				</div>
+				<div id="static_dns_div" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="first_dns_title">first_dns_title</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="first_dns" name="first_dns"/>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="sec_dns_title">sec_dns_title</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="sec_dns" name="sec_dns"/>
+						</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Prefix_Mode_title">Prefix_Mode_title</font></div>
+					<div class="main_item_content">
+						<select id="Prefix_Mode_sel" class="select">
+							<option value="WANDelegated" i18n="prefix_network_connection"></option>
+							<option value="Static" i18n="prefix_static_setting"></option>
+						</select>
+					</div>
+				</div>
+				<div id="IPv6Prefix_div" style="display: none">
+					<div class="main_item" id="AutonomousFlag_div">
+						<div class="main_item_name"><font i18n="Autonomous_Flag_title">Autonomous_Flag_title</font></div>
+						<div class="main_item_content">
+							<input type="checkbox" id="AutonomousFlag"/>&nbsp;
+						</div>
+					</div>				
+					<div class="main_item" id="PrefixValidLifeTime_div"> 
+						<div class="main_item_name"><font i18n="ValidLifeTime_title">ValidLifeTime_title</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="ValidLifeTime" name="ValidLifeTime"/>
+							<font i18n="ValidLifeTime_tips">ValidLifeTime_tips</font>
+						</div>
+					</div>
+					<div class="main_item" id="PrefixPreferredLifeTime_div">
+						<div class="main_item_name"><font i18n="PreferredLifeTime_title">PreferredLifeTime_title</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="PreferredLifeTime" name="PreferredLifeTime"/>
+							<font i18n="PreferredLifeTime_tips">PreferredLifeTime_tips</font>
+						</div>
+						<div id="prefixLifeTime-error" class="error-conter"></div>
+					</div>
+				</div>				
+				<div class="main_item" id="Prefix_Set_div" style="display: none">
+					<div class="main_item_name"><font i18n="Prefix_Set_title">Prefix_Set_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Prefix_Set" name="Prefix_Set"/>
+					</div>
+					<div id="prefix-error" class="error-conter"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Enable_dhcpv6_title">Enable_dhcpv6_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="Enable_dhcpv6"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="v6dhcpstart_title">v6dhcpstart_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="v6dhcpstart" name="v6dhcpstart"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="v6dhcpend_title">v6dhcpend_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="v6dhcpend" name="v6dhcpend"/>
+					</div>
+					<div id="v6dhcpend-error" class="error-conter"></div>
+				</div>
+				<div id="DHCPv6dis_div" style="display: none">
+					<div class="main_item" id="DHCPv6dis_ports"   style="height:110px">
+						<div class="main_item_name"><font i18n="DHCPv6dis_title">DHCPv6dis_title</font></div>
+						<div class="main_item_content" id="lan_list">
+							<span id='LAN1enable' class='lanport'><input type='checkbox' name='portbind' value='eth0' id='DHCPv6dis_Port_checkbox1'><span type='text' id='lantext1'>LAN1</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN2enable' class='lanport'><input type='checkbox' name='portbind' value='eth1' id='DHCPv6dis_Port_checkbox2'><span type='text' id='lantext2'>LAN2</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN3enable' class='lanport'><input type='checkbox' name='portbind' value='eth2' id='DHCPv6dis_Port_checkbox3'><span type='text' id='lantext3'>LAN3</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN4enable' class='lanport'><input type='checkbox' name='portbind' value='eth3' id='DHCPv6dis_Port_checkbox4'><span type='text' id='lantext4'>LAN4</span></span>&nbsp;&nbsp;&nbsp;
+							<br/>
+							<br/>
+							<span class='wifiport'><input type='checkbox' name='portbind' value="0" id='DHCPv6dis_SSID_checkbox1'/>SSID1</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="1" id='DHCPv6dis_SSID_checkbox2'/>SSID2</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="2" id='DHCPv6dis_SSID_checkbox3'/>SSID3</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="3" id='DHCPv6dis_SSID_checkbox4'/>SSID4</span>&nbsp;&nbsp;&nbsp;
+							<br/>
+							<br/>
+							<span class='wifiport'><input type='checkbox' name='portbind' value="8" id='DHCPv6dis_SSID_checkbox5'/>SSID5</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="9" id='DHCPv6dis_SSID_checkbox6'/>SSID6</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="10" id='DHCPv6dis_SSID_checkbox7'/>SSID7</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport'><input type='checkbox' name='portbind' value="11" id='DHCPv6dis_SSID_checkbox8'/>SSID8</span>&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+				</div>
+				<div id="RAdis_div" style="display: none">
+					<div class="main_item" id="RAdis_ports"  style="height:100px">
+						<div class="main_item_name"><font i18n="RAdis_title">RAdis_title</font></div>
+						<div class="main_item_content" id="lan_list">
+							<span id='LAN1enable' class='lanport1'><input type='checkbox' name='portbind1' value='eth0' id='RAdis_Port_checkbox1'><span type='text' id='lantext1'>LAN1</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN2enable' class='lanport1'><input type='checkbox' name='portbind1' value='eth1' id='RAdis_Port_checkbox2'><span type='text' id='lantext2'>LAN2</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN3enable' class='lanport1'><input type='checkbox' name='portbind1' value='eth2' id='RAdis_Port_checkbox3'><span type='text' id='lantext3'>LAN3</span></span>&nbsp;&nbsp;&nbsp;
+							<span id='LAN4enable' class='lanport1'><input type='checkbox' name='portbind1' value='eth3' id='RAdis_Port_checkbox4'><span type='text' id='lantext4'>LAN4</span></span>&nbsp;&nbsp;&nbsp;
+							<br/>
+							<br/>
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="0" id='RAdis_SSID_checkbox1'/>SSID1</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="1" id='RAdis_SSID_checkbox2'/>SSID2</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="2" id='RAdis_SSID_checkbox3'/>SSID3</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="3" id='RAdis_SSID_checkbox4'/>SSID4</span>&nbsp;&nbsp;&nbsp;
+							<br/>
+							<br/>
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="4" id='RAdis_SSID_checkbox5'/>SSID5</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="5" id='RAdis_SSID_checkbox6'/>SSID6</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="6" id='RAdis_SSID_checkbox7'/>SSID7</span>&nbsp;&nbsp;&nbsp;
+							<span class='wifiport1'><input type='checkbox' name='portbind1' value="7" id='RAdis_SSID_checkbox8'/>SSID8</span>&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+				</div>
+				</div>
+				<br/>
+				<div class="table_bg" id="div_dhcp_serviceHead">
+					<div class="table_title" style="margin-left:calc(40% - 100px) " ><font i18n="dhcp_serviceHead">dhcp_serviceHead</font></div>
+				</div>
+				<div class="main_item" id="div_dhcp_typeTitle">
+					<div class="main_item_name"><font i18n="dhcp_typeTitle">dhcp_typeTitle</font></div>
+					<div class="main_item_content">
+						<select id="dhcp_typesel" class="select">
+						</select>
+					</div>
+				</div>
+				<div id="DHCP_div">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_startTitle">dhcp_startTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="LanStartAddress_text" name="LanStartAddress_text"/>
+					</div>
+					<div id="LanStartAddress-error" class="error-conter"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_endTitle">dhcp_endTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="LanEndAddress_text" name="LanEndAddress_text"/>
+					</div>
+					<div id="LanEndAddress-error" class="error-conter"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_netmaskTitle">dhcp_netmaskTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanDHCP_Submask_text" name="LanDHCP_Submask_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_priDnsTitle">dhcp_priDnsTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="priDnsAddress_text" name="priDnsAddress_text"/>
+					</div>
+					<div id="priDnsAddress-error" class="error-conter"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_secDnsTitle">dhcp_secDnsTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="secDnsAddress_text" name="secDnsAddress_text"/>
+					</div>
+					<div id="secDnsAddress-error" class="error-conter"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_gatewayTitle">dhcp_gatewayTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="gateway_text" name="gateway_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_timeTitle">dhcp_timeTitle</font></div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_dhcp_hour_text" i18n="dhcp_timeTips">dhcp_timeTips</div>
+						<input type="text" class="input_text" style="width: 155px" autocomplete="off" id="dhcp_hour_text" name="dhcp_hour_text"/>&nbsp;<font style="color: rgba(255, 255, 255, 0.8);font-size: 14px;">h</font>
+						<input type="text" class="input_text" style="width: 155px" autocomplete="off" id="dhcp_min_text" name="dhcp_min_text"/>&nbsp;<font  style="color: rgba(255, 255, 255, 0.8);font-size: 14px;">m</font>
+					</div>
+				</div>
+                <div id="dhcpRelay_option125" style="display: none;">
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="enable_dhcpRelay_title">enable_dhcpRelay_title</font></div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="enable_dhcprelay"/>&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="option125_title">option125_title</font></div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="option125"/>&nbsp;
+                        </div>
+                    </div>
+                </div>
+				<div id="option60_enable_div" class="main_item" style="display: none" >
+						<div class="main_item_name"><font i18n="Option60Title">Option60</font></div>
+						<div class="main_item_content">
+							<select id="option_60_enable" class="select">
+								<option value="0" i18n="option_60_typeD">Disable</option>
+								<option value="1" i18n="option_60_typeE">Server</option>
+							</select>
+						</div>
+				</div>
+				<div id="option60_div" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="option60_startTitle">Option 60 Start IP</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text " autocomplete="off" id="option60Start" name="option60Start"/>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="option60_endTitle">Option 60 End IP</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text " autocomplete="off" id="option60End" name="option60End"/>
+						</div>
+					</div>
+				</div>
+				<div id="option43_div" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="Option43Title">Option43</font></div>
+						<div class="main_item_content">
+							<select id="option_43_enable" class="select">
+								<option value="0" i18n="option_43_typeD">Disable</option>
+								<option value="1" i18n="option_43_typeE">Enable</option>
+							</select>
+						</div>
+					</div>
+					<div class="main_item" id ="vendor_div" style="display: none">
+						<div class="main_item_name"><font i18n="vendor_specific_information_title">Vendor-Specific Information</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="vendor_specific_infor" name="vendor_specific_infor" maxlength=190/>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_item_content">
+						<input type="button" id="wireless_apply" onclick="saveApply()" i18n="inet_apply"
+							i18n-set="value" class="input_button" />
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

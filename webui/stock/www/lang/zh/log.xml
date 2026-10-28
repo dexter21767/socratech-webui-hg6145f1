@@ -1,0 +1,18 @@
+{
+  "log_prompt":"在本页面上，您可以查看日志信息。",
+  "log_download":"下载",
+  "log_listHead":"日志信息",
+  "log_downloaderroralert":"下载URL错误!",
+  
+  "log_apply":"应用",
+  "log_cancel":"取消",
+  
+  "logcfg_prompt":"在本页面，您可以配置WEB日志启用/禁用以及日志的记录等级。",
+  "log_title":"日志",
+  "logEnableTitle":"启用",
+  "logDisableTitle":"禁用",
+  "logLevelTitle":"记录等级",
+  
+  "log_debugPrompt":"在本页面上，您可以查看调试日志信息。",
+  "log_debugListHead":"调试日志信息"
+}

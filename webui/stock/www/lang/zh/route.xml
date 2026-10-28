@@ -1,0 +1,13 @@
+{
+  "apply":"应用",
+  "cancel":"取消",
+  
+  "v4StaticRoutePrompt":"在本页面，您可以配置IPv4默认路由。",
+
+  "dr_enableTitle":"使能默认路由",
+  "dr_wanTitle":"WAN名",
+  "dr_wanDefaultTitle":"请选择",
+  
+  "dr_wannameNUllAlert":"请选择一条WAN连接!"
+
+}

@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/voice_codec_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("voip");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="voip_codec_funcPrompt">voip_codec_funcPrompt</font></p>
+		</div>
+		<form id="voice_advance_form" method="post">
+            <div class="main_content">
+                <br />
+                <table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+                    <tr class="table_title">
+                        <td colspan="3"><font i18n="port1_title">port1_title</font></td>
+                    </tr>
+                    <tr class="table_head_title">
+                        <td width='20%' style="text-align: center;"><b><font i18n="voip_codecPriTitle">voip_codecPriTitle</font></b></td>
+                        <td width='43%'><b><font i18n="voip_codecTitle">voip_codecTitle</font></b></td>
+                        <td width='37%'><b><font i18n="packetizationperiod_title">packetizationperiod_title</font></b></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">1</td>
+                        <td class="table_right">
+                            <select name="voip1_pri1codec" id="voip1_pri1codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                                <option value="AMR" id="AMR_pri1" style="display:none">AMR</option>
+                                <option value="G729B" id="G729B_pri1" style="display:none">G729B</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip1PackageInterval1" name="voip1PackageInterval1" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">2</td>
+                        <td class="table_right">
+                            <select name="voip1_pri2codec" id="voip1_pri2codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                                <option value="AMR" id="AMR_pri2" style="display:none">AMR</option>
+                                <option value="G729B" id="G729B_pri2" style="display:none">G729B</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip1PackageInterval2" name="voip1PackageInterval2" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">3</td>
+                        <td class="table_right">
+                            <select name="voip1_pri3codec" id="voip1_pri3codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                                <option value="AMR" id="AMR_pri3" style="display:none">AMR</option>
+                                <option value="G729B" id="G729B_pri3" style="display:none">G729B</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip1PackageInterval3" name="voip1PackageInterval3" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">4</td>
+                        <td class="table_right">
+                            <select name="voip1_pri4codec" id="voip1_pri4codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                                <option value="AMR" id="AMR_pri4" style="display:none">AMR</option>
+                                <option value="G729B" id="G729B_pri4" style="display:none">G729B</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip1PackageInterval4" name="voip1PackageInterval4" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="port1_5">	
+                        <td style="text-align: center;"   class="table_left">5</td>
+                        <td class="table_right">
+                            <select name="voip1_pri5codec" id="voip1_pri5codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                                <option value="AMR" id="AMR_pri5" style="display:none">AMR</option>
+                                <option value="G729B" id="G729B_pri5" style="display:none">G729B</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip1PackageInterval5" name="voip1PackageInterval5" />10-60(ms)
+                            </div>
+                        </td>
+						
+                    </tr>
+                </table>
+                <table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0" id="port_2">
+                    <tr class="table_title">
+                        <td colspan="3"><font i18n="port2_title">port2_title</font></td>
+                    </tr>
+                    <tr class="table_head_title">
+                        <td width='20%' style="text-align: center;"><b><font i18n="voip_codecPriTitle">voip_codecPriTitle</font></b></td>
+                        <td width='43%'><b><font i18n="voip_codecTitle">voip_codecTitle</font></b></td>
+                        <td width='37%'><b><font i18n="packetizationperiod_title">packetizationperiod_title</font></b></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">1</td>
+                        <td class="table_right">
+                            <select name="voip2_pri1codec" id="voip2_pri1codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip2PackageInterval1" name="voip2PackageInterval1" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">2</td>
+                        <td class="table_right">
+                            <select name="voip2_pri2codec" id="voip2_pri2codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip2PackageInterval2" name="voip2PackageInterval2" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">3</td>
+                        <td class="table_right">
+                            <select name="voip2_pri3codec" id="voip2_pri3codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip2PackageInterval3" name="voip2PackageInterval3" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">4</td>
+                        <td class="table_right">
+                            <select name="voip2_pri4codec" id="voip2_pri4codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip2PackageInterval4" name="voip2PackageInterval4" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="port2_5">
+                        <td style="text-align: center;" class="table_left">5</td>
+                        <td class="table_right">
+                            <select name="voip2_pri5codec" id="voip2_pri5codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip2PackageInterval5" name="voip2PackageInterval5" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0" id="port_3">
+                    <tr class="table_title">
+                        <td colspan="3"><font i18n="port3_title">port3_title</font></td>
+                    </tr>
+                    <tr class="table_head_title">
+                        <td width='20%' style="text-align: center;"><b><font i18n="voip_codecPriTitle">voip_codecPriTitle</font></b></td>
+                        <td width='43%'><b><font i18n="voip_codecTitle">voip_codecTitle</font></b></td>
+                        <td width='37%'><b><font i18n="packetizationperiod_title">packetizationperiod_title</font></b></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">1</td>
+                        <td class="table_right">
+                            <select name="voip3_pri1codec" id="voip3_pri1codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip3PackageInterval1" name="voip3PackageInterval1" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">2</td>
+                        <td class="table_right">
+                            <select name="voip3_pri2codec" id="voip3_pri2codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip3PackageInterval2" name="voip3PackageInterval2" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">3</td>
+                        <td class="table_right">
+                            <select name="voip3_pri3codec" id="voip3_pri3codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip3PackageInterval3" name="voip3PackageInterval3" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">4</td>
+                        <td class="table_right">
+                            <select name="voip3_pri4codec" id="voip3_pri4codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip3PackageInterval4" name="voip3PackageInterval4" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="port3_5">
+                        <td style="text-align: center;" class="table_left">5</td>
+                        <td class="table_right">
+                            <select name="voip3_pri5codec" id="voip3_pri5codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip3PackageInterval5" name="voip3PackageInterval5" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0" id="port_4">
+                    <tr class="table_title">
+                        <td colspan="3"><font i18n="port4_title">port4_title</font></td>
+                    </tr>
+                    <tr class="table_head_title">
+                        <td width='20%' style="text-align: center;"><b><font i18n="voip_codecPriTitle">voip_codecPriTitle</font></b></td>
+                        <td width='43%'><b><font i18n="voip_codecTitle">voip_codecTitle</font></b></td>
+                        <td width='37%'><b><font i18n="packetizationperiod_title">packetizationperiod_title</font></b></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">1</td>
+                        <td class="table_right">
+                            <select name="voip4_pri1codec" id="voip4_pri1codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip4PackageInterval1" name="voip4PackageInterval1" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">2</td>
+                        <td class="table_right">
+                            <select name="voip4_pri2codec" id="voip4_pri2codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip4PackageInterval2" name="voip4PackageInterval2" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">3</td>
+                        <td class="table_right">
+                            <select name="voip3_pri3codec" id="voip4_pri3codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip4PackageInterval3" name="voip4PackageInterval3" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" class="table_left">4</td>
+                        <td class="table_right">
+                            <select name="voip4_pri4codec" id="voip4_pri4codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip4PackageInterval4" name="voip4PackageInterval4" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="port4_5">
+                        <td style="text-align: center;" class="table_left">5</td>
+                        <td class="table_right">
+                            <select name="voip4_pri5codec" id="voip4_pri5codec" size="1" style="width:200px;">
+                                <option value="" selected="selected"></option>
+                                <option value="g711u">G.711MuLaw</option>
+                                <option value="g711a">G.711ALaw</option>
+                                <option value="g723">G.723.1</option>
+                                <option value="g729">G.729</option>
+                                <option value="g722">G.722</option>
+                            </select>
+                        </td>
+                        <td class="table_right">
+                            <div style="float:left">
+                                <input type="text" class="input_short" id="voip4PackageInterval5" name="voip4PackageInterval5" />10-60(ms)
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+			<div class="main_content">
+	            <div class="main_submit" style="width: 20%;"></div>             
+	            <div class="main_submit" style="width: 80%;">
+	                <input type="button" class="input_button" id="voip_apply" i18n="voip_apply" i18n-set="value" onclick="saveApply()"/>&nbsp; &nbsp;
+	                <input type="button" class="input_button" id="voip_cancel" i18n="voip_cancel" i18n-set="value" onclick="window.location.reload()"/>
+	            </div>
+			</div>
+		</form>
+	</body>
+</html>

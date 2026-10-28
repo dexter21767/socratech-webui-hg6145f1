@@ -1,0 +1,44 @@
+{
+  "sncfg_prompt":"En esta página, puede modificar los parámetros relacionados con la autenticación de la ONU para autenticar la OLT. Entrará en vigor después de reiniciar.",
+  "sncfg_prompt_user":"Puede modificar los parámetros relacionados con la autenticación de la ONU para autenticarse en la OLT. Entrará en vigor después de reiniciar. Por favor, no cambie la contraseña, afectará el servicio si se ha cambiado la contraseña, ¡gracias!",
+  
+  "sncfg_apply":"Aplicar",
+  "sncfg_cancel":"Cancelar",
+  
+  "sncfg_authMethod":"Método de autenticación",
+  "sncfg_loid":"LOID",
+  "sncfg_loidTips":"(Puede ingresar de 1 a 24 caracteres latinos básicos)",
+  "sncfg_lopwd":"Contraseña lógica",
+  "sncfg_lopwdTips":"(Puede ingresar de 0 a 12 caracteres latinos básicos)",
+  "sncfg_pwd":"Clave de acceso",
+  "sncfg_pwdTips":"(Puede ingresar de 0 a 10 caracteres, incluidos alfanuméricos, '-' y '_')",
+  "oltcfg_phySN":"Número de serie",
+  "oltcfg_phySNTips":"(Puede ingresar 12 o 16 caracteres, incluidos '0'-'9', 'a'-'f', 'A'-'F', 'h', 't', 'H', 'T')",
+  
+  "sncfg_restore":"Restaurar",
+  "sncfg_restoreTips":"(Puede restaurar la configuración de esta página a los valores predeterminados haciendo clic en este botón)",
+
+  "sncfg_snTitle":"Autenticación LOID",
+  "sncfg_pwdTitle":"Autenticación de contraseña",
+  "oltcfg_phySNTitle":"Autenticación por número de serie",
+  "sncfg_restoreTitle":"Restaurar la configuración",
+
+  "sncfg_restartConfirm":"¡Modificación de los parámetros de autenticación exitosa! ¿Es necesario reiniciar la ONU? ¡Inicie sesión en la administración  WEB después del reinicio de la ONU!",
+
+  "sncfg_loidNullAlert":"¡Por favor, introduzca el LOID!",
+  "sncfg_loidIllegalAlert":"¡El LOID es ilegal!",
+  "sncfg_lopwdIllegalAlert":"¡La contraseña lógica es ilegal!",
+  "sncfg_pwdCfgNullAlert":"¡Por favor, introduzca la clave de acceso!",
+  "sncfg_pwdCfgIllegalAlert":"¡La clave de acceso es ilegal!",
+  "sncfg_loidchnAlert":"¡El LOID es ilegal! ¡Por favor, introduzca los caracteres latinos básicos!",
+  "sncfg_speCharAlert":"Por favor, introduzca los caracteres latinos básicos, excepto",
+  "sncfg_phySNNullAlert":"¡Por favor, introduzca el número de serie!",
+  "sncfg_phySNCfgIllegalAlert":"¡El número de serie es ilegal!",
+  "sncfg_value_invilid":"Algún valor no es válido, compruébelo y vuelva a llenarlo.",
+
+  "physncfg_checkeror":"Error: El valor que ingresó es ilegal, ¡inténtelo de nuevo!",
+  "sncfg_setFailedInfo":"Error: ¡Error al establecer parámetros de autenticación! ¡Reinicie el dispositivo e inténtelo de nuevo!",
+  "change_eye":"Ojo",
+  "registerPrompt":"En esta página, puede registrar el dispositivo."
+}
+

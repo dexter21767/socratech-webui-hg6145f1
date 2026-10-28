@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/dhcpv6_info_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form method="post"> 
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%" id="tab_ip_addresses">
+            <tbody>
+	            <tr>
+		            <td class="table_left" width="25%" ><font i18n="total_ip_addresses_title">total_ip_addresses_title</font></td>
+		            <td class="table_right" id="total_ip_addresses">256</td>
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="remaining_ip_addresses_title">remaining_ip_addresses_title</font></td>
+		            <td class="table_right" id="remaining_ip_addresses">256</td>
+	            </tr>
+	        </tbody>
+	    </table>
+		<br id="br_id" />
+		<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+			<div class="table_title" style="margin-bottom: 10px;">
+				<font i18n="dhcpv6_information">dhcpv6_information</font>
+			</div>
+			<tr class="table_head_title">
+				<td width="30%" align='center'><font i18n="duid_title">duid_title</font></td>
+				<td width="30%" align='center'><font i18n="ipv6_addr_prefix_title">ipv6_addr_prefix_title</font></td>
+				<td width="30%" align='center'><font i18n="remaining_lease_time_title">remaining_lease_time_title</font></td>
+			</tr>
+			<tbody id="dhcpv6_info_list" class="table_rule">
+			</tbody>
+		</table>
+		<div id="image">
+			<img src="../image/new_ui/no_data.png" style="width: 120px;">
+			<span i18n="No Data">No Data</span>
+		</div>
+    </form>
+		
+</body>
+</html>

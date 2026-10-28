@@ -1,0 +1,107 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/band_steering_new_ui.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("wireless");
+</script>
+<style type="text/css">
+</style>
+
+<body class='main_config_body'>
+	<fh-fo-rm id="wlanAdv_settings_form">
+		<div class="main_content">
+			<div class="main_item" id="switch">
+				<div class="main_item_name">
+					<font i18n="bandsteering_button">bandsteering_button</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" class="radio" name="bs" id="bs_enable" value="1" onclick="showBSInfo()">
+						<font i18n="On">On</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" class="radio" name="bs" id="bs_disable" value="0" onclick="showBSInfo()">
+						<font i18n="Off">Off</font>
+					</div>
+				</div>
+			</div>
+			<div id="bs_info_div">
+				<div class="main_item">
+					<div class="main_item_name">
+						<span class="redcolorfont">*</span>
+						<font i18n="security_netName">security_netName</font>
+					</div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_SSID" i18n="1-32 characters"></div>
+						<input type="text" class="input_text" autocomplete="off" id="SSID" name="SSID" />
+						<font id="hide_tip" style="display: none;" i18n="basic_hssid">basic_hssid</font>
+						<input style="display: none;" type="checkbox" id="X_FH_SSIDHide" name="X_FH_SSIDHide">
+					</div>
+				</div>
+				<div class="main_item" id="isolation_enable_div" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="SSID_Isolation">SSID Isolation</font>
+					</div>
+					<div class="main_item_content" id="ssid_isolation">
+						<input id="ssid_isolation_enable" type="radio" name="ssid_isolation"
+							value="1">On&nbsp;&nbsp;&nbsp;
+						<input id="ssid_isolation_disable" type="radio" name="ssid_isolation" value="0"
+							checked="checked">Off&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="secure_security_mode">secure_security_mode</font>
+					</div>
+					<div class="main_item_content">
+						<select name="BeaconType" id="BeaconType" class="select">
+							<option value="Basic" i18n="OpenSystem">OpenSystem</option>
+							<option value="WPA/WPA2">WPA-PSK/WPA2-PSK</option>
+							<option value="11i">WPA2-PSK</option>
+							<option value="WPA3" id="WPA3">WPA3-SAE</option>
+							<option value="WPA2/WPA3" id="WPA2WPA3">WPA2-PSK/WPA3-SAE</option>
+						</select>
+					</div>
+				</div>
+				<div id="wpa_div">
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="secure_wpa_algorithm">secure_wpa_algorithm</font>
+						</div>
+						<div class="main_item_content">
+							<div id="WPA_Algorithms_text" class="disabled_text"></div>
+						</div>
+					</div>
+					<div class="main_item" id="wpa3_div">
+						<div class="main_item_name">
+							<span class="redcolorfont">*</span>
+							<font i18n="secure_wpa_pass_phrase">secure_wpa_pass_phrase</font>
+						</div>
+						<div class="main_item_content">
+							<div class="tip_text" id="tip_PreSharedKey" i18n="8-63 characters"></div>
+							<input type="text" class="input_text fh-text-security" autocomplete="off" id="PreSharedKey"
+								name="PreSharedKey" />
+							<input id="show_password" type="checkbox" style="height: 12px; display: none;"
+								class="input_button" i18n="change_eye" i18n-set="value" onclick="change_eye()" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_submit_item" id="button_div">
+				<div class="main_item_content">
+					<input type="button" id="wireless_apply" onclick="saveApply()" i18n="wireless_apply"
+						i18n-set="value" class="input_button">
+				</div>
+			</div>
+	</fh-fo-rm>
+</body>
+
+</html>

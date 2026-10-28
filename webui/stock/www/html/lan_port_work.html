@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/lan_port_work.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="lan_port_work_Prompt">lan_port_work_Prompt</font></p>
+		</div>
+		<br/>
+		<div class="main_content ">
+			<div class="main_item" id="lan_port_work">
+				<div class="main_item_name"><font i18n="lan_port_work_title" id="lan_port_work_title">LAN Port Work Mode</font></div>
+				<div class="main_item_content" id="lan_enable_list">
+					<span class='lanport'><input type='checkbox' id='portbind_lan1' name='portbind'>LAN1</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan2' name='portbind'>LAN2</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan3' name='portbind'>LAN3</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan4' name='portbind'>LAN4</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan10g' name='portbind'>10G LAN</span>&nbsp;
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_submit" style="width: 25%;"></div>	
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" id="inet_apply" onclick="saveApply()" i18n="inet_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+					<input type="button" id="inet_cancel" onclick="window.location.reload()" i18n="inet_cancel" i18n-set="value" class="input_button"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

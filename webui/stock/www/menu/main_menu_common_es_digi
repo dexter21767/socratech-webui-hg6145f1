@@ -1,0 +1,6 @@
+{
+	"status" : {"mainDivId":"status_main_div", "hasChildMenu":true, "title":"state", "selectClass": "first_menu_primary_select"},
+    "network" : {"mainDivId":"network_main_div", "hasChildMenu":true, "title":"network", "selectClass": "first_menu_primary_select"},
+    "security" : {"mainDivId":"security_main_div", "hasChildMenu":true, "title":"Security", "selectClass": "first_menu_primary_select"},
+    "manage" : {"mainDivId":"manage_main_div", "hasChildMenu":true, "title":"management", "selectClass": "first_menu_primary_select"}
+}

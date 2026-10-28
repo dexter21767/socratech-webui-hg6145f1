@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.formFill.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/logSettings.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">系统日志设置</p>
+			<p class="main_header_hint">提示：如果日志模式已开启，系统将开始记录所有选择的事件。<br/>
+			对于日志等级，所有等于或之上的所选择等级的事件都将被记录。<br/>
+			对于显示等级，所有等于或之上的所选择等级的事件都将被显示。<br/>
+			选择所要的值，点击“保存/应用”用以配置这些系统日志选项。<br/>
+			</p>
+		</div>
+		<form id="log_settings_form" novalidate="novalidate">
+			<div class="main_item">
+				<div class="main_item_name">日志开关</div>
+				<div class="main_item_content">
+					<div class="switch_content switch_content_on" id="LogEnable_checkbox">
+						<input type="hidden"  id="LogEnable_checkbox_value" name="data.enable">
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">日志等级</div>
+				<div class="main_item_content">
+					<select name="data.loglevel" id="LevelLog_select">
+						<option value="0">Emergency</option>
+						<option value="1">Alert</option>
+						<option value="2">Critical</option>
+						<option value="3">Error</option>
+						<option value="4">Warning</option>
+						<option value="5">Notice</option>
+						<option value="6">Informational</option>
+						<option value="7">Debugging</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="main_item">
+				<div class="main_item_name">显示等级</div>
+				<div class="main_item_content">
+					<select name="data.logviewlevel" id="LevelDisplay_select">
+						<option value="0" class="trad">Emergency</option>
+						<option value="1" class="trad">Alert</option>
+						<option value="2" class="trad">Critical</option>
+						<option value="3" class="trad">Error</option>
+						<option value="4" class="trad">Warning</option>
+						<option value="5" class="trad">Notice</option>
+						<option value="6" class="trad">Informational</option>
+						<option value="7" class="trad">Debugging</option>
+					</select>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" onclick="saveApply()" id="apply" value="保存设置" class="input_button">
+			</div>
+		</form>
+		
+	</body>
+</html>

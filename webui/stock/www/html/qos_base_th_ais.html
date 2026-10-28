@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/qos_base_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="main_header_tips">main_header_tips</font></p>
+		</div>
+		<form id="qos_base_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="qos_enable">qos_enable</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="QoSEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item" id="mode_div" style="display:none">
+					<div class="main_item_name"><font i18n="qos_template">qos_template</font></div>
+					<div class="main_item_content">
+						<select id="qoscfg_template">	
+						</select>
+					</div>
+				</div>
+				<br/>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="qos_apply_btn" class="input_button" i18n="qos_apply" i18n-set="value" onclick="saveApply()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

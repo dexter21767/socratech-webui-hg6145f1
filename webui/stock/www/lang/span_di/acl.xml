@@ -1,0 +1,42 @@
+{
+ "acl_funcPrompt":"En esta página se puede habilitar o deshabilitar el ACL y sus reglas configuradas.",
+ "acl_usePrompt":"Habilitar el ACL antes de configurar las reglas. Puede hacer clic en el botón para agregar reglas, modificar las reglas existentes o eliminar las reglas por completo. Finalmente, haga clic en el botón ENVIAR para enviar toda su configuración.",
+  
+ "acl_refresh":"Actualizar",
+ "acl_submit":"Enviar",
+ "acl_apply":"Aplicar",
+ "acl_cancel":"Cancelar",
+ "acl_add":"Agregar",
+ "acl_delete":"Borrar",
+ "acl_deleteAll":"Eliminar todo",
+  
+ "acl_switchTitle":"Habilitar el ACL",
+ "acl_disableTitle":"Deshabilitar",  
+ "acl_enableTitle":"Habilitar",
+ "acl_modeTitle":"Modo ACL",
+ "acl_modeBlackTitle":"Lista negra",
+ "aacl_modeWhiteTitle":"Lista blanca",
+ "acl_typeTitle":"Tipo de ACL",
+ "acl_listHead":"Lista de reglas del ACL",
+ "acl_portTitle":"Puerto",
+  
+ "acl_portTips":" (Cada puerto puede crear hasta ocho reglas)",
+ "acl_ipTips":" (Formato decimal, ejemplo, 10.10.10.2)",
+ "acl_macTips":" (ejemplo, 00:24:21:19:BD:E4)",
+ "acl_vidTips":" (1 - 4095)",
+  
+ "acl_mostRulesAlert":"¡Puede configurar 32 reglas como máximo!",
+ "acl_portMostRulesAlert":"¡Se han creado 8 reglas! ¡No se puede crear más reglas!",
+ "acl_ruleRepeatAlert":"Regla existente. ¡Por favor, configure una nueva!",
+ "acl_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+ "acl_noChooseAlert":"¡Por favor, elige al menos una regla !",
+ "acl_ipNullAlert":"¡Por favor, introduzca la IP!",
+ "acl_ipIllegalAlert":"¡Por favor, introduzca una IP válida!",
+ "acl_macNullAlert":"¡Por favor, introduzca la MAC!",
+ "acl_macIllegalAlert":"¡El formato de la dirección MAC es incorrecto! Formato MAC 00:24:21:19:BD:E4",
+ "acl_vidIllegalAlert1":"El rango de VLAN ID válido es del 1 al 4095.",
+ "acl_vidIllegalAlert2":"Por favor, introduzca un número entero positivo.",  
+  
+ "acl_deleteRuleConfirm":"¿Está seguro de eliminar las reglas seleccionadas?",
+ "acl_changeTypeConfirm":"Eliminará las reglas originales para cambiar el tipo de ACL, ¿está seguro de continuar?"
+}

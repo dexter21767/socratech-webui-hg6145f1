@@ -1,0 +1,51 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/firewall_enable_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("firewall");
+</script>
+
+<body class='main_config_body'>
+	<fh-fo-rm id="firewall_form">
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="firewall_level_title">firewall_level_title</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<div id="custom_level" style="display: none;">
+							<input type="radio" id="firewall_off" name="firewall_enable" value="0" />
+							<font i18n="firewall_off">firewall_off</font>
+							<input type="radio" id="firewall_custom" name="firewall_enable" value="4" />
+							<font i18n="firewall_custom">firewall_custom</font>
+						</div>
+						<input type="radio" id="firewall_high" name="firewall_enable" value="3" />
+						<font i18n="firewall_high">firewall_high</font>
+						<input type="radio" id="firewall_medium" name="firewall_enable" value="2" />
+						<font i18n="firewall_medium">firewall_medium</font>
+						<input type="radio" id="firewall_low" name="firewall_enable" value="1" />
+						<font i18n="firewall_low">firewall_low</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_submit_item" id="save_button">
+				<div class="main_item_content">
+					<input type="button" id="firewall_apply" class="input_button" i18n="firewall_apply" i18n-set="value"
+						onclick="save_apply()" />
+				</div>
+			</div>
+		</div>
+	</fh-fo-rm>
+</body>
+
+</html>

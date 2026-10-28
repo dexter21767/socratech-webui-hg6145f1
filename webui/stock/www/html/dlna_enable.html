@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/dlna_enable.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("dlna");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 160px;}
+		
+		#progress
+		{
+			height: 24px;
+			width: 200px;
+			border: none;
+		}
+		.inner-progress 
+		{
+			background: #2C5EA4;
+		}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="dlna_prompt">dlna_prompt</font></p>
+		</div>
+		<br/>
+		<form id="wlanAdv_settings_form">
+			<div class="main_content ">
+				<div class="table_title table_bg"><font i18n="dlna_head">dlna_head</font></div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dlna_head">dlna_head</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="dlna_enable" name="dlna_enable" value="1"><font i18n="dlna_enable">dlna_enable</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="dlna_disable" name="dlna_enable" value="0"><font i18n="dlna_disable">dlna_disable</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="dlna_enable_apply" onclick="save_apply()" i18n="dlna_apply" i18n-set="value" class="input_button">&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" id="dlna_enable_cancel" onclick="cancel()" i18n="dlna_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

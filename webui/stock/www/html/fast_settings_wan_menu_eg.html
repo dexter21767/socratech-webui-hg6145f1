@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+			document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/fast_settings_wan_menu_eg.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+
+<body style="background-color: rgb(235, 232, 232);" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<form id="wan_form" method="post" style="display: flex;justify-content: center;align-items: center;">
+		<div style="margin-top: 50px;" style="width: 450px;">
+			<div>
+				<div>
+					<div style="width: 200px;" style="text-align:center">User Name</div>
+					<div style="width: 400px;">
+						<input type="text" style="width: 400px;cursor:text;background:white" autocomplete="off"
+							name="Username_text" id="Username_text" />
+					</div>
+					<div>@tedata.net.eg</div>
+				</div>
+				<div style="margin-top: 30px;">
+					<div style="width: 200px;">Password</div>
+					<div style="width: 400px;">
+						<input type="password" style="width:400px;cursor:text;" autocomplete="off" readonly
+							onfocus="removeAttribute('readonly')" name="pwd_text" id="pwd_text" />
+					</div>
+				</div>
+			</div>
+			<div style="margin-top: 100px;margin-left: 80px;">
+				<div style="width: 20%;"></div>
+				<div style="width: 80%;">
+					<input type="button" id="wan_cancel" value="Back" onclick="wanCancel()" style="width: 100px;" />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" id="wan_apply" value="Next" onclick="wanApply()" style="width: 100px;" />
+				</div>
+			</div>
+			<br />
+		</div>
+	</form>
+</body>
+
+</html>

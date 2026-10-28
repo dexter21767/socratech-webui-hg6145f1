@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ping_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="diagnosis_ping_prompt">diagnosis_ping_prompt</font></p>
+		</div>
+		<br>
+		<fh-fo-rm id="ping_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="diagnosis_interface_title">diagnosis_interface_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_connect" name="wan_connect" class="main_select" style="width: 182px">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="IP_Version">IP_Version</font></div>
+					<div class="main_item_content">
+						<select id="ip_version" name="ip_version" class="main_select" style="width: 182px">
+							<option value="1">IPv4</option>
+							<option value="2">IPv6</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="diagnosis_times_title">diagnosis_times_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width: 182px" autocomplete="off" id="count" name="count"/>
+						<span class="redcolorfont">*</span>
+                        <font id="repeatTimeTips" i18n="repeatTimeTips">repeatTimeTips</font>
+                        <font id="repeatTimeTips_telmex" i18n="repeatTimeTips_telmex">repeatTimeTips_telmex</font>
+					</div>
+					<div id="ping-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ping_ip_title">ping_ip_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width: 182px" autocomplete="off" id="address" name="address"/>
+						<span class="redcolorfont">*</span>
+					</div>
+					<div id="ping-error" class="main_item_error_hint_extra"></div>
+				</div>
+                <div id="dataSize_dscp" style="display:none;">
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="ping_dataSize_title">ping_dataSize_title</font></div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" style="width: 182px" autocomplete="off" id="data_size" name="data_size"/>
+                            (32-65500)
+                        </div>
+                        <div id="ping-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="ping_dscp_title">ping_dscp_title</font></div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" style="width: 182px" autocomplete="off" id="dscp" name="dscp"/>
+                            (0-63)
+                        </div>
+                        <div id="ping-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                 </div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="pingbtn" onclick="saveApply()"/>
+					</div>
+				</div>	
+				</br>			
+			</div>
+			<textarea rows="20" cols="80" readonly="readonly" id="ping_text" style="max-width: 690px"></textarea>
+		</fh-fo-rm>
+	</body>
+</html>

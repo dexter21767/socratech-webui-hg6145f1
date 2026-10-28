@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language ="javascript "type ="text/javascript">
+    	document.write('<link rel="stylesheet" type="text/css" href="../css/common.css?'+new Date().getTime()+'"><'+'/'+'link>');
+    	document.write('<script src="../js/jquery.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../js/json2.js?'+new Date().getTime()+'"><'+'/'+'script>');
+//		document.write('<script src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../js/util_global_vars.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	    document.write('<script src="../js/access.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../topo/lib/d3-tip.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script src="../topo/lib/d3.v5.min.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+    <script>
+
+        $(document).ready(function (e) {
+			$("#fh_menu_device").removeClass("fh_menu_text");
+			$("#fh_menu_device").addClass("fh_menu_text_disable");
+			$("#fh_menu_more_device").css("display","none");
+			$("#fh_menu_sciptv").removeClass("fh_menu_text");
+			$("#fh_menu_sciptv").addClass("fh_menu_text_disable");
+			$(".fh_content_main_common").css("display", "block");
+        })
+		var MultiapEnable;
+		XHR.get("get_multiAP_enable", null, function(data) {
+    		if (data) {
+    			MultiapEnable= data.multiAP_enable.Enable;
+    		}
+    	});
+        var g_subRouter_Array = [];
+    </script>
+    <style>
+        .d3tip {
+            line-height: 1;
+            font-weight: bold;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 10px;
+            z-index: 100;
+        }
+
+        .d3tip strong.title {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .legend {
+            position: relative;
+            float: left;
+            overflow-x: auto;
+            overflow-y: auto;
+            height: 800px;
+            width: 2000px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+        <div class="fh_content_common">
+            <input type="button" id="submit_btn" class="input_button" 
+            i18n="refresh_button" i18n-set="value" onclick="Refresh()"/>
+            <div class="fh_content_main_common">
+
+                <div id="legend" class="fh_content_more_block_common" style="padding-top: 48px">	
+                    <svg id="d3"></svg>
+                </div>
+            </div>
+        </div>
+
+    <script src="../js/polyfill.min.js"></script>
+	<script src="../js/babel.min.js"></script>
+    <script src="../topo/treeGraph_new.js" type="text/babel"></script>
+    <script src="../topo/dataToTopo_new.js" type="text/babel"></script>
+    <script type="text/babel">
+        var g_lan_data;
+        var g_rssi;
+		var svgLegend = d3.select("#legend")
+			.append("svg")
+			.attr("width", 2000)
+			.attr("height", 200);
+		
+        var topo = {
+            intervalTime: 30000,
+            loading: false,
+            topoTree: new TreeGraph(),
+            init: function () {
+                var that = this
+                this.setTopo(function (topoData) {
+                    that.topoTree.init(topoData.data, {
+                        height: 200 * topoData.deep,
+						width: 400 + (120 * topoData.maxWidth),
+                    })
+                })
+                this.upData();
+            },
+            setTopo: function (call) {
+				if(MultiapEnable == "1"){
+					var that = this   
+					var postData = {
+                        refreshFlag:0,
+					};
+					that.loading = true
+                   XHR.post("get_fh_topo", postData, function(data)
+                   {
+                    //if (postData.ajaxmethod === "GET_TOPO" || postData.ajaxmethod === "GET_FH_TOPO") {
+                        if (data.ret == 0) {
+                            var dataTopo = data;
+                            g_rssi = dataTopo.rssi;
+                           // alert("g_rssi==="+g_rssi);
+                            var getHostData = {
+                                ajaxmethod: "get_lan_status",
+                                _: Math.random(),
+                            };
+                            $.ajax({
+                                url: "/cgi-bin/ajax",
+                                type: "GET",
+                                dataType: "json",
+                                data: getHostData,
+                                success: function (data) {
+                                   // var that = this  ;
+                                    var topo_data = JSON.parse(JSON.stringify(dataTopo).replace(/_point_/g, "."));
+                                    console.log("111",topo_data);
+                                    var lan_status = JSON.parse(JSON.stringify(data.lan_status).replace(/_point_/g, "."));
+                                    console.log("222",lan_status);
+                                    var topoData = dataToTopo(handleFhTopoData(lan_status.data,topo_data));
+                                    console.log("333",topoData);
+                                   // alert(JSON.stringify(topoData));
+                                    if(topoData.maxWidth >= 5){
+                                        $("#legend").addClass("legend");
+                                    }
+                                    that.loading = false     ;                                  
+                                    call(topoData);
+                                    adjustHeightCommon();
+                                },
+                                error: function (data) {
+                                }
+                            });  
+                        }
+                        else {
+                            call({})
+                            console.error(data.errMsg)
+                        }
+                    //}
+                   }
+                   ); 
+				}else{
+					var that = this   
+					var getHostData = {
+						ajaxmethod: "get_lan_status",
+						_: Math.random(),
+					};
+					that.loading = true
+					$.ajax({
+						url: "/cgi-bin/ajax",
+						type: "GET",
+						dataType: "json",
+						data: getHostData,
+						success: function (data) {
+							var topoData = dataToTopo(attachedDevicesToTopo(data.lan_status));
+							console.log("2222",topoData);
+							call(topoData);
+							adjustHeightCommon();
+						},
+						error: function (data) {
+							console.log("前端请求ajax报错", data)
+						}
+					});
+				}
+            },
+            upData: function () {
+                var that = this
+                setInterval(function () {
+                    if (!that.loading) {
+                        that.setTopo(function (topoData) {
+                            if (!that.loading) {
+                                that.topoTree.updata(topoData.data, {
+                                    height: 200 * topoData.deep,
+                                    width: 400 + (120 * topoData.maxWidth),
+                                })
+                            }
+                        })
+                    }
+
+                }, that.intervalTime)
+            }
+        }
+
+        var postlsit = {
+            ajaxmethod: "get_ipv4_lan_info",
+            _: Math.random(),
+        };
+        $.ajax({
+            url: "/cgi-bin/ajax",
+            type: "GET",
+            dataType: "json",
+            data:postlsit,
+            success: function (data) {
+                g_lan_data = data;
+				topo.init()
+            },
+            error: function (data) {
+            }
+        });
+        
+        function Refresh()
+        {
+     
+            var postData = {
+                refreshFlag: 1,
+            };
+            XHR.post("get_fh_topo", postData, initPage);
+        }
+        
+         function   initPage(data)
+         {
+            //if (postData.ajaxmethod === "GET_TOPO" || postData.ajaxmethod === "GET_FH_TOPO") {
+                if (data.ret == 0) {
+                    var dataTopo = data;
+                    var getHostData = {
+                        ajaxmethod: "get_lan_status",
+                        _: Math.random(),
+                    };
+                    $.ajax({
+                        url: "/cgi-bin/ajax",
+                        type: "GET",
+                        dataType: "json",
+                        data: getHostData,
+                        success: function (data) {
+                            var that = this  ;
+                            var topo_data = JSON.parse(JSON.stringify(dataTopo).replace(/_point_/g, "."));
+                            console.log("111",topo_data);
+                            var lan_status = JSON.parse(JSON.stringify(data.lan_status).replace(/_point_/g, "."));
+                            console.log("222",lan_status);
+                            var topoData = dataToTopo(handleFhTopoData(lan_status.data,topo_data));
+                            console.log("333",topoData);
+                            if(topoData.maxWidth >= 5){
+                                $("#legend").addClass("legend");
+                            }
+                            that.loading = false     ;                                  
+                           // call(topoData);
+                           new TreeGraph().init(topoData.data, {
+                               height: 200 * topoData.deep,
+                           	width: 400 + (120 * topoData.maxWidth),
+                           })
+                            adjustHeightCommon();
+                        },
+                        error: function (data) {
+                        }
+                    });  
+                }
+                else {
+                    call({})
+                    console.error(data.errMsg)
+                }
+            //}
+         }
+
+        function hostDataToTopoData(hostdata, topodata) {
+            for (var i = 0; i < hostdata.length; i++) {
+                if (hostdata[i].Active == 1) {
+                    for (var j = 0; j < topodata.topo.length; j++) {
+                        if (hostdata[i].MACAddress == topodata.topo[j].mac) {
+                            topodata.topo[j].ipv4 = hostdata[i].IPAddress == "" ? hostdata[i].IPv6Address : hostdata[i].IPAddress;
+                        }
+                        for (var k = 0; k < topodata.topo[j].sta.length; k++) {
+                            if (hostdata[i].MACAddress == topodata.topo[j].sta[k].mac) {
+                                topodata.topo[j].sta[k].ipv4 = hostdata[i].IPAddress == "" ? hostdata[i].IPv6Address : hostdata[i].IPAddress;
+                            }
+                        }
+                    }
+                }
+            }
+			//console.log(topodata);
+            return topodata;
+        }
+
+        function hostDataToFhTopoData(hostdata, topodata) {
+            console.log(7)
+            console.log(topodata)
+            for (var i = 0; i < hostdata.length; i++) {
+                console.log("hostdata[i].MACAddress====="+hostdata[i].MACAddress);
+                console.log("hostdata[i].Active===="+hostdata[i].Active);
+                console.log("hostdata[i].DeviceType====="+hostdata[i].DeviceType);
+                if(hostdata[i].Active == 0){
+                	for (var k = 0; k < topodata.length; k++) {
+                        console.log("topodata[k].mac===="+topodata[k].mac);
+                        console.log("topodata[k].Active===="+topodata[k].Active);
+                		if( hostdata[i].DeviceType == "Agent")
+                		{
+                            console.log("okokokokokok");
+                			if (hostdata[i].MACAddress == topodata.[k].mac) {
+                            topodata.[k].ipv4 = hostdata[i].IPAddress == "" ? hostdata[i].IPv6Address : hostdata[i].IPAddress;
+                            topodata[k].name = hostdata[i].HostName;
+                			}
+                		}  
+                    }
+                }
+                if (hostdata[i].Active == 1) {
+                    for (var j = 0; j < topodata.length; j++) {
+                        if (hostdata[i].MACAddress.toUpperCase() == topodata[j].mac.toUpperCase() && topodata[j].ipv4 != g_lan_data.lan_ipv4.IPInterfaceIPAddress) {
+                            topodata[j].ipv4 = hostdata[i].IPAddress == "" ? hostdata[i].IPv6Address : hostdata[i].IPAddress;
+                            if (hostdata[i].HostName != "" && hostdata[i].HostName != "unknown" && hostdata[i].HostName != null && hostdata[i].HostName != "HostName_unknow") {
+								topodata[j].name = hostdata[i].HostName;
+							}else {
+								topodata[j].name = hostdata[i].MACAddress;
+							}	
+                             if(gOperatorName == "IDN_TELKOM")
+                             {
+                                 console.log(topodata[j].rssi);
+                                 if(topodata[j].name.indexOf("SR1021E") >= 0  || topodata[j].name.indexOf("SR1021F") >= 0)
+                                 {
+                                    if(parseInt(g_rssi) <= 20 && parseInt(g_rssi) >= (-20))  
+                                    {
+                                      topodata[j].rssi = parseInt(topodata[j].rssi) + parseInt(g_rssi);
+                                    }
+                                 }
+                             }
+                            topodata[j].linkSpeed = Math.floor(Number(hostdata[i].Tx_rate)/1000);
+							topodata[j].OnlineTime=hostdata[i].ClientUpTime;
+                            topodata[j].downSpeed=hostdata[i].DownSpeed;
+                        }
+                        for (var k = 0; k < topodata[j].sta.length; k++) {
+                            if(gOperatorName == "IDN_TELKOM"){
+                                var hostdataMacLength = hostdata[i].MACAddress.length;
+                                var topodataMacLength = topodata[j].sta[k].mac.length;
+                                if(hostdata[i].MACAddress.substring(0,hostdataMacLength - 1) == topodata[j].sta[k].mac.substring(0,topodataMacLength - 1)){
+									console.log("hostdata[i].MACAddress"+hostdata[i].MACAddress.substring(0,hostdataMacLength - 1));
+									console.log("topodata[j].sta[k].mac"+topodata[j].sta[k].mac.substring(0,topodataMacLength - 1));
+									console.log("k===="+k);
+                                    if(topodata[j].sta[k].mac.charAt(topodataMacLength - 1) == "0" &&  hostdata[i].DeviceType.indexOf("Agent") >= 0)
+                                    {
+                                        topodata[j].sta.splice(k,1);
+										console.log(k);
+										k--;
+										continue; 
+                                    }
+                                }
+                            }
+                            if (hostdata[i].MACAddress.toUpperCase() == topodata[j].sta[k].mac.toUpperCase()) {
+                                topodata[j].sta[k].ipv4 = hostdata[i].IPAddress == "" ? hostdata[i].IPv6Address : hostdata[i].IPAddress;
+								if (hostdata[i].HostName != "" && hostdata[i].HostName != "unknown" && hostdata[i].HostName != null){
+                                    topodata[j].sta[k].name = hostdata[i].HostName;
+                                }else {
+                                    topodata[j].sta[k].name = hostdata[i].MACAddress;
+                                } 														
+                                //topodata[j].sta[k].deviceType = getFhDeviceType(hostdata[i]);
+								topodata[j].sta[k].OnlineTime = hostdata[i].ClientUpTime;
+                                topodata[j].sta[k].linkSpeed = Math.floor(Number(hostdata[i].Tx_rate)/1000);
+                                topodata[j].sta[k].downSpeed = hostdata[i].DownSpeed;
+                                topodata[j].sta[k].OperatingStandard = hostdata[i].OperatingStandard;
+                               // alert( topodata[j].sta[k].OperatingStandards);
+                                //console.log("topodata[j].sta[k]"+topodata[j].sta[k].Tx_rate);
+                            }
+                        }
+                    }
+                }
+            }
+            console.log(123)
+			console.log(topodata);
+            return topodata;
+        }
+
+        function getFhDeviceType(e) {
+            let _deviceType = 5 // 默认为无线下挂设备
+			if(e.InterfaceType != 'Ethernet' && e.DeviceType != 'Agent' && e.DeviceType != 'AP')
+			{
+				e.DeviceType = 'Phone';
+			}
+            switch (e.DeviceType) {
+                case 'Phone':
+                    _deviceType = 2 // 手机
+                    break;
+                case 'Computer':
+                    _deviceType = 4 // 电脑
+                    break;
+                case 'AP':
+				case 'Agent':
+                    _deviceType = 1 // AP
+                    break;
+                default:
+                    _deviceType = e.InterfaceType === "Ethernet" ? 4 : 2 // 改为默认电脑/手机   无线/有线下挂设备
+                    break;
+            }
+			if(gOperatorName == "CHL_ENTEL" || gOperatorName == "MEX_TP")
+			{
+				if(e.InterfaceType != 'Ethernet' && e.DeviceType != 'Agent' && e.DeviceType != 'AP')
+				{
+					_deviceType = 5;
+				}
+			}
+            return _deviceType
+        }
+
+        /*设备类型改由从topo节点判断*/
+        function getTopoDeviceType(accessType) {
+            var type;
+            if(accessType == 1){
+                type = 4;
+            }
+            else if(accessType == 2 || accessType == 3){
+                if(gOperatorName == "CHL_ENTEL" || gOperatorName == "MEX_TP"){
+                    type = 5;
+                }else{
+                    type = 2;
+                }
+            }
+            return type;
+        }
+
+        function getFhtopoAccessType(e) {
+            var accessType = 1;
+            if(e.OperatingFrequencyBand === 'Wired')
+            {//有线
+                accessType = 1;
+            }
+            else
+            {// 无线
+                if(e.OperatingFrequencyBand === '2.4GHz')
+                {
+                    accessType = 2
+                }
+                else if(e.OperatingFrequencyBand === '5GHz')
+                {
+                    accessType = 3
+                }
+            }
+
+            return accessType
+        }
+		
+		function getFhtopoApAccessType(e) {
+            var accessType = 1;
+            if(e.BackhaulLinkType === 'Wired')
+            {//有线
+                accessType = 1;
+            }else if (e.BackhaulLinkType === '2.4GHz') {
+                accessType = 2;
+            }else if (e.BackhaulLinkType === '5GHz') {
+                accessType = 3;
+            }else if (e.BackhaulLinkType === 'PON' || e.BackhaulLinkType === 'pon') {
+                accessType = 4;
+            }
+
+            return accessType
+        }
+		
+		function getattachAccessType(e) {
+            var accessType = 1;
+            if(e.AccessType == 'Ethernet')
+            {//有线
+                accessType = 1;
+            }else if (e.AccessType == '2.4G') {
+                accessType = 2;
+            }else if (e.AccessType == '5G') {
+                accessType = 3;
+            }
+            return accessType
+        }
+
+
+        function createFhTopoStaData(radiodata, router, hostdata, nodeindex) {
+            for (var j = 0; j < radiodata.length; j++) {
+                var accessType = getFhtopoAccessType(radiodata[j]);
+                var apdata = radiodata[j].apdata;
+				console.log(apdata.length);
+                for (var k = 0; k < apdata.length; k++) {
+                    var stadata = apdata[k].stadata;
+					console.log(stadata.length);
+                    for (var l = 0; l < stadata.length; l++) {   //sta
+                       // alert(JSON.stringify(stadata))
+                        if(gOperatorName != "TH_AIS"){
+                            stadata[l].OperatingStandard = radiodata[j].OperatingStandards;
+                        }
+                        console.log(g_subRouter_Array)
+                        var repeatFlag = false
+                        for(var n = 0; n < g_subRouter_Array.length; n++ ){
+                            if(stadata[l].MACAddress.toUpperCase() == g_subRouter_Array[n].toUpperCase()){
+                                repeatFlag = true;
+                                break
+                            }
+                        }
+						for (var m = 0; m < hostdata.length; m++) {
+                            if (stadata[l].Active == 1  && stadata[l].MACAddress.toUpperCase() == hostdata[m].MACAddress.toUpperCase()
+                                && repeatFlag == false) {
+                                router.sta.push({
+                                    accessType: accessType,
+                                    mac: stadata[l].MACAddress,
+                                    ipv4: stadata[l].IPv4Address,
+                                   // linkSpeed:Math.floor(Number(stadata[l].PHYRate)/1000),
+                                    rssi:stadata[l].SignalStrength,
+                                    _80211mode:stadata[l].OperatingStandard,
+                                    sta: [],
+                                    name: stadata[l].HostName,
+                                    nodeIndex: nodeindex,
+                                    deviceType: getTopoDeviceType(accessType),
+                                    UpSpeed:stadata[l].upSpeed,
+                                    security:stadata[l].Security,
+                                    OnlineTime:"",
+									linkSpeed:""
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function createFhTopoData(topodata, macvalue, topoarray,hostdata, nodeindex) {
+            var _topodata = topodata;
+            g_subRouter_Array = [];
+            for(var i = 0; i < topodata.length; i++){
+                if (topodata[i].Active == 1) {
+                    g_subRouter_Array.push(topodata[i].MACAddress)
+                }
+            }
+            for (var i = 0; i < topodata.length; i++) {
+                if (topodata[i].Active == 1) {
+                    if (macvalue == topodata[i].MACAddress && nodeindex == 1) {  //main router
+                        var radiodata = topodata[i].radiodata;
+                        createFhTopoStaData(radiodata, topoarray[0], hostdata,nodeindex + 1);
+                    }
+                   for (var m = 0; m < hostdata.length; m++) {
+                        if (macvalue == topodata[i].ParentMACAddress && topodata[i].MACAddress.toUpperCase() == hostdata[m].MACAddress.toUpperCase()) {   //sub router
+                        
+                        var subRouter = {
+                            accessType: getFhtopoApAccessType(topodata[i]),
+                            mac: topodata[i].MACAddress,
+                            ipv4: topodata[i].IPv4Address,
+							//linkSpeed: Math.floor(Number(topodata[i].PHYRate)/1000),
+                            rssi:topodata[i].BackhaulSignalStrength,
+							_80211mode:getFhtopoAp80211mode(topodata[i]),
+							Version: topodata[i].SoftwareVersion,
+							OnlineTime:"",
+                            linkSpeed:"",
+                            sta: [],
+                            name: "",
+                            nodeIndex: nodeindex + 1,
+                            deviceType: 1,
+                            downSpeed:topodata[i].downSpeed,
+                            version:g_lan_data.lan_ipv4.software_version
+                        }
+                        var radiodata = topodata[i].radiodata;
+                            createFhTopoStaData(radiodata, subRouter, hostdata,nodeindex + 2);
+                        	topoarray.push(subRouter);
+                            createFhTopoData(_topodata, topodata[i].MACAddress, topoarray,hostdata, nodeindex + 1);
+                        }
+                    }
+                }
+            }
+        }
+
+        function handleFhTopoData(hostdata, topodata) {
+            var _topo = [
+                {   //main router
+                    accessType: 0,
+                    mac: g_lan_data.lan_ipv4.brmac,
+                    ipv4: g_lan_data.lan_ipv4.IPInterfaceIPAddress,
+                    linkSpeed: "0",
+                    sta: [],
+					name: gModelName,
+                    nodeIndex: 1,
+                    deviceType: 1,
+                    version:g_lan_data.lan_ipv4.software_version
+                }
+            ]
+            var _topodata = topodata.topodata;
+            createFhTopoData(_topodata, g_lan_data.lan_ipv4.brmac, _topo, hostdata, 1);
+           
+            return {
+                topo: hostDataToFhTopoData(hostdata,_topo)
+            }
+        }
+		
+		function adjustHeightCommon() {
+			$(".fh_content_common").css("height", "auto");
+			if ($(".fh_content_common").height() < 350) {
+				$(".fh_content_common").css("height", "348px");
+			}
+			
+			var bh = document.documentElement.clientHeight || document.body.clientHeight;
+			var dh = $(".fh_container").height();
+			
+			if(bh > dh) {
+				var h = bh - dh + $(".fh_content_common").height();
+				$(".fh_content_common").height(h);
+			}
+		}
+		
+		function getFhtopoAp80211mode(e) {
+			var OperatingStandards = "";
+			var radiodata = e.radiodata;
+			for (var i = 0; i < radiodata.length; i++) {
+				if(radiodata[i].OperatingFrequencyBand == e.BackhaulLinkType)
+				{
+					OperatingStandards = radiodata[i].OperatingStandards
+					break;
+				}
+			}
+			return OperatingStandards
+
+		}
+ function attachedDevicesToTopo(d) {
+    let _topo = [
+        {
+            accessType: 0,
+            mac: g_lan_data.lan_ipv4.brmac,
+            ipv4: g_lan_data.lan_ipv4.IPInterfaceIPAddress,
+            sta: [],
+            name: gModelName,
+            nodeIndex: 1,
+            deviceType: 1
+        }
+    ]
+	for (var j = 0; j < d.data.length; j++) {
+		 _topo.push({
+            accessType: getattachAccessType(d.data[j]),
+            rssi: d.data[j].RSSI, 
+            mac: d.data[j].MACAddress,
+            ipv4: d.data[j].IPAddress,
+            linkSpeed: Math.floor(d.data[j].Tx_rate/1000) + '',
+            sta: [],
+            OnlineTime:d.data[j].ClientUpTime,
+            name:(d.data[j].HostName == "" || d.data[j].HostName == "unknown") ? d.data[j].MACAddress : d.data[j].HostName,
+            downSpeed:d.data[j].downSpeed,
+            nodeIndex: 2,
+            deviceType: getFhDeviceType(d.data[j]),
+        })
+	}
+    return {
+        topo: _topo
+    }
+}
+
+		
+
+    </script>
+</body>
+
+</html>

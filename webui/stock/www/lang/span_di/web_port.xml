@@ -1,0 +1,12 @@
+{
+  "webport_Prompt":"En esta página, puede configurar el puerto de comunicación web (HTTP) y reiniciar para que sea efectivo.",
+  "web_portTitle":"Puerto de comunicación válido WEB",
+  "web_portchangeTitle":"Puerto de comunicación WEB que ha modificado",
+  "web_portchangeTips":"(Por favor, introduzca 1024-65535 u 80)",
+  "Change_confirm":"El puerto que ha modificado será efectivo después del reinicio.",
+  "web_portIllegalAlert":"¡Por favor, introduzca 1024-65535 u 80!",
+  "web_PortNullAlert":"¡Por favor, introduzca un valor del puerto!",
+  "webport_apply":"Aplicar",
+  "webport_cancel":"Cancelar"
+} 
+

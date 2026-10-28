@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/loop_detection_status.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form id="loop_detection_form">
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="loop_detection_prompt">loop_detection_prompt</font></p>
+		</div>
+		<br/>
+		<div id="loop_detection_cfg">
+			<div class="table_bg">
+				<div class="table_title"><font i18n="loop_detection_cfg_title">loop_detection_cfg_title</font></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name"><font i18n="loop_detection_enable_title">loop_detection_enable_title</font></div>
+				<div class="main_item_content">
+					<input type="checkbox" id="loop_detection_enable"/>&nbsp;
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name"><font i18n="detection_Interval_title">detection_Interval_title</font></div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" autocomplete="off" id="detection_Interval" name="detection_Interval" style="width:100px"/>
+					<font i18n="detection_Interval_tips">detection_Interval_tips</font>
+				</div>
+			</div>
+			<div class="main_item" id="recovery_interval_div" >
+				<div class="main_item_name"><font i18n="recovery_interval_title">recovery_interval_title</font></div>
+				<div class="main_item_content">
+					<input type="text" class="input_text" autocomplete="off" id="recovery_interval" name="recovery_interval" style="width:100px"/>
+					<font i18n="recovery_interval_tips">recovery_interval_tips</font>
+				</div>
+			</div>			
+		</div>
+		<br/>
+		<div id="div_loop_detection">
+			<table class="table_bg"  border="0" cellpadding="0" cellspacing="1" width="100%">
+				<tr class="table_title">
+	          		<td colspan="10" id="loop_detection_head"><font i18n="loop_detection_head">loop_detection_head</font></td>
+	      		</tr>
+	            <tbody>
+					<tr class="table_head_title">
+						<!--td id="td_hostname" width="20%"><font i18n="No.">No.</font></td-->
+						<td id="td_id" width="40%"><font i18n="Lan_PortTitle">Lan_PortTitle</font></td>
+						<td id="td_mac" width="40%"><font i18n="Status">Status</font></td>
+					</tr>
+				</tbody>
+				<tbody id="lanInfo_list"></tbody>
+	        </table>
+        </div>
+        <div class="main_item">
+			<div class="main_submit" style="width: 25%;"></div>	
+			<div class="main_submit" style="width: 75%;">
+				<input type="button" id ="inet_apply" onclick="save_apply()" i18n="state_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+				<input type="button" class="input_button" id="input_button" i18n="state_update" i18n-set="value" onclick="window.location.reload()">
+			</div>
+		</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "pt_PortTriggerPrompt":"En esta página, puede configurar las condiciones para la activación de puertos.",
+
+  "fw_filterListHead":"Lista de reglas de activación de puertos",
+  "PFdescrip":"Descripción",
+  "The_trigger_Port":"Puerto Activador",
+  "The_open_Port":"Puerto Abierto",
+  "The_TriggerProtocol":"Protocolo Activador",
+  "The_openProtocol":"Protocolo Abierto",
+  "Enable":"Habilitar",
+
+  "pf_DescriptionTitle":"Descripción",
+  "pf_triPortTitle":"Puerto Activador",
+  "pf_openPortTitle":"Puerto Abierto",
+  "pf_triprotocolTitle":"Protocolo Activador",
+  "pf_openprotocolTitle":"Protocolo Abierto",
+  "pf_enabelTitle":"Habilitar",
+
+  "pf_add":"Agregar",
+  "pf_delete":"Borrar",
+  "pf_deleteAll":"Eliminar todo",
+
+  "pf_apply":"Aplicar",
+  "pf_cancel2":"Cancelar",
+
+  "pf_mostRulesAlert":"¡Puede configurar 8 reglas como máximo!",
+  "pf_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "pf_noChooseAlert":"¡Por favor, seleccione una regla antes de eliminarla!",
+  "pf_deleteRuleConfirm":"¿Está seguro de que desea eliminar la regla seleccionada?",
+
+  "pf_ipIllegalAlert":"¡Por favor ingrese una IP válida!",
+  "pf_PortNullAlert":"¡Por favor, introduzca un valor de puerto válido!",
+  "pf_endPortTooSmallAlert":"¡El puerto inicial no debe ser mayor que el puerto final!",
+  "pf_portIllegalAlert":"¡El rango de puertos válido es 1 - 65535!",
+  "Please creat INTERNET WAN first !":"¡Por favor, cree primero INTERNET WAN!",
+ 
+  "description_tips":"( 0-31 caracteres, incluidos los alfanuméricos, '-' y '_')",
+  "descripIllegalAlert":"¡Por favor, introduzca una descripción válida!"
+}

@@ -1,0 +1,633 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/broadband_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("internet");
+</script>
+
+<body class='main_config_body'>
+	<div class="wan_show_content" style="width:320px">
+		<ul id="wan_rules" class="wan_rules">
+		</ul>
+		<input type="button" id="fw_add" onclick="addfilter()" i18n="new_wan_add" i18n-set="value"
+			class="input_add_button" style="margin-left: 15px"/>
+	</div>
+	<div class="wan_config_content" id="image" style="display: none;">
+		<img src="../image/new_ui/no_data.png" style="margin-top: 260px;">
+		<span i18n="No Data">No Data</span>
+	</div>
+	<form id="broadband_form" method="post">
+		<div class="wan_config_content">
+			<div class="main_item" style="display: none">
+				<div class="main_item_name">
+					<font i18n="WAN_nameTitle">WAN_nameTitle</font>
+				</div><!-- > 这里是want name 其下拉框内部包含了wan连接的所有已有连接<-->
+				<div class="main_item_content">
+					<select id="WanConnectName_select" class="select">
+					</select>
+				</div>
+
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="wan_servicetypeTitle">wan_servicetypeTitle</font>
+				</div>
+				<!-- > service type TR069 Internet TR069 Internet muticast VOIP VOIP_internet IPTV  TR069_VOIP TR069_VOIP_internet Other<-->
+				<div class="main_item_content">
+					<select id="WanServiceList_select" class="select">
+					</select>
+				</div>
+
+			</div>
+			<div class="main_item" id="wanEnable" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="WanEnable">WanEnable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="checkbox" checked="checked" id="WanEnable_checkbox" />
+				</div>
+
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="wan_connectionTypeTitle">wan_connectionTypeTitle</font>
+				</div><!-- > route or bridge 模式<-->
+				<div class="main_item_content">
+					<select id="WanConnectMode_select" class="select">
+					</select>
+				</div>
+
+			</div>
+
+			<div id="wan_address" class="main_item">
+				<div class="main_item_name">
+					<font i18n="packaging_type">packaging_type</font>
+				</div><!-- > 里面包含了pppoe部分<-->
+				<div class="main_item_content">
+					<select id="WanAddress_select" class="select">
+						<option value='IPoE'>IPoE</option>
+						<option value='PPPoE'>PPPoE</option>
+					</select>
+				</div>
+
+			</div>
+			<div class="main_item" id="vlan_cfg" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="vlanEnable">vlanEnable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="checkbox" id="WanVlan_Enable" name="WanVlan_Enable" />
+				</div>
+
+			</div>
+			<div id="VLAN_Setting" class="main_item">
+				<div class="main_item_name">
+					<span class="redcolorfont">*</span>VLAN ID
+				</div>
+				<div class="main_item_content">
+					<div class="tip_text" id="tip_WanVlanID_text">1-4094</div>
+					<input type="text" class="input_text" autocomplete="off" id="WanVlanID_text"
+						name="WanVlanID_text" />
+				</div>
+			</div>
+			<div id="priority_setting" class="main_item">
+				<div class="main_item_name">
+					<span class="redcolorfont">*</span>
+					<font i18n="PriorityTitle"></font>
+				</div>
+				<div class="main_item_content">
+					<div class="tip_text" id="tip_Wan_802_1_P_select">0-7</div>
+					<input type="text" class="input_text" autocomplete="off" id="Wan_802_1_P_select"
+						name="Wan_802_1_P_select" />
+				</div>
+
+			</div>
+			<div id="nat_dns_mtu_div"><!-- > tr069  voip tr069_voip other 时不显示此div 1105<-->
+				<div id="nat_setting" class="main_item">
+					<div class="main_item_name">
+						<font i18n="lan_stp">lan_stp</font>
+					</div>
+					<div class="main_item_content">
+						<select id="nat_select" class="select">
+						</select>
+					</div>
+				</div>
+				<div id="div_nat_loopback_enable" class="main_item" style="display:none;">
+					<div class="main_item_name">
+						<font i18n="nat_loopback_enable_title">nat_loopback_enable_title</font>
+					</div>
+					<div class="main_item_content">
+						<select id="nat_loopback_enable" disabled class="select">
+							<option value='1' selected="selected">Enable</option>
+							<option value='0'>Disable</option>
+						</select>
+					</div>
+
+				</div>
+				<div id="mtu_setting" class="main_item">
+					<div class="main_item_name">
+						<span class="redcolorfont">*</span>MTU
+					</div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_WanMTU_text"><span id="MTU_hint"></span></div>
+						<input type="text" class="input_text" autocomplete="off" id="WanMTU_text" name="WanMTU_text" />
+					</div>
+
+				</div>
+			</div>
+			<div id="PROXY_Setting" style='display:none'>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="pppoe_proxy_enable">pppoe_proxy_enable</font>
+					</div>
+					<div class="main_item_content">
+						<input type="checkbox" onClick='enableProxy()' id="WanProxyEnable_text"
+							name="WanProxyEnable_text" />
+					</div>
+
+				</div>
+				<div class="main_item" id="PROXY_Set">
+					<div class="main_item_name">
+						<font i18n="most_user_num_limitation">most_user_num_limitation</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="WanMAXUser_text"
+							name="WanMAXUser_text" />
+					</div>
+
+				</div>
+			</div>
+			<div class="main_item" id="pppToBridgeId" style='display:none'>
+				<div class="main_item_name">
+					<font i18n="enable_bridge_routing_hybrid_mode">enable_bridge_routing_hybrid_mode</font>
+				</div>
+				<div class="main_item_content">
+					<input type="checkbox" id="BROADBUND_ppptobridge" name="BROADBUND_ppptobridge" />
+				</div>
+
+			</div>
+
+			<div id="port_div"><!-- > TR069 voip TR069_VOIP 时不显示此 div 1105<-->
+				<div class="main_item" id="lan_ports">
+					<div class="main_item_name">
+						<font i18n="DHCP_FE_title">DHCP_FE_title</font>
+					</div>
+					<div class="main_item_content" id="lan_list" style="color: rgba(255, 255, 255, 0.8);">
+						<span id='LAN1enable' class='lanport'>
+							<input type='checkbox' name='portbind' value='eth0' id='Wan_Port_checkbox1'>
+							<span type='text' id='lantext1' class="port_band"></span>
+						</span>
+						<span id='LAN2enable' class='lanport'>
+							<input type='checkbox' name='portbind' value='eth1' id='Wan_Port_checkbox2'>
+							<span type='text' id='lantext2' class="port_band"></span>
+						</span>
+						<span id='LAN3enable' class='lanport'>
+							<input type='checkbox' name='portbind' value='eth2' id='Wan_Port_checkbox3'>
+							<span type='text' id='lantext3' class="port_band"></span>
+						</span>
+						<span id='LAN4enable' class='lanport'>
+							<input type='checkbox' name='portbind' value='eth3' id='Wan_Port_checkbox4'>
+							<span type='text' id='lantext4' class="port_band"></span>
+						</span>
+						<span id='LAN5enable' class='lanport' style="display: none;">
+							<input type='checkbox' name='portbind' value='eth4' id='Wan_Port_checkbox5'>
+							<span type='text' id='lantext5'></span>
+						</span>
+					</div>
+
+				</div>
+				<div class="main_item wifi_ports" id="wifi_ports_div1">
+					<div class="main_item_name">
+						<font i18n="wan_SSID_24g_title">wan_SSID_24g_title</font>
+					</div>
+					<div class="main_item_content" id="wifi_div" style="color: rgba(255, 255, 255, 0.8);">
+						<span class='wifiport'><input type='checkbox' name='portbind' value="0"
+								id='Wan_SSID_checkbox1' />
+							<span class="port_band">SSID1</span>
+						</span>
+						<span class='wifiport'><input type='checkbox' name='portbind' value="1"
+								id='Wan_SSID_checkbox2' />
+							<span class="port_band">SSID2</span>
+						</span>
+						<span class='wifiport'><input type='checkbox' name='portbind' value="2"
+								id='Wan_SSID_checkbox3' />
+							<span class="port_band">SSID3</span>
+						</span>
+						<span class='wifiport'><input type='checkbox' name='portbind' value="3"
+								id='Wan_SSID_checkbox4' />
+							<span class="port_band">SSID4</span>
+						</span>
+					</div>
+
+				</div>
+				<div class="main_item wifi_ports" id="wifi_ports_div2">
+					<div class="main_item_name">
+						<font i18n="wan_SSID_5g_title">wan_SSID_5g_title</font>
+					</div>
+					<div class="main_item_content" id="5g_wifi_div" style="color: rgba(255, 255, 255, 0.8);">
+						<span class='wifiport'>
+							<input type='checkbox' value="4" name='portbind' id='Wan_SSID_checkbox5' />
+							<span id="SSID_checkbox5" class="port_band">SSID1</span>
+						</span>
+						<span class='wifiport'>
+							<input type='checkbox' value="5" name='portbind' id='Wan_SSID_checkbox6' />
+							<span id="SSID_checkbox6" class="port_band">SSID2</span>
+						</span>
+						<span class='wifiport'>
+							<input type='checkbox' value="6" name='portbind' id='Wan_SSID_checkbox7' />
+							<span id="SSID_checkbox7" class="port_band">SSID3</span>
+						</span>
+						<span class='wifiport'>
+							<input type='checkbox' value="7" name='portbind' id='Wan_SSID_checkbox8' />
+							<span id="SSID_checkbox8" class="port_band">SSID4</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div id="WanIP_Mode" class="main_item"><!-- > 没有internet 则 不显示此div ，只有含有internet 时，才显示此div<-->
+				<div class="main_item_name">
+					<font i18n="wIP_mode_title">wIP_mode_title</font>
+				</div><!-- > ipv4 ipv6 ipv4/ipv6模式<-->
+				<div class="main_item_content">
+					<select id="WanIP_Mode_select" class="select"></select>
+				</div>
+
+			</div>
+			<div id="wan_connect_mode" class="main_item">
+				<div class="main_item_name">
+					<font i18n="wan_connection_type">wan_connection_type</font>
+				</div>
+				<div class="main_item_content">
+					<select id="wan_connect_mode_select" class="select">
+						<!--IPoE: DHCP/Static, PPPoE: PPPoE-->
+					</select>
+				</div>
+			</div>
+			<div id="pppoe_pass_div" class="main_item" style="display: none;">
+				<div class="main_item_name">
+					<font>Passthrough Enable</font>
+				</div>
+				<div class="main_item_content">
+					<input type="checkbox" name="PPPoEPassthroughEnable" id="PPPoEPassthroughEnable">
+				</div>
+			</div>
+			<div id="wan_dns_override" style="display:none">
+				<div class="main_item_name">
+					<font i18n="wan_dns_override">wan_dns_override</font>
+				</div>
+				<div class="main_item_content">
+					<select id="wan_dnsoverride_select" class="select">
+						<option selected="selected" value="1">Enable</option>
+						<option value="0">Disable</option>
+					</select>
+				</div>
+			</div>
+			<div id="rapidcommit_setting" class="main_item" style="display:none">
+				<div class="main_item_name">
+					<font i18n="rapid_commit">rapid_commit</font>
+				</div>
+				<div class="main_item_content">
+					<select id="rapid_commit_select" class="select">
+						<option selected="selected" value='1'>Enable</option>
+						<option value='0'>Disable</option>
+					</select>
+				</div>
+
+			</div>
+			</br>
+			<div id="line">
+				<img src="../image/new_ui/line.png"
+					style="width: 95%;height: 1px;margin-top: 40px;margin-bottom: 40px;margin-left: 9%;">
+			</div>
+			<div id="dhcp_list_title" width="100%" cellspacing="1" cellpadding="0" border="0">
+				<div class="table_title" style="height: auto;margin-left: 30%;margin-bottom: 30px;">
+					<div id="dhcp_list_title_value" style="width: 100%">DHCP Mode</div>
+				</div>
+			</div>
+			<div id="Address_PPPoE_Setting" style="display : none"><!-- >pppoe模式设置<-->
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="inet_user">inet_user</font>
+					</div><!-- >pppoe模式设置用户名<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="WanUserName_text"
+							name="WanUserName_text" />
+						<span style="display: none;" id="ed_username" class="trad">
+							<font i18n="ed_usernameTips">ed_usernameTips</font>
+						</span>
+					</div>
+
+				</div>
+				<div class="main_item" style="display:none">
+					<div class="main_item_name">
+						<font i18n="inet_password">inet_password</font>
+					</div><!-- >pppoe模式设置密码<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text fh-text-security" autocomplete="off" id="xxx" name="xxx" />
+					</div>
+
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="inet_password">inet_password</font>
+					</div><!-- >pppoe模式设置密码<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text fh-text-security" autocomplete="off" id="POED" name="POED"
+							oncopy="return false" />
+					</div>
+
+				</div>
+				<div class="main_item" id="pppoeServiceName_Setting" style="display:none;">
+					<div class="main_item_name">
+						<font i18n="inet_pppoe_service_name">inet_pppoe_service_name</font>
+					</div><!-- >PPPoE Service Name<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="PPPoeServiceName_text"
+							name="PPPoeServiceName_text" maxlength="20" />
+						<font i18n="wPppoeCon_pppoeServiceNameTips"> wPppoeCon_pppoeServiceNameTips</font>
+					</div>
+
+				</div>
+				<div class="main_item" id="wPppoeConnTrigger_div">
+					<div class="main_item_name" id="dialMode_select_title" style="height: auto">
+						<font i18n="wPppoeConnTriggerTitle">wPppoeConnTriggerTitle</font>
+					</div>
+					<div class="main_item_content " style="margin-bottom: 0px">
+						<select id="dialMode_select" class="select">
+							<option value='AlwaysOn' i18n="AlwaysOn">AlwaysOn</option>
+							<option value='OnDemand' i18n="OnDemand">OnDemand</option>
+							<option value='Manual' i18n="Manual">Manual</option>
+						</select>
+					</div>
+					<!--<div class="main_item_content" style="float:left;height: 23px" id="keep_alive_mode"><span >Keep Alive Mode: Retry Period</span>
+				            <input type="text" id="keep_alive_period" disabled="disabled" style="width: 35px ;height :12px;"><span>Seconds (10-99999)</span>
+				        </div>-->
+					<div class="main_item_content"  id="manual_mode" style="display: none;">
+						<input type="button" class="input_button" id="connect_button" value="Connect"
+							onclick="check_connection(this.value)" style="width:120px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" class="input_button" id="disconnect_button" value="Disconnect"
+							onclick="check_connection(this.value)" style="width:120px">
+					</div>
+
+				</div>
+
+				<div class="main_item" id="idleDisconnectTime_Setting">
+					<div class="main_item_name">
+						<font i18n="wppp_outtimeTitle">wppp_outtimeTitle</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="idleDisconnectTime_text"
+							name="idleDisconnectTime_text" />
+					</div>
+				</div>
+			</div>
+			<div id="IPv4_Settings">
+				<div id="option60_setting" class="main_item" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="vendor_id">Vendor_id</font>
+					</div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_option60_text" i18n="option60_hit"></div>
+						<input type="text" class="input_text" autocomplete="off" maxlength="64" id="option60_text"
+							name="option60_text" />
+					</div>
+				</div>
+				<div id="IPv4_Address_Static_Settings">
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="wDhcpCon_ip_title">wDhcpCon_ip_title</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanIPv4Address_text"
+								name="WanIPv4Address_text" />
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="wDhcpCon_mask_title">wDhcpCon_mask_title</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanSubmask_text"
+								name="WanSubmask_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="wDhcpCon_gateway_title">wDhcpCon_gateway_title</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanGateway_text"
+								name="WanGateway_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="wDhcpCon_priDNS_title">wDhcpCon_priDNS_title</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanPri_DNS_text"
+								name="WanPri_DNS_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="wDhcpCon_secDNS_title">wDhcpCon_secDNS_title</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanSec_DNS_text"
+								name="WanSec_DNS_text" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div id="IPv6_Settings">
+				<!--DNS获取方式暂缺，隐藏-->
+				<div class="main_item" style="display:none">
+					<div class="main_item_name">
+						<font i18n="dns_obtainment_method">dns_obtainment_method</font>
+					</div>
+					<div class="main_item_content">
+						<select id='WanIPv6DNS_select' class="select">
+							<option value='WANConnection'>WANConnection</option>
+							<option value='Static'>Static</option>
+							<option value='HGWProxy'>HGWProxy</option>
+						</select>
+					</div>
+
+				</div>
+				<div id="IPv6_Address_Static_Settings">
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="ipv6_address">ipv6_address</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanIPv6Address_text"
+								name="WanIPv6Address_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="defaule_ipv6_gatway">defaule_ipv6_gatway</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanIPv6_Gateway_text"
+								name="WanIPv6_Gateway_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="ipv6_pri_dns">ipv6_pri_dns</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanIPv6Pri_DNS_text"
+								name="WanIPv6Pri_DNS_text" />
+						</div>
+
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="ipv6_sec_dns">ipv6_sec_dns</font>
+						</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="WanIPv6Sec_DNS_text"
+								name="WanIPv6Sec_DNS_text" />
+						</div>
+
+					</div>
+				</div>
+				<!-- 前缀获取方式，将其隐藏 -->
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="prefix_obtainment">prefix_obtainment</font>
+					</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="WanPrefix_checkbox" />
+					</div>
+
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="address_obtainment_method">address_obtainment_method</font>
+					</div>
+					<div class="main_item_content">
+						<select id='WanIPv6Address_select' class="select"
+							onChange="address_obtainment_method_switch(this.value);">
+							<!--AutoConfigured/DHCPv6/Static(PPPoE方式下不显示)/None-->
+						</select>
+					</div>
+
+				</div>
+				<div class="main_item" id="div_DNSv6_obtainment_method" style="display:none">
+					<div class="main_item_name">
+						<font i18n="DNSv6_obtainment_method">DNSv6_obtainment_method</font>
+					</div>
+					<div class="main_item_content">
+						<select id='WanDNSv6_select' disabled="disabled" class="select">
+							<!--AutoConfigured/DHCPv6/Static(PPPoE方式下不显示)/None-->
+						</select>
+					</div>
+
+				</div>
+				<div class="main_item" id="IPv6_Address_Prefix_Type_Tr">
+					<!-- prefix_mode 选择，IPv6 Prefix Mode 或 static -->
+					<div class="main_item_name">
+						<font i18n="Prefix_title">Prefix_title</font>
+					</div>
+					<div class="main_item_content">
+						<select id='WanPrefix_select' class="select">
+							<!--PrefixDelegation/Static(仅IPoE方式下显示)/PPPoE(仅PPPoE方式下显示)/None-->
+						</select>
+					</div>
+
+				</div>
+				<div class="main_item" id="IPv6_Address_Prefix_Tr">
+					<div class="main_item_name">
+						<font i18n="Prefix_value_title">Prefix_value_title</font>
+					</div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_WanIPv6Address_Pre_text" i18n="prefix_length_prompt"></div>
+						<input type="text" class="input_text" autocomplete="off" id="WanIPv6Address_Pre_text"
+							name="WanIPv6Address_Pre_text" />
+					</div>
+
+				</div>
+				<div id="IPv6_Dslite_Settingstotal" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name">
+							<font i18n="enable_ds_Lite">enable_ds_Lite</font>
+						</div>
+						<div class="main_item_content">
+							<input type="checkbox" id="WanDslite_checkbox" />&nbsp;
+						</div>
+
+					</div>
+					<div class="main_item" id="aftr_check_div">
+						<div class="main_item_name">
+							<font i18n="AFTR_manual_configuration">AFTR_manual_configuration</font>
+						</div>
+						<div class="main_item_content">
+							<input type="checkbox" id="aftr_checkbox" />&nbsp;
+						</div>
+
+					</div>
+					<div class="main_item" id="aftr_value_div">
+						<div class="main_item_name">AFTR</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="aftr_text"
+								name="aftr_text" />(FQDN)
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="main_save" id="tr69_wan_hint" style="display:none">
+			<font i18n="main_save_tips">main_save_tips</font>
+		</div>
+		<div class="main_submit_item">
+			<div class="main_item_content">
+				<input type="button" id="save_button" onclick="saveApply()" i18n="inet_apply" i18n-set="value"
+					class="input_button" style="margin-left: 160px;" />
+			</div>
+		</div>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	setInterval(function() {
+		if ($("#xxx").length > 0) {
+			if (!$("#xxx").hasClass("fh-text-security")) {
+				$("#xxx").addClass("fh-text-security");
+			}
+		} else {
+			window.location.reload();
+		}
+
+		if ($("#POED").length > 0) {
+			if (!$("#POED").hasClass("fh-text-security")) {
+				$("#POED").addClass("fh-text-security");
+			}
+		} else {
+			window.location.reload();
+		}
+	}, 10);
+</script>
+
+</html>

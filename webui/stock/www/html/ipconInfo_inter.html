@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/ipconInfo_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<style type="text/css">
+	#wancfgv4 td{text-align: center;}
+</style>
+<body class='main_config_body'>
+		<form> 
+			<div class="main_header">
+				<p class="main_header_hint"><font i18n="wanstate_prompt">wanstate_prompt</font></p>
+			</div>
+			<br>
+			<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+	            <tbody>
+                    <tr class="table_title">
+                        <td colspan="9" id="wanListHead" i18n="wanListHead">WAN State</td>
+                    </tr>
+	            	<tr class="table_head_title">                   
+			            <td width="8%" align="center" ><font i18n="wan_name">wan_name</font></td>
+						<td width="10%" align="center" id="wanName_td" style="display: none"><font i18n="AliasName"></font></td>
+			            <td width="9%" align="center" ><font i18n="wan_state">wan_state</font></td>
+			            <td width="10%" align="center" id="mode"><font i18n="wan_mode">wan_mode</font></td>
+			            <td width="10%" align="center" id="name" style="display: none"><font i18n="wan_name_th_ais">wan name th ais</font></td>
+			            <td width="9%" align="center" ><font i18n="ip_mode">ip_mode</font></td>
+			            <td width="14%" align="center">IP</td>
+			            <td width="15%" align="center"><font i18n="wan_mask">wan_mask</font></td>
+			            <td width="14%" align="center">DNS</td>
+			            <td width="7%" align="center" ><font i18n="wan_vlan">wan_vlan</font></td>
+                        <td width="14%" align="center" style="display: none">MAC Address</td>
+			            <td width="5%" align="center" ><font i18n="wan_type">wan_type</font></td>
+	              	</tr>
+		        </tbody>
+		        <tbody id="wancfgv4">
+		        </tbody>
+            </table>
+            <br/>
+			<table class="table_bg" id="v4_info" border="0" cellpadding="0" cellspacing="1" width="100%">
+	            <tbody>
+                    <tr class="table_title">
+                        <td colspan="5"><font i18n="More_Information">More_Information</font></td>
+                    </tr>
+					<tr>
+						<td class="table_left" width="25%"><font i18n="WAN_Mac">WAN_Mac</font></td>
+						<td class="table_right" id="WAN_Mac"></td>
+					</tr>
+					<tr>
+						<td class="table_left"><font i18n="Connection_Uptime">Connection_Uptime</font></td>
+						<td class="table_right" id="Connection_Uptime"></td>
+					</tr>
+					<tr id="gateway_status" >
+						<td class="table_left"><font i18n="Gateway">Gateway</font></td>
+						<td class="table_right" id="Gateway"></td>
+					</tr>
+					
+					<tr id="pppoe_status" >
+						<td class="table_left"><font i18n="dial_status">dial_status</font></td>
+						<td class="table_right" id="dial_status"></td>
+					</tr>
+					
+		        </tbody>               
+            </table>
+			<div id="v6_info" style="display: block">
+			<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+	            <tbody>
+                    <tr class="table_title">
+                        <td colspan="2"><font i18n="v6State">v6State</font></td>
+                    </tr>
+                    <tr>
+                    	<td class="table_left" width="25%"><font i18n="IPV6_Status">IPV6 Status</font></td>
+                    	<td class="table_right" id="IPV6_Status"></td>
+                    </tr>
+					<tr>
+						<td width="25%" class="table_left"><font i18n="wanIpv6">wanIpv6</font></td>
+						<td class="table_right" id="v6_addr"></td>
+					</tr>
+					<tr>
+						<td class="table_left"><font i18n="wanprefix">wanprefix</font></td>
+						<td class="table_right" id="v6_prefix"></td>
+					</tr>
+					<tr>
+						<td class="table_left"><font i18n="v6gateway">v6gateway</font></td>
+						<td class="table_right" id="v6_Gateway"></td>
+					</tr>
+					<tr>
+						<td class="table_left"><font i18n="wan_dns">wan_dns</font></td>
+						<td class="table_right" id="v6_dns"></td>
+					</tr>
+					<tr>
+						<td class="table_left"><font i18n="wan_dns2">wan_dns2</font></td>
+						<td class="table_right" id="v6_dns2"></td>
+					</tr>
+					<tr id="tr_link_local_address" style="display: none">
+						<td class="table_left"><font i18n="link_local_address">link_local_address</font></td>
+						<td class="table_right" id="link_local_address"></td>
+					</tr>
+		        </tbody>
+            </table>
+			<br>
+			</div>
+        </form>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "iptv_prompt":"En esta página, puede configurar la VLAN de multidifusión.",
+
+  "iptv_infoHead":" ",
+  "iptv_vlanTitle":"VLAN de multidifusión",
+  "iptv_vlanTips":"(Por favor ingrese el número 1 a 4094)",
+  
+  "iptv_apply":"Aplicar",
+  "iptv_cancel":"Cancelar",
+  "ipv4":"IPV4",
+  "ipv6":"IPV6",
+  "IGMPSnooping":"IGMPSnooping",
+  "IGMPProxy":"IGMPProxy",
+  "MLDSnooping":"MLDSnooping",
+  "MLDProxy":"MLDProxy",
+  "firewall_enable":"Enable",
+  "firewall_disable":"Disable",
+  "Multicast_Enable":"Multicast Switch",
+  "iptv_vlanIllegalAlert":"El rango de VLAN de multidifusión es de 1 a 4094.",
+  "ipv4":"IPv4",
+  "ipv6":"IPv6",
+  "iptv_IGMPSnooping":"IGMPSnooping Enable",
+  "iptv_IGMPProxy":"Habilitar proxy IGMP",
+  "iptv_MLDSnooping":"MLDSnooping Enable",
+  "iptv_MLDProxy":"MLDProxy Habilitar"
+}

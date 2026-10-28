@@ -1,0 +1,210 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/ntp_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("ntpchecktime");
+	//NtpEnable_checkbox
+</script>
+<style type="text/css">
+</style>
+
+<body class='main_config_body'>
+	<form id="ntp_form">
+		<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="checkboxTips">checkboxTips</font>
+					</div>
+					<div class="main_item_content">
+						<div class="input_radio">
+							<input type="radio" class="radio" name="ntp_enable" id="ntp_enable" value="1"
+								checked="checked">
+							<font i18n="Enable">Enable</font>&nbsp;&nbsp;&nbsp;
+							<input type="radio" class="radio" name="ntp_enable" id="ntp_disable" value="0">
+							<font i18n="Disable">Disable</font>
+						</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="Time Interval">Time Interval</font>
+					</div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_NtpInterval_text" i18n="secondsTips">secondsTips</div>
+						<input type="text" class="input_text" autocomplete="off" id="NtpInterval_text"
+							name="NtpInterval_text" />
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="firstNTPServer_Title">firstNTPServer_Title</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Server1Other_text"
+							name="Server1Other_text" />
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="secondNTPServer_Title">secondNTPServer_Title</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Server2Other_text"
+							name="Server2Other_text" />
+					</div>
+				</div>
+				<div class="main_item" id="ThirdNtpServer">
+					<div class="main_item_name">
+						<font i18n="thirdNTPServer_Title">thirdNTPServer_Title</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Server3Other_text"
+							name="Server3Other_text" />
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="timeZoneTitle">timeZoneTitle</font>
+					</div>
+					<div class="main_item_content">
+						<select id="ntpzone_select" name="ntpzone_select" class="select">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="ntpCurTime_Title">ntpCurTime_Title</font>
+					</div>
+					<div class="main_item_content">
+						<div id="" class="disabled_text">
+							<label id="SystemTime_label" style="color: rgba(255, 255, 255, 0.6);"></label>
+						</div>
+					</div>
+				</div>
+				<div class="main_item" id="ntp_wanType">
+					<div class="main_item_name">
+						<font i18n="ntpWanChannelTitle">ntpWanChannelTitle</font>
+					</div>
+					<div class="main_item_content">
+						<select id="wan_select" name="wan_select" class="select">
+							<option value="0" selected="selected">INTERNET</option>
+							<option value="1">VOIP</option>
+							<option value="2">TR069</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id="ntp_wan" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="app_wan">app_wan</font>
+					</div>
+					<div class="main_item_content">
+						<select id="ntp_wan_name" name="ntp_wan_name" style="width:44%"></select>
+					</div>
+				</div>
+				<div  id="daylight_digi" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="checkDaylight">Enable Daylight Savings Time</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="checkDaylight_checkbox_digi" onclick="showDaylightCfg()"/>
+					</div>
+				</div>
+				<div  id="daylight_digi_cfg" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name" i18n="Start">Start</div>
+					<div class="main_item_content" style="line-height: 0;">
+						<span id = "StartYear"></span>&nbsp;&nbsp;
+						<select name="StartMonth" id="StartMonth" style="width:100px" class="select">
+						</select>&nbsp;&nbsp; M&nbsp;&nbsp;
+						<select name="StartWdaycount" id="StartWdaycount" style="width:100px" class="select">              
+						</select>&nbsp;&nbsp; W&nbsp;&nbsp;
+						<select name="StartWday" id="StartWday" style="width:100px" class="select">              
+						</select>&nbsp;&nbsp; T&nbsp;&nbsp;
+						<select name="StartHour" id="StartHour" style="width:100px" class="select">              
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" i18n="End">End</div>
+					<div class="main_item_content" style="line-height: 0;">
+						<span id = "EndYear"></span>&nbsp;&nbsp;
+						<select name="EndMonth" id="EndMonth" style="width:100px" class="select">
+						</select>&nbsp;&nbsp; M&nbsp;&nbsp;
+						<select name="EndWdaycount" id="EndWdaycount" style="width:100px" class="select">              
+						</select>&nbsp;&nbsp; W&nbsp;&nbsp;
+						<select name="EndWday" id="EndWday" style="width:100px" class="select">              
+						</select>&nbsp;&nbsp; T&nbsp;&nbsp;
+						<select name="EndHour" id="EndHour" style="width:100px" class="select">              
+						</select>
+					</div>
+				</div>
+				</div>
+				</div>
+				<div class="main_item" id="tr_daylightsavingstime_s" style="display:none">
+					<div class="main_item_name"><input type="checkbox" id="checkDaylight_checkbox" />&nbsp;<font
+							i18n="checkDaylight">Daylight Savings Time</font>
+					</div>
+					<div class="main_item_content">
+						<div style="width:120px">
+							<font i18n="start_Time">Start Time</font>
+						</div>
+						<input name="start_y" id="start_y" size="1" maxlength="4" type="text" style="width:40px"
+							class="input_daylight">
+						-
+						<input name="start_m" id="start_m" size="1" maxlength="2" type="text" class="input_daylight">
+						-
+						<input name="start_d" id="start_d" size="1" maxlength="2" type="text" class="input_daylight">
+						T
+						<input name="start_h" id="start_h" size="1" maxlength="2" type="text" class="input_daylight">
+						:
+						<input name="start_min" id="start_min" size="1" maxlength="2" type="text"
+							class="input_daylight">
+						:
+						<input name="start_s" id="start_s" size="1" maxlength="2" type="text" class="input_daylight">
+					</div>
+				</div>
+
+				<div class="main_item" id="tr_daylightsavingstime_e" style="display:none">
+					<div class="main_item_name">
+						<font i18n="checkDaylight_Tip">(such as 2017-08-01T13:50:00)</font>
+					</div>
+					<div class="main_item_content">
+						<div style="width:120px">
+							<font i18n="end_Time">End Time</font>
+						</div>
+						<input name="end_y" id="end_y" size="1" maxlength="4" type="text" style="width:40px"
+							class="input_daylight">
+						-
+						<input name="end_m" id="end_m" size="1" maxlength="2" type="text" class="input_daylight">
+						-
+						<input name="end_d" id="end_d" size="1" maxlength="2" type="text" class="input_daylight">
+						T
+						<input name="end_h" id="end_h" size="1" maxlength="2" type="text" class="input_daylight">
+						:
+						<input name="end_min" id="end_min" size="1" maxlength="2" type="text" class="input_daylight">
+						:
+						<input name="end_s" id="end_s" size="1" maxlength="2" type="text" class="input_daylight">
+					</div>
+					<div id="NtpInterval_error" class="main_item_error_hint_extra"></div>
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_item_content">
+					<input type="button" id="ntp_save_apply" class="input_button" i18n="ntpsave_apply" i18n-set="value"
+						onclick="saveApply()" />
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

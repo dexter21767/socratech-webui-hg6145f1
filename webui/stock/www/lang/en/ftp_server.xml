@@ -1,0 +1,35 @@
+{
+  "ftpServer_Prompt":"On this page, you could configure FTP function.",
+  "ftpServer_head":"FTP Server",
+  "ftpServer_enableTitle":"Enable",
+  "ftpServer_disableTitle":"Disable",
+  "ftpServer_userTitle":"Username",
+  "ftpServer_userTips":"(You can input 1-32 characters, including alphanumeric and '_')",
+  "ftpServer_pwdTitle":"Password",
+  "ftpServer_pwdTips":"(You can input 1-8 characters, including alphanumeric and '_')",
+  "ftpServer_apply":"Apply",
+  "ftpServer_cancel":"Cancel",
+  "ftpServer_userNullAlert":"Please enter username!",
+  "ftpServer_userIllegalAlert":"Please enter 1-32 characters, including alphanumeric and '_'!",
+  "ftpServer_passNullAlert":"Please enter password!",
+  "ftpServer_passIllegalAlert":"Please enter 1-8 characters, including alphanumeric and '_'!",
+  "invalid_data_alert":"Some value is invalid, please retry it.",
+
+  "ftpServer_pwdCfgIllegalAlert":"FTP Server Password is illegal!",
+
+  "no_usb_device":"please plug in the USB device first!",
+  "ftp_url_illegal":"FTP URL is illegal!",
+
+  "ftpClient_head":"FTP Client",
+  "ftpClient_urlTitle": "FTP URL",
+  "ftpClient_portTitle": "Port ID",
+  "ftpClient_userTitle": "Username",
+  "ftpClient_pwdTitle": "Password",
+  "ftpClient_pathTitle": "Path",
+  "ftpClient_staTitle": "Status",
+  "ftpClient_download": "Download",
+  "ftpClient_portTips": "(1~65535)",
+  "ftpClient_urlTips": "(1-256 Characters)",
+  "ftpClient_userTips": "(1-32 Characters)",
+  "ftpClient_pwdTips": "(1-32 Characters)"
+}

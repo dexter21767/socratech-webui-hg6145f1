@@ -1,0 +1,58 @@
+{
+  "usb disable":"Deshabilitar",
+  "usb enable":"Habilitar",
+  "usb add":"Agregar",
+  "usb edit":"Editar",
+  "usb del":"Borrar",
+  "usb apply":"Aplicar",
+  "usb cancel":"Cancelar",
+  "usb reset":"Reinicio",
+  
+  "usb_loadPrompt":"En esta página, puede cargar/descargar archivos hacia/desde el servidor ftp según lo desee.",
+  "usb_storgeHead":"Almacenamiento USB",
+  "usb_typeTitle":"Tipo",
+  "usb_ftpUserTitle":"Nombre de usuario",
+  "usb_ftpPwdTitle":"Contraseña",
+  "usb_ftpIPTitle":"IP del servidor FTP",
+  "usb_ftpPortTitle":"Puerto de servidor FTP",
+  "usb_localFileTitle":"Nombre del archivo local",
+  "usb_remoteFileTitle":"Nombre de archivo remoto",
+  "usb_diskNoTitle":"N.º de disco",
+  
+  "usb_ftpUserTips":"(Puede introducir de 1 a 32 caracteres, incluidos los alfanuméricos y '_')",
+  "usb_ftpPwdTips":"(Puede introducir de 0 a 32 caracteres, incluidos los alfanuméricos y '_')",
+  "usb_ftpPortTips":" (0 ~ 65535)",
+  "usb_ftpIPTips":" (Formato decimal)",
+  "usb_localFileTips":"(Puede introducir de 1 a 128 caracteres, incluidos los alfanuméricos, '_', '/' y '-')",
+  "usb_remoteFileTips":"(Puede introducir de 1 a 128 caracteres, incluidos los alfanuméricos, '_', '/' y '-')",
+  "usb_fileTips":"(Puede introducir de 1 a 128 caracteres, incluidos los alfanuméricos, '_' y '/')",    
+
+  "usb_userIllegalAlert":"¡Por favor, introduzca un nombre de usuario válido!",
+  "usb_pwdIllegalAlert":"¡Por favor, introduzca una contraseña válida!",
+  "usb_ipIllegalAlert":"¡Por favor, introduzca una IP válida!",
+  "usb_portIllegalAlert":"El intervalo de puertos válido es 0 - 65535.",
+  "usb_fileIllegalAlert":"¡Por favor, introduzca un nombre de archivo válido!",
+  
+  "usb_cfgBakPrompt":"En esta página, puede descargar el archivo de configuración actual en el dispositivo USB.",
+  "usb_cfgBakTitle":"Directorio de copia de seguridad USB",
+  "usb_cfgBak":"Descargar copia de seguridad",
+  "usb_idle":"Sin USB",
+  "usb_cfgBakSuccess":"¡Descarga del archivo de configuración con exitoso!",
+  
+  "usb_serverError":"¡Error del servidor!",
+  "usb_serverError1":"¡Error del servidor 1!",
+  "usb_serverError2":"¡Error del servidor 2!",
+  "usb_serverError3":"¡Error del servidor 3!",
+  
+  "usb_cfgRestorePrompt":"En esta página, puede actualizar su dispositivo con el archivo de configuración guardado en el USB.",
+  "usb_cfgRestoreTitle":"Directorio de restauración USB",
+  "usb_filenameTitle":"Archivo de configuración",
+  "usb_cfgRestore":"Restaurar",
+  "usb_cfgRestoreSuccess":"¡Restauración del archivo de configuración exitoso!",
+  "usb_openFileFail":"¡No se pudo abrir el archivo especificado!",
+  "usb_readFileFail":"¡No se pudo leer el archivo especificado!",
+  "usb_restoreFail":"¡Error en la recuperación del archivo de configuración!",
+  
+ "rebooting":"El sistema se está reiniciando... Por favor, espere un momento. Vuelva a iniciar sesión después del reinicio."
+ 
+}

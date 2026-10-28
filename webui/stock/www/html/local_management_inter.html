@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/local_management_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("local_management");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 160px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="localmanagement_Prompt">localmanagement_Prompt</font></p>
+		</div>
+		<br/>
+		<form id="wlanAdv_settings_form">
+			<div class="main_content ">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="lan_telnet_title">lan_telnet_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="lantelnet_enable" name="lantelnet_enable" value="1" checked="checked"><font i18n="localmanagement_enable">localmanagement_enable</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="lantelnet_disable" name="lantelnet_enable" value="0"><font i18n="localmanagement_disable">localmanagement_disable</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wan_telnet_title">wan_telnet_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="wantelnet_enable" name="wantelnet_enable" value="1" checked="checked"><font i18n="localmanagement_enable">localmanagement_enable</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="wantelnet_disable" name="wantelnet_enable" value="0"><font i18n="localmanagement_disable">localmanagement_disable</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="lan_localmanagement_apply" onclick="telnetsaveApply()" i18n="localmanagement_apply" i18n-set="value" class="input_button">
+						<input type="button" id="lan_localmanagement_cancel" onclick="CancelBtn()" i18n="localmanagement_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="main_content ">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="lan_web_title">lan_web_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="lanweb_enable" name="lanweb_enable" value="1" checked="checked"><font i18n="localmanagement_enable">localmanagement_enable</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="lanweb_disable" name="lanweb_enable" value="0"><font i18n="localmanagement_disable">localmanagement_disable</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wan_web_title">wan_web_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="wanweb_enable" name="wanweb_enable" value="1" checked="checked"><font i18n="localmanagement_enable">localmanagement_enable</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="wanweb_disable" name="wanweb_enable" value="0"><font i18n="localmanagement_disable">localmanagement_disable</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="wan_localmanagement_apply" onclick="websaveApply()" i18n="localmanagement_apply" i18n-set="value" class="input_button">
+						<input type="button" id="wan_localmanagement_cancel" onclick="CancelBtn()" i18n="localmanagement_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

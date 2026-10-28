@@ -1,0 +1,22 @@
+{
+	"dns_configPrompt": "On this page, you can configure the policy for forwarding DNS packets on the LAN side or the SSID side that is not bound to the WAN port.",
+	"dns_template": "DNS Template",
+	"dns_apply": "Apply",
+	"dns_cancel": "Cancel",
+	"dns_search_listHead": "DNS Search List Configuration",
+	"static_dns_configHead": "Static DNS Configuration",
+	"dns_searchPrompt": "On this page, you can configure the DNS search list. It is suggested that setting WAN name is a top priority, if both the WAN name and the DNS server are configured, the WAN name takes effect.",
+	"static_dnsPrompt": "On this page, you can configure static DNS.",
+	"fw_filterID": "ID",
+	"domain_name": "Domain Name",
+	"ipaddr": "IP Address",
+	"wan_name": "WAN Name",
+	"dns_server": "DNS Server",
+	"illegal_value_alert":"Some value is illegal!",
+	"fw_most8RulesAlert":"You can configure up to 8 rules!",
+	"no_rules_alert":"There are no rules at present. You cannot delete them.",
+	"no_selected_rules_alert":"At present there is no rule that was selected, can not be deleted!",
+	"delete_alert":"Are you sure to delete the selected rule?",
+	"dns_add":"Add",
+	"dns_delete":"Delete"
+}

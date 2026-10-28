@@ -1,0 +1,12 @@
+{
+  "catv_prompt":"在本页你可以修改RF功率。 ",
+  "catv_enable_title":"RF功率使能",
+  "catv_enableTitle":"开启",
+  "catv_disableTitle":"关闭",
+  "catv_rfoffset_title":"RF功率调节范围",
+  "catv_rfoffset_tips":"[-127,127]",
+  "catv_apply":"应用",
+  "catv_cancel":"取消",
+  "value_illegal":"某些值无效，请重新输入。"
+
+}

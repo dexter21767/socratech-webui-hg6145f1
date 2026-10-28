@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/jquery.formFill.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/wlanBasicSettings_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("wireless");
+</script>
+<style type="text/css">
+	.main_item_name_ais {
+		color: #5D646E;
+		padding-left: 5px;
+		height: 50px;
+		line-height: 24px;
+		box-sizing: border-box;
+		width: 20%;
+		margin: 1px;
+		float: left;
+	}
+
+	.main_item_content_ais {
+		padding-left: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		height: 50px;
+		width: calc(80% - 3px);
+		margin: 1px;
+		margin-left: 0px;
+		box-sizing: border-box;
+		float: left;
+	}
+</style>
+
+<body class='main_config_body'>
+	<div class="main_header">
+		<p class="main_header_hint">
+			<font i18n="basic_prompt">basic_prompt</font>
+		</p>
+	</div>
+	<fh-fo-rm id="wlanAdv_settings_form">
+		<br />
+		<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="table_title">
+				<div colspan="2">
+					<font i18n="basic_wireless_network">basic_wireless_network</font>
+				</div>
+			</div>
+			<div class="main_item" id="switch">
+				<div class="main_item_name">
+					<font i18n="basic_radio_button">basic_radio_button</font>
+				</div>
+				<div class="main_item_content">
+					<div class="switch_content switch_content_off" id="WlanEnable_container">
+						<input type="hidden" name="data.ssidEnable" id="WlanEnable_checkbox">
+					</div>
+				</div>
+			</div>
+			<div class="main_item" id="switch_ROM_RCSRDS" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="basic_radio_button">basic_radio_button</font>
+				</div>
+				<div class="main_item_content">
+					<select name="data.ssidEnable" id="Wlcfg_switch">
+						<option value="1">On</option>
+						<option value="0">Off</option>
+					</select>
+				</div>
+			</div>
+			<div class="main_item" id="ssid_choice_div" style="display: none;">
+				<div class="main_item_name">
+					<font i18n="secure_ssid_choice">secure_ssid_choice</font>
+				</div>
+				<div class="main_item_content">
+					<select id="ssid_choice" class="select_short"></select>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="basic_network_mode">basic_network_mode</font>
+				</div>
+				<div class="main_item_content">
+					<select name="data.wlanMode" id="wlcfg_wlgMode">
+						<option value="b">802.11 b</option>
+						<option value="g">802.11 g</option>
+						<option value="bg">802.11 b/g</option>
+						<option value="n">802.11 n</option>
+						<option value="bgn">802.11 b/g/n</option>
+						<option value="ax" id="mode_ax">802.11 ax</option>
+					</select>
+				</div>
+			</div>
+			<div id="other_info_div">
+				<div class="main_item" id="dtim_period_div" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="dtimPeriod">dtimPeriod</font>
+					</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" disabled="disabled" autocomplete="off" id="dtim_period"
+							name="dtim_period">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="basicDomain">basicDomain</font>
+					</div>
+					<div class="main_item_content">
+						<select name="data.basicDomain" id="basicDomain">
+
+						</select>
+					</div>
+				</div>
+				<div class="main_item mode_n">
+					<div class="main_item_name">
+						<font i18n="fre_band_title">fre_band_title</font>
+					</div>
+					<div class="main_item_content">
+						<select id="WlanBandWidth_select" name="data.channelWidth"></select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="basic_frequency">basic_frequency</font>
+					</div>
+					<div class="main_item_content">
+						<select id="WlanChannel_select" name="data.channel"></select>
+					</div>
+				</div>
+				<div class="main_item" id="auto_channel_trriger" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="basic_atuo_channel">basic_atuo_channel</font>
+					</div>
+					<div class="main_item_content">
+						<input type="button" id="auto_channel_trriger_button" class="input_button"
+							i18n="wireless_enable" i18n-set="value" onclick="setAtuoChannelTrriger()" />&nbsp; &nbsp;
+						<font i18n="atuoChannelTips">atuoChannelTips</font>
+					</div>
+				</div>
+				<div class="main_item" id="auto_channel_ais" style="display: none;">
+					<div class="main_item_name">
+						<font i18n="atuo_channel">atuo_channel</font>
+					</div>
+					<div class="main_item_content">
+						<input type="radio" id="auto_choice_recommend" name="auto_choice" value="1" checked="checked"
+							onClick="show_custom_channel(this.value)">
+						<font i18n="auto_recommend">auto_recommend</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="auto_choice_custom" name="auto_choice" value="0"
+							onClick="show_custom_channel(this.value)">
+						<font i18n="auto_custom">auto_custom</font>
+					</div>
+				</div>
+				<div class="main_item" id="auto_custom_div" style="display: none;">
+					<div class="main_item_name_ais">
+						<font i18n="auto_custom_channel">auto_custom_channel</font>
+					</div>
+					<div class="main_item_content_ais" id="auto_custom_channel_div">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						<font i18n="guard_inter_title">guard_inter_title</font>
+					</div>
+					<div class="main_item_content">
+						<select id="GuardInterval_select" name="data.GuardInterval">
+						</select>
+					</div>
+				</div>
+                <div id="wifi6" style="display: none;">
+                    <div class="main_item" id="fast_roaming_div" style="display: none;">
+                        <div class="main_item_name"><font i18n="ssid_fast_roaming">ssid_fast_roaming</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_enable" name="ssid_fast_roaming" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_disable" name="ssid_fast_roaming" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item" id="airtime_faines_div" style="display: none;">
+                        <div class="main_item_name"><font i18n="ssid_airtime_faines">ssid_airtime_faines</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_enable" name="ssid_airtime_faines" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_disable" name="ssid_airtime_faines" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item" id="beamforming_div" style="display: none;">
+                        <div class="main_item_name"><font i18n="ssid_beamforming">ssid_beamforming</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_enable" name="ssid_beamforming" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_disable" name="ssid_beamforming" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="ssid_mimo">ssid_mimo</font></div>
+                        <div class="main_item_content" id="ssid_mimo">
+                            <input type="radio" id="ssid_mimo_enable" name="ssid_mimo" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_mimo_disable" name="ssid_mimo" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="ssid_ofdma">ssid_ofdma</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_ofdma_enable" name="ssid_ofdma" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_ofdma_disable" name="ssid_ofdma" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"><font i18n="ssid_twt">ssid_twt</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_enable" name="ssid_twt" value="1" checked="checked"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_disable" name="ssid_twt" value="0"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+                    <div class="main_item"   id="bsscolorEnable_div"  style="display: none;" >
+                        <div class="main_item_name"><font i18n="ssid_bssscolor">ssid_bssscolor</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="ssid_enable" name="ssid_bssscolor" value="1" checked="checked" onclick="show_value()"><font i18n="ssid_enable">ssid_enable</font>&nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="ssid_disable" name="ssid_bssscolor" value="0" onclick="show_value()"><font i18n="ssid_disable">ssid_disable</font>
+                        </div>
+                    </div>
+					<div class="main_item" id="BSSColorValue_div" style="display: none;">
+                        <div class="main_item_name"><font >BSS Color Value</font></div>
+                        <div class="main_item_content">
+							<input type="text" class="input_text" style="width:160px" autocomplete="off" id="BSSColorValue" name="BSSColorValue"/>&nbsp;&nbsp(1 ~ 63)
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="main_item_content_tip" style="display: none" id="multiap_tip">
+				<p style="color:red; font-weight: bold">Multi-AP is Enable ! You can't configure wifi parameters (except wifi domain) !</p>
+			</div>
+			<div class="main_button" id="wireless_apply_cancel">
+				<div class="main_submit" style="width: 25%;"></div>
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" class="input_button" id="wireless_apply" i18n="wireless_apply" i18n-set="value"
+						onclick="saveApply()" />&nbsp; &nbsp;
+					<input type="button" class="input_button" id="wireless_cancel" i18n="wireless_cancel" i18n-set="value"
+						onclick="window.location.reload()" />
+				</div>
+			</div>
+		</div>
+	</fh-fo-rm>
+</body>
+
+</html>

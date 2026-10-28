@@ -1,0 +1,49 @@
+{
+  "wizard_prompt":"On this page, you could configure quick setup.",
+  "quick_setup":"Quick Setup",
+  "wan_configuration":"WAN Configuration",
+  "inet_user":"User Name",
+  "inet_password":"Password",
+  "operator_mode_combo":"Combo Mode",
+  "operator_mode_bridge":"Bridge Mode",
+  "operator_mode_rg":"RG Mode",
+  "operator_mode_ap":"AP Mode",
+
+  "wifi_5g_gbit_port1":"LAN 1",
+  "wifi_5g_itv":"LAN 2",
+  "wifi_5g_gbit_port3":"LAN 3",
+  "wifi_5g_gbit_port4":"LAN 4",
+  
+  "wifi_gbit_port":"LAN 1",
+  "wifi_iTV":"LAN 2",
+  "wifi_100m_port2":"LAN 3",
+  "wifi_100m_port3":"LAN 4",
+
+  "wifi_10g_lan":"10G LAN",
+
+  "DHCP_FE_title":"LAN Binding",
+  "DHCP_SSID_title":"SSID Binding",
+  "wan_SSID_24g_title":"2.4G SSID Binding",
+  "wan_SSID_5g_title":"5G SSID Binding",
+
+  "band_steering":"Band Steering",
+  "bandsteering_button":"Bandsteering On/Off",
+  "security_netName":"SSID Name",
+  "secure_wpa_pass_phrase":"Passphrase",
+  "wpa_passphraseTips":"(You can input 8-63 characters)",
+  "ssidNameTips":"(1-32 Characters)",
+  "ssid_24g_title":"2.4GHz Wireless Setting",
+  "ssid_5g_title":"5GHz Wireless Setting",
+
+  "repeated_binding_port_alert1":"The port you are bound to has a conflict with link",
+  "repeated_binding_port_alert2":", please modify and try again!",
+  "invalid_value_alert":"Some items have invalid values, please refill them.",
+  "set_quick_setup_failed":"Set quick setup failed!",
+  "relogin_after_device_reboot":"The device is rebooting! Please wait for a moment and relogin after reboot.",
+  "takes_effect_after_device_restart":"The new configuration takes effect after a device restart..Are you sure to submit and restart the device?",
+
+
+  "recontrolApply":"Apply",
+  "back":"Back",
+  "recontrolCancel":"Cancel"
+}

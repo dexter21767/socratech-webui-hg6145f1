@@ -1,0 +1,14 @@
+{
+  "apply":"Aplicar",
+  "cancel":"Cancelar",
+  
+  "v4StaticRoutePrompt":"En esta página, puede configurar IPv4 como la ruta predeterminada.",
+
+  "dr_enableTitle":"Habilitar ruta predeterminada",
+  "dr_wanTitle":"Nombre de WAN",
+  "dr_wanDefaultTitle":"Por favor, elija",
+  
+  "dr_wannameNUllAlert":"Por favor, elija una WAN"
+  
+}
+

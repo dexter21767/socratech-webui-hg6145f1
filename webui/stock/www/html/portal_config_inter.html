@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/portal_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+		<style type="text/css"> 
+		.linebr { 
+		display: inline-block;
+		clear: both; /* 清除左右浮动 */ 
+		width: calc(75% - 157px); /* 必须定义宽度 */ 
+		word-break: break-word; /* 文本行的任意字内断开 */ 
+		word-wrap: break-word; /* IE */ 
+		white-space: -moz-pre-wrap; /* Mozilla */ 
+		white-space: -hp-pre-wrap; /* HP printers */ 
+		white-space: -o-pre-wrap; /* Opera 7 */ 
+		white-space: -pre-wrap; /* Opera 4-6 */ 
+		white-space: pre; /* CSS2 */ 
+		white-space: pre-wrap; /* CSS 2.1 */ 
+		white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
+		} 
+		</style> 
+	</head>
+	<script type="text/javascript">
+		setDomain("portal_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="portal_configPrompt">portal_configPrompt</font></p>
+		</div>
+		
+	    </br>
+		<form id="portal_config_form" method="post">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="Enable_Portal_title">Enable_Portal_title</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_portal"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="default_redirection_url_title">default_redirection_url_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="default_url" name="default_url"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="portal_enable_apply" onclick="saveApply()" i18n="inet_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="portal_enable_cancel" onclick="window.location.reload()" i18n="inet_cancel" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+			</div>
+		</form>
+		<form id="dhcp_lan_list_form" method="post">
+			<div class="main_content">
+					<div style="float:right">
+						<input type="button" i18n="portal_add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter()">
+						<input type="button" i18n="portal_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+					<br/>
+				</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="portal_configListHead">portal_configListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="fw_filterID">fw_filterID</font></td>
+					<td width="40%" align='center'><font i18n="dev_type">dev_type</font></td>
+					<td width="40%" align='center'><font i18n="redirect_url">redirect_url</font></td>
+					<td width="10%" align='center'></td>
+				</tr>
+				<tbody id='dhcp_lan_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id = "fw_config_form" style="display:none">
+				<div class="main_item main_item_lan">
+					<div class="main_item_name main_item_name_lan"><font i18n="dev_type">dev_type</font></div>
+					<div class="main_item_content main_item_content_lan">
+						<select id="dev_type" name="dev_type">
+							<option value="Computer">Computer</option>
+						</select>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="redirect_url">redirect_url</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="redirect_url" name="redirect_url" style="width:150px"/>&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="portal_apply" class="input_button" i18n="inet_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="portal_cancel" class="input_button" i18n="inet_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

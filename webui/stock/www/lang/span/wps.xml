@@ -1,0 +1,30 @@
+{
+  "WPSconnect":"Connect",
+  "WPSCancel":"Cancelar",
+  "wps_apply":"Aplicar",
+  
+  "WPS_enable_head":"Habilitar WPS",
+  "wps_enable_title":"Enable",
+  "wps_disable_title":"Disable",
+  "WPS_cfg_head":"Configuración WPS",
+
+  "wps_statetitle":"Estado WPS",
+  "wps_prompt":"En esta página, puede configurar WPS.",
+
+  "wps_PINtitel":"Código PIN (PIN)",
+  "wps_PINTips":"Please input Number 0-9 (8 Characters).",
+  "wps_PINer":"PIN Code",
+  "wps_buttontitel":"Configuración de botón  (PBC)",
+  "wps_nopinalert":"¡Por favor ingrese el código PIN!",
+  "wps_pinillegal":"¡El código PIN es ilegal!",
+
+  "Connecting":"Conectando...",
+  "Time_Out":"Se acabó el tiempo",
+  "connection_Successful":"Conexión exitosa",
+  "connection_fail":"Conexión fallida",
+
+  "wps_PIN1_prompt":"(You can input number 0-9 (8 characters).)",
+  "wps_bandSelec_head":"Selección de banda WPS"
+}
+
+

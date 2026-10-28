@@ -1,0 +1,88 @@
+{
+  "rule_add":"Add",
+  "rule_delete":"Delete",
+  "rule_deleteAll":"Delete All",
+
+  "apply":"Apply",
+  "cancel":"Cancel",
+  
+  "rule_most4RulesAlert":"You can configure up to 4 rules!",
+  "rule_most8RulesAlert":"You can configure up to 8 rules!",
+  "rule_most12RulesAlert":"You can configure up to 12 rules!",
+  "rule_most16RulesAlert":"You can configure up to 16 rules!",
+  "rule_most20RulesAlert":"You can configure up to 20 rules!",
+  "rule_most32RulesAlert":"You can configure up to 32 rules!",
+  "rule_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "rule_noChooseAlert":"Please select a rule before deleting!",
+  "rule_deleteRuleConfirm":"Are you sure you want to delete the selected rule?",
+  
+  "pf_PortforwardingPrompt":"On this page, you could configure port forwarding.",
+
+  "fw_filterListHead":"Port Forwarding Rules List",
+  "PFdescrip":"Description",
+  "The_private_Port":"Private Port",
+  "The_public_Port":"Public Port",
+  "Protocol":"Protocol",
+  "Enable":"Enable",
+
+  "pf_DescriptionTitle":"Description",
+  "pf_PriPortTitle":"Private Port",
+  "pf_PubPortTitle":"Public Port",
+  "pf_protocolTitle":"Protocol",
+  "pf_enabelTitle":"Enable",
+
+  "pf_add":"Add",
+  "pf_delete":"Delete",
+  "pf_deleteAll":"Delete All",
+
+  "pf_apply":"Apply",
+  "pf_cancel2":"Cancel",
+
+  "pf_mostRulesAlert":"You can configure 12 rules at most!",
+  "pf_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "pf_noChooseAlert":"Please select a rule before deleting!",
+  "pf_deleteRuleConfirm":"Are you sure you want to delete the selected rule?",
+
+  "pf_ipIllegalAlert":"Please enter a valid ip!",
+  "pf_maskIllegalAlert":"Please enter a valid submet mask!",
+  "pf_PortNullAlert":"Please enter a valid port value!",
+  "pf_endPortTooSmallAlert":"The starting port should not be greater than the end port!",
+  "pf_portIllegalAlert":"Valid port range is 1 - 65535!",
+  "pf_portRepeadAlert":"Several ports are duplicated! Please re-enter!",
+  "pf_wanIllegalAlert":"Please select a valid WAN!",
+
+  "portMappingPrompt":"On this page, you could configure port mapping.",
+  "pm_ruleListHead":"Port Mapping Rules List",
+  "pm_descripTitle":"Description",
+  "Protocol":"Protocol",
+  "pm_pubIPTitle":"Public IP",
+  "pm_pubPortTitle":"Public Port",
+  "pm_priIPTitle":"Private IP",
+  "pm_priPortTitle":"Private Port",
+
+  "description_tips":"( 0-31 characters, including alphanumeric, '-' and '_')",
+  "descripIllegalAlert":"Please enter valid description!",
+  "pm_portStartIllegalAlert":"Valid start port range is 1 - 65535!",
+  "pm_portEndIllegalAlert":"Valid end port range is 0 - 65535!",
+  
+  "v4StaticRoutePrompt":"On this page, you could configure IPv4 static route.",
+  "v4_sr_ruleListHead":"IPV4 Static Route Rules List",
+  
+  "wanDisableTitle":"Current WAN isn't effective",
+  "ruleEnable":"Effective",
+  "ruleDisable":"Not effective",
+  
+  "wannameTitle":"WAN Name",
+  "ipTitle":"IP Address",
+  "gwTitle":"Gateway",
+  "maskTitle":"Subnet Mask",
+  "stateTitle":"State",
+  "Please creat INTERNET WAN first!":"Please creat INTERNET WAN first!",
+  
+  "bandwidthIllegalAlert":"Please enter valid bandwidth!",
+
+  "wifi_acl_Prompt":"On this page, you could configure WIFI ACL enable/disable, and enabled rules.",
+  "wifi_acl_enable_title":"Blacklist/Whitelist",
+  "Disable":"Disable",
+  "wifi_acl_ruleListHead":"Access Control List"
+}

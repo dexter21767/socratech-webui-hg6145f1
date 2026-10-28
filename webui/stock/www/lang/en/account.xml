@@ -1,0 +1,86 @@
+{
+  "account_prompt":"You could configure name and password of user account on this page.",
+
+  "ac_add":"Add",
+  "ac_del":"Delete",
+  "name_title":"Username",
+  "old_name_title":"Old Username",
+  "accountSelf_newnameTitle":"New Username",
+  "ac_pwd":"New Password",
+  "ac_lanPwd":"New LAN Password",
+  "ac_pwd2":"New Password Confirm",
+  "ac_lanPwd2":"LAN Password Confirm",
+  
+  "accountSelf_oldWanPwdTitle":"Old WAN Password",
+  "accountSelf_newWanPwdTitle":"New WAN Password",
+  "accountSelf_newWanPwd2Title":"WAN Password Confirm",
+  
+  "user_most8RulesAlert":"You can configure up to 8 users!",
+  "no_count_alert":"No account to delete!",
+  "selcet_alert":"Please select an account to delete!",
+  "confirm_dele":"Are you sure to delete the account that was selected?",
+  "unequal_alert":"Password confirm is different from new password!",
+
+  "initial_login_modify_password_pldt":"Initial login on this account you must modify account password, SSID name and authentication password!",
+  
+  "accountSelf_newPwdRepeateAlert":"The password  cannot contain a sequence with more than 3 repeated, ascending or descending characters like as 'aaaa', '6666', '1234', '4321', 'abcd', 'RQPO'!",
+  "accountSelf_newPwdRegularAlert":"The password cannot be set as a regular password!",
+  
+  "account_manage_title":"Account Management",
+  "cancelValue":"Cancel",
+  "btnApply1":"Apply",
+
+  "accountSelf_oldPwdTitle":"Old Password",
+  "accountSelf_oldLanPwdTitle":"Old LAN Password",
+  "accountSelf_pwdTips":"(8 - 32 Characters)",
+  "accountSelf_pwdTips_MALAY_TM":"(18 - 32 Characters)",
+  "accountSelf_pwdTips_6":"(6 - 32 Characters)",
+  "accountSelf_pwdTips_TL_TRUE":"(Different from the LAN password)",
+  
+  "accountSelf_userNullAlert":"Please input the username!",  
+  "accountSelf_oldPwdNullAlert":"Please input the old password!",  
+  "accountSelf_newPwdNullAlert":"Please input the new password!", 
+  "accountSelf_userIllegalAlert":"The username is illegal!",
+  "accountSelf_newPwdIllegalAlert":"The password is illegal!",   
+  "accountSelf_newPwdLenIllegalAlert":"The length of password is illegal!",
+  "accountSelf_newPwdSpaceAlert":"Please don't set spaces in password!",  
+  "accountSelf_pwdMismatchedAlert":"Password confirm is different from new password!",
+  "accountSelf_pwdMatchedOldPwdAlert":" New password should not be the same as old password!",
+  "accountSelf_wanlanPwdSameAlert":"WAN password shouldn't be the same as the LAN password!",
+
+  "accountSelf_prompt":"You could configure current account on this page.",
+  "accountSelf_prompt_true":"Please input the wan password to enable wan access function.",
+
+  "same_pwd":"The password you set is same as the original password, please set a new password!",
+  "no_pwd":"The password can not be empty, please enter a new password!",
+  "Please input 5 or 13 characters of":"Please input 5 or 13 characters of",
+  "contains invalid characters.":"contains invalid characters.",
+  "wep_pwd_tips":"(You can input 5 or 13 characters)",
+  "wpa_pwd_tips":"(You can input 8-64 characters)",
+  "secure wpapsk key length":"Please input at least 8 characters of wpapsk key!",
+  
+  "2gwifi_title":"2.4G SSID1",
+  "5gwifi_title":"5G SSID1",
+  "ssid1_name_title":"SSID Name",
+  "ssid1_pwd_title":"Password",
+  "ssid1_pwd2_title":"Password Confirm",
+  "passwordTips":"(12-32 Characters)",
+  "passwordTips_8":"(8-32 Characters)",
+
+  "Please enter SSID Name!":"Please enter SSID Name!",
+  "ssidNameTips":"(1-32 Characters)",
+  "ssidpasswordTips":"(You can input 12-63 Characters)",
+  "ssidpasswordTips_8":"(You can input 8-63 Characters)",
+  "accountNameTips":"(1-32 Characters)",
+  "modifyPassword_success":"Modify Password successful",
+  "invalid_value_alert":"Some value is illegal!",
+  "password_error":"Modify Password error, please retry it!",
+  "password_involvespace":"Password can't involve space, please retry it!",
+
+  "bswifi_title":"Band Steering",
+  "bandsteering_button":"Bandsteering On/Off",
+  "skip":"Skip",
+  "account_modify_prompt":"You could modify WiFi parameters and user account passwords on this page."
+
+}
+

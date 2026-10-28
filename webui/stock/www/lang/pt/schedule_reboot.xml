@@ -1,0 +1,22 @@
+{
+  "schedule_reboot_head": "Agendar reinicialização",
+  "schedule_reboot_enableTitle": "Habilitado",
+  "schedule_reboot_disableTitle": "Desabilitado",
+  "fw_day": "Dia",
+  "fw_time": "hora",
+  "hour":"Hora",
+  "min":"Min",
+  "Everyday": "Todos",
+  "Monday": "Segunda-feira",
+  "Tuesday": "Terça-feira",
+  "Wednesday": "Quarta-feira",
+  "Thursday": "Quinta-feira",
+  "Friday": "Sexta-feira",
+  "Saturday": "Sábado",
+  "Sunday": "Domingo",
+  "invalid_data_alert": "Algum valor é inválido. Tente novamente.",
+  "fw_dayErrorAlert": "Escolha pelo menos um dia!",
+  "schedule_reboot_apply": "Aplicar",
+  "schedule_reboot_cancel": "Cancelar",
+  "schedule_reboot_Prompt": "Nesta página, você pode configurar a função Agendar reinicialização."
+}

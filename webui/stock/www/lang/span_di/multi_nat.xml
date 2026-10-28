@@ -1,0 +1,30 @@
+{
+  "muti_natPrompt":"En esta página, puede configurar NAT múltiple.",
+  "Muti_natListHead":"Lista de reglas de NAT múltiple",
+  "mn_descrip_title":"Descripción",
+  "mn_Type_title":"Tipo de regla",
+  "mn_locips_title":"IP inicial de Red local",
+  "mn_locipe_title":"IP final de Red local",  
+  "mn_pubips_title":"IP inicial de Red pública",
+  "mn_pubipe_title":"IP final de Red pública",
+
+  "pf_add":"Agregar",
+  "pf_delete":"Borrar",
+  "pf_deleteAll":"Eliminar todo",
+
+  "pf_apply":"Aplicar",
+  "pf_cancel2":"Cancelar",
+
+  "pf_mostRulesAlert":"¡Puede configurar 8 reglas como máximo!",
+  "pf_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "pf_noChooseAlert":"¡Por favor, seleccione una regla antes de eliminarla!",
+  "pf_deleteRuleConfirm":"¿Está seguro de que desea eliminar la regla seleccionada?",
+
+  "pf_ipIllegalAlert":"or favor, introduzca una IP valida!",  
+  "pf_endPortTooSmallAlert":"¡La dirección inicial no debe ser mayor que la dirección final!",
+  "IP_longAlert":"El rango de direcciones IP es demasiado largo, confirme que el rango de direcciones IP sea menor de 256!",
+  "Please creat INTERNET WAN first!":"¡Por favor, cree primero INTERNET WAN!",
+
+  "description_tips":"( 0-31 caracteres, incluidos los alfanuméricos, '-' y '_')",
+  "descripIllegalAlert":"¡Por favor, introduzca una descripción válida!"
+}  

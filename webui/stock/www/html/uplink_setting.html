@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/uplink_setting.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint">On this page ,you could switch the uplink mode to LAN,PON or WiFi. (Currently LAN mode only supports LAN<span id="port"></span>)</p>
+		</div>
+		<br/>
+		<fh-fo-rm>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">Current Uplink Mode</div>
+					<div class="main_item_content">
+						<div id="current_uplink"></div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">Switch Uplink Mode</div>
+					<div class="main_item_content">
+						<select id="uplink_type">
+							<option value="dev.eth.LAN">LAN</option>
+							<option value="dev.pon.1">PON</option>
+							<option value="dev.wifi.1">WiFi</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_submit" style="width: 25%;"></div>
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" class="input_button" i18n="internet_apply" i18n-set="value" id="save_apply" onclick="saveApply()"/>
+					<input type="button" class="input_button" i18n="internet_cancel" i18n-set="value" id="save_cancel" onclick=""/>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

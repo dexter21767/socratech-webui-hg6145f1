@@ -1,0 +1,31 @@
+{
+  "dmz_prompt":"Puede configurar una IP de host para el DMZ aquí.",
+  "dmzEnable_title":"Habilitación de DMZ",
+  "dmz_enable":"Habilitar",
+  "dmz_disable":"Deshabilitar",
+  "dmz_auto":"Automático",
+  "dmz_hostTips":"IP del Host DMZ",
+  "dmz_add":"Agregar",
+  "dmz_delete":"Borrar",
+  "dmz_deleteAll":"Eliminar todo",
+  "dmz_most4rulealert":"¡Puede configurar hasta 4 reglas!",
+  "fw_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "no_selected_rules_alert":"No hay ninguna regla que haya sido seleccionada, ¡no se puede eliminar!",
+  "fw_noChooseAlert":"¡Por favor, seleccione una regla y luego elimínela!",
+  "fw_ipIllegalAlert":"¡Por favor, introduzca una IP válida!",
+  "fw_deleteRuleConfirm":"¿Está seguro de eliminar la regla seleccionada?",
+  "dmzRuleListHead":"Lista de reglas de DMZ",
+  "dmz_wannameTips":"Nombre de WAN",
+  "dmz_iprepeat":"La IP que ingresa se repite, pruebe con otra.",
+  "dmz_wannamerepeat":"El nombre WAN elegido se repite, pruebe con otro.",
+  
+  "dmz_apply":"Aplicar",
+  "dmz_cancel":"Cancelar",
+  "reset_rf":"Reinicio",
+  "dmz_noipalert":"¡Por favor, introduzca una dirección IP!",
+  "dmz_ipillegalalert":"¡Por favor, introduzca una dirección IP válida!",
+  "rf_prompt":"Puede modificar la potencia de RF en esta página.",
+  "rf_hostTips":"Rango de ajuste de potencia de RF",
+  "rf_IllegalAlert":"Por favor, introduzca el rango de ajuste de potencia de RF correcto [-127,127]."
+}
+

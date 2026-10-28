@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' >
+		<script language="javascript" type="text/javascript">
+			document.write('<script  src="../js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/login_3bb.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.validate.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../language/messages_en.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	        document.write('<link rel="stylesheet" type="text/css" href="../css/style.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		</script>
+		<title>welcome</title>
+		<script language="javascript" type="text/javascript">
+			loginHtmlAccessCheck(goperator_name, "login_3bb.html");
+			setDomain('menu');
+
+			function formLoad() {
+			}
+		</script>
+		<STYLE type="text/css">
+			.STYLE1 {
+				background-image: url(../image/background.png);
+				background-repeat: repeat-x;
+
+			}
+
+			.STYLE2 {
+				height: 35px;
+				width: 70px;
+			}
+
+			.STYLE4 {
+				color: #FF0000;
+				text-align: center;
+				font-size: 20px;
+			}
+
+			.STYLE5 {
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 10px;
+			}
+
+			.STYLE6 {
+				color: #000000;
+				text-align: center;
+				font-size: 18px;
+			}
+
+			.label-verification {
+				font-family: Roboto;
+				font-style: italic;
+				font-weight: bold;
+				order: 10;
+				width:133px;
+				height:34px;
+				line-height:34px;
+				letter-spacing: 5px;
+				font-size: 18px;
+				color: blue;
+				background-color: #999999;
+				padding:3px;
+			}
+		</style>
+	</head>
+	<body class="STYLE1" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="formLoad()">
+		<table valign="middle" height="100%" width="100%">
+			<tbody>
+				<tr valign="middle" height="80%">
+					<td width="33%"></td>
+					<td width="33%">
+						<table valign="middle" align="center" background="../image/login.png" border="0" width="935" height="415" style="margin-top: 50px">
+							<tbody>
+								<tr>
+									<td width="54%">
+										<table valign="middle" height="415" width="100%">
+											<tbody>
+												<tr>
+													<td height="80%"></td>
+												</tr>
+												<tr>
+													<td height="20%"><span class="STYLE5">&nbsp &nbsp</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td width="40%">
+										<table valign="middle" height="415" width="100%">
+											<tbody>
+												<tr>
+													<td width="28%" height="15%"></td>
+												</tr>
+												<tr>
+													<td width="28%" height="15%">
+														<table>
+															<tr>
+																<td width="10%"></td>
+																<td width="40%">
+																	<img src="../image/3bb.png" width="100" height="40" />
+																</td>
+																<td width="50%">
+																	<table>
+																		<tr width="100%" height="14px"></tr>
+																		<tr width="100%">
+																			<td>
+																				<div id="device_name" style="float: left; font-weight:500; font-size: 20px;"></div>	
+																			</td>
+																		</tr>
+																	</table>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td width="28%" height="35%">
+														<table valign="middle" height="100%" width="100%">
+															<tbody>
+																<tr>
+																	<td height="30%" width="100%" >
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="35%" align="right">
+																						<font i18n="accounttitle" class="STYLE6">Username</font>
+																					</td>
+																					<td width="65%"><input name="user_name" id="user_name" maxlength="32" type="text" style="width:130px; height:28px;">
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+
+																					<td width="35%" height="30%" align="right">
+																						<font i18n="pwdtitle" class="STYLE6">Password</font>
+																					</td>
+																					<td width="65%" id="password_td">
+
+																						<input name="loginpp" id="loginpp" maxlength="32" class="fh-text-security" type="text" autocomplete="off" style="width:130px; height:28px;">
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="35%" height="30%"  align="right">
+																						<font i18n="validate Code" class="STYLE6">validate Code</font>
+																					</td>
+																					<td width="65%" id="password_td">
+																						<input name="validate_code" id="validate_code"  maxlength="5" type="text" autocomplete="off" style="width:130px; height:28px;">
+																						
+																					</td>
+																					<!-- <td width="10%" id="refresh"></td> -->
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr id="tr_verifi">
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="35%" height="30%" align="right"></td>
+																					<td width="40%" height="30%" >
+																						<div id="verifiCode" oncopy="return false" class="label-verification"></div>
+																					</td>
+																					<td width="25%" height="30%">
+																						<input type="button" id="refresh_btn" class="input_button" i18n="refresh_button" i18n-set="value" onclick="refresh()" />
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>		
+																</tr>
+																<tr>
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="40%" id="td_submit" align="right"><input type="submit" onClick="onlogin(1)" class="STYLE2" id="login_btn"
+																						 i18n="login_submit" i18n-set="value"></td>
+																					<td width="5%"></td>
+																					<td width="40%" id="td_reset"><input type="reset" onClick="onlogin(2)" class="STYLE2" id="reset_btn"
+																						 i18n="login_reset" i18n-set="value"></td>
+																					<td width="5%"></td>
+																					<td width="30%" id="td_regist" align="center" style="display: none"><input id="devReg" type="button"
+																						 class="STYLE2" value="Regist" onClick="onlogin(3)" i18n="login_devReg">
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td width="28%" height="35%">
+														<table valign="middle" height="100%" width="100%">
+															<tbody>
+																<tr>
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="5%"></td>
+																					<td width="90%" align="center" id="td_error"><span class="STYLE4" id="login_error_hint"></span></td>
+																					<td width="5%"></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="40%" width="100%"></td>
+																</tr>
+																<tr>
+																	<td height="30%" width="100%"></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td width="26%" height="15%"></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td width="34%"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

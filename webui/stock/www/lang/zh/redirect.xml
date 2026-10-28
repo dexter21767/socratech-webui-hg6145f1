@@ -1,0 +1,10 @@
+{
+  "redirect_prompt":"在本页面上，您可以配置页面重定向使能，以及重定向页面。",
+  "redirect_title":"重定向",
+  "re_enable":"启用",
+  "re_disable":"禁用",
+  "redirectApply":"提交",
+  "redirectCancel":"取消",
+  "redirect_nourlalert":"请输入需要过滤的URL!"
+
+}

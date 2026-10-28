@@ -1,0 +1,12 @@
+{
+  "webport_Prompt":"在本页面，您可以配置WEB的HTTP通信端口。设备重启生效。",
+  "web_portTitle":"当前生效的WEB通信端口",
+  "web_portchangeTitle":"您所修改的WEB通信端口",
+  "web_portchangeTips":"(请输入 1024-65535 或 80)",
+  "Change_confirm":"您修改的端口在设备重启后生效!",
+  "web_portIllegalAlert":"有效端口范围:1024-65535、80",
+  "web_PortNullAlert":"请输入端口!",
+  "webport_apply":"应用",
+  "webport_cancel":"取消"
+} 
+

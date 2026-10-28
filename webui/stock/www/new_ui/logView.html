@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/logView.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("log");
+	</script>
+	<body class='main_config_body'>
+		<form id="remote_server_form" method="post" style="display:none;">
+			<div class="main_content ">
+				<div class="table_title table_bg"><font i18n="remote_head">remote_head</font></div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="remote_head">remote_head</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="remote_enable" name="remote_enable" value="1" checked="checked"><font i18n="remote_enableTitle">remote_enableTitle</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="remote_disable" name="remote_enable" value="0"><font i18n="remote_disableTitle">remote_disableTitle</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div id="add_port" style="display:none;">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="remote_addressTitle">remote_addressTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="remote_address" name="remote_address"/>
+							<span class="redcolorfont">*</span>
+						</div>
+						<div id="remote-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="remote_portTitle">remote_portTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="remote_port" name="remote_port"/>
+							<span class="redcolorfont">*</span>
+						</div>
+						<div id="remote-error" class="main_item_error_hint_extra"></div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="remote_apply" onclick="saveApply()" i18n="remote_apply" i18n-set="value" class="input_button">
+						<input type="button" id="remote_cancel" onclick="CancelBtn()" i18n="remote_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+			<br/>
+		</form> 
+		<div class="table_title"><font i18n="log_listHead">log_listHead</font></div>
+		<textarea id="logtable" rows="20" cols="86" readonly="readonly" class="text_show"></textarea>
+		<br/><br/>
+		<div class="main_save" id="button_div" style="display: none;">
+				&nbsp;
+				<input type="button" onclick="downloadLog()" id="download" i18n="download_log" i18n-set="value" class="input_button">
+				&nbsp;
+		</div>
+	</body>
+</html>

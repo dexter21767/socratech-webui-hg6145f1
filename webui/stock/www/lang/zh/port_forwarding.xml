@@ -1,0 +1,88 @@
+{
+  "rule_add":"新增",
+  "rule_delete":"删除",
+  "rule_deleteAll":"删除所有",
+
+  "apply":"应用",
+  "cancel":"取消",
+  
+  "rule_most4RulesAlert":"您最多可以配置4条规则。",
+  "rule_most8RulesAlert":"您最多可以配置8条规则。",
+  "rule_most12RulesAlert":"您最多可以配置12条规则。",
+  "rule_most16RulesAlert":"您最多可以配置16条规则。",
+  "rule_most20RulesAlert":"您最多可以配置20条规则。",
+  "rule_most32RulesAlert":"您最多可以配置32条规则。",
+  "rule_noRuleAlert":"当前没有规则，不能删除。",
+  "rule_noChooseAlert":"请先选定一个规则再执行删除。",
+  "rule_deleteRuleConfirm":"您确定要删除选中的规则吗?",
+  
+  "pf_PortforwardingPrompt":"您可以在本页面进行端口转发功能设置。",
+
+  "fw_filterListHead":"端口转发规则表",
+  "PFdescrip":"描述",
+  "The_private_Port":"私有端口",
+  "The_public_Port":"公共端口",
+  "Protocol":"协议",
+  "Enable":"使能",
+
+  "pf_DescriptionTitle":"描述",
+  "pf_PriPortTitle":"私有端口",
+  "pf_PubPortTitle":"公共端口",
+  "pf_protocolTitle":"协议",
+  "pf_enabelTitle":"使能",
+
+  "pf_add":"新增",
+  "pf_delete":"删除",
+  "pf_deleteAll":"删除所有",
+
+  "pf_apply":"应用",
+  "pf_cancel2":"取消",
+
+  "pf_mostRulesAlert":"您最多可以配置12条规则。",
+  "pf_noRuleAlert":"当前没有规则，不能删除。",
+  "pf_noChooseAlert":"请先选定一个规则再执行删除。",
+  "pf_deleteRuleConfirm":"您确定要删除选中的规则吗?",
+
+  "pf_ipIllegalAlert":"请输入有效的IP。",
+  "pf_maskIllegalAlert":"请输入有效的子网掩码。",
+  "pf_PortNullAlert":"请输入有效的端口值。",
+  "pf_endPortTooSmallAlert":"起始端口不能大于结束端口。",
+  "pf_portIllegalAlert":"有效端口值为1 - 65535!",
+  "pf_portRepeadAlert":"若干端口重复! 请重新配置!",
+  "pf_wanIllegalAlert":"请选择有效的WAN连接!",
+
+  "portMappingPrompt":"您可以在本页面进行端口转发功能设置。",
+  "pm_ruleListHead":"端口转发规则表",
+  "pm_descripTitle":"描述",
+  "Protocol":"协议",
+  "pm_pubIPTitle":"公共IP",
+  "pm_pubPortTitle":"公共端口",
+  "pm_priIPTitle":"私有IP",
+  "pm_priPortTitle":"私有端口",
+
+  "description_tips":"( 0-31个字符, 包括数字、字母、'-' 和 '_')",
+  "descripIllegalAlert":"请输入有效的描述字符!",
+  "pm_portStartIllegalAlert":"有效的起始端口范围为 1 - 65535!",
+  "pm_portEndIllegalAlert":"有效的结束端口范围为 0 - 65535!",
+  
+  "v4StaticRoutePrompt":"在本页面，您可以配置IPv4静态路由。",
+  "v4_sr_ruleListHead":"IPV4静态路由",
+  
+  "wanDisableTitle":"当前WAN不生效",
+  "ruleEnable":"生效",
+  "ruleDisable":"不生效",
+  
+  "wannameTitle":"WAN名",
+  "ipTitle":"IP地址",
+  "gwTitle":"网关",
+  "maskTitle":"子网掩码",
+  "stateTitle":"状态",
+  "Please creat INTERNET WAN first !":"请先建立INTERNET相关的WAN!",
+  
+  "bandwidthIllegalAlert":"请输入有效的带宽速率!",
+
+ "wifi_acl_Prompt":"在本页面，您可以使能/去使能WIFI ACL功能，并配置WIFI ACL过滤规则。",
+ "wifi_acl_enable_title":"黑名单/白名单",
+ "Disable":"去使能",
+ "wifi_acl_ruleListHead":"WIFI ACL过滤表"
+}

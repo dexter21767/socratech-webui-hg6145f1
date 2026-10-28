@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/igmp.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">组播设置</p>
+			<p class="main_header_hint">在本页面，您可以修改组播参数。</p>
+		</div>
+		<form id="igmp_form">
+			<div class="main_content">
+				<div class="main_discribe">IPv4</div>
+				<div class="main_item">
+					<div class="main_item_name">启用 IGMPSnooping</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="IGMPSnooping_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">启用 IGMPProxy</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="IGMPProxy_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_discribe">IPv6</div>
+				<div class="main_item">
+					<div class="main_item_name">启用 MLDSnooping</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="MLDSnooping_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">启用 MLDProxy</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="MLDProxy_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_discribe">组播VLAN</div>
+				<div class="main_item">
+					<div class="main_item_name">网络连接</div>
+					<div class="main_item_content">
+						<select id="wan_select">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">组播VLAN</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" id="MulticastSettings_tex" name="MulticastSettings_tex" autocomplete="off"/>
+					</div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

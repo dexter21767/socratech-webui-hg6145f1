@@ -1,0 +1,63 @@
+
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/dnssetting_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="DNSSetting_prompt">DNSSetting_prompt</font></p>
+		</div>
+        <br/>
+		<fh-fo-rm id="dnssetting_form" method="post">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="DNSSource_title">DNSSource_title</font></div>
+					<div class="main_item_content">
+						<select id="dns_resource"  style="width:100px">
+						</select>			
+					</div>
+                </div>
+                    <div id="wanname" class="main_item" style="display: none;">
+                        <div class="main_item_name"><font i18n="WanName_title">WanName_title</font></div>
+                        <div class="main_item_content">
+                            <select id="wan_name"style="width:44% ;" name="wan_name">
+                            </select>
+                        </div>
+                        <div id="wanName-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div id="dhcp_dns"  style="display: none;">
+                        <div class="main_item">
+                            <div class="main_item_name" ><font i18n="Primary_dns">Primary_dns</font></div>
+                            <div class="main_item_content" >
+                                <input type="text"  class="input_text" autocomplete="off" id="primary_dns" name="primary_dns" />
+                            </div>
+                            <div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+                        </div>
+                        <div class="main_item">
+                            <div class="main_item_name"><font i18n="Secondary_dns">Secondary_dns</font></div>
+                            <div class="main_item_content">
+                                <input type="text"  class="input_text" autocomplete="off" id="secondary_dns" name="secondary_dns" />
+                            </div>
+                            <div id="secondip-error" class="main_item_error_hint_extra"></div>
+                        </div>
+                    </div>
+				
+				<div class="main_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="dns_apply" class="input_button" i18n="inet_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" id="dns_cancel" class="input_button" i18n="inet_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

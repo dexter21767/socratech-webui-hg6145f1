@@ -1,0 +1,153 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/nat.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+
+</head>
+<script type="text/javascript">
+	setDomain("application");
+</script>
+
+<body class='main_config_body'>
+	<form id="nat_list_form" method="post">
+		<div style="float:left">
+			<input type="button" i18n="app_add" i18n-set="value" id="fw_add" class="add_button" onClick="addfilter()">
+			<input type="button" i18n="app_delete" i18n-set="value" id="fw_delete" class="delete_button"
+				onClick="click_remove()">
+		</div>
+		<br />
+		<br />
+		<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+			<tr class="table_head_title">
+			<td width="5%" align='center'>
+					<input style="margin-top: 3px" type="checkbox" onclick="selectAll()" id="checkAll">
+				</td>
+				<td width="3%" align='center'>
+					<font i18n="app_id">app_id</font>
+				</td>
+				<td width="3%" align='center'>
+					<font i18n="wan_title">wan_title</font>
+				</td>
+				<td width="18%" align='center'>
+					<font i18n="description_title">description_title</font>
+				</td>
+				<td width="16%" align='center'>
+					<font i18n="rule_type_title">rule_type_title</font>
+				</td>
+				<td width="11%" align='center'>
+					<font i18n="local_startIp_tilte">local_startIp_tilte</font>
+				</td>
+				<td width="11%" align='center'>
+					<font i18n="local_endIp_tilte">local_endIp_tilte</font>
+				</td>
+				<td width="12%" align='center'>
+					<font i18n="public_startIp_tilte">public_startIp_tilte</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="public_endIp_tilte">public_endIp_tilte</font>
+				</td>
+				<td width="8%" align='center'>
+					<font i18n="operate"></font>
+				</td>
+			</tr>
+			<tbody id='nat_list'  class="table_rule" style="font-size: 12px">
+			</tbody>
+		</table>
+		</br>
+		<div id="image">
+			<img src="../image/new_ui/no_data.png" style="width: 120px;">
+			<span i18n="No Data">No Data</span>
+		</div>
+		<div class="config_content" id="fw_config_form" style="display: none;">
+			<div class="main_item">
+				<div class="main_item_title">
+					<font id="title"></font>
+					<img src="../image/new_ui/cancel.png" class="cancel_icon">
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="wan_title">wan_title</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<select id="nat_wan" name="nat_wan" class="select"></select>
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="description_title">description_title</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<div class="tip_text" id="tip_nat_description" i18n="app_name_tips">ddns_usernameTips</div>
+					<input type="text" class="input_text" autocomplete="off" id="nat_description" name="nat_description"/>
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="rule_type_title">rule_type_title</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<select id='ruleType_select' class="select">
+						<option value='One-to-One' i18n="One-to-One">One-to-One</option>
+						<option value='Many-to-One' i18n="Many-to-One">Many-to-One</option>
+						<option value='Many-to-Many Overload' i18n="Many-to-Many Overload">Many-to-Many Overload</option>
+						<option value='Many-to-Many No Overload' i18n="Many-to-Many No Overload">Many-to-Many No Overload</option>
+						<option value='Server' i18n="Server">Server</option>
+					</select>
+				</div>
+
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<span class="redcolorfont">*</span>
+					<font i18n="local_startIp_tilte">local_startIp_tilte</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="nat_local_startIp" name="nat_local_startIp" />
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="local_endIp_tilte">local_endIp_tilte</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="nat_local_endIp" name="nat_local_endIp" />
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<span class="redcolorfont">*</span>
+					<font i18n="public_startIp_tilte">public_startIp_tilte</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="nat_public_startIp"
+						name="nat_public_startIp" />
+				</div>
+			</div>
+			<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="public_endIp_tilte">public_endIp_tilte</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="nat_public_endIp"
+						name="nat_public_endIp" />
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_submit" style="float: right;">
+					<input type="button" id="nat_apply" class="input_button_cfg" i18n="nat_apply" i18n-set="value"
+						onclick="do_save()" />
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+<div id='loading_div' style='display:none'></div>
+</html>

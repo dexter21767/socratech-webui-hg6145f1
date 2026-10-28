@@ -1,0 +1,58 @@
+{
+	"checktime_prompt":" 您可以在本页面进行时间配置。",
+	"ntpchecktime_title":"NTP校时",
+
+	"checkboxTips":"使能NTP校时",
+	"firstNTPServer_Title":"NTP第一时间服务器",
+
+	"secondNTPServer_Title":"NTP第二时间服务器",
+	"thirdNTPServer_Title":"NTP第三时间服务器",
+	"fourthNTPServer_Title":"NTP第四时间服务器",
+	"fifthNTPServer_Title":"NTP第五时间服务器",
+
+	"timeZoneTitle":"时区",
+	"secondsTips":"秒 (1-99999)",
+
+	"GMTm12title":"GMT-12 日界线西",
+	"GMTm11title":"GMT-11 中途岛",
+	"GMTm10title":"GMT-10 夏威夷",
+	"GMTm9title":"GMT-9 阿拉斯加",
+	"GMTm8title":"GMT-8 太平洋时间",
+	"GMTm7title":"GMT-7 山地时间",
+	"GMTm6title":"GMT-6 中美洲",
+	"GMTm5title":"GMT-5 东部时间（美国和加拿大）",
+	"GMTm4title":"GMT-4 大西洋时间（加拿大）",
+	"GMTm3title":"GMT-3 格陵兰",
+	"GMTm2title":"GMT-2 中大西洋",
+	"GMTm1title":"GMT-1 亚速尔群岛",
+	"GMT0title":"GMT 格林威治标准时间: 都柏林，爱丁堡，伦敦，里斯本",
+
+	"GMT1title":"GMT+1 阿姆斯特丹 柏林",
+	"GMT2title":"GMT+2 开罗",
+	"GMT3title":"GMT+3 莫斯科",
+	"GMT4title":"GMT+4 巴库",
+	"GMT5title":"GMT+5 伊斯兰堡",
+
+	"GMT6title":"GMT+6 阿拉目图",
+	"GMT7title":"GMT+7 曼谷 河内 雅加达",
+	"GMT8title":"GMT+8 北京 重庆 香港 乌鲁木齐",
+	"GMT9title":"GMT+9 大阪 东京",
+	"GMT10title":"GMT+10 关岛",
+	"GMT11title":"GMT+11 马加丹",
+	"GMT12title":"GMT+12 斐济",
+
+	"GMT13title":"GMT+13 努库阿洛法",
+
+	"ntpCurTime_Title":"当前时间",
+	"ntpWanChannelTitle":"WAN连接绑定",
+
+	"ntp_nofirstserveralert":"请输入第一NTP校时服务器!",
+	"ntp_nosecondserveralert":"请输入第二NTP校时服务器!",
+	"ntp_noperiodalert":"请输入自动校准周期!",
+	"ntp_illegalperiodalert":"请输入合法自动校准周期!",
+	"daylightsavingstimeIllegalAlert":"请输入合法的夏令时时间!",
+
+	"ntpsave_apply":"校时",
+	"ntp_cancel":"系统校时"
+}
+

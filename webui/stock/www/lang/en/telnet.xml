@@ -1,0 +1,16 @@
+{
+	"telnet_prompt": "On this page, you can enable or disable telnet service.",
+  	"telnet_head":"Telnet Service",
+  	"telnet_enable":"Enable",
+  	"telnet_disable":"Disable",
+  	"telnet_apply":"Apply",
+  	"telnet_cancel":"Cancel",
+
+  	"ssh_prompt": "On this page, you can enable or disable ssh service.",
+  	"ssh_head":"SSH Service",
+  	"ssh_enable":"Enable",
+  	"ssh_disable":"Disable",
+  	"ssh_apply":"Apply",
+  	"ssh_cancel":"Cancel"
+}
+

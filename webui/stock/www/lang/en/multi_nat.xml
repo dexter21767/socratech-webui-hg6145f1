@@ -1,0 +1,30 @@
+{
+  "muti_natPrompt":"On this page, you could configure Multi NAT.",
+  "Muti_natListHead":"Multi NAT Rules List",
+  "mn_descrip_title":"Description",
+  "mn_Type_title":"Rule Type",
+  "mn_locips_title":"Local Start IP",
+  "mn_locipe_title":"Local End IP",  
+  "mn_pubips_title":"Public Start IP",
+  "mn_pubipe_title":"Public End IP",
+
+  "pf_add":"Add",
+  "pf_delete":"Delete",
+  "pf_deleteAll":"Delete All",
+
+  "pf_apply":"Apply",
+  "pf_cancel2":"Cancel",
+
+  "pf_mostRulesAlert":"You can configure 8 rules at most!",
+  "pf_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "pf_noChooseAlert":"Please select a rule before deleting!",
+  "pf_deleteRuleConfirm":"Are you sure you want to delete the selected rule?",
+
+  "pf_ipIllegalAlert":"Please enter a valid IP!",  
+  "pf_endPortTooSmallAlert":"The starting address should not be greater than the end address!",
+  "IP_longAlert":"IP address range is too long, please confirm IP address range is within 256!",
+  "Please creat INTERNET WAN first!":"Please creat INTERNET WAN first!",
+
+  "description_tips":"( 0-31 characters, including alphanumeric, '-' and '_')",
+  "descripIllegalAlert":"Please enter valid description!"
+}  

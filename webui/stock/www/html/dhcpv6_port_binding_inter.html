@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/dhcpv6_port_binding_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="dhcpv6PortBinding_Prompt">dhcpv6PortBinding_Prompt</font></p>
+		</div>
+		<br/>
+		<div class="main_content ">
+			<div class="table_title table_bg"><font i18n="dhcpv6_head">dhcpv6_head</font></div>
+			<div class="main_item" id="dhcpv6_lan">
+				<div class="main_item_name"><font i18n="lanBinding">lanBinding</font></div>
+				<div class="main_item_content" id="dhcpv6_lan_list">
+					<span class='lanport'><input type='checkbox' id='portbind_lan1' name='portbind'>LAN1</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan2' name='portbind'>LAN2</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan3' name='portbind'>LAN3</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan4' name='portbind'>LAN4</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='portbind_lan10g' name='portbind'>10G LAN</span>&nbsp;
+				</div>
+			</div>
+			<div id="dhcpv6_ssid">
+				<div class="main_item" id="dhcpv6_ssid_2g">
+					<div class="main_item_name"><font i18n="ssidBinding">ssidBinding</font></div>
+					<div class="main_item_content">
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid1' name='portbind' />SSID1</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid2' name='portbind' />SSID2</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid3' name='portbind' />SSID3</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid4' name='portbind' />SSID4</span>
+					</div>
+				</div>
+				<div class="main_item" id="dhcpv6_ssid_5g">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid5' name='portbind' />SSID5</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid6' name='portbind' />SSID6</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid7' name='portbind' />SSID7</span>
+						<span class='wifiport'><input type='checkbox' id='portbind_ssid8' name='portbind' />SSID8</span>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="table_title table_bg"><font i18n="ra_head">ra_head</font></div>
+			<div class="main_item" id="ra_lan">
+				<div class="main_item_name"><font i18n="lanBinding">lanBinding</font></div>
+				<div class="main_item_content" id="ra_lan_list">
+					<span class='lanport'><input type='checkbox' id='ra_portbind_lan1' name='portbind'>LAN1</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='ra_portbind_lan2' name='portbind'>LAN2</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='ra_portbind_lan3' name='portbind'>LAN3</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='ra_portbind_lan4' name='portbind'>LAN4</span>&nbsp;
+					<span class='lanport'><input type='checkbox' id='ra_portbind_lan10g' name='portbind'>10G LAN</span>&nbsp;
+				</div>
+			</div>
+			<div id="ra_ssid">
+				<div class="main_item" id="ra_ssid_2g">
+					<div class="main_item_name"><font i18n="ssidBinding">ssidBinding</font></div>
+					<div class="main_item_content">
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid1' name='portbind' />SSID1</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid2' name='portbind' />SSID2</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid3' name='portbind' />SSID3</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid4' name='portbind' />SSID4</span>
+					</div>
+				</div>
+				<div class="main_item" id="ra_ssid_5g">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid5' name='portbind' />SSID5</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid6' name='portbind' />SSID6</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid7' name='portbind' />SSID7</span>
+						<span class='wifiport'><input type='checkbox' id='ra_portbind_ssid8' name='portbind' />SSID8</span>
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_submit" style="width: 25%;"></div>	
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" id="inet_apply" onclick="saveApply()" i18n="inet_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+					<input type="button" id="inet_cancel" onclick="window.location.reload()" i18n="inet_cancel" i18n-set="value" class="input_button"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

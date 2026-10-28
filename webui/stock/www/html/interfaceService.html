@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/interfaceService.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<body class='main_config_body'>
+	<form>
+		<div class="intetfaceInfoContainer" id="infoContainer1">
+			<b><label id='Title_base_label' class="trad" key="execResult_title">任务执行结果信息</label></b>
+			<br><br> 
+			<table width="500px" border="1px" cellpadding="3px" cellspacing="0" id="execResultTable">
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_successNum">执行成功任务数</td>
+					<td width='250' align='center' name="SuccessTask">0</td>
+				</tr>
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_faliNum">执行失败任务数</td>
+					<td width='250' align='center' name="FailTask">0</td>
+				</tr>
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_informFailNum">上报信息失败次数</td>
+					<td width='250' align='center' name="FailInform">0</td>
+				</tr>
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_informSucNum">上报成功任务数</td>
+					<td width='250' align='center' name="SuccessInform">0</td>
+				</tr>
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_infromFailres">上报失败的任务结果数</td>
+					<td width='250' align='center' name="FailResult">0</td>
+				</tr>
+				<tr>
+					<td width='200' align='center' class="trad" key="execResult_infromSucclres">上报成功的任务结果数</td>
+					<td width='250' align='center' name="SuccessResult">0</td>
+				</tr>
+			</table>
+		</div>
+		<br/><br/>
+		<div>
+			<b><label id='Title_base_label' class="trad" key="DNSInfo_title1">接口DNS信息</label></b>
+			<br><br>
+			<table width="500px" border="1px" cellpadding="3px" cellspacing="0" id="DNSInfoTable1">
+				 <tr>
+					<td width='150' align='center' class="trad" key="DNS_priDns">主DNS服务器</td>
+					<td width='300' align='center' name="DNS1"></td>
+				</tr>
+				 <tr>
+					<td width='150' align='center' class="trad" key="DNS_altDns">备用DNS服务器</td>
+					<td width='300' align='center' name="DNS2"></td>
+				</tr>
+			</table>
+		</div>
+		<br/><br/>
+		<div class="intetfaceInfoContainer" id="infoContainer1">
+			<b><label id='Title_base_label' class="trad" key="infRouteInfo_title1">接口和路由信息表1</label></b>
+			<br><br> 
+			<table width="700px" border="1px" cellpadding="3px" cellspacing="0" id="interfaceInfoTable1">
+				<tr>
+					<td width='100' align='center' class="trad" key="interfaceInfo_name">接口名称</td>
+					<td width='150' align='center' class="trad" key="interfaceInfo_MAC">接口MAC地址</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_IP">接口IP地址</td>
+					<td width='150' align='center' class="trad" key="interfaceInfo_remoteIP">接口对端IP地址</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_MASK">IP地址掩码</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_MTU">接口MTU</td>
+				</tr>
+				<tr height="30px">
+					<td width='100' align='center' class="interfaceInfo" name="Name"></td>
+					<td width='150' align='center' class="interfaceInfo" name="PhyAddr"></td>
+					<td width='100' align='center' class="interfaceInfo" name="LocalIP"></td>
+					<td width='150' align='center' class="interfaceInfo" name="RemoteIP"></td>
+					<td width='100' align='center' class="interfaceInfo" name="Mask"></td>
+					<td width='100' align='center' class="interfaceInfo" name="MTU"></td>
+				</tr>
+				
+				<tr>
+					<td width='700' align='center' class="trad" key="routeInfo_title" colspan="6" style="font-weight: bold">路由表信息</td>
+				</tr>
+				<tr>
+					<td width='100' align='center' class="trad" key="routeInfo_destIP">目的IP地址</td>
+					<td width='150' align='center' class="trad" key="routeInfo_devIP">网关地址</td>
+					<td width='100' align='center' class="trad" key="routeInfo_MASK">掩码</td>
+					<td width='150' align='center' class="trad" key="routeInfo_flag">路由标志</td>
+					<td width='100' align='center' class="trad" key="routeInfo_metric">路由优先级</td>
+					<td width='100' align='center' class="trad" key="routeInfo_iface">经由接口</td>
+				</tr>
+				<tbody id='routeInfotab'>
+				</tbody>					
+				<!--<tr class="routeInfoTr">
+					<td width='100' align='center' class="routeInfo" name="Dest">--</td>
+					<td width='150' align='center' class="routeInfo" name="Gateway">--</td>
+					<td width='100' align='center' class="routeInfo" name="Mask">--</td>
+					<td width='150' align='center' class="routeInfo" name="Flags">--</td>
+					<td width='100' align='center' class="routeInfo" name="Metric">--</td>
+					<td width='100' align='center' class="routeInfo" name="Iface">--</td>
+				</tr>-->
+
+			</table>
+		</div>
+		<br/><br/>
+		<div class="intetfaceInfoContainer" style="display: none" id="infoContainer2">
+			<b><label id='Title_base_label' class="trad" key="infRouteInfo_title2">接口和路由信息表2</label></b>
+			<br><br> 
+			<table width="700px" border="1px" cellpadding="3px" cellspacing="0" id="interfaceInfoTable2">
+				<tr>
+					<td width='100' align='center' class="trad" key="interfaceInfo_name">接口名称</td>
+					<td width='150' align='center' class="trad" key="interfaceInfo_MAC">接口MAC地址</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_IP">接口IP地址</td>
+					<td width='150' align='center' class="trad" key="interfaceInfo_remoteIP">接口对端IP地址</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_MASK">IP地址掩码</td>
+					<td width='100' align='center' class="trad" key="interfaceInfo_MTU">接口MTU</td>
+				</tr>
+				<tr height="30px">
+					<td width='100' align='center' class="interfaceInfo" name="Name">--</td>
+					<td width='150' align='center' class="interfaceInfo" name="PhyAddr">--</td>
+					<td width='100' align='center' class="interfaceInfo" name="LocalIP">--</td>
+					<td width='150' align='center' class="interfaceInfo" name="RemoteIP">--</td>
+					<td width='100' align='center' class="interfaceInfo" name="Mask">--</td>
+					<td width='100' align='center' class="interfaceInfo" name="MTU">--</td>
+				</tr>
+				
+				<tr>
+					<td width='700' align='center' class="trad" key="routeInfo_title" colspan="6" style="font-weight: bold">路由表信息</td>
+				</tr>
+				<tr>
+					<td width='100' align='center' class="trad" key="routeInfo_name">目的IP地址</td>
+					<td width='150' align='center' class="trad" key="routeInfo_MAC">网关地址</td>
+					<td width='100' align='center' class="trad" key="routeInfo_IP">掩码</td>
+					<td width='150' align='center' class="trad" key="routeInfo_remoteIP">路由标志</td>
+					<td width='100' align='center' class="trad" key="routeInfo_MASK">路由优先级</td>
+					<td width='100' align='center' class="trad" key="routeInfo_MTU">经由接口</td>
+				</tr>
+				<tr class="routeInfoTr">
+					<td width='100' align='center' class="routeInfo" name="Dest">--</td>
+					<td width='150' align='center' class="routeInfo" name="Gateway">--</td>
+					<td width='100' align='center' class="routeInfo" name="Mask">--</td>
+					<td width='150' align='center' class="routeInfo" name="Flags">--</td>
+					<td width='100' align='center' class="routeInfo" name="Metric">--</td>
+					<td width='100' align='center' class="routeInfo" name="Iface">--</td>
+				</tr>
+
+			</table>
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "IPSEC basic apply":"Aplicar",
+  "IPSEC basic cancel":"Cancelar",
+  
+  "IPSEC_prompt":"En esta página, puede configurar el conmutador de paso a través de IPSec.",
+
+  "IPSECEnable_title":"IPSec",
+  
+  "IPSEC_enable":"Habilitar",
+  "IPSEC_disable":"Deshabilitar"
+}

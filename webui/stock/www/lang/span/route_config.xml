@@ -1,0 +1,21 @@
+{
+	"policy_route_config_prompt": "En esta página, puede configurar una ruta de política para un servicio, como Internet e IPTV. Esta ruta se utiliza para enviar los paquetes del servicio a la OLT a través del puerto WAN especificado.",
+	"policy_list_title": "Lista de reglas de ruta de política",
+	"service_route_config_prompt": "En esta página, puede configurar una ruta para un servicio. Luego, los paquetes del servicio se envían a la OLT a través del puerto WAN especificado.",
+	"service_list_title": "Lista de rutas de servicio",
+	"app_apply": "Aplicar",
+	"app_cancel": "Cancelar",
+	"vendor_id": "Vendor ID",
+	"wan_name": "Nombre de WAN",
+	"service_type": "Tipo de servicio",
+	"illegal_value_alert":"¡Algún valor es ilegal!",
+	"wan_name_is_empty_alert": "¡El nombre WAN no puede estar vacío!",
+	"app_most32RulesAlert":"¡Puedes configurar hasta 32 reglas!",
+	"wanName_illegal_alert":"¡Confirme que una conexión Wan tiene solo una configuración!",
+	"delete_alert":"¿Está seguro de eliminar la regla seleccionada?",
+	"no_rules_alert":"En la actualidad no hay regla, no se puede eliminar!",
+	"no_selected_rules_alert":"En este momento no hay ninguna regla que haya sido seleccionada, ¡no se puede eliminar!",
+	"vendor_tips":"(Opción de cadena de 60 caracteres: *ID de proveedor* o ID de proveedor)",
+	"app_add":"Agregar",
+	"app_delete":"Borrar"
+}

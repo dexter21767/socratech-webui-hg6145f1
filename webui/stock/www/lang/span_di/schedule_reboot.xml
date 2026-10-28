@@ -1,0 +1,15 @@
+{
+  	"schedule_reboot_head":"Programar el reinicio",
+  	"schedule_reboot_enableTitle":"Habilitar",
+  	"schedule_reboot_disableTitle":"Deshabilitar",
+  	"fw_day":"Día",
+  	"fw_time":"Fecha",
+	"hour":"Hora",
+	"min":"Min",
+  	"invalid_data_alert":"Algún valor no es válido, ¡vuelva a intentarlo!",
+  	"fw_dayErrorAlert":"¡Por favor, elija al menos un día!",
+  	"schedule_reboot_apply":"Aplicar",
+  	"schedule_reboot_cancel":"Cancelar",
+  	"schedule_reboot_Prompt":"En esta página, puede configurar la función Programar el reinicio."
+}
+

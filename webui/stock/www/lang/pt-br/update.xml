@@ -1,0 +1,13 @@
+{
+"update_prompt":"Nesta página, você pode encontrar o arquivo local e clicar no botão para atualizar o software do equipamento terminal. Não desligue durante a atualização ou faça outras operações para não causar danos e o mesmo não pode ser mais usado.",
+"update_chooseFile":"Escolha o arquivo e faça o upgrade",
+"update_info":"As atualizações levarão um tempo, por favor aguarde...",
+"update_back":"Voltar",
+"upgrade_nofile_err":"Por favor escolha o arquivo",
+"update_info":"As atualizações levarão tempo, seja paciente ...",
+"update_success":"A atualização foi bem sucedida!",
+"update_restartAlert":"ONU será reiniciada automaticamente. Aguarde e efetue login novamente no gerenciamento de rede WEB!",
+"update_fail":"Falha na atualização!",
+"updata_file":"Actualizar Ficheiro"
+
+}

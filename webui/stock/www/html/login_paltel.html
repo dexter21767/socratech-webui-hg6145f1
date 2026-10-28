@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<script language="javascript" type="text/javascript">
+			document.write('<script  src="../js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/login_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.validate.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../language/messages_en.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<link rel="stylesheet" type="text/css" href="../css/style.css?'+new Date().getTime()+'"><'+'/'+'link>');
+		</script>
+		<title>welcome</title>
+		<script language="javascript" type="text/javascript">
+			loginHtmlAccessCheck(goperator_name, "login_paltel.html");
+			setDomain('menu');
+
+			function formLoad() {
+			}
+		</script>
+		<STYLE type="text/css">
+			.STYLE1 {
+				height: 30px;
+				width: 80px;
+			}
+
+			.STYLE2 {
+				color: #FFFF00;
+				text-align: center;
+				font-size: 12px;
+			}
+
+			.STYLE3 {
+				background-image: url(../image/login_paltel.jpg);
+				background-repeat: no-repeat;
+				margin-top: 20px;
+			}
+			.STYLE4 {
+				background:	#F5F5F5;
+				padding-left: 10px;
+			}
+			.STYLE5 {
+				background-image: url(../image/bg_paltel.png);
+				background-repeat: repeat;
+			}
+		</style>
+	</head>
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="formLoad()" class="STYLE5" >
+		<table valign="middle" height="80%" width="100%">
+			<tbody>
+				<tr valign="middle" height="80%">
+					<td width="33%"></td>
+					<td width="33%" height="80%">
+						<table valign="middle" align="center"  border="0" class="STYLE3" width="1200" height="568" >
+							<tbody>
+								<tr>
+									<td width="54%">
+										<table valign="middle" width="100%">
+										</table>
+									</td>
+									<td width="40%">
+										<table valign="middle" height="580" width="100%">
+											<tbody>
+												<tr>
+													<td width="28%" height="215">
+												</tr>
+												<tr>
+													<td width="28%" height="10%">
+													<image src="../image/logo_frame.png" style="margin:0px 0px 0px 80px;">
+													</td>
+												</tr>
+												<tr>
+													<td width="28%" height="60%">
+														<table valign="middle" height="100%" width="100%">
+															<tbody>
+																<tr>
+																	<td height="10%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="18%" align="left">
+																					</td>
+																					<td width="82%">
+																						<input name="user_name" id="user_name" maxlength="32" class="STYLE4" type="text" style="width:180px; height:25px;border-radius:8px;border:none;font-size:12px;" placeholder="   User Name" onfocus="change_css(this.id)" onblur="change_css2(this.id)">
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="10%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																					<td width="18%" align="right">
+																					</td>
+																					<td width="82%" id="password_td">
+																						<input name="loginpp" id="loginpp" maxlength="32"  class="STYLE4" type="password"  autocomplete="off" style="width:180px; height:25px;border-radius:8px;border:none;font-size:12px" placeholder="   Password" onfocus="change_css(this.id)" onblur="change_css2(this.id)" >
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="10%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+                                        											<td width="60%" id="td_submit" align="right"><input type="image" src="../image/login_button.svg" onClick="onlogin(1)" class="STYLE1" id="login_btn" i18n="login_submit" i18n-set="value"></td>
+																					<td width="40%"></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="10%" width="100%">
+																	</td>
+																</tr>
+																<tr>
+																	<td height="30" width="100%" align="left" id="td_error"><span class="STYLE2" id="login_error_hint" style="margin:0px 0px 0px 80px;"></span>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="50%" width="100%">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td width="28%" height="50%">
+														<table valign="middle" height="100%" width="100%">
+															<tbody>
+																<tr>
+																	<td height="30%" width="100%">
+																		<table align="center" border="0" height="100%" width="100%">
+																			<tbody>
+																				<tr>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="30%" width="100%"></td>
+																</tr>
+																<tr>
+																	<td height="60%" width="100%"></td>
+																</tr>
+																<tr>
+																	<td height="30%" width="100%"></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td width="26%" height="15%"></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td width="34%"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

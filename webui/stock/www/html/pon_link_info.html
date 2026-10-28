@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/pon_link_info.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<body class='main_config_body'>
+	<form>
+	    <label><b>在本页面上，您可以查询PON链路连接信息。</b></label>
+		<br><br> 
+		<label><b>网络链路连接信息</b></label>
+		<br><br>
+		<table width="100%" cellspacing="0" cellpadding="3px" border="1px">
+            <tbody>
+            	<tr>
+	            <td width="38%">PON链路连接状态</td>
+	            <td width="62%" id='pon_status'></td>
+	            </tr>
+	            <tr>
+		            <td>FEC能力</td>
+		            <td id='fec_ability'>支持</td>
+	            </tr>
+	            <tr>
+		            <td>FEC状态</td>
+		            <td id='fec_status'></td>
+	            </tr>
+           </tbody>
+        </table>
+		<br><br>
+		<label><b>链路性能统计</b></label>
+		<br><br>
+		<table width="100%" cellspacing="0" cellpadding="3px" border="1px">
+            <tbody>
+            	<tr>
+					<td width="38%">PON口发包数</td>
+					<td width="62%" id="pon_send_pack"></td>
+	            </tr>
+	            <tr>
+		            <td>PON口收包数</td>
+		            <td id="pon_recv_pack"></td>
+	            </tr>
+	            <tr>
+		            <td>PON口接收字节</td>
+		            <td id="pon_recv_byte"></td>
+	            </tr>
+	            <tr>
+		            <td>PON口发送字节</td>
+		            <td id="pon_send_byte"></td>
+	            </tr>
+	            <tr>
+		            <td>发送光功率(dBm)</td>
+		            <td id="send_power"></td>
+	            </tr>
+	            <tr>
+		            <td>接收光功率(dBm)</td>
+		            <td id="recv_power"></td>
+	            </tr>
+	            <tr>
+		            <td>工作电压(V)</td>
+		            <td id="votage"></td>
+	            </tr>
+	            <tr>
+		            <td>偏置电流(mA)</td>
+		            <td id="current"></td>
+	            </tr>
+	            <tr>
+		            <td>工作温度(℃)</td>
+		            <td id="tempreature"></td>
+	            </tr>
+	        </tbody>
+	    </table>
+    </form>
+		
+</body>
+</html>

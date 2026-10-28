@@ -1,0 +1,15 @@
+{
+	"adv_power_config_prompt":"On this page, you can set energy saving for the device.",
+	"energy_saving_title":"Energy Saving Configuration",
+	"enable_service_title":"Enable Services in Battery Mode",
+	"enable_energy_saving":"Enable Energy Saving",
+	"service":"Service",
+	"usb":"USB",
+	"lan":"LAN",
+	"wlan":"WLAN",
+	"voice":"Voice",
+	"remote_management":"Remote Management",
+	"adv_apply":"Apply",
+	"adv_cancel":"Cancel"
+}
+

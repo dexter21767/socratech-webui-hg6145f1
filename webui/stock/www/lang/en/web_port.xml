@@ -1,0 +1,12 @@
+{
+  "webport_Prompt":"On this page, you could configure web communication port(HTTP), and restart to be effective.",
+  "web_portTitle":"WEB Valid Communication Port",
+  "web_portchangeTitle":"WEB Communication Port You Modified",
+  "web_portchangeTips":"(Please input 1024-65535 or 80)",
+  "Change_confirm":"The port you have modifyed to be effective after reboot.",
+  "web_portIllegalAlert":"Please input 1024-65535 or 80!",
+  "web_PortNullAlert":"Please input a value of the port!",
+  "webport_apply":"Apply",
+  "webport_cancel":"Cancel"
+} 
+

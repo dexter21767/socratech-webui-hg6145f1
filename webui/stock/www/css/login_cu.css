@@ -1,0 +1,56 @@
+/* CSS Document */
+
+body{
+	margin: 0px;
+	background-color: #EFF1EE;
+	text-align:center;
+}
+
+.button_div{
+	height: 26px; 
+	width: 81px; 
+	float: left; 
+	cursor: pointer; 
+	border-radius: 8px;
+	display:inline;
+}
+
+.input_text
+{
+	margin-left: 612px;
+	width: 100px; 
+	height: 20px; 
+	border: 0px;
+	padding: 0px;
+}
+
+.input_text_admin
+{
+	margin-left: 562px;
+	width: 100px; 
+	height: 20px; 
+	border: 0px;
+	padding: 0px;
+}
+
+#login_div
+{
+	width: 935px;
+	height: 417px;
+	margin: auto;
+	margin-top: 100px;
+	text-align: left;
+	background-image: url(../image/cu_userlogin.jpg);
+	background-repeat: no-repeat;
+}
+
+#login_div_admin
+{
+	width: 950px;
+	height: 500px;
+	margin: auto;
+	margin-top: 100px;
+	text-align: left;
+	background-image: url(../image/cu_adminlogin.jpg);
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,12 @@
+{
+  "localmanagement_Prompt":"En esta página, puede habilitar/deshabilitar el acceso por telnet y web.",
+  "localmanagement_enable":"Habilitar",
+  "localmanagement_disable":"Deshabilitar",
+  "localmanagement_apply":"Aplicar",
+  "localmanagement_cancel":"Cancelar",
+  "lan_telnet_title":"Acceso Telnet por LAN",
+  "wan_telnet_title":"Acceso Telnet por WAN",
+  "lan_web_title":"Acceso Web por LAN",
+  "wan_web_title":"Acceso Web por WAN",
+  "lan_web_disable_tips":"Si desactiva el acceso Web por LAN, no podrá acceder a WEB a través del lado LAN."
+}

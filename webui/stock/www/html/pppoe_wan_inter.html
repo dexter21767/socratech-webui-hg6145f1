@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+				document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/pppoe_wan_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script> 
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<style type="text/css">
+	    .main_item_error_hint {color: red; clear: both;}
+	    .input_text {width: 124px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="pppoe_wan_prompt">pppoe_wan_prompt</font></p>
+		</div>
+	    </br>
+		<form id="pppoe_wan_list_form" method="post">		
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="6"><font i18n="pppoe_wan_title">pppoe_wan_title</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="wan_id">wan_id</font></td>
+					<td width="40%" align='center'><font i18n="WAN_nameTitle">WAN_nameTitle</font></td>
+					<td width="20%" align='center'><font i18n="WAN_VIDtitle">WAN_VIDtitle</font></td>
+					<td width="20%" align='center'><font i18n="WAN_ipmode">WAN_ipmode</font></td>
+					<td width="10%" align='center'></td>
+				</tr>
+				<tbody id='pppoe_wan_list' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content" id = "pppoe_wan_config_form" >
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="inet_user">inet_user</font></div><!-- >pppoe模式设置用户名<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="WanUserName" name="WanUserName_text" 
+						style="width : 200px"/>
+					</div>
+					<div id="main_content-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="inet_password">inet_password</font></div><!-- >pppoe模式设置密码<-->
+					<div class="main_item_content">
+						<input type="text" class="input_text fh-text-security" autocomplete="off" id="POED" name="POED" style="width : 200px" oncopy="return false"/>
+					</div>
+					<div id="main_content-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="inet_apply" class="input_button" i18n="inet_apply" i18n-set="value" onclick="save_apply()"/>
+						<input type="button" id="inet_cancel" class="input_button" i18n="inet_cancel" i18n-set="value" onclick="window.location.reload();"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+	<script type="text/javascript">
+		// setInterval(function(){
+		//     if($("#ddns_password").length > 0){
+		// 		if(!$("#ddns_password").hasClass("fh-text-security")){
+		// 			$("#ddns_password").addClass("fh-text-security");
+		// 		}
+		// 	}else{
+		// 		window.location.reload();
+		// 	}
+		// }, 10);
+	</script>
+</html>
