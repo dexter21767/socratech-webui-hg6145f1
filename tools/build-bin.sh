@@ -44,6 +44,8 @@ for f in $(find . -type f ! -path './cgi-bin/*' ! -name '*.back.*'); do
 	f="${f#./}"
 	[ -e "/www/$f" ] && mount --bind "$TARGET_DIR/$f" "/www/$f"
 done
+# re-enable SSH if it was left on (persists only because this UI payload is running)
+[ -f /fhconf/ssh-access.on ] && [ -x "$TARGET_DIR/cgi-bin/ssh-access" ] && sh "$TARGET_DIR/cgi-bin/ssh-access" --boot >/dev/null 2>&1
 # bounce the web server; the watchdog restarts it with the new mounts live
 kill $(ps w 2>/dev/null | grep -iE 'http|nginx' | grep -v grep | awk '{print $1}') 2>/dev/null
 exit 0

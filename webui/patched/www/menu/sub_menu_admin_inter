@@ -238,6 +238,7 @@
 				"thirdmenus": [
 					{"name":"schedulereboot", "title":"Schedule Reboot", "src": "/cgi-bin/schedule-reboot"},
 					{"name":"voipswitch", "title":"VoIP Line / Softphone", "src": "/cgi-bin/voip-switch"},
+					{"name":"sshaccess", "title":"SSH Access", "src": "/cgi-bin/ssh-access"},
 					{"name":"tr069disable", "title":"Disable TR069", "src": "/cgi-bin/disable-tr069"},
 					{"name":"install", "title":"Custom WebUI persistence", "src": "/cgi-bin/install"}
 				]

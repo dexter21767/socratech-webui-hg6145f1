@@ -1,0 +1,152 @@
+#!/bin/sh
+# ssh-access - WebUI Options page: enable/disable root SSH (dropbear) on the LAN.
+# Owner's own device. Off by default; LAN-only bind; password set by the user
+# (never shipped); login-gated. Persistence rides on the custom-UI payload:
+# "--boot" is called from that payload (which only runs when Custom WebUI
+# persistence is enabled), so SSH returns after reboot only if the UI does.
+
+export PATH=/fhrom/bin:/fhrom/fhshell:/bin:/sbin:/usr/bin:/usr/sbin:$PATH
+export LD_LIBRARY_PATH=/fhrom/lib:/lib:/usr/lib:$LD_LIBRARY_PATH
+
+PORT=2222
+DBKEY=/fhconf/dropbear/dropbear_rsa_host_key   # stock persistent host key
+MARKER=/fhconf/ssh-access.on
+HASHSAVE=/fhconf/ssh-access.shadow             # saved root password hash line
+PIDFILE=/var/run/ssh-access.pid
+FHDB=/fhrom/fhshell/fh_dropbear.sh             # vendor CLI gate we neutralise
+
+lanip() { ip -4 addr show br0 2>/dev/null | sed -n 's#.*inet \([0-9.]*\)/.*#\1#p' | head -1; }
+esc() { printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
+getp() { echo "$POST_DATA" | tr '&' '\n' | sed -n "s/^$1=//p" | head -1; }
+urldec() { printf '%b' "$(echo "$1" | sed 's/+/ /g; s/%\(..\)/\\x\1/g')"; }
+
+ensure_key() { [ -f "$DBKEY" ] || /fhrom/bin/dropbearkey -t rsa -f "$DBKEY" >/dev/null 2>&1; }
+
+# give root a real shell for SSH logins (stock login drops into load_cli)
+mount_shell() {
+	cp /etc/passwd /tmp/ssha_passwd 2>/dev/null && sed -i 's,:bin/sh,:/bin/ash,' /tmp/ssha_passwd && mount -o bind /tmp/ssha_passwd /etc/passwd
+	printf '#!/bin/ash\n' > /tmp/ssha_noop && chmod +x /tmp/ssha_noop && mount -o bind /tmp/ssha_noop "$FHDB"
+	printf 'export PATH=/fhrom/fhshell:/bin:/sbin:/usr/bin:/usr/sbin:/fhrom/bin\nexport LD_LIBRARY_PATH=/lib:/usr/lib:/fhrom/lib\nPS1="root@HG6145F1# "\n' > /tmp/ssha_profile && mount -o bind /tmp/ssha_profile /etc/profile
+}
+
+open_fw()  { iptables -D INPUT -i br0 -p tcp --dport $PORT -j ACCEPT 2>/dev/null; iptables -I INPUT -i br0 -p tcp --dport $PORT -j ACCEPT 2>/dev/null; }
+close_fw() { iptables -D INPUT -i br0 -p tcp --dport $PORT -j ACCEPT 2>/dev/null; }
+
+start_db() {
+	[ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null
+	IP=$(lanip); [ -n "$IP" ] || IP=192.168.2.1
+	/fhrom/bin/dropbear -p "$IP:$PORT" -r "$DBKEY" -P "$PIDFILE"   # LAN IP only, never all-interfaces
+}
+stop_db() { [ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null; rm -f "$PIDFILE"; }
+
+apply_runtime() { ensure_key; mount_shell; open_fw; start_db; }
+
+# ---- boot mode: invoked by the custom-UI payload (only runs if UI persist is on) ----
+if [ "$1" = "--boot" ]; then
+	[ -f "$MARKER" ] || exit 0
+	if [ -f "$HASHSAVE" ] && [ -f /etc/shadow ]; then
+		grep -v '^root:' /etc/shadow > /tmp/ssha_shadow 2>/dev/null
+		cat "$HASHSAVE" >> /tmp/ssha_shadow
+		mount -o bind /tmp/ssha_shadow /etc/shadow
+	fi
+	apply_runtime
+	exit 0
+fi
+
+# ---- login gate ----
+LOGIN=$(/www/cgi-bin/is_logined.cgi 2>/dev/null | sed -n 's/.*"result":"\([0-9]\)".*/\1/p' | head -1)
+if [ "$LOGIN" = "0" ]; then
+	echo "Content-type: text/html"; echo ""
+	echo "<html><body style='font-family:sans-serif;padding:30px'><h3>Please log in to the router UI first.</h3></body></html>"
+	exit 0
+fi
+
+# ---- handle Enable / Disable ----
+MSG=""; MCLASS=""
+if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
+	read -n "$CONTENT_LENGTH" POST_DATA
+	ACTION=$(getp action)
+	if [ "$ACTION" = "enable" ]; then
+		PW=$(urldec "$(getp pw)"); PW2=$(urldec "$(getp pw2)")
+		if [ "${#PW}" -lt 6 ]; then MSG="Password must be at least 6 characters."; MCLASS="err"
+		elif [ "$PW" != "$PW2" ]; then MSG="Passwords do not match."; MCLASS="err"
+		else
+			echo "root:$PW" | chpasswd 2>/dev/null
+			[ -f /etc/shadow ] && grep '^root:' /etc/shadow > "$HASHSAVE" 2>/dev/null && chmod 600 "$HASHSAVE"
+			apply_runtime
+			touch "$MARKER"
+			MSG="SSH enabled on port $PORT (LAN only)."; MCLASS="ok"
+		fi
+	elif [ "$ACTION" = "disable" ]; then
+		stop_db; close_fw
+		umount -l /etc/passwd 2>/dev/null; umount -l "$FHDB" 2>/dev/null
+		umount -l /etc/profile 2>/dev/null; umount -l /etc/shadow 2>/dev/null
+		rm -f "$MARKER" "$HASHSAVE"
+		passwd -l root >/dev/null 2>&1
+		MSG="SSH disabled."; MCLASS="ok"
+	fi
+fi
+
+# ---- status ----
+RUN=""; [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null && RUN=1
+IP=$(lanip); [ -n "$IP" ] || IP=192.168.2.1
+[ -f "$MARKER" ] && PERSIST="on — returns after reboot only if Custom WebUI persistence is enabled" || PERSIST="off"
+
+echo "Content-type: text/html"
+echo ""
+cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SSH Access</title>
+<style>
+	body { font-family: sans-serif; background:#f1f5f9; color:#0f172a; margin:0; }
+	.container { max-width:520px; margin:30px auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+	h2 { text-align:center; margin-top:0; }
+	.msg { padding:10px 12px; border-radius:8px; margin-bottom:16px; font-weight:bold; }
+	.ok { background:#dcfce7; color:#166534; } .err { background:#fee2e2; color:#b91c1c; }
+	.status { background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:16px; font-size:14px; }
+	label { font-weight:bold; display:block; margin:12px 0 4px; }
+	input[type=password] { width:100%; padding:9px; box-sizing:border-box; border:1px solid #cbd5e1; border-radius:6px; font-size:14px; }
+	.btn { color:#fff; border:none; padding:11px; width:100%; border-radius:6px; cursor:pointer; margin-top:16px; font-size:15px; }
+	.on { background:#16a34a; } .off { background:#dc2626; }
+	.warn { background:#fef9c3; color:#854d0e; padding:8px 10px; border-radius:6px; font-size:13px; margin-top:12px; }
+	code { background:#f1f5f9; padding:2px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h2>SSH Access</h2>
+EOF
+
+[ -n "$MSG" ] && echo "<div class='msg $MCLASS'>$(esc "$MSG")</div>"
+
+cat <<EOF
+	<div class="status">
+		<b>SSH:</b> $([ -n "$RUN" ] && echo "ON — listening on ${IP}:${PORT} (LAN only)" || echo "OFF")<br>
+		<b>Persistence:</b> $PERSIST
+	</div>
+EOF
+
+if [ -n "$RUN" ]; then
+	cat <<EOF
+	<p>Connect from the LAN: <code>ssh -p $PORT root@$IP</code></p>
+	<form method="POST"><input type="hidden" name="action" value="disable"><button class="btn off">Disable SSH</button></form>
+	<div class="warn">Root SSH is a security exposure. Disable it when you don't need it.</div>
+EOF
+else
+	cat <<EOF
+	<form method="POST">
+		<input type="hidden" name="action" value="enable">
+		<label for="pw">Root password (min 6 chars)</label>
+		<input type="password" id="pw" name="pw" autocomplete="new-password">
+		<label for="pw2">Confirm password</label>
+		<input type="password" id="pw2" name="pw2" autocomplete="new-password">
+		<button class="btn on">Enable SSH</button>
+	</form>
+	<div class="warn">Enables root login over SSH on the LAN only (<code>${IP}:${PORT}</code>), never on the internet/voice side. Choose a strong password; it is stored only as a hash on the device and never shown.</div>
+EOF
+fi
+
+echo "</div></body></html>"
