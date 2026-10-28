@@ -40,6 +40,8 @@ cat <<'EOF'
 		document.title = document.title.replace(/_point_/g, '.');
 	}
 	document.addEventListener('DOMContentLoaded', unpoint);
+	// pages re-run this after setting data-i18n on content they add later
+	window.i18nApply = function(){};
 	if (lang === 'en') return;
 
 	var dict = null;
@@ -73,6 +75,7 @@ cat <<'EOF'
 			else el.textContent = fill(t, el, false);
 		}
 	}
+	window.i18nApply = apply;
 	document.addEventListener('DOMContentLoaded', apply);
 })();
 </script>

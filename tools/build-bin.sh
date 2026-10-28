@@ -22,11 +22,18 @@ WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 mkdir -p "$(dirname "$OUT")"
 
-# 1) deterministic overlay archive (stable bytes -> stable CRC for a given tree)
-tar --numeric-owner --owner=0 --group=0 --sort=name --mtime='2026-01-01 00:00:00' \
-    -czf "$WORK/overlay.tar.gz" -C "$OVERLAY" .
+# 1) stage the overlay and stamp the build date (UTC, or SOURCE_DATE_EPOCH) into
+#    cgi-bin/_about.conf for WebUI Options > Info
+cp -a "$OVERLAY" "$WORK/overlay"
+BUILD_DATE=$(date -u ${SOURCE_DATE_EPOCH:+-d "@$SOURCE_DATE_EPOCH"} +%Y-%m-%d)
+[ -f "$WORK/overlay/cgi-bin/_about.conf" ] && \
+    sed -i "s|^BUILD_DATE=.*|BUILD_DATE=\"$BUILD_DATE\"|" "$WORK/overlay/cgi-bin/_about.conf"
 
-# 2) self-extracting shell payload (runs on the device as /var/patch_script)
+# 2) deterministic overlay archive (same tree + build date -> same bytes/CRC)
+tar --numeric-owner --owner=0 --group=0 --sort=name --mtime='2026-01-01 00:00:00' \
+    -czf "$WORK/overlay.tar.gz" -C "$WORK/overlay" .
+
+# 3) self-extracting shell payload (runs on the device as /var/patch_script)
 cat > "$WORK/payload.sh" <<'HDR'
 #!/bin/sh
 # custom-webui patch payload. Extracts the overlay and binds it over /www.
@@ -55,6 +62,6 @@ PAYLOAD:
 HDR
 base64 -w0 "$WORK/overlay.tar.gz" >> "$WORK/payload.sh"
 
-# 3) wrap in the FiberHome upgrade header + init-0 CRC32
+# 4) wrap in the FiberHome upgrade header + init-0 CRC32
 python3 "$HERE/tools/pack_firmware.py" "$WORK/payload.sh" "$OUT"
 echo "Built $OUT ($(wc -c < "$OUT") bytes) from $OVERLAY"
