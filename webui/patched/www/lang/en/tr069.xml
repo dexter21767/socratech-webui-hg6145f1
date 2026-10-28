@@ -1,0 +1,63 @@
+{
+  "tr069_basic_apply":"Apply",
+  "tr069_basic_cancel":"Cancel",
+
+  "tr069_title":"TR069 Basic Settings",
+  "tr069_prompt":"On this page, you could configure the url, username, password, connectionRequestUsername, connectionRequestPassword of TR069 basic settings.",
+  "tr069_prompt_readonly":"You could view the url, username, password, connectionRequestUsername, connectionRequestPassword of TR069 basic settings here.",
+  "tr069_prompt_cfgfile":"On this page, you could configure TR069 effective configuration.",
+
+  "tr069_basic":" TR069 Basic",
+  
+  "tr069url_title":"URL",
+  "tr069userName_title":"Username",
+  "tr069password_title":"Password",
+  "tr069conReqUsr_title":"Connection Request Username",
+  "tr069conReqPwd_title":"Connection Request Password",
+  
+  "tr069_noURL":"Please enter URL!",
+  "tr069_urlillegal":"The URL is illegal!",
+  "tr069_nousername":"Please enter username!",
+  "tr069_noRequestUsername":"Please enter connection Request Username!",
+  "tr069_noinforminterval":"Please enter tr069 inform interval!",
+
+  "tr069InformEnable_title":"Inform Enable",
+  "tr069InformInterval_title":"Inform Interval",
+  "tr069Enable_title":"TR069 Enable",
+  "tr069CertificateEnable_title":"Enable Certificate",
+  
+  "tr069_enable":"Enable",
+  "tr069_disable":"Disable",
+  
+  "tr069auth_Title":"Connection Request Authentication",
+  "tr069_getRPCMethods":"GetRPCMethods",
+  "ConnectionRequestPath_title":"Connection Request Path",
+  "ConnectionRequestPort_title":"Connection Request Port",
+  "InformInterval_alert":"Please input legal TR069 Inform Interval(1 - 2147483647)! ",
+  "Please_enter_valid_port_value":"Please enter valid port value: 1-65535!",
+  "Please_enter_connectionRequestPassword":"Please enter connection Request Password!",
+  "Please_input_path":"Please input path!",
+  "Please_input_password!":"Please input password!",
+  
+  "certi_prompt":"You could import TR069 certificate.",
+  "certi_title":"TR069 Certificate Import",
+  "certi_import":"Import",
+  "certi_load":"Loading ",
+  "certi_fileIllegalAlert":"Please select the correct certificate file!",
+  "certi_complete":"Certificate import complete!",
+
+  "tr069_inform_prompt":"On this page, you could trigger manual inform of TR069.",
+  "NoWan_alert":"TR069 WAN does not exist!",
+  "NoIP_alert":"TR069 WAN has no IP!",
+  "Timeout_alert":"Inform timeout!",
+  "InformSuccess_infor":"Inform success! Inform time:",
+  "tr069ManualTriggerInform_title":"TR069 Manual Inform",
+  "ManualTriggerInform":"Inform",
+
+  "remote_manage_prompt":"On this page, you can view the remote-connection status and service provisioning status.",
+  "ur_status_title":"Unsolicited Report Status",
+  "asc_status_title":"ACS Connection Status",
+  "sp_status_title":"Service Provisioning Status"
+  
+}
+

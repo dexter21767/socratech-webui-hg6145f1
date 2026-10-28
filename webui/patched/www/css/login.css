@@ -1,0 +1,127 @@
+/* CSS Document */
+
+/* stylesheet for login page */
+body{
+	padding: 0 auto; 
+	margin: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+::-ms-clear,::-ms-reveal{
+  display: none;
+}
+
+.wraplogin{
+	position:absolute;
+	top:20%;
+	left:30%;
+	width:40%;
+	width:500px;
+	height:275px;	
+	background:#427594;
+}
+
+#top{
+	position:relative;
+	width:790px;
+	height:70px;
+	z-index: 5;
+	background-color:#022556;
+	background-image: url(../image/top_img_20K.jpg);
+	background-repeat: no-repeat;
+}
+
+.logincenter {
+	display: block;
+	height: 238px;
+	width: 100%;
+}
+
+.login_word {
+	height:211px;
+	width:438px;
+	color:#fff;
+	position: relative;
+	top: 10px;
+	left: 125px;
+}
+
+.login_word2 {
+	height:180px;
+	width:438px;
+	color:#fff;
+	position: relative;
+	top: 10px;
+	left: 125px;
+}
+
+.title_index{
+	position:relative;
+	width:430px;
+	font-size:18px;
+	font-weight:bold;
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+	font-family: Roboto;
+}
+
+.content_word {
+	position:relative;
+	width:430px;
+	font-size: 13px;
+	list-style-type: none;
+	margin:0px;
+	padding:0px;
+	font-family: Roboto;
+}
+
+.w_text {
+	display:block;
+	width:94%;
+	margin:0 auto;
+	color:#FFFFFF;
+	font-size:12px;
+	line-height:20px;
+	clear:both;
+	height: 100px;
+	position: relative;
+	top: 20px;
+}
+
+.board {
+	width: 150px;
+	font-family: Roboto;
+	font-size: 12px;
+}
+
+.login_button {
+	display:block;
+	height:30px;
+	float: left;
+	width:160px;
+	margin-left: 20px;
+}
+.login_button2 {
+	display:block;
+	height:30px;
+	float: left;
+	width:340px;
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

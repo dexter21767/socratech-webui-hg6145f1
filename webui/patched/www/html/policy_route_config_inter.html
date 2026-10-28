@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/policy_route_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("route_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="policy_route_config_prompt">policy_route_config_prompt</font></p>
+		</div>
+		<br/>
+		<form id="policy_list_form" method="post">
+			<div class="main_content">
+				<div style="float:right">
+					<input type="button" i18n="app_add" i18n-set="value" id="app_add" class="input_button" onClick="addfilter()">
+					<input type="button" i18n="app_delete" i18n-set="value" id="app_delete" class="input_button" onClick="click_remove()">
+					<br/>
+				</div>
+			</div>
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="policy_list_title">policy_list_title</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="40%" align='center'><font i18n="vendor_id">vendor_id</font></td>
+					<td width="55%" align='center'><font i18n="wan_name">wan_name</font></td>
+					<td width="5%" align='center'></td>
+				</tr>
+				<tbody id='policy_list' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id = "policy_list_config" style = "display:none">
+				<div class="main_item">
+					<div class="main_item_name" style="width: 15%"><font i18n="vendor_id">vendor_id</font></div>
+					<div class="main_item_content" style="width: calc(85% - 3px);">
+						<input type="text"  class="input_text" autocomplete="off" id="vendor_id" name="vendor_id" style="width: 150px"/>
+						<strong style="color:#FF0033">*</strong><span i18n="vendor_tips">(Option 60 character string: *VendorID*, *VendorID*, *VendorID*, or VendorID)</span>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name" style="width: 15%"><font i18n="wan_name">wan_name</font></div>
+					<div class="main_item_content" style="width: calc(85% - 3px);">
+						<select id="policy_wan" style="width: 35%"></select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="policy_apply" class="input_button" i18n="app_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="policy_cancel" class="input_button" i18n="app_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

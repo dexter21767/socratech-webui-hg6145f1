@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/traceroute_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="tracert_prompt">tracert_prompt</font></p>
+		</div>
+		<br>
+		<form id="traceroute_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ping_ip_title">ping_ip_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width: 180px" autocomplete="off" id="address" name="address"/>
+					</div>
+					<div id="traceroute-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="diagnosis_interface_title">diagnosis_interface_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_connect" name="wan_connect" class="main_select" style="width: 202px">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="IP_Version">IP_Version</font></div>
+					<div class="main_item_content">
+						<select id="ip_version" name="ip_version" class="main_select" style="width: 182px">
+							<option value="1">IPv4</option>
+							<option value="2">IPv6</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="tracert_btn" onclick="saveApply()"/>
+					</div>
+				</div>
+			</br>
+			</div>
+			<textarea rows="20" cols="80" readonly="readonly" id="tracert_text" style="max-width: 690px"></textarea>
+		</form>
+	</body>
+</html>

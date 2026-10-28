@@ -1,0 +1,67 @@
+{
+	"status": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "status_overview", "title":"Device_Information", 
+				"thirdmenus": [
+					{"name":"status_overview_ip", "title":"Device_Information", "src": "stateOverview_inter.html"}
+				]
+			},
+			{"name": "status_wifi", "title":"wireless_state", 
+				"thirdmenus": [
+					{"name":"status_wifi_info", "title":"wireless_state", "src": "wifi_info_inter.html"},
+					{"name":"status_wifi_info5g", "title":"5Gwifistate", "src": "wifi_info_inter5g.html"},
+					{"name":"status_wifi_list", "title":"wifi_mac_list", "src": "wifi_list_inter.html"},
+					{"name":"status_topo_info", "title":"wifi_topo_list", "src": "topo.html"}
+				]
+			},
+			{"name": "status_wan", "title":"wan_state", 
+				"thirdmenus": [
+					{"name":"status_wan_ip", "title":"wan_state", "src": "ipconInfo_inter.html"}
+				]
+			},
+			{"name": "status_lan", "title":"lan_state", 
+				"thirdmenus": [
+					{"name":"status_lan_lan", "title":"lan_state", "src": "statslan_inter.html"},
+					{"name":"status_dhcp_userlist", "title":"dhcp_userlist", "src": "dhcp_user_list_inter.html"}
+				]
+			},
+			{"name": "status_pon", "title":"Optical_Power", 
+				"thirdmenus": [
+					{"name":"status_pon_link", "title":"Optical_Power", "src": "pon_link_info_inter.html"}
+				]
+			}
+		]
+	},
+	"network": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "network_wifi", "title":"wlan_settings",
+				"thirdmenus": [
+					{"name":"network_wifi_multiAp", "title":"Multi-AP", "src": "multi_ap_enable.html"},
+					{"name":"network_wifi_band_steering", "title":"BandSteering", "src": "band_steering.html"},
+					{"name":"network_wifi_base", "title":"basic", "src": "wlanBasicSettings_inter.html"},
+					{"name":"network_wifi_advance", "title":"security", "src": "wlanAdvancedSettings_inter.html"},
+					{"name":"network_wifi_base5G", "title":"5Gbasic", "src": "wlanBasicSettings_5G_inter.html"},
+					{"name":"network_wifi_advance5G", "title":"5Gsecurity", "src": "wlanAdvancedSettings_5G_inter.html"},
+					{"name":"network_wifi_wps", "title":"WPS", "src": "wlanwps_inter.html"}
+				]
+			}
+		]
+	},
+	"manage": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "manage_user", "title":"user_admin",
+				"thirdmenus": [
+					{"name":"manage_user_management", "title":"user_account_admin", "src": "user_management_inter.html"}
+				]
+			},
+			{"name": "manage_device", "title":"device_admin",
+				"thirdmenus": [
+					{"name":"manage_device_reboot", "title":"reboot", "src": "reboot.html"}
+				]
+			}
+		]
+	}
+}

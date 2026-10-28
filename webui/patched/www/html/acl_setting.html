@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/acl_setting.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="acl_EnablePrompt">acl_EnablePrompt</font></p>
+		</div>
+	    </br>
+		<fh-fo-rm id="acl_list_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="acl_Enable_title">acl_Enable_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="acl_enable" name="acl_enable" value="1" /><font i18n="acl_Enable">acl_Enable</font>&nbsp;&nbsp;
+						<input type="radio" id="acl_disable" name="acl_enable" value="0" /><font i18n="acl_Disable">acl_Disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="acl_enable_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="EnableApply()"/>
+						<input type="button" id="acl_enable_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+					<div style="float:right">
+						<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" id="fw_add" class="input_button" onClick="addfilter()">
+						<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+			  			<input type="button" i18n="firewall_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+					<br/>
+				</div>
+			</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="6"><font i18n="fw_aclListHead">fw_aclListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="2%" align='center'><font i18n="fw_aclID">fw_aclID</font></td>
+					<td width="12%" align='center'><font i18n="fw_acl_active">fw_acl_active</font></td>
+					<td width="26%" align='center'><font i18n="fw_sourceIP">fw_sourceIP</font></td>
+					<td width="10%" align='center'><font i18n="fw_acl_protocolTitle">fw_acl_protocolTitle</font></td>
+					<td width="10%" align='center' id="acl_port_td" style="display:none"><font i18n="acl_portTitle">acl_portTitle</font></td>
+					<td width="20%" align='center'><font i18n="fw_acl_interface">fw_acl_interface</font></td>
+					<td width="26%" align='center' id="acl_bind_interface_td" style="display:none"><font i18n="fw_acl_bind_interface">fw_acl_bind_interface</font></td>
+					<td width="4%" align='center' id="fw_remove_flag_title"></td>		
+				</tr>
+				<tbody id='ipfilter_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content" id = "fw_config_form" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_acl_active">fw_acl_active</font></div>
+					<div class="main_item_content">
+						<select id="acl_active" name="acl_active"  style="width:100px">
+						  <option value="1" i18n="acl_yes">Yes</option>
+						  <option value="0" i18n="acl_no">No</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_srcIPTitle">fw_srcIPTitle</font></div>
+					<div class="main_item_content" id="Other_IP">
+						<input type="text"  class="input_text" autocomplete="off" id="acl_sourceIPStart" name="SourceIPStart" style="width:150px"/> --
+						<input type="text"  class="input_text" autocomplete="off" id="acl_sourceIPEnd" name="SourceIPEnd" style="width:150px"/>
+					</div>
+					<div class="main_item_content" id="PLDT_IP" style="display: none;">
+						<input type="text"  class="input_text" autocomplete="off" id="PLDT_acl_sourceIPStart" name="PLDT_acl_sourceIPStart" style="width:150px"/>(IP) / 
+						<input type="text"  class="input_text" autocomplete="off" id="PLDT_acl_sourceIPEnd" name="PLDT_acl_sourceIPEnd" style="width:30px"/>
+						(8-32)
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_acl_interface">fw_acl_interface</font></div>
+					<div class="main_item_content">
+						<select id="acl_direction" style="width:100px">
+						  <option value= "1" >WAN</option>
+						  <option value= "0" >LAN</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id = "acl_bind_interface" style="display:none">
+					<div class="main_item_name"><font i18n="fw_acl_bind_interface">fw_acl_bind_interface</font></div>
+					<div class="main_item_content">
+						<select id="acl_bind_direction" style="width:260px">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_acl_protocolTitle">fw_acl_protocolTitle</font></div>
+					<div class="main_item_content">
+						<select id="acl_protocol"  style="width:100px">
+						  <option value="ALL">ALL</option>
+						  <option value="HTTP">HTTP</option>
+						  <option value="HTTPS">HTTPS</option>
+						  <option value="Telnet">Telnet</option>
+						  <option value="ICMP">ICMP</option>
+						  <option value="SNMP">SNMP</option>
+						  <option value="FTP">FTP</option>
+						  <option value="SSH">SSH</option>
+						</select>&nbsp;&nbsp;&nbsp;
+						<font i18n="acl_portTitle" id="acl_port_font" style="display:none">acl_portTitle</font>
+						<input type="text"  class="input_text" style="display:none;width:100px" autocomplete="off" id="acl_port" name="acl_port"/><span id="acl_port_span" style="display:none" class="redcolorfont">*</span>&nbsp;&nbsp;<font style="color: gray;display:none" id="port_tips_font" i18n="port_tips">port_tips</font> 
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="firewall_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="firewall_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

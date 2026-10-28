@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/oltauth.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">宽带识别码设置</p>
+			<p class="main_header_hint">宽带识别码功能用于新设备的注册及下发，请不要更改，如果修改宽带识别码导致业务不正常，请重启网关。</p>
+		</div>
+		<form id="loid_form">
+			<div id="register_div22">
+				<div class="main_content">
+					<div class="main_item">
+						<div class="main_item_name">宽带识别码</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" maxlength="24" autocomplete="off" name="loid" id="loid"/>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">宽带识别码认证使用密码</div>
+						<div class="main_item_content">
+							<input type="checkbox" id="Loidpwd_checkbox" onclick="enablePassword()"/>&nbsp;
+						</div>
+					</div>
+					<div class="main_item" id="inputPassword">
+						<div class="main_item_name">密码</div>
+						<div class="main_item_content">
+							<input type="password" class="input_text" autocomplete="off" name="password" id="password"/>&nbsp;&nbsp;&nbsp;&nbsp;<span style="align:right;color:red;" width=80 class="trad">如无密码请留空!</span>
+						</div>
+					</div>
+				</div>
+				<div class="main_save">
+					<input type="button" class="input_button" id="reg_button" value="保存"/>
+				</div>
+			</div>
+		
+			<div id="progress_div22" style="display:none">
+				<div class="progress_container"> 
+					<div id="progress_bar" style="width:0%;"></div>  
+				</div>
+				<div id="progress_hint">正在注册OLT</div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="align:left;color:blue;" width=200 class="return_tologin">返   回</span>
+			</div>
+		</form>
+	</body>
+</html>

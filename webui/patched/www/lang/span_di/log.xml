@@ -1,0 +1,38 @@
+{
+  "log_prompt":"En esta página, puede ver los registros.",
+  "fault_info_prompt":"En esta página, puede recopilar y ver la información sobre las fallas.",
+  "start_btn_text": "Iniciar",
+  "syslog_prompt":"En esta página, puede configurar y ver los registros del sistema.",
+  "log_download":"Descargar",
+  "log_listHead":"Información de registros",
+  "log_downloaderroralert":"¡Error de descarga!",
+
+  "log_apply":"Aplicar",
+  "log_cancel":"Cancelar",
+  
+  "logcfg_prompt":"En esta página, puede configurar la habilitación/deshabilitación los registros web y los niveles de registro.",
+  "log_title":"REGISTRO",
+  "logEnableTitle":"Habilitar",
+  "logDisableTitle":"Deshabilitar",
+  "logLevelTitle":"Niveles de registros",
+  
+  "log_debugPrompt":"Puede ver los registros de depuración en esta página.",
+  "log_debugListHead":"Información de registro de depuración",
+  "log_enalbe": "Habilitar registro",
+  "log_level": "Niveles de registros",
+  "show_level": "Mostrar nivel",
+  "clear_log": "Borrar archivo de registro",
+  "download_log": "Descargar archivo de registro",
+  "refresh_log": "Actualizar",
+  "unknown_error_alert":"Error desconocido",
+
+  "remote_head":"Servidor Syslog remoto",
+  "remote_enableTitle":"Habilitar",
+  "remote_disableTitle":"Deshabilitar",
+  "remote_addressTitle":"Dirección del servidor remoto",
+  "invalid_data_alert":"Algún valor no es válido, ¡vuelva a intentarlo!",
+  "remote_portTitle":"Puerto de servidor remoto",
+  "remote_apply":"Aplicar",
+  "remote_cancel":"Cancelar"
+}
+

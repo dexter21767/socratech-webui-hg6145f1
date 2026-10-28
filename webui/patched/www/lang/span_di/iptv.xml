@@ -1,0 +1,26 @@
+{
+  "iptv_prompt":"En esta página, puede configurar las VLAN de Multicast",
+
+  "iptv_infoHead":"IPTV",
+  "iptv_vlanTitle":"Multicast VLAN",
+  "iptv_vlanTips":"(Ingrese el número 1 al 4094)",
+  
+  "iptv_apply":"Aplicar",
+  "iptv_cancel":"Cancelar",
+  "ipv4":"IPV4",
+  "ipv6":"IPV6",
+  "IGMP Snooping":"IGMP Snooping",
+  "IGMP Proxy":"IGMP Proxy",
+  "MLD Snooping":"MLD Snooping",
+  "MLD Proxy":"MLD Proxy",
+  "firewall_enable":"Habilitar",
+  "firewall_disable":"Deshabilitar",
+  "Multicast_Enable":"Conmutador de Multicast",
+  "iptv_vlanIllegalAlert":"El rango de VLAN's de Multicast es de 1 a 4094.",
+  "ipv4":"IPv4",
+  "ipv6":"IPv6",
+  "iptv_IGMPSnooping":"Habilitar IGMPSnooping",
+  "iptv_IGMPProxy":"Habilitar IGMP Proxy",
+  "iptv_MLDSnooping":"Habilitar MLD Snooping",
+  "iptv_MLDProxy":"Habilitar MLD Proxy"
+}

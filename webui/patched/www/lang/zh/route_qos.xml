@@ -1,0 +1,40 @@
+{
+  "pps_apply":"应用",
+  "pps_cancel":"取消",
+  "route_qos_prompt":"您可以在本页面配置路由QOS功能开关。",
+  "route_qos_title":"路由QOS",  
+  "qos_c_enable":"开启",
+  "qos_c_disable":"关闭",
+
+  "route_qosPrompt":"您可以在此页面配置路由QOS!",
+  "pf_add":"新增",
+  "pf_delete":"删除",
+  "pf_deleteAll":"删除所有",
+  "route_qosListHead":"Route QOS列表",
+  "qostypetitle":"类型",
+  "qosPrioritytitle":"优先级",
+  "qosprotocoltitle":"协议",
+  "qossrciptitle":"源IP",
+  "qossrcporttitle":"源端口",
+  "qosdisiptitle":"目的IP",
+  "qosdisporttitle":"目的端口",
+  "qoscontroltitle":"使能",
+   "qos_apply":"提交",
+  "qos_cancel":"取消",
+  
+  "pf_mostRulesAlert":"最多可创建6个规则！",
+  "pf_noRuleAlert":"没有已创建的规则，无法删除！",
+  "pf_noChooseAlert":"请先选定一个规则再执行删除!",
+  "priority_alert":"请输入优先级.",
+
+  "pf_ipIllegalAlert":"请输入有效IP!",
+  "pf_PortNullAlert":"请输入端口号!",
+  "pf_endPortTooSmallAlert":"结束端口号不能小于开始端口号!",
+  "pf_portIllegalAlert":"有效的端口范围是1-65535.",
+  "pf_PortNullAlert":"请输入有效的端口号!",
+  "pf_8021PriorityIllegalAlert":"有效优先级的范围是0 - 7!",
+  "pf_hscpPriorityIllegalAlert":"有效优先级的范围是0 - 63!",
+  "pf_deleteRuleConfirm":"您确定要删除选中的规则吗?"
+   
+}
+

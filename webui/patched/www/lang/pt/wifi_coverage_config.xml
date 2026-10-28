@@ -1,0 +1,15 @@
+{
+  "WifiCoverageConfig_prompt": "Nesta página você pode gerenciar a cobertura WiFi inteligente. Especificamente, você pode permitir que o ONT funcione com APs externos para construir uma rede WiFi e estender a cobertura WiFi.",
+  "ExternalAPListHead": "Lista de APs Externos",
+  "btn_apply": "Aplicar",
+  "btn_cancel": "Cancelar",
+  "no_title": "No.",
+  "device_model_title": "Modelo do dispositivo",
+  "serial_num_title": "Número de série",
+  "status_title": "Status",
+  "online_duration": "Duração on-line",
+  "time_out": "Tempo esgotado!",
+  "force_switching_value_invalid": "Erro no valor de comutação forçada, confirme o valor de comutação forçada entre -100 e -66.",
+  "conditioned_switching_value_invalid": "Erro no valor de comutação condicionada, confirme o valor de comutação condicionada entre -84 e -60.",
+  "config_status": "Status de configuração"
+}

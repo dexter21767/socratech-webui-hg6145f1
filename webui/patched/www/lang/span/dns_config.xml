@@ -1,0 +1,22 @@
+{
+	"dns_configPrompt": "En esta página, puede configurar la política para reenviar paquetes DNS en el lado LAN o en el lado SSID que no está vinculado al puerto WAN.",
+	"dns_template": "Plantilla DNS",
+	"dns_apply": "Aplicar",
+	"dns_cancel": "Cancelar",
+	"dns_search_listHead": "Configuración de la lista de búsqueda de DNS",
+	"static_dns_configHead": "Configuración de DNS estático",
+	"dns_searchPrompt": "En esta página, puede configurar la lista de búsqueda de DNS. Se sugiere que la configuración del nombre de la WAN sea una prioridad máxima, si tanto el nombre de la WAN como el servidor DNS están configurados, el nombre de la WAN tendrá efecto.",
+	"static_dnsPrompt": "En esta página, puede configurar el DNS estático.",
+	"fw_filterID": "ID",
+	"domain_name": "Nombre de dominio",
+	"ipaddr": "IP Address",
+	"wan_name": "Nombre de WAN",
+	"dns_server": "Servidor DNS",
+	"illegal_value_alert":"¡Algún valor es ilegal!",
+	"fw_most8RulesAlert":"¡Puedes configurar hasta 8 reglas!",
+	"no_rules_alert":"En la actualidad no hay regla, no se puede eliminar!",
+	"no_selected_rules_alert":"En este momento no hay ninguna regla que haya sido seleccionada, ¡no se puede eliminar!",
+	"delete_alert":"¿Está seguro de eliminar la regla seleccionada?",
+	"dns_add":"Agregar",
+	"dns_delete":"Borrar"
+}

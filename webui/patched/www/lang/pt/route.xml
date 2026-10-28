@@ -1,0 +1,9 @@
+{
+  "apply": "Aplicar",
+  "cancel": "Cancelar",
+  "v4StaticRoutePrompt": "Nesta página, você pode configurar IPv4 como rota padrão.",
+  "dr_enableTitle": "Habilite a rota padrão",
+  "dr_wanTitle": "Nome WAN",
+  "dr_wanDefaultTitle": "Por favor escolha",
+  "dr_wannameNUllAlert": "Por favor, escolha um Wan!"
+}

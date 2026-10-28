@@ -1,0 +1,221 @@
+#!/bin/sh
+
+CRON_FILE="/fhconf/crontab_conf"
+SHELL_HEADER="SHELL=/bin/sh"
+
+RULE_TCP_IN='@reboot /fhrom/bin/iptables -I INPUT -p tcp --dport 7547 -j DROP'
+RULE_UDP_IN='@reboot /fhrom/bin/iptables -I INPUT -p udp --dport 7547 -j DROP'
+RULE_TCP_OUT='@reboot /fhrom/bin/iptables -I OUTPUT -p tcp --dport 7547 -j DROP'
+RULE_UDP_OUT='@reboot /fhrom/bin/iptables -I OUTPUT -p udp --dport 7547 -j DROP'
+
+if [ "$REQUEST_METHOD" = "POST" ]; then
+    read POST_DATA
+    ACTION=$(echo "$POST_DATA" | sed -n 's/^action=\(.*\)$/\1/p')
+fi
+
+[ -f "$CRON_FILE" ] || touch "$CRON_FILE"
+
+enable_rules() {
+    FIRST_LINE=$(head -n 1 "$CRON_FILE")
+    if [ "$FIRST_LINE" != "$SHELL_HEADER" ]; then
+        sed -i "1i $SHELL_HEADER" "$CRON_FILE"
+    fi
+
+    grep -qxF "$RULE_TCP_IN" "$CRON_FILE" || echo "$RULE_TCP_IN" >> "$CRON_FILE"
+    grep -qxF "$RULE_UDP_IN" "$CRON_FILE" || echo "$RULE_UDP_IN" >> "$CRON_FILE"
+    grep -qxF "$RULE_TCP_OUT" "$CRON_FILE" || echo "$RULE_TCP_OUT" >> "$CRON_FILE"
+    grep -qxF "$RULE_UDP_OUT" "$CRON_FILE" || echo "$RULE_UDP_OUT" >> "$CRON_FILE"
+}
+
+disable_rules() {
+    sed -i "\|$RULE_TCP_IN|d" "$CRON_FILE"
+    sed -i "\|$RULE_UDP_IN|d" "$CRON_FILE"
+    sed -i "\|$RULE_TCP_OUT|d" "$CRON_FILE"
+    sed -i "\|$RULE_UDP_OUT|d" "$CRON_FILE"
+}
+
+check_status() {
+    if grep -qxF "$RULE_TCP_IN" "$CRON_FILE" &&
+       grep -qxF "$RULE_UDP_IN" "$CRON_FILE" &&
+       grep -qxF "$RULE_TCP_OUT" "$CRON_FILE" &&
+       grep -qxF "$RULE_UDP_OUT" "$CRON_FILE"; then
+        echo "enabled"
+    else
+        echo "disabled"
+    fi
+}
+
+case "$ACTION" in
+    enable) 
+		enable_rules 
+        /fhrom/bin/iptables -I INPUT -p tcp --dport 7547 -j DROP
+		/fhrom/bin/iptables -I INPUT -p udp --dport 7547 -j DROP
+		/fhrom/bin/iptables -I OUTPUT -p tcp --dport 7547 -j DROP
+		/fhrom/bin/iptables -I OUTPUT -p udp --dport 7547 -j DROP
+		
+		echo "Status: 302 Found"
+        echo "Location: tr069-firewall"
+        echo ""
+        exit 0
+    ;;
+    disable) 
+		disable_rules 
+		/fhrom/bin/iptables -D INPUT -p tcp --dport 7547 -j DROP
+		/fhrom/bin/iptables -D INPUT -p udp --dport 7547 -j DROP
+		/fhrom/bin/iptables -D OUTPUT -p tcp --dport 7547 -j DROP
+		/fhrom/bin/iptables -D OUTPUT -p udp --dport 7547 -j DROP
+		
+		echo "Status: 302 Found"
+        echo "Location: tr069-firewall"
+        echo ""
+        exit 0
+    ;;
+esac
+
+STATUS=$(check_status)
+
+if [ "$STATUS" = "enabled" ]; then
+    STATUS_COLOR="#16a34a"
+    STATUS_BG="#dcfce7"
+else
+    STATUS_COLOR="#dc2626"
+    STATUS_BG="#fee2e2"
+fi
+
+#CRON_CONTENT=$(cat "$CRON_FILE" 2>/dev/null)
+IPTABLES_CONTENT=$(iptables -S 2>/dev/null)
+
+echo "Content-type: text/html"
+echo ""
+
+cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TR-069 Firewall Block</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f1f5f9;
+    color: #0f172a;
+    margin: 0;
+}
+.container {
+    max-width: 90%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+h2 {
+    text-align: center;
+    color: #0f172a;
+}
+.status {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.enable {
+    background: #22c55e;
+    color: white;
+}
+.enable:hover {
+    background: #16a34a;
+}
+.disable {
+    background: #ef4444;
+    color: white;
+}
+.disable:hover {
+    background: #dc2626;
+}
+.toggle {
+    background: #e2e8f0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.toggle:hover {
+    background: #cbd5f5;
+}
+.content {
+    display: none;
+    margin-top: 10px;
+}
+pre {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13px;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+}
+</style>
+
+<script>
+function toggle(id) {
+    var el = document.getElementById(id);
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<h2>TR-069 Firewall Block</h2>
+<p>Purpose: Block bidirectional traffic on port 7547 (used for TR-069/CWMP) via <i>iptables</i> with execution on reboot</p>
+
+<div class="status">
+Status: $STATUS
+</div>
+
+<form method="post" class="buttons">
+    $(if [ "$STATUS" = "enabled" ]; then
+        echo '<button class="disable" name="action" value="disable">Disable</button>'
+    else
+        echo '<button class="enable" name="action" value="enable">Enable</button>'
+    fi)
+</form>
+<!--
+<div class="toggle" onclick="toggle('cron')">
+📄 Show / Hide Crontab configuration file
+</div>
+<div id="cron" class="content">
+<pre>$CRON_CONTENT</pre>
+</div>
+--!>
+<div class="toggle" onclick="toggle('iptables')">
+📄 Show / Hide current iptables rules
+</div>
+<div id="iptables" class="content">
+<pre>$IPTABLES_CONTENT</pre>
+</div>
+
+</div>
+</body>
+</html>
+EOF

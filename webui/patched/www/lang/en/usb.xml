@@ -1,0 +1,58 @@
+{
+  "usb disable":"Disable",
+  "usb enable":"Enable",
+  "usb add":"Add",
+  "usb edit":"Edit",
+  "usb del":"Delete",
+  "usb apply":"Apply",
+  "usb cancel":"Cancel",
+  "usb reset":"Reset",
+  
+  "usb_loadPrompt":"On this page, you may upload/download files to/from ftp server as your wish.",
+  "usb_storgeHead":"USB Storge",
+  "usb_typeTitle":"Type",
+  "usb_ftpUserTitle":"Username",
+  "usb_ftpPwdTitle":"Password",
+  "usb_ftpIPTitle":"FTP Server IP",
+  "usb_ftpPortTitle":"FTP Server Port",
+  "usb_localFileTitle":"Local File Name",
+  "usb_remoteFileTitle":"Remote File Name",
+  "usb_diskNoTitle":"Disk NO.",
+  
+  "usb_ftpUserTips":" (You can input 1-32 characters, including alphanumeric and '_')",
+  "usb_ftpPwdTips":" (You can input 0-32 characters, including alphanumeric and '_')",
+  "usb_ftpPortTips":" (0 ~ 65535)",
+  "usb_ftpIPTips":" (Decimal format)",
+  "usb_localFileTips":" (You can input 1-128 characters, including alphanumeric, '_', '/' and '-')",
+  "usb_remoteFileTips":" (You can input 1-128 characters, including alphanumeric, '_', '/' and '-')",
+  "usb_fileTips":" (You can input 1-128 characters, including alphanumeric, '_' and '/')",    
+
+  "usb_userIllegalAlert":"Please enter a valid Username!",
+  "usb_pwdIllegalAlert":"Please enter a valid Password!",
+  "usb_ipIllegalAlert":"Please enter a valid IP!",
+  "usb_portIllegalAlert":"Valid port range is 0 to 65535.",
+  "usb_fileIllegalAlert":"Please enter a valid file name!",
+  
+  "usb_cfgBakPrompt":"On this page, you can download the current configuration file to the USB device.",
+  "usb_cfgBakTitle":"USB Backup Directory",
+  "usb_cfgBak":"Download Backup",
+  "usb_idle":"No USB",
+  "usb_cfgBakSuccess":"Download configuration file successfully!",
+  
+  "usb_serverError":"Server Error!",
+  "usb_serverError1":"Server Error 1!",
+  "usb_serverError2":"Server Error 2!",
+  "usb_serverError3":"Server Error 3!",
+  
+  "usb_cfgRestorePrompt":"On this page, you can udpate your device with the configuration file saved on the USB.",
+  "usb_cfgRestoreTitle":"USB Restore Directory",
+  "usb_filenameTitle":"Configuration File",
+  "usb_cfgRestore":"Restore",
+  "usb_cfgRestoreSuccess":"Restore configuration file successfully!",
+  "usb_openFileFail":"Failed to open the specified file!",
+  "usb_readFileFail":"Failed to read the specified file!",
+  "usb_restoreFail":"Configuration file recovery failed!",
+  
+ "rebooting":"System is resetting... Please wait for a moment. Please relogin after reset."
+ 
+}

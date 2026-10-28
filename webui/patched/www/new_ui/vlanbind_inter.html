@@ -1,0 +1,109 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script>
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/vlanbind_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("internet");
+</script>
+
+<body class='main_config_body'>
+	<!-- <div class="main_header">
+		<p class="main_header_hint">
+			<font i18n="vlanbind_Prompt"></font>
+		</p>
+	</div>
+	<br> -->
+	<div style="float:left">
+		<input type="button" i18n="wan_add" i18n-set="value" id="fw_add" class="add_button" onClick="addfilter()">
+		<!--input type="button" i18n="wan_delete" i18n-set="value" id="fw_delete" class="input_button"
+			onClick="click_remove()"><br /-->
+	</div>
+	<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+		<tr class="table_head_title">
+			<td width="2%" align='center'>
+				<font i18n="wan_id">wan_id</font>
+			</td>
+			<td width="20%" align='center'>
+				<font i18n="user_port"></font>
+			</td>
+			<td width="10%" align='center'>
+				<font i18n="user_vlan"></font>
+			</td>
+			<td width="30%" align='center'>
+				<font i18n="wan_name"></font>
+			</td>
+			<td width="8%" align='center'>
+				<font i18n="operate"></font>
+			</td>
+		</tr>
+		<tbody id='vlanbind_List' style="font-size: 12px;color: rgba(255, 255, 255, 0.8);" class="table_rule" >
+		</tbody>
+	</table>
+	<div id="image">
+		<img src="../image/new_ui/no_data.png" style="width: 120px;">
+		<span i18n="No Data">No Data</span>
+	</div>
+	<fh-fo-rm id="fw_config_form"  style="display:none" class="config_content">
+		<!--div class="main_item">
+				<div class="main_item_name"><font i18n="user_port"></font></div>
+				<div class="main_item_content" id="lan_div"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name"></div>
+				<div class="main_item_content" id="2g_wifi_div"></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name"></div>
+				<div class="main_item_content" id="5g_wifi_div"></div>
+			</div-->
+		<div class="main_item">
+			<div class="main_item_title">
+				<font id="title"></font>
+				<img src="../image/new_ui/cancel.png" class="cancel_icon">
+			</div>
+		</div>
+		<div class="main_item_cfg">
+			<div class="main_item_name_cfg">
+				<font i18n="user_vlan"></font>
+			</div>
+			<div class="main_item_content_cfg">
+				<input type="text" class="input_text" name="data.userVlan" id="Vlan_text">
+			</div>
+		</div>
+
+		<div class="main_item_cfg Vlan_WanConnect_List" style="display: none;">
+			<div class="main_item_name_cfg">
+				<font i18n="wan_name"></font>
+			</div>
+			<div class="main_item_content_cfg">
+				<select id="Vlan_WanConnect_select" name="data.wanConnName" class="select">
+				</select>
+			</div>
+		</div>
+		<div class="main_item_cfg PON_WanConnect_List" >
+			<div class="main_item_name_cfg">
+				<font i18n="wan_name"></font>
+			</div>
+			<div class="main_item_content_cfg">
+				<select id="PON_WanConnect_select" name="data.wanConnName" class="select">
+				</select>
+			</div>
+		</div>
+		<div class="main_submit_item">
+			<div class="main_submit" style="float: right;">
+				<input type="button" id="vlan_apply" class="input_button_cfg" i18n="inet_apply"
+					i18n-set="value" onclick="saveApply()" />
+			</div>
+		</div>
+	</fh-fo-rm>
+</body>
+
+</html>

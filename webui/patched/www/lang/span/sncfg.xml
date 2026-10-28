@@ -1,0 +1,43 @@
+{
+  "sncfg_prompt":"En esta página, puede modificar los parámetros relacionados con la autenticación de la ONU para autenticar la OLT. Tendrá efecto después de reiniciar.",
+  "sncfg_prompt_user":"Puede modificar los parámetros relacionados con la autenticación de la ONU para autenticar la OLT. Tendrá efecto después de reiniciar. Por favor, no cambie la contraseña, afectará el servicio si se ha cambiado la contraseña, ¡gracias!",
+  
+  "sncfg_apply":"Aplicar",
+  "sncfg_cancel":"Cancelar",
+  
+  "sncfg_authMethod":"Auth Method",
+  "sncfg_loid":"LOID",
+  "sncfg_loidTips":" (Puede ingresar de 1 a 24 caracteres latinos básicos)",
+  "sncfg_lopwd":"Contraseña lógica",
+  "sncfg_lopwdTips":" (Puede ingresar de 0 a 12 caracteres latinos básicos)",
+  "sncfg_pwd":"clave de acceso",
+  "sncfg_pwdTips":" (Puede ingresar de 0 a 10 caracteres, incluidos alfanuméricos, '-' y '_')",
+  "oltcfg_phySN":"Physical SN",
+  "oltcfg_phySNTips":"  (You can input 12 or 16 characters, including '0'-'9' 'a'-'f' 'A'-'F' 'h' 't' 'H' 'T')",
+  
+  "sncfg_restore":"Restore",
+  "sncfg_restoreTips":" (Puede restaurar la configuración predeterminada de esta página haciendo clic en este botón)",
+
+  "sncfg_snTitle":"Autenticación LOID",
+  "sncfg_pwdTitle":"Autenticación de contraseña",
+  "oltcfg_phySNTitle":"Physical SN Auth",
+  "sncfg_restoreTitle":"Restaurar configuración",
+
+  "sncfg_restartConfirm":"¡Modificaste los parámetros de autenticación con éxito! Ya sea para reiniciar la ONU? ¡Inicie sesión en la administración de la red WEB después de reiniciar la ONU!",
+
+  "sncfg_loidNullAlert":"¡Ingrese LOID!",
+  "sncfg_loidIllegalAlert":"¡LOID es ilegal!",
+  "sncfg_lopwdIllegalAlert":"Logic Password is illegal!",
+  "sncfg_pwdCfgNullAlert":"Please input pass key!",
+  "sncfg_pwdCfgIllegalAlert":"¡La clave de paso es ilegal!",
+  "sncfg_loidchnAlert":"¡LOID es ilegal! ¡Ingrese caracteres latinos básicos!",
+  "sncfg_speCharAlert":"Ingrese caracteres latinos básicos excepto ",
+  "sncfg_phySNNullAlert":"¡Ingrese el SN físico!",
+  "sncfg_phySNCfgIllegalAlert":"¡El SN físico es ilegal!",
+  "sncfg_value_invilid":"Algún valor no es válido, verifíquelo y rellénelo",
+
+  "physncfg_checkeror":"El valor que ingresaste es ilegal, ¡inténtalo de nuevo!",
+  "sncfg_setFailedInfo":"¡Error al establecer los parámetros de autenticación! ¡Reinicia el dispositivo e inténtalo de nuevo!",
+  "change_eye":"ver"
+}
+

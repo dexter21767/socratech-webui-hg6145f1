@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/preconfigure.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("catv");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 150px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="preconfigure_prompt" id="preconfigure_prompt">preconfigure_prompt</font></p>
+		</div>
+		<br/>
+		<form id="preset_form">
+			<div  class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<div class="main_content">
+					<div class="main_item" id="preset_enable_div">
+						<div class="main_item_name"><font i18n="preconfigure_enable_title">preconfigure_enable_title</font></div>
+						<div class="main_item_content">
+							<input type="radio" id="preconfigure_enable" name="preconfigure_enable" value="1" checked="checked"><font i18n="catv_enableTitle">catv_enableTitle</font>&nbsp;&nbsp;&nbsp;
+							<input type="radio" id="preconfigure_disable" name="preconfigure_enable" value="0"><font i18n="catv_disableTitle">catv_disableTitle</font>
+							<span class="redcolorfont">*</span>&nbsp;&nbsp;<font i18n="restart_tips">restart_tips</font>
+						</div>
+					</div>		
+				</div>
+				<div class="main_item" id="catv_button_div">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="catv_apply" onclick="saveApply()" i18n="catv_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="catv_cancel" onclick="CancelBtn()" i18n="catv_cancel" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+				<div class="main_header">
+					<p class="main_header_hint"><font i18n="preconfigure_tips0" id="preconfigure_tips0">preconfigure_tips1</font></p>
+					<p class="main_header_hint"><font i18n="preconfigure_tips1" id="preconfigure_tips1">preconfigure_tips1</font></p>
+					<p class="main_header_hint"><font i18n="preconfigure_tips2" id="preconfigure_tips2">preconfigure_tips2</font></p>
+					<p class="main_header_hint"><font i18n="preconfigure_tips3" id="preconfigure_tips3">preconfigure_tips3</font></p>
+					<p class="main_header_hint"><font i18n="preconfigure_tips4" id="preconfigure_tips4">preconfigure_tips4</font></p>
+				</div>
+			</div>
+		</form>
+		<form id="down_preconfigureForm">
+			<div class="main_save">
+				<input type="button" class="input_button" onclick="down_preconfigure()" id="preconfigure_button" i18n="preconfigure_button" i18n-set="value" />
+			</div>
+		</form>
+	</body>
+</html>

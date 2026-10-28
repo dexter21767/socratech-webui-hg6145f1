@@ -1,0 +1,67 @@
+{
+	  "checktime_prompt":"En esta página, puede configurar el tiempo.",
+	  "ntpchecktime_title":"NTP Check Time",
+
+	  "checkboxTips":"Habilitar hora de verificación de NTP",
+	  "firstNTPServer_Title":"Primer servidor NTP",
+	  "secondNTPServer_Title":"Segundo servidor NTP",
+	  "thirdNTPServer_Title":"Tercer servidor NTP",
+	  "fourthNTPServer_Title":"Cuarto servidor NTP",
+	  "fifthNTPServer_Title":"Quinto servidor NTP",
+	  
+	  "timeZoneTitle":"Zona horaria",
+	  "secondsTips":"Segundos (1-99999)",
+
+	  "GMTm12title":"(GMT-12:00)Línea de fecha Oeste",
+	  "GMTm11title":"(GMT-11:00)Isla Midway, Samoa",
+	  "GMTm10title":"(GMT-10:00)Hawaii",
+	  "GMTm9title":"(GMT-09:00)Alaska",
+	  "GMTm8title":"(GMT-08:00)Hora del Pacífico",
+	  "GMTm7title":"(GMT-07:00)Hora de la montaña",
+	  "GMTm6title":"(GMT-06:00)América Central",
+	  "GMTm5title":"(GMT-05:00)Este de Indiana, Colombia",
+	  "GMTm4title":"(GMT-04:00)Hora del Atlántico, Oeste de Brasil",
+	  "GMTm3title":"(GMT-03:00)Brasil Este, Groenlandia",
+	  "GMTm3title_arg":"(GMT-03:00)Argentina, este de Brasil, Groenlandia",
+	  "GMTm2title":"(GMT-02:00)Atlántico Medio",
+	  "GMTm1title":"(GMT-01:00)Islas Azores",
+	  "GMT0title":"(GMT)Gambia,Liberia,Marruecos",
+
+	  "GMT1title":"(GMT+01:00)Alemania",
+	  "GMT2title":"(GMT+02:00)Grecia, Ucrania, Turquía",
+	  "GMT2title_ple":"(GMT+02:00)Jerusalén",
+	  "GMT3title":"(GMT+03:00)Horario de invierno de Moscú",
+	  "GMT4title":"(GMT+04:00)Armenia",
+	  "GMT5title":"(GMT+05:00)Pakistán, Rusia",
+
+	  "GMT6title":"(GMT+06:00)Bangladesh, Rusia",
+	  "GMT7title":"(GMT+07:00)Bangkok, Hanoi, Yakarta",
+	  "GMT8title":"(GMT+08:00)Beijing,Chongqing,HongKong,Urumqi",
+	  "GMT9title":"(GMT+09:00)Japón, Corea",
+	  "GMT10title":"(GMT+10:00)Guam, Rusia",
+	  "GMT11title":"(GMT+11:00)Islas Salomón",
+	  "GMT12title":"(GMT+12:00)Nueva Zelanda",
+	  
+	  "GMT13title":"(GMT+13:00)Nukualofa",
+
+	  "ntpCurTime_Title":"Tiempo actual",
+	  "ntpWanChannelTitle":"Enlace de conexiones WAN",
+	  "checkDaylight":"El horario de verano",
+	  "checkDaylight_Tip":"(como 2017-08-01T13:50:00)",
+	  "start_Time":"Hora de inicio",
+	  "end_Time":"Hora de finalización",
+	  
+	  "ntp_nofirstserveralert":"Introduzca el primer servidor NTP.",
+	  "ntp_nosecondserveralert":"Ingrese el segundo servidor NTP.",
+	  "ntp_noperiodalert":"Ingrese el período de tiempo de verificación automática.",
+	  "ntp_illegalperiodalert":"Ingrese un período de tiempo de verificación automática válido.",
+	  "daylightsavingstimeIllegalAlert":"Ingrese un horario de verano válido.",
+	  
+  	  "ntpsave_apply":"Hora de revision", 
+  	  "ntp_cancel":"Tiempo de comprobación del sistema",
+  	  "ntp_check_time":"Validar tiempo NTP",
+  	  "invalid_data_alert":"Algún valor no es válido, vuelva a intentarlo",
+	  "app_wan":"Binding WAN Connections"
+
+}
+

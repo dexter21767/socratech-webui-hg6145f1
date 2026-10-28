@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+				document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ddns.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<form>
+			<table border='0' cellspacing='0px' cellpadding='0' width='450px' height='400px'>
+				<tr>
+					<td><label class='trad'></label>索引</td>
+					<td>
+						<select id='DDNS_select' Onchange="submitDDNSCfg(2)">
+							<option class="trad" value="4">新增</option>
+						</select>
+					</td>
+				</tr>			
+				<tr>
+					<td width='150'><label id='DDNSCfgEnabled_text' class='trad'></label>启用DDNS功能</td>
+					<td><input type='checkbox' id='DDNSCfgEnabled_Value' onclick='enableDDNSCfg()'></td>
+				</tr>
+				<tr>
+					<td><label class='trad'></label>服务器</td>
+					<td><input type='text' id='DDNSProvider_text' disabled></td>
+				</tr>
+				<tr>
+					<td><label class='trad'></label>端口号</td>
+					<td><input type='text' id='ServicePort_text'>(1-65535)</td>
+				</tr>
+				<tr>
+					<td><label class='trad'></label>用户名</td>
+					<td><input type='text' id='DDNSUsername_text'></td>
+				</tr>
+				<tr>
+					<td><label class='trad'></label>密码</td>
+					<td><input type='password' autocomplete='off' id='DDNSPassword_password'></td>
+				</tr>
+				<!--<tr>
+					<td><label class='trad' key='ddnsmngr_Interface'></label></td>
+					<td><select id='DDNSWANInterface_select' onchange='changeInterface(this.value)'></select></td>
+				</tr>-->
+				<tr>
+					<td><label class='trad'></label>域</td>
+					<td><input type='text' id='DDNSDomainName_text' disabled></td>
+				</tr>
+				<tr>
+					<td><label class='trad'></label>主机</td>
+					<td><input type='text' id='DDNSHostName_text' disabled></td>
+				</tr>
+				<tr>
+					<td><label class='trad'>解析到的公网IP</label></td>
+					<td><input type='text' id='DDNSIP_text' disabled></td>
+				</tr>
+				<tr>
+					<td><label class='trad'>当前运行或错误状态</label></td>
+					<td id='DDNSStatus_text' disabled></td>
+				</tr>				
+			</table>
+			<br>
+			<input type='button' id='Btn_Submit_button' onclick='submitDDNSCfg(1)' value="保存">
+			<input type='button' id='Btn_Cancel_button' onclick='submitDDNSCfg(3)' value="删除" style='margin-left:40px'>
+			<!--<input type='button' id='Btn_Cancel_button' onclick='backApply()' key='cancel_button' style='margin-left:40px'>-->
+		</form>
+	</body>
+</html>

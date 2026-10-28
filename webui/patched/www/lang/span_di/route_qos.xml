@@ -1,0 +1,41 @@
+{
+  "pps_apply":"Aplicar",
+  "pps_cancel":"Cancelar",
+  
+  "route_qos_prompt":"En esta página, puede habilitar/deshabilitar el Ruteo QOS!",
+  "route_qos_title":"Ruteo QoS",  
+  "qos_c_enable":"Habilitar",
+  "qos_c_disable":"Deshabilitar",
+
+  "route_qosPrompt":"En esta página, puede configurar el Ruteo QOS!",
+  "pf_add":"Agregar",
+  "pf_delete":"Borrar",
+  "pf_deleteAll":"Eliminar todo",
+  "route_qosListHead":"Lista de ruteo QoS",
+  "qostypetitle":"Tipo",
+  "qosPrioritytitle":"Prioridad",
+  "qosprotocoltitle":"Protocolo",
+  "qossrciptitle":"IP Fuente ",
+  "qossrcporttitle":"Puerto de origen",
+  "qosdisiptitle":"IP objetivo",
+  "qosdisporttitle":"Puerto objetivo",
+  "qoscontroltitle":"Habilitar",
+   "qos_apply":"Aplicar",
+  "qos_cancel":"Cancelar",
+  
+  "pf_mostRulesAlert":"¡Podrías agregar 6 reglas como máximo!",
+  "pf_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "pf_noChooseAlert":"¡Por favor, seleccione una regla y luego elimínela!",
+  "priority_alert":"Por favor, introduzca la prioridad.",
+
+  "pf_ipIllegalAlert":"¡Por favor, introduzca una IP válida!",
+  "pf_PortNullAlert":"¡Por favor, introduzca un valor del puerto!",
+  "pf_endPortTooSmallAlert":"¡El puerto inicial no debe ser mayor que el puerto final!",
+  "pf_portIllegalAlert":"¡El rango de puertos válido es 1 - 65535!",
+  "pf_PortNullAlert":"¡Por favor, introduzca un valor del puerto!",
+  "pf_8021PriorityIllegalAlert":"El rango de prioridad válido es 0 - 7.!",
+  "pf_hscpPriorityIllegalAlert":"El rango de prioridad válido es 0 - 63.!",
+  "pf_deleteRuleConfirm":"¿Está seguro de eliminar las reglas seleccionadas?"
+
+}
+

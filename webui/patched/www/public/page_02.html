@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TIM Wizard</title>
+<!-- Bootstrap -->
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="./css/style_wizard.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/wizard_timeout.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/page_02.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+	function frmLoad(){
+		var operator_name = gOperatorName;
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name != "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body class="pricipal" onLoad='frmLoad();'>
+<div class="wrap">
+  <div class="area2 page_02">
+    <div class="cabecalho" >
+      <h1>Escolha abaixo qual<br/>
+        o serviço contratado:</h1>
+      <img src="img/160914_PF01_LOGO_TIM_LIVE.png"  class="log_tim_live_grande">
+      <div class="clearfix"></div>
+    </div>
+    <!-- cabecalho -->
+    <div class="form"> <a class="btn-tim-residencial" id="live_tim_residencia" href="javascript:void(0)">Live TIM Residencial</a> <a class="btn-tim-empresa" id="live_tim_empresas" href="javascript:void(0)">Live TIM Empresas</a>
+      <p>Caso sua Internet já esteja funcionando e você queira alterar<br/>
+        somente as configurações do Wi-Fi, clique no botão abaixo:</p>
+      <a class="btn-tim-wifi" href="./page_04.html"> <img src="img/160914_PF01_LOGO_WI-FI.png" > Wi-Fi</a> </div>
+    <!-- form -->
+  </div>
+  <!-- area1 -->
+  <img id="logo_tim_peq" src="img/160914_PF01_LOGO_TIM.png" > </div>
+</body>
+</html>
+<!-- <m> -->

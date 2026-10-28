@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/pon_info.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="Pon_Prompt">Pon_Prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg"  border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tr class="table_title">
+          		<td colspan="5" id="Pon_Head"><font i18n="Pon_Head">Pon_Head</font></td>
+      		</tr>
+            <tbody>
+				<tr class="table_head_title">
+					<td id="td_hiredTime" width="12%"><font i18n="Pon_Transmit Bytes">Transmit Bytes</font></td>
+					<td id="td_type" width="13%"><font i18n="Pon_Transmit Packets">Transmit Packets</font></td>
+					<td id="td_type" width="12%"><font i18n="Pon_Receive Bytes">Receive Bytes</font></td>
+					<td id="td_type" width="12%"><font i18n="Pon_Receive Packets">Receive Packets</font></td>
+				</tr>
+			</tbody>
+			<tbody id="PonInfo_list"></tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<script src="/js/xhr.js"></script>
+<script language="javascript">
+	function frmLoad() {
+        var operator_name;
+        XHR.get("get_operator", null, get_operator);
+        function get_operator(getdata)
+        {
+        	if ( getdata.operator_name != undefined )
+        	{
+        		operator_name = getdata.operator_name;
+        	}
+        	if(operator_name == "BZ_TIM"){
+        		sessionStorage.setItem("operator_name", "BZ_TIM");
+        	}
+        }
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name == "PH_PLDT"){
+			sessionStorage.setItem("fh_access", "1");
+			window.location.href = protocol+"//"+host+"/html/login_pldt.html";
+		}else{
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body onLoad='frmLoad();'>
+</body>
+</html>

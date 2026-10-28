@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/standard_restore_ais_user.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.form.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("restore");
+	</script>
+	<style type="text/css"> 
+		#progress
+		{
+		height: 24px;
+		width: 200px;
+		border: none;
+	}
+	.inner-progress 
+	{
+		background: #2C5EA4;
+	}
+ 	</style>	
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="restore_ais_title">restore_ais_title</font></p>
+		</div>
+        
+		<br>
+		<form enctype="multipart/form-data" method="post" id="file_form">
+            <div class="main_item" style="height: 56px" id="update_common">
+            	<div class="main_item_name" style="height: 54px; line-height: 56px;" ><font i18n="config_file_title" >config_file_title</font></div>
+            	<div class="main_item_content" style="height: 28px;" >
+            		<input type="file" id="uploadfile" name="uploadfile"  />
+            	</div>	
+                <input type="submit" style="margin-top: 10px;"  class="input_button" id="upload_file_server"  value="Restore Configuration" i18n="restore_configuration_button" i18n-set="value">         
+            </div>
+		</form>
+	</body>
+</html>

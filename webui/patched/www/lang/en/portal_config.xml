@@ -1,0 +1,19 @@
+{
+	"portal_configPrompt": "On this page, you can configure portal. The browser displays a special web page based on your device type when you access the Internet for the first time.",
+	"Enable_Portal_title": "Enable Portal",
+	"default_redirection_url_title": "Default Redirection URL",
+	"inet_apply": "Apply",
+	"inet_cancel": "Cancel",
+	"portal_configListHead": "Portal Configuration List",
+	"fw_filterID": "ID",
+	"dev_type": "Device Type",
+	"redirect_url": "Redirection URL Address",
+	"illegal_value_alert":"Some value is illegal!",
+	"app_most8RulesAlert":"You can configure up to 8 rules!",
+	"no_rules_alert":"There are no rules at present. You cannot delete them.",
+	"no_selected_rules_alert":"At present there is no rule that was selected, can not be deleted!",
+	"delete_alert":"Are you sure to delete the selected rule?",
+	"repeat_with_the_existing_rules":"Repeat with the existing rules. Please reconfigure it!",
+	"portal_add":"Add",
+	"portal_delete":"Delete"
+}

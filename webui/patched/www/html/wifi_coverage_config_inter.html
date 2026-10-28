@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+        	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/wifi_coverage_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wifi_coverage_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="WifiCoverageConfig_prompt">WifiCoverageConfig_prompt</font></p>
+		</div>
+		
+		<div>
+		    <input type="checkbox" name="use_default_flag" id="use_default_flag">
+		    <span>Automatically use the default SSID for extending the WiFi connection to the AP. </span>
+			<select name="wifi_ap" id="wifi_ap" size="1">
+			</select>
+		</div>
+	    <div>
+			<input type="checkbox" name="auto_switch_2access" id="auto_switch_2access">
+			<span>The ONT enables wireless devices to automatically switch to an access point where the signal performance is better.</span> 
+		</div>
+		<div> 
+			<span>RSSI threshold for force switching</span>
+			<input type="text" name="rssi_forced_switch" id="rssi_forced_switch" value='-79'>
+			<span class="gray">dBm(range: -100 dBm to -66 dBm; default -79 dBm)</span> 
+		</div>
+		<div>
+			<span class="gray">(Forced switching: When signal strength is poor on a wireless device, the device is directly disconnected from the current access point and switched to another wireless access point.)</span>
+		</div>
+		 
+		<div>
+			<span>RSSI threshold for conditioned switching</span>
+			<input type="text" name="rssi_condition_switch"  id="rssi_condition_switch" value='-75'>
+			<span class="gray">dBm(range: -84 dBm to -60 dBm; default -75 dBm)</span>
+		</div>
+		
+		<div>
+			<span class="gray">(Conditioned switching: When signal strength deteriorates on a wireless device, the device is switched to another access point only after an appropriate access point is detected.)</span> 
+		</div>
+		
+		
+	    <div class="main_item">
+			<div class="main_submit" style="width: 25%;"></div>				
+			<div class="main_submit" style="width: 75%;">
+				<input type="button" class="input_button" id="btn_apply" i18n="btn_apply" i18n-set="value" onclick="save_apply()"/>
+				<input type="button" class="input_button" id="btn_cancel" i18n="btn_cancel" i18n-set="value" onclick="getData()"/>
+			</div>
+		</div>
+		<form id="ip_filter_list_form" method="post">
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="6"><font i18n="ExternalAPListHead">ExternalAPListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="10%" align='center'><font i18n="no_title">no_title</font></td>
+					<td width="18%" align='center'><font i18n="device_model_title">device_model_title</font></td>
+					<td width="18%" align='center'><font i18n="serial_num_title">serial_num_title</font></td>
+					<td width="18%" align='center'><font i18n="status_title">status_title</font></td>
+					<td width="18%" align='center'><font i18n="online_duration">online_duration</font></td>	
+					<td width="18%" align='center'><font i18n="config_status">config_status</font></td>
+				</tr>
+				<tbody id='ipfilter_List' style="font-size: 12px">
+				<tr style="background: #b7e3e3">
+					<td align='center'>--</td>
+					<td align='center'>--</td>
+					<td align='center'>--</td>
+					<td align='center'>--</td>
+					<td align='center'>--</td>
+					<td align='center'>--</td>
+				</tr>
+				</tbody> 
+			</table>
+		</form>
+	</body>
+</html>

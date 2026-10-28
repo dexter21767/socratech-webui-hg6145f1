@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/voice_statistics_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+		<style type="text/css"> 
+		.linebr { 
+		display: inline-block;
+		clear: both; /* 清除左右浮动 */ 
+		width: calc(75% - 157px); /* 必须定义宽度 */ 
+		word-break: break-word; /* 文本行的任意字内断开 */ 
+		word-wrap: break-word; /* IE */ 
+		white-space: -moz-pre-wrap; /* Mozilla */ 
+		white-space: -hp-pre-wrap; /* HP printers */ 
+		white-space: -o-pre-wrap; /* Opera 7 */ 
+		white-space: -pre-wrap; /* Opera 4-6 */ 
+		white-space: pre; /* CSS2 */ 
+		white-space: pre-wrap; /* CSS 2.1 */ 
+		white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ 
+		} 
+		</style> 
+	</head>
+	<script type="text/javascript">
+		setDomain("voip");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="voip_statisticsPrompt">voip_statisticsPrompt</font></p>
+		</div>
+		<form id="dhcp_lan_list_form" method="post">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="pots_port">pots_port</font></div>
+					<div class="main_item_content">
+						<select class="pots_port" id="pots_port" style="width: 110px;" onchange="portChange(this)">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<div style="float:right">
+							<input type="button" i18n="update_sta" i18n-set="value"  id="update_sta" class="input_button" onClick="updateSta()">
+							<input type="button" i18n="reset_sta" i18n-set="value"  id="reset_sta" class="input_button" onClick="resetSta()">
+						</div>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_head_title">
+					<td width="2%" align='center'><font i18n="statisticsID">statisticsID</font></td>
+					<td width="18%" align='center'><font i18n="generation_time">generation_time</font></td>
+					<td width="10%" align='center'><font i18n="sent_pack">sent_pack</font></td>
+					<td width="10%" align='center'><font i18n="rece_pack">rece_pack</font></td>
+					<td width="10%" align='center'><font i18n="mean_delay">mean_delay</font></td>
+					<td width="10%" align='center'><font i18n="mean_jitter">mean_jitter</font></td>
+					<td width="10%" align='center'><font i18n="pack_loss">pack_loss</font></td>
+					<td width="10%" align='center'><font i18n="remote_ip">remote_ip</font></td>
+				</tr>
+				<tbody id='statistics_List' style="font-size: 12px; background-color: white">
+				</tbody> 
+			</table>
+			</br>
+			<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<div class="table_title">
+					<div colspan="2"><font i18n="voip_serviceHead">voip_serviceHead</font></div>
+				</div>
+			</div>
+			<div class="main_header">
+				<p class="main_header_hint"><font i18n="voip_recordPrompt">voip_recordPrompt</font></p>
+			</div>
+			<textarea id="logtable" rows="20" cols="96" readonly="readonly"></textarea>
+		</form>
+	</body>
+</html>

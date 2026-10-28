@@ -1,0 +1,9 @@
+{
+	"indicator_state_prompt": "En esta página, puede configurar el indicador de un dispositivo. Puede configurar un período de apagado del indicador si establece el interruptor indicador en Apagado. Un indicador siempre está apagado si no se especifica un período de apagado del indicador.",
+	"indicator_switch_head": "Configuración del interruptor indicador",
+	"indicator_switch_title": "Interruptor indicador",
+	"sw_on": "Encendido",
+	"sw_off": "Apagado",
+	"btn_apply": "Aplicar",
+	"btn_cancel": "Cancelar"
+}

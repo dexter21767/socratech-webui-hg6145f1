@@ -1,0 +1,66 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/port_mirror_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("internet");
+</script>
+
+<body class='main_config_body'>
+	<form>
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name">
+					<font i18n="mirror_enable">mirror_enable</font>
+				</div>
+				<div class="main_item_content">
+					<div class="input_radio">
+						<input type="radio" id="mirror_enable" name="mirror_enable" value="1" />
+						<font i18n="mirror_enable">mirror_enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						&nbsp; &nbsp;
+						<input type="radio" id="mirror_disable" name="mirror_enable" value="0"/>
+						<font i18n="mirror_disable">mirror_disable</font>
+					</div>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name" i18n="mirror_title"></div>
+				<div class="main_item_content" id="mirror" style="color: rgba(255, 255, 255, 0.8);">
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name" i18n="mirror_d_title"></div>
+				<div class="main_item_content">
+					<select id="catch" class="select">
+					</select>
+				</div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name" i18n="direction_title"></div>
+				<div class="main_item_content">
+					<select id="direction" class="select">
+						<option value="1">InDirection</option>
+						<option value="2">OutDirection</option>
+						<option value="3">BothDirection</option>
+					</select>
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_item_content">
+					<input type="button" id="save_apply" class="input_button" onclick="saveApply()" i18n="inet_apply"
+						i18n-set="value">&nbsp; &nbsp;
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

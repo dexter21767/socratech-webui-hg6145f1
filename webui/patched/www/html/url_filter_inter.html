@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/url_filter_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="url_filterPrompt">url_filterPrompt</font></p>
+		</div>
+	    </br>
+		<form id="ip_filter_list_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="URLenable_title">URLenable_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="urlfilter_enable" name="urlfilter_enable" value="1" checked /><font i18n="firewall_enable">firewall_enable</font>&nbsp;&nbsp;
+						<input type="radio" id="urlfilter_disable" name="urlfilter_enable" value="0"/><font i18n="firewall_disable">firewall_disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="urldown_title">urldown_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="urlfilter_mode_white" name="urlfilter_mode" value="white" checked /><font i18n="firewall_white">firewall_white</font>&nbsp;&nbsp;
+						<input type="radio" id="urlfilter_mode_black" name="urlfilter_mode" value="black"/><font i18n="firewall_black">firewall_black</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="urlfilter_mode_apply" i18n="firewall_apply" i18n-set="value" onclick="EnableApply()"/>
+						<input type="button" class="input_button" id="urlfilter_mode_cancel" i18n="firewall_cancel" i18n-set="value" onclick="EnableCancel()"/>
+					</div>
+					<div style="float:right">
+						<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter()">
+						<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+			  			<input type="button" i18n="firewall_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+						<br/>
+					</div>
+				</div>			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="url_filterListHead">url_filterListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="15%" align='center' id="td_fw_filterID"><font i18n="fw_filterID">fw_filterID</font></td>
+					<td width="40%" align='center' id="td_urlip"><font i18n="urlip">urlip</font></td>
+					<td width="25%" align='center' id="td_urltime"><font i18n="urltime">urltime</font></td>
+					<td width="10%" align='center' id="td_url_enableTitle"><font i18n="url_enableTitle">url_enableTitle</font></td>
+					<td width="10%" align='center' id="td_check"></td>
+				</tr>
+				<tbody id='ipfilter_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content" id = "fw_config_form" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="urlip">urlip</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="url_address" name="url_address" style="width:150px"/>
+					</div>
+					<div id="url-error" class="main_item_error_hint_extra"></div>
+					
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="url_start_time">url_start_time</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" value="00" autocomplete="off" id="url_start_hour"  name="url_start_hour" style="width:150px"/> :
+						<input type="text" class="input_text" value="00" autocomplete="off" id="url_start_min" name="url_start_min" style="width:150px"/><font i18n="tips">(Hour:Min.24)</font>
+					</div>
+					<div id="Hour-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="url_end_time">url_end_time</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" value="23" autocomplete="off" id="url_end_hour" name="url_end_hour" style="width:150px"/> :
+						<input type="text" class="input_text" value="59" autocomplete="off" id="url_end_min" name="url_end_min" style="width:150px"/><font i18n="tips">(Hour:Min.24)</font>
+					</div>
+					<div id="Time-error" class="main_item_error_hint_extra"></div>
+					
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="URLenable_title">URLenable_title</font></div>
+					<div class="main_item_content">
+						<select id="enable"  style="width:150px">
+						  <option value="1" i18n="firewall_enable">Enable</option>
+						  <option value="0" i18n="firewall_disable">Disable</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="url_apply" i18n="firewall_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" class="input_button" id="url_cancel" i18n="firewall_cancel" i18n-set="value" onclick="doDelete()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

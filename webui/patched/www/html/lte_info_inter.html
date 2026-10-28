@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/lte_info_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form> 
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="ltestate_prompt">lte_prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+            <tbody>
+            	<tr class="table_title">
+      				<td colspan="2" id="lte_Inf"><font i18n="lte_Inf">lte_Inf</font></td>
+   				</tr>
+	            <tr>
+		            <td width="25%" class="table_left" ><font i18n="IMEI_title">IMEI</font></td>
+		            <td class="table_right"><span id="IMEI">
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="IMSI_title">IMSI</font></td>
+		            <td class="table_right"><span id="IMSI">
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="SIM_Number_title">SIM Number</font></td>
+		            <td class="table_right"><span id="SIM_Number">
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="ICCID_title">ICCID</font></td>
+		            <td class="table_right"><span id="ICCID">
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="sim_status">SIM Status</font></td>
+		            <td class="table_right" id="SIMStatus"></td>
+	            </tr>
+				<tr>
+				    <td class="table_left"><font i18n="sim_register">SIM register</font></td>
+				    <td class="table_right" id="SIMRegister"></td>
+				</tr>	
+	        </tbody>
+	    </table>
+	    <br>
+	    <table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">	
+	            <tbody>
+                    <tr class="table_title">
+                        <td colspan="2" id="NetworkInf"><font i18n="NetworkInf">NetworkInf</font></td>
+                    </tr>                
+	            	<tr id="tr_softver" >
+			            <td width="25%" class="table_left"><font i18n="fre_band">Frequency Band</font></td>
+			            <td  class="table_right" id="Band"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="PLMN">PLMN</font></td>
+			            <td class="table_right" id="PLMN"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="cell_id">E-Cell ID</font></td>
+			            <td class="table_right" id="ECELL"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="PCI">PCI</font></td>
+			            <td class="table_right" id='PCI'></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="singal_sinr">Signal SINR</font></td>
+			            <td class="table_right" id="SINR"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="singal_rsrp">Signal RSRP</font></td>
+			            <td class="table_right" id="RSRP"></td>
+		            </tr>
+		            <tr>
+			            <td class="table_left"><font i18n="singal_rsrq">Signal RSRQ</font></td>
+			            <td class="table_right" id="RSRQ"></td>
+		            </tr>
+					<tr>
+					    <td class="table_left"><font i18n="singal_rssi">Signal RSSI</font></td>
+					    <td class="table_right" id="RSSI"></td>
+					</tr>
+									
+                </tbody>
+            </table>
+    </form>
+		
+</body>
+</html>

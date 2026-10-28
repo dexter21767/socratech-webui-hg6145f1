@@ -1,0 +1,9 @@
+{
+	"indicator_state_prompt": "On this page, you can set the indicator of a device. You can configure an indicator off period if you set indicator switch to Off. An indicator is always off if you do not specify an indicator off period.",
+	"indicator_switch_head": "Indicator Switch Configuration",
+	"indicator_switch_title": "Indicator Switch",
+	"sw_on": "On",
+	"sw_off": "Off",
+	"btn_apply": "Apply",
+	"btn_cancel": "Cancel"
+}

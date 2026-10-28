@@ -1,0 +1,69 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+    <script language="javascript " type="text/javascript">
+        document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+            document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/admin_management_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+    </script>
+</head>
+
+<body class='main_config_body'>
+    <form id="userManagementForm" method="post">
+        <div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+            <div class="main_item">
+                <div class="main_item_name">
+                    <font i18n="account_admin">Username</font>
+                </div>
+                <div class="main_item_content">
+                    <div id="username" class="disabled_text" name="username" style="color: rgba(255, 255, 255, 0.8);"></div>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name">
+                    <span class="redcolorfont">*</span>
+                    <font i18n="old_password">Old Password</font>
+                </div>
+                <div class="main_item_content">
+                    <input class="input_text fh-text-security" type="text" autocomplete="off" readonly
+                        onfocus="removeAttribute('readonly')" name="password_old" id="password_old"
+                        oncopy="return false" onpaste="return false" />
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name">
+                    <span class="redcolorfont">*</span>
+                    <font i18n="new_password">New Password</font>
+                </div>
+                <div class="main_item_content">
+                    <input class="input_text fh-text-security" type="text" maxlength="32"
+                        autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="password_new"
+                        id="password_new" oncopy="return false" onpaste="return false"/>
+                </div>
+            </div>
+            <div class="main_item">
+                <div class="main_item_name">
+                    <span class="redcolorfont">*</span>
+                    <font i18n="new_confirm_password">New Password Confirm</font>
+                </div>
+                <div class="main_item_content">
+                    <input class="input_text fh-text-security" type="text" maxlength="32"
+                        autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="password_new_confirm"
+                        id="password_new_confirm" oncopy="return false" onpaste="return false" />
+                </div>
+            </div>
+            <div class="main_submit_item">
+                <div class="main_item_content">
+                    <input type="button" class="input_button" id="apply" name="apply" onclick="saveApply()"
+                        i18n="modifyPassword" i18n-set="value">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

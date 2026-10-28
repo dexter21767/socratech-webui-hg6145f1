@@ -1,0 +1,56 @@
+{
+  "ddns_apply":"Aplicar",
+  "ddns_cancel":"Cancelar",
+  "ddnscfg_remove":"Eliminar configuración",
+  
+  "ddns_prompt":"Puede configurar DDNS aquí. ",
+
+  "Enable":"Habilitar",
+  "Disable":"Deshabilitar",
+  
+  "ddns_hostTips":"(ejemplo, abc.dyndns.co.za)",
+  
+  "ddns_passwordTips":"(1-32 caracteres)",
+  "ddns_usernameTips":"(1-32 caracteres)",
+  "ddns_domain":"Dominio",
+  "ddns_hostTitle":"Host",  
+
+  "ddns_password":"Contraseña",
+  "ddns_interface":"Interfaz WAN",
+  "ddns_username":"Nombre de usuario",
+
+  "ddns_server":"Dirección del servidor",
+  "ddns_protocolTitle":"Protocolo",
+  "Server_url_title":"URL del servidor",
+  
+  "Please enter username!":"¡Por favor, introduzca el nombre de usuario!",
+  "Please enter password!":"¡Por favor, introduzca la contraseña!",
+  "Please enter host domain!":"¡Por favor, introduzca el host!",
+
+  "Please enter domain!":"¡Por favor, introduzca el dominio!",
+  "Please enter serveraddr!":"¡Por favor, introduzca la dirección del servidor!",
+  "Please enter url!":"¡Por favor, introduzca la URL!",
+  
+  "username is illegal!":"¡El nombre de usuario es ilegal!",
+  "Password is illegal!":"¡La contraseña es ilegal!",
+  "Host Domain Name is illegal!":"¡El nombre de dominio del host es ilegal!",
+  "ddns_providerTitle":"Proveedor de DDNS",
+  "Please enter provider":"¡Por favor, introduzca el proveedor!",
+  
+  "ddns_interfaceNUllAlert":"¡Configure la interfaz WAN!",
+  
+  "ddns_state_prompt":"Puede obtener información sobre DDNS aquí.",
+  "ddns_infoTitle":"Información de DDNS",
+  "ddns_updateTitle":"Información de actualización",
+  "ddns_init":"Iniciar",
+  "ddns_modify":"Actualización",
+  "ddns_success":"Actualización correcta",
+  "ddns_param_error":"Error de parámetro",
+  "ddns_cfgfile_error":"Error de archivo de configuración",
+  "ddns_ifname_error":"Error de Ifname",
+  "ddns_devIP_error":"No se pudo obtener la dirección IP del host",
+  "ddns_connect_error":"Error al conectarse al servidor",
+  "ddns_response_error":"Error de actualización",
+  "ddns_noResp_error":"El servidor no responde",
+  "ddns_memory_error":"Error de memoria insuficiente"
+}

@@ -1,0 +1,11 @@
+{
+  "IPSEC basic apply":"Apply",
+  "IPSEC basic cancel":"Cancel",
+  
+  "IPSEC_prompt":"On this page, you could configure IPSec passthrough switch.",
+
+  "IPSECEnable_title":"IPSec",
+  
+  "IPSEC_enable":"Enable",
+  "IPSEC_disable":"Disable"
+}

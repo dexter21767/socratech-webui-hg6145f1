@@ -1,0 +1,23 @@
+{
+  "recontrol_prompt":"您可以开启或者关闭远程访问设备：关闭远程访问控制，以使外网无法访问web；或者开启远程访问控制，以使外网可以访问web。",
+  "recontrol_prompt_romania":"在本页面，您可以开启或者关闭从https远程访问设备的权限。",
+  "rcEnable_title":"远程访问控制",
+  
+  "rc_enable":"开启",
+
+  "rc_disable":"关闭",
+  
+  "recontrolApply":"提交",
+  "recontrolCancel":"取消",
+
+  "https_prompt":"您可以在本页面开启或者关闭HTTPS功能。",
+  
+  "webport_Prompt":"另外，您可以配置WEB的HTTP通信端口。",
+  "web_portTitle":"当前生效的WEB通信端口",
+  "web_portchangeTitle":"您所修改的WEB通信端口",
+  "web_portchangeTips":"(请输入 1024-65535 或 80)",
+  "Change_confirm":"您修改的配置在设备重启后生效!",
+  "web_portIllegalAlert":"有效端口范围:1024-65535、80",
+  "web_PortNullAlert":"请输入端口!"
+}
+

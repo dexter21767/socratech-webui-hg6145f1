@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" >
+<script language ="javascript "type ="text/javascript">
+	document.write('<script  src="./js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/versionControl.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/access.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+	var gdevice_name;
+	function frmLoad() {
+		XHR.get("get_device_name", null, function(data){
+			gdevice_name = data.ModelName
+		})
+		XHR.get("get_operator", null, redirect);
+	}
+	
+	function redirect(data)
+	{
+		var url = "html/login_inter.html";
+		if ( data != null && data != undefined && data.operators_code != null && data.operators_code != undefined )
+		{
+			url = getAccessLoginPage(data.operators_code);
+		}
+		if(data.operator_name == "TH_3BB"){
+		
+			url = "html/login_3bb.html";
+		}
+		if(data.operator_name == "PH_PLDT"){
+			sessionStorage.setItem("fh_access", "0");
+			url = "html/login_pldt.html";
+		}
+		if(data.operator_name == "BZ_TIM"){
+			url = "public/index.html";
+		}
+		if(data.operator_name == "PLE_PALTEL"){
+			url = "html/login_paltel.html";
+		}
+        if(data.operator_name == "TH_AIS"){
+        	url = "html/login_ais.html";
+        }
+
+		if(data.operator_name == "MY_TM"){
+        	url = "html/login_mytm.html";
+        }
+        if(data.operator_name == "EG_TELECOM" ){
+        	url = "html/login_ed.html";
+        }
+
+		//ROM_RCSRDS/MAGYAR_4IG
+		if(data.operator_name == "ROM_RCSRDS" ){
+			url = "html/login_romania.html";
+		}
+        if(data.operator_name == "MAGYAR_4IG"){
+            url = "html/login_magyar.html";
+        }
+		if(data.operator_name == "BZ_INTELBRAS"){//BZ_INTELBRAS
+            url = "html/login_bz_intelbras.html";
+        }
+		if(data.UI_flag == "1")
+		{
+            url = "new_ui/login.html";
+        }
+		if(data.operator_name == "MEX_NETWEY"){//MEX_NETWEY
+            url = "html/login_mex_netwey.html";
+        }
+		
+		window.location.href = url;
+	}
+</script>
+</head>
+<body onLoad='frmLoad();'>
+</body>
+</html>

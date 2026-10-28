@@ -1,0 +1,11 @@
+{
+    "firewall_enable":"Activar",
+    "firewall_disable":"Desactivar",
+	"iptv_prompt":"Nesta página você pode configurar a VLAN multidifusão.",
+    "iptv_infoHead":"Informações Multidifusão",
+    "iptv_vlanTitle":"Multidifusão VLAN",
+    "iptv_vlanTips":"(Digite o número -1 ou 1 a 4094)",
+	"Multicast_Enable":"Troca Multidifusão",
+    "iptv_apply":"Aplicar",
+    "iptv_cancel":"Cancelar"
+}

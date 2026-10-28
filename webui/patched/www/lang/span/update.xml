@@ -1,0 +1,54 @@
+{
+  "content_trans_apply":"Apply",
+  "content_trans_cancel":"Cancel",
+  
+  "update_prompt":"En esta página, puede buscar el archivo local y hacer clic en el botón para actualizar el software del equipo terminal. No lo apague durante la actualización ni realice otras operaciones, para no causar daños y no se puede usar.",
+  "update_chooseFile":"Elija el archivo y actualice",
+  "update_info":"Las actualizaciones llevarán tiempo, tenga paciencia...",
+  "update_back":"Atrás",
+  
+  "update_format_illegal":"Formato de archivo ilegal, por favor vuelva a seleccionar!",
+  "update_success":"¡La actualización fue exitosa!",
+  "update_fail":"La actualización del archivo falló, inténtelo de nuevo.",
+  "update_restart":" ¡Reinicia el dispositivo!",
+  "update_api_error":" ¡Compruebe si el archivo de actualización es correcto!",
+  "update_space_not_enough":" ¡El espacio del dispositivo no es suficiente! ¡Reinicia y vuelve a intentarlo!",
+  "update_restartConfirm":" Ya sea para reiniciar la ONU? ¡Inicie sesión en la administración de la red WEB después de reiniciar la ONU!",
+  "update_restartAlert":" ONU se reiniciará automáticamente. ¡Espere y vuelva a iniciar sesión en la gestión de red WEB!",
+  
+  "down_cfgFilePrompt":"On this page, you may backup several config files from device to PC as you wish after opening the ftp tool.",
+  "down_cfgFileHead":"Config Backup",
+  "down_cfgFileUserTitle":"Username",
+  "down_cfgFilePwdTitle":"Password",
+  "down_cfgFileIPTitle":"Localhost IP",
+  "down_cfgFileNameTitle":"File Name", 
+  
+  "down_cfgFileUserTips":" (You can input 1-20 characters, including alphanumeric, '_' and '.')",
+  "down_cfgFilePwdTips":" (You can input 0-20 characters, including alphanumeric, '_' and '.')",
+  "down_cfgFileIPTips":" (Decimal format)",
+  "down_cfgFileNameTips":" (You can input 1-64 characters, including alphanumeric, '_' and '.')",
+  
+  "down_cfgFileUserIllegalAlert":"Please enter a valid Username!",
+  "down_cfgFilePwdIllegalAlert":"Please enter a valid Password!",
+  "down_cfgFileIPIllegalAlert":"Please enter a valid ip!",
+  "down_cfgFileFileIllegalAlert":"Please enter a valid file name!",
+  
+  "cfg_download_prompt":"You can download the current configuration file to the local computer.",
+  "cfg_download":"Config Backup",
+  
+  "cfg_upload_prompt":"If you enter the path of the configuration file and choose it, your terminal will be updated with the saved configuration file.",
+  "cfg_upload_title":"Update Config File",
+  "cfg_uploadTips":"The configuration file name can only contain '_' and alphanumeric.",
+  "cfg_upload_import":"Import",
+  "cfg_upload_load":"Loading ",
+  "cfg_upload_fileIllegalAlert":"Please select the correct configuration file!",
+  "cfg_upload_complete":"Configuration file update complete!",
+  "cfg_upload_failed":"Configuration file update failed!",
+  
+  "rebooting":"System is rebooting... Please wait for a moment and relogin after reboot.",
+  "updata_file":"Actualizar archivo",
+  "upgrade_nofile_err":"Seleccione un archivo",
+  "choose_file":"Elegir Archivo"
+
+}  
+

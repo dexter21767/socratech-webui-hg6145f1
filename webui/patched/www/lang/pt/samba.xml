@@ -1,0 +1,20 @@
+{
+  "samba_prompt": "Nesta página, você pode ativar ou desativar o serviço samba, certifique-se de inserir primeiro o dispositivo de armazenamento removível e a porta USB!",
+  "samba_enable": "Habilitar Samba",
+  "usb_part": "Partição USB",
+  "enable": "Habilitado",
+  "disable": "Desabilitado",
+  "btn_apply": "Aplicar",
+  "btn_cancel": "Cancelar",
+  "Open_Samba": "Open Samba",
+  "samba_userTitle": "Nome de usuário",
+  "samba_pwdTitle": "Senha",
+  "samba_userTips": "(Você pode inserir de 1 a 32 caracteres, incluindo alfanuméricos e '_')",
+  "samba_pwdTips": "(Você pode inserir de 1 a 8 caracteres, incluindo alfanuméricos e '_')",
+  "invalid_data_alert": "Algum valor é inválido. Tente novamente!",
+  "samba_head": "Samba Server",
+  "samba_enableTitle": "Habilitado",
+  "samba_disableTitle": "Desabilitado",
+  "samba_apply": "Aplicar",
+  "samba_cancel": "Cancelar"
+}

@@ -1,0 +1,36 @@
+{
+  "WPSconnect":"Conectar",
+  "WPSCancel":"Cancelar",
+  "wps_apply":"Aplicar",
+  
+  "WPS_enable_head":"Habilitar WPS",
+  "wps_enable_title":"Habilitar",
+  "wps_disable_title":"Deshabilitar",
+  "WPS_cfg_head":"Configuración de WPS",
+  "pin_code":"Código PIN",
+  "wps_statetitle":"Estado de WPS",
+  "wps_prompt":"En esta página, puede configurar WPS.",
+  "wps_prompt_ap":"En esta página, puede consultar WPS.",
+
+  "wps_PINtitel":"Código PIN (PIN)",
+  "wps_PINTips":"Por favor, introduzca el número 0-9 (8 caracteres).",
+  "wps_PINer":"Código PIN",
+  "wps_buttontitel":"Configuración de botón pulsador (PBC)",
+  "wps_nopinalert":"or favor, introduzca el codigo PIN!",
+  "wps_pinillegal":"¡El código PIN es ilegal!",
+
+  "Connecting":"Conectando...",
+  "Time_Out":"Tiempo expirado",
+  "connection_Successful":"Conexión exitosa",
+  "connection_fail":"Error de conexión",
+
+  "not_hide_24g_SSID1":"¡Por favor, no oculte la 2.4G SSID 1!",
+  "not_hide_5g_SSID1":"¡Por favor, no oculte la 5G SSID 1!",
+
+  "wps_PIN1_prompt":"(Puede introducir el número 0-9 (8 caracteres).)",
+  "wps_bandSelec_head":"Selección de banda WPS",
+  "WPS Method":"Método WPS",
+  "8-digit number":"Número de 8 dígitos"
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/secdary_lan_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="sec_lan_prompt" id="sec_lan_prompt">sec_lan_prompt</font></p>
+		</div>
+		<br/>
+		<fh-fo-rm id="sec_lan_form" method="post">
+			<div class="main_content">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="sec_lan_Title">sec_lan_Title</font></div>
+                    <div class="main_item">
+                    	<div class="main_item_name" ><font i18n="second_ip_enable">second_ip_enable</font></div>
+                    	<div class="main_item_content" >
+                    		<input type="checkbox" class="input_text"  autocomplete="off"   name="secIp_enable" id="secIp_enable"/>
+                    	</div>
+                    </div>
+					<div class="main_item">
+						<div class="main_item_name" ><font i18n="second_ip">second_ip</font></div>
+						<div class="main_item_content" >
+							<input type="text" class="input_text" style="width: 130px;" autocomplete="off"   name="ip_text" id="ip_text"/>
+						</div>
+                        <div id="secip-error" class="main_item_error_hint_extra"></div>
+					</div>
+				
+					<div class="main_item" id="inet_netmask_div">
+						<div class="main_item_name" ><font i18n="inet_netmask">inet_netmask</font></div>
+						<div class="main_item_content" >
+							<span id="tip" style="display: none;">255 . 255 . 255 . </span><input type="text" class="input_text" style="width: 130px;cursor:text;" autocomplete="off"  name="subnet_mask" id="subnet_mask"/>
+						</div>
+					</div>
+				</div>
+				<br/>
+				<div class="table_bg" id="dhcp_cfg_div">
+					<div class="table_title"><font i18n="inet_sec_dns">inet_sec_dns</font></div>
+					<div class="main_item">
+						<div class="main_item_name"  ><font i18n="dhcp_typeTitle">dhcp_typeTitle</font></div>
+						<div class="main_item_content" >
+							<select id="enable"  style="width:150px">
+							  <option value="1" >Sever</option>
+							  <option value="0" >Disable</option>
+							</select>
+						</div>
+						<div id="Pwd_password-error" class="main_item_error_hint_extra"></div>
+					</div>
+                    <div id="DHCP_div">
+                    <div class="main_item">
+                    	<div class="main_item_name"><font i18n="dhcp_startTitle">dhcp_startTitle</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text " autocomplete="off" id="lanStartAddress_text" name="lanStartAddress_text"/>
+                    	</div>
+                    	<div id="lanStartAddress-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                    	<div class="main_item_name"><font i18n="dhcp_endTitle">dhcp_endTitle</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text " autocomplete="off" id="lanEndAddress_text" name="lanEndAddress_text"/>
+                    	</div>
+                    	<div id="lanEndAddress-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                    	<div class="main_item_name"><font i18n="dhcp_priDnsTitle">dhcp_priDnsTitle</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text " autocomplete="off" id="priDnsAddress_text" name="priDnsAddress_text"/>
+                    	</div>
+                    	<div id="priDnsAddress-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                    	<div class="main_item_name"><font i18n="dhcp_secDnsTitle">dhcp_secDnsTitle</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text" autocomplete="off" id="secDnsAddress_text" name="secDnsAddress_text"/>
+                    	</div>
+                    	<div id="secDnsAddress-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                    	<div class="main_item_name"><font i18n="dhcp_timeTitle">dhcp_timeTitle</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text" style="width: 83px" autocomplete="off" id="dhcp_hour_text" name="dhcp_hour_text"/><font i18n="dhcp_hourTitle">dhcp_hourTitle</font>
+                    		<input type="text" class="input_text" style="width: 83px" autocomplete="off" id="dhcp_min_text" name="dhcp_min_text"/><font i18n="dhcp_minTitle">dhcp_minTitle</font> <font i18n="dhcp_timeTips">dhcp_timeTips</font>
+                    	</div>
+                    </div>
+                    <div class="main_item" id="option60_div">
+                    	<div class="main_item_name"><font i18n="option60">option60</font></div>
+                    	<div class="main_item_content">
+                    		<input type="text" class="input_text" autocomplete="off" id="option60_text" name="option60_text"/>
+                    	</div>
+                    	<div id="secDnsAddress-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    </div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 20%;"></div>	
+					<div class="main_submit" style="width: 80%;">
+						<input type="button" id="inet_apply" class="input_button" i18n="inet_apply" i18n-set="value" onclick="saveApply()"/>
+						<input type="button" id="inet_cancel" class="input_button" i18n="inet_cancel" i18n-set="value" onclick="Cancel()"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

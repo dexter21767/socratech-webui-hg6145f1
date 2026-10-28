@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/iptv_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("iptv");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="iptv_prompt">iptv_prompt</font></p>
+		</div>
+		<form id="loid_form">
+			<div class="table_title"></div>
+			<div id="register_div22">
+				<div class="main_content">
+					<div id="multicast"  >
+					<div class="table_bg">
+					<div class="table_title"><font i18n="ipv4">ipv4</font></div>
+					<!-- <div class="main_item">
+						<div class="main_item_name"><font i18n="iptv_IGMPSnooping">IGMPSnooping</font></div>
+						<div class="main_item_content">
+							<input type="checkbox" name="iptv_IGMPSnooping" value="0" />
+						</div>
+					</div> -->
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="iptv_IGMPProxy">IGMPProxy</font></div>
+						<div class="main_item_content">
+							<input type="checkbox" id="iptv_IGMPProxy" name="iptv_IGMPProxy"  value="0"  />
+						</div>
+					</div>
+					</div>
+					<div class="table_bg">
+					<div class="table_title"><font i18n="ipv6">ipv6</font></div>
+					<!-- <div class="main_item">
+						<div class="main_item_name"><font i18n="iptv_MLDSnooping">MLDSnooping</font></div>
+						<div class="main_item_content">
+							<input type="checkbox" name="iptv_MLDSnooping" value="0"   />
+						</div>
+					</div> -->
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="iptv_MLDProxy">MLDProxy</font></div>
+						<div class="main_item_content">
+							<input type="checkbox" id="iptv_MLDProxy" name="iptv_MLDProxy" value="0"   />
+						</div>
+					</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"></div>
+						<div class="main_item_content">
+							<input type="button" id="iptv_apply" class="input_button" i18n="iptv_apply" i18n-set="value" onclick="switchApply()"/>
+							<input type="button" id="iptv_cancel" class="input_button" i18n="iptv_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+					</div>
+					</div>
+					<div class="table_bg">
+					<div class="table_title"><font i18n="iptv_vlanTitle">iptv_vlanTitle</font></div>
+					<div class="main_content">
+						<div class="main_item_name"><font i18n="iptv_vlanTitle">iptv_vlanTitle</font></div>
+						<div class="main_item_content">
+							<span width=80 class="trad"><input type="text" class="input_text" style="width:100px" maxlength="4" autocomplete="off" name="iptv_vlan" id="iptv_vlan"/></span>
+							<span width=80 class="trad"><font i18n="iptv_vlanTips">iptv_vlanTips</font></span>
+						</div>
+						<div id="iptv_vlan-error" class="main_item_error_hint_extra"></div>
+					</div>
+					</div>
+					</div>
+					
+				
+					<div class="main_item">
+						<div class="main_item_name"></div>
+						<div class="main_item_content">
+							<input type="button" id="iptv_vlan_apply" class="input_button" i18n="iptv_apply" i18n-set="value" onclick="saveApply()"/>
+							<input type="button" id="iptv_vlan_cancel" class="input_button" i18n="iptv_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+					</div>
+				
+		</form>
+	</body>
+</html>

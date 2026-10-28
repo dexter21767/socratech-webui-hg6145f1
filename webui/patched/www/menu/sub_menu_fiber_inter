@@ -1,0 +1,101 @@
+{
+	"factory": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "factory_base", "title":"base_set", 
+				"thirdmenus": [
+					{"name":"factory_base_base", "title":"base_set", "src": "baseinfoSet.html"},
+					{"name":"factory_base_preconfig", "title":"preconfig_set", "src": "preconfig.html"}
+				]
+			},
+			{"name": "factory_upgrade", "title":"upgrade", 
+				"thirdmenus": [
+					{"name":"factory_upgrade_upgrade", "title":"upgrade", "src": "upgrade.html"},
+					{"name":"factory_upgrade_preconfig", "title":"upgrade_preconfig", "src": "upgrade_preconfig.html"}
+				]
+			},
+			{"name": "factory_restore", "title":"restore_factory", 
+				"thirdmenus": [
+					{"name":"factory_restore_restore", "title":"restore_factory", "src": "restore_factory.html"}
+				]
+			}
+		]
+	},
+	"service": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+		    {"name": "service_wan", "title":"wan_set", 
+				"thirdmenus": [
+					{"name":"service_wan_broadbund", "title":"wan_set", "src": "broadband_factory.html"}
+				]
+			},
+			{"name": "service_service", "title":"app_service",
+				"thirdmenus": [
+					{"name":"service_service_service", "title":"app_service", "src": "services.html"},
+					{"name":"service_service_option60", "title":"option60", "src": "option60.html"},
+					{"name":"service_service_option16", "title":"option16", "src": "option16.html"}
+				]
+			},
+			{"name": "service_wifi", "title":"wifi_set",
+				"thirdmenus": [
+					{"name":"service_wifi_base", "title":"wifi_2gbase", "src": "adminWlanBasicSettings.html"},
+					{"name":"service_wifi_advance", "title":"wifi_2gadvance", "src": "adminWlanAdvancedSettings.html"},
+					{"name":"service_wifi_base5g", "title":"wifi_5gbase", "src": "adminWlanBasicSettings_5G.html"},
+					{"name":"service_wifi_advance5g", "title":"wifi_5gadvance", "src": "adminWlanAdvancedSettings_5G.html"}
+				]
+			},
+			{"name": "service_voice", "title":"voice_set",
+				"thirdmenus": [
+					{"name":"service_voice_base", "title":"voice_base", "src": "factory_voice_base.html"},
+					{"name":"service_voice_h248", "title":"h248_preconfig", "src": "factory_h248_preconfig.html"},
+					{"name":"service_voice_sip", "title":"sip_preconfig", "src": "factory_sip_preconfig.html"},
+					{"name":"service_voice_common", "title":"common_preconfig", "src": "factory_voicecommon_preconfig.html"}
+				]
+			},
+			{"name": "service_other", "title":"other",
+				"thirdmenus": [
+					{"name":"service_other_driver", "title":"driver", "src": "main_demo.html"}
+				]
+			}
+		]
+	},
+	"maintain": {
+		"childMenuPosition": "both",
+		"secondmenus":[
+			{"name": "maintain_catch", "title":"capture",
+				"thirdmenus": [
+					{"name":"maintain_catch_portmirror", "title":"port_mirror", "src": "port_mirror.html"},
+					{"name":"maintain_catch_dsp", "title":"dsp_capture", "src": "dsp.html"}
+				]
+			},
+			{"name": "maintain_LanMode", "title":"lan 模式", 
+				"thirdmenus": [
+					{"name":"maintain_Lan_Mode", "title":"lan 模式", "src": "LanMode_inter.html"}
+				]
+			},
+			{"name": "maintain_log", "title":"log", 
+				"thirdmenus": [
+					{"name":"maintain_log_set", "title":"log_set", "src": "factory_log.html"},
+					{"name":"maintain_log_download", "title":"log_download", "src": "factory_log_download.html"}
+				]
+			},
+			{"name": "maintain_web", "title":"web", 
+				"thirdmenus": [
+					{"name":"maintain_web_set", "title":"web_log", "src": "web_log.html"}
+				]
+			},
+			{"name": "maintain_file", "title":"上传下载", 
+				"thirdmenus": [
+					{"name":"maintain_file_up", "title":"上传文件", "src": "file_upload.html"},
+					{"name":"maintain_file_down", "title":"下载文件", "src": "file_download.html"}
+				]
+			},
+			{"name": "maintain_shortcut", "title":"快捷操作", 
+				"thirdmenus": [
+					{"name":"maintain_shortcut_onekey", "title":"一键操作", "src": "shortcut_onekey.html"},
+					{"name":"maintain_shortcut_telnet", "title":"命令行操作", "src": "shortcut_telnet.html"}
+				]
+			}
+		]
+	}
+}

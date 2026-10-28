@@ -1,0 +1,9 @@
+{
+	"samba_prompt": "En esta página, puede activar o desactivar el servicio samba, ¡asegúrese de haber insertado primero el dispositivo de almacenamiento extraíble y el puerto USB!",
+	"samba_enable": "Habilitar Samba",
+	"usb_part": "USB Partition",
+	"enable": "Activar",
+	"disable": "Desactivar",
+	"btn_apply": "Aplicar",
+	"btn_cancel": "Cancelar"
+}

@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/standard_restore_ais.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.form.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("restore");
+	</script>
+	<style type="text/css"> 
+		#progress
+		{
+		height: 24px;
+		width: 200px;
+		border: none;
+	}
+	.inner-progress 
+	{
+		background: #2C5EA4;
+	}
+ 	</style>	
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="restore_ais_title">restore_ais_title</font></p>
+		</div>
+        
+		<br>
+		<form enctype="multipart/form-data" method="post" id="file_form">
+            <div class="main_item" style="height: 56px" id="update_common">
+            	<div class="main_item_name" style="height: 54px; line-height: 56px;" ><font i18n="config_file_title" >config_file_title</font></div>
+            	<div class="main_item_content" style="height: 28px;" >
+            		<input type="file" id="uploadfile" name="uploadfile"  />
+            	</div>
+            	<!-- <div class="main_item_content" style="height: 24px;" >
+            		<span id="cfg_uploadTips" style="color: gray;"></span>
+            	</div>	 -->	
+                <input type="submit" style="margin-top: 10px;"  class="input_button" id="upload_file_server"  value="Restore Configuration" i18n="restore_configuration_button" i18n-set="value">         
+            </div>
+        	<div class="restore_ais_form" id="restore_ais_cfg">
+			<div class="main_content" style="margin-top: 20px;">
+				<div class="main_item" style="height: 56px" id="update_common">
+					<div class="main_item_name" style="height: 54px; line-height: 56px;" ><font i18n="cpe_config_file_url_title" >cpe_config_url_title</font></div>
+					<div class="main_item_content" style="height: 28px;" >
+						<input class="input_text" type="text" id="configure_url" name="configure_url"  />
+					</div>
+					<div class="main_item_content" style="height: 24px;" >
+						<span id="cfg_uploadTips" style="color: gray;"></span>
+					</div>					
+				</div>
+			</div>
+			<div class="main_button" id="upgrade_submit">
+				<div class="main_submit" style="width: 25%;"></div>	
+				<div class="main_submit" style="width: 75%;">
+					<input type="button" class="input_button" i18n="standard_url_button" i18n-set="value" onclick="save_apply()" id="saveApply" />	</div>
+			</div>	
+                    
+            <div class="main_save">
+            	<input type="button" style="margin-left: 180px;" class="input_button" onclick="download_file_server()"  id="downloadfileServer" value="Download Configuration file from server" i18n="download_server_button" i18n-set="value">
+            </div> 
+            </div>
+		</form>
+	</body>
+</html>

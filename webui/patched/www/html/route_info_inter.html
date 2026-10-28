@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/route_info_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("state");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="route_info_prompt">route_info_prompt</font></p>
+		</div>
+		<div class="main_refresh">
+			<input type="button" id="refresh_btn" class="input_button" i18n="refresh_btn_text" i18n-set="value" onclick="window.location.reload()" />
+		</div>
+		<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="table_title">
+				<div colspan="2"><font i18n="route_tableHead">route_tableHead</font></div>
+			</div>
+		</div>
+		<textarea id="logtable" rows="20" cols="99" readonly="readonly"></textarea>
+		<br/><br/>
+	</body>
+</html>

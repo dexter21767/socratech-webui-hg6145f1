@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/main_ipfilter_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="fw_ipfilterPrompt">fw_ipfilterPrompt</font></p>
+		</div>
+		<form id="ip_filter_list_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="firewall_ipfilterup_title">上行</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="lanfirewall_mode_white" name="lanfirewall_mode" value="1" checked /><font i18n="firewall_white">白名单</font>&nbsp;&nbsp;
+						<input type="radio" id="lanfirewall_mode_black" name="lanfirewall_mode" value="0"/><font i18n="firewall_black">黑名单</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="firewall_ipfilterdown_title">下行</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="wanfirewall_mode_white" name="wanfirewall_mode" value="1" checked /><font i18n="firewall_white">白名单</font>&nbsp;&nbsp;
+						<input type="radio" id="wanfirewall_mode_black" name="wanfirewall_mode" value="0"/><font i18n="firewall_black">黑名单</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="firewall_mode_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="EnableApply()"/>
+						<input type="button" id="firewall_mode_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="EnableCancel()"/>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div class="table_title"><font i18n="fw_filterListHead">过滤规则列表</font></div>
+			<table width="100%" style="margin:auto; white-space:nowrap;" cellspacing="0" cellpadding="3px" border="1px">
+				<tr align="">
+					<td width="140" align='center'>过滤器名</td>
+					<td width="140" align='center'><font i18n="fw_directionTitle">方向</font></td>
+					<td width="140" align='center'><font i18n="url_enableTitle">状态</font></td>
+					<td width="140" align='center'><font i18n="fw_srcIPTitle">源IP</font></td>
+					<td width="140" align='center'><font i18n="fw_srcPortTitle">源端口</font></td>
+					<td width="140" align='center'><font i18n="fw_dstIPTitle">目的IP</font></td>
+					<td width="140" align='center'><font i18n="fw_dstPortTitle">目的端口</font></td>
+					<td width="140" align='center'><font i18n="fw_protocolTitle">协议</font></td>		
+					<td width="140" align='center'><font i18n="fw_delete">删除</font></td>
+				</tr>
+				<tbody id='ipfilter_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">过滤器名</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text input_short" autocomplete="off" id="ipfilter_Name" name="ipfilter_Name"/>
+					</div>
+					<div class='main_item_error_hint_extra' id="add_text_error"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_directionTitle">方向</font></div>
+					<div class="main_item_content">
+						<select id="ipfilter_direction" class="select_short">
+						  <option value="out">Lan->Wan</option>
+						  <option value="in">Wan->Lan</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="pps_enable">启用</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="ipfilter_Enable"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_srcIPTitle">源IP</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text input_short" autocomplete="off" id="SourceIPStart" name="SourceIPStart"/> --
+						<input type="text"  class="input_text input_short" autocomplete="off" id="SourceIPEnd" name="SourceIPEnd"/>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_srcPortTitle">源端口</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text input_short" autocomplete="off" id="SourcePortStart"  name="SourcePortStart"/> --
+						<input type="text" class="input_text input_short" autocomplete="off" id="SourcePortEnd" name="SourcePortEnd"/>
+					</div>
+					<div id="MinSourcePort-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_dstIPTitle">目的IP</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text input_short" autocomplete="off" id="DestIPStart" name="DestIPStart"/> --
+						<input type="text"  class="input_text input_short" autocomplete="off" id="DestIPEnd" name="DestIPEnd"/>
+					</div>
+					<div id="MinDestinationAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_dstPortTitle">目的端口</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text input_short" autocomplete="off" id="DestPortStart" name="DestPortStart"/> --
+						<input type="text"  class="input_text input_short" autocomplete="off" id="DestPortEnd" name="DestPortEnd"/>
+					</div>
+					<div id="MinDestinationPort-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="fw_protocolTitle">协议</font></div>
+					<div class="main_item_content">
+						<select id="Protocol" class="select_short">
+						  <option value="TCP/UDP">TCP/UDP</option>
+						  <option value="TCP">TCP</option>
+						  <option value="UDP">UDP</option>
+						  <option value="ICMP">ICMP</option>
+						  <option value="ALL">ALL</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="fw_add" class="input_button" i18n="fw_add" i18n-set="value" onclick="addfilter()"/>
+						<input type="button" id="firewall_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" id="firewall_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="doDelete()"/>
+					</div>
+				</div>
+			</div>
+		</from>
+	</body>
+</html>

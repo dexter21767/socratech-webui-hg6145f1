@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.formFill.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/qoslimit_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<br/>
+		<div class="main_content">
+			<div class="table_bg">
+				<div class="table_title" i18n="qoslimit_title"><font>qoslimit_title</font></div>
+			</div>
+			<div class="main_item" id="switch">
+				<div class="main_item_name" i18n="qoslimit_enable"><font>qoslimit_enable</font></div>
+				<div class="main_item_content">
+					<div class="switch_content switch_content_off" id="RateLimitEnable_container">
+						<input type="hidden" name="RateLimitEnable_checkbox" id="RateLimitEnable_checkbox">
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div class="table_bg">
+				<div class="table_title" i18n="qoslimit_up_title"><font>qoslimit_up_title</font></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name" i18n="qoslimit_up_mode"><font>qoslimit_up_mode</font></div>
+				<div class="main_item_content">
+					<select name="up_link_mode" id="up_link_mode" style="width: 50%;">
+						<option value="0" id="Close" i18n="qoslimit_mode_close">qoslimit_mode_close</option>
+						<option value="3" id="IP" i18n="qoslimit_mode_ip">qoslimit_mode_ip</option>
+						<option value="2" id="MAC" i18n="qoslimit_mode_mac">qoslimit_mode_mac</option>
+					</select>
+				</div>
+			</div>
+			<div style="float:right" id="btn_div_up">
+				<input type="button" id="qos_limit_btn_add" onclick="addBtnApply_up()" i18n="qoslimit_btn_add" i18n-set="value" class="input_button">&nbsp; &nbsp;
+				<input type="button" id="qos_limit_btn_del" onclick="click_remove_up()" i18n="qoslimit_btn_del" i18n-set="value" class="input_button">
+			</div>
+			<div id="up_ip_list" clas="up_ip_div" style="display: none;">
+				<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+					<tr class="table_head_title">
+						<td width="5%" align='center'><font>ID</font></td>
+						<td width="40%" align='center'><font>IP</font></td>
+						<td width="40%" align='center'><font i18n="qoslimit_speed">qoslimit_speed</font></td>
+						<td width="15%" align='center'><font i18n="qoslimit_action">qoslimit_action</font></td>
+					</tr>
+					<tbody id='up_ip_list_body' style="font-size: 12px">
+					</tbody> 
+				</table>
+			</div>
+			<div id="up_mac_list" style="display: none;">
+				<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+					<tr class="table_head_title">
+						<td width="5%" align='center'><font>ID</font></td>
+						<td width="40%" align='center'><font>MAC</font></td>
+						<td width="40%" align='center'><font i18n="qoslimit_speed">qoslimit_speed</font></td>
+						<td width="15%" align='center'><font i18n="qoslimit_action">qoslimit_action</font></td>
+					</tr>
+					<tbody id='up_mac_list_body' style="font-size: 12px">
+					</tbody> 
+				</table>
+			</div>
+			<form id="up_limit_form" method="post" style = "display: none;">
+				<div class="main_content">
+					<div id="up_ip_setting" class="main_item" style = "display: none;"> 
+						<div class="main_item_name">IP</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="up_ip_text" name="up_ip_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div id="up_mac_setting" class="main_item" style = "display: none;"> 
+						<div class="main_item_name">MAC</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="up_mac_text" name="up_mac_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div id="up_speed_setting" class="main_item"> 
+						<div class="main_item_name" i18n="qoslimit_speed">qoslimit_speed</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="up_speed_text" name="up_speed_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item" id="form_btn_up"> 
+						<div class="main_item_name" style="width: 35%;"></div>
+						<div class="main_item_content" style="width: calc(65% - 3px);">
+							<input type="button" class="input_button" id="save_button" i18n="qoslimit_btn_apply" i18n-set="value" onclick="saveApply('up')"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="button" class="input_button" id="cancel_button" i18n="qoslimit_btn_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+					</div>
+				</div>
+			</form>
+			<br>
+			<div class="table_bg">
+				<div class="table_title" i18n="qoslimit_down_title"><font>qoslimit_down_title</font></div>
+			</div>
+			<div class="main_item">
+				<div class="main_item_name" i18n="qoslimit_down_mode"><font>qoslimit_down_mode</font></div>
+				<div class="main_item_content">
+					<select name="down_link_mode" id="down_link_mode" style="width: 50%;">
+						<option value="0" id="close" i18n="qoslimit_mode_close">qoslimit_mode_close</option>
+						<option value="3" id="IP" i18n="qoslimit_mode_ip">qoslimit_mode_ip</option>
+						<option value="2" id="MAC" i18n="qoslimit_mode_mac">qoslimit_mode_mac</option>
+					</select>
+				</div>
+			</div>
+			<div style="float:right" id="btn_div_down">
+				<input type="button" id="qoslimit_add" onclick="addBtnApply_down()" i18n="qoslimit_btn_add" i18n-set="value" class="input_button">&nbsp; &nbsp;
+				<input type="button" id="qoslimit_del" onclick="click_remove_down()" i18n="qoslimit_btn_del" i18n-set="value" class="input_button">
+			</div>
+			<div id="down_ip_list" style="display: none;">
+				<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+					<tr class="table_head_title">
+						<td width="5%" align='center'><font>ID</font></td>
+						<td width="40%" align='center'><font>IP</font></td>
+						<td width="40%" align='center'><font i18n="qoslimit_speed">qoslimit_speed</font></td>
+						<td width="15%" align='center'><font i18n="qoslimit_action">qoslimit_action</font></td>
+					</tr>
+					<tbody id='down_ip_list_body' style="font-size: 12px">
+					</tbody> 
+				</table>
+			</div>
+			<div id="down_mac_list" style="display: none;">
+				<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+					<tr class="table_head_title">
+						<td width="5%" align='center'><font>ID</font></td>
+						<td width="40%" align='center'><font>MAC</font></td>
+						<td width="40%" align='center'><font i18n="qoslimit_speed">qoslimit_speed</font></td>
+						<td width="15%" align='center'><font i18n="qoslimit_action">qoslimit_action</font></td>
+					</tr>
+					<tbody id='down_mac_list_body' style="font-size: 12px">
+					</tbody> 
+				</table>
+			</div>
+			<form id="down_limit_form" method="post" style = "display: none;">
+				<div class="main_content">
+					<div id="down_ip_setting" class="main_item" style = "display: none;"> 
+						<div class="main_item_name">IP</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="down_ip_text" name="down_ip_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div id="down_mac_setting" class="main_item" style = "display: none;"> 
+						<div class="main_item_name">MAC</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="down_mac_text" name="down_mac_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div id="down_speed_setting" class="main_item"> 
+						<div class="main_item_name" i18n="qoslimit_speed">qoslimit_speed</div>
+						<div class="main_item_content">
+							<input type="text" class="input_text" autocomplete="off" id="down_speed_text" name="down_speed_text"/><strong style="color:#FF0033">*</strong>
+						</div>
+						<div id="main_content-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item" id="form_btn_down"> 
+						<div class="main_item_name" style="width: 35%;"></div>
+						<div class="main_item_content" style="width: calc(65% - 3px);">
+							<input type="button" class="input_button" id="save_button" i18n="qoslimit_btn_apply" i18n-set="value" onclick="saveApply('down')"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="button" class="input_button" id="cancel_button" i18n="qoslimit_btn_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
+

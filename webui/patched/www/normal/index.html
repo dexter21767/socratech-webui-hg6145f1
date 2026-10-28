@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" >
+<script language ="javascript "type ="text/javascript">
+	document.write('<script  src="/js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/util_global_vars.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/util_functions.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+     var operator_name;
+	function frmLoad() {
+         XHR.get("get_operator", null, getOperatorName);
+            operator_name = gOperatorName;
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name == "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/html/login_inter.html";
+		}else{
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+    function getOperatorName(data)
+    {
+         operator_name = data.operator_name;
+    }
+</script>
+</head>
+<body onLoad='frmLoad();'>
+</body>
+</html>

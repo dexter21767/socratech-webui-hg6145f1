@@ -1,0 +1,169 @@
+#!/bin/sh
+
+CONFIG_FILE="/fhconf/crontab_conf"
+[ -f "$CONFIG_FILE" ] || touch "$CONFIG_FILE"
+
+SHELL_HEADER="SHELL=/bin/sh"
+
+urldecode() {
+    printf "$(echo "$1" | sed "s/+/ /g; s/%\([0-9a-fA-F][0-9a-fA-F]\)/\\\\x\1/g")"
+}
+
+get_param() {
+    echo "$POST_DATA" | tr '&' '\n' | grep "^$1=" | cut -d= -f2
+}
+
+if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
+    read -n "$CONTENT_LENGTH" POST_DATA
+    
+    ENABLE=$(get_param "enable")
+    HOUR=$(get_param "hour")
+    MIN=$(get_param "min")
+    EVERYDAY=$(get_param "everyday")
+    
+    F_MIN=$(printf "%02d" "$(echo "$MIN" | tr -dc '0-9')")
+    F_HOUR=$(printf "%02d" "$(echo "$HOUR" | tr -dc '0-9')")
+
+    CRON_DAYS=""
+    CFG_DAYS=""
+    
+    if [ "$EVERYDAY" = "on" ]; then
+        CRON_DAYS="*"
+        CFG_DAYS="1,2,3,4,5,6,7"
+    else
+        for d in 1 2 3 4 5 6 0; do
+            if [ "$(get_param "day$d")" = "on" ]; then
+                CRON_DAYS="${CRON_DAYS}${d},"
+                [ "$d" = "0" ] && CFG_DAYS="${CFG_DAYS}7," || CFG_DAYS="${CFG_DAYS}${d},"
+            fi
+        done
+        CRON_DAYS=$(echo "$CRON_DAYS" | sed 's/,$//')
+        CFG_DAYS=$(echo "$CFG_DAYS" | sed 's/,$//')
+    fi
+
+    PRESERVED_CONTENT=$(grep -v "sync;reboot" "$CONFIG_FILE")
+
+    if [ "$ENABLE" = "on" ] && [ -n "$CFG_DAYS" ]; then
+        cfg_cmd set InternetGatewayDevice.RebootTimer.X_FH_Enable '1'
+        cfg_cmd set InternetGatewayDevice.RebootTimer.X_FH_DaysOfWeek "$CFG_DAYS"
+        cfg_cmd set InternetGatewayDevice.RebootTimer.X_FH_Minute_Time "$F_MIN"
+        cfg_cmd set InternetGatewayDevice.RebootTimer.X_FH_Hour_Time "$F_HOUR"
+    else
+        cfg_cmd set InternetGatewayDevice.RebootTimer.X_FH_Enable '0'
+    fi
+
+    CLEANED_PRESERVED=$(echo "$PRESERVED_CONTENT" | grep -v "^SHELL=")
+    {
+        echo "SHELL=/bin/sh"
+        [ -n "$CLEANED_PRESERVED" ] && echo "$CLEANED_PRESERVED"
+        
+        if [ "$ENABLE" = "on" ] && [ -n "$CRON_DAYS" ]; then
+            echo "$F_MIN $F_HOUR * * $CRON_DAYS sync;reboot"
+        fi
+    } | sed '/^$/d' > "$CONFIG_FILE"
+fi
+
+C_EN_VAL=$(cfg_cmd get InternetGatewayDevice.RebootTimer.X_FH_Enable | grep success | cut -d "=" -f 2)
+C_HOUR=$(cfg_cmd get InternetGatewayDevice.RebootTimer.X_FH_Hour_Time | grep success | cut -d "=" -f 2)
+C_MIN=$(cfg_cmd get InternetGatewayDevice.RebootTimer.X_FH_Minute_Time | grep success | cut -d "=" -f 2)
+RAW_DAYS=$(cfg_cmd get InternetGatewayDevice.RebootTimer.X_FH_DaysOfWeek | grep success | cut -d "=" -f 2)
+
+[ -z "$C_HOUR" ] && C_HOUR="04"
+[ -z "$C_MIN" ] && C_MIN="00"
+
+# Determine initial disabled state
+IS_DISABLED=""
+C_EN=""
+if [ "$C_EN_VAL" = "1" ]; then
+    C_EN="checked"
+else
+    IS_DISABLED="disabled"
+fi
+
+C_DAYS=$(echo "$RAW_DAYS" | sed 's/7/0/g')
+[ "$C_DAYS" = "1,2,3,4,5,6,0" ] && C_DAYS="*"
+
+echo "Content-type: text/html"
+echo ""
+cat <<EOF
+<html>
+<head>
+<style>
+    body { font-family: sans-serif; background: #f4f7f6; padding: 20px; }
+    .container { max-width: 450px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .section { margin-bottom: 15px; transition: opacity 0.3s; }
+    .disabled-group { opacity: 0.5; pointer-events: none; }
+    .day-box { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; font-size: 0.85rem; margin-top: 10px; }
+    .submit-btn { background: #2c3e50; color: #fff; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    input[disabled] { cursor: not-allowed; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Schedule Reboot</h2>
+        <form method="POST" id="rebootForm">
+            <div class="section">
+                <label>
+                    <input type="checkbox" name="enable" id="enableToggle" value="on" $C_EN> 
+                    <b>Enable</b>
+                </label>
+            </div>
+
+            <div id="settingsGroup" class="section $([ -z "$C_EN" ] && echo "disabled-group")">
+                <div class="section">
+                    Time (HH:MM): <input type="number" name="hour" min="0" max="23" value="$C_HOUR" $IS_DISABLED> :
+                    <input type="number" name="min" min="0" max="59" value="$C_MIN" $IS_DISABLED>
+                </div>
+
+                <div class="section">
+                    <label><input type="checkbox" name="everyday" id="everydayToggle" value="on" $([ "$C_DAYS" = "*" ] && echo "checked") $IS_DISABLED> Everyday</label>
+                    <div class="day-box" id="dayBox">
+EOF
+
+for d in 1 2 3 4 5 6 0; do
+    case $d in 1)n="Mon";; 2)n="Tue";; 3)n="Wed";; 4)n="Thu";; 5)n="Fri";; 6)n="Sat";; 0)n="Sun";; esac
+    CHECK=""
+    if [ "$C_DAYS" = "*" ]; then CHECK="checked"; 
+    else echo "$C_DAYS" | grep -q "$d" && CHECK="checked"; fi
+    
+    echo "<label><input type='checkbox' name='day$d' value='on' $CHECK $IS_DISABLED> $n</label>"
+done
+
+cat <<EOF
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Save</button>
+        </form>
+    </div>
+
+    <script>
+        const enableToggle = document.getElementById('enableToggle');
+        const settingsGroup = document.getElementById('settingsGroup');
+        const inputs = settingsGroup.querySelectorAll('input');
+
+        enableToggle.addEventListener('change', function() {
+            if (this.checked) {
+                settingsGroup.classList.remove('disabled-group');
+                inputs.forEach(i => i.disabled = false);
+            } else {
+                settingsGroup.classList.add('disabled-group');
+                inputs.forEach(i => i.disabled = true);
+            }
+        });
+
+        // Small logic for "Everyday" behavior
+        const everydayToggle = document.getElementById('everydayToggle');
+        const dayInputs = document.getElementById('dayBox').querySelectorAll('input');
+        
+        everydayToggle.addEventListener('change', function() {
+            dayInputs.forEach(i => {
+                i.checked = this.checked;
+                // Optional: disable individual days if "Everyday" is on
+                // i.disabled = this.checked; 
+            });
+        });
+    </script>
+</body>
+</html>
+EOF

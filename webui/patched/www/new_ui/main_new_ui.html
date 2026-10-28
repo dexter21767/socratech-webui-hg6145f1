@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home Gateway</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript" type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/menuLft_new_ui.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/mainLeft.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<link rel="stylesheet" id="css" type="text/css" href="../css/new_ui_mainLeft.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+	</script>
+</head>
+
+<body class="main-body">
+	<div class="body">
+		<div class="header">
+			<div class="logo-div">
+				<img src="../image/new_ui/logo_fiberhome.png" id="logo" style="height: 60px;margin: 0px 20px 0 20px;">
+			</div>
+			<div class="top-menu">
+				<div class="fir-menu">
+					<ul>
+					</ul>
+				</div>
+			</div>
+			<div id="logout" class="logout-title" onclick="clickRealLogout()">
+				<img src="../image/new_ui/logout.png" style="vertical-align: middle">
+				<span i18n="quit"></span>
+			</div>
+		</div>
+		<div class="conter" >
+			<div class="left-meun" style="display: none;">
+				<div><img id="sec-menu-image"><span class="sec-menu-title"></span></div>
+				<div><ul class="sec-menu"></ul></div>
+			</div>
+			<div class="content">
+				<div class="nav-title" style="display: none;">
+					<div class="nav-title2" style="font-size: 16px;"></div>
+					<div class="page_prompt" style="font-size: 14px;color: rgba(255, 255, 255, 0.5);"></div>
+				</div>
+				<iframe frameborder="0" scrolling="auto" class="main_iframe" src=""></iframe>
+			</div>
+		</div>
+		<!-- <div class="footer"></div> -->
+	</div>
+	<div id='loading_window_div' style='display:none'></div>
+	<div id='pop_window_div' style='display:none'>
+		<div id="pop_window_content_div">
+			<div id="pop_window_title"></div>
+			<div id="pop_window_body">
+				<div id="pop_window_icon"></div>
+				<div id="pop_window_show_div">
+					<div id="pop_window_message"></div>
+					<div id="pop_window_option">
+						<div id="confirm" class="pop_window_action bg_color_main">
+							<font i18n="comfirm">comfirm</font>
+						</div>
+						<div onclick="doCancel()" id="cancel" class="pop_window_action bg_color_red">
+							<font i18n="cancle">cancle</font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

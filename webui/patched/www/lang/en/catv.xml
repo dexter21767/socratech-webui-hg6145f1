@@ -1,0 +1,37 @@
+{
+  "catv_prompt":"You can modify RF power on this page.",
+  "catv_enable_title":"RF Power Enable",
+  "catv_enableTitle":"Enable",
+  "catv_disableTitle":"Disable",
+  "catv_rfoffset_title":"RF Power Adjustment Range",
+  "catv_rfoffset_tips":"[-127,127]",
+  "catv_apply":"Apply",
+  "catv_cancel":"Cancel",
+  "value_illegal":"Some value is invalid, please retry it!",
+
+  "led_switch_prompt":"You can modify Led Swicth Enable on this page.",
+  "led_switch_enable_title":"Led Swicth Enable",
+
+  "preset_prompt":"You can modify Preset Enable and Reset Button Time on this page.",
+  "preset_enable_title":"Preset Enable",
+  "preset_time_title":"Reset Button Time",
+  "restart_tips":"(Take effect after restart)",
+  "preset_time_tips":"[5,300] seconds  (Take effect after restart)",
+  "rebooting":"System is rebooting... Please wait for a moment and relogin after reboot.",
+  "restore_apply":"Restore",  
+  "restore_confirm":"If you restore the default configuration, your private configuration will be lost. You sure you want to restore the default configuration?",
+  "user_account_enable_prompt":"You could configure user account enable on this page.(The default password of user account is user1234)",
+  "user_account_enable_title":"User Account Enable",
+
+  "unknown_error_alert":"Unknown Error",
+  "preconfigure_prompt":"You could make preconfiguration and export the preconfiguration file to your PC on this page.",
+  "preconfigure_enable_title":"Preconfigure Enable",
+  "preconfigure_button":"Download Preconfiguration",
+  "preconfigure_tips0":"Note:",
+  "preconfigure_tips1":"1.Select Preconfigure Enable, click apply button, select yes and the device will restart.",
+  "preconfigure_tips2":"2.After the device restarts, login to the web administrator by the default password and modify the web configuration based on the default configuration on the web page.",
+  "preconfigure_tips3":"3.After modifying the configuration, export the preconfiguration on the preconfigure page.",
+  "preconfigure_tips4":"4.Select Preconfigure Disable, click apply button, select yes and the device will restart.",
+  "takes_effect_after_restart":"The new configuration takes effect after a device restart.Are you sure to submit and restart the device?"
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/multi_ap_enable.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wireless");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint" id="prompt_admin"><font i18n="multi_ap_enable_prompt">multi_ap_enable_prompt</font></p>
+			<p class="main_header_hint" id="prompt_user" style="display:none"><font i18n="multi_ap_enable_prompt2">multi_ap_enable_prompt2</font></p>
+		</div>
+        <br/>
+		<form id="multi_ap_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name" id="multi_ap_enable_title"><font i18n="multi_ap_enable__title">multi_ap_enable__title</font></div>
+					<div class="main_item_content">
+						<input type="radio" name="firewall_enable" id="firewall_enable" value="1"  onclick="showMeshModeInfo()"/><font i18n="multi_ap_enable">multi_ap_enable</font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" name="firewall_enable" id="firewall_disable" value="0"  onclick="showMeshModeInfo()"/><font i18n="multi_ap_disable">multi_ap_disable</font>
+						&nbsp;&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item" id="Roaming_Param_div" style="display:none">
+					<div class="main_item_name"><font i18n="Roaming_Param_title">Roaming_Param_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Roaming_Param" name="Roaming_Param" style="width:150px"/>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+                <div class="main_item" id="current_mode_div"  style="display: none;">
+                	<div class="main_item_name"><font i18n="current_mode">current_mode</font></div>
+                	<div class="main_item_content">
+                		<!--input type="text" class="input_text" style="width:222px" autocomplete="off" id="current_mode" name="current_mode"/-->
+						<span id="current_mode" name="current_mode"></span>
+                	</div>
+                </div>
+				<div class="main_item" id="mode"  style="display:none">
+					<div class="main_item_name" id="multi_ap_mode"><font i18n="multi_ap_mode_title">multi_ap_mode_title</font></div>
+					<div class="main_item_content">
+						<select id="multiap_mode" name="multiap_mode"  style="width:222px">
+						  <option value="3" >Controller</option>
+						  <option value="2">Agent</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_button" id="button_div">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;" id="wireless_apply_cancel">
+						<input type="button" id="wireless_apply" class="input_button" i18n="wireless_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" id="wireless_cancel" class="input_button" i18n="wireless_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

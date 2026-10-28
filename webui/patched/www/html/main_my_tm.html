@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home Gateway</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<link rel="stylesheet" type="text/css" id="css" href="../css/mainLeft_ais.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+		document.write('<script  src="../js/menuLft_ais.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/mainLeft.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+
+<body>
+	<div class="body">
+		<div style="width: 1120px;height: 85px; background-color: #FFFFFF;position: relative;">
+			<img src="../image/my_tm_logo.png" class="logo-my">
+			<div style="float: right; margin-top: 30px; margin-right:10px;color: #95989A;">
+				<!-- <a style="color: #8DC63F;font-size:14px;" id="logout" onclick="wizard()">Quick Setup</a> -->
+				<a id="admin_ais" style="font-size:14px"></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+					style="color: #95989A;font-size:14px;" id="logout" onclick="realLogout()">Logout</a>
+			</div>
+			<img style="float: right; margin-top: 30px;margin-right: 5px;pointer-events: none;"
+				src="../image/ais/icon/ico-user.png" />
+			<img src="../image/fiberhome2.jpg" class="logo-fiber">
+			<div style="float: right; margin-top: 65px; margin-right:-90px">
+				<font style="color: #95989A;font-size:14px;" id="model_name"></font>
+			</div>
+		</div>
+		<div class="header">
+			<div class="fir-menu">
+				<ul></ul>
+			</div>
+		</div>
+		<div style="background-color: #f1f1f1;">
+			<div class="left-meun">
+				<ul class="sec-menu"></ul>
+			</div>
+			<div>
+				<!-- <div class="nav-title"></div> -->
+				<iframe frameborder="0" class="main_iframe" src=""></iframe>
+			</div>
+		</div>
+	</div>
+	<!--div class="footer">
+		<div class="menu-footer">
+			<a href="http://www.ais.co.th/fibre/support.html" target="_blank">FAQ</a>
+			<a href="http://www.ais.co.th/fibre/contact.html" target="_blank">AIS Call Center 1175</a>
+		</div>
+		<p class="text-footer">? 2016 ADVANCED INFO SERVICE PLC. ALL RIGHTS RESERVED. <br> This site is best viewed using Internet Explorer 9, Chrome, Safari and browser later.</p>
+	</div-->
+	<div id='loading_window_div' style='display:none'>
+		<!-- <div id="loading_window_content_div">
+			loading......
+		</div> -->
+	</div>
+	<div id='pop_window_div' style='display:none'>
+		<div id="pop_window_content_div">
+			<div id="pop_window_title"></div>
+			<div id="pop_window_body">
+				<div id="pop_window_icon"></div>
+				<div id="pop_window_show_div">
+					<div id="pop_window_message"></div>
+					<div id="pop_window_option">
+						<div id="confirm" class="pop_window_action bg_color_main">
+							<font i18n="comfirm">comfirm</font>
+						</div>
+						<div onclick="doCancel()" id="cancel" class="pop_window_action bg_color_red">
+							<font i18n="cancle">cancle</font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

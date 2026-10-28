@@ -1,0 +1,41 @@
+{
+	"arp_configPrompt": "On this page, you can configure static ARP parameters, including the IP address and MAC address.",
+	"arp_config_ListHead": "ARP Configuration List",
+	"fw_filterID": "ID",
+	"ipaddr": "IP Address",
+	"macaddr": "MAC Address",
+	"macaddr_macTips": " (such as 00:24:21:19:BD:E4)",
+	"firewall_apply": "Apply",
+	"firewall_cancel": "Cancel",
+	"arp_aging_prompt": "On this page, you can configure the ARP aging time of a WAN port.",
+	"arp_aging_list_title": "ARP Aging List",
+	"app_id": "ID",
+	"wan_name": "WAN Name",
+	"arp_aging_time_s": "ARP Aging Time(s)",
+	"arp_aging_time": "ARP Aging Time",
+	
+	"IP_used_Alert":"IP address is already in use.",
+	"MAC_used_Alert":"MAC address is already in use.",
+	"IP_illegal_Alert":"This ip is not in ip pool.",
+	"illegal_value_alert":"Some value is illegal!",
+	
+	"no_rules_alert":"There are no rules at present. You cannot delete them.",
+	"no_selected_rules_alert":"At present there is no rule that was selected, can not be deleted!",
+	"delete_alert":"Are you sure to delete the selected rule?",
+	"delete_alert_all":"Are you sure to delete all these rules?",
+	"fw_most8RulesAlert":"You can configure up to 8 rules!",
+
+	 "repeat_with_the_existing_rules":"Repeat with the existing rules. Please reconfigure it!",
+	
+	"arp_aging_timeTips": "(5-1440s)",
+	"wan_name_is_empty_alert": "WAN Name can not be empty!",
+	"arp_add":"Add",
+	"arp_delete":"Delete",
+	"arp_delete_all":"Delete All",
+	"arp_Enable_title":"ARP Enable",
+	"arp_Enable":"Enable",
+	"arp_Disable":"Disable",
+	"arp_aging_Enable_title":"ARP Aging Enable",
+	"arp_aging_Enable":"Enable",
+	"arp_aging_Disable":"Disable"
+}

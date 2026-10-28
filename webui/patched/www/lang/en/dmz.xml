@@ -1,0 +1,31 @@
+{
+  "dmz_prompt":"You could set a host IP to DMZ here.",
+  "dmzEnable_title":"DMZ Enable",
+  "dmz_enable":"Enable",
+  "dmz_disable":"Disable",
+  "dmz_auto":"Auto",
+  "dmz_hostTips":"DMZ Host IP",
+  "dmz_add":"Add",
+  "dmz_delete":"Delete",
+  "dmz_deleteAll":"Delete All",
+  "dmz_most4rulealert":"You can configure up to 4 rules!",
+  "fw_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "no_selected_rules_alert":"At present there is no rule that was selected, can not be deleted!",
+  "fw_noChooseAlert":"Please select a rule and then delete!",
+  "fw_ipIllegalAlert":"Please enter a valid ip!",
+  "fw_deleteRuleConfirm":"Are you sure to delete the selected rule?",
+  "dmzRuleListHead":"DMZ Rule List",
+  "dmz_wannameTips":"WAN Name",
+  "dmz_iprepeat":"The IP you input repeat, please try another one.",
+  "dmz_wannamerepeat":"The WAN Name you choose repeat, please try another one.",
+  
+  "dmz_apply":"Apply",
+  "dmz_cancel":"Cancel",
+  "reset_rf":"Reset",
+  "dmz_noipalert":"Please enter an IP address!",
+  "dmz_ipillegalalert":"Please enter a valid IP address!",
+  "rf_prompt":"You can modify RF power on this page.",
+  "rf_hostTips":"RF Power Adjustment Range",
+  "rf_IllegalAlert":"Please input correct RF power adjustment range [-127,127]."
+}
+

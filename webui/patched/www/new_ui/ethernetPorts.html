@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/ethernetPorts.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<div class="table_title" style="margin-bottom: 10px;">
+			<font i18n="LAN Information">LAN Information</font>
+		</div>
+		<table id="lan_table" class="table_title_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tbody>
+				<tr class="table_head_title">
+					<td id="td_id" width="5%">
+						<font i18n="EthernetPors_port">EthernetPors_port</font>
+					</td>
+					<td id="td_hostname" width="8%">
+						<font i18n="EthernetPors_Mode">EthernetPors_Mode</font>
+					</td>
+					<td id="td_mac" width="8%">
+						<font i18n="EthernetPors_Speed">EthernetPors_Speed</font>
+					</td>
+					<td id="td_ip" width="8%">
+						<font i18n="EthernetPors_State">EthernetPors_State</font>
+					</td>
+					<td id="td_hiredTime" width="12%">
+						<font i18n="EthernetPors_Transmit Bytes">EthernetPors_Transmit Bytes</font>
+					</td>
+					<td id="td_type" width="13%">
+						<font i18n="EthernetPors_Transmit Packets">EthernetPors_Transmit Packets</font>
+					</td>
+					<td id="td_type" width="12%">
+						<font i18n="EthernetPors_Receive Bytes">EthernetPors_Receive Bytes</font>
+					</td>
+					<td id="td_type" width="12%">
+						<font i18n="EthernetPors_Receive Packets">EthernetPors_Receive Packets</font>
+					</td>
+				</tr>
+			</tbody>
+			<tbody id="lanInfo_list" class="table_rule"></tbody>
+		</table>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="table_title" id="wan_port_title" style="margin-bottom: 10px;display: none;" >
+			<font i18n="WAN Information">WAN Information</font>
+		</div>
+		<table id="wan_table" class="table_title_bg" border="0" cellpadding="0" cellspacing="1" width="100%" style="display: none;">
+			<tbody>
+				<tr class="table_head_title">
+					<td id="td_wan_id" width="5%">
+						<font i18n="EthernetPors_port">EthernetPors_port</font>
+					</td>
+					<td id="td_wan_hostname" width="8%">
+						<font i18n="EthernetPors_Mode">EthernetPors_Mode</font>
+					</td>
+					<td id="td_wan_mac" width="8%">
+						<font i18n="EthernetPors_Speed">EthernetPors_Speed</font>
+					</td>
+					<td id="td_wan_ip" width="8%">
+						<font i18n="EthernetPors_State">EthernetPors_State</font>
+					</td>
+					<td id="td_wan_hiredTime" width="12%">
+						<font i18n="EthernetPors_Transmit Bytes">EthernetPors_Transmit Bytes</font>
+					</td>
+					<td id="td_wan_type" width="13%">
+						<font i18n="EthernetPors_Transmit Packets">EthernetPors_Transmit Packets</font>
+					</td>
+					<td id="td_type" width="12%">
+						<font i18n="EthernetPors_Receive Bytes">EthernetPors_Receive Bytes</font>
+					</td>
+					<td id="td_type" width="12%">
+						<font i18n="EthernetPors_Receive Packets">EthernetPors_Receive Packets</font>
+					</td>
+				</tr>
+			</tbody>
+			<tbody id="wanInfo_list" class="table_rule"></tbody>
+		</table>
+	</form>
+</body>
+
+</html>

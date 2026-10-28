@@ -1,0 +1,16 @@
+{
+    "sncfg_prompt":"Nesta página, você pode modificar os parâmetros relacionados à autenticação da ONU para autenticar a OLT. Entrará em vigor após a reinicialização.",
+    "sncfg_snTitle":"Autenticação LOID",
+    "sncfg_loidTips":"(Você pode inserir de 1 a 24 caracteres latinos básicos)",
+    "sncfg_lopwd":"Senha lógica",
+    "sncfg_lopwdTips":"(Você pode inserir de 0 a 12 caracteres latinos básicos)",
+    "sncfg_apply":"Aplicar",
+    "sncfg_cancel":"Cancelar",
+    "sncfg_pwdTitle":"Autenticação de senha",
+    "sncfg_pwd":"Chave de senha",
+    "sncfg_pwdTips":"(Você pode inserir de 0 a 10 caracteres incluindo alfanuméricos ‘-’ e ‘_’)",
+    "sncfg_value_invilid":"Algum valor é inválido. Verifique e preencha novamente",
+    "sncfg_pwdCfgIllegalAlert":"Senha inválida",
+	"change_eye":"olho"
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/lan_ipv4.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">IPv4设置</p>
+			<p class="main_header_hint">在本页面，您可以修改LAN侧IPv4相关配置。</p>
+		</div>
+		<form id="lan_ipv4_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">IP地址</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanIP_Address_text" name="LanIP_Address_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">子网掩码</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanSubmask_text" name="LanSubmask_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">启用DHCP Server</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="Lan_DHCP_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">初始IP地址</div>
+					<div class="main_item_content">
+						<div class="network_segment"></div><input type="text" class="input_text dhcp_set" style="width:160px;" autocomplete="off" id="LanStartAddress_text" name="LanStartAddress_text"/>
+					</div>
+					<div id="LanStartAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">结束IP地址</div>
+					<div class="main_item_content">
+						<div class="network_segment"></div><input type="text" class="input_text dhcp_set" style="width:160px;" autocomplete="off" id="LanEndAddress_text" name="LanEndAddress_text"/>
+					</div>
+					<div id="LanEndAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">子网掩码</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanDHCP_Submask_text" name="LanDHCP_Submask_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">延续时间</div>
+					<div class="main_item_content">
+						<select id="LanLeaseTime_select" class="dhcp_set">
+							<option value="60">一分钟</option>
+							<option value="3600">一小时</option>
+							<option  value="86400">一天</option>
+							<option value="604800">一周</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><b>设备地址区间设置</b></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						设备类型
+					</div>
+					<div class="main_item_content">
+						<div style="width:205px">起始地址</div>
+						<div style="width:200px">结束地址</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						Computer
+					</div>
+					<div class="main_item_content">
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanPC_StartAddress_text" name="LanPC_StartAddress_text" style="width:50px"/>
+						</div>
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanPC_EndAddress_text" name="LanPC_EndAddress_text" style="width:50px"/>
+						</div>
+					</div>
+					<div id="LanPC-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						STB
+					</div>
+					<div class="main_item_content">
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanSTB_StartAddress_text" name="LanSTB_StartAddress_text" style="width:50px"/>
+						</div>
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanSTB_EndAddress_text" name="LanSTB_EndAddress_text" style="width:50px"/>
+						</div>
+					</div>
+					<div id="LanSTB-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						Phone
+					</div>
+					<div class="main_item_content">
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanPhone_StartAddress_text" name="LanPhone_StartAddress_text" style="width:50px"/>
+						</div>
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanPhone_EndAddress_text" name="LanPhone_EndAddress_text" style="width:50px"/>
+						</div>
+					</div>
+					<div id="LanPhone-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						Camera
+					</div>
+					<div class="main_item_content">
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanCamera_StartAddress_text" name="LanCamera_StartAddress_text" style="width:50px"/>
+						</div>
+						<div style="width:205px;">
+							<div class="network_segment"></div>
+							<input type="text" class="input_text dhcp_set" autocomplete="off" id="LanCamera_EndAddress_text" name="LanCamera_EndAddress_text" style="width:50px"/>
+						</div>
+					</div>
+					<div id="LanCamera-error" class="main_item_error_hint_extra"></div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

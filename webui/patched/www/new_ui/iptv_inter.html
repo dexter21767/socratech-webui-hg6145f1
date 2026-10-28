@@ -1,0 +1,70 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/iptv_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("iptv");
+</script>
+
+<body class='main_config_body'>
+	<form id="loid_form">
+		<div id="register_div22">
+			<div class="main_content">
+				<div id="multicast">
+					<div class="main_item">
+						<div class="main_item_name">
+							IPv4 <font i18n="iptv_IGMPProxy">IGMPProxy</font>
+						</div>
+						<div class="main_item_content">
+							<input type="checkbox" id="iptv_IGMPProxy" name="iptv_IGMPProxy" value="0" />
+						</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">
+						IPv6 <font i18n="iptv_MLDProxy">MLDProxy</font>
+					</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="iptv_MLDProxy" name="iptv_MLDProxy" value="0" />
+					</div>
+				</div>
+			</div>
+			<div class="main_submit_item">
+				<div class="main_item_content">
+					<input type="button" id="iptv_apply" class="input_button" i18n="iptv_apply" i18n-set="value"
+						onclick="switchApply()" />
+				</div>
+			</div>
+		</div>
+		<div id="line">
+			<img src="../image/new_ui/line.png"
+				style="width: 100%;height: 1px;margin-top: 30px;margin-bottom: 30px;">
+		</div>
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="iptv_vlanTitle">iptv_vlanTitle</font>
+			</div>
+			<div class="main_item_content">
+				<div class="tip_text" id="tip_iptv_vlan" i18n="iptv_vlanTips"></div>
+				<input type="text" class="input_text" maxlength="4" autocomplete="off"
+						name="iptv_vlan" id="iptv_vlan" />
+			</div>
+		</div>
+		<div class="main_submit_item">
+			<div class="main_item_content">
+				<input type="button" id="iptv_vlan_apply" class="input_button" i18n="iptv_apply" i18n-set="value"
+					onclick="saveApply()" />
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

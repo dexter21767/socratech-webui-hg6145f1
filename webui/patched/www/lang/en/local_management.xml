@@ -1,0 +1,12 @@
+{
+  "localmanagement_Prompt":"On the page, you could enable/disable telnet and web switch.",
+  "localmanagement_enable":"Enable",
+  "localmanagement_disable":"Disable",
+  "localmanagement_apply":"Apply",
+  "localmanagement_cancel":"Cancel",
+  "lan_telnet_title":"Lan Telnet Switch",
+  "wan_telnet_title":"Wan Telnet Switch",
+  "lan_web_title":"Lan Web Switch",
+  "wan_web_title":"Wan Web Switch",
+  "lan_web_disable_tips":"If you disable the lan web switch, you will not be able to access WEB via LAN side."
+}

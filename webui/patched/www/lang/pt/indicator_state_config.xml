@@ -1,0 +1,9 @@
+{
+  "indicator_state_prompt": "Nesta página você pode definir o indicador de um dispositivo. Você pode configurar um período de desligamento do indicador se definir o interruptor do indicador para Desligado. Um indicador estará sempre desativado se você não especificar um período de desativação do indicador.",
+  "indicator_switch_head": "Configuração do interruptor indicador",
+  "indicator_switch_title": "Interruptor indicador",
+  "sw_on": "Ligado",
+  "sw_off": "Desligado",
+  "btn_apply": "Aplicar",
+  "btn_cancel": "Cancelar"
+}

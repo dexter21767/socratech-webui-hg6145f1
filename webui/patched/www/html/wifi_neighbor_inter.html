@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/wifi_neighbor_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="wifi_neighbor_prompt">wifi_neighbor_prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tr class="tabal_head">
+				<td colspan="5"><font i18n="wifi_neighbor_24g">wifi_neighbor_24g</font></td>
+			</tr>
+			<tr class="table_head_title">
+				<td id="wifi_id_24g" width="10%"><font i18n="ID">ID</font></td>
+				<td id="wifi_ssid_24g" width="25%"><font i18n="SSID">SSID</font></td>
+				<td id="wifi_b_ssid_24g" width="25%"><font i18n="BSSID">BSSID</font></td>
+				<td id="wifi_channel_24g" width="20%"><font i18n="Channel">Channel</font></td>
+				<td id="wifi_rssi_24g" width="20%"><font i18n="RSSI">RSSI</font></td>
+			</tr>
+			<tbody id='wifi_list_24g' style="font-size: 12px"></tbody> 
+        </table>
+		<tbody id='wifi_list_24g' style="font-size: 12px"></tbody> 
+        <div class="main_item">			
+			<div class="main_submit" style="width: 40%;"></div>	
+			<div class="main_submit" style="width: 60%;">
+				<input type="button" class="input_button" id="wifi_24g_apply" i18n="app_apply" i18n-set="value" onclick="get_data_24g()"/>
+			</div>
+		</div>
+        <table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tr class="tabal_head">
+				<td colspan="5"><font i18n="wifi_neighbor_5g">wifi_neighbor_5g</font></td>
+			</tr>
+			<tr class="table_head_title">
+				<td id="wifi_id_5g" width="10%"><font i18n="ID">ID</font></td>
+				<td id="wifi_ssid_5g" width="25%"><font i18n="SSID">SSID</font></td>
+				<td id="wifi_b_ssid_5g" width="25%"><font i18n="BSSID">BSSID</font></td>
+				<td id="wifi_channel_5g" width="20%"><font i18n="Channel">Channel</font></td>
+				<td id="wifi_rssi_5g" width="20%"><font i18n="RSSI">RSSI</font></td>
+			</tr>
+			<tbody id='wifi_list_5g' style="font-size: 12px"></tbody> 
+        </table>
+		<div class="main_item">		
+			<div class="main_submit" style="width: 40%;"></div>	
+			<div class="main_submit" style="width: 60%;">
+				<input type="button" class="input_button" id="wifi_5g_apply" i18n="app_apply" i18n-set="value" onclick="get_data_5g()"/>
+			</div>
+		</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/parentcontrol_my.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="schdulePrompt">schdulePrompt</font></p>
+		</div>
+	    </br>
+		<form id="schedule_list_form">
+            <div style="float:right; margin-top:2px;"  id="time_add_remove">
+            	<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" class="input_button" onClick="add_templete()">
+            	<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="remove_templete()">
+            	<input type="button" i18n="firewall_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="remove_templete_all()">
+            	<br/>
+            </div >
+            <table width="100%" class="table_bg" cellspacing="1" cellpadding="0"  >
+            	<tr class="table_title">
+            		<td colspan="5"><font i18n="parental_control_time_table">parental_control_time_table</font></td>
+            	</tr>
+            	<!-- <div class="table_title"><font i18n="parental_control_time_table">parental_control_time_table</font></div> -->
+            	<tr class="table_head_title">
+                    <td width="35%" align='center'><font i18n="templet_name">templet_name</font></td>
+            		<td width="5%" align='center'></td>
+            	</tr>
+            	<tbody id='template_List' style="font-size: 12px">
+            	</tbody> 
+            </table>
+            <div class="table_bg" id="fw_templete_form" style="display: none; ">
+            	<!-- <div class="table_title"><font i18n="Time of Day">Time of Day</font></div> -->
+            	<div class="main_item_name"><font i18n="templet_name">templet_name</font></div>
+            	<div class="main_item_content">
+            		<input type="text"  class="input_text" autocomplete="off" id="template_name" name="template_name" style="width:150px"/><font style="color: #767676" i18n="parental_control_template_name_tip">parental_control_template_name_tip</font>       
+            	</div>
+            	<div class="main_item" style="height: 37px;" >
+            		<div class="main_submit" style="width: 25%;"></div>				
+            		<div class="main_submit" style="width: 75%;">
+            			<input type="button" id="time_save_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="doSaveTemplate()"/>
+            			<input type="button" id="time_save_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+            		</div>
+            	</div>
+            </div>
+            </div>
+            
+            <div style="float:right; margin-top:2px;"  id="time_add_remove">
+            	<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" class="input_button" onClick="addtime_templete()">
+            	<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="input_button" onClick="removetime_templete()">
+            	<input type="button" i18n="firewall_delete_all" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="removetime_templete_all()">
+            	<br/>
+            </div >	
+            <!--星期和时间规则列表-->	
+            <table width="100%" class="table_bg" cellspacing="1" cellpadding="0"  >
+            	<tr class="table_title">
+            		<td colspan="5"><font i18n="parental_control_time_table">parental_control_time_table</font></td>
+            	</tr>
+            	<!-- <div class="table_title"><font i18n="parental_control_time_table">parental_control_time_table</font></div> -->
+            	<tr class="table_head_title">
+                    <td width="5%" align='center'><font i18n="templet_name">templet_name</font></td>
+            		<td width="5%" align='center'><font i18n="parental_control_time_period">parental_control_time_period</font></td>
+            		<td width="10%" align='center'><font i18n="parental_control_repeat_week">parental_control_repeat_week</font></td>
+            		<td width="5%" align='center'></td>
+            	</tr>
+            	<tbody id='time_List' style="font-size: 12px">
+            	</tbody> 
+            </table>
+            <div class="table_bg" id="fw_time_templete_form" style="display: none; ">
+            	<div class="table_title"><font i18n="parental_controlHead_InternetAccess_Schedule">parental_controlHead_InternetAccess_Schedule</font></div>
+            	<div class="main_item" style="height: 50px;">
+                    <div class="main_item_name"><font i18n="templet_name">templet_name</font></div>
+                    <div class="main_item_content">
+                    	<select id="time_template_name"  style="width:100px">
+                    	</select>
+                    </div>
+            		<div class="main_item_name" style="height: 50px;"><font i18n="fw_day">fw_day</font></div>
+            		<div class="main_item_content" style="margin :0px">
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='eth0' id='Everyday'><span type='text' id='lantext1' i18n="Everyday">Everyday</span></div>
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Mon' id='Mon'><span type='text' id='lantext2' i18n="Monday">Monday</span></div>
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Tue' id='Tue'><span type='text' id='lantext3' i18n="Tuesday">Tuesday</span></div>
+            			<div  class='lanport' style="width: 90px;"><input type='checkbox' name='portbind' value='Wed' id='Wed'><span type='text' id='lantext4' i18n="Wednesday">Wednesday</span></div>
+            		</div>
+            		<div class="main_item_content">
+            			<div class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Thu' id='Thu'><span type='text' id='lantext1' i18n="Thursday">Thursday</span></div>
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Fri' id='Fri'><span type='text' id='lantext2' i18n="Friday">Friday</span></div>
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Sat' id='Sat'><span type='text' id='lantext3' i18n="Saturday">Saturday</span></div>
+            			<div  class='lanport' style="width: 75px;"><input type='checkbox' name='portbind' value='Sun' id='Sun'><span type='text' id='lantext4' i18n="Sunday">Sunday</span></div>
+            		</div>
+            		<div id="main_content-error" class="main_item_error_hint_extra"></div>
+            	</div>
+            </br>
+            <div class="table_bg">
+            	<!-- <div class="table_title"><font i18n="Time of Day">Time of Day</font></div> -->
+            	<div class="main_item">
+            		<div class="main_item_name"><font i18n="url_start_time">start_time</font></div>
+            		<div class="main_item_content">
+            			<input type="text" class="input_text" value="00" autocomplete="off" id="start_hour"  name="start_hour" style="width:150px"/><font i18n="hour">hour</font> :
+            			<input type="text" class="input_text" value="00" autocomplete="off" id="start_min" name="start_min" style="width:150px"/> min 
+            		</div>
+            		<div id="Hour-error" class="main_item_error_hint_extra"></div>
+            	</div>
+            	<div class="main_item">
+            		<div class="main_item_name"><font i18n="url_end_time">url_end_time</font></div>
+            		<div class="main_item_content">
+            			<input type="text" class="input_text" value="24" autocomplete="off" id="end_hour" name="end_hour" style="width:150px"/><font i18n="hour">hour</font> :
+            			<input type="text" class="input_text" value="00" autocomplete="off" id="end_min" name="end_min" style="width:150px"/> min
+            		</div>
+            		<div id="Time-error" class="main_item_error_hint_extra"></div>
+            	</div>
+            	<div class="main_item" style="height: 37px;" id="time_save_delete">
+            		<div class="main_submit" style="width: 25%;"></div>				
+            		<div class="main_submit" style="width: 75%;">
+            			<input type="button" id="time_save_apply" class="input_button" i18n="firewall_apply" i18n-set="value" onclick="doSave()"/>
+            			<input type="button" id="time_save_cancel" class="input_button" i18n="firewall_cancel" i18n-set="value" onclick="window.location.reload()"/>
+            		</div>
+            	</div>
+            </div>
+            </div>
+            </div>
+            
+			
+		</form>
+	</body>
+</html>

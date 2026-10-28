@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/traffic_control.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div>
+			<p class="table_title table_bg"><font i18n="traffic_control_download">Traffic Control:Download</font></p>
+		</div>			
+		<form id="traffic_form">
+			<table width="95%" style="margin-left: 20px;padding:0px" cellspacing="0" cellpadding="3px" border="1px">	
+				<tbody id="traffic_table">
+				</tbody>
+			</table>
+			<div class="main_save" style="margin-left: 160px">
+				<input type="button" class="input_button" id="save_apply_down" i18n="qos_apply" i18n-set="value" onclick="saveApplyDown()"/>
+			</div>
+		</form>
+		<br/>	
+		<div>
+			<p class="table_title table_bg"><font i18n="traffic_control_upload">Traffic Control:Upload</font></p>
+		</div>		
+		<div class="main_content">
+			<div class="main_item">
+				<div class="main_item_name"><font i18n="traffic_control_interface1">LAN2</font></div>
+				<div class="main_item_content">
+					<select id="interface_select_LAN2" style="width : 200px">
+						<option value='1'>Enable</option>
+						<option value='0'>Disable</option>
+					</select>
+				</div>
+				<div class="main_item_name"><font i18n="traffic_control_interface2">LAN3</font></div>
+				<div class="main_item_content">
+					<select id="interface_select_LAN3" style="width : 200px">
+						<option value='1'>Enable</option>
+						<option value='0'>Disable</option>
+					</select>
+				</div>
+				<div class="main_item_name"><font i18n="traffic_control_interface3">SSID3</font></div>
+				<div class="main_item_content">
+					<select id="interface_select_SSID3" style="width : 200px">
+						<option value='1'>Enable</option>
+						<option value='0'>Disable</option>
+					</select>
+				</div>
+				<div class="main_item_name"><font i18n="traffic_control_interface4">SSID7</font></div>
+				<div class="main_item_content">
+					<select id="interface_select_SSID7" style="width : 200px">
+						<option value='1'>Enable</option>
+						<option value='0'>Disable</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_save" style="margin-left: 160px">
+				<input type="button" class="input_button" i18n="qos_apply" i18n-set="value" id="save_apply_up" onclick="saveApplyUp()"/>
+			</div>
+		</div>		
+		<br/>		
+	</body>
+</html>

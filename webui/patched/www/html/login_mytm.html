@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+    <script language="javascript " type="text/javascript">
+        document.write('<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<link rel="stylesheet" type="text/css" href="../css/index.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<script  src="../js/jquery-1.11.2.min.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/xhr.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/page_access_check.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/i18n.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/login_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+    </script>
+</head>
+<script language="javascript" type="text/javascript">
+loginHtmlAccessCheck(goperator_name, "login_mytm.html");
+</script>
+<style type="text/css">
+    .wrapper {
+        width: 100%;
+    }
+
+    .warp-login {
+        padding-top: 5%;
+    }
+
+    .label-verification {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        margin_left: 15%;
+        padding: 20px 18px 10px 18px;
+        width: 200px;
+        height: 60px;
+        line-height: 20px;
+        font-size: 18pt;
+        background: url(../image/yanzhengma.jpg) no-repeat center top;
+        display: inline-block;
+        text-align: right;
+        color: #000;
+        cursor: pointer;
+        background-size: 100% 100%;
+    }
+
+    .STYLE1 {
+        background-image: url(../image/background.png);
+        background-repeat: repeat-x;
+
+    }
+
+    .STYLE2 {
+        height: 35px;
+        width: 70px;
+    }
+
+    .STYLE4 {
+        color: #FF0000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        width:350px
+    }
+
+    .STYLE5 {
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .STYLE6 {
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .login_div {
+        border: 1px solid #8dc63f;
+        width: 500px;
+        height: 320px;
+    }
+
+    .login {
+        width: 200px;
+        margin-left: 20px;
+        display: inline;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #8dc63f;
+        height: 30px;
+        font-size: 14px;
+        color: #4E4E4E;
+        outline: none;
+        text-indent: 5px;
+    }
+
+    .pwd {
+        width: 200px;
+        margin-left: 20px;
+        display: inline;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #8dc63f;
+        height: 30px;
+        font-size: 14px;
+        color: #4E4E4E;
+        outline: none;
+        text-indent: 5px;
+    }
+
+    .signin {
+        height: 40px;
+        background-color: #8DC63F;
+        border: none;
+        color: white;
+        width: 150px;
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="wrapper">
+                <div class="warp-login">
+                    <div style="text-align: center;padding: 20px 20px 20px 20px; ">
+                        <img src="../image/my_tm_logo.png" style="width:200px; pointer-events: none;">
+                    </div>
+                    <div class="login_div">
+                        <div style="margin-left: 80px;margin-top: 50px;">
+                            <div style="float: left;width:100px;height: 30px;line-height:30px;">
+                                <p class="title" style="font-size: 18px;">Username :</p>
+                            </div>
+                            <div>
+                                <input type="text" class="login" style="" id="user_name">
+                            </div>
+                        </div>
+                        <div style="margin-left: 80px;margin-top: 50px;">
+                            <div style="float: left;width:100px;height: 30px;line-height:30px;">
+                                <p class="title" style="font-size: 18px;">Password :</p>
+                            </div>
+                            <div>
+                                <input type="password" class="pwd" style="" id="loginpp">
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px;margin-left: 80px;">
+                            <span class="STYLE4" id="login_error_hint"></span>
+                        </div>
+                        <div style="margin-top:50px ">
+                            <button class="signin" id="login_btn" onClick="onlogin(1)"
+                                style="margin-left: 50px;">LOGIN</button>
+                            <button class="signin" id="login_btn" onClick="onlogin(2)"
+                                style="margin-left: 100px;">CANCEL</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%; min-width: 500px;height: 50px;line-height:50px;background-color: #8dc63f;bottom:50px;text-align: center;">
+                    <font style="color: white;font-size: 20px; font-style: italic;">powered by Fiberhome</font>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

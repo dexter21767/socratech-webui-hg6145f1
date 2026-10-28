@@ -1,0 +1,36 @@
+{
+  "catv_prompt":"Puede modificar la potencia de RF en esta página.",
+  "catv_enable_title":"Habilitación de potencia de RF",
+  "catv_enableTitle":"Habilitar",
+  "catv_disableTitle":"Deshabilitar",
+  "catv_rfoffset_title":"Rango de ajuste de potencia de RF",
+  "catv_rfoffset_tips":"[-127,127]",
+  "catv_apply":"Aplicar",
+  "catv_cancel":"Cancelar",
+  "value_illegal":"Algún valor no es válido, ¡vuelva a intentarlo!",
+
+  "led_switch_prompt":"Puede modificar la habilitación de Led Switch en esta página.",
+  "led_switch_enable_title":"Habilitación de Led Switch",
+
+  "preset_prompt":"Puede modificar la hora del botón de reinicio y habilitar preconfiguración en esta página.",
+  "preset_enable_title":"Habilitar preconfiguración",
+  "preset_time_title":"Hora del botón de reinicio",
+  "restart_tips":"(Entra en vigor después del reinicio)",
+  "preset_time_tips":"[5,300] segundos (entra en vigor después del reinicio)",
+  "rebooting":"El sistema se está reiniciando... Espere un momento y vuelva a iniciar sesión después de reiniciar.",
+  "restore_apply":"Restaurar",  
+  "restore_confirm":"Si restaura la configuración predeterminada, se perderá la configuración privada. ¿Está seguro de que desea restaurar la configuración predeterminada?",
+  "user_account_enable_prompt":"Puede configurar la habilitación de cuentas de usuario en esta página. (La contraseña predeterminada de la cuenta "user" es "user1234")",
+  "user_account_enable_title":"Habilitación de cuenta de usuario",
+
+  "preconfigure_prompt":"Puede realizar la preconfiguración y exportar el archivo de preconfiguración a su PC en esta página.",
+  "preconfigure_enable_title":"Habilitar preconfiguración",
+  "preconfigure_button":"Descargar preconfiguración",
+  "preconfigure_tips0":"Nota:",
+  "preconfigure_tips1":"1.Seleccione Habilitar preconfiguración, haga clic en el botón Aplicar, seleccione sí y el dispositivo se reiniciará.",
+  "preconfigure_tips2":"2.Después de que el dispositivo se reinicie, inicie sesión en el administrador web con la contraseña predeterminada y modifique la configuración web en función de la configuración predeterminada en la página web.",
+  "preconfigure_tips3":"3.Después de modificar la configuración, exporte la preconfiguración en la página de preconfiguración.",
+  "preconfigure_tips4":"4.Seleccione Deshabilitar preconfiguración, haga clic en el botón Aplicar, seleccione Sí y el dispositivo se reiniciará.",
+  "takes_effect_after_restart":"La nueva configuración surte efecto después de reiniciar el dispositivo. ¿Está seguro de enviar y reiniciar el dispositivo?"
+
+}

@@ -1,0 +1,62 @@
+{
+  "tr069_basic_apply":"提交",
+  "tr069_basic_cancel":"取消",
+
+  "tr069_title":"TR069基本设置",
+  "tr069_prompt":"在本页面，您可以设置URL、用户名、密码、反向连接用户名、反向连接密码等TR069基本配置。",
+  "tr069_prompt_readonly":"在本页面，您可以浏览URL、用户名、密码、反向连接用户名、反向连接密码等TR069基本配置。",
+  "tr069_prompt_cfgfile":"在本页面，您可以配置TR069生效的配置。",
+
+  "tr069_basic":"TR069基本配置",
+  
+  "tr069url_title":"URL",
+  "tr069userName_title":"用户名",
+  "tr069password_title":"密码",
+  "tr069conReqUsr_title":"反向连接用户名",
+  "tr069conReqPwd_title":"反向连接密码",
+
+  "tr069_noURL":"请输入URL!",
+  "tr069_urlillegal":"URL非法!",
+  "tr069_nousername":"请输入用户名!",
+  "tr069_noRequestUsername":"请输入反向连接用户名!",
+  "tr069_noinforminterval":"请输入通知间隔!",
+
+  "tr069InformEnable_title":"通知使能",
+  "tr069InformInterval_title":"通知间隔",
+  "tr069Enable_title":"TR069使能",
+  "tr069CertificateEnable_title":"证书使能",
+  
+  "tr069_enable":"开启",
+  "tr069_disable":"关闭",
+  
+  "tr069auth_Title":"连接请求认证",
+  "tr069_getRPCMethods":"获取RPC方法",
+  "ConnectionRequestPath_title":"连接请求路径",
+  "ConnectionRequestPort_title":"连接请求端口",
+  "InformInterval_alert":"请输入合法的TR069上报间隔(1 - 2147483647)!",
+  "Please_enter_valid_port_value":"请输入正确的端口值:1 - 65535 !",
+  "Please_enter_connectionRequestPassword":"请输入连接请求密码!",
+  "Please_input_path":"请输入路径!",
+  "Please_input_password!":"请输入密码!",
+  
+  "certi_prompt":"您可以在本页面导入TR069证书。",
+  "certi_title":"TR069证书导入",
+  "certi_import":"导入",
+  "certi_load":"上传",
+  "certi_fileIllegalAlert":"请选择正确的证书文件!",
+  "certi_complete":"证书导入成功!",
+
+  "tr069_inform_prompt":"您可以在本页面进行TR069手工Inform。",
+  "NoWan_alert":"TR069模式的WAN链接没有建立!",
+  "NoIP_alert":"TR069模式的WAN链接没有获取到IP!",
+  "Timeout_alert":"上报超时!",
+  "InformSuccess_infor":"上报成功!上报时间:",
+  "tr069ManualTriggerInform_title":"TR069手工Inform",
+  "ManualTriggerInform":"立即上报Inform",
+
+  "remote_manage_prompt":"您可以在页面上查询远程连接状态和服务配置状态。",
+  "ur_status_title":"本地更新上报",
+  "asc_status_title":"ONU和ACS服务器连接状态",
+  "sp_status_title":"服务器配置状态"
+}
+

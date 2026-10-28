@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ftp_server.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("ftp_server");
+	</script>
+	<style type="text/css">
+		.main_item_error_hint {color: red; clear: both;}
+		.input_text {width: 160px;}
+		
+		#progress
+		{
+			height: 24px;
+			width: 200px;
+			border: none;
+		}
+		.inner-progress 
+		{
+			background: #2C5EA4;
+		}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="ftpServer_Prompt">ftpServer_Prompt</font></p>
+		</div>
+		<br/>
+		<form id="wlanAdv_settings_form" method="post">
+			<div class="main_content ">
+				<div class="table_title table_bg"><font i18n="ftpServer_head">ftpServer_head</font></div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ftpServer_head">ftpServer_head</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="ftpServer_enable" name="ftpServer_enable" value="1" checked="checked"><font i18n="ftpServer_enableTitle">ftpServer_enableTitle</font>&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="ftpServer_disable" name="ftpServer_enable" value="0"><font i18n="ftpServer_disableTitle">ftpServer_disableTitle</font>
+						<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div id="user_pwd" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpServer_userTitle">ftpServer_userTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short" autocomplete="off" id="ftpServer_user" name="ftpServer_user" style="width: 120px;"/>
+							<span class="redcolorfont">*</span>
+							<font i18n="ftpServer_userTips">ftpServer_userTips</font>
+						</div>
+						<div id="ftp-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpServer_pwdTitle">ftpServer_pwdTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short fh-text-security" autocomplete="off" id="ftpServer_pwd" name="ftpServer_pwd" onfocus="clearInputValue(this.id)" onblur="resetInputValue(this.id)" style="width: 120px;" oncopy="return false"/>
+							<input id="show_password" type="checkbox" style="height: 12px; display: none;" class="input_button" i18n="change_eye" i18n-set="value" onclick="change_eye()" />
+							<span class="redcolorfont">*</span>
+							<font i18n="ftpServer_pwdTips" id="ftpServer_pwdTips">ftpServer_pwdTips</font>
+						</div>
+						<div id="ftp-error" class="main_item_error_hint_extra"></div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="ftpServer_apply" onclick="saveApply()" i18n="ftpServer_apply" i18n-set="value" class="input_button">
+						<input type="button" id="ftpServer_cancel" onclick="CancelBtn()" i18n="ftpServer_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+			</div>
+		</form>
+		<br>
+		<form id="ftp_client_form" method="post" style="display: none">
+			<div class="main_content ">
+				<div class="table_title table_bg"><font i18n="ftpClient_head">ftpClient_head</font></div>
+				<div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpClient_urlTitle">ftpClient_urlTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short" autocomplete="off" id="ftpClient_url" name="ftpClient_url"  value="ftp://" />
+							<span class="redcolorfont">*</span>
+							<font i18n="ftpClient_urlTips">ftpClient_urlTips</font>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpClient_portTitle">ftpClient_portTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short" autocomplete="off" id="ftpClient_port" name="ftpClient_port"/>
+							<span class="redcolorfont">*</span>
+							<font i18n="ftpClient_portTips">ftpClient_portTips</font>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpClient_userTitle">ftpClient_userTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short" autocomplete="off" id="ftpClient_user" name="ftpClient_user"/>
+                            <span class="redcolorfont">*</span>
+							<font i18n="ftpClient_userTips">ftpClient_userTips</font>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpClient_pwdTitle">ftpClient_pwdTitle</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short fh-text-security" autocomplete="off" id="ftpClient_pwd" name="ftpClient_pwd"/>
+                            <span class="redcolorfont">*</span>
+							<font i18n="ftpClient_pwdTips">ftpClient_pwdTips</font>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ftpClient_pathTitle">ftpClient_pathTitle</font></div>
+						<div class="main_item_content">
+							<select id="downloadPath" name="downloadPath">
+								<option value="">no usb devices</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="ftpClient_download" onclick="start_download()" i18n="ftpClient_download" i18n-set="value" class="input_button">
+					</div>
+				</div>
+				<br/>
+				<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+					<tr class="table_head_title">
+						<td width="10%" align='center'><font i18n="ftpClient_userTitle">ftpClient_userTitle</font></td>
+						<td width="10%" align='center'><font i18n="ftpClient_pwdTitle">ftpClient_pwdTitle</font></td>
+						<td width="10%" align='center'><font i18n="ftpClient_portTitle">ftpClient_portTitle</font></td>
+						<td width="10%" align='center'><font i18n="ftpClient_urlTitle">ftpClient_urlTitle</font></td>
+						<td width="10%" align='center'><font i18n="ftpClient_pathTitle">ftpClient_pathTitle</font></td>
+						<td width="10%" align='center'><font i18n="ftpClient_staTitle">ftpClient_staTitle</font></td>
+					</tr>
+					<tbody id="ftp_client_list">
+						<tr id="add_item">
+							<td align='center'>--</td>
+							<td align='center'>--</td>
+							<td align='center'>--</td>
+							<td align='center'>--</td>
+							<td align='center'>--</td>
+							<td align='center'>--</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</body>
+	<script type="text/javascript">
+	if (gOperatorName != "COL_ETB") {
+		setInterval(function(){
+		    if($("#ftpServer_pwd").length > 0){
+				if(!$("#ftpServer_pwd").hasClass("fh-text-security")){
+					$("#ftpServer_pwd").addClass("fh-text-security");
+				}
+			}else{
+				window.location.reload();
+			}
+			
+			if($("#ftpClient_pwd").length > 0){
+				if(!$("#ftpClient_pwd").hasClass("fh-text-security")){
+					$("#ftpClient_pwd").addClass("fh-text-security");
+				}
+			}else{
+				window.location.reload();
+			}
+		}, 10);
+	}
+	</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+			document.write('<link rel="stylesheet" type="text/css" href="../css/main_style.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/qos_base.js?'+new Date().getTime()+'"><'+'/'+'script>');
+ 		</script> 
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">QoS基本设置</p>
+			<p class="main_header_hint">开启QoS后，默认按照业务优先级转发，优先级顺序为：TR069>VOIP>IPTV>INTERNET</p>
+		</div>
+		<form id="qos_base_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">开启QoS</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="QoSEnable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<div class="main_item" id="mode_div" style="display:none">
+					<div class="main_item_name">QoS模板</div>
+					<div class="main_item_content">
+						<select id="qoscfg_template">
+							<option value="OTHER">OTHER</option>
+							<option value="TR069,INTERNET">TR069,INTERNET</option>
+							<option value="TR069,VOIP,INTERNET">TR069,VOIP,INTERNET</option>
+							<option value="TR069,IPTV,INTERNET">TR069,IPTV,INTERNET</option>
+							<option value="TR069,VOIP,IPTV,INTERNET">TR069,VOIP,IPTV,INTERNET</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="qos_apply_btn" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

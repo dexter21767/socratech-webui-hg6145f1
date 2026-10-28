@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/tr69_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("tr069");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint">
+				<font i18n="tr069_prompt">tr069_prompt</font>
+			</p>
+		</div>
+		<form id="tr69_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069Enable_title">tr069Enable_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="tr069_enable" name="tr069_enable" value="1"/><font i18n="tr069_enable">tr069_enable</font>&nbsp;
+						<input type="radio" id="tr069_disable" name="tr069_enable" value="0"/><font i18n="tr069_disable">tr069_disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" id="tr069_basic_apply" class="input_button" i18n="tr069_basic_apply" i18n-set="value" onclick="enablesSaveApply()"/>
+						<input type="button" id="tr069_basic_cancel" class="input_button" i18n="tr069_basic_cancel" i18n-set="value" onclick="enableCancel()"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069url_title">URL</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="Acsurl_text" name="Acsurl_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069userName_title">tr069userName_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="AcsUserName_text" name="AcsUserName_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069password_title">tr069password_title</font></div>
+					<div class="main_item_content">
+						<input type="password" class="input_text" autocomplete="off" id="AcsPassWord_password" name="AcsPassWord_password"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item middleware_item">
+					<div class="main_item_name"><font i18n="ConnectionRequestPath_title">ConnectionRequestPath_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="ConnReqAddr_text" name="ConnReqAddr_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+					<div id="ConnReqAddr_error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item middleware_item">
+					<div class="main_item_name"><font i18n="ConnectionRequestPort_title">ConnectionRequestPort_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="ConnReqPort_text" name="ConnReqPort_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069conReqUsr_title">tr069conReqUsr_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="ConnReqName_text" name="ConnReqName_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069conReqPwd_title">tr069conReqPwd_title</font></div>
+					<div class="main_item_content">
+						<input type="password" class="input_text" autocomplete="off" id="ConnReqPassWord_password" name="ConnReqPassWord_password"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069conReqPwd_title">tr069conReqPwd_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="tr069Inform_enable" name="tr069Inform_enable" value="1"/><font i18n="tr069_enable">tr069_enable</font>&nbsp;
+						<input type="radio" id="tr069Inform_disable" name="tr069Inform_enable" value="0"/><font i18n="tr069_disable">tr069_disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="tr069InformInterval_title">tr069InformInterval_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="PeriodicInformInterval_text" name="PeriodicInformInterval_text"/>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"></div>
+					<div class="main_item_content">
+						<input type="button" class="input_button" id="basic_apply" i18n="tr069_basic_apply" i18n-set="value" onclick="infoSaveApply()"/>
+						<input type="button" class="input_button" id="basic_cancel" i18n="tr069_basic_cancel" i18n-set="value" onclick="infoCancel()"/>
+						<input type="button" class="input_button" id="RPCbtn" onclick="RPCshow()"/>
+					</div>
+				</div>
+				<div class="main_item" id="RPCmethod" style="display: none;">
+					<textarea cols="80" rows="6" readonly="readonly">SetParameterValues   GetParameterValues   GetParameterNames   GetParameterAttributes   SetParameterAttributes   AddObject   DeleteObject   Reboot   Download   Upload   FactoryReset   ScheduleInform
+					</textarea>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

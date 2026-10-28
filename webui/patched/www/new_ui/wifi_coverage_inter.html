@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/wifi_coverage_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form method="post">
+		<div class="main_refresh">
+			<input type="button" class="input_button" id="input_button" i18n="refresh_btn_text" i18n-set="value" onclick="window.location.reload()" disabled 
+			style="float: right;width: 70px;height: 30px;margin-top: -10px;"/>
+		</div>
+		<div class="table_title" style="margin-bottom: 10px;">
+			<font i18n="wifi_coverage_ap_info">wifi_coverage_ap_info</font>
+		</div>
+		<table class="table_title_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<tr class="table_head_title">
+				<td width="5%"><font i18n="ssid_name_title">ssid_name_title</font></td>
+				<td width="8%"><font i18n="mac_addr">mac_addr</font></td>
+				<td width="3%"><font i18n="Channel">Channel</font></td>
+				<td width="10%"><font i18n="signal_strength">signal_strength</font></td>
+				<td width="5%"><font i18n="noise_dbm">noise_dbm</font></td>
+				<td width="3%"><font>DTIM</font></td>
+				<td width="7%"><font i18n="Beacon">Beacon</font></td>
+				<td width="8%"><font i18n="AuthMode">AuthMode</font></td>
+				<td width="8%"><font i18n="Working">Working</font></td>
+				<td width="7%"><font i18n="MaxRate">MaxRate</font></td>
+			</tr>
+			<tbody id='wifi_list' style="font-size: 12px"></tbody> 
+        </table>
+    </form>
+</body>
+</html>

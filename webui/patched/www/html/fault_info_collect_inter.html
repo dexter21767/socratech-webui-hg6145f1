@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/fault_info_collect_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("log");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="fault_info_prompt">fault_info_prompt</font></p>
+		</div>
+		<div class="main_refresh">
+			<input type="button" id="start_btn" class="input_button" i18n="start_btn_text" i18n-set="value" onclick="start_send_ubus()" />
+		</div>
+		<div id="div_rst"></div>
+		<textarea id="area_info" rows="20" cols="98" readonly="readonly"></textarea>
+		<br/><br/>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+{
+"ftpServer_Prompt":"Você pode configurar o servidor FTP aqui.",
+"ftpServer_head":"Servidor FTP",
+"ftpServer_enableTitle":"Habilitado",
+"ftpServer_disableTitle":"Desabilitado",
+"ftpServer_userNullAlert":"Por favor entre com o nome de usuário",
+"ftpServer_head":"Servidor FTP",
+"ftpServer_userTitle":"Nome de Usuário",
+"ftpServer_userTips":"(Você pode inserir caracteres de 1-32 incluindo alfanuméricos e '_')",
+"ftpServer_pwdTitle":"Senha",
+"ftpServer_pwdTips":"(Você pode inserir caracteres de 1-8 incluindo alfanuméricos e '_')",
+"ftpServer_apply":"Aplicar",
+"ftpServer_cancel":"Cancelar",
+"invalid_data_alert":"Alguns valores são inválidos, por favor tente de novo"
+
+}

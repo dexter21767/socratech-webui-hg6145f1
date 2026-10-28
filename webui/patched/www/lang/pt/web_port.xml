@@ -1,0 +1,11 @@
+{
+  "webport_Prompt": "Nesta página, você pode configurar a porta de comunicação da web (HTTP) e deve reiniciar para ter efeito.",
+  "web_portTitle": "Porta de comunicação válida para WEB",
+  "web_portchangeTitle": "Porta de comunicação WEB que você modificou",
+  "web_portchangeTips": "(Insira 1024-65535 ou 80)",
+  "Change_confirm": "A porta que você modificou para entrar em vigor após a reinicialização.",
+  "web_portIllegalAlert": "Por favor insira 1024-65535 ou 80!",
+  "web_PortNullAlert": "Por favor insira um valor para a porta!",
+  "webport_apply": "Aplicar",
+  "webport_cancel": "Cancelar"
+}

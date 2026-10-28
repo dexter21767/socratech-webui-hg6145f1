@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+        	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/mqtt.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("application");
+	</script>
+	<style type="text/css">
+		.main_item_name {width: 250px;}
+		.main_item_content {width: calc(100% - 253px);}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint">
+				<font i18n="mqtt_prompt">mqtt_prompt</font>
+			</p>
+		</div>
+		<br>
+		<form id="mqtt_form">
+			<div id="register_div22">
+				<div class="main_content">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="tr181_manage_server_url_title1">tr181_manage_server_url_title1</font></div>
+						<div class="main_item_content" >
+							<input type="text" class="input_text" style="width:200px" id="tr181_manage_server_url" name="tr181_manage_server_url" /><span class="redcolorfont">*</span><font style="color: gray;" i18n="tr181_manage_server_url_tips">tr181_manage_server_url_tips</font>
+						</div>
+						<div id="tr181_manage_server_url-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item" id="certficate_enable_div">
+                        <div class="main_item_name" id="certficate"><font i18n="certificate_title">certificate_title</font></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="certficate_enable"  name="certficate_enable" value="1"/><font i18n="enable_certificate">enable_certificate</font></br>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name"></div>
+                        <div class="main_item_content">
+                            <input type="radio" id="certficate_disable"  name="certficate_enable" value="0"/><font i18n="disable_certificate">disable_certificate</font></br>
+                        </div>
+                    </div>
+					<div class="main_button">
+						<div class="main_submit" style="width: 25%;"></div>
+						<div class="main_submit" style="width: 75%;">
+							<input type="button" id="certficate_apply" class="input_button" onclick="saveApply()" i18n="app_apply" i18n-set="value">&nbsp; &nbsp;
+							<input type="button" id="certficate_cancel" class="input_button" onclick="window.location.reload()" i18n="app_cancel" i18n-set="value">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</body>
+</html>

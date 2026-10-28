@@ -1,0 +1,15 @@
+{
+	"WifiCoverageConfig_prompt": "En esta página, puede administrar la cobertura WiFi inteligente. En concreto, puede habilitar la ONT para que funcione con puntos de acceso externos para construir una red WiFi y ampliar la cobertura WiFi.",
+	"ExternalAPListHead": "Lista de AP externos",
+	"btn_apply": "Aplicar",
+	"btn_cancel": "Cancelar",
+	"no_title": "No.",
+	"device_model_title": "Modelo de dispositivo",
+	"serial_num_title": "Número de serie",
+	"status_title": "Estado",
+	"online_duration": "Duración en línea",
+	"time_out": "¡Tiempo expirado!",
+	"force_switching_value_invalid": "Error de valor de conmutación forzada, confirme valor de conmutación forzada entre -100 y -66.",
+	"conditioned_switching_value_invalid": "Error de valor de conmutación condicionado, confirme el valor de conmutación condicionado entre -84 y -60.",
+	"config_status": "Estado de configuración"
+}

@@ -1,0 +1,80 @@
+{
+  "account_prompt":"Puede configurar el nombre y la contraseña de la cuenta de usuario en esta página.",
+
+  "ac_add":"Agregar",
+  "ac_del":"Borrar",
+  "name_title":"Nombre de usuario",
+  "old_name_title":"Nombre de usuario anterior",
+  "accountSelf_newnameTitle":"Nuevo nombre de usuario",
+  "ac_pwd":"Nueva contraseña",
+  "ac_lanPwd":"Nueva contraseña",
+  "ac_pwd2":"Confirmar nueva contraseña ",
+  "ac_lanPwd2":"Confirmar contraseña de LAN",
+  
+  "accountSelf_oldWanPwdTitle":"Contraseña WAN anterior",
+  "accountSelf_newWanPwdTitle":"Contraseña WAN nueva",
+  "accountSelf_newWanPwd2Title":"Confirmar contraseña WAN",
+  
+  "user_most8RulesAlert":"¡Puede configurar hasta 8 usuarios!",
+  "no_count_alert":"¡No hay cuenta para eliminar!",
+  "selcet_alert":"¡Por favor, seleccione una cuenta para eliminar!",
+  "confirm_dele":"¿Estás seguro de eliminar la cuenta que fue seleccionada?",
+  "unequal_alert":"¡La confirmación de contraseña es diferente de la nueva contraseña!",
+
+  "initial_login_modify_password_pldt":"¡Es el primer inicio de sesión de esta cuenta; debe modificar la contraseña, el nombre del SSID y la contraseña de autenticación!",
+  
+  "account_manage_title":"Administración de cuentas",
+  "cancelValue":"Cancelar",
+  "btnApply1":"Aplicar",
+
+  "accountSelf_oldPwdTitle":"Contraseña anterior",
+  "accountSelf_oldLanPwdTitle":"Contraseña LAN anterior",
+  "accountSelf_pwdTips":"(8 - 32 caracteres)",
+  "accountSelf_pwdTips_MALAY_TM":"(18 - 32 caracteres)",
+  "accountSelf_pwdTips_6":"(6 - 32 caracteres)",
+  "accountSelf_pwdTips_TL_TRUE":"(Diferente de la contraseña LAN)",
+  
+  "accountSelf_userNullAlert":"¡Por favor, introduzca el nombre de usuario!",  
+  "accountSelf_oldPwdNullAlert":"¡Por favor, introduzca la contraseña anterior!",  
+  "accountSelf_newPwdNullAlert":"¡Por favor, introduzca la nueva contraseña!", 
+  "accountSelf_userIllegalAlert":"¡El nombre de usuario es ilegal!",
+  "accountSelf_newPwdIllegalAlert":"¡La contraseña es ilegal!",   
+  "accountSelf_newPwdLenIllegalAlert":"¡La longitud de la contraseña es ilegal!",
+  "accountSelf_newPwdSpaceAlert":"¡No incluya espacios en la contraseña!",  
+  "accountSelf_pwdMismatchedAlert":"¡La confirmación de contraseña es diferente de la nueva contraseña!",
+  "accountSelf_pwdMatchedOldPwdAlert":" ¡La nueva contraseña no debe ser la misma que la anterior!",
+  "accountSelf_wanlanPwdSameAlert":"¡La contraseña de WAN no debe ser la misma que la contraseña de LAN!",
+
+  "accountSelf_prompt":"Puede configurar la cuenta actual en esta página.",
+  "accountSelf_prompt_true":"Por favor, introduzca la contraseña WAN para habilitar la función de acceso WAN.",
+
+  "same_pwd":"La contraseña nueva es la misma que la contraseña anterior, ¡ingrese una nueva contraseña!",
+  "no_pwd":"La contraseña no puede estar vacía, ¡ingrese una nueva contraseña!",
+  "Please input 5 or 13 characters of":"Por favor, introduzca 5 o 13 caracteres de",
+  "contains invalid characters.":"Contiene caracteres no válidos.",
+  "wep_pwd_tips":"(Puedes ingresar 5 o 13 caracteres)",
+  "wpa_pwd_tips":"(Puede ingresar de 8 a 64 caracteres)",
+  "secure wpapsk key length":"¡Por favor, introduzca al menos 8 caracteres de la clave WPA-PSK!",
+  
+  "2gwifi_title":"2.4G SSID1",
+  "5gwifi_title":"5G SSID1",
+  "ssid1_name_title":"Nombre del SSID",
+  "ssid1_pwd_title":"Contraseña",
+  "ssid1_pwd2_title":"Confirmacion de Contraseña ",
+  "passwordTips":"(12-32 caracteres)",
+  "passwordTips_8":"(8-32 caracteres)",
+
+  "Please enter SSID Name!":"¡Por favor, introduzca el nombre del SSID!",
+  "ssidNameTips":"(1-32 caracteres)",
+  "ssidpasswordTips":"(Puede ingresar de 12 a 63 caracteres)",
+  "ssidpasswordTips_8":"(Puede ingresar de 8 a 63 caracteres)",
+  "accountNameTips":"(1-32 caracteres)",
+  "modifyPassword_success":"Modificación de contraseña exitosa",
+  "invalid_value_alert":"¡Algún valor es ilegal!",
+  "password_error":"Error al modificar la contraseña. ¡Vuelva a intentarlo!",
+  "password_involvespace":"La contraseña no puede tener espacios. ¡Vuelve a intentarlo!",
+
+  "bswifi_title":"Selección automática de banda Wifi",
+  "bandsteering_button":"Selección automática de banda Wifi activada/desactivada"
+}
+

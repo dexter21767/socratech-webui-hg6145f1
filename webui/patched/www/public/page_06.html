@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TIM Wizard</title>
+<!-- Bootstrap -->
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="./css/style_wizard.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/wizard_timeout.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+	function frmLoad(){
+		var operator_name = gOperatorName;
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name != "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body class="pricipal" onLoad='frmLoad();'>
+<div class="wrap">
+  <div class="area2 page_06">
+    <div class="cabecalho" >
+      <h1> Verificando sua conexão<br/>
+        com a Internet Ultra<br>
+        Banda Larga Live TIM. </h1>
+      <img src="img/160914_PF01_LOGO_TIM_LIVE.png"  class="log_tim_live_grande">
+      <div class="clearfix"></div>
+    </div>
+    <!-- cabecalho -->
+    <div class="conexao">
+      <div class="status"> <img  id="computador" src="img/160914_PF01_LOGO_COMPUTADOR.png"> <img id="barra_fail" class="barra" src="img/160914_PF01_LOGO_X.png"> <img id="globo" src="img/160914_PF01_LOGO_GLOBO.png">
+        <p> Por favor verifique os cabos<br/>
+          e LEDs de acordo com o 
+          manual<br/>
+          de instalação. Se o problema persistir,<br/>
+          entre 
+          em contato com o suporte<br/>
+          no telefone 10341 opção 3. </p>
+      </div>
+    </div>
+    <!-- conexao -->
+    <div class="detalhe">
+      <p> Para acessar as 
+        configurações avançadas, <a href="" class="linha" id="clique_aqui">clique aqui</a>. </p>
+    </div>
+    <div class="faixa-btn">
+		<a class="btn-voltar" href="./page_02.html">Voltar</a>
+		<a class="btn-novamente v-desk" href="./page_05.html">Verificar novamente</a>
+		<p class="v-mobile"> <a class="btn-novamente" href="./page_05.html">Verificar novamente</a> </p>
+    </div>
+  </div>
+  <!-- area1 -->
+  <img id="logo_tim_peq" src="img/160914_PF01_LOGO_TIM.png" > </div>
+<script>
+	var protocol = window.location.protocol;
+	var host = window.location.host;
+	document.getElementById("clique_aqui").href = protocol +"//"+ host + "/html/main_inter.html";
+</script>
+</body>
+</html>
+<!-- <m> -->

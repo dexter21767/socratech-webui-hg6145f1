@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+        	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/wifi_acl_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wireless");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="wifi_acl_Prompt">wifi_acl_Prompt</font></p>
+		</div>
+	    </br>
+		<form id="wifi_acl_list_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wifi_acl_mode_title">wifi_acl_mode_title</font></div>
+					<div class="main_item_content">
+						<div>
+							<input type="radio" name="wifi_acl_mode" id="wifi_acl_mode_disable" value="0" checked /><font i18n="wifi_acl_disable">wifi_acl_disable</font>&nbsp;&nbsp;
+							<input type="radio" name="wifi_acl_mode" id="wifi_acl_mode_black" value="1"/><font i18n="wifi_acl_black">wifi_acl_black</font>&nbsp;&nbsp;
+							<input type="radio" name="wifi_acl_mode" id="wifi_acl_mode_white" value="2"/><font i18n="wifi_acl_white">wifi_acl_white</font>
+							&nbsp;&nbsp;<span class="redcolorfont">*</span>
+						</div>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="wifi_acl_mode_apply" i18n="wifi_acl_apply" i18n-set="value" onclick="EnableApply()"/>
+						<input type="button" class="input_button" id="wifi_acl_mode_cancel" i18n="wifi_acl_cancel" i18n-set="value" onclick="EnableCancel()"/>
+					</div>
+					<div style="float:right">
+						<input type="button" i18n="Add" i18n-set="value" id="fw_add" class="input_button" onClick="addfilter()">
+						<input type="button" i18n="Delete" i18n-set="value" id="fw_delete" class="input_button" onClick="click_remove()">
+			  			<input type="button" i18n="Delete All" i18n-set="value" id="fw_deleteAll" class="input_button" onClick="click_remove_all()">
+					<br/>
+				</div>
+			</div>
+			
+			</div>
+			<br/>
+			<table width="100%" class="table_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_title">
+					<td colspan="5"><font i18n="wifi_acl_ListHead">wifi_acl_ListHead</font></td>
+				</tr>
+				<tr class="table_head_title">
+					<td width="15%" align='center'><font i18n="wifi_acl_ID">wifi_acl_ID</font></td>
+					<td width="50%" align='center'><font i18n="macaddr">macaddr</font></td>
+					<td width="2%" align='center'></font></td>	
+				</tr>
+				<tbody id='wifi_acl_List' style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div class="main_content"  id = "fw_config_form" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="macaddr">macaddr</font></div>
+					<div class="main_item_content">
+						<input type="text"  class="input_text" autocomplete="off" id="mac_address" name="mac_address" style="width:120px"/><font i18n="macaddr_macTips">macaddr_macTips</font>
+					</div>
+					<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="wifi_acl_apply" i18n="wifi_acl_apply" i18n-set="value" onclick="doSave()"/>
+						<input type="button" class="input_button" id="wifi_acl_cancel" i18n="wifi_acl_cancel" i18n-set="value" onclick="displayTableHtml()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

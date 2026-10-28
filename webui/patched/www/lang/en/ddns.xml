@@ -1,0 +1,56 @@
+{
+  "ddns_apply":"Apply",
+  "ddns_cancel":"Cancel",
+  "ddnscfg_remove":"Remove Configuration",
+  
+  "ddns_prompt":"You could configure DDNS here. ",
+
+  "Enable":"Enable",
+  "Disable":"Disable",
+  
+  "ddns_hostTips":"(eg. abc.dyndns.co.za)",
+  
+  "ddns_passwordTips":"(1-32 Characters)",
+  "ddns_usernameTips":"(1-32 Characters)",
+  "ddns_domain":"Domain",
+  "ddns_hostTitle":"Host",  
+
+  "ddns_password":"Password",
+  "ddns_interface":"WAN Interface",
+  "ddns_username":"Username",
+
+  "ddns_server":"Server Address",
+  "ddns_protocolTitle":"Protocol",
+  "Server_url_title":"Server URL",
+  
+  "Please enter username!":"Please enter username!",
+  "Please enter password!":"Please enter password!",
+  "Please enter host domain!":"Please enter host!",
+
+  "Please enter domain!":"Please enter domain!",
+  "Please enter serveraddr!":"Please enter server address!",
+  "Please enter url!":"Please enter URL!",
+  
+  "username is illegal!":"Username is illegal!",
+  "Password is illegal!":"Password is illegal!",
+  "Host Domain Name is illegal!":"Host Domain Name is illegal!",
+  "ddns_providerTitle":"DDNS Provider",
+  "Please enter provider":"Please enter provider!",
+  
+  "ddns_interfaceNUllAlert":"Please configure the WAN interface!",
+  
+  "ddns_state_prompt":"You could get DDNS infomation here.",
+  "ddns_infoTitle":"DDNS Info",
+  "ddns_updateTitle":"Update Info",
+  "ddns_init":"Init",
+  "ddns_modify":"Updating",
+  "ddns_success":"Update successful",
+  "ddns_param_error":"Param error",
+  "ddns_cfgfile_error":"Configuration file error",
+  "ddns_ifname_error":"Ifname error",
+  "ddns_devIP_error":"Failed to get host ip",
+  "ddns_connect_error":"Connect to the server failed",
+  "ddns_response_error":"Update Failed",
+  "ddns_noResp_error":"Server is not responding",
+  "ddns_memory_error":"Out of memory error"
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+    	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/wifi_info_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="table_title" style="margin-bottom: 10px;">
+				<font i18n="WirelessState">WirelessState</font>
+			</div>
+            <tbody>     
+				<tr id="basicradio">
+					<td  class="table_left" width="30%"><font i18n="basicRadioButton">basicRadioButton</font></td>
+					<td class="table_right" id="enable"></td>
+				</tr>
+				<tr id="wifi_mode">
+					<td class="table_left" width="30%" id="mode_title"><font i18n="basicNetMode">basicNetMode</font></td>
+					<td class="table_right" id="mode"></td>
+				</tr>
+				<tr>
+					<td class="table_left" width="30%"><font i18n="basicFreqA">basicFreqA</font></td>
+					<td class="table_right" id="channel"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="table_title" style="margin-bottom: 10px;">
+				<font i18n="SSID State">SSID State</font>
+			</div>
+            <tbody id="wifi_list"> 
+			</tbody>
+		</table>
+		<br>
+		<table id="pack_count" class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+			<div class="table_title" style="margin-bottom: 10px;">
+				<font i18n="wireStateStatic">wireStateStatic</font>
+			</div>  
+            <tbody>
+				<tr>
+					<td class="table_left" width="30%"><font i18n="rpc_title">rpc_title</font></td>
+					<td class="table_right" id="receive_packet"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="rbc_title">rbc_title</font></td>
+					<td class="table_right" id="receive_byte"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="rmc_title">rmc_title</font></td>
+					<td class="table_right" id="receive_wrong_packet"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="rdc_title">rdc_title</font></td>
+					<td class="table_right" id="receive_drop_packet"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="spc_title">spc_title</font></td>
+					<td class="table_right" id="send_packet"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="sbc_title">sbc_title</font></td>
+					<td class="table_right" id="send_byte"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="smc_title">smc_title</font></td>
+					<td class="table_right" id="send_wrong_packet"></td>
+				</tr>
+				<tr>
+					<td class="table_left"><font i18n="sdc_title">sdc_title</font></td>
+					<td class="table_right" id="send_drop_packet"></td>
+				</tr>
+			</tbody>
+		</table>
+    </form>
+		
+</body>
+</html>

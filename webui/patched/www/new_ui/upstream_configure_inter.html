@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/upstream_configure_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<form id="anti_port_scan_form">
+			<div class="main_item">
+					<div class="main_item_name"><font i18n="upstream_configure_tittle">upstream_configure_tittle</font></div>
+					<div class="main_item_content">
+						<select id="port_select" name="port_select" class="select">
+						<option value="dev.pon.1" selected="selected">Optical</option>
+					  	  <option value="dev.eth.4">LAN4</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_item_content">
+						<input type="button" id="upstream_apply" class="input_button" i18n="anti_port_scan_apply" i18n-set="value"
+							onclick="save_apply()" />
+					</div>
+				</div>
+		</form>
+	</body>
+</html>

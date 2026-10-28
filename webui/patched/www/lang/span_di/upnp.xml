@@ -1,0 +1,22 @@
+{
+  "upnpEnableApply":"Aplicar",
+  "upnpEnableCancel":"Cancelar",
+   "upnpcfg_remove":"Eliminar configuración",
+  "upnp_prompt":"En esta página, puede configurar la activación/desactivación de UPnP.",
+  
+  "dlna_prompt":"En esta página, puede habilitar o deshabilitar el servicio DLNA. ¡Asegúrese de haber insertado primero el dispositivo de almacenamiento extraíble en el puerto USB!",
+  "usb_pathTitle":"Partición USB",
+  "dlnaEnable_title":"Servicio DLNA",
+  "dlna_pathTitle":"Directorio de compartición de medios",
+  "dlna_path_noalert":"¡Por favor, introduzca el directorio de compartición de medios válido!",
+  
+  "upnp_enable":"Habilitar",
+  "upnp_disable":"Deshabilitar",
+  "upnp_wan_title":"Nombre de WAN",
+
+  "igmp_prompt":"En esta página, puede configurar el modo multicast.",
+  "upnpEnable_title":"Modo IGMP",
+  "upnpEnable_title2":"Modo MLD",
+  "igmp_apply":"Aplicar"
+
+}

@@ -1,0 +1,17 @@
+{
+  "recontrol_prompt": "Nesta página, você pode ativar/desativar o acesso à web por meio de wan, não poderá acessar a web por meio de wan se desativar o controle remoto e poderá acessar a web por meio de wan se ativar o controle remoto.",
+  "recontrol_prompt_romania": "Nesta página você pode ativar/desativar o acesso WEB através de wan somente por https.",
+  "rcEnable_title": "Controle remoto",
+  "rc_enable": "Habilitado",
+  "rc_disable": "Desabilitado",
+  "recontrolApply": "Aplicar",
+  "recontrolCancel": "Cancelar",
+  "https_prompt": "Nesta página, você pode ativar/desativar HTTPs.",
+  "webport_Prompt": "E você pode configurar a porta de comunicação web (HTTP).",
+  "web_portTitle": "Porta de comunicação válida para WEB",
+  "web_portchangeTitle": "Porta de comunicação WEB que você modificou",
+  "web_portchangeTips": "(Insira 1024-65535 ou 80)",
+  "Change_confirm": "A configuração que você modificou entrará em vigor após a reinicialização.",
+  "web_portIllegalAlert": "Por favor insira 1024-65535 ou 80!",
+  "web_PortNullAlert": "Por favor insira um valor para a porta!"
+}

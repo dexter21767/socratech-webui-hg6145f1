@@ -1,0 +1,15 @@
+{
+	"adv_power_config_prompt":"En esta página, puede configurar el ahorro de energía para el dispositivo.",
+	"energy_saving_title":"Configuración de ahorro de energía",
+	"enable_service_title":"Habilitar servicios en modo de batería",
+	"enable_energy_saving":"Habilita el ahorro de energía",
+	"service":"Servicio",
+	"usb":"USB",
+	"lan":"LAN",
+	"wlan":"WLAN",
+	"voice":"Voz",
+	"remote_management":"Gestión remota",
+	"adv_apply":"Aplicar",
+	"adv_cancel":"Cancelar"
+}
+

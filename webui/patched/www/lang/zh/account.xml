@@ -1,0 +1,63 @@
+{
+ "account_prompt":"在本页面上，您可以增加、删除普通用户账号或修改普通用户密码。",
+
+ "ac_add":"增加",
+ "ac_del":"删除",
+ "name_title":"用户名",
+ "old_name_title":"原用户名",
+ "accountSelf_newnameTitle":"新用户名",
+ "ac_pwd":"新密码",
+ "ac_lanPwd":"新LAN密码",
+ "ac_pwd2":"密码确认",
+ "ac_lanPwd2":"LAN密码确认",
+  
+ "accountSelf_oldWanPwdTitle":"原WAN密码",
+ "accountSelf_newWanPwdTitle":"新WAN密码",
+ "accountSelf_newWanPwd2Title":"WAN密码确认",
+  
+ "user_most8RulesAlert":"您最多可以配置8个用户。",
+ "no_count_alert":"当前没有普通用户，不能删除!",
+ "selcet_alert":"请先选择一个用户!",
+ "confirm_dele":"确认删除所选用户?",
+ "unequal_alert":"您两次输入的密码不一致,请重新输入!",
+  
+ "account_manage_title":"账号管理",
+ "cancelValue":"取消",
+ "btnApply1":"应用",
+
+ "accountSelf_oldPwdTitle":"原密码",
+ "accountSelf_oldLanPwdTitle":"原LAN密码",
+ "accountSelf_pwdTips":"(8 - 32位字符)",
+ "accountSelf_pwdTips_MALAY_TM":"(18 - 32位字符)",
+ "accountSelf_pwdTips_6":"(6 - 32位字符)",
+ "accountSelf_pwdTips_TL_TRUE":"(不同于LAN密码)",
+  
+ "accountSelf_userNullAlert":"请输入用户名!",  
+ "accountSelf_oldPwdNullAlert":"请输入原密码!",  
+ "accountSelf_newPwdNullAlert":"请输入新密码!",  
+ "accountSelf_userIllegalAlert":"用户名非法!",
+ "accountSelf_newPwdIllegalAlert":"新密码非法!", 
+ "accountSelf_newPwdLenIllegalAlert":"新密码长度非法!",
+ "accountSelf_newPwdSpaceAlert":"请勿在密码中设置空格!",  
+ "accountSelf_pwdMismatchedAlert":"两次输入的密码不一致!",
+ "accountSelf_pwdMatchedOldPwdAlert":"新输入密码不能和旧密码相同!",
+ "accountSelf_wanlanPwdSameAlert":"WAN密码不得与LAN密码相同!",
+
+ "accountSelf_prompt":"您可以在本页面配置当前账号信息。",  
+ "accountSelf_prompt_true":"请输入密码使能WAN访问功能。",
+  
+ "same_pwd":" 您设置的密码和原始密码相同，请设置一个新的密码!",
+ "no_pwd":"密码不能为空，请设置一个新的密码!",
+ "Please input 5 or 13 characters of":"请输入5或者13个字符的",
+ "contains invalid characters.":"包含非法字符。",
+ "wep_pwd_tips":"(您可以输入5或13个字符)",
+ "wpa_pwd_tips":"(您可以输入8到64个字符)",
+ "secure wpapsk key length":"请输入至少8个字符!",
+ "ssid1_name_title":"SSID 名字",
+ "ssid1_pwd_title":"密码",
+  "ssid1_pwd2_title":"密码确认",
+ "Please enter SSID Name!":"请输入网络名称!",
+ "ssidNameTips":"(1-32位字符)",
+ "accountNameTips":"(1-32位字符)"
+}
+

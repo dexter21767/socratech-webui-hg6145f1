@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/healthcheck.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("state");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="healthprompt" id="healthcheck_prompt">healthcheck_prompt</font></p>
+		</div>
+		<br>
+		
+
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%" id="health_table" style="display: none;">
+            <tbody>
+            	<tr class="table_title">
+      				<td colspan="2" id="powe_Inf"><font i18n="state_Inf">state_Inf</font></td>
+   				</tr>
+	            <tr>
+		            <td class="table_left" width="25%" ><font i18n="out_power_title">out_power_title</font></td>
+		            <td class="table_right"><span id="send_power"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            <font class="tip" i18n="out_power_range" style="color: gray;display: none;"></font></td>
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="in_power_title">in_power_title</font></td>
+		            <td class="table_right"><span id="recv_power"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            <font class="tip" i18n="in_power_range" style="color: gray;display: none;"></font></td>
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="temp_title">temp_title</font></td>
+		            <td class="table_right"><span id="tempreature"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            <font class="tip" i18n="temp_range" id ="temp_range" style="color: gray;display: none;"></font></td>
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="CPU_title">CPU</font></td>
+		            <td class="table_right"><span id="cpu"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="Memory_title">Memory</font></td>
+		            <td class="table_right"><span id="memory"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="Internet_title">Internet</font></td>
+		            <td class="table_right"><span id="internet"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="IPTV_title">IPTV</font></td>
+		            <td class="table_right"><span id="iptv"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="Management_title">Management</font></td>
+		            <td class="table_right"><span id="management"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		            
+	            </tr>
+	        </tbody>
+	    </table>
+
+	    <form id="healthcheckForm">
+			<div class="main_save">
+				<input type="button" class="input_button" onclick="checkStatus()" id="healthcheck_button" i18n="healthcheck_apply" i18n-set="value" />
+			</div>
+		</form>
+	</body>
+</html>

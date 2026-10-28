@@ -1,0 +1,140 @@
+{
+  "firewall_apply":"应用",
+  "firewall_cancel":"取消",
+  
+  "firewall_prompt":"您可以在本页面开启/关闭防火墙。",
+  "firewallEnable_title":"防火墙开启",  
+  "firewall_enable":"开启",
+  "firewall_disable":"关闭",
+  "fw_srcIPv6Title":"源IPv6",
+  "fw_dstIPv6Title":"目的IPv6",
+  "fw_ipv6_sourceIllegalAlert":"请输入正确IPv6地址!",
+  "fw_ipv6_dstIllegalAlert":"请输入正确IPv6地址!",
+  "fw_ipv6_ipNullAlert":"请输入源IPv6或目的IPv6地址!",
+  "pf_portIllegalAlert":"有效端口值为1 - 65535!",
+  "mtu_IllegalAlert":"您输入的MTU值非法，请输入1280-1528之间的数值。",
+  
+  "firewall_ipv4filterup_title":"过滤模式",
+  "firewall_ipfilterup_title":"上行",
+  "firewall_ipfilterdown_title":"下行",
+  "firewall_white":"白名单",
+  "firewall_black":"黑名单",
+
+  "pro_PortScan_prompt":"防止端口扫描功能。",
+  "pro_PortScan_title":"防止端口扫描",
+  "pps_enable":"启用",
+  "pps_disable":"禁用",
+  
+  "fw_ipfilterPrompt":" 防火墙开启后，设置的规则将生效，符合过滤条件的IP报文将被设备过滤。",
+  "fw_add":"添加",
+  "fw_delete":"删除",
+  "fw_deleteAll":"删除所有",
+  "fw_filterListHead":"过滤规则列表",
+  "fw_directionTitle":"方向",
+  "fw_srcIPTitle":"源IP",
+  "fw_srcPortTitle":"源端口",
+  "fw_dstIPTitle":"目的IP",
+  "fw_dstPortTitle":"目的端口",
+  "fw_protocolTitle":"协议",
+  
+  "fw_mostRulesAlert":"最多可创建50个规则！",
+  "fw_noRuleAlert":"没有已创建的规则，无法删除！",
+  "fw_noChooseAlert":"请先选定一个规则再执行删除!",
+  "fw_ipIllegalAlert":"请输入有效IP!",
+  "fw_maskIllegalAlert":"请输入有效子网掩码!",
+  "fw_startPortNullAlert":"已指定结束端口号，请指定开始端口号！",
+  "fw_portIllegalAlert":"有效的端口范围是1-65535",
+  "fw_endPortTooSmallAlert":"结束端口号不能小于开始端口号!",
+  "fw_endIPTooSmallAlert":"结束IP不能小于开始IP!",
+  
+  "fw_most4rulealert":"您最多可创建4条规则！",
+  "fw_most8RulesAlert":"您最多可以创建8条规则！",
+  "fw_most50RulesAlert":"您最多可以创建50条规则！",
+  "fw_most16RulesAlert":"您最多可以创建16条规则！",
+  "fw_most32RulesAlert":"您最多可以创建32条规则！",
+  
+  "fw_deleteRuleConfirm":"确定删除选定规则？",
+  
+  "ipFilter_syncAlert":"获取IP过滤数据失败，请重试!",  
+
+  "url_filterPrompt":"防火墙开启后，设置的规则将生效，符合过滤条件的域名将被设备过滤。",
+  "URLenable_title":"使能",
+  "urldown_title":"URL黑名单/白名单",
+  "url_filterListHead":"URL过滤表",
+  "urlip":"域名地址",
+   
+  "urltime":"时间",
+  "url_enableTitle":"状态",
+  "url_start_time":"开始时间",
+  "url_end_time":"结束时间",
+  "url_TimeIllegalAlert":"请输入正确格式的时间! ",
+  "url_time_infor":"(小时:分钟, 24小时)",
+
+  "macaddr_filterPrompt":"防火墙开启后，设置的规则将生效，符合过滤条件的MAC地址将被设备过滤。",
+  "v6_macaddr_filterPrompt":"防火墙开启后，设置的规则将生效，符合过滤条件的IPv6 MAC地址将被设备过滤。",
+  "macaddrenable_title":"MAC地址过滤使能开关",
+  "v6_macaddrenable_title":"IPv6 MAC地址过滤使能开关",
+  "macaddrdown_title":"MAC地址过滤黑名单/白名单",
+  "v6_macaddrdown_title":"IPv6 MAC地址过滤黑名单/白名单",
+  "macaddr_filterListHead":"MAC地址过滤表",
+  "v6_macaddr_filterListHead":"IPv6 MAC地址过滤表",
+  "macaddr":"MAC地址",
+  "macaddr_macTips":" (您可以输入数字、字母及':'，如：00:24:21:19:BD:E4)",
+  "macaddr_most10rulealert":"最多可创建10条规则!",
+
+  "fw_NoHostURL":"请输入需要过滤的URL!",
+  "fw_URLIllegalAlert":"请输入有效URL!",
+  "(1-31)":"(1 - 31 位字符)",
+
+  "fw_nomacalert":"请输入MAC地址!",
+  "fw_macillegalalert":"请输入合法MAC地址!",
+
+  "dhcp_filterPrompt":"防火墙开启后，设置的规则将生效，阻止该mac的设备通过DHCP获取IP。",
+  "dhcpaddrenable_title":"DHCP 过滤使能",
+  "dhcpaddrdown_title":"DHCP过滤黑/白名单",
+  "dhcpaddr_filterListHead":"DHCP过滤规则列表",
+
+  "pro_ddos_prompt":"您可以在本页面开启或者关闭防DOS攻击。",
+  "pro_ddos_title":"防DOS攻击",
+
+  "wifiacl_filterPrompt":"您可以在本页面上配置WIFI ACL功能。",
+  "wifiacl_mostRulesAlert":"您最多可以设置10条规则!",
+  
+  "fw_rulesRepeatAlert":"规则重复，请重新输入!",
+
+  "wanAclPrompt":"在本页面上，您可以基于WAN端口配置网络访问控制。允许从配置的源地址访问WAN端口。如果没有配置源地址，则允许任意地址访问WAN端口。",
+  "ACLenable_title":"WAN ACL开关",
+  "acl_head":"访问控制列表",
+  "acl_ip_title":"安全IP地址",
+  "acl_apptype_title":"协议",
+  "acl_enable_title":"状态",
+  "modifyWANPassword":"您将打开WAN侧HTTP访问，请在登录前配置WAN侧的WEB登陆密码（默认为空）!",
+  
+  "lanAclPrompt":"在本页面上，您可以基于LAN端口配置网络访问控制。",
+  "lan_acl_ftp_enable_title":"Enable the LAN-Side PC to access the ONT through FTP",
+  "lan_acl_http_enable_title":"Enable the LAN-Side PC to access the ONT through HTTP",
+  "lan_acl_telnet_enable_title":"Enable the LAN-Side PC to access the ONT through Telnet",
+
+  "aclChange_confirm":"ACL规则改变将会导致HTTP/Telnet/ICMP的操作异常。您确认需要继续吗？",
+  
+  "sambaenable_title":"Samba开关",
+  "samabListHead":"Samba规则列表",
+  "samba_username":"用户名",
+  "samba_directory":"目录",
+  "samba_state":"状态",
+  "usb_pathTitle":"USB分区",
+  "samba_passwordTitle":"密码",
+  "The directory you select had been used!":"你选择的目录已经被使用!",
+  "sambaPrompt":"您可以在本页面配置samba服务, 请确认你已经连接了USB存储设备。",
+  "samba_mostRulesAlert":"您最多可以配置6条规则",
+  
+  "dhcp_macbandPrompt":"如果DHCP服务器已经开启，您可以在本页面绑定MAC和IP。",
+  "dhcp_bandListHead":"DHCP MAC地址绑定列表",
+
+  "super_admin_access_list_prompt":"在本页面上，您可以查看管理员用户白名单列表。",	
+  "access_list_title":"白名单",
+  "ip_RepeatAlert":"MAC地址与已有规则的MAC地址重复，请重新输入!",
+  "macAddr_RepeatAlert":"IP地址与已有规则的IP地址重复，请重新输入!",
+
+  "fw_StartIPNullAlert":"起始地址不能为空!"
+}

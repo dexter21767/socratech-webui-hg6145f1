@@ -1,0 +1,20 @@
+{
+	"samba_prompt": "On this page, you can enable or disable samba service, make sure that you have inserted the removable storage device and usb port first!",
+	"samba_enable": "Samba Enable",
+	"usb_part": "USB Partition",
+	"enable": "Enable",
+	"disable": "Disable",
+	"btn_apply": "Apply",
+	"btn_cancel": "Cancel",
+	"Open_Samba":"Open Samba",
+	"samba_userTitle":"Username",
+	"samba_pwdTitle":"Password",
+	"samba_userTips":"(You can input 1-32 characters, including alphanumeric and '_')",
+  	"samba_pwdTips":"(You can input 1-8 characters, including alphanumeric and '_')",
+  	"invalid_data_alert":"Some value is invalid, please retry it!",
+  	"samba_head":"Samba Server",
+  	"samba_enableTitle":"Enable",
+  	"samba_disableTitle":"Disable",
+  	"samba_apply":"Apply",
+  	"samba_cancel":"Cancel"
+}

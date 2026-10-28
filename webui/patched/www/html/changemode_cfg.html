@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/changemode_cfg.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain('menu');
+	</script>
+	<body class="main_config_body">
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="changemode_prompt">firewall_level_prompt</font></p>
+		</div>
+        <br/>
+		<fh-fo-rm id="mode_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="changemode_title">firewall_level_title</font></div>
+					<div class="main_item_content">
+                        <input type="radio" id="TH_3BB_mode"  name="network_mode" value="TH_3BB"/><font i18n="TH_3BB_mode_title"></font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="radio" id="TH_AIS_mode"  name="network_mode" value="TH_AIS"/><font i18n="TH_AIS_mode_title"></font>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					</div>
+				</div>
+				<div class="main_button" id="save_button">	
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" i18n="mode_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

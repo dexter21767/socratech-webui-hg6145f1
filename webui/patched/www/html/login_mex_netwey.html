@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+    <script language="javascript " type="text/javascript">
+        document.write('<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<link rel="stylesheet" type="text/css" href="../css/index.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<script  src="../js/jquery-1.11.2.min.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/xhr.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/page_access_check.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+        document.write('<script  src="../language/messages_en.js?'+new Date().getTime()+'"><'+'/'+'script>');
+        document.write('<script  src="../js/login_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+    </script>
+</head>
+<script language="javascript" type="text/javascript">
+setDomain('menu');
+loginHtmlAccessCheck(goperator_name, "login_mex_netwey.html");
+</script>
+<style type="text/css">
+    .wrapper {
+        width: 100%;
+    }
+
+    .warp-login {
+        padding-top: 4%;
+    }
+
+    .label-verification {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        margin_left: 15%;
+        padding: 20px 18px 10px 18px;
+        width: 200px;
+        height: 60px;
+        line-height: 20px;
+        font-size: 18pt;
+        background: url(../image/yanzhengma.jpg) no-repeat center top;
+        display: inline-block;
+        text-align: right;
+        color: #000;
+        cursor: pointer;
+        background-size: 100% 100%;
+    }
+.STYLE1 {
+	background-image: url(../image/background.png);
+	background-repeat: repeat-x;
+	
+}
+.STYLE2 {	
+	height: 35px;
+	width: 70px; 
+}
+.STYLE4 {
+	color: #FF0000;
+	text-align: center;	
+	font-size: 18px;
+	font-weight: 600;
+}
+.STYLE5 {
+	color: #FFFFFF;
+	text-align: center;	
+	font-size: 10px;
+}
+.STYLE6 {
+	color: #000000;
+	text-align: center;	
+	font-size: 18px;
+}
+.language 
+{
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+    @media only screen and (max-width: 1024px) {
+        .warp-login {
+            /* max-width: 360px; */
+            margin-top: 30%;
+
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .warp-login {
+            /* max-width: 300px; */
+            margin-top: 24%;
+
+        }
+
+        .input-form-login.username {
+            padding-left: 14%;
+        }
+
+        .input-form-login.password {
+            padding-left: 14%;
+        }
+    }
+
+    @media only screen and (max-width: 414px) {
+        .warp-login {
+            max-width: 280px;
+
+        }
+
+        .input-form-login.username {
+            padding-left: 16%;
+        }
+
+        .input-form-login.password {
+            padding-left: 16%;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+
+        .warp-login {
+
+            margin-top: 12%;
+
+        }
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="wrapper">
+                <div class="warp-login">
+                    <div style="text-align: center;padding-bottom:50px; "><img src="../image/logo00_60@2x-8.png"
+                            style="width:400px"></div>
+                    <div id="lang_div" class="language" style="display: none">
+                        <span id="EnglishModify" onclick="changeLanguage('en')">English</span> | 
+                        <span id="SpanishModify" onclick="changeLanguage('spain')">Español</span>
+                    </div>
+                    <h4 class="text-center" id="login_title" style="color: rgb(229, 62, 162);"i18n="fibehome"></h4>
+		            <br>
+                    <div class="form-group">
+                        <div><input type="text" class="input-form-login username" id="user_name" placeholder="USERNAME">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div><input type="password" class="input-form-login password" id="loginpp"
+                                placeholder="PASSWORD"></div>
+                    </div> 
+                    <div class="text-center" style="margin-top:70px;"><button class="btn-signin-netwey" id="login_btn" i18n="login_submit" i18n-set="value"
+                            onClick="onlogin(1)">Login</button>
+                        <div>
+                        </div>
+                        <td width="28%" height="35%"><table valign="middle" height="100%" width="100%">
+                            <tbody>
+                              <tr>
+                                <td height="30%"width="100%" ><table align="center" border="0" height="100%" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td width="5%"></td>
+                                        <td width="90%" align="center" id="td_error" ><span class="STYLE4" id="login_error_hint"></span></td>
+                                        <td width="5%"></td>
+                                      </tr>
+                                    </tbody>
+                                  </table></td>
+                              </tr>
+                              <tr>
+                                <td height="40%"width="100%" ></td>
+                              </tr>
+                              <tr>
+                                <td height="30%"width="100%" ></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

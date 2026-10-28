@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ddns_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+		
+	</head>
+	<script type="text/javascript">
+		setDomain("application");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="ddns_prompt">ddns_prompt</font></p>
+		</div>
+	    </br>
+		<form id="ddns_form">
+			<div class="main_content">
+				<div class="table_title">
+                    <td colspan="2" id="ddns_title"><font i18n="ddns_title">ddns_title</font></div></td>
+                </div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_enable_title">ddns_enable_title</font></div>
+					<div class="main_item_content">
+						<input type="radio" id="ddns_enable" name="ddns_enable" value="1"/><font i18n="app_enable">app_enable</font>&nbsp;&nbsp;
+						<input type="radio" id="ddns_disable" name="ddns_enable" value="0"/><font i18n="app_disable">app_disable</font>
+						&nbsp;&nbsp;<span class="redcolorfont">*</span>
+					</div>
+				</div>                
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_user_name_title">ddns_user_name_title</font></div>
+					<div class="main_item_content">
+						<input name="ddns_user_name" id="ddns_user_name" size="15" maxlength="32" type="text" autocomplete="off" value=""><strong style="color:#FF0033">*</strong><span class="gray" id="ddns_usernameTips">(1-32 Characters)</span>
+					</div>
+					<div id="min_ddns_user_name-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_password_title">ddns_password_title</font></div>
+					<div class="main_item_content"><input name="ddns_password" id="ddns_password" size="15" maxlength="32" type="password" autocomplete="off" value="" oncopy="return false"><strong style="color:#FF0033">*</strong><span class="gray" id="ddns_password_tips">(1-32 Characters)</span>
+					</div>
+					<div id="min_ddns_password-error" class="main_item_error_hint_extra"></div>	
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_host_title">ddns_host_title</font></div>
+					<div class="main_item_content">					
+						<input name="ddns_host" id="ddns_host" size="32" maxlength="64" type="text" autocomplete="off" value=""><strong style="color:#FF0033">*</strong><span class="gray" id="ddns_host_tips">(eg. abc.dyndns.co.za)</span>
+					</div>
+					<div id="min_ddns_host-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_interface_title">ddns_interface_title</font></div>
+					<div class="main_item_content">					
+						<select id="ddns_interface" name="ddns_interface" size="1" style="width:35%"></select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="ddns_provider_title">ddns_provider_title</font></div>
+					<div class="main_item_content">					
+						<select id="ddns_provider" name="ddns_provider" size="1" style="width:35%">
+			            	<option value="0" selected="selected">www.3322.org </option>
+			            	<option value="1">www.dyndns.org</option>
+			            	<option value="2">www.no-ip.com</option>
+			            	<option value="3">Other</option>
+						</select>
+					</div>
+				</div>
+				<div id="ddns_other_table" class="tabal_button" border="0" cellpadding="0" cellspacing="1" width="100%" style="display: none">
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ddns_domin_title">ddns_domin_title</font></div>
+						<div class="main_item_content">					
+							<input name="ddns_domain" id="ddns_domain" size="32" maxlength="64" type="text" value=""><strong style="color:#FF0033">*</strong><span class="gray">(eg. dyndns.co.za)</span>
+						</div>
+					</div>		
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ddns_server_title">ddns_server_title</font></div>
+						<div class="main_item_content">
+								<input name="ddns_server" id="ddns_server" size="32" maxlength="255" type="text" value=""><strong style="color:#FF0033">*</strong><span class="gray">(eg. www.dyndns.co.za)</span>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="ddns_protocol_title">ddns_protocol_title</font></div>
+						<div class="main_item_content">
+							<select id="ddns_protocol" name="ddns_protocol" size="1" style="width:35%" onChange="ProtocolTypeSwitch();">
+	            				<option value="2"selected="selected">GNUDip.http</option>
+	            				<option value="1">GNUDip.tcp</option>
+	         				</select>
+						</div>
+					</div>
+				</div>
+				<div id="ddns_other_table" class="tabal_button" border="0" cellpadding="0" cellspacing="1" width="100%" style="display: none">
+					<div style="">
+						<div class="main_item_name"><font i18n="server_url_title">server_url_title</font></div>
+						<div class="main_item_content">
+							<input name="server_url" id="server_url" size="32"  maxlength="255" style="width: 150px;" type="text" value=""><strong style="color:#FF0033">*</strong><span class="gray">(eg. /cgi-bin/gdipupdt.cgi)</span>
+						</div>
+					</div>
+				</div>				
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="app_apply" class="input_button" i18n="app_apply" i18n-set="value" onclick="save_apply()"/>
+						<input type="button" id="app_cancel" class="input_button" i18n="app_cancel" i18n-set="value" onclick="window.location.reload();"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

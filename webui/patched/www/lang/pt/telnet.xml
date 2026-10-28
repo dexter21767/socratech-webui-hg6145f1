@@ -1,0 +1,14 @@
+{
+  "telnet_prompt": "Nesta página você pode ativar ou desativar o serviço Telnet.",
+  "telnet_head": "Serviço Telnet",
+  "telnet_enable": "Habilitado",
+  "telnet_disable": "Desabilitado",
+  "telnet_apply": "Aplicar",
+  "telnet_cancel": "Cancelar",
+  "ssh_prompt": "Nesta página, você pode ativar ou desativar o serviço ssh.",
+  "ssh_head": "Serviço SSH",
+  "ssh_enable": "Habilitado",
+  "ssh_disable": "Desabilitado",
+  "ssh_apply": "Aplicar",
+  "ssh_cancel": "Cancelar"
+}

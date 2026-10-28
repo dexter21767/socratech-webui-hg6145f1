@@ -1,0 +1,46 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/restore_reboot.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("restore");
+</script>
+
+<body>
+	<div class="main_config_body management_half_div" style="float: left;">
+		<form id="deviceRebootForm">
+			<div id="reboot_imge">
+				<div>
+					<img src="../image/new_ui/reboot2.png">
+				</div>
+				<div class="main_save" style="margin-left: 65px;">
+					<input type="button" class="input_button" onclick="webreboot()" id="reboot_button"
+						i18n="reboot_apply" i18n-set="value" />
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="main_config_body management_half_div" style="float: right">
+		<form id="deviceRestoreForm">
+			<div id="restore_imge">
+				<div>
+					<img src="../image/new_ui/restore.png">
+				</div>
+				<div class="main_save" style="margin-left: 65px">
+					<input type="button" class="input_button" onclick="restoreDefault()" id="restart_button"
+						i18n="restore_apply" i18n-set="value">
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

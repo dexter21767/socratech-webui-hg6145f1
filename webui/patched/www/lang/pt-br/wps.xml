@@ -1,0 +1,18 @@
+{
+    
+    "wps_prompt":"Nesta página você pode configurar o WPS",
+    "WPS_enable_head":"Habilitar o WPS",
+    "WPS_cfg_head":"Configuração do WPS",
+    "wps_statetitle":"Condição do WPS",
+    "wps_PINtitel":"Por favor, insira o código PIN.",
+    "wps_PINer":"Código PIN",
+    "wps_buttontitel":"Por favor, ligue o botão do equipamento",
+    "Connecting":"Conectando...",
+    "Time_Out":"Tempo esgotado",
+    "connection_Successful":"Conexão bem-sucedida",
+    "connection_fail":"Falha na conexão",
+    "wps_pinillegal":"O código PIN é ilegal!",
+	"wps_apply":"Aplicar",
+	"WPSCancel":"Cancelar",
+	"WPSconnect":"Conectar"
+}

@@ -1,0 +1,14 @@
+{
+  "adv_power_config_prompt": "Nesta página você pode definir a economia de energia do dispositivo.",
+  "energy_saving_title": "Configuração de economia de energia",
+  "enable_service_title": "Habilitar serviços no modo bateria",
+  "enable_energy_saving": "Ativar economia de energia",
+  "service": "Serviço",
+  "usb": "USB",
+  "lan": "E",
+  "wlan": "WLAN",
+  "voice": "Voz",
+  "remote_management": "TR069",
+  "adv_apply": "Aplicar",
+  "adv_cancel": "Cancelar"
+}

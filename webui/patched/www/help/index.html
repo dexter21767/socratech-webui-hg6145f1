@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<script src="/js/xhr.js"></script>
+<script language="javascript">
+	function frmLoad() {
+		
+		var operator_name;
+		XHR.get("get_operator_test", null, function(data) {
+			if (data) {
+				operator_name = data.operator_name;
+			}
+		});
+			
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name == "PH_PLDT"){
+			window.location.href = protocol+"//"+host+"/help.html";
+		}else{
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body onLoad='frmLoad();'>
+</body>
+</html>

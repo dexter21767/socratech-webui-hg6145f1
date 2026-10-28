@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/lan_ipv4_ais_user.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/base64.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<style type="text/css">
+	    .main_item_error_hint {color: red; clear: both;}
+	    .input_text {width: 124px;}
+		.main_select{width:126px}
+		.input_text_150{width: 150px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="lan_prompt">lan_prompt</font></p>
+		</div>
+		<fh-fo-rm id="lan_ipv4_form">
+			<div class="main_content">
+				<br/>
+				<div class="table_bg">
+					<div class="table_title"><font i18n="lan_setup">lan_setup</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="gateway_ip">gateway_ip</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text changetxt" autocomplete="off" id="LanIP_Address_text" name="LanIP_Address_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="inet_netmask">inet_netmask</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanSubmask_text" name="LanSubmask_text"/>
+					</div>
+					<div id="RA-error" class="main_item_error_hint_extra"></div><font i18n = ""></font>
+				</div>
+				<div class="main_item" id="domain_name">
+					<div class="main_item_name"><font i18n="domain_name">domain_name</font></div>
+					<div class="main_item_content" id="ModelName">
+					</div>
+					<div id="RA-error" class="main_item_error_hint_extra"></div><font i18n = ""></font>
+				</div>
+				<div class="main_item" id="lan_isloation_div">
+					<div class="main_item_name"><font i18n="lan_isloation_title">LAN Isolation</font></div>
+					<div class="main_item_content" id="div_lan_isloation">
+						<input id="lan_isolation_enable" type="radio" name="lan_isolation" value="1">On&nbsp;&nbsp;&nbsp;
+						<input id="lan_isolation_disable" type="radio" name="lan_isolation" value="0" checked="checked">Off&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				<br/>
+				<div class="table_bg">
+					<div class="table_title"><font i18n="dhcp_serviceHead">dhcp_serviceHead</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_typeTitle">dhcp_typeTitle</font></div>
+					<div class="main_item_content">
+						<select id="dhcp_typesel">
+						</select>
+					</div>
+				</div>
+				<div id="DHCP_div">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_startTitle">dhcp_startTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="LanStartAddress_text" name="LanStartAddress_text"/>
+					</div>
+					<div id="LanStartAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_endTitle">dhcp_endTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="LanEndAddress_text" name="LanEndAddress_text"/>
+					</div>
+					<div id="LanEndAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_netmaskTitle">dhcp_netmaskTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LanDHCP_Submask_text" name="LanDHCP_Submask_text"/>
+					</div>
+				</div>
+
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_priDnsTitle">dhcp_priDnsTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="priDnsAddress_text" name="priDnsAddress_text"/>
+					</div>
+					<div id="priDnsAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_secDnsTitle">dhcp_secDnsTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="secDnsAddress_text" name="secDnsAddress_text"/>
+					</div>
+					<div id="secDnsAddress-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_gatewayTitle">dhcp_gatewayTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text " autocomplete="off" id="gateway_text" name="gateway_text"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="dhcp_timeTitle">dhcp_timeTitle</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width: 83px" autocomplete="off" id="dhcp_hour_text" name="dhcp_hour_text"/><font i18n="dhcp_hourTitle">dhcp_hourTitle</font>
+						<input type="text" class="input_text" style="width: 83px" autocomplete="off" id="dhcp_min_text" name="dhcp_min_text"/><font i18n="dhcp_minTitle">dhcp_minTitle</font> <font i18n="dhcp_timeTips">dhcp_timeTips</font>
+					</div>
+				</div>
+				</div>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>	
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" onclick="saveApply()" i18n="inet_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" onclick="CancelBtn()" i18n="inet_cancel" i18n-set="value" class="input_button"/>
+					</div>
+				</div>
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ping_general_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("internet");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="general_ping_prompt">general_ping_prompt</font></p>
+		</div>
+		<form id="ping_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name" width="25%"><font i18n="wan_name_title">wan_name_title</font></div>
+					<div class="main_item_content">
+						<select id="wan_connect" name="wan_connect" class="main_select" style="width: 182px">
+						</select>
+					</div>
+				</div>
+				<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%" id="ping_result" style="display:none">
+				<tbody>
+				<tr id= "pppoe_state_tr">
+					<td class="table_left" width="30%"><font i18n="pppoe_state_title">pppoe_state_title</font></td>
+					<td class="table_right" id="pppoe_state_result">
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="30%"><font i18n="ping_gateway_title">ping_gateway_title</font></td>
+					<td class="table_right" id="ping_gateway_result">
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="30%"><font i18n="ping_pri_dns_title">ping_pri_dns_title</font></td>
+					<td class="table_right" id="ping_pri_dns_result">
+					</td>
+				</tr>
+				<tr>
+					<td class="table_left" width="30%"><font i18n="ping_sec_dns_title">ping_sec_dns_title</font></td>
+					<td class="table_right" id="ping_sec_dns_result">
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<div class="main_item">
+					<div class="main_submit" style="width: 25%;"></div>				
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="pingbtn" onclick="saveApply()"/>
+					</div>
+				</div>	
+				</br>			
+			</div>
+		</form>
+	</body>
+</html>

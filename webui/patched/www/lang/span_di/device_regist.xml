@@ -1,0 +1,49 @@
+{
+  "backPage":"Atrás",
+  "inputTips":"¡Por favor, introduzca la contraseña proporcionada por el Operador!",
+  "loidTitle":"LOID",
+  "pwdTitle":"Contraseña",
+  "regist_submit":"Activar",
+  "regist_reset":"Reinicio",
+  
+  "oltAuthing":"Registrandose en la OLT.",
+  "oltAuthFailed":"No se pudo registrar en la OLT.",
+ 
+  "oltAuthFailed_info":"Registrarse en la OLT. ¡Por favor, compruebe el LOID y la contraseña!",
+  "oltAuthFailed_loid":"Registro en la OLT (error LOID). ¡Por favor, compruebe el LOID y la contraseña!",
+  "oltAuthFailed_lopwd":"Registro en la OLT (error de contraseña lógica). ¡Por favor, compruebe el LOID y la contraseña!",
+  "oltAuthFailed_loid_conflict":"Registro en la OLT (conflicto LOID). ¡Por favor, compruebe el LOID y la contraseña!",
+  "oltAuthFailed_physn_conflict":"Registro en la OLT (conflicto de número de serie). ¡Por favor, compruebe la entrada!",
+  "oltAuthFailed_noresource":"Registro en la OLT (sin recurso), ¡vuelva a intentarlo!",
+  "oltAuthFailed_type":"Registro en la OLT (error de tipo ONU).",
+  "oltAuthFailed_physn":"Registro en la OLT (error de número de serie). ¡Por favor, compruebe la entrada!",
+  "oltAuthFailed_phypwd":"Registro en la OLT (error de contraseña física). ¡Por favor, compruebe la entrada!",
+  "oltAuthFailed_phypwd_conflict":"Registro en la OLT (conflicto de contraseña física). ¡Por favor, compruebe la entrada!",
+  "oltAuthFailed_default":"Registro en la OLT, vuelva a intentarlo.",
+
+  "serviceDistributingIncomplete":"La última distribución del servicio no está completa, vuelva a registrarse después de visitar WEB y restaure toda la configuración.",
+  "registTimeout":"Se agotó el tiempo de espera de la activación.",
+  "registAlready":"Se ha registrado correctamente, sin volver a registrarse.",
+  "registAlready2":"Se ha registrado correctamente, sin volver a registrarse. Para volver a registrarse, restaure toda la configuración y vuelva a intentarlo.",
+  
+  "getACSIPing":"Solicitando la dirección IP a través del canal de gestión.",
+  "getACSIPFailed":"No se pudo obtener la dirección IP a través del canal de gestión.",
+  "getACSIPSuccess":"Se obtuvo exitosamente la dirección IP a traves del canal de gestión.",
+  "retryRestTimes":"Por favor, vuelva a intentarlo(Intentos restantes: ",
+  "retryExceedMaxTimes":"Ha probado el número máximo de certificaciones, póngase en contacto con el servicio de atención al cliente.",
+  "ACSAuthSuccessWaitingDistribute":"Registro exitoso. A la espera de la distribución del servicio.",
+  "ACSAuthSuccess":"Registro exitoso.",
+  "serviceDistributing":"Registro exitoso. El servicio se está distribuyendo.",
+  "serviceDistributeSuccess":"Registro exitoso. La distribución del servicio ha sido exitosa.",
+  "serviceDistributeFailed":"No se pudo distribuir el servicio.",
+  
+  "ACSAuthFailed_pwd":"¡La contraseña de usuario no existe!",
+  "ACSAuthFailed_loid":"¡El LOID de usuario no existe!",
+  "ACSAuthFailed_loidpwd":"¡Error en la coincidencia de LOID y contraseña de usuario!",
+  "ACSAuthFailed_password":"¡La contraseña no existe!",
+  "ACSAuthing":"Estar registrado en la ACS.",
+  "ACSAuthFailed":"No se pudo registrar en el ACS.",
+ 
+  "loidNullAlert":"¡LOID es nulo! ¡Por favor, introduzca LOID!"
+}
+

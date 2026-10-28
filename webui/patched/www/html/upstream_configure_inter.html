@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/upstream_configure_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="upstream_configure_prompt">upstream_configure_prompt</font></p>
+		</div>
+        <br/>
+		<form id="anti_port_scan_form">
+			<div class="main_item">
+					<div class="main_item_name"><font i18n="upstream_configure_tittle">upstream_configure_tittle</font></div>
+					<div class="main_item_content">
+						<select id="port_select" name="port_select" class="">
+						<option value="dev.pon.1" selected="selected">Optical</option>
+					  	  <option value="dev.eth.4">LAN4</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_button">
+                    <div class="main_submit" style="width: 25%;"></div>                
+                    <div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="upstream_apply" i18n="anti_port_scan_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+						<input type="button" class="input_button" id="upstream_cancel" i18n="anti_port_scan_cancel" i18n-set="value" onclick="cancel()"/>
+					</div>
+				</div>
+		</form>
+	</body>
+</html>

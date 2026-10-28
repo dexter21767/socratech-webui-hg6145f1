@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>  
+<title>HG6145F1 Web Management Interface</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<script>
+        gNewUiFlag="";
+        document.write('<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<link rel="stylesheet" type="text/css" href="../css/index.css?' + new Date().getTime() + '"><' + '/' + 'link>');
+        document.write('<script  src="../js/jquery-1.11.2.min.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/xhr.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script src="../js/login_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+        setDomain('menu');
+</script>
+
+
+<script>
+function showDialog() {
+  document.getElementById('myDialog').showModal();
+}
+function closeDialog() {
+  document.getElementById('myDialog').close();
+}
+</script>
+
+<style>
+/* ===== Background ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial;
+    background: linear-gradient(135deg, #edf7ed, #b7e4c7);
+    height: 100vh;
+}
+
+/* ===== Center Card ===== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-card {
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(2px);
+}
+
+/* ===== Logo ===== */
+.login-card img {
+    max-width: 260px;
+    margin-bottom: 20px;
+}
+
+/* ===== Title ===== */
+.login-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #00a335;
+    margin-bottom: 20px;
+}
+
+/* ===== Inputs ===== */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.input-field:focus {
+    border-color: #00a335;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,163,53,0.3);
+}
+
+/* ===== Button ===== */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00a335;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: #008c2c;
+}
+
+/* ===== Error ===== */
+#error_box {
+    margin-top: 10px;
+    color: red;
+    font-weight: 600;
+}
+
+/* ===== Footer Link ===== */
+.footer-link {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* ===== Dialog ===== */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.6);
+}
+
+.dialog-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00a335;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.changelog {
+    display: none;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 6px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.dialog-footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dialog-footer button {
+    background: #00a335;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+<div class="login-card">
+
+<img src="../image/logo_Intelbras_fiberhome.png">
+
+<div class="login-title">HG6145F1</div>
+
+<input type="text" id="user_name" class="input-field" placeholder="Username">
+<input type="password" id="loginpp" class="input-field" placeholder="Password">
+
+<button class="login-btn" onclick="onlogin(1)">Login</button>
+
+<div id="error_box">
+    <span id="login_error_hint"></span>
+</div>
+
+<div class="footer-link">
+    ℹ️<a href="#" onclick="showDialog()">Custom WebUI by Adel</a>
+</div>
+
+</div>
+</div>
+
+<!-- Dialog -->
+<dialog id="myDialog">
+    <div class="dialog-header">Fiberhome HG6145F1 Custom WebUI</div>
+
+    <p style="font-size:14px;text-align:center;">
+    </p>
+
+    <div class="toggle-btn" onclick="toggleChangelog()">▶ Show Changelog</div>
+
+    <div class="changelog" id="changelogBox">
+        <b>27/04/2026</b><br>
+        - Schedule reboot<br>
+        - SSID Isolation save settings fix<br>
+        - QOS enable/disable setting fix<br>
+        - UI changes in login page<br><br>
+
+        <b>30/03/2026</b><br>
+        - TR-069 auto-enabling patch<br>
+        - Custom webui persistency across reboots (optionnal)<br><br>
+
+        <b>01/03/2026</b><br>
+        - Enable SSID Isolation<br>
+        - Enable Custom Dynamic DNS<br>
+        - Enable QoS settings<br>
+        - Enable parental control<br>
+        - Enable DLNA/Samba/NAT/ALG<br>
+        - Enable System Log view<br><br>
+
+        <b>15/02/2026 - Initial version</b><br>
+        - New login page + small UI changes<br>
+        - Enable Custom DNS (Cloudflare, Google...)<br>
+        - PPPOE/Voip password retrieval
+    </div>
+
+    <div style="font-size:13px;text-align:center;margin-top:10px;">
+        <p>If you found this helpful and would like to support what I do, feel free to buy me a coffee ☕<br>
+Telegram: <a href="https://t.me/numberonedz" target="_blank"> @numberonedz</a> | <a href="https://github.com/numberonedz" target="_blank">Github</a></p>
+    </div>
+
+    <div class="dialog-footer">
+        <button onclick="closeDialog()">Close</button>
+    </div>
+</dialog>
+
+<script>
+function toggleChangelog() {
+    var box = document.getElementById("changelogBox");
+    var btn = document.querySelector(".toggle-btn");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+        btn.innerHTML = "▶ Show Changelog";
+    } else {
+        box.style.display = "block";
+        btn.innerHTML = "▼ Hide Changelog";
+    }
+}
+</script>
+
+</body>
+</html>

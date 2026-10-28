@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TIM Wizard</title>
+<!-- Bootstrap -->
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="./css/style_wizard.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<link rel="stylesheet" type="text/css" href="./css/style_page_04.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+    document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	document.write('<script  src="./js/wizard_timeout.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="./js/page_04.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+	function frmLoad(){
+		var operator_name = gOperatorName;
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name != "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/BadRequest";
+		}
+	}
+</script>
+</head>
+<body class="pricipal" onLoad='frmLoad();'>
+<div class="wrap">
+  <div class="area2 page_04">
+    <div class="cabecalho" >
+      <h1>Último passo. Vamos configurar<br/>
+        sua rede Wi-Fi:</h1>
+      <img src="img/160914_PF01_LOGO_TIM_LIVE.png"  class="log_tim_live_grande">
+      <div class="clearfix"></div>
+    </div>
+    <!-- cabecalho -->
+    <div class="form">
+      <form name="wifi" method="post" action="/BadRequest">
+        <div class="item-form item-ligado">
+          <label class="checkbox-custom" >
+          <input type="checkbox" name="SSIDEnable" checked="checked" id="SSIDEnable" value="1">
+          Ligado</label>
+        </div>
+        <br/>
+        <div class="item-form item-nome-rede">
+          <label for="nome-rede">Digite um nome para a  sua rede Wi-Fi 2.4GHz:</label>
+          <input type="text" class="form-control" id="nome-rede-2g" name="ssidName" placeholder="Minha rede Wi-fi">
+        </div>
+        <br/>
+        <div class="item-form item-nome-rede">
+          <label for="nome-rede">Digite um nome para a  sua rede Wi-Fi 5GHz:</label>
+          <input type="text" class="form-control" id="nome-rede-5g" name="ssid_name_5g" placeholder="Minha rede Wi-fi">
+        </div>
+        <br/>
+        <div class="item-form item-cripto">
+        <label for="cripto">Escolha a criptografia da rede ou deixe no recomendado:</label>
+		<select class="form-control" name="BeaconType" id="BeaconType" onChange="click_security_mode_check(this.value)">
+			<option value="WPA/WPA2">WPA-PSK/WPA2-PSK</option>
+			<option value="WPA">WPA-PSK</option>
+			<option value="11i">WPA2-PSK</option>
+			<option value="Basic">OpenSystem</option>
+		</select>
+        </div>
+        <br/>
+        <div class="item-form item-senha">
+          <label for="senha">Digite a senha para sua rede Wi-Fi:</label>
+          <input type="text" class="form-control fh-text-security" id="senha" name="passphrase" placeholder="" maxlength="63" autocomplete="off">
+        </div>
+        <br/>
+        <div class="item-form item-mostrar">
+          <label class="checkbox-custom" >
+          <input type="checkbox"  id="mostrar_senha" name="mostrar">
+          Mostrar senha</label>
+        </div>
+        <br/>
+        <div class="item-form item-senha-repetir">
+          <label for="senha-repetir">Repita a senha para sua rede Wi-Fi:</label>
+          <input type="text" class="form-control fh-text-security" id="senha_repetir" name="senha_repetir"  placeholder="" maxlength="64" autocomplete="off">
+          <p class="texto-pequeno-btn">Anote sua senha para configurar seus dispositivos Wi-Fi.</p>
+        </div>
+        <br/>
+        <div class=" faixa-btn"> <a class="form-control btn-avancar" href="./page_03.html">Voltar</a>
+          <input type="button" class="form-control btn-voltar" id="save_apply" value="Avançar" onclick="saveApply()">
+        </div>
+      <input type="hidden"  name="CSRFToken"></form>
+    </div>
+    <!-- form -->
+  </div>
+  <!-- area1 -->
+  <img id="logo_tim_peq" src="img/160914_PF01_LOGO_TIM.png" > </div>
+</body>
+</html>
+<!-- <m> -->

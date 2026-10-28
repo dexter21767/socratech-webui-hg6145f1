@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/fast_settings_wan_ECU_CNT.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("initSet");
+</script>
+<body class='main_config_body'>
+<div class="main_header">
+	<p class="main_header_hint"><font i18n="wan_title_tip">wan_title_tip</font></p>
+</div>
+<br/>
+<form id="wan_form" method="post">
+	<div class="main_content">
+		<div class="table_bg">
+			<div class="table_title"><font i18n="wan_title">wan_title</font></div>
+			<div class="main_item">
+				<div class="main_item_name" style="width: 20%;">Username</div>
+				<div class="main_item_content" style="width: calc(80% - 3px);">
+					<input type="text" class="input_text" style="width: 130px;cursor:text;background:white" autocomplete="off" name="Username_text" id="Username_text"/>
+					<span class="redcolorfont">*</span>
+				</div>
+			</div>
+
+			<div class="main_item">
+				<div class="main_item_name" style="width: 20%;"><font i18n="wan_password">wan_password</font></div>
+				<div class="main_item_content" style="width: calc(80% - 3px);">
+					<input type="text" class="input_text fh-text-security" style="width: 130px;cursor:text;" autocomplete="off" readonly onfocus="removeAttribute('readonly')" name="pwd_text" id="pwd_text"/>
+					<input type="button" id="change_eye_btn" class="input_button" i18n="change_eye" i18n-set="value" onclick="change_eye()"/>&nbsp; &nbsp;
+					<span class="redcolorfont">*</span>
+				</div>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_submit" style="width: 20%;"></div>
+			<div class="main_submit" style="width: 80%;">
+				<input type="button" id="loid_save" class="input_button" i18n="wan_apply" i18n-set="value" onclick="wanApply()"/>
+			</div>
+		</div>
+		<br/>
+	</div>
+</form>
+</body>
+</html>

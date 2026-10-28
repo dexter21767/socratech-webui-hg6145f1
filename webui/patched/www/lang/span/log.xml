@@ -1,0 +1,29 @@
+{
+  "log_prompt":"Puede ver el registro en esta página.",
+  "fault_info_prompt":"On this page,you can collect and view fault information.",
+  "start_btn_text": "Start",
+  "syslog_prompt":"You can set and view system log on this page.",
+  "log_download":"Download",
+  "log_listHead":"Información de registro",
+  "log_downloaderroralert":"Download Error!",
+
+  "log_apply":"Aplicar",
+  "log_cancel":"Cancelar",
+  
+  "logcfg_prompt":"On this page, you can config web log enable/disable and log level.",
+  "log_title":"LOG",
+  "logEnableTitle":"Enable",
+  "logDisableTitle":"Disable",
+  "logLevelTitle":"Log Level",
+  
+  "log_debugPrompt":"You can view debug log on this page.",
+  "log_debugListHead":"Debug Log Information",
+  "log_enalbe": "Habilitar registro",
+  "log_level": "Nivel de registro",
+  "show_level": "Mostrar nivel",
+  "clear_log": "Borrar archivo de registro",
+  "download_log": "Descargar archivo de registro",
+  "refresh_log": "Actualizar",
+  "unknown_error_alert":"Error desconocido"
+}
+

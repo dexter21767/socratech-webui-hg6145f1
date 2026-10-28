@@ -1,0 +1,31 @@
+{
+  "muti_natPrompt":"您可以在本页面进行NAT功能设置。",
+  "Muti_natListHead":"NAT规则列表",
+  "mn_descrip_title":"描述",
+  "mn_Type_title":"规则类型",
+  "mn_locips_title":"本地起始地址",
+  "mn_locipe_title":"本地结束地址",
+  "mn_pubips_title":"公共起始地址",
+  "mn_pubipe_title":"公共结束地址",
+
+  "pf_add":"新增",
+  "pf_delete":"删除",
+  "pf_deleteAll":"删除所有",
+
+  "pf_apply":"应用",
+  "pf_cancel2":"取消",
+
+  "pf_mostRulesAlert":"你最多可以配置8条规则。",
+  "pf_noRuleAlert":"当前没有规则，不能删除。",
+  "pf_noChooseAlert":"请先选定一个规则再执行删除。",
+  "pf_deleteRuleConfirm":"您确定要删除选中的规则吗?",
+
+  "pf_ipIllegalAlert":"请输入有效的IP。",
+  "pf_endPortTooSmallAlert":"起始地址不能大于结束地址。",
+  "IP_longAlert":"请确认起始地址到结束地址的范围在256个以内。",
+  "Please creat INTERNET WAN first !":"请先建立INTERNET相关的WAN!",
+  
+  "description_tips":"( 0-31个字符, 包括数字、字母、'-' 和 '_')",
+  "descripIllegalAlert":"请输入有效的描述字符!"
+
+}  

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript" type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+				document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/snpwdauth_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("sncfg");
+	</script>
+	<body class='main_config_body' style="padding-top: 40px;">
+		<form id="loid_form" method="post">
+			<div class="main_content">
+				<div class="table_bg">
+					<div class="main_item">
+						<div class="main_item_name">
+							<span class="redcolorfont">*</span>
+							LOID
+						</div>
+						<div class="main_item_content">
+							<div class="tip_text" id="tip_LoidId_text" i18n="sncfg_loidTips"></div>
+							<input type="text" class="input_text" autocomplete="off" disabled maxlength="24" name="LoidId_text" id="LoidId_text"/>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">
+							<span class="redcolorfont">*</span>
+							<font i18n="sncfg_lopwd">sncfg_lopwd</font>
+						</div>
+						<div class="main_item_content">
+							<div class="tip_text" id="tip_Loidpwd_text" i18n="sncfg_lopwdTips"></div>
+							<input type="text" class="input_text fh-text-security" autocomplete="off" readonly onfocus="removeAttribute('readonly')" maxlength="12" name="Loidpwd_text" id="Loidpwd_text" oncopy="return false" />
+							<!-- <input type="button" class="input_button" i18n="change_eye" i18n-set="value" onclick="change_eye()"/>&nbsp; &nbsp;	 -->
+						</div>
+					</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_item_content" >
+						<input type="button" id="loid_save" class="input_button" i18n="sncfg_apply" i18n-set="value" onclick="LOIDsaveApply()"/>
+					</div>
+				</div>
+				<div id="line">
+					<img src="../image/new_ui/line.png"
+						style="width: 100%;height: 1px;margin-top: 30px;margin-bottom: 30px;">
+				</div>
+				<div class="table_bg">
+					<div class="main_item">
+						<div class="main_item_name" >
+							<span class="redcolorfont">*</span>
+							<font i18n="sncfg_pwd">sncfg_pwd</font>
+						</div>
+						<div class="main_item_content" >
+							<div class="tip_text" id="tip_Pwd_password" i18n="sncfg_pwdTips" style="width: 400px;"></div>
+							<input type="text" class="input_text fh-text-security" style="cursor:text;" autocomplete="off" readonly onfocus="removeAttribute('readonly')" maxlength="10" name="Pwd_password" id="Pwd_password" oncopy="return false"/>
+							<!-- <input type="button" id="button_change_eye" class="input_button" i18n="change_eye" i18n-set="value" onclick="change_passKey_eye()"/>&nbsp; &nbsp; -->
+						</div>
+					</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_item_content">
+						<input type="button" id="sncfg_apply" class="input_button" i18n="sncfg_apply" i18n-set="value" onclick="PWDsaveApply()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

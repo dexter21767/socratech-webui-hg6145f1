@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/advance_power_config_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("adv_power_config");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="adv_power_config_prompt">adv_power_config_prompt</font></p>
+		</div>
+        <br/>
+        <form method=post name="fw_set_ddos_attack" method="post">
+			<div class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+				<div class="table_title">
+					<div colspan="2"><font i18n="energy_saving_title">energy_saving_title</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="enable_energy_saving">enable_energy_saving</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_energy" name="enable_energy">
+					</div>
+				</div>
+				<div class="table_title">
+					<div colspan="2"><font i18n="enable_service_title">enable_service_title</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="service">service</font></div>
+					<div class="main_item_content">Enable</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="usb">usb</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_usb" name="enable_usb">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="lan">lan</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_lan" name="enable_lan">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="wlan">wlan</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_wlan" name="enable_wlan">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voice">voice</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_voice" name="enable_voice">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="remote_management">remote_management</font></div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_remote" name="enable_remote">
+					</div>
+				</div>
+				<div class="main_button">	
+						<div class="main_submit" style="width: 25%;"></div>				
+						<div class="main_submit" style="width: 75%;">
+							<input type="button" id="adv_apply" class="input_button" i18n="adv_apply" i18n-set="value" onclick="save_apply()"/>&nbsp; &nbsp;
+							<input type="button" id="adv_cancel" class="input_button" i18n="adv_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+				</div>
+				<br/>	
+				<br/>	
+			</div>	
+        </form>
+	</body>
+</html>

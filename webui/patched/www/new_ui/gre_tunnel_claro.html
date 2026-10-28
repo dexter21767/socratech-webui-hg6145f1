@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/gre_tunnel_claro.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+		
+	</head>
+	<script type="text/javascript">
+		setDomain("application");
+	</script>
+	<body class='main_config_body'>
+		<form id="gre_tunnel_form">
+			<div class="main_content">
+				<div class="table_title" id="div_gre_title">
+                    <td colspan="2" id="gre_title"><font i18n="gre_title">gre_title</font></div></td>
+                </div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="gre_enable_title">gre_enable_title</font></div>
+					<div class="main_item_content">
+						<div class="input_radio">
+							<input type="radio" id="gre_enable" name="gre_enable" value="1"/><font i18n="gre_enable">gre_enable</font>&nbsp;&nbsp;
+							<input type="radio" id="gre_disable" name="gre_enable" value="0"/><font i18n="gre_disable">gre_disable</font>
+						</div>
+					</div>
+				</div>       
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="gre_type_title">gre_type_title</font></div>
+					<div class="main_item_content">					
+						<select id="gre_type" name="gre_type" size="1" class="select">
+				        	<option value="0" id="type_ipv4" selected="selected">IPv4 </option>
+				        	<option value="1" id="type_ipv6">IPv6</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="gre_wanConnection_title">gre_wanConnection_title</font></div>
+					<div class="main_item_content">					
+						<select id="gre_tunnel_wanurl_select" name="gre_tunnel_wanurl_select" size="1" class="select"></select>
+					</div>
+				</div>
+				<div class="main_item" id="div_gre_remote_url_v4">
+					<div class="main_item_name"><strong style="color:#FF0033">*</strong><font i18n="gre_remoteUrl_title">gre_remoteUrl_title</font></div>
+					<div class="main_item_content">
+						<input name="gre_remote_url" id="gre_remote_url" class="input_text" size="15" type="text" autocomplete="off" value="">
+					</div>
+				</div>
+				<div class="main_item" id="div_gre_remote_url_v6" style="display:none">
+					<div class="main_item_name"><strong style="color:#FF0033">*</strong><font i18n="gre_remoteUrl_title">gre_remoteUrl_title</font></div>
+					<div class="main_item_content">
+						<input name="gre_remote_url_v6" id="gre_remote_url_v6" class="input_text" size="15" type="text" autocomplete="off" value="">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><strong style="color:#FF0033">*</strong><font i18n="gre_vlanID_title">gre_vlanID_title</font></div>
+					<div class="main_item_content">
+						<div class="tip_text" id="tip_gre_vlanID">
+							<font>1- 4094</font>
+						</div>
+						<input name="gre_vlanID" id="gre_vlanID" size="15" class="input_text" maxlength="4" type="text" autocomplete="off" value="">
+					</div>
+				</div>				
+				<div class="main_submit_item">		
+					<div class="main_item_content">
+						<input type="button" id="app_apply" class="input_button" i18n="app_apply" i18n-set="value" onclick="save_apply()"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

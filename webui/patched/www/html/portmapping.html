@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/portmapping.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">虚拟主机配置</p>
+			<p class="main_header_hint">虚拟主机使用LAN侧的设备作为服务器，从外网可以直接访问服务器</p>
+		</div>
+		<form id="portmapping_list_form">
+			<br/>
+			<table width="100%" style="margin:auto" cellspacing="0" cellpadding="3px" border="1px">
+				<tr>
+					<td width="20%">网络连接</td>
+					<td width="10%">外部端口</td>
+					<td width="15%">协议</td>
+					<td width="15%">内部IP</td>
+					<td width="10%">内部端口</td>
+					<td width="10%">状态</td>
+					<td width="20%">操作</td>
+				</tr>
+				<tbody id="portmapping_list">
+				</tbody>
+			</table>
+		</form>
+		<form id="portmapping_form">
+			<div class="div_between_form"></div>
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">网络连接</div>
+					<div class="main_item_content">
+						<select id="WANselect_select">
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">外部端口</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" name="ExternalPort_text" id="ExternalPort_text">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">协议</div>
+					<div class="main_item_content">
+						<select id='PortMappingProtocol_select'>
+							<option value='TCP'>TCP</option>
+							<option value='UDP'>UDP</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">内部IP</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" name="InternalClient_text" id="InternalClient_text">
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">内部端口</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" name="InternalPort_text" id="InternalPort_text">
+					</div>
+				</div>
+			</div>
+			<div class="main_save_top_0">
+				<input type="button" id="do_add_btn" class="input_button" value="添加" onclick="doAdd()"/>
+			</div>
+			<br/>
+		</form>
+	</body>
+</html>

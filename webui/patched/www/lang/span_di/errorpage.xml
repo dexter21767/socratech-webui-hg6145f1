@@ -1,0 +1,51 @@
+{
+  "accessHead":"Aviso de dispositivo de acceso",
+  "errorCode":"Código de error ",
+  "backPage":"Atrás",
+  "Next":"Siguiente",
+  
+  "timeout":"Se agotó el tiempo de su sesión, actualice la página e inténtelo de nuevo.",
+
+  "0000":"¡Acceso exitoso!",
+  "9999":"¡Error de acceso! ¡Por favor, inténtelo de nuevo!",
+  
+  "0001":"¡Error de acceso! Error interno del sistema. Póngase en contacto con el operador.",
+  "0002":"¡Error desconocido!",
+  "0003":"¡El parámetro ingresado es ilegal!",
+  
+  "1001":"No se pudo establecer la conexión. Compruebe que la conexión y los parámetros de conexión sean correctos.",
+  "1002":"¡Error al crear el archivo!",
+  "1003":"¡El archivo no existe!",
+  "1004":"¡No se pudo encender/apagar el servidor!",
+  "1005":"¡No se pudieron configurar los parámetros!",
+  "1006":"¡No se pudieron leer los parámetros!",
+
+  "2001":"¡No se pudo obtener el nombre de usuario de la cookie!",
+  "2002":"¡Error de la contraseña anterior! Introduzca la contraseña correcta de la cuenta actual e inténtelo de nuevo.",
+  "2003":"¡Error de contraseña!",
+  "2004":"¡Error de nombre de usuario!",
+  "2005":"¡El nombre de usuario existe!",
+  "2006":"¡Error de modificación del nombre del SSID!",
+  "2007":"¡Error de modificación de contraseña del SSID!",
+  "2008":"¡La contraseña de WAN no debe ser la misma que la contraseña de LAN!",
+  "2009":"Esta es la primera vez que crea la contraseña de WAN, ¡simplemente ingrese una nueva contraseña!",
+ 
+  "3001":"¡No se pudo registrar en la OLT!",
+  "3002":"¡Se ha enviado la información de registro!",
+
+  "4001":"La información WAN ha cambiado, ¡actualice!",
+  "4002":"Error interno, ¡compruébelo cpe.log!",
+  "4003":"Agregue la ruta de Internet PPPoE modo WAN.",
+  "4004":"Por favor, introduzca la contraseña PPPoE.",
+
+  "5001":"¡El puerto está siendo utilizado!",
+  
+  "6001":"¡Por favor, compruebe el protocolo VoIP!",
+  
+  "9001":"La dirección MAC ha sido enlazada",
+  "9002":"La dirección IP ha sido enlazada.",
+  "9003":"La dirección IP ha sido distribuida. ",
+  "9005":"La IP de LAN y la IP de enlace DHCP tienen diferentes segementos.",
+  
+  "9004":"¡Por favor, introduzca una dirección IPv6 válida, como 2001::1, etc!"
+}

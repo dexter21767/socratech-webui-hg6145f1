@@ -1,0 +1,9 @@
+{
+	"dlna_prompt": "En esta página, puede habilitar o deshabilitar el DLNA",
+  	"dlna_head":"DLNA",
+  	"dlna_enable":"Habilitar",
+  	"dlna_disable":"Deshabilitar",
+  	"dlna_apply":"Aplicar",
+  	"dlna_cancel":"Cancelar"
+}
+

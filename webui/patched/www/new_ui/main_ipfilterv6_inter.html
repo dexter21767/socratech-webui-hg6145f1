@@ -1,0 +1,189 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/main_ipfilterv6_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+
+</head>
+<script type="text/javascript">
+	setDomain("firewall");
+</script>
+
+<body>
+	<div class='main_config_body'>
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="firewall_ipfilterup_title">firewall_ipfilterup_title</font>
+			</div>
+			<div class="main_item_content">
+				<div class="input_radio">
+					<input type="radio" id="ipv6_filterup_mode_white" name="ipv6_filterup_mode" value="white" checked />
+					<font i18n="firewall_white">firewall_white</font>&nbsp;&nbsp;
+					<input type="radio" id="ipv6_filterup_mode_black" name="ipv6_filterup_mode" value="black" />
+					<font i18n="firewall_black">firewall_black</font>
+				</div>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="firewall_ipfilterdown_title">firewall_ipfilterdown_title</font>
+			</div>
+			<div class="main_item_content">
+				<div class="input_radio">
+					<input type="radio" id="ipv6_filterdown_mode_white" name="ipv6_filterdown_mode" value="white"
+						checked />
+					<font i18n="firewall_white">firewall_white</font>&nbsp;&nbsp;
+					<input type="radio" id="ipv6_filterdown_mode_black" name="ipv6_filterdown_mode" value="black" />
+					<font i18n="firewall_black">firewall_black</font>
+				</div>
+			</div>
+		</div>
+		<div class="main_submit_item">
+			<div class="main_item_content">
+				<input type="button" id="firewall_mode_apply" class="input_button" i18n="firewall_apply"
+					i18n-set="value" onclick="EnableApply()" />
+			</div>
+		</div>
+	</div>
+	</br>
+	</br>
+	<div class='main_config_body' style="min-height: 320px;">
+		<div style="float:left">
+			<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" class="add_button"
+				onClick="addfilter()">
+			<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="delete_button"
+				onClick="click_remove()">
+
+		</div>
+		<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+			<tr class="table_head_title">
+				<td width="5%" align='center'>
+					<input style="margin-top: 3px" type="checkbox" onclick="selectAll()" id="checkAll">
+				</td>
+				<td width="2%" align='center'>
+					<font i18n="fw_filterID">fw_filterID</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="fw_directionTitle">fw_directionTitle</font>
+				</td>
+				<td width="20%" align='center'>
+					<font i18n="fw_srcIPv6Title">fw_srcIPv6Title</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="fw_srcPortTitle">fw_srcPortTitle</font>
+				</td>
+				<td width="20%" align='center'>
+					<font i18n="fw_dstIPv6Title">fw_dstIPv6Title</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="fw_dstPortTitle">fw_dstPortTitle</font>
+				</td>
+				<td width="10%" align='center'>
+					<font i18n="fw_protocolTitle">fw_protocolTitle</font>
+				</td>
+				<td width="8%" align='center'>
+					<font i18n="operate"></font>
+				</td>
+			</tr>
+			<tbody id='ipfilter_List' class="table_rule" style="font-size: 12px">
+			</tbody>
+		</table>
+		<div id="image">
+			<img src="../image/new_ui/no_data.png" style="width: 120px;">
+			<span i18n="No Data">No Data</span>
+		</div>
+		</br>
+		<form id="ip_filter_list_form">
+			<div class="config_content" id="fw_config_form" style="display:none">
+
+				<div class="main_item">
+					<div class="main_item_title">
+						<font id="title"></font>
+						<img src="../image/new_ui/cancel.png" class="cancel_icon">
+					</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_directionTitle">fw_directionTitle</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<select id="ipfilter_direction" class="select">
+						<option value="out">Lan->Wan</option>
+						<option value="in">Wan->Lan</option>
+					</select>
+				</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_srcIPv6Title">fw_srcIPTitle</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="SourceIPStart" name="SourceIPStart"/> 
+					<input type="text" class="input_text" autocomplete="off" id="SourceIPEnd" name="SourceIPEnd" style="display: none"/> 
+				</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_srcPortTitle">fw_srcPortTitle</font>
+				</div>
+				<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_SourcePortStart">(1-65535)</div>
+						<input type="text" class="input_text" autocomplete="off" id="SourcePortStart"
+							name="SourcePortStart" style="width:135px" /> --
+					<input type="text" class="input_text" autocomplete="off" id="SourcePortEnd" name="SourcePortEnd"
+							style="width:135px" /> 
+				</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_dstIPv6Title">fw_dstIPv6Title</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<input type="text" class="input_text" autocomplete="off" id="DestIPStart" name="DestIPStart" />
+					<input type="text" class="input_text" autocomplete="off" id="DestIPEnd" name="DestIPEnd" style="display: none"/>
+				</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_dstPortTitle">fw_dstPortTitle</font>
+				</div>
+				<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_DestPortStart">(1-65535)</div>
+					<input type="text" class="input_text" autocomplete="off" id="DestPortStart" name="DestPortStart"
+						style="width:135px" /> --
+					<input type="text" class="input_text" autocomplete="off" id="DestPortEnd" name="DestPortEnd"
+							style="width:135px" />
+					</div>
+				</div>
+				<div class="main_item_cfg">
+				<div class="main_item_name_cfg">
+					<font i18n="fw_protocolTitle">fw_protocolTitle</font>
+				</div>
+				<div class="main_item_content_cfg">
+					<select id="Protocol" class="select">
+						<option value="TCP/UDP">TCP/UDP</option>
+						<option value="TCP">TCP</option>
+						<option value="UDP">UDP</option>
+						<option value="ICMP">ICMP</option>
+						<option value="ALL" i18n="ALL">ALL</option>
+					</select>
+				</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_submit" style="float: right;">
+						<input type="button" id="firewall_apply_btn" class="input_button_cfg" i18n="firewall_apply"
+							i18n-set="value" onclick="doSave()" />
+					</div>
+				</div>
+			</div>
+		</form>
+</body>
+<div id='loading_div' style='display:none'>
+</div>
+</html>

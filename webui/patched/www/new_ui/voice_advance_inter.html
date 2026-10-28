@@ -1,0 +1,1017 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+    <script language="javascript " type="text/javascript">
+        document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+        document.write('<script  src="../js/voice_advance_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+    </script>
+</head>
+<script type="text/javascript">
+    setDomain("voip");
+</script>
+
+<body class='main_config_body' style="padding-top: 40px;">
+    <fh-fo-rm id="voice_advance_form">
+        <div class="table_bg">
+            <div class="main_content table_bg" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font i18n="RFC2833_title">RFC2833_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_TelephoneEventPayloadType">(0,96～127)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="TelephoneEventPayloadType"
+                            name="TelephoneEventPayloadType" />
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font i18n="RFC2198_title">RFC2198_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_RTPRedundancyPayload">(0,96～127)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="RTPRedundancyPayload"
+                            name="RTPRedundancyPayload" />
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font i18n="alive_time_title">alive_time_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_HeartbeatCount">(1-120)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="HeartbeatCount"
+                            name="HeartbeatCount" />
+                    </div>
+                </div>
+                <div class="main_item" id="HeartbeatCycle_div">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font i18n="alive_title">alive_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_HeartbeatCycle">(1-43200)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="HeartbeatCycle"
+                            name="HeartbeatCycle" />
+                    </div>
+                </div>
+                <div class="main_item" id="jitter_buffer_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="jitter_buffer_title">jitter_buffer_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="jitter_buffer" name="jitter_buffer" class="select">
+                            <option value="1" selected=selected>Fixup</option>
+                            <option value="0">Auto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="fixup_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="fixup_title">fixup_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="fixup" name="fixup" />
+                        <font style="color: gray">
+                            (20～200)ms</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="min_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="min_title">min_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="min_buffer" name="min_buffer" />
+                        <font style="color: gray">
+                            (20～200)ms</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="max_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="max_title">max_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="max_buffer" name="max_buffer" />
+                        <font style="color: gray">
+                            (20～200)ms</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    <div id="voicemax-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="fax_div">
+                    <div class="main_item_name">
+                        <font i18n="fox_title">fox_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="Faxmode" name="Faxmode" class="select">
+                            <option value="0" selected=selected i18n="fax_pass_through"></option>
+                            <option value="1">T38</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <font i18n="fanji_title">fanji_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="PolarityReversalMode" name="PolarityReversalMode" class="select">
+                            <option value="1" selected=selected i18n="polarity_reversal_enable"></option>
+                            <option value="0" i18n="polarity_reversal_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <font i18n="tran_title">tran_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="transferSharp" name="transferSharp" class="select">
+                            <option value="1" selected=selected i18n="transfer_disable"></option>
+                            <option value="0" i18n="transfer_enable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <!--  <div class="main_item_name"><font i18n="dtmf_title">dtmf_title</font></div>
+                    <div class="main_item_content">
+                        <select id="DigitMapMode_select" name="DigitMapMode_select" class="select">
+                            <option value="InBand" selected=selected i18n="dtmf_pass_through"></option>
+                            <option value="RFC2833">RFC2833</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item"> -->
+                    <div class="main_item_name">
+                        <font i18n="num_disptype_title">num_disptype_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CIDHeadfield" name="CIDHeadfield" class="select">
+                            <option value="1" selected=selected i18n="cid_domin"></option>
+                            <option value="0" i18n="cid_field"></option>
+                        </select>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="HeartbeatSwitch_div">
+                    <div class="main_item_name">
+                        <font i18n="alivetype_title">alivetype_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="HeartbeatSwitch" name="HeartbeatSwitch" class="select">
+                            <option value="0" selected=selected i18n="heart_beat_disable"></option>
+                            <option value="1" i18n="heart_beat_active_enable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="option120_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="option_120_title">option_120_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="option_120" name="option_120" class="select">
+                            <option value="0" selected=selected i18n="option_120_disable"></option>
+                            <option value="1" i18n="option_120enable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="UserAgentPort_div">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font i18n="localPort_title">localPort_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_UserAgentPort">(1024～65535)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="UserAgentPort"
+                            name="UserAgentPort" />
+                    </div>
+                </div>
+				<div class="main_item" id="div_conference_mode" style="display: none;">
+                    <div class="main_item_name"><font i18n="conference_mode_title">conference_mode_title</font></div>
+                    <div class="main_item_content">
+                        <select id="conference_mode" name="conference_mode" class="select">
+							<option value="0" selected=selected i18n="local_mode">Local</option>
+                            <option value="1" i18n="serve_mode">Serve</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="voice_ecu_cnt" style="display: none;">
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="subscription_title">subscription_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="subscription" disabled="disabled" name="subscription" class="select">
+                                <option value="0" selected=selected>Disable</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="faxSwitch_title">faxSwitch_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="faxSwitch_mode" name="faxSwitch_mode" class="select">
+                                <option value="1">Negotiation</option>
+                                <option value="0">Self-Switch</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="multihoming_mode_title">multihoming_mode_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="multihoming_mode" name="multihoming_mode " class="select">
+                                <option value="2">Dual homing(automatic switchback)</option>
+                                <option value="0">Disable</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="voice_server_type_title">voice_server_type_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="voice_server_type" name="voice_server_type" class="select">
+                                <option value="0">NGN SIP Server</option>
+                                <option value="1">IMS SIP Server</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="option120_title">option120_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="option120" name="option120" class="select">
+                                <option value="Highest">Highest</option>
+                                <option value="Lowest">Lowest</option>
+                                <option value="Ignore">Ignore</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="user_mode_title">user_mode_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <select id="user_mode" name="user_mode" class="select">
+                                <option value="Disabled">Disabled</option>
+                                <option value="Parallel ringing">Parallel ringing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="offhook_title">offhook_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" autocomplete="off" id="offhook" name="offhook" />
+                            <font style="color: gray">
+                                (0～1000 ms)</font>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_item" id="call_id_mode_other">
+                    <div class="main_item_name">
+                        <font i18n="num_disp_title">num_disp_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallerIDEnableOther" name="CallerIDEnableOther" class="select">
+                            <option value="DTMF" selected=selected>DTMF</option>
+                            <option value="FSK">FSK</option>
+                            <option value="MDMF" style="display:none">MDMF</option>
+                            <option value="Disable" i18n="num_disp_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="subscribe_item">
+                    <div class="main_item_name">
+                        <font i18n="subscribe_title">subscribe_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="SubscribeEnable" name="SubscribeEnable" class="select">
+                            <option value="1" selected=selected i18n="subscribe_enable"></option>
+                            <option value="0" i18n="subscribe_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="ring_voltage_vpk_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="ring_voltage_vpk_title"></font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ring_voltage_vpk" name="ring_voltage_vpk" class="select">
+                        </select>
+                        <font style="color: gray">Vpk</font>
+                    </div>
+                </div>
+                <div class="main_item" id="loop_current_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="loop_current_title"></font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="loop_current" name="loop_current" class="select">
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                        </select>
+                        <font style="color: gray">mA</font>
+                    </div>
+                </div>
+                <div class="main_item" id="open_circuit_voltage_div" style="display: none;">
+                    <div class="main_item_name">
+                        <font i18n="open_circuit_voltage_title"></font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="open_circuit_voltage" name="open_circuit_voltage" class="select">
+                            <option value="48">48</option>
+                            <option value="52">52</option>
+                        </select>
+                        <font style="color: gray">V</font>
+                    </div>
+                </div>
+                <div class="main_item" id="EchoCancellationEnable_div">
+                    <div class="main_item_name">
+                        <font i18n="voipback_title">voipback_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="EchoCancellationEnable1" name="EchoCancellationEnable1" class="select">
+                            <option value="1" selected=selected i18n="voip_back_enable"></option>
+                            <option value="0" i18n="voip_back_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <font i18n="SilenceSuppression_title">SilenceSuppression_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="SilenceSuppression1" name="SilenceSuppression1" class="select">
+                            <option value="1" selected=selected i18n="silience_suppression_enable"></option>
+                            <option value="0" i18n="silience_suppression_disable"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="main_item" id="DigitMapMode_select_div">
+                    <div class="main_item_name">
+                        <font i18n="dtmf_title">dtmf_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="DigitMapMode_select1" name="DigitMapMode_select1" class="select">
+                            <option value="InBand" selected=selected i18n="dtmf_pass_through"></option>
+                            <option id="dtfm_info_RFC2833" value="RFC2833">RFC2833</option>
+                            <option id="dtfm_info" value="info" style="display: none;">Info</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <font i18n="callwait_title">callwait_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallWaitingEnable1" name="CallWaitingEnable1" class="select">
+                            <option value="1" selected=selected i18n="call_wait_enable"></option>
+                            <option value="0" i18n="call_wait_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item">
+                    <div class="main_item_name">
+                        <font i18n="3call_title">3call_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ThreeWayCallingEnable1" name="ThreeWayCallingEnable1" class="select">
+                            <option value="1" selected=selected i18n="3_call_enable"></option>
+                            <option value="0" i18n="3_call_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="call_id_mode">
+                    <div class="main_item_name">
+                        <font i18n="num_disp_title">num_disp_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallerIDEnable1" name="CallerIDEnable1" class="select">
+                            <option value="DTMF" selected=selected>DTMF</option>
+                            <option value="SDMF-FSK">SDMF-FSK</option>
+                            <option value="MDMF-FSK">MDMF-FSK</option>
+                            <option value="Disable" i18n="num_disp_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main_item" id="TransmitGain_div">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font id="set_gain" style="display: none;" i18n="set_gain_title">set_gain_title</font>
+                        <font id="set_gain_dsp" style="display: none;" i18n="dsp_set_gain_title">dsp_set_gain_title
+                        </font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_TransmitGain1">(-12~6)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="TransmitGain1" name="TransmitGain1" />
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="main_item" id="ReceiveGain_div">
+                    <div class="main_item_name">
+                        <span class="redcolorfont">*</span>
+                        <font id="rec_gain" style="display: none;" i18n="rec_gain_title">rec_gain_title</font>
+                        <font id="rec_gain_dsp" style="display: none;" i18n="dsp_rec_gain_title">dsp_rec_gain_title
+                        </font>
+                    </div>
+                    <div class="main_item_content">
+                        <div class="tip_text" id="tip_ReceiveGain1">(-12~6)</div>
+                        <input type="text" class="input_text" autocomplete="off" id="ReceiveGain1"
+                            name="ReceiveGain1" />
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div id="port_gain" style="display: none;">
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="port_txgain_title">port_txgain_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" disabled="disabled" autocomplete="off" id="port_tx"
+                                name="port_tx">
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item">
+                        <div class="main_item_name">
+                            <font i18n="port_rxgain_title">port_rxgain_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" disabled="disabled" autocomplete="off" id="port_rx"
+                                name="port_rx">
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+                <div class="main_item" id="message_waiting_div">
+                    <div class="main_item_name">
+                        <font i18n="message_waiting">message_waiting</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="checkbox" autocomplete="off" name="message_waiting1" id="message_waiting1" />
+                    </div>
+                </div>
+                <div class="main_item" id="comfort_noise">
+                    <div class="main_item_name">
+                        <font i18n="comfort_noise_title">comfort_noise_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ComfortNoiseEnable1" name="ComfortNoiseEnable1" class="select">
+                            <option value="1" selected=selected i18n="comfort_noise_enable"></option>
+                            <option value="0" i18n="comfort_noise_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div id="ringback_hotline_div">
+                    <div class="main_item" id="hotline_div">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_title">hotline_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="hotline_enable1" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="hotline_time_div">
+                        <div class="main_item_name">
+                            <font i18n="voiphotlinetime_title">hotline_time</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotelinetime_text1" name="Hotelinetime_text1" />
+                            <font style="color: gray">0~60(s)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="hotline_number_div">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_number_title">hotline_number</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotline_number_text1"
+                                name="Hotline_number_text1" />
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+
+                <div id="enable_callForwarding_div" style="display: none;">
+                    <div class="main_item" id="callForwarding_unconditional_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_unconditional_title">callForwarding_unconditional_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="callForwarding_unconditional1" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="callForwarding_unconditional_number_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_unconditional_number_title">
+                                callForwarding_unconditional_number_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" maxlength="32"
+                                id="callForwarding_unconditional_number1" name="callForwarding_unconditional_number1" />
+                            <font style="color: gray">(Unconditional number length should be 0 - 32.)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="callForwarding_busy_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_busy_title">callForwarding_busy_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="callForwarding_busy1" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="callForwarding_busy_number_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_busy_number_title">callForwarding_busy_number_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" maxlength="32" id="callForwarding_busy_number1"
+                                name="callForwarding_busy_number1" />
+                            <font style="color: gray">(Busy number Length should be 0 - 32.)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="callForwarding_noreply_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_noreply_title">callForwarding_noreply_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="callForwarding_noreply1" />&nbsp;
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="callForwarding_noreply_number_div">
+                        <div class="main_item_name">
+                            <font i18n="callForwarding_noreply_number_title">callForwarding_noreply_number_title</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" maxlength="32" id="callForwarding_noreply_number1"
+                                name="callForwarding_noreply_number1" />
+                            <font style="color: gray">(No Reply number Length should be 0 - 32.)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="voipback_title2">voipback_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="EchoCancellationEnable2" name="EchoCancellationEnable2" class="select">
+                            <option value="1" selected=selected i18n="voip_back_enable"></option>
+                            <option value="0" i18n="voip_back_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="SilenceSuppression2_title">SilenceSuppression2_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="SilenceSuppression2" name="SilenceSuppression2" class="select">
+                            <option value="1" selected=selected i18n="silience_suppression_enable"></option>
+                            <option value="0" i18n="silience_suppression_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="dtmf_title2">dtmf_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="DigitMapMode_select2" name="DigitMapMode_select2" class="select">
+                            <option value="InBand" selected=selected i18n="dtmf_pass_through"></option>
+                            <option value="RFC2833">RFC2833</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="callwait_title2">callwait_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallWaitingEnable2" name="CallWaitingEnable2" class="select">
+                            <option value="1" selected=selected i18n="call_wait_enable"></option>
+                            <option value="0" i18n="call_wait_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="3call_title2">3call_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ThreeWayCallingEnable2" name="ThreeWayCallingEnable2" class="select">
+                            <option value="1" selected=selected i18n="3_call_enable"></option>
+                            <option value="0" i18n="3_call_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item" id="call_id_mode2">
+                    <div class="main_item_name">
+                        <font i18n="num_disp_title2">num_disp_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallerIDEnable2" name="CallerIDEnable2" class="select">
+                            <option value="DTMF" selected=selected>DTMF</option>
+                            <option value="SDMF-FSK">SDMF-FSK</option>
+                            <option value="MDMF-FSK">MDMF-FSK</option>
+                            <option value="Disable" i18n="num_disp_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="set_gain_title2">set_gain_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="TransmitGain2"
+                            name="TransmitGain2" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_2 main_item">
+                    <div class="main_item_name">
+                        <font i18n="rec_gain_title2">rec_gain_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="ReceiveGain2"
+                            name="ReceiveGain2" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="main_content-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_2 main_item" id="message_waiting_div_2">
+                    <div class="main_item_name">
+                        <font i18n="message_waiting2">message_waiting2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="checkbox" class="input_text" autocomplete="off" name="message_waiting2"
+                            id="message_waiting2" />
+                    </div>
+                </div>
+                <div class="port_2 main_item" id="comfort_noise2">
+                    <div class="main_item_name">
+                        <font i18n="comfort_noise_title2">comfort_noise_title2</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ComfortNoiseEnable2" name="ComfortNoiseEnable2" class="select">
+                            <option value="1" selected=selected i18n="comfort_noise_enable"></option>
+                            <option value="0" i18n="comfort_noise_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_2" id="ringback_hotline_div_2">
+                    <div class="main_item" id="hotline_div2">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_title2">hotline_title2</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="hotline_enable2" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="hotline_time_div2">
+                        <div class="main_item_name">
+                            <font i18n="voiphotlinetime_title2">hotline_time2</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotelinetime_text2" name="Hotelinetime_text2" />
+                            <font style="color: gray">0~60(s)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="hotline_number_div2">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_number_title2">hotline_number2</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotline_number_text2"
+                                name="Hotline_number_text2" />
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="voipback_title3">voipback_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="EchoCancellationEnable3" name="EchoCancellationEnable3" class="select">
+                            <option value="1" selected=selected i18n="voip_back_enable"></option>
+                            <option value="0" i18n="voip_back_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="SilenceSuppression3_title">SilenceSuppression3_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="SilenceSuppression3" name="SilenceSuppression3" class="select">
+                            <option value="1" selected=selected i18n="silience_suppression_enable"></option>
+                            <option value="0" i18n="silience_suppression_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="dtmf_title3">dtmf_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="DigitMapMode_select3" name="DigitMapMode_select3" class="select">
+                            <option value="InBand" selected=selected i18n="dtmf_pass_through"></option>
+                            <option value="RFC2833">RFC2833</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="callwait_title3">callwait_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallWaitingEnable3" name="CallWaitingEnable3" class="select">
+                            <option value="1" selected=selected i18n="call_wait_enable"></option>
+                            <option value="0" i18n="call_wait_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="3call_title3">3call_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ThreeWayCallingEnable3" name="ThreeWayCallingEnable3" class="select">
+                            <option value="1" selected=selected i18n="3_call_enable"></option>
+                            <option value="0" i18n="3_call_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item" id="call_id_mode3">
+                    <div class="main_item_name">
+                        <font i18n="num_disp_title3">num_disp_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallerIDEnable3" name="CallerIDEnable3" class="select">
+                            <option value="DTMF" selected=selected>DTMF</option>
+                            <option value="SDMF-FSK">SDMF-FSK</option>
+                            <option value="MDMF-FSK">MDMF-FSK</option>
+                            <option value="Disable" i18n="num_disp_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="set_gain_title3">set_gain_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="TransmitGain3"
+                            name="TransmitGain3" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_3 main_item">
+                    <div class="main_item_name">
+                        <font i18n="rec_gain_title3">rec_gain_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="ReceiveGain3"
+                            name="ReceiveGain3" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_3 main_item" id="message_waiting_div_3">
+                    <div class="main_item_name">
+                        <font i18n="message_waiting3">message_waiting3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="checkbox" class="input_text" autocomplete="off" name="message_waiting3"
+                            id="message_waiting3" />
+                    </div>
+                </div>
+                <div class="port_3 main_item" id="comfort_noise3">
+                    <div class="main_item_name">
+                        <font i18n="comfort_noise_title3">comfort_noise_title3</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ComfortNoiseEnable3" name="ComfortNoiseEnable3" class="select">
+                            <option value="1" selected=selected i18n="comfort_noise_enable"></option>
+                            <option value="0" i18n="comfort_noise_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_3" id="ringback_hotline_div_3">
+                    <div class="main_item" id="hotline_div3">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_title3">hotline_title3</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="hotline_enable3" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="hotline_time_div3">
+                        <div class="main_item_name">
+                            <font i18n="voiphotlinetime_title3">hotline_time3</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotelinetime_text3" name="Hotelinetime_text3" />
+                            <font style="color: gray">0~60(s)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="hotline_number_div3">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_number_title3">hotline_number3</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotline_number_text3"
+                                name="Hotline_number_text3" />
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="voipback_title4">voipback_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="EchoCancellationEnable4" name="EchoCancellationEnable4" class="select">
+                            <option value="1" selected=selected i18n="voip_back_enable"></option>
+                            <option value="0" i18n="voip_back_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="SilenceSuppression4_title">SilenceSuppression4_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="SilenceSuppression4" name="SilenceSuppression4" class="select">
+                            <option value="1" selected=selected i18n="silience_suppression_enable"></option>
+                            <option value="0" i18n="silience_suppression_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="dtmf_title4">dtmf_title</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="DigitMapMode_select4" name="DigitMapMode_select4" class="select">
+                            <option value="InBand" selected=selected i18n="dtmf_pass_through"></option>
+                            <option value="RFC2833">RFC2833</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="callwait_title4">callwait_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallWaitingEnable4" name="CallWaitingEnable4" class="select">
+                            <option value="1" selected=selected i18n="call_wait_enable"></option>
+                            <option value="0" i18n="call_wait_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="3call_title4">3call_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ThreeWayCallingEnable4" name="ThreeWayCallingEnable4" class="select">
+                            <option value="1" selected=selected i18n="3_call_enable"></option>
+                            <option value="0" i18n="3_call_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item" id="call_id_mode4">
+                    <div class="main_item_name">
+                        <font i18n="num_disp_title4">num_disp_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="CallerIDEnable4" name="CallerIDEnable4" class="select">
+                            <option value="DTMF" selected=selected>DTMF</option>
+                            <option value="SDMF-FSK">SDMF-FSK</option>
+                            <option value="MDMF-FSK">MDMF-FSK</option>
+                            <option value="Disable" i18n="num_disp_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="set_gain_title4">set_gain_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="TransmitGain4"
+                            name="TransmitGain4" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_4 main_item">
+                    <div class="main_item_name">
+                        <font i18n="rec_gain_title4">rec_gain_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="text" class="input_text" autocomplete="off" id="ReceiveGain4"
+                            name="ReceiveGain4" />
+                        <span class="redcolorfont">*</span>
+                        <font style="color: gray">
+                            (-12~6)</font>
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_4 main_item" id="message_waiting_div_4">
+                    <div class="main_item_name">
+                        <font i18n="message_waiting4">message_waiting4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <input type="checkbox" class="input_text" autocomplete="off" name="message_waiting4"
+                            id="message_waiting4" />
+                    </div>
+                    <div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+                <div class="port_4 main_item" id="comfort_noise4">
+                    <div class="main_item_name">
+                        <font i18n="comfort_noise_title4">comfort_noise_title4</font>
+                    </div>
+                    <div class="main_item_content">
+                        <select id="ComfortNoiseEnable4" name="ComfortNoiseEnable4" class="select">
+                            <option value="1" selected=selected i18n="comfort_noise_enable"></option>
+                            <option value="0" i18n="comfort_noise_disable"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="port_4" id="ringback_hotline_div_4">
+                    <div class="main_item" id="hotline_div4">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_title4">hotline_title4</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="checkbox" id="hotline_enable4" />&nbsp;
+                        </div>
+                    </div>
+                    <div class="main_item" id="hotline_time_div4">
+                        <div class="main_item_name">
+                            <font i18n="voiphotlinetime_title4">hotline_time4</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotelinetime_text4" name="Hotelinetime_text4" />
+                            <font style="color: gray">0~60(s)</font>
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                    <div class="main_item" id="hotline_number_div4">
+                        <div class="main_item_name">
+                            <font i18n="voiphotline_number_title4">hotline_number4</font>
+                        </div>
+                        <div class="main_item_content">
+                            <input type="text" class="input_text" id="Hotline_number_text4"
+                                name="Hotline_number_text4" />
+                        </div>
+                        <div id="voice-error" class="main_item_error_hint_extra"></div>
+                    </div>
+                </div>
+                <div class="main_submit_item">
+					<div class="main_item_content" >
+						<input type="button" id="voip_apply" class="input_button" i18n="voip_apply" i18n-set="value" onclick="saveApply()"/>
+					</div>
+				</div>
+            </div>
+        </div>
+    </fh-fo-rm>
+</body>
+
+</html>

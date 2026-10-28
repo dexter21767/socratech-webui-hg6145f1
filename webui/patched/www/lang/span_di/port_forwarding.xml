@@ -1,0 +1,88 @@
+{
+  "rule_add":"Agregar",
+  "rule_delete":"Borrar",
+  "rule_deleteAll":"Eliminar todo",
+
+  "apply":"Aplicar",
+  "cancel":"Cancelar",
+  
+  "rule_most4RulesAlert":"¡Puede configurar hasta 4 reglas!",
+  "rule_most8RulesAlert":"¡Puede configurar hasta 8 reglas!",
+  "rule_most12RulesAlert":"¡Puede configurar hasta 12 reglas!",
+  "rule_most16RulesAlert":"¡Puede configurar hasta 16 reglas!",
+  "rule_most20RulesAlert":"¡Puede configurar hasta 20 reglas!",
+  "rule_most32RulesAlert":"¡Puede configurar hasta 32 reglas!",
+  "rule_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "rule_noChooseAlert":"¡Por favor, seleccione una regla antes de eliminarla!",
+  "rule_deleteRuleConfirm":"¿Está seguro de que desea eliminar la regla seleccionada?",
+  
+  "pf_PortforwardingPrompt":"En esta página, puede configurar el reenvío de puertos.",
+
+  "fw_filterListHead":"Lista de Forwarding Rules ",
+  "PFdescrip":"Descripción",
+  "The_private_Port":"Puerto Privado",
+  "The_public_Port":"Puerto Público",
+  "Protocol":"Protocolo",
+  "Enable":"Habilitar",
+
+  "pf_DescriptionTitle":"Descripción",
+  "pf_PriPortTitle":"Puerto Privado",
+  "pf_PubPortTitle":"Puerto Público",
+  "pf_protocolTitle":"Protocolo",
+  "pf_enabelTitle":"Habilitar",
+
+  "pf_add":"Agregar",
+  "pf_delete":"Borrar",
+  "pf_deleteAll":"Eliminar todo",
+
+  "pf_apply":"Aplicar",
+  "pf_cancel2":"Cancelar",
+
+  "pf_mostRulesAlert":"¡Puede configurar hasta 12 reglas!",
+  "pf_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "pf_noChooseAlert":"¡Por favor, seleccione una regla antes de eliminarla!",
+  "pf_deleteRuleConfirm":"¿Está seguro de que desea eliminar la regla seleccionada?",
+
+  "pf_ipIllegalAlert":"¡Por favor, introduzca una IP válida!",
+  "pf_maskIllegalAlert":"¡Por favor, introduzca una máscara de subred válida!",
+  "pf_PortNullAlert":"¡Por favor, introduzca un valor de puerto válido!",
+  "pf_endPortTooSmallAlert":"¡El puerto inicial no debe ser mayor que el puerto final!",
+  "pf_portIllegalAlert":"¡El rango de puertos válido es 1 - 65535!",
+  "pf_portRepeadAlert":"¡Varios puertos están duplicados! ¡Por favor, vuelva a entrar!",
+  "pf_wanIllegalAlert":"¡Por favor, seleccioneuna WAN válida!",
+
+  "portMappingPrompt":"En esta página, puede configurar la asignación de puertos.",
+  "pm_ruleListHead":"Lista de reglas de asignacion de puertos",
+  "pm_descripTitle":"Descripción",
+  "Protocol":"Protocolo",
+  "pm_pubIPTitle":"IP pública",
+  "pm_pubPortTitle":"Puerto Público",
+  "pm_priIPTitle":"IP privada",
+  "pm_priPortTitle":"Puerto Privado",
+
+  "description_tips":"( 0-31 caracteres, incluidos los alfanuméricos, '-' y '_')",
+  "descripIllegalAlert":"¡Por favor, introduzca una descripción válida!",
+  "pm_portStartIllegalAlert":"¡El rango válido del puerto inicial es 1 - 65535!",
+  "pm_portEndIllegalAlert":"¡El rango válido del puerto final es 0 - 65535!",
+  
+  "v4StaticRoutePrompt":"En esta página, puede configurar la ruta estática IPv4.",
+  "v4_sr_ruleListHead":"Lista de reglas de ruta estática IPV4",
+  
+  "wanDisableTitle":"La WAN actual no esta habilitada",
+  "ruleEnable":"Habilitada",
+  "ruleDisable":"Deshabilitada",
+  
+  "wannameTitle":"Nombre de WAN",
+  "ipTitle":"Dirección IP",
+  "gwTitle":"Puerta de enlace",
+  "maskTitle":"Máscara de subred",
+  "stateTitle":"Estado",
+  "Please creat INTERNET WAN first!":"¡Por favor, cree primero INTERNET WAN!",
+  
+  "bandwidthIllegalAlert":"¡Por favor, introduzca un ancho de banda válido!",
+
+  "wifi_acl_Prompt":"En esta página, puede configurar la habilitación/deshabilitación de ACL WiFi y las reglas habilitadas.",
+  "wifi_acl_enable_title":"Lista negra/Lista blanca",
+  "Disable":"Deshabilitar",
+  "wifi_acl_ruleListHead":"Listas de control de acceso"
+}

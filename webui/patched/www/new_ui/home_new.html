@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/home_new.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body style="margin: 0 0 0 0;" class="home_page">
+	<div style="margin-top: 150px;margin-left: auto;margin-right: auto;width: 1000px;" id="main_div">
+		<div>
+			<div class="image-show">
+				<div style="float: left">
+					<div>
+						<img src="../image/new_ui/internet.png" style="width: 200px;height: 200px;">
+					</div>
+					<div style="text-align: center;">
+						<span class="home-title">Internet</span>
+					</div>
+				</div>
+				<div style="float: left">
+					<div class="connect_div">
+						<div>
+							<img src="../image/new_ui/green_line.png" id="internet_status" style="width: 136px;height: 2px;">
+						</div>
+						<div class="connect-icon" style="background-color: rgba(255, 68, 68, 1);display: none" id="no_connect">
+							<img src="../image/new_ui/no_connected.png" style="margin-bottom: 1px;margin-left: -1px">
+						</div>
+					</div>
+				</div>
+				<div style="float: left">
+					<div>
+						<img id ="onu_image"  style="width: 200px;height: 175px;margin-left: 10px;margin-top:25px;">
+					</div>
+					<div style="text-align: center;">
+						<span class="home-title" id="ModelName"></span>
+					</div>
+					<div style="text-align: center;">
+						<span id="mac_address"
+							style="color: rgba(255, 255, 255, 1);font-size: 12px;font-family: PingFangSC-Regular;"></span>
+					</div>
+				</div>
+				<div style="float: left">
+					<div class="connect_div">
+						<div id="wifi_div" style="">
+							<div>
+								<img src="../image/new_ui/line1.png" style="width: 136px;height: 2px;">
+							</div>
+							<div class="connect-icon">
+								<img src="../image/new_ui/wifi_icon.png" style="height: 17px;width: 17px;">
+							</div>
+						</div>
+						<div id="lan_div">
+							<div>
+								<img src="../image/new_ui/line2.png" style="width: 136px;height: 2px;">
+							</div>
+							<div class="connect-icon">
+								<img src="../image/new_ui/eth_icon.png" style="margin-bottom: -2px;height: 17px;width: 17px;">
+							</div>
+						</div>
+						<div id="fiber_div" style="display: none;" >
+							<div>
+								<img src="../image/new_ui/line3.png" style="width: 136px;height: 2px;">
+							</div>
+							<div class="connect-icon" style="background-color: rgba(248, 205, 47, 1);">
+								<span style="color: rgba(255, 255, 255, 1);font-size: 6px;vertical-align: middle;">fiber</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="float: left">
+					<div>
+						<img src="../image/new_ui/device.png" style="width: 250px;height: 200px;margin: 0 0 0 10px;">
+						<div class="device_number" style="float: right">
+							<span  id="host_num"></span>
+						</div>
+					</div>
+					<div style="text-align: center;">
+						<span class="home-title">Terminal</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-show">
+				<div style="float: left;width: 196px;height: 77px;margin: 25px 0 0 50px;">
+					<div>
+						<img src="../image/new_ui/internet_connect.png"
+							style="width: 30px;height: 30px;margin-left: 88px">
+					</div>
+					<div>
+						<span class="home-text" style="" id="Connection_Uptime"></span>
+					</div>
+					<div>
+						<span class="home-text" style="" i18n="online_duration"></span>
+					</div>
+				</div>
+				<div style="float: left;width: 196x;height: 77px;margin: 25px 0 0 100px;">
+					<div>
+						<img id = "device_model"
+							style="width: 30px;height: 30px;margin-left: 133px;">
+					</div>
+					<div>
+						<span class="home-text" style="margin-left: 50px;" id="system_uptime"></span>
+					</div>
+					<div>
+						<span class="home-text" style="margin-left: 50px;" i18n="System_UpTime"></span>
+					</div>
+				</div>
+				<div style="float: left;margin:25px 0 0 160px">
+					<div>
+						<img src="../image/new_ui/ip.png" style="width: 30px;height: 30px;margin-left: 80px;">
+					</div>
+					<div>
+						<span class="home-text" style="" id="ip_address"></span>
+					</div>
+					<div>
+						<span class="home-text" style="" i18n="IP_Address"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="home-footer">
+		<div class="home-footer-image" onclick="reboot()">
+			<div style="margin-left: 22px;padding-top: 70px;"><span style="color: gray;background-color: #29292d;font-size: 18px" i18n="Reboot">Reboot</span></div>
+		</div>
+	</div>
+</body>
+
+</html>

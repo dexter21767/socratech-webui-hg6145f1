@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/remote_manage_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("state");
+</script>
+<body class='main_config_body'>
+	<form method="post"> 
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="remote_manage_prompt">remote_manage_prompt</font></p>
+		</div>
+		<br/>
+		<table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%">
+            <tbody>
+	            <tr>
+		            <td class="table_left" width="25%" ><font i18n="unsolicited_report_status_title">unsolicited_report_status_title</font></td>
+		            <td class="table_right" id="unsolicited_report_status">--</td>
+	            </tr>
+	            <tr>
+		            <td class="table_left"><font i18n="acs_connection_status_title">acs_connection_status_title</font></td>
+		            <td class="table_right" id="acs_connection_status">--</td>
+	            </tr>
+				<tr>
+		            <td class="table_left"><font i18n="service_provisioning_status_title">service_provisioning_status_title</font></td>
+		            <td class="table_right" id="service_provisioning_status">--</td>
+	            </tr>
+	        </tbody>
+	    </table>
+    </form>
+		
+</body>
+</html>

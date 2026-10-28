@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/pwdauth.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">Password设置</p>
+			<p class="main_header_hint">Passwrd设置用于新设备的注册及下发，请不要更改，如果修改Password导致业务不正常，请重启网关。</p>
+		</div>
+		<form id="loid_form">
+			<div class="main_content">
+				<!--
+				<div class="main_item">
+					<div class="main_item_name">逻辑ID</div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" name="LoidId_text" id="LoidId_text"/>
+					</div>
+				</div>
+				-->
+				<!--div class="main_item">
+					<div class="main_item_name">逻辑ID认证使用密码</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="Loidpwd_checkbox"/>&nbsp;
+					</div>
+				</div-->
+				<div class="main_item">
+					<div class="main_item_name">Password</div>
+					<div class="main_item_content">
+						<input type="password" class="input_text" autocomplete="off" name="Pwd_password" id="Pwd_password"/>
+					</div>
+				</div>
+			</div>
+			<div class="main_save">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+	</body>
+</html>

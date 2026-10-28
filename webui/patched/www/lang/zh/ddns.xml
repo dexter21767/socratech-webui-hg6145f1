@@ -1,0 +1,57 @@
+{
+  "ddns_apply":"提交",
+  "ddns_cancel":"取消",
+  "ddnscfg_remove":"配置清除",
+  
+  "ddns_prompt":"您可以在本页面进行DDNS设置。",
+
+  "Enable":"开启",
+  "Disable":"关闭",
+  
+  "ddns_hostTips":"(eg. abc.dyndns.co.za)",
+  
+  "ddns_passwordTips":"（请输入1-32个字符）",
+  "ddns_usernameTips":"（请输入1-32个字符）",
+  "ddns_domain":"域名",
+ "ddns_hostTitle":"主机名",
+
+  "ddns_password":"密码",
+  "ddns_interface":"WAN连接名称",
+  "ddns_username":"用户名",
+
+  "ddns_server":"服务器地址",
+  "ddns_protocolTitle":"协议类型",
+  "Server_url_title":"服务器URL",    
+  
+  "Please enter username!":"请输入用户名！",
+  "Please enter password!":"请输入密码！",
+  "Please enter host domain!":"请输入主机名！",
+
+  "Please enter domain!":"请输入域名",
+  "Please enter serveraddr!":"请输入服务器地址!",
+  "Please enter url!":"请输入URL!",
+  
+  "username is illegal!":" 用户名非法！",
+  "Password is illegal!":" 密码值非法！",
+  "Host Domain Name is illegal!":" 主机域名非法！",
+  "ddns_providerTitle":" DDNS供应商",
+  "Please enter provider":" 请输入供应商名称",
+  
+  "ddns_interfaceNUllAlert":"请配置WAN连接!",
+  
+  "ddns_state_prompt":"你在本页可以查看DDNS信息。",
+  "ddns_infoTitle":"DDNS信息",
+  "ddns_updateTitle":"更新信息",
+  "ddns_init":"初始化",
+  "ddns_modify":"更新中",
+  "ddns_success":"更新成功",
+  "ddns_param_error":"参数错误",
+  "ddns_cfgfile_error":"配置文件错误",
+  "ddns_ifname_error":"ifname错误",
+  "ddns_devIP_error":"主机的ip获取失败",
+  "ddns_connect_error":"连接服务器失败",
+  "ddns_response_error":"更新失败",
+  "ddns_noResp_error":"服务器没有响应",
+  "ddns_memory_error":"内存不足"
+  
+}

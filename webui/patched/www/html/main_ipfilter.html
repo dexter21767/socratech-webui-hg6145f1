@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/main_ipfilter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">IP过滤器设置</p>
+			<p class="main_header_hint">请先选择过滤模式，然后再配置IP过滤条目，最多8条可以配置</p>
+		</div>
+		<form id="ipfilter_LAN_form">
+		<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">启用IP地址过滤</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_checkbox"/>
+					</div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name">过滤模式</div>
+					<div class="main_item_content">
+						<select id='mode_select'>
+							<option value='black'>黑名单</option>
+							<option value='white'>白名单</option>
+						</select>
+					</div>
+				</div>
+		</div>
+		<div class="main_save_top_0">
+				<input type="button" id="enable_save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+		</div>
+		</form>	
+		<form id="ip_filter_list_form" style="display:none;">
+		<div class="div_between_form"></div>
+		<div id="add_div">
+			<div class="main_header">
+			<p class="main_header_title">添加IP过滤器</p>
+			<p class="main_header_hint">您可以通过指定一个新的过滤器名和下列状态中至少一种来为识别的IP通信而创建一个过滤器规则。在过滤器规则中所有指定的状态必须满足才能使规则有效。点击“保存/应用”保存和激活过滤器。</p>
+			</div>
+			<div class="main_content">
+					<div class="main_item">
+						<div class="main_item_name">过滤器名：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" id="ipfilter_AddFilter" name="ipfilter_AddFilter"></input>
+						</div>
+						<div class='main_item_error_hint_extra' id="add_text_error"></div>
+					</div>
+				<!--	<div class="main_item">
+						<div class="main_item_name">启用</div>
+						<div class="main_item_content">
+							<INPUT  type="checkbox" id="ipfilter_Enable"></input>
+						</div>
+					</div>
+				-->
+					<div class="main_item">
+						<div class="main_item_name">协议：</div>
+						<div class="main_item_content">
+							<select id="ipfilter_AddAgreement" >
+							  <option value="TCP/UDP">TCP/UDP</option>
+							  <option value="TCP">TCP</option>
+							  <option value="UDP">UDP</option>
+							  <option value="ICMP">ICMP</option>
+							  <option value="ALL">ALL</option>
+							</select>
+						</div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">源IP地址(最小值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value="" id="ipfilter_MinSourceAddress"></input>
+						</div>
+						<div id="MinSourceAddress-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">源IP地址(最大值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value="" id="ipfilter_MaxSourceAddress"></input>
+						</div>
+						<div id="MaxSourceAddress-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">源端口(最小值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input" class="input_text" maxLength="256" size="15" value=""  id="ipfilter_MinSourcePort"></input>
+						</div>
+						<div id="MinSourcePort-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">源端口(最大值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input" class="input_text" maxLength="256" size="15" value="" id="ipfilter_MaxSourcePort"></input>
+						</div>
+						<div id="MaxSourcePort-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">目的IP地址（最小值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value="" id="ipfilter_MinDestinationAddress"></input>
+						</div>
+						<div id="MinDestinationAddress-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">目的IP地址（最大值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value="" id="ipfilter_MaxDestinationAddress"></input>
+						</div>
+						<div id="MaxDestinationAddress-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">目的端口（最小值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value=""  id="ipfilter_MinDestinationPort"></input>
+						</div>
+						<div id="MinDestinationPort-error" class="main_item_error_hint_extra"></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name">目的端口（最大值)：</div>
+						<div class="main_item_content">
+							<INPUT type="input"  class="input_text" maxLength="256" size="15" value="" id="ipfilter_MaxDestinationPort"></input>
+						</div>
+						<div id="MaxDestinationPort-error" class="main_item_error_hint_extra"></div>
+					</div>
+			</div>
+			<div class="main_save_top_0">
+				<input type="button" id="do_add_btn" class="input_button" value="添加" onclick="doAdd()"/>
+			</div>
+		</div>
+		<br /><br />
+	<div id="Outflow_white">
+		<table width="100%" style="margin:auto" cellspacing="0" cellpadding="3px" border="1px">
+			<tr align="">
+				<td width="70" align='center'>过滤器名</td>
+				<td width="70" align='center'>协议</td>
+				<td width="70" align='center'>源地址(最小值)</td>
+				<td width="70" align='center'>源地址(最大值)</td>
+				<td width="70" align='center'>目的地址(最小值)</td>
+				<td width="70" align='center'>目的地址(最大值)</td>		
+				<td width="70" align='center'>源端口(最小值)</td>
+				<td width="70" align='center'>源端口(最大值)</td>
+				<td width="70" align='center'>目的端口(最小值)</td>
+				<td width="70" align='center'>目的端口(最大值)</td>			
+				<td width="70" align='center'>删除</td>
+			</tr>
+			<tbody id='Outflow_List'>
+			</tbody> 
+		</table>
+	</div>
+	</form>
+	</body>
+</html>

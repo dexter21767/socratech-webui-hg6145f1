@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/09/2016, 18:25:18
+    Author     : rodrigomuniz
+*/
+.wrap {
+  min-height: 610px;
+}
+@media (max-width: 350px) {
+  .wrap {
+    min-height: 650px;
+  }
+}
+@font-face {
+  font-family: "fh-text-security";
+  src: url("fh-text-security.woff2") format("woff2"),
+       url("fh-text-security.woff") format("woff"),
+       url("fh-text-security.ttf") format("truetype"),
+       url("fh-text-security.eot") format("embedded-opentype"),
+       url("fh-text-security.svg") format("svg");
+}
+.fh-text-security{
+    font-family: fh-text-security !important;
+	border: 1px solid #dbdbdb;
+	width: auto;
+	color: #535353;
+	font-size:12px;
+}

@@ -1,0 +1,44 @@
+{
+  "sncfg_prompt":"On this page, you may modify the ONU authentication-related parameters to authenticate the OLT. It will take effect after restarting.",
+  "sncfg_prompt_user":"You may modify the ONU authentication-related parameters to authenticate the OLT. It will take effect after restarting. Please do not change the password, it will effect the service if the password has been changed, thanks!",
+  
+  "sncfg_apply":"Apply",
+  "sncfg_cancel":"Cancel",
+  
+  "sncfg_authMethod":"Auth Method",
+  "sncfg_loid":"LOID",
+  "sncfg_loidTips":" (You can input 1-24 basic Latin characters)",
+  "sncfg_lopwd":"Logic Password",
+  "sncfg_lopwdTips":" (You can input 0-12 basic Latin characters)",
+  "sncfg_pwd":"Pass Key",
+  "sncfg_pwdTips":" (You can input 0-10 characters, including alphanumeric, '-' and '_')",
+  "oltcfg_phySN":"Physical SN",
+  "oltcfg_phySNTips":"  (You can input 12 or 16 characters, including '0'-'9' 'a'-'f' 'A'-'F' 'h' 't' 'H' 'T')",
+  
+  "sncfg_restore":"Restore",
+  "sncfg_restoreTips":" (You can restore configuration of this page to default by clicking this button)",
+
+  "sncfg_snTitle":"LOID Auth",
+  "sncfg_pwdTitle":"Password Auth",
+  "oltcfg_phySNTitle":"Physical SN Auth",
+  "sncfg_restoreTitle":"Restore Configuration",
+
+  "sncfg_restartConfirm":"You modify the authentication parameters successfully! Whether to restart ONU? Please login WEB network management after ONU restarting!",
+
+  "sncfg_loidNullAlert":"Please input LOID!",
+  "sncfg_loidIllegalAlert":"LOID is illegal!",
+  "sncfg_lopwdIllegalAlert":"Logic Password is illegal!",
+  "sncfg_pwdCfgNullAlert":"Please input pass key!",
+  "sncfg_pwdCfgIllegalAlert":"Pass key is illegal!",
+  "sncfg_loidchnAlert":"LOID is illegal! Please input basic Latin characters!",
+  "sncfg_speCharAlert":"Please input basic Latin characters except ",
+  "sncfg_phySNNullAlert":"Please input physical SN!",
+  "sncfg_phySNCfgIllegalAlert":"Physical SN is illegal!",
+  "sncfg_value_invilid":"Some value is invalid, please check and refill it.",
+
+  "physncfg_checkeror":"Error: The value you input is illegal, please try again!",
+  "sncfg_setFailedInfo":"Error: Set auth params failed! Please reboot device and try again!",
+  "change_eye":"eye",
+  "registerPrompt":"On this page,you can register the device."
+}
+

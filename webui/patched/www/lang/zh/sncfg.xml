@@ -1,0 +1,45 @@
+{
+  "sncfg_prompt":"在本页面上，您可以修改ONU认证方式的相关参数，使之通过OLT认证。修改ONU的认证参数后请复位ONU生效。",
+  "sncfg_prompt_js":"在本页面，您可以进行设备注册和认证，提交信息后，请到状态页面查询注册结果!",
+  "sncfg_prompt_user":"在本页面，您可以修改ONU认证方式的相关参数，使之通过OLT认证。请勿修改密码，否则会影响业务，谢谢!",
+  
+  "sncfg_apply":"提交",
+  "sncfg_cancel":"取消",
+  "sncfg_snTitle1":"设备注册认证",
+  "sncfg_authMethod":"认证方式",
+  "sncfg_loid":"LOID",
+  "sncfg_loidTips":" （请输入1-24个字符, 不能包含中文字符）",
+  "sncfg_lopwd":"逻辑密码",
+  "sncfg_lopwdTips":"  （请输入0-12个字符）",
+  "sncfg_pwd":"密码",
+  "sncfg_pwdTips":" （请输入1-10个字符, 包括数字、字母、'-' 和 '_'）",
+  "oltcfg_phySN":"物理SN",
+  "oltcfg_phySNTips":"  （请输入12或16个字符, 包括数字 'a'-'f' 'A'-'F' 'h' 't' 'H' 'T'）",
+  
+  "sncfg_restore":"恢复默认值",
+  "sncfg_restoreTips":" （您可以点击此按钮恢复本页面配置为默认值）",
+
+  "sncfg_snTitle":"逻辑标识认证",
+  "sncfg_pwdTitle":"密码认证",
+  "oltcfg_phySNTitle":"物理SN认证",
+  "sncfg_restoreTitle":"配置恢复",
+  
+  "sncfg_restartConfirm":"您修改认证参数成功! 是否重启ONU? 重启ONU后，请重新登录WEB网管!",
+
+  "sncfg_loidNullAlert":"请输入LOID!",
+  "sncfg_loidIllegalAlert":"LOID非法!",
+  "sncfg_lopwdIllegalAlert":"逻辑密码非法!",
+  "sncfg_pwdCfgNullAlert":"请输入密码!",
+  "sncfg_pwdCfgIllegalAlert":"密码认证密码非法!",
+  "sncfg_loidchnAlert":"LOID非法! 逻辑SN不能包含中文字符!",
+  "sncfg_speCharAlert":"请输入字符不包括 ",
+  "sncfg_phySNNullAlert":"请输入物理SN!",
+  "sncfg_phySNCfgIllegalAlert":"物理SN非法!",
+  
+  "sncfg_setFailedInfo":"错误: 配置认证参数失败! 请重启设备后重试!",
+  "physncfg_checkeror":"错误: 您输入值的合法性校验失败，请重试。",
+
+  
+  "infor_submit_prompt":"注册信息已提交，请到状态页面查询注册结果!"
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/mac_Black_filter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_title">MAC过滤</p>
+			<p class="main_header_hint">请先选择MAC过滤类型，然后配置MAC过滤条目，最多<span id="maxnum"></span>条可以配置</p>
+		</div>
+		<form id="mac_filter_form">
+			<div class="main_content">
+				<div class="main_item">
+					<div class="main_item_name">启用MAC过滤</div>
+					<div class="main_item_content">
+						<input type="checkbox" id="enable_checkbox"/>&nbsp;
+					</div>
+				</div>
+				<!--<div class="main_item">
+					<div class="main_item_name">MAC过滤类型</div>
+					<div class="main_item_content">
+						<select id='mode_select'>
+							<option value='black'>黑名单</option>
+							<option value='white'>白名单</option>
+						</select>
+						<span id="black_hint" style="display:none">不允许访问黑名单内的MAC地址</span>
+						<span id="white_hint" style="display:none">只允许访问白名单内的MAC地址</span>
+					</div>
+				</div>-->
+			</div>
+			<div class="main_save_top_0">
+				<input type="button" id="save_apply" class="input_button" value="保存" onclick="saveApply()"/>
+			</div>
+		</form>
+		<form id="mac_filter_list_form">
+			<div class="div_between_form"></div>
+			<div id="add_div" style="display:none">
+				<div class="main_content">
+					<div class="main_item">
+						<div class="main_item_name">MAC地址</div>
+						<div class="main_item_content">
+							<input type="input" class="input_text" id="add_text" name="add_text"/>
+						</div>
+						<div class='main_item_error_hint_extra' id="add_text_error"></div>
+					</div>
+				</div>
+				<div class="main_save_top_0">
+					<input type="button" id="do_add_btn" class="input_button" value="添加" onclick="doAdd()"/>
+				</div>
+			</div>
+			<br /><br />
+			<table width="80%" style="margin:auto" cellspacing="0" cellpadding="3px" border="1px">
+				<tr>
+					<td width="60%">MAC地址</td>
+					<td width="40%">操作</td>
+				</tr>
+				<tbody id="mac_list">
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+{
+	"policy_route_config_prompt": "On this page, you can configure a policy route for a service, such as Internet and IPTV. This route is used to send the packets of the service to the OLT through the specified WAN port.",
+	"policy_list_title": "Policy Route Rules List",
+	"service_route_config_prompt": "On this page, you can configure a route for a service. Then the packets of the service are sent to the OLT through the specified WAN port.",
+	"service_list_title": "Service Route List",
+	"app_apply": "Apply",
+	"app_cancel": "Cancel",
+	"vendor_id": "Vendor ID",
+	"wan_name": "WAN Name",
+	"service_type": "Service Type",
+	"illegal_value_alert":"Some value is illegal!",
+	"wan_name_is_empty_alert": "WAN Name can not be empty!",
+	"app_most32RulesAlert":"You can configure up to 32 rules!",
+	"wanName_illegal_alert":"Please confirm that one Wan connection has only one configuration!",
+	"delete_alert":"Are you sure to delete the selected rule?",
+	"no_rules_alert":"There are no rules at present. You cannot delete them.",
+	"no_selected_rules_alert":"At present there is no rule that was selected, can not be deleted!",
+	"vendor_tips":"(Option 60 character string: *VendorID*, *VendorID*, *VendorID*, or VendorID)",
+	"Vendor_ID_different":"The Vendor ID must be different if the wan name is same.",
+	"repeat_with_the_existing_rules":"Repeat with the existing rules. Please reconfigure it!",
+	"app_add":"Add",
+	"app_delete":"Delete"
+}

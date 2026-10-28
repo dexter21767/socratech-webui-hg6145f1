@@ -1,0 +1,13 @@
+{
+  "IPSEC basic apply":"提交",
+  "IPSEC basic cancel":"取消",
+
+  
+  "IPSEC_prompt":"您可以在这里开启/关闭IPSec报文转发功能。",
+
+  "IPSECEnable_title":"IPSec",
+  
+  "IPSEC_enable":"启用",
+  "IPSEC_disable":"禁用"
+}
+

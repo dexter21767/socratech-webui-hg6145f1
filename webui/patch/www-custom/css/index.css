@@ -1,0 +1,174 @@
+/* ===== Root Variables ===== */
+:root {
+  --color-primary: #8DC63F;
+  --color-secondary: #00a335;
+  --color-accent: rgb(229, 62, 162);
+  --color-text: #4E4E4E;
+  --color-heading: #4D4D4D;
+  --color-border: rgba(149, 152, 154, 0.25);
+  --color-bg-input: #F9F9F9;
+
+  --radius: 12px;
+  --radius-pill: 999px;
+
+  --font-base: 'db_helvethaicaais_x55_regular', system-ui, -apple-system, sans-serif;
+  --font-bold: 'db_helvethaicaais_x75_bd', system-ui, sans-serif;
+  --font-medium: 'db_helvethaicaais_x65_med', system-ui, sans-serif;
+}
+
+/* ===== Reset / Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-base);
+}
+
+/* ===== Layout ===== */
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left banner */
+.wrapper-banner-login {
+  flex: 0 0 640px;
+  background: url('../img/login/img_hero_image.png') no-repeat center / cover;
+}
+
+/* Right content */
+.wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ===== Login Container ===== */
+.warp-login {
+  width: 100%;
+  max-width: 448px;
+}
+
+/* ===== Typography ===== */
+.warp-login h3,
+.warp-login h4 {
+  font-family: var(--font-bold);
+  color: var(--color-heading);
+  margin-bottom: 2rem;
+}
+
+.warp-login h3 {
+  font-size: clamp(1.75rem, 2.5vw, 2.2rem);
+}
+
+.warp-login h4 {
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.form-login .title {
+  font-family: var(--font-medium);
+  padding-left: 1rem;
+  color: var(--color-text);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ===== Inputs ===== */
+.input-form-login {
+  width: 100%;
+  height: 47px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-input);
+  font-family: var(--font-medium);
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 0 1rem 0 3rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-form-login.username {
+  background-image: url('../image/ais/login/ic_person_24px.png');
+  background-repeat: no-repeat;
+  background-position: 0.75rem center;
+}
+
+.input-form-login.password {
+  background-image: url('../image/ais/login/ic_lock_24px.png');
+  background-repeat: no-repeat;
+  background-position: 0.75rem center;
+}
+
+/* Accessible focus state */
+.input-form-login:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(141, 198, 63, 0.2);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, opacity 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Variants */
+.btn-signin {
+  height: 40px;
+  width: 224px;
+  background-color: var(--color-primary);
+}
+
+.btn-signin-interbras {
+  height: 50px;
+  width: 100%;
+  background-color: var(--color-secondary);
+}
+
+.btn-signin-netwey {
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-accent);
+}
+
+/* Hover states */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .wrapper-banner-login {
+    display: none;
+  }
+
+  .wrapper {
+    flex: 1;
+    padding: 1.5rem;
+  }
+}

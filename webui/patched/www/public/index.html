@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TIM Wizard</title>
+<!-- Bootstrap -->
+<script language ="javascript "type ="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="css/style_wizard.css?'+new Date().getTime()+'"><'+'/'+'link>');
+	document.write('<script  src="/js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="js/index.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/sha256.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/jquery.validate.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/language/messages_en.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	document.write('<script  src="/js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+</script>
+<script language="javascript">
+    var operator_name;
+	function frmLoad() {
+        XHR.get("get_operator", null, getOperatorName);
+		var protocol = window.location.protocol;
+		var host = window.location.host;
+		if(operator_name != "BZ_TIM"){
+			window.location.href = protocol+"//"+host+"/BadRequest";
+			return;
+		}
+	    sessionStorage.setItem("operator_name", "BZ_TIM");
+	}
+    function getOperatorName(data)
+    {
+         operator_name = data.operator_name;
+    }
+</script>
+</head>
+<body class="pricipal" onLoad='frmLoad();'>
+<div class="wrap">
+  <div class="area1">
+    <div class="cabecalho" > <img src="img/160914_PF01_LOGO_TIM_LIVE.png"  class="log_tim_live_grande">
+      <h1>Bem-vindo <br/>
+        ao assistente <br/>
+        de configuração <br/>
+        e ativação <br/>
+        da sua internet <br/>
+        Live TIM</h1>
+      <div class="clearfix"></div>
+    </div>
+    <!-- cabecalho -->
+    <div class="detalhe">
+      <p>Aqui, vamos configurar a conexão com a Internet e a sua rede<br/>
+        Wi-Fi em poucos passos e sem complicações. Digite a senha<br/>
+        localizada na etiqueta embaixo do modem para iniciar.</p>
+    </div>
+    <!-- detalhe -->
+    <div class="form">
+      <!--form action="page_02.html" method="post"-->
+      <form name="login" method="post" action="/BadRequest">
+        <div class="item-login">
+          <label for="login">Login:</label>
+          <input type="text" class="form-control" id="login" name="User" placeholder="">
+        </div>
+        <div class="item-senha">
+          <label for="senha">Senha</label>
+          <input type="text" class="form-control fh-text-security" id="senha" placeholder="" autocomplete="off">
+        </div>
+        <div class="clearfix"></div>
+        <div class="item-login">
+          <input type="button" class="form-control btn-avancar" value="Avançar" id="login_btn" onclick="onlogin()">
+        </div>
+      </form>
+    </div>
+    <!-- form -->
+  </div>
+  <!-- area1 -->
+  <img id="logo_tim_peq" src="img/160914_PF01_LOGO_TIM.png" > </div>
+</body>
+</html>
+<!-- <m> -->

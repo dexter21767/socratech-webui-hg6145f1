@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/down_cfgfile.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/jquery.form.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("restore");
+	</script>
+	<style type="text/css"> 
+		#progress
+		{
+		height: 24px;
+		width: 200px;
+		border: none;
+	}
+	.inner-progress 
+	{
+		background: #2C5EA4;
+	}
+ 	</style>	
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="cfgfile_title">cfgfile_title</font></p>
+		</div>
+		<br>
+		<div class="main_save">
+			<input type="button" class="input_button" onclick="down_cfgfile()" id="Restart_button" value="Configuration file backup" i18n="cfgfile_button" i18n-set="value">
+		</div>
+		<div class="main_header" id="update_config_header">
+			<p class="main_header_hint"><font i18n="update_config_prompt">update_config_prompt</font></p>
+		</div>
+		</br>
+		<form enctype="multipart/form-data" method="post" id="file_form">
+			<div class="main_content">
+				<div class="main_item" style="height: 56px" id="update_common">
+					<div class="main_item_name" style="height: 54px; line-height: 56px;" ><font i18n="update_config_title" >update_config_title</font></div>
+					<div class="main_item_content" style="height: 28px;" >
+						<input type="file" id="uploadfile" name="uploadfile"  />
+					</div>
+					<div class="main_item_content" style="height: 24px;" >
+						<span id="cfg_uploadTips" style="color: gray;"></span>
+					</div>					
+				</div>
+				<div class="main_item" style="height: 56px" id="update_telmex" style="display:none">
+					<div class="main_item_name" style="height: 54px; line-height: 56px;" ><font i18n="update_config_title" >update_config_title</font></div>
+					<div class="main_item_content" style="height: 28px;" >
+						<input type="file" id="uploadfile_telmex" name="uploadfile_telmex" style="display:none" onchange="upload_file2(this.value)"/>
+						<input type="button" id="upload_file_btn" i18n="choose_file" i18n-set="value" onclick="upload_file()">
+						<input id="path" name="path" style="width:300px" readonly>
+					</div>
+					<div class="main_item_content" style="height: 24px;" >
+						<span id="cfg_uploadTips" style="color: gray;"></span>
+					</div>					
+				</div>
+			</div>
+			<div class="main_button" id="upgrade_submit">
+				<div class="main_submit" style="width: 25%;"></div>	
+				<div class="main_submit" style="width: 75%;">
+					<input type="submit" class="input_button" i18n="upload_button" i18n-set="value" id="upload_button" />	</div>
+			</div>			
+		</form>
+	</body>
+</html>

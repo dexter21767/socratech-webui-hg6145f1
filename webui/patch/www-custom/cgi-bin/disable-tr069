@@ -1,0 +1,98 @@
+#!/bin/bash
+
+# Read GET parameters
+QUERY="$QUERY_STRING"
+
+ACTION=""
+case "$QUERY" in
+    action=enable)
+        ACTION="enable"
+       
+		FhlinkEnable=`cfg_cmd get InternetGatewayDevice.X_FH_FiLink.X_FH_link_enable | grep success | cut -d "=" -f 2`
+		if [ "${FhlinkEnable}" == "1" ];then
+			killall -9 filink_server
+			killall -9 filink_client
+			cfg_cmd set InternetGatewayDevice.X_FH_FiLink.X_FH_link_enable 0
+		fi
+        ;;
+        
+    action=reset)
+        ACTION="reset"
+        
+        cfg_cmd set InternetGatewayDevice.ManagementServer.EnableCWMP 0
+		cfg_cmd set InternetGatewayDevice.ManagementServer.PeriodicInformEnable 0
+		cfg_cmd set InternetGatewayDevice.ManagementServer.URL 'http://127.0.0.1'
+		cfg_cmd set InternetGatewayDevice.ManagementServer.X_FH_ConnectionRequestPort '0'
+		cfg_cmd set InternetGatewayDevice.ManagementServer.Username ''
+		cfg_cmd set InternetGatewayDevice.ManagementServer.Password ''
+		cfg_cmd set InternetGatewayDevice.ManagementServer.ConnectionRequestUsername ''
+		cfg_cmd set InternetGatewayDevice.ManagementServer.ConnectionRequestPassword ''
+        ;;
+esac
+
+# Read current status
+FhlinkEnable=`cfg_cmd get InternetGatewayDevice.X_FH_FiLink.X_FH_link_enable | grep success | cut -d "=" -f 2`
+if [ "${FhlinkEnable}" == "0" ];then
+    #CURRENT_STATUS=$(cat "$STATUS_FILE")
+    CURRENT_STATUS="enabled"
+else
+    CURRENT_STATUS="unknown"
+fi
+
+# Print HTTP header
+echo "Content-Type: text/html"
+echo ""
+
+# Start HTML output
+cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TR069 Patch</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial; background:#f4f4f4; text-align:center; }
+        .box { margin-top:10px; padding:20px; background:white; display:inline-block;
+               border-radius:8px; box-shadow:0 0 10px #ccc; }
+        a { display:inline-block; margin:10px; padding:10px 20px;
+            text-decoration:none; border-radius:5px; color:white; }
+        .enable { background:green; }
+        .disable { background:red; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>TR-069 auto-enabling patch</h2>
+        <p>This patch prevents TR-069 from auto-enabling</p>
+        <p><strong>Please backup your configuration file !</strong></p>
+        <p>Current status: <strong>$CURRENT_STATUS</strong></p>
+EOF
+
+# Show response message
+#if [ "$ACTION" = "enable" ]; then
+#    echo "<p style='color:green;'>Patch applied !</p>"
+#elif [ "$ACTION" = "disable" ]; then
+#    echo "<p style='color:red;'>Feature DISABLED successfully.</p>"
+#fi
+
+if [ "$CURRENT_STATUS" = "enabled" ]; then
+    echo "<p style='color:green;'>Patch applied</p>"
+else
+    button='<a class="enable" href="?action=enable">Apply patch</a>'
+fi
+
+# Show control links
+cat <<EOF
+        $button
+        <hr>
+        <h2>TR-069 reset values</h2>
+        <p>This will set the url to localhost, port to 0, usernames & passwords to empty values</p>
+        <p><strong>Please backup your configuration file !</strong></p>
+        $(if [ "$ACTION" = "reset" ]; then
+			echo "<p style='color:green;'>Configuration applied !</p>"
+		fi)
+        <a class="enable" href="?action=reset">Reset values</a>
+    </div>
+</body>
+</html>
+EOF

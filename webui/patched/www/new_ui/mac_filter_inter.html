@@ -1,0 +1,165 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/mac_filter_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+
+</head>
+<script type="text/javascript">
+	setDomain("firewall");
+</script>
+<STYLE type="text/css">
+</STYLE>
+
+<body>
+	<div class='main_config_body'>
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="macaddrenable_title">macaddrenable_title</font>
+			</div>
+			<div class="main_item_content">
+				<div class="input_radio">
+					<input type="radio" id="mac_filter_enable" name="mac_filter_enable" value="1" />
+					<font i18n="firewall_enable" id="firewall_enable">firewall_enable</font>&nbsp;&nbsp;
+					<input type="radio" id="mac_filter_disable" name="mac_filter_enable" value="0" />
+					<font i18n="firewall_disable" id="firewall_disable">firewall_disable</font>
+				</div>
+			</div>
+		</div>
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="macaddrdown_title">macaddrdown_title</font>
+			</div>
+			<div class="main_item_content">
+				<div class="input_radio">
+					<input type="radio" id="mac_filter_mode_white" name="mac_filter_mode" onclick="tip()"
+						value="white" />
+					<font i18n="firewall_white" id="firewall_white">firewall_white</font>&nbsp;&nbsp;
+					<input type="radio" id="mac_filter_mode_black" name="mac_filter_mode" value="black" />
+					<font i18n="firewall_black" id="firewall_black">firewall_black</font>
+				</div>
+			</div>
+		</div>
+		<div class="main_submit_item" id="button_div">
+			<div class="main_item_content">
+				<input type="button" id="mac_filter_mode_apply" class="input_button" i18n="firewall_apply"
+					i18n-set="value" onclick="EnableApply()" />
+			</div>
+		</div>
+	</div>
+	</br>
+	</br>
+	<div class='main_config_body' style="min-height: 320px;">
+		<div style="float:left">
+			<input type="button" i18n="firewall_add" i18n-set="value" id="fw_add" class="add_button"
+				onClick="addfilter()">
+			<input type="button" i18n="firewall_delete" i18n-set="value" id="fw_delete" class="delete_button"
+				onClick="click_remove()">
+		</div>
+		<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+			<tr class="table_head_title">
+				<td width="5%" align='center'>
+					<input style="margin-top: 3px" type="checkbox" onclick="selectAll()" id="checkAll">
+				</td>
+				<td width="5%" align='center'>
+					<font i18n="fw_filterID">fw_filterID</font>
+				</td>
+				<td width="20%" align='center'>
+					<font i18n="macaddr">macaddr</font>
+				</td>
+				<td width="20%" align='center'>
+					<font i18n="mac_time">mac_time</font>
+				</td>
+				<td width="8%" align='center'>
+					<font i18n="mac_enable">mac_enable</font>
+				</td>
+				<td width="8%" align='center'>
+					<font i18n="operate"></font>
+				</td>
+			</tr>
+			<tbody id='mac_filter_List' class="table_rule" style="font-size: 12px">
+			</tbody>
+		</table>
+		<div id="image">
+			<img src="../image/new_ui/no_data.png" style="width: 120px;">
+			<span i18n="No Data">No Data</span>
+		</div>
+		</br>
+		<form id="mac_filter_list_form">
+			<div class="config_content" id="fw_config_form" style="display:none">
+				<div class="main_item">
+					<div class="main_item_title">
+						<font id="title"></font>
+						<img src="../image/new_ui/cancel.png" class="cancel_icon">
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg">
+						<span class="redcolorfont">*</span>
+						<font i18n="macaddr">macaddr</font>
+					</div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_mac_address" i18n="macaddr_macTips">macaddr_macTips</div>
+						<input type="text" class="input_text" autocomplete="off" id="mac_address" name="mac_address" />
+						<select name="mac_host_adress" id="mac_host_adress" style="width:145px"
+							style="display:none"></select>
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg">
+						<span class="redcolorfont">*</span>
+						<font i18n="url_start_time">mac_start_time</font>
+					</div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_mac_start_hour" i18n="(Hour:Min,24)">(Hour:Min,24)</div>
+						<input type="text" class="input_text" autocomplete="off" id="mac_start_hour"
+							name="mac_start_hour" style="width:140px" />&nbsp;<font style="color: white;">:</font>&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="mac_start_min" name="mac_start_min"
+							style="width:140px" />
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg">
+						<span class="redcolorfont">*</span>
+						<font i18n="url_end_time">mac_end_time</font>
+					</div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_mac_end_hour" i18n="(Hour:Min,24)">(Hour:Min,24)</div>
+						<input type="text" class="input_text" autocomplete="off" id="mac_end_hour" name="mac_end_hour"
+							style="width:140px" />&nbsp;<font style="color: white;">:</font>&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="mac_end_min" name="mac_end_min"
+							style="width:140px" />
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg">
+						<font i18n="mac_enable">mac_enable</font>
+					</div>
+					<div class="main_item_content_cfg">
+						<select id="mac_enable" class="select">
+							<option value="1" i18n="firewall_enable">Enable</option>
+							<option value="0" i18n="firewall_disable">Disable</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_submit" style="float: right;">
+						<input type="button" id="firewall_apply" class="input_button_cfg" i18n="firewall_apply"
+							i18n-set="value" onclick="doSave()" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+<div id='loading_div' style='display:none'>
+
+</div>
+
+</html>

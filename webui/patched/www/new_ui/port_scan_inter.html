@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/port_scan_inter.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+
+<body class='main_config_body'>
+	<form id="anti_port_scan_form">
+		<div class="main_item">
+			<div class="main_item_name">
+				<font i18n="anti_port_scan_tittle">anti_port_scan_tittle</font>
+			</div>
+			<div class="main_item_content">
+				<div class="input_radio">
+					<input type="radio" id="anti_port_scan_enable" name="anti_port_scan_enable" value="1" />
+					<font i18n="anti_port_scan_enable">anti_port_scan_enable</font>
+					<input type="radio" id="anti_port_scan_disable" name="anti_port_scan_enable" value="0" />
+					<font i18n="anti_port_scan_disable">anti_port_scan_disable</font>
+				</div>
+			</div>
+		</div>
+		<div class="main_submit_item">
+			<div class="main_item_content">
+				<input type="button" id="anti_port_scan_apply" class="input_button" i18n="anti_port_scan_apply"
+					i18n-set="value" onclick="save_apply()" />&nbsp; &nbsp;
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

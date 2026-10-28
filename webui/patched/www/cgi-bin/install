@@ -1,0 +1,117 @@
+#!/bin/bash
+
+# Read GET parameters
+QUERY="$QUERY_STRING"
+
+CRON_FILE="/fhconf/crontab_conf"
+SCRIPT_PATH="/fhconf/custom-webui"
+CRON_ENTRY="@reboot $SCRIPT_PATH"
+SHELL_HEADER="SHELL=/bin/sh"
+
+ensure_shell_header() {
+    # Create file if it doesn't exist
+    [ -f "$CRON_FILE" ] || touch "$CRON_FILE"
+
+    # Read first line
+    first_line=$(head -n 1 "$CRON_FILE")
+
+    if [ "$first_line" != "$SHELL_HEADER" ]; then
+        echo "Adding shell header to cron file..."
+
+        tmp_file="${CRON_FILE}.tmp"
+        {
+            echo "$SHELL_HEADER"
+            cat "$CRON_FILE"
+        } > "$tmp_file" && mv "$tmp_file" "$CRON_FILE"
+    fi
+}
+
+ACTION=""
+case "$QUERY" in
+    action=enable)
+        ACTION="enable"
+        #echo "enabled" > "$STATUS_FILE"
+       
+       ensure_shell_header
+       
+       cp /var/patch_script /fhconf/custom-webui
+       chmod +x /fhconf/custom-webui
+       
+		if grep -Fxq "$CRON_ENTRY" "$CRON_FILE" 2>/dev/null; then
+			echo "Cron job already exists."
+		else
+			echo "$CRON_ENTRY" >> "$CRON_FILE"
+			echo "Cron job added."
+		fi
+        
+        ;;
+    action=disable)
+        ACTION="disable"
+        
+        rm /fhconf/custom-webui
+        
+        if grep -Fxq "$CRON_ENTRY" "$CRON_FILE" 2>/dev/null; then
+			grep -Fxv "$CRON_ENTRY" "$CRON_FILE" > "${CRON_FILE}.tmp" && mv "${CRON_FILE}.tmp" "$CRON_FILE"
+			echo "Cron job removed."
+		else
+			echo "Cron job not found."
+		fi
+        ;;
+esac
+
+if grep -Fxq "$CRON_ENTRY" "$CRON_FILE" 2>/dev/null; then
+    #CURRENT_STATUS=$(cat "$STATUS_FILE")
+    CURRENT_STATUS="enabled"
+else
+    CURRENT_STATUS="disabled"
+fi
+
+# Print HTTP header
+echo "Content-Type: text/html"
+echo ""
+
+# Start HTML output
+cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom WebUI</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial; background:#f4f4f4; text-align:center; }
+        .box { margin-top:50px; padding:20px; background:white; display:inline-block;
+               border-radius:8px; box-shadow:0 0 10px #ccc; }
+        a { display:inline-block; margin:10px; padding:10px 20px;
+            text-decoration:none; border-radius:5px; color:white; }
+        .enable { background:green; }
+        .disable { background:red; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Keep Custom WebUI across reboots</h2>
+        <p>If enabled, the custom WebUI will be restored if the device reboots</p>
+        <p>Current status: <strong>$CURRENT_STATUS</strong></p>
+EOF
+
+# Show response message
+if [ "$ACTION" = "enable" ]; then
+    echo "<p style='color:green;'>Custom WebUI persistance enabled successfully.</p>"
+elif [ "$ACTION" = "disable" ]; then
+    echo "<p style='color:red;'>Custom WebUI persistence removed successfully.</p>"
+fi
+
+if [ "$CURRENT_STATUS" != "enabled" ]; then
+    button='<a class="enable" href="?action=enable">Enable</a>'
+    #disable_button='<a class="disable" href="?action=disable">Disable</a>'
+elif [ "$CURRENT_STATUS" == "enabled" ]; then
+	button='<a class="disable" href="?action=disable">Disable</a>'
+fi
+
+# Show control links
+cat <<EOF
+        $button
+    </div>
+</body>
+</html>
+EOF

@@ -1,0 +1,8 @@
+{
+  "sub_version_prompt": "Você pode configurar a ativação/desativação da subversão do software aqui.",
+  "rc_enable": "Habilitado",
+  "rc_disable": "Desabilitado",
+  "sub_version": "Subversão de software",
+  "recontrolApply": "Aplicar",
+  "recontrolCancel": "Cancelar"
+}

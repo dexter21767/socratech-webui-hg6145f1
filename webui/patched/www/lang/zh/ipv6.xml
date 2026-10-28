@@ -1,0 +1,28 @@
+{
+  "pt_PortTriggerPrompt":"您可以在本页面配置IPv6静态路由。",
+
+  "fw_filterListHead":"IPv6静态路由表",
+  "DstPrefix_title":"目的前缀",
+  "Nexthop_title":"下一跳",
+  "pf_wannameTitle":"WAN",
+
+  "pf_add":"新增",
+  "pf_delete":"删除",
+  "pf_deleteAll":"删除所有",
+
+  "ipv6_apply":"应用",
+  "ipv6_cancel":"取消",
+
+  "pf_mostRulesAlert":"你最多可以配置8条规则。",
+  "pf_most16RulesAlert":"你最多可以配置16条规则。",
+  "pf_noRuleAlert":"当前没有规则，不能删除。",
+  "pf_noChooseAlert":"请先选定一个规则再执行删除",
+  "pf_deleteRuleConfirm":"您确定要删除选中的规则吗?",
+
+  "Please enter DstPrefix!":"请输入目的前缀!",
+  "Please enter Nexthop!":"请输入下一跳地址!",
+
+  "Nexthop_IllegalAlert":"下一跳Ipv6 IP地址错误，请重新输入!",
+  "DstPrefix_IllegalAlert":"目的前缀错误，请重新输入!"
+ 
+}

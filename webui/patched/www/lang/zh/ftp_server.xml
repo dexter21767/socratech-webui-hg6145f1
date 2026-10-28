@@ -1,0 +1,17 @@
+{
+  "ftpServer_Prompt":"您可以在本页面打开FTP服务器功能，并配置用户名密码等。",
+  "ftpServer_head":"FTP服务器",
+  "ftpServer_enableTitle":"开启",
+  "ftpServer_disableTitle":"关闭",
+  "ftpServer_userTitle":"用户名",
+  "ftpServer_userTips":"(您可以最多输入32个字符，包括: 数字 字母 _)",
+  "ftpServer_pwdTitle":"密码",
+  "ftpServer_pwdTips":"(您可以最多输入8个字符，包括: 数字 字母 _)",
+  "ftpServer_apply":"提交",
+  "ftpServer_cancel":"取消",
+  "ftpServer_userNullAlert":"请输入用户名!",
+  "ftpServer_userIllegalAlert":"请输入最多输入32个字符，包括: 数字 字母 _",
+  "ftpServer_passNullAlert":"请输入密码!",
+  "ftpServer_passIllegalAlert":"请输入最多输入8个字符，包括: 数字 字母 _"
+  
+}

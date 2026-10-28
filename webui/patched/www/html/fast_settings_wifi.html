@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+			document.write('<script  src="../js/aes.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/fast_settings_wifi_eg.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<STYLE type="text/css">
+	.main_item_content_eg {
+		background-color: rgb(235, 232, 232);
+		padding-left: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		height: 24px;
+		width: calc(73% - 3px);
+		margin: 1px;
+		margin-left: 0px;
+		box-sizing: border-box;
+		float: left;
+	}
+
+	a {
+		cursor: pointer;
+	}
+</STYLE>
+
+<body style="background-color: rgb(235, 232, 232);">
+	<form id="wifi_form" method="post" style="display: flex;justify-content: center;align-items: center;">
+		<div style="top: 30px;width: 450px;">
+			<div style="margin-top: 20px;">
+				<span style="width: 100px;">WiFi Settings</span>
+				<div class="main_item_content_eg" style="width: 300px;float:right">
+					<div class="switch_content switch_content_off" id="WlanEnable_container">
+						<input type="hidden" name="WlanEnable" id="WlanEnable">
+					</div>
+				</div>
+			</div>
+			<div id="wifi_setting_div" style="margin-top: 40px; margin-bottom: 20px;">
+				<div style="margin-top: 40px; margin-bottom: 20px;">
+					<div style="width: 200px;">2.4G WiFi Name</div>
+					<div style="width: 400px;">
+						<input type="text" style="width: 400px;cursor:text;background:white;height: 20px;"
+							autocomplete="off" name="SSID" id="SSID" />
+					</div>
+				</div>
+				<br>
+				<div style="margin-top: 20px; margin-bottom: 20px;">
+					<div style="width: 200px;">2.4G Security Mode</div>
+					<div style="width: 400px;">
+						<select name="BeaconType" id="BeaconType" onchange="change_type()"
+							style="background:white;height: 25px;width: 400px">
+							<option value="Basic">OpenSystem</option>
+							<option value="11i">WPA2-PSK</option>
+							<option value="WPA/WPA2">WPA-PSK/WPA2-PSK</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<div id="wpa_div">
+					<div style="margin-top: 20px; margin-bottom: 20px;">
+						<div style="width: 200px">2.4G Password</div>
+						<div style="width: 400px">
+							<input type="password" style="width:400px;cursor:text;height: 20px;" autocomplete="off"
+								name="PreSharedKey" id="PreSharedKey" />
+						</div>
+					</div>
+					<br>
+					<div style="margin-top: 20px; margin-bottom: 20px;">
+						<div style="width: 200px;">2.4G Encryption</div>
+						<div style="width: 400px;">
+							<select name="WPAEncryptionModes" id="WPAEncryptionModes" disabled="disabled"
+								style="background:white;height: 25px;width: 400px">
+								<option value="AESEncryption">AES</option>
+								<option value="TKIPandAESEncryption">TKIP + AES</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<br>
+				<!-- <div style="margin-top: 20px; margin-bottom: 20px;">
+					<input type="checkbox" id="bandsteering" />&nbsp;<font>Band steering (keep 2.4G and 5G same)</font>
+				</div> -->
+                <div style="margin-top: 20px;">
+                <span style="width: 100px;">Bandsteering Settings</span>
+                <div class="main_item_content_eg" style="width: 200px;float:right">
+                	<div class="switch_content switch_content_off" id="bandsteering_enable_container">
+                		<input type="hidden" name="bandsteering_enable" id="bandsteering_enable">
+                	</div>
+                </div>
+                </div>
+                
+                <div id="5g_wifi_setting" style="display: none;">
+                    <div style="margin-top: 40px; margin-bottom: 20px;">
+                        <div style="width: 200px;">5G WiFi Name</div>
+                        <div style="width: 400px;">
+                            <input type="text" style="width: 400px;cursor:text;background:white;height: 20px;"
+                                autocomplete="off" name="SSID" id="5GSSID" />
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 20px; margin-bottom: 20px;">
+                        <div style="width: 200px;">5G Security Mode</div>
+                        <div style="width: 400px;">
+                            <select name="BeaconType" id="5GBeaconType"  onchange="change_type_5G()" 
+                                style="background:white;height: 25px;width: 400px">
+                                <option value="Basic">OpenSystem</option>
+                                <option value="11i">WPA2-PSK</option>
+                                <option value="WPA/WPA2">WPA-PSK/WPA2-PSK</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div id="5Gwpa_div">
+                        <div style="margin-top: 20px; margin-bottom: 20px;">
+                            <div style="width: 200px">5G Password</div>
+                            <div style="width: 400px">
+                                <input type="password" style="width:400px;cursor:text;height: 20px;" autocomplete="off"
+                                    name="PreSharedKey" id="5GPreSharedKey" />
+                            </div>
+                        </div>
+                        <br>
+                        <div style="margin-top: 20px; margin-bottom: 20px;">
+                            <div style="width: 200px;">5G Encryption</div>
+                            <div style="width: 400px;">
+                                <select name="WPAEncryptionModes" id="5GWPAEncryptionModes" disabled="disabled"
+                                    style="background:white;height: 25px;width: 400px">
+                                    <option value="AESEncryption">AES</option>
+                                    <option value="TKIPandAESEncryption">TKIP + AES</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<br />
+			<div style="margin-top: 20px;">
+				<a style="width: 100px;margin-left: 150px;" onclick="wifiApply()">Done</a>
+			</div>
+		</div>
+		<div>
+
+		</div>
+	</form>
+</body>
+
+</html>

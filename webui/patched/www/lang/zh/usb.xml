@@ -1,0 +1,58 @@
+{
+  "usb disable":"开启",
+  "usb enable":"关闭",
+  "usb add":"新增",
+  "usb edit":"编辑",
+  "usb del":"删除",
+  "usb apply":"提交",
+  "usb cancel":"取消",
+  "usb reset":"重置",
+  
+  "usb_loadPrompt":"您可以向ftp服务器上传文件，或从ftp服务器下载文件。",
+  "usb_storgeHead":"FTP客户端",
+  "usb_typeTitle":"类型",
+  "usb_ftpUserTitle":"用户名",
+  "usb_ftpPwdTitle":"密码",
+  "usb_ftpIPTitle":"FTP服务器IP",
+  "usb_ftpPortTitle":"FTP服务器端口",
+  "usb_localFileTitle":"本地文件名",
+  "usb_remoteFileTitle":"远端文件名",
+  "usb_diskNoTitle":"本地盘符",
+  
+  "usb_ftpUserTips":"（请输入1-32个字符, 包括数字、字母和'_'）",
+  "usb_ftpPwdTips":"（请输入0-32个字符, 包括数字、字母和'_'）",
+  "usb_ftpPortTips":"（0 ~ 65535）",
+  "usb_ftpIPTips":"（十进制格式，例如：192.168.1.2）",
+  "usb_localFileTips":"（请输入1-128个字符, 包括数字、字母、'_' 、'/' 、'.'和'-'）",
+  "usb_remoteFileTips":"（请输入1-128个字符, 包括数字、字母、'_' 、'/' 、'.' 和 '-'）",
+  "usb_fileTips":"（请输入1-128个字符, 包括数字、字母、'_' 、'/' 、'.' 和 ':'）",
+    
+  "usb_userIllegalAlert":"请输入合法的用户名！",
+  "usb_pwdIllegalAlert":"请输入合法的密码！",
+  "usb_ipIllegalAlert":"请输入合法的IP地址！",
+  "usb_portIllegalAlert":"合法的端口范围是0-65535.",
+  "usb_fileIllegalAlert":"请输入合法的文件名！",
+  
+  "usb_cfgBakPrompt":"在本页面，您可以将设备当前配置文件备份到USB设备中。",
+  "usb_cfgBakTitle":"USB Backup Directory",
+  "usb_cfgBak":"Download Backup",
+  "usb_idle":"无USB存储设备",
+  "usb_cfgBakSuccess":"下载配置文件成功!",
+  
+  "usb_serverError":"系统错误!",
+  "usb_serverError1":"系统错误1!",
+  "usb_serverError2":"系统错误2!",
+  "usb_serverError3":"系统错误3!",
+  
+  "usb_cfgRestorePrompt":"在本页面，您可以用USB设备上保存的配置文件更新您的设备。",
+  "usb_cfgRestoreTitle":"USB恢复路径",
+  "usb_filenameTitle":"配置文件",
+  "usb_cfgRestore":"恢复",
+  "usb_cfgRestoreSuccess":"配置文件恢复成功!",
+  "usb_openFileFail":"指定文件打开失败!",
+  "usb_readFileFail":"指定文件读取失败!",
+  "usb_restoreFail":"配置文件恢复失败!",
+  
+  "rebooting":"设备正在重启，此过程需要若干分钟，在此期间请勿将设备断电或进行其他操作。稍候请在登录页面重新登录。"
+
+}

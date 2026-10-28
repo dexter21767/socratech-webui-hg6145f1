@@ -1,0 +1,158 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language="javascript " type="text/javascript">
+		document.write('<script  src="../js/util.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/jquery.form.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+		document.write('<script  src="../js/ledstate.js?' + new Date().getTime() + '"><' + '/' + 'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("update");
+</script>
+<style type="text/css">
+	#progress {
+		height: 40px;
+		width: 400px;
+		border: none;
+	}
+
+	.inner-progress {
+		background: rgba(255, 107, 49, 1);
+		margin-top: 10px;
+	}
+
+	.button1 {
+		border-radius: 8px;
+		width: 235px;
+		height: 40px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: #2e2e31;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		background-image: url('../image/new_ui/download_icon.png');
+		background-repeat: no-repeat;
+		background-position-x: 10px;
+		background-position-y: center;
+		text-indent: 20px;
+	}
+
+	.button1:hover {
+		cursor: pointer;
+	}
+	.type-file-box {
+		position: absolute;
+		width: 260px
+	}
+
+	input {
+		vertical-align: middle;
+		margin: 0;
+		padding: 0
+	}
+
+	.type-file-text {
+		height: 32px;
+		border: 1px solid #cdcdcd;
+		width: 350px;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		font-family: PingFangSC-Regular;
+		background-color: #2e2e31;
+		outline: none;
+		text-indent: 5px;
+	}
+
+	.type-file-button {
+		background-color: rgba(255, 255, 255, 0.2);
+		border: none;
+		border-radius: 8px;
+		height: 40px;
+		width: 240px;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 14px;
+		background-image: url('../image/new_ui/download.png');
+		background-repeat: no-repeat;
+		background-position-x: 60px;
+		background-position-y: center;
+	}
+	.type-file-file2,.type-file-file1,
+	.type-file-button,.type-file-text,
+	.type-file-file:hover {
+		cursor: pointer;
+	}
+
+	.type-file-file1 {
+		position: fixed;
+		height: 14px;
+		opacity: 0;
+		width: 14px;
+		margin-left: -16px;
+  		margin-top: 17px;
+	}
+	.type-file-file2 {
+		position: fixed;
+		height: 30px;
+		opacity: 0.01;
+		width: 380px;
+		margin-top: -35px;
+	}
+	.ledstate_tip {
+		height: 54px;
+		line-height: 56px;
+		font-size: 14px;
+		font-family: PingFangSC-Regular;
+		color: rgba(255, 255, 255, 0.8);
+		display: block;
+		margin-bottom: -25px;
+	}
+	input::placeholder{
+		text-align: left;
+	}
+</style>
+
+<body class='main_config_body'>
+	<div style="display: flex;align-items: center;justify-content: center;flex-direction: column;height: calc(100vh - 40px);">
+		<div>
+			<img src="../image/new_ui/update.png">
+		</div>
+		<form enctype="multipart/form-data" method="post" action="../nginx_upgradecgi?method=upload&action=upgradeimage"
+			id="upgrade_form">
+			<div class="main_button" id="upgrade_submit" style="margin-left: 70px;">
+				<div>
+					<div>
+						<div style="float: left;margin-top: 8px;">
+						<font style="color: rgba(255, 255, 255, 1);margin-left: -78px;font-size: 14px;
+						font-family: PingFangSC-Regular"><span i18n="File Path">File Path</span>:</font>&nbsp&nbsp
+						</div>
+						<input type='text' name='upgradefile' id='upgradefile' class='type-file-text' readonly  placeholder="choose upgrade file"/>
+						<img src="../image/new_ui/file.png" id="edit" style="margin-left: 10px;width: 15px;height: 15px;">
+						<img src="../image/new_ui/delete.png" id="del" style="margin-left: 10px;width: 15px;height: 15px;"
+						onclick="deleteFile()">
+					</div>
+					<div>
+						<input name="fileField" type="file" class="type-file-file2" id="fileField" size="28"
+								onchange="javascript:document.getElementById('upgradefile').value=this.value.slice(12);"/>
+					</div>
+				</div>
+				<div>
+					<input type="submit" class="input_button"  id="upgrade_button"  style="margin-top: 10px;margin-left: 60px" i18n="Upload File" i18n-set="value"/>
+				</div>
+			</div>
+			<div id="div_info" style="display: none;">
+				</br>
+				<span id="update_info" class="ledstate_tip" style="margin-left: 70px; font-size: 12px;">
+				</span>
+				<div id="progress" style="display: none;">
+					<div class="inner-progress">&nbsp;</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

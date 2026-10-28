@@ -1,0 +1,58 @@
+{
+  "content_trans_apply":"Aplicar",
+  "content_trans_cancel":"Cancelar",
+  
+  "update_prompt":"En esta página, puede actualizar el software del equipo terminal. No apague durante la actualización ni realice otras operaciones, para no causar daños y no se pueda utilizar.",
+  "update_chooseFile":"Elija el archivo y actualice",
+  "update_info":"Las actualizaciones llevarán tiempo, tenga paciencia...",
+  "update_back":"Atrás",
+  
+  "update_format_illegal":"El formato de archivo es ilegal, ¡vuelva a seleccionarlo!",
+  "update_success":"¡La actualización fue exitosa!",
+  "update_fail":"Error en el archivo de actualización, inténtelo de nuevo.",
+  "update_restart":"¡Por favor, reinicie el dispositivo!",
+  "update_api_error":"¡Compruebe si el archivo de actualización es correcto!",
+  "update_space_not_enough":"¡El espacio del dispositivo no es suficiente! ¡Reinicie e inténtelo de nuevo!",
+  "update_restartConfirm":"Es necesario reiniciar la ONU ¡Inicie sesión en la administración de red WEB después del reinicio de la ONU!",
+  "update_restartAlert":"¡La actualización fue exitosa! La ONU se reiniciará automáticamente.",
+  "update_restart_AP_Alert":"¡La actualización fue exitosa! El AP se reiniciará automáticamente.",
+  
+  "down_cfgFilePrompt":"En esta página, puede hacer una copia de seguridad de varios archivos de configuración del dispositivo a la PC como desee después de abrir la herramienta FTP.",
+  "down_cfgFileHead":"Configuración de copia de seguridad ",
+  "down_cfgFileUserTitle":"Nombre de usuario",
+  "down_cfgFilePwdTitle":"Contraseña",
+  "down_cfgFileIPTitle":"IP de host local",
+  "down_cfgFileNameTitle":"Nombre de archivo", 
+  
+  "down_cfgFileUserTips":"(Puede introducir de 1 a 20 caracteres, incluidos los alfanuméricos, '_' y '.')",
+  "down_cfgFilePwdTips":" (Puede introducir de 0 a 20 caracteres, incluidos los alfanuméricos, '_' y '.')",
+  "down_cfgFileIPTips":" (Formato decimal)",
+  "down_cfgFileNameTips":"(Puede introducir de 1 a 64 caracteres, incluidos los alfanuméricos, '_' y '.')",
+  
+  "down_cfgFileUserIllegalAlert":"¡Por favor, introduzca un nombre de usuario válido!",
+  "down_cfgFilePwdIllegalAlert":"¡Por favor, introduzca una contraseña válida!",
+  "down_cfgFileIPIllegalAlert":"¡Por favor, introduzca una IP válida!",
+  "down_cfgFileFileIllegalAlert":"¡Por favor, introduzca un nombre de archivo válido!",
+  
+  "cfg_download_prompt":"Puede descargar el archivo de configuración actual en el equipo local.",
+  "cfg_download":"Configuración de copia de seguridad ",
+  
+  "cfg_upload_prompt":"Si ingresa la ruta del archivo de configuración y la elige, su dispositivo se actualizará con el archivo de configuración guardado.",
+  "cfg_upload_title":"Actualizar archivo de configuración",
+  "cfg_uploadTips":"El nombre del archivo de configuración solo puede contener '_' y alfanumérico.",
+  "cfg_upload_import":"Importación",
+  "cfg_upload_load":"Cargando",
+  "cfg_upload_fileIllegalAlert":"¡Por favor, seleccione el archivo de configuración correcto!",
+  "cfg_upload_complete":"¡Actualización del archivo de configuración completa!",
+  "cfg_upload_failed":"¡Error en la actualización del archivo de configuración!",
+  
+  "rebooting":"El sistema se está reiniciando... Espere un momento y vuelva a iniciar sesión después de reiniciar.",
+  "updata_file":"Actualizar archivo",
+  "upgrade_nofile_err":"Por favor, seleccione un archivo",
+  "choose_file":"Seleccione el archivo",
+  "Upload File":"Cargar archivo",
+  "File Path":"Ubicación",
+  "choose upgrade file":"Seleccione el archivo de actualización"
+
+}  
+

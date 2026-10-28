@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/band_steering_mex_tp.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("wireless");
+	</script>
+	<style type="text/css">
+	    .input_text {width: 124px;}
+	</style>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="security_prompt">security_prompt</font></p>
+		</div>
+		<br/>
+		<fh-fo-rm id="wlanAdv_settings_form">
+			<div class="main_content">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="band_steering">band_steering</font></div>
+				</div>
+				<div class="main_item" id="switch">
+					<div class="main_item_name"><font i18n="bandsteering_button">bandsteering_button</font></div>
+					<div class="main_item_content">
+						<div class="switch_content switch_content_off" id="WlanEnable_container">
+							<input type="hidden" name="WlanEnable_checkbox" id="WlanEnable_checkbox">
+						</div>
+					</div>
+				</div>
+				<br/>
+				<div id="change_bandSteering_mode">
+				<div class="table_bg">
+					<div class="table_title"><font i18n="security_netName">security_netName(SSID)</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="security_netName">security_netName</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width:188px" autocomplete="off" id="SSID" name="SSID"/>
+						<span class="redcolorfont">*</span>
+						<font i18n="ssidNameTips">ssidNameTips</font>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <font id="hide_tip" style="display: none;" i18n="basic_hssid">basic_hssid</font>
+                            <input  style="display: none;" type="checkbox" id="X_FH_SSIDHide" name="X_FH_SSIDHide">
+                    </div>
+				</div>
+				<div class="main_item" id="isolation_enable_div" style="display: none;">
+					<div class="main_item_name"><font i18n="SSID_Isolation">SSID Isolation</font></div>
+					<div class="main_item_content" id="ssid_isolation">
+						<input id="ssid_isolation_enable" type="radio" name="ssid_isolation" value="1">On&nbsp;&nbsp;&nbsp;
+						<input id="ssid_isolation_disable" type="radio" name="ssid_isolation" value="0" checked="checked">Off&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				<br/>
+				<div class="table_bg">
+					<div class="table_title"><font i18n="secure_security_policy">secure_security_policy</font></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="secure_security_mode">secure_security_mode</font></div>
+					<div class="main_item_content">
+						<select name="BeaconType" id="BeaconType">
+							<option value="Basic">OpenSystem</option>
+                            <option value="WPA">WPA-PSK</option>
+                            <option value="WPA/WPA2">WPA-PSK/WPA2-PSK</option>
+                            <option value="11i">WPA2-PSK</option>
+                            <option value="WPA3" id="WPA3" style="display: none;">WPA3-SAE</option>
+                            <option value="WPA2/WPA3" id="WPA2WPA3" style="display: none;">WPA2-PSK/WPA3-SAE</option>  
+						</select>
+					</div>
+				</div>
+				<div class="main_item" id="reAuthentication_div" style="display: none;">
+					<div class="main_item_name"><font i18n="reAuthentication">reAuthentication</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width:222px" autocomplete="off" id="reAuthentication" name="reAuthentication"/>
+						<font i18n="reAuthenticationTip">reAuthenticationTip</font>
+					</div>
+				</div>
+				<div class="main_item" id="open_div" style="display: none">
+					<div class="main_item_name" style="margin-top:0px"><font i18n="basic_wds_encryp_type">basic_wds_encryp_type</font></div>
+					<div class="main_item_content" style="margin-top:0px">
+						<select name="BasicAuthenticationMode"  id="BasicEncryptionModes">
+							<!-- <option value="WEPEncryption">WEP</option> -->
+							<option value="None" selected>None</option>
+						</select>
+					</div>
+				</div>
+				<br/>
+				
+				<div id="wpa_div" >
+					<div class="table_bg">
+						<div class="table_title"><font i18n="secure_wpa">secure_wpa</font></div>
+					</div>
+					<div class="main_item">
+						<div class="main_item_name"><font i18n="secure_wpa_algorithm">secure_wpa_algorithm</font></div>
+						<div class="main_item_content">
+							<input id="Aesencryption" type="radio" checked name="WPAEncryptionModes"  disabled value="AESEncryption">AES&nbsp;&nbsp;&nbsp;
+                            <input id="Tkipaesncryption" type="radio" name="WPAEncryptionModes"  disabled value="TKIPandAESEncryption">TKIPAES&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+					<div class="main_item" id="wpa3_div">
+						<div class="main_item_name"><font i18n="secure_wpa_pass_phrase">secure_wpa_pass_phrase</font></div>
+						<div class="main_item_content">
+							<input type="text" class="input_text input_short fh-text-security" autocomplete="off" id="PreSharedKey" name="PreSharedKey" style="width:188px"/>
+							<input id="show_password"  type="checkbox" style="height: 12px; display: none;" class="input_button" i18n="change_eye" i18n-set="value" onclick="change_eye()"/>&nbsp; &nbsp;
+                            <span class="redcolorfont">*</span><font id="common_password_tip" style="display: none;" i18n="wpa_passphraseTips">wpa_passphraseTips</font>
+                            <font id="pldt_password_tip" style="display: none;" i18n="wpa_passphraseTips_pldt">wpa_passphraseTips_pldt</font>
+                            <font id="telmex_password_tip" style="display: none;" i18n="wpa_passphraseTips_telmex">wpa_passphraseTips_telmex</font>
+						</div>
+					</div>
+				</div>
+				
+				<div class="table_bg" id="2g_5gRssi">
+					<div class="table_title"><font i18n="wifi_rssi">wifi_rssi</font></div>					
+				
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="2.4Gwifi_rssi">2.4Gwifi_rssi</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width:100px" autocomplete="off" id="24g_rssi" name="24g_rssi"/>
+						<span class="redcolorfont">*</span><font i18n="rssi_tips">rssi_tips</font>
+					</div>
+					<div class="main_item_name"><font i18n="5Gwifi_rssi">5Gwifi_rssi</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width:100px" autocomplete="off" id="5g_rssi" name="5g_rssi"/>
+						<span class="redcolorfont">*</span><font i18n="rssi_tips">rssi_tips</font>
+					</div>
+				</div>
+				</div>
+				<div class="main_item" id="button_div">
+					<div class="main_submit" style="width: 25%;"></div>
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="wireless_apply" onclick="saveApply()" i18n="wireless_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="wireless_cancel" onclick="window.location.reload()" i18n="wireless_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+				
+				</div>
+				<div class="main_item" id="button_div_AIS" style="display: none">
+					<div class="main_submit" style="width: 25%;"></div>
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" id="wireless_apply_ais" onclick="saveApply()" i18n="wireless_apply" i18n-set="value" class="input_button">&nbsp; &nbsp;
+						<input type="button" id="wireless_cancel_ais" onclick="window.location.reload()" i18n="wireless_cancel" i18n-set="value" class="input_button">
+					</div>
+				</div>
+				
+			</div>
+		</fh-fo-rm>
+	</body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/ddos_enable_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script>
+	</head>
+	<script type="text/javascript">
+		setDomain("firewall");
+	</script>
+	<body class='main_config_body'>
+		<div class="main_header">
+			<p class="main_header_hint"><font i18n="pro_ddos_prompt">pro_ddos_prompt</font></p>
+		</div>
+        <br/>
+        <form method=post name="fw_set_ddos_attack">
+            <table class="table_bg" border="0" cellpadding="0" cellspacing="1" width="100%"  id = "pro_ddosset" >
+            <tbody>
+                <tr class="table_title">
+                    <td colspan="2" id="dos_set_tittle" i18n="ddos_set_tittle">DDOS ATTACK</td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_syn_flood_attack">Prevent SYN Flood Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check1" value="1"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_icmp_echo_attack">Prevent ICMP Echo Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check2" value="2"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_icmp_redirection_attack">Prevent ICMP Redirection Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check3" value="4"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_land_attack">Prevent LAND Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check4" value="8"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_smurf_attack">Prevent Smurf Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check5" value="16"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_winnuke_attack">Prevent WinNuke Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check6" value="32"></td>
+                </tr>
+                <tr>
+                    <td class="table_left" width="35%" id="ddos_attack_title"><font i18n="ddos_prevent_ping_sweep_attack">Prevent Ping Sweep Attack</font></td>
+                    <td class="table_right" ><input type="checkbox" name="ddos_attack_check" id="ddos_attack_check7" value="64"></td>
+                </tr>
+                <tr>
+                    <input id="submit_value" value="" style = "display:none">
+                </tr>
+            </tbody>
+        </table>
+		<div class="main_item" id = "ddos_attack_apply">
+			<div class="main_submit" style="width: 25%;"></div>				
+			<div class="main_submit" style="width: 75%;">
+				<input class="input_button"type="button" id="ddos_apply" i18n="firewall_apply"  i18n-set="value" onclick="save_apply()" >
+                        &nbsp; &nbsp;
+                <input class="input_button" type="button" id="ddos_cancel" i18n="firewall_cancel" i18n-set="value" onClick="window.location.reload()">
+			</div>
+		</div>
+    </form>
+	</body>
+</html>

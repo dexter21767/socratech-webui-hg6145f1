@@ -1,0 +1,28 @@
+{
+  "pt_PortTriggerPrompt":"En esta página, puede configurar la ruta estática IPv6.",
+
+  "fw_filterListHead":"Lista de rutas estáticas IPv6",
+  "DstPrefix_title":"Prefijo de destino",
+  "Nexthop_title":"Proximo salto",
+  "pf_wannameTitle":"Nombre de WAN",
+
+  "pf_add":"Agregar",
+  "pf_delete":"Borrar",
+  "pf_deleteAll":"Eliminar todo",
+
+  "ipv6_apply":"Aplicar",
+  "ipv6_cancel":"Cancelar",
+
+  "pf_mostRulesAlert":"¡Puede configurar 8 reglas como máximo!",
+  "pf_most16RulesAlert":"¡Puede configurar 16 reglas como máximo!",
+  "pf_noRuleAlert":"No hay reglas existentes. No se pueden eliminar.",
+  "pf_noChooseAlert":"¡Por favor, seleccione una regla y luego elimínela!",
+  "pf_deleteRuleConfirm":"¿Está seguro de eliminar la regla seleccionada?",
+
+  "Please enter DstPrefix!":"¡Por favor, introduzca el prefijo del destino!",
+  "Please enter Nexthop!":"¡Por favor, introduzca el siguiente salto!",
+  "Nexthop_IllegalAlert":"¡La dirección IPv6 del siguiente salto es ilegal!",
+  "DstPrefix_IllegalAlert":"¡El prefijo IPv6 del destino es ilegal!"
+ 
+}
+

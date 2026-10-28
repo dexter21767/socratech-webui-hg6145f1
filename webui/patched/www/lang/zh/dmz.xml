@@ -1,0 +1,32 @@
+{
+  "dmz_prompt":"在本页面上，您可以将一台主机的IP设置到DMZ。",
+  "dmzEnable_title":"DMZ使能",
+  "dmz_enable":"启用",
+  "dmz_disable":"禁用",
+  "dmz_auto":"自动",
+  "dmz_hostTips":"DMZ主机IP",
+  "dmz_add":"新增",
+  "dmz_delete":"删除",
+  "dmz_deleteAll":"删除所有",
+  "dmzRuleListHead":"DMZ规则列表",
+  "dmz_wannameTips":"WAN名称",
+  "dmz_most4rulealert":"您最多可创建4条规则！",
+  "fw_noRuleAlert":"没有已创建的规则，无法删除！",
+  "fw_noChooseAlert":"请先选定一个规则再执行删除",
+  "fw_ipIllegalAlert":"请输入有效IP",
+  "fw_deleteRuleConfirm":"确定删除选定规则？",
+  "dmz_iprepeat":"您输入的主机IP与已有规则重复，请重新输入。",
+  "dmz_wannamerepeat":"您绑定的WAN Name与已有规则重复，请重新选择。",
+  
+  
+  "dmz_apply":" 提交",
+  "dmz_cancel":"取消",
+  "reset_rf":"恢复默认值",
+  "dmz_noipalert":"请输入IP地址!",
+  "dmz_ipillegalalert":"请输入合法IP地址!",
+   "rf_prompt":"您可以在本页面上调节RF输出电平。",
+  "rf_hostTips":"RF输出电平调节幅度",
+  "rf_IllegalAlert":"请输入正确的RF输出电平调节幅度 [-127,127]"
+  
+}
+

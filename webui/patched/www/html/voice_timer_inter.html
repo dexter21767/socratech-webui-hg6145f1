@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+	<script language ="javascript "type ="text/javascript">
+        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/base64.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		document.write('<script  src="../js/voice_timer_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+	</script>
+</head>
+<script type="text/javascript">
+	setDomain("voip");
+</script>
+<style type="text/css">
+	.main_item_error_hint {color: red; clear: both;}
+	.input_text {width: 169px;}
+</style>
+<body class='main_config_body'>
+	<div class="main_header">
+		<p class="main_header_hint"><font i18n="timer_promt">timer_promt</font></p>
+	</div>
+	<fh-fo-rm id="voice_dial_form">
+		<br/>
+		<div class="table_bg">
+			<div class="table_title"><font i18n="timer_title">timer_title</font></div>
+			<div class="main_content table_bg" width="100%" cellspacing="1" cellpadding="0" border="0" id="ims_sip_div" style="display:none">
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="logplotmode_title">logplotmode_title</font></div>
+					<div class="main_item_content">
+						<select id="DigitMapMode_select" name="DigitMapMode_select" class="main_select">
+							<option value="0" i18n="max_title"></option>
+							<option value="2" i18n="min_title"></option>
+						</select>
+					</div>
+				</div>
+				<div class="main_item" style="height: 82px;">
+					<div class="main_item_name" style="height: 80px;line-height: 80px"><font id="auto_height" i18n="logplot_title">logplot_title</font></div>
+					<div class="main_item_content" style="height: 80px"><textarea  style="width: 98% ; height:70px" id="DigitMap_text"></textarea></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="sipregistperiod_title">sipregistperiod_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="RegisterExpires_text" name="RegisterExpires_text"/><font style="color: gray">120~65335(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="shortdigittimer_title">shortdigittimer_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="ShortTimerValue_text" name="ShortTimerValue_text"/><font style="color: gray">1~10(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="longdigittimer_title">longdigittimer_title</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="LongTimerValue_text" name="LongTimerValue_text"/><font style="color: gray">4~20(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="startdigittimer_title">起始定时器</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="StartDigitTimer_text" name="StartDigitTimer_text"/><font style="color: gray">1~254(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voiplongcalltime_title">久叫不应的时间</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="NoAnswerTimer_text" name="NoAnswerTimer_text"/><font style="color: gray">1~254(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voiphanguptime_title">催挂音时间</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="HangingReminderToneTimer_text" name="HangingReminderToneTimer_text"/><font style="color: gray">1~254(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voipbusytime_title">忙音时间</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="BusyToneTimer_text" name="BusyToneTimer_text"/><font style="color: gray">1~254(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+                <div class="main_item" id="ringback_time_div" style="display: none;">
+                	<div class="main_item_name"><font i18n="voipringbacktime_title">ringback_time</font></div>
+                	<div class="main_item_content">
+                		<input type="text" class="input_text"  id="BusyRingbacktime_text" name="BusyRingbacktime_text"/><font style="color: gray">1~254(s)</font>
+                	</div>
+                	<div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voipreinter_title">注册消息重传间隔</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="RegisterRetryInterval_text" name="RegisterRetryInterval_text"/><font style="color: gray">
+						30~3600(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="voipsonwtime_title">雪崩定时器</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="MaxWaitDelay_text"  name="MaxWaitDelay_text"/><font style="color: gray">1~254(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item">
+					<div class="main_item_name"><font i18n="flashtime_title">拍插簧时间范围</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" style="width:68px" autocomplete="off" id="HookFlashDownTime_text" name="HookFlashDownTime_text"/>--<input type="text" style="width:68px" class="input_text" autocomplete="off" id="HookFlashUpTime_text" name="HookFlashUpTime_text"/>
+						<font id="slidingspring_tip"  i18n="slidingspring_tip" style="color: gray">slidingspring_tip</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item" id="div_ring_cadences" style="display: none;">
+                    <div class="main_item_name"><font i18n="ring_cadences_title">ring_cadences_title</font></div>
+                    <div class="main_item_content">
+                        <select id="ring_cadences" name="ring_cadences" class="main_select">
+							<option value="Default" selected=selected i18n="ring_cadences_default">Default</option>
+                            <option value="R0" i18n="ring_cadences_r0">R0</option>
+                            <option value="R1" i18n="ring_cadences_r1">R1</option>
+                            <option value="R2" i18n="ring_cadences_r2">R2</option>
+                            <option value="R3" i18n="ring_cadences_r3">R3</option>
+                            <option value="R4" i18n="ring_cadences_r4">R4</option>
+                            <option value="R5" i18n="ring_cadences_r5">R5</option>
+                            <option value="R6" i18n="ring_cadences_r6">R6</option>
+                            <option value="R7" i18n="ring_cadences_r7">R7</option>
+                        </select>
+                    </div>
+                </div>
+				<div class="main_item" id="session_timer_enable">
+                    <div class="main_item_name"><font i18n="session_timer_title">使能会话定时器</font></div>
+                    <div class="main_item_content">
+                        <select id="SessionTimerEnable" name="SessionTimerEnable" class="main_select">
+                            <option value="1" selected=selected i18n="session_timer_enable"></option>
+                            <option value="0" i18n="session_timer_disable"></option>
+                        </select>
+                    </div>
+                </div>
+				<div class="main_item" id="session_timer">
+					<div class="main_item_name"><font i18n="session_update_title">会话定时器时长</font></div>
+					<div class="main_item_content">
+						<input type="text" class="input_text" autocomplete="off" id="SessionUpdate_text"  name="SessionUpdate_text" value="1200" /><font style="color: gray">90-65535(s)</font>
+					</div>
+					<div id="voice-error" class="main_item_error_hint_extra"></div>
+				</div>
+                <div class="main_item" id="onHook_confirm_timer"style="display: none;">
+                	<div class="main_item_name"><font i18n="onHook_confirm_timer_title">onHook_confirm_timer_title</font></div>
+                	<div class="main_item_content">
+                		<input type="text" class="input_text" autocomplete="off" id="onHook_confirm_timer_text"  name="onHook_confirm_timer_text"/><font style="color: gray">600~2500(ms)</font>
+                	</div>
+                	<div id="voice-error" class="main_item_error_hint_extra"></div>
+                </div>
+				<div>  
+					<div class="main_submit" style="width: 25%;"></div>             
+					<div class="main_submit" style="width: 75%;">
+						<input type="button" class="input_button" id="voip_apply" i18n="voip_apply" i18n-set="value" onclick="saveApply()"/>&nbsp; &nbsp;
+						<input type="button" class="input_button" id="voip_cancel" i18n="voip_cancel" i18n-set="value" onclick="window.location.reload()"/>
+					</div>
+				</div>
+			</div>	
+			<div class="main_content table_bg" id="h248_div" style="display:none">
+				<div width="100%" cellspacing="0" cellpadding="3" border="0">
+					<div>
+						<div class="table_left_item">摘机不拨号时间</div>
+						<div class="table_right_item">
+							<input type="text" class="" autocomplete="off" id="StartDialingTimer_text" name="StartDialingTimer_text"/>(10~20)s
+						</div>
+					</div>
+					<div>
+						<div class="table_left_item"><font i18n="longdigittimer_title">longdigittimer_title</font></div>
+						<div class="table_right_item">
+							<input type="text" class="" autocomplete="off" id="LongTimerValue_text2" name="LongTimerValue_text2"/>
+						</div>
+					</div>
+					<div>
+						<div class="table_left_item"><font i18n="shortdigittimer_title">shortdigittimer_title</font></div>
+						<div class="table_right_item">
+							<input type="text" class="" autocomplete="off" id="ShortTimerValue_text2" name="ShortTimerValue_text2"/>
+						</div>
+					</div>
+					<div>   
+						<div class="main_submit" style="width: 25%;"></div>             
+						<div class="main_submit" style="width: 75%;">
+							<input type="button" class="input_button" id="voip_timer_apply" i18n="voip_apply" i18n-set="value" onclick="saveApply()"/>&nbsp; &nbsp;
+							<input type="button" class="input_button" id="voip_timer_cancel" i18n="voip_cancel" i18n-set="value" onclick="window.location.reload()"/>
+						</div>
+					</div>		            
+				</div>
+			</div>
+		</div>
+	</fh-fo-rm>
+</body>
+</html>

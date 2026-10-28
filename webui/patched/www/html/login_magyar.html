@@ -1,0 +1,62 @@
+<html>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<meta charset="utf-8">
+<script language="JavaScript" type="text/javascript">
+document.write('<script  src="../js/jquery.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/xhr.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/aes.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/jquery.validate.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../language/messages_en.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/i18n.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/login_romania.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/login_romania2.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<script  src="../js/page_access_check.js?'+new Date().getTime()+'"><'+'/'+'script>');
+document.write('<link rel="stylesheet" type="text/css" href="../css/style_romania.css?'+new Date().getTime()+'"><'+'/'+'link>');
+document.write('<link rel="stylesheet" type="text/css" href="../css/login_romania.css?'+new Date().getTime()+'"><'+'/'+'link>');
+</script>
+<title>Redirected</title>	
+<script language="JavaScript" type="text/javascript">
+loginHtmlAccessCheck(goperator_name, "login_romania.html");
+setDomain('menu');
+</script>
+</head>
+<body>
+<div class="login_bg">
+  <div class="logo"><img src="../image/fiberhome_logo_rm.png" alt="logo"></div>
+  <div class="line" id="line">
+    <table align=left cellpadding=0 cellspace=0 border=0>
+      <tr>
+        <td id="line1" valign="top"><img src="../image/line_rm.png" style="opacity:0.2;"> </td>
+        <td id="line2" valign="top"><img src="../image/line_rm.png" style="margin-left:-3px;opacity:0.2;"> </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+<div class="container-fluid login_block">
+  <!--++++++++++++++++++++++++++++ Login step 1 +++++++++++++++++++++++++++++++++-->
+  <div class="row" id="login_setup_1_div" >
+    <div class="content-left" id="login_tip" style="display:none"> <img src="../image/bg_image_rm.png" width="365" height="325" alt=""/> </div>
+    <div class="content-right content-offset"> <br/>
+      <br/>
+      <font face="Arial" style="font-size: 14px;"></font>
+        <div class="login-input">
+          <div id="digi_img" class="step-block"></div>
+          <br>
+          <div class="login-block" style="background:white url(../image/login_user-1_rm.png) no-repeat left;">
+            <input type="text" placeholder="USERADMIN" class="form-control" name="user_name" id="user_name" maxlength="32">
+          </div>
+          <div class="login-block password_block" style="background:white url(../image/login_password-1_rm.png) no-repeat left;">
+            <input type="password" placeholder="PASSWORD" class="form-control login-password" name="loginpp" id="loginpp" maxlength="32" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" AutoCompleteType="Disabled">
+            <span class="pwd-show-switch" id="login_password_show"></span> </div>
+        </div>
+        <input value="LOGIN" type="submit" class="btn" id="btn_login_step_1" disabled="disabled" onClick="onlogin(1)">
+		<span class="error span_error" id="login_error_hint"></span>
+    </div>
+  </div>
+</div>
+<!-- <div id="copyright_div">Copyright &copy; 2018 Fiberhome All Rights Reserved.&nbsp;&nbsp; </div> -->
+</body>
+</html>

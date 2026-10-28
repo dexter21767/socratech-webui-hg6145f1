@@ -1,0 +1,9 @@
+{
+  "redirect_prompt": "Nesta página, você pode configurar o redirecionamento e a página de redirecionamento.",
+  "redirect_title": "Redirecionar",
+  "re_enable": "Habilitado",
+  "re_disable": "Desabilitado",
+  "redirectApply": "Aplicar",
+  "redirectCancel": "Cancelar",
+  "redirect_nourlalert": "Por favor insira o URL!"
+}

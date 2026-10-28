@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<meta HTTP-EQUIV='Pragma' CONTENT='no-cache'>
+		<script language ="javascript "type ="text/javascript">
+	        document.write('<script  src="../js/util.js?'+new Date().getTime()+'"><'+'/'+'script>');
+			document.write('<script  src="../js/portforwarding_inter.js?'+new Date().getTime()+'"><'+'/'+'script>');
+		</script> 
+		
+	</head>
+	<script type="text/javascript">
+		setDomain("application");
+	</script>
+	<body class='main_config_body'>
+		<form id="port_forwarding_list_form">
+			<div style="float:left">
+				<input type="button" value="Add" id="fw_add" class="add_button" onClick="addfilter()">
+				<input type="button" value="Delete" id="fw_delete" class="delete_button" onClick="click_remove()">
+				<br/>
+			</div>
+			<br />
+			<br />		
+			<table width="100%" class="table_title_bg" cellspacing="1" cellpadding="0" border="0">
+				<tr class="table_head_title">
+					<td width="5%" align='center'>
+						<input style="margin-top: 3px" type="checkbox" onclick="selectAll()" id="checkAll">
+					</td>
+					<td width="3%" align='center'><font i18n="app_id">app_id</font></td>
+					<td width="18%" align='center'><font i18n="app_wan">app_wan</font></td>
+					<td width="16%" align='center'><font i18n="app_description">app_description</font></td>
+					<td width="8%" align='center'><font i18n="app_protocol">app_protocol</font></td>
+					<td width="12%" align='center'><font i18n="app_public_port">app_public_port</font></td>
+					<td width="10%" align='center'><font i18n="app_private_ip">app_private_ip</font></td>
+					<td width="12%" align='center'><font i18n="app_private_port">app_private_port</font></td>
+					<td width="7%" align='center'><font i18n="app_enable">app_enable</font></td>
+					<td width="8%" align='center'>
+						<font i18n="operate"></font>
+					</td>
+				</tr>
+				<tbody id='port_forwarding_list' class="table_rule" style="font-size: 12px">
+				</tbody> 
+			</table>
+			</br>
+			<div id="image">
+				<img src="../image/new_ui/no_data.png" style="width: 120px;">
+				<span i18n="No Data">No Data</span>
+			</div>
+			<div class="config_content" id="fw_config_form" style="display: none;">
+				<div class="main_item">
+					<div class="main_item_title">
+						<font id="title"></font>
+						<img src="../image/new_ui/cancel.png" class="cancel_icon">
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><font i18n="app_wan">app_wan</font></div>
+					<div class="main_item_content_cfg">
+						<select id="port_forwarding_wan" class="select"></select>
+					</div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><font i18n="app_description">app_description</font></div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_port_forwarding_description" i18n="app_name_tips">app_name_tips</div>
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_description"  name="port_forwarding_description" />
+					</div>
+					<div id="Description-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><font i18n="app_protocol">app_protocol</font></div>
+					<div class="main_item_content_cfg">
+						<select id="port_forwarding_protocol"  class="select">
+							<option value="TCP/UDP">TCP/UDP</option>
+							<option value="TCP">TCP</option>
+							<option value="UDP">UDP</option>
+						</select>
+					</div>
+					<div id="Protocol-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><span class="redcolorfont">*</span><font i18n="app_public_port">app_public_port</font></div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_port_forwarding_public_port_start">(1-65535)</div>
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_public_port_start" name="port_forwarding_public_port_start" style="width:135px">&nbsp;--&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_public_port_end" name="port_forwarding_public_port_end" style="width:135px">
+					</div>
+					<div id="Public_port-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><span class="redcolorfont">*</span><font i18n="app_private_ip">app_private_ip</font></div>
+					<div class="main_item_content_cfg">
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_private_ip" name="port_forwarding_private_ip"/>
+					</div>
+					<div id="Private_IP-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><span class="redcolorfont">*</span><font i18n="app_private_port">app_private_port</font></div>
+					<div class="main_item_content_cfg">
+						<div class="tip_text" id="tip_port_forwarding_private_port_start">(1-65535)</div>
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_private_port_start" name="port_forwarding_private_port_start" style="width:135px">&nbsp;--&nbsp;
+						<input type="text" class="input_text" autocomplete="off" id="port_forwarding_private_port_end" name="port_forwarding_private_port_end" style="width:135px"/>
+					</div>
+					<div id="MinDestinationPort-error" class="main_item_error_hint_extra"></div>
+				</div>
+				<div class="main_item_cfg">
+					<div class="main_item_name_cfg"><font i18n="app_enable">app_enable</font></div>
+					<div class="main_item_content_cfg">
+						<select id="port_forwarding_enable" class="select">
+						  <option value="1">Enable</option>
+						  <option value="0">Disable</option>
+						</select>
+					</div>
+				</div>
+				<div class="main_submit_item">
+					<div class="main_submit" style="float: right;">
+						<input type="button" id="port_mapping_apply" class="input_button_cfg" i18n="app_apply"
+							i18n-set="value" onclick="do_save()" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+<div id='loading_div' style='display:none'></div>
+</html>
