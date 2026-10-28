@@ -125,5 +125,6 @@
 	"info_check_fail": "Impossible de vérifier les mises à jour",
 	"info_view_release": "Voir la version",
 	"info_version_lbl": "Version",
-	"info_build_date": "Date de compilation"
+	"info_build_date": "Date de compilation",
+	"info_community": "Communauté"
 }

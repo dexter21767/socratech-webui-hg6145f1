@@ -125,5 +125,6 @@
 	"info_check_fail": "تعذّر التحقق من التحديثات",
 	"info_view_release": "عرض الإصدار",
 	"info_version_lbl": "الإصدار",
-	"info_build_date": "تاريخ البناء"
+	"info_build_date": "تاريخ البناء",
+	"info_community": "المجتمع"
 }

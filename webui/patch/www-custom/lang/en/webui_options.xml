@@ -125,5 +125,6 @@
 	"info_check_fail": "Could not check for updates",
 	"info_view_release": "View release",
 	"info_version_lbl": "Version",
-	"info_build_date": "Build date"
+	"info_build_date": "Build date",
+	"info_community": "Community"
 }

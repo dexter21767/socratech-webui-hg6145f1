@@ -11,7 +11,7 @@ export LD_LIBRARY_PATH=/fhrom/lib:/lib:/usr/lib:$LD_LIBRARY_PATH
 i18n_head() { :; }
 I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
 
-NAME="Socratech WebUI"; VERSION="?"; BUILD_DATE=""; GITHUB_URL=""
+NAME="Socratech WebUI"; VERSION="?"; BUILD_DATE=""; GITHUB_URL=""; FACEBOOK_URL=""; TELEGRAM_URL=""
 ABOUT="${CGI_DIR:-/www/cgi-bin}/_about.conf"; [ -f "$ABOUT" ] && . "$ABOUT"
 
 getv() { cfg_cmd get "$1" 2>/dev/null | sed -n 's/.*success!value=//p' | head -1; }
@@ -74,6 +74,10 @@ else
 	GH="<span class='muted' data-i18n='info_gh_none'>not published yet</span>"
 fi
 [ -n "$BUILD_DATE" ] || BUILD_DATE="—"
+COMMUNITY=""
+[ -n "$FACEBOOK_URL" ] && COMMUNITY="<a href='$(esc "$FACEBOOK_URL")' target='_blank'>Facebook</a>"
+[ -n "$TELEGRAM_URL" ] && COMMUNITY="${COMMUNITY:+$COMMUNITY &middot; }<a href='$(esc "$TELEGRAM_URL")' target='_blank'>Telegram</a>"
+[ -n "$COMMUNITY" ] && COMMUNITY="<tr><th data-i18n='info_community'>Community</th><td>$COMMUNITY</td></tr>"
 
 echo "Content-type: text/html"
 echo ""
@@ -116,6 +120,7 @@ $(i18n_head)
 		<tr><th data-i18n="info_version_lbl">Version</th><td><span class="ver">$(esc "$VERSION")</span>$UPD</td></tr>
 		<tr><th data-i18n="info_build_date">Build date</th><td>$(esc "$BUILD_DATE")</td></tr>
 		<tr><th>GitHub</th><td>$GH</td></tr>
+		$COMMUNITY
 	</table>
 
 	<h3 data-i18n="info_device">Device</h3>

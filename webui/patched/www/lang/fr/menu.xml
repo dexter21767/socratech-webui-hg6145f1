@@ -642,5 +642,6 @@
 	"login_credits": "Remerciements",
 	"credit_numberonedz": "WebUI personnalisée d'origine et persistance après redémarrage",
 	"credit_mrsmiiith": "accès SSH",
-	"opt_info": "Infos"
+	"opt_info": "Infos",
+	"login_community": "Rejoignez la communauté Socratech :"
 }
