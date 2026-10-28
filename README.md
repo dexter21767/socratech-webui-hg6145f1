@@ -1,12 +1,12 @@
-# HG6145F1 custom UI
+# Socratech WebUI — HG6145F1
 
 Customisation work for a **FiberHome HG6145F1** GPON ONT (Algerie Telecom,
 firmware **RP4423**), on a unit we own. Everything here was collected and
 verified from our own NAND dump and the live router on 2026-10-28.
 
-This is the custom web UI: the "custom-webui" patch that overlays modified
-pages onto the stock `/www`, plus the original UI as a baseline for our own
-changes (e.g. translations).
+This is **Socratech WebUI**, the community custom web UI: the "custom-webui"
+patch that overlays modified pages onto the stock `/www`, plus the original UI
+as a baseline for our own changes (e.g. translations).
 
 > Scope: our own device. Nothing here targets other subscribers or ISP
 > infrastructure.
@@ -46,6 +46,9 @@ password reveal). `installer/custom-webui.sh` now bind-mounts both. Note the
 compiled boot applier (`installer/custom-webui.applier.elf`) still omits them,
 so a device relying on it needs these two re-mounted after each boot.
 
+The version number and GitHub link shown on **WebUI Options → Info** come from
+`webui/patch/www-custom/cgi-bin/_about.conf`; bump `VERSION` there per release.
+
 ## How the patch is delivered
 
 The shell and `.bin` installers do the same thing: drop the files in
@@ -53,3 +56,10 @@ The shell and `.bin` installers do the same thing: drop the files in
 `.bin` wraps an ARM version of that logic in a FiberHome firmware header so the
 web "Local Upgrade" accepts it. Full details and verification in
 [docs/BUILD.md](docs/BUILD.md).
+
+## Credits
+
+- [numberonedz](https://github.com/numberonedz) — the original custom WebUI
+  this project builds on, and its persistence across reboots.
+- [MrSmiiith](https://github.com/MrSmiiith) — the SSH access work behind the
+  WebUI Options → SSH Access page.

@@ -37,7 +37,7 @@ close_fw() { iptables -D INPUT -i br0 -p tcp --dport $PORT -j ACCEPT 2>/dev/null
 
 start_db() {
 	[ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null
-	IP=$(lanip); [ -n "$IP" ] || IP=192.168.2.1
+	IP=$(lanip); [ -n "$IP" ] || IP=192.168.1.1
 	/fhrom/bin/dropbear -p "$IP:$PORT" -r "$DBKEY" -P "$PIDFILE"   # LAN IP only, never all-interfaces
 }
 stop_db() { [ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null; rm -f "$PIDFILE"; }
@@ -92,7 +92,7 @@ fi
 
 # ---- status ----
 RUN=""; [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null && RUN=1
-IP=$(lanip); [ -n "$IP" ] || IP=192.168.2.1
+IP=$(lanip); [ -n "$IP" ] || IP=192.168.1.1
 [ -f "$MARKER" ] && { PERSIST="on — returns after reboot only if Custom WebUI persistence is enabled"; PKEY=ssh_persist_on; } || { PERSIST="off"; PKEY=persist_off; }
 
 echo "Content-type: text/html"

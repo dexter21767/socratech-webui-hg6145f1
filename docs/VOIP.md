@@ -6,7 +6,7 @@ Algerie Telecom voice line between the physical RJ11 handset and one LAN
 softphone, and shows the SIP credentials.
 
 ## Using it
-- Pick **LAN softphone**, enter the phone's static LAN IP (gateway 192.168.2.1), **Apply**.
+- Pick **LAN softphone**, enter the phone's static LAN IP (gateway 192.168.1.1), **Apply**.
 - Pick **RJ11 handset** to hand the line back.
 - One endpoint at a time (one IMS registration per line): LAN mode stops the ONT's
   SIP client; RJ11 restarts it.

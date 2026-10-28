@@ -629,11 +629,8 @@
   	"ssid_name_title":"اسم SSID",
   	"ssid_pwd_title":"كلمة مرور SSID",
   	"ssid_pwd2_title":"تأكيد كلمة مرور SSID",
-	"login_footer": "واجهة ويب مخصصة من Adel",
-	"login_dialog_title": "واجهة الويب المخصصة لـ Fiberhome HG6145F1",
 	"login_show_changelog": "▶ عرض سجل التغييرات",
 	"login_hide_changelog": "▼ إخفاء سجل التغييرات",
-	"login_support": "إذا وجدت هذا مفيدًا وترغب في دعم ما أقوم به، فلا تتردد في دعوتي لفنجان قهوة ☕",
 	"login_close": "إغلاق",
 	"webui_options": "خيارات الواجهة",
 	"webui_opts_group": "الخيارات",
@@ -641,5 +638,9 @@
 	"opt_voip_switch": "خط VoIP / هاتف برمجي",
 	"opt_ssh_access": "الوصول عبر SSH",
 	"opt_disable_tr069": "تعطيل TR069",
-	"opt_persistence": "استمرارية الواجهة المخصصة"
+	"opt_persistence": "استمرارية الواجهة المعدلة",
+	"login_credits": "شكر وتقدير",
+	"credit_numberonedz": "الواجهة المعدلة الأصلية واستمراريتها بعد إعادة التشغيل",
+	"credit_mrsmiiith": "الوصول عبر SSH",
+	"opt_info": "معلومات"
 }

@@ -134,7 +134,7 @@ if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
 	MODE=$(getp mode)
 	IP=$(getp ip)
 	if [ "$MODE" = "lan" ]; then
-		if valid_ip "$IP"; then apply_lan "$IP"; else MSG="Enter a valid LAN IP, e.g. 192.168.2.50"; MKEY=vs_err_ip; MCLASS="err"; fi
+		if valid_ip "$IP"; then apply_lan "$IP"; else MSG="Enter a valid LAN IP, e.g. 192.168.1.50"; MKEY=vs_err_ip; MCLASS="err"; fi
 	elif [ "$MODE" = "rj11" ]; then
 		apply_rj11
 	fi
@@ -221,8 +221,8 @@ cat <<EOF
 
 		<div id="ipwrap">
 			<label for="ip" data-i18n="vs_ip">Softphone local IP address</label>
-			<input type="text" name="ip" id="ip" value="$(esc "$CUR_IP")" placeholder="192.168.2.50">
-			<div class="note" data-i18n="vs_ip_note">Static LAN IP of the device running the softphone (gateway 192.168.2.1).</div>
+			<input type="text" name="ip" id="ip" value="$(esc "$CUR_IP")" placeholder="192.168.1.50">
+			<div class="note" data-i18n="vs_ip_note">Static LAN IP of the device running the softphone (gateway 192.168.1.1).</div>
 		</div>
 
 		<div class="warn" data-i18n="vs_warn">Switching to LAN mode takes the line from the RJ11 handset (one registration per line). Your choice is kept across reboots.</div>

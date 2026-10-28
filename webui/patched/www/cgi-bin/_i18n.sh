@@ -24,6 +24,22 @@ cat <<'EOF'
 	var root = document.documentElement;
 	root.setAttribute('lang', lang);
 	if (lang === 'ar') root.setAttribute('dir', 'rtl');
+
+	// the router's httpd rewrites IPs in CGI output ("192.168.1.1" ->
+	// "192_point_168_point_1_point_1"); undo it in text and attributes, like
+	// the stock xhr.js does for its responses. Runs before translation so
+	// data-arg values are already clean.
+	function unpoint() {
+		var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false), n;
+		while ((n = w.nextNode()))
+			if (n.nodeValue.indexOf('_point_') >= 0) n.nodeValue = n.nodeValue.replace(/_point_/g, '.');
+		var els = document.getElementsByTagName('*');
+		for (var i = 0; i < els.length; i++)
+			for (var j = 0, a = els[i].attributes; j < a.length; j++)
+				if (a[j].value.indexOf('_point_') >= 0) a[j].value = a[j].value.replace(/_point_/g, '.');
+		document.title = document.title.replace(/_point_/g, '.');
+	}
+	document.addEventListener('DOMContentLoaded', unpoint);
 	if (lang === 'en') return;
 
 	var dict = null;

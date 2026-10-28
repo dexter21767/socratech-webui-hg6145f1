@@ -177,6 +177,20 @@ dialog::backdrop {
     display: inline-block;
 }
 
+.credits {
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.credits ul {
+    margin: 6px 0 0;
+    padding-inline-start: 18px;
+}
+
+.credits li {
+    margin-bottom: 4px;
+}
+
 .dialog-footer {
     text-align: center;
     margin-top: 15px;
@@ -225,7 +239,7 @@ dialog::backdrop {
 </div>
 
 <div class="footer-link">
-    ℹ️<a href="#" onclick="showDialog()" i18n="login_footer">Custom WebUI by Adel</a>
+    ℹ️<a href="#" onclick="showDialog()">Socratech WebUI</a>
 </div>
 
 </div>
@@ -233,7 +247,7 @@ dialog::backdrop {
 
 <!-- Dialog -->
 <dialog id="myDialog">
-    <div class="dialog-header" i18n="login_dialog_title">Fiberhome HG6145F1 Custom WebUI</div>
+    <div class="dialog-header">Socratech WebUI &middot; HG6145F1</div>
 
     <p style="font-size:14px;text-align:center;">
     </p>
@@ -265,9 +279,12 @@ dialog::backdrop {
         - PPPOE/Voip password retrieval
     </div>
 
-    <div style="font-size:13px;text-align:center;margin-top:10px;">
-        <p><span i18n="login_support">If you found this helpful and would like to support what I do, feel free to buy me a coffee ☕</span><br>
-Telegram: <a href="https://t.me/numberonedz" target="_blank"> @numberonedz</a> | <a href="https://github.com/numberonedz" target="_blank">Github</a></p>
+    <div class="credits">
+        <b i18n="login_credits">Credits</b>
+        <ul>
+            <li><a href="https://github.com/numberonedz" target="_blank">numberonedz</a> &mdash; <span i18n="credit_numberonedz">original custom WebUI and reboot persistence</span></li>
+            <li><a href="https://github.com/MrSmiiith" target="_blank">MrSmiiith</a> &mdash; <span i18n="credit_mrsmiiith">SSH access</span></li>
+        </ul>
     </div>
 
     <div class="dialog-footer">

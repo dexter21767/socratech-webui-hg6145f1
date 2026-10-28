@@ -20,7 +20,7 @@ shell). The enable action reproduces its proven steps:
 4. Start `dropbear` bound to the **LAN IP only** (`<br0-ip>:2222`), never
    all-interfaces, and open port 2222 on `br0` only.
 
-Connect from the LAN: `ssh -p 2222 root@192.168.2.1`.
+Connect from the LAN: `ssh -p 2222 root@192.168.1.1`.
 
 ## Off by default, password only
 - Ships disabled. Enable from the page by setting a root password (min 6 chars,
