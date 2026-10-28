@@ -1,0 +1,22 @@
+{
+  "upnpEnableApply":"تطبيق",
+  "upnpEnableCancel":"إلغاء",
+   "upnpcfg_remove":"إزالة الإعداد",
+  "upnp_prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل UPnP.",
+  
+  "dlna_prompt":"في هذه الصفحة يمكنك تفعيل أو تعطيل خدمة DLNA. تأكد أولًا من توصيل جهاز تخزين قابل للإزالة بمنفذ USB!",
+  "usb_pathTitle":"قسم USB",
+  "dlnaEnable_title":"خدمة DLNA",
+  "dlna_pathTitle":"مجلد مشاركة الوسائط",
+  "dlna_path_noalert":"الرجاء إدخال مجلد مشاركة وسائط صالح!",
+  
+  "upnp_enable":"تفعيل",
+  "upnp_disable":"تعطيل",
+  "upnp_wan_title":"اسم WAN",
+
+  "igmp_prompt":"في هذه الصفحة يمكنك إعداد وضع البث المتعدد.",
+  "upnpEnable_title":"وضع IGMP",
+  "upnpEnable_title2":"وضع MLD",
+  "igmp_apply":"تطبيق"
+
+}

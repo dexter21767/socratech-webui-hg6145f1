@@ -1,0 +1,28 @@
+{
+  "pt_PortTriggerPrompt":"Sur cette page, vous pouvez configurer les routes statiques IPv6.",
+
+  "fw_filterListHead":"Liste des routes statiques IPv6",
+  "DstPrefix_title":"Préfixe de destination",
+  "Nexthop_title":"Saut suivant",
+  "pf_wannameTitle":"Nom WAN",
+
+  "pf_add":"Ajouter",
+  "pf_delete":"Supprimer",
+  "pf_deleteAll":"Tout supprimer",
+
+  "ipv6_apply":"Appliquer",
+  "ipv6_cancel":"Annuler",
+
+  "pf_mostRulesAlert":"Vous pouvez configurer 8 règles au maximum !",
+  "pf_most16RulesAlert":"Vous pouvez configurer 16 règles au maximum !",
+  "pf_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "pf_noChooseAlert":"Veuillez sélectionner une règle puis la supprimer !",
+  "pf_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+
+  "Please enter DstPrefix!":"Veuillez saisir le préfixe de destination !",
+  "Please enter Nexthop!":"Veuillez saisir le saut suivant !",
+  "Nexthop_IllegalAlert":"Adresse IPv6 du saut suivant invalide !",
+  "DstPrefix_IllegalAlert":"Préfixe IPv6 de destination invalide !"
+ 
+}
+

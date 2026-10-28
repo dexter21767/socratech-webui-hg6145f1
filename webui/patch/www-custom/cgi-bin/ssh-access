@@ -7,6 +7,9 @@
 
 export PATH=/fhrom/bin:/fhrom/fhshell:/bin:/sbin:/usr/bin:/usr/sbin:$PATH
 export LD_LIBRARY_PATH=/fhrom/lib:/lib:/usr/lib:$LD_LIBRARY_PATH
+# translations (WebUI Options pages share _i18n.sh)
+i18n_head() { :; }
+I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
 
 PORT=2222
 DBKEY=/fhconf/dropbear/dropbear_rsa_host_key   # stock persistent host key
@@ -57,25 +60,25 @@ fi
 LOGIN=$(/www/cgi-bin/is_logined.cgi 2>/dev/null | sed -n 's/.*"result":"\([0-9]\)".*/\1/p' | head -1)
 if [ "$LOGIN" = "0" ]; then
 	echo "Content-type: text/html"; echo ""
-	echo "<html><body style='font-family:sans-serif;padding:30px'><h3>Please log in to the router UI first.</h3></body></html>"
+	echo "<html><head><meta charset='UTF-8'>$(i18n_head)</head><body style='font-family:sans-serif;padding:30px'><h3 data-i18n='login_first'>Please log in to the router UI first.</h3></body></html>"
 	exit 0
 fi
 
 # ---- handle Enable / Disable ----
-MSG=""; MCLASS=""
+MSG=""; MCLASS=""; MKEY=""; MARG=""
 if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
 	read -n "$CONTENT_LENGTH" POST_DATA
 	ACTION=$(getp action)
 	if [ "$ACTION" = "enable" ]; then
 		PW=$(urldec "$(getp pw)"); PW2=$(urldec "$(getp pw2)")
-		if [ "${#PW}" -lt 6 ]; then MSG="Password must be at least 6 characters."; MCLASS="err"
-		elif [ "$PW" != "$PW2" ]; then MSG="Passwords do not match."; MCLASS="err"
+		if [ "${#PW}" -lt 6 ]; then MSG="Password must be at least 6 characters."; MKEY=ssh_err_short; MCLASS="err"
+		elif [ "$PW" != "$PW2" ]; then MSG="Passwords do not match."; MKEY=ssh_err_match; MCLASS="err"
 		else
 			echo "root:$PW" | chpasswd 2>/dev/null
 			[ -f /etc/shadow ] && grep '^root:' /etc/shadow > "$HASHSAVE" 2>/dev/null && chmod 600 "$HASHSAVE"
 			apply_runtime
 			touch "$MARKER"
-			MSG="SSH enabled on port $PORT (LAN only)."; MCLASS="ok"
+			MSG="SSH enabled on port $PORT (LAN only)."; MKEY=ssh_ok_on; MARG="$PORT"; MCLASS="ok"
 		fi
 	elif [ "$ACTION" = "disable" ]; then
 		stop_db; close_fw
@@ -83,14 +86,14 @@ if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
 		umount -l /etc/profile 2>/dev/null; umount -l /etc/shadow 2>/dev/null
 		rm -f "$MARKER" "$HASHSAVE"
 		passwd -l root >/dev/null 2>&1
-		MSG="SSH disabled."; MCLASS="ok"
+		MSG="SSH disabled."; MKEY=ssh_ok_off; MCLASS="ok"
 	fi
 fi
 
 # ---- status ----
 RUN=""; [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null && RUN=1
 IP=$(lanip); [ -n "$IP" ] || IP=192.168.2.1
-[ -f "$MARKER" ] && PERSIST="on — returns after reboot only if Custom WebUI persistence is enabled" || PERSIST="off"
+[ -f "$MARKER" ] && { PERSIST="on — returns after reboot only if Custom WebUI persistence is enabled"; PKEY=ssh_persist_on; } || { PERSIST="off"; PKEY=persist_off; }
 
 echo "Content-type: text/html"
 echo ""
@@ -99,7 +102,8 @@ cat <<EOF
 <html>
 <head>
 <meta charset="UTF-8">
-<title>SSH Access</title>
+<title data-i18n="ssh_title">SSH Access</title>
+$(i18n_head)
 <style>
 	body { font-family: sans-serif; background:#f1f5f9; color:#0f172a; margin:0; }
 	.container { max-width:520px; margin:30px auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
@@ -117,35 +121,35 @@ cat <<EOF
 </head>
 <body>
 <div class="container">
-	<h2>SSH Access</h2>
+	<h2 data-i18n="ssh_title">SSH Access</h2>
 EOF
 
-[ -n "$MSG" ] && echo "<div class='msg $MCLASS'>$(esc "$MSG")</div>"
+[ -n "$MSG" ] && echo "<div class='msg $MCLASS' data-i18n='$MKEY' data-arg='$(esc "$MARG")'>$(esc "$MSG")</div>"
 
 cat <<EOF
 	<div class="status">
-		<b>SSH:</b> $([ -n "$RUN" ] && echo "ON — listening on ${IP}:${PORT} (LAN only)" || echo "OFF")<br>
-		<b>Persistence:</b> $PERSIST
+		<b>SSH:</b> $([ -n "$RUN" ] && echo "<span data-i18n='ssh_on' data-arg='${IP}:${PORT}'>ON — listening on ${IP}:${PORT} (LAN only)</span>" || echo "<span data-i18n='ssh_off'>OFF</span>")<br>
+		<b data-i18n="lbl_persist">Persistence:</b> <span data-i18n="$PKEY">$PERSIST</span>
 	</div>
 EOF
 
 if [ -n "$RUN" ]; then
 	cat <<EOF
-	<p>Connect from the LAN: <code>ssh -p $PORT root@$IP</code></p>
-	<form method="POST"><input type="hidden" name="action" value="disable"><button class="btn off">Disable SSH</button></form>
-	<div class="warn">Root SSH is a security exposure. Disable it when you don't need it.</div>
+	<p data-i18n="ssh_connect" data-i18n-html data-arg="ssh -p $PORT root@$IP">Connect from the LAN: <code>ssh -p $PORT root@$IP</code></p>
+	<form method="POST"><input type="hidden" name="action" value="disable"><button class="btn off" data-i18n="ssh_btn_off">Disable SSH</button></form>
+	<div class="warn" data-i18n="ssh_warn_on">Root SSH is a security exposure. Disable it when you don't need it.</div>
 EOF
 else
 	cat <<EOF
 	<form method="POST">
 		<input type="hidden" name="action" value="enable">
-		<label for="pw">Root password (min 6 chars)</label>
+		<label for="pw" data-i18n="ssh_pw">Root password (min 6 chars)</label>
 		<input type="password" id="pw" name="pw" autocomplete="new-password">
-		<label for="pw2">Confirm password</label>
+		<label for="pw2" data-i18n="ssh_pw2">Confirm password</label>
 		<input type="password" id="pw2" name="pw2" autocomplete="new-password">
-		<button class="btn on">Enable SSH</button>
+		<button class="btn on" data-i18n="ssh_btn_on">Enable SSH</button>
 	</form>
-	<div class="warn">Enables root login over SSH on the LAN only (<code>${IP}:${PORT}</code>), never on the internet/voice side. Choose a strong password; it is stored only as a hash on the device and never shown.</div>
+	<div class="warn" data-i18n="ssh_warn_off" data-i18n-html data-arg="${IP}:${PORT}">Enables root login over SSH on the LAN only (<code>${IP}:${PORT}</code>), never on the internet/voice side. Choose a strong password; it is stored only as a hash on the device and never shown.</div>
 EOF
 fi
 

@@ -1,0 +1,15 @@
+{
+	"alg_prompt": "في هذه الصفحة يمكنك تعديل إعدادات ALG.",
+	"h323": "H.323",
+	"rtsp": "RTSP",
+	"l2tp": "L2TP",
+	"ipsec": "IPSEC",
+	"sip": "SIP",
+	"ftp": "FTP",
+	"pptp": "PPTP",
+    "tftp": "TFTP",
+	"alg_apply": "تطبيق",
+	"alg_cancel": "إلغاء",
+	"rc_enable":"تفعيل",
+	"rc_disable":"تعطيل"
+}

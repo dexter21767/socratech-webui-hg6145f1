@@ -1,0 +1,15 @@
+{
+	"adv_power_config_prompt":"في هذه الصفحة يمكنك ضبط توفير الطاقة للجهاز.",
+	"energy_saving_title":"إعداد توفير الطاقة",
+	"enable_service_title":"تفعيل الخدمات في وضع البطارية",
+	"enable_energy_saving":"تفعيل توفير الطاقة",
+	"service":"الخدمة",
+	"usb":"USB",
+	"lan":"LAN",
+	"wlan":"WLAN",
+	"voice":"الصوت",
+	"remote_management":"الإدارة عن بُعد",
+	"adv_apply":"تطبيق",
+	"adv_cancel":"إلغاء"
+}
+

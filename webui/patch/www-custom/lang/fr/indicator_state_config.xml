@@ -1,0 +1,9 @@
+{
+	"indicator_state_prompt": "Sur cette page, vous pouvez configurer les voyants de l'appareil. Si le commutateur des voyants est sur Désactivé, vous pouvez définir une plage d'extinction ; sans plage définie, les voyants restent toujours éteints.",
+	"indicator_switch_head": "Configuration du commutateur des voyants",
+	"indicator_switch_title": "Commutateur des voyants",
+	"sw_on": "Activé",
+	"sw_off": "Désactivé",
+	"btn_apply": "Appliquer",
+	"btn_cancel": "Annuler"
+}

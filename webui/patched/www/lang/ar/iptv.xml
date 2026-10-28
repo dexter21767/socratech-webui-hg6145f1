@@ -1,0 +1,26 @@
+{
+  "iptv_prompt":"في هذه الصفحة يمكنك إعداد VLAN البث المتعدد.",
+
+  "iptv_infoHead":"IPTV",
+  "iptv_vlanTitle":"VLAN البث المتعدد",
+  "iptv_vlanTips":"(الرجاء إدخال رقم من 1 إلى 4094)",
+  
+  "iptv_apply":"تطبيق",
+  "iptv_cancel":"إلغاء",
+  "ipv4":"IPV4",
+  "ipv6":"IPV6",
+  "IGMPSnooping":"IGMPSnooping",
+  "IGMPProxy":"IGMPProxy",
+  "MLDSnooping":"MLDSnooping",
+  "MLDProxy":"MLDProxy",
+  "firewall_enable":"تفعيل",
+  "firewall_disable":"تعطيل",
+  "Multicast_Enable":"مفتاح البث المتعدد",
+  "iptv_vlanIllegalAlert":"نطاق VLAN البث المتعدد من 1 إلى 4094.",
+  "ipv4":"IPv4",
+  "ipv6":"IPv6",
+  "iptv_IGMPSnooping":"تفعيل IGMP Snooping",
+  "iptv_IGMPProxy":"تفعيل وكيل IGMP",
+  "iptv_MLDSnooping":"تفعيل MLD Snooping",
+  "iptv_MLDProxy":"تفعيل وكيل MLD"
+}

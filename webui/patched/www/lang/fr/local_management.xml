@@ -1,0 +1,12 @@
+{
+  "localmanagement_Prompt":"Sur cette page, vous pouvez activer/désactiver l'accès Telnet et Web.",
+  "localmanagement_enable":"Activer",
+  "localmanagement_disable":"Désactiver",
+  "localmanagement_apply":"Appliquer",
+  "localmanagement_cancel":"Annuler",
+  "lan_telnet_title":"Telnet côté LAN",
+  "wan_telnet_title":"Telnet côté WAN",
+  "lan_web_title":"Web côté LAN",
+  "wan_web_title":"Web côté WAN",
+  "lan_web_disable_tips":"Si vous désactivez l'accès Web côté LAN, vous ne pourrez plus accéder à l'interface web depuis le LAN."
+}

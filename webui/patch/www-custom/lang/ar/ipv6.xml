@@ -1,0 +1,28 @@
+{
+  "pt_PortTriggerPrompt":"في هذه الصفحة يمكنك إعداد مسارات IPv6 الثابتة.",
+
+  "fw_filterListHead":"قائمة مسارات IPv6 الثابتة",
+  "DstPrefix_title":"بادئة الوجهة",
+  "Nexthop_title":"القفزة التالية",
+  "pf_wannameTitle":"اسم WAN",
+
+  "pf_add":"إضافة",
+  "pf_delete":"حذف",
+  "pf_deleteAll":"حذف الكل",
+
+  "ipv6_apply":"تطبيق",
+  "ipv6_cancel":"إلغاء",
+
+  "pf_mostRulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+  "pf_most16RulesAlert":"يمكنك إعداد 16 قاعدة كحد أقصى!",
+  "pf_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "pf_noChooseAlert":"يرجى اختيار قاعدة ثم حذفها!",
+  "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+
+  "Please enter DstPrefix!":"الرجاء إدخال بادئة الوجهة!",
+  "Please enter Nexthop!":"الرجاء إدخال القفزة التالية!",
+  "Nexthop_IllegalAlert":"عنوان IPv6 للقفزة التالية غير صالح!",
+  "DstPrefix_IllegalAlert":"بادئة IPv6 للوجهة غير صالحة!"
+ 
+}
+

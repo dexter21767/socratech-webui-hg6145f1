@@ -1,0 +1,16 @@
+{
+	"telnet_prompt": "في هذه الصفحة يمكنك تفعيل أو تعطيل خدمة Telnet.",
+  	"telnet_head":"خدمة Telnet",
+  	"telnet_enable":"تفعيل",
+  	"telnet_disable":"تعطيل",
+  	"telnet_apply":"تطبيق",
+  	"telnet_cancel":"إلغاء",
+
+  	"ssh_prompt": "في هذه الصفحة يمكنك تفعيل أو تعطيل خدمة SSH.",
+  	"ssh_head":"خدمة SSH",
+  	"ssh_enable":"تفعيل",
+  	"ssh_disable":"تعطيل",
+  	"ssh_apply":"تطبيق",
+  	"ssh_cancel":"إلغاء"
+}
+

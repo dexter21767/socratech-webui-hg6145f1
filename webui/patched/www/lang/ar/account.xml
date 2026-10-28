@@ -1,0 +1,86 @@
+{
+  "account_prompt":"في هذه الصفحة يمكنك إعداد اسم وكلمة مرور حساب المستخدم.",
+
+  "ac_add":"إضافة",
+  "ac_del":"حذف",
+  "name_title":"اسم المستخدم",
+  "old_name_title":"اسم المستخدم القديم",
+  "accountSelf_newnameTitle":"اسم المستخدم الجديد",
+  "ac_pwd":"كلمة المرور الجديدة",
+  "ac_lanPwd":"كلمة مرور LAN الجديدة",
+  "ac_pwd2":"تأكيد كلمة المرور الجديدة",
+  "ac_lanPwd2":"تأكيد كلمة مرور LAN",
+  
+  "accountSelf_oldWanPwdTitle":"كلمة مرور WAN القديمة",
+  "accountSelf_newWanPwdTitle":"كلمة مرور WAN الجديدة",
+  "accountSelf_newWanPwd2Title":"تأكيد كلمة مرور WAN",
+  
+  "user_most8RulesAlert":"يمكنك إعداد 8 مستخدمين كحد أقصى!",
+  "no_count_alert":"لا يوجد حساب لحذفه!",
+  "selcet_alert":"يرجى اختيار حساب لحذفه!",
+  "confirm_dele":"هل أنت متأكد من حذف الحساب المحدد؟",
+  "unequal_alert":"تأكيد كلمة المرور يختلف عن كلمة المرور الجديدة!",
+
+  "initial_login_modify_password_pldt":"عند أول تسجيل دخول لهذا الحساب يجب تغيير كلمة المرور واسم SSID وكلمة مرور المصادقة!",
+  
+  "accountSelf_newPwdRepeateAlert":"لا يمكن أن تحتوي كلمة المرور على تسلسل يزيد عن 3 أحرف مكررة أو تصاعدية أو تنازلية مثل 'aaaa' و'6666' و'1234' و'4321' و'abcd' و'RQPO'!",
+  "accountSelf_newPwdRegularAlert":"لا يمكن تعيين كلمة مرور شائعة!",
+  
+  "account_manage_title":"إدارة الحسابات",
+  "cancelValue":"إلغاء",
+  "btnApply1":"تطبيق",
+
+  "accountSelf_oldPwdTitle":"كلمة المرور القديمة",
+  "accountSelf_oldLanPwdTitle":"كلمة مرور LAN القديمة",
+  "accountSelf_pwdTips":"(8 - 32 حرفًا)",
+  "accountSelf_pwdTips_MALAY_TM":"(18 - 32 حرفًا)",
+  "accountSelf_pwdTips_6":"(6 - 32 حرفًا)",
+  "accountSelf_pwdTips_TL_TRUE":"(مختلفة عن كلمة مرور LAN)",
+  
+  "accountSelf_userNullAlert":"الرجاء إدخال اسم المستخدم!",  
+  "accountSelf_oldPwdNullAlert":"الرجاء إدخال كلمة المرور القديمة!",  
+  "accountSelf_newPwdNullAlert":"الرجاء إدخال كلمة المرور الجديدة!", 
+  "accountSelf_userIllegalAlert":"اسم المستخدم غير صالح!",
+  "accountSelf_newPwdIllegalAlert":"كلمة المرور غير صالحة!",   
+  "accountSelf_newPwdLenIllegalAlert":"طول كلمة المرور غير صالح!",
+  "accountSelf_newPwdSpaceAlert":"يرجى عدم استخدام مسافات في كلمة المرور!",  
+  "accountSelf_pwdMismatchedAlert":"تأكيد كلمة المرور يختلف عن كلمة المرور الجديدة!",
+  "accountSelf_pwdMatchedOldPwdAlert":" يجب ألا تتطابق كلمة المرور الجديدة مع القديمة!",
+  "accountSelf_wanlanPwdSameAlert":"يجب ألا تتطابق كلمة مرور WAN مع كلمة مرور LAN!",
+
+  "accountSelf_prompt":"في هذه الصفحة يمكنك إعداد الحساب الحالي.",
+  "accountSelf_prompt_true":"الرجاء إدخال كلمة مرور WAN لتفعيل الوصول من WAN.",
+
+  "same_pwd":"كلمة المرور التي أدخلتها مطابقة للأصلية، يرجى تعيين كلمة مرور جديدة!",
+  "no_pwd":"لا يمكن ترك كلمة المرور فارغة، يرجى إدخال كلمة مرور جديدة!",
+  "Please input 5 or 13 characters of":"الرجاء إدخال 5 أو 13 حرفًا لـ",
+  "contains invalid characters.":"يحتوي على أحرف غير صالحة.",
+  "wep_pwd_tips":"(يمكنك إدخال 5 أو 13 حرفًا)",
+  "wpa_pwd_tips":"(يمكنك إدخال 8-64 حرفًا)",
+  "secure wpapsk key length":"الرجاء إدخال 8 أحرف على الأقل لمفتاح WPA-PSK!",
+  
+  "2gwifi_title":"SSID1 لـ 2.4G",
+  "5gwifi_title":"SSID1 لـ 5G",
+  "ssid1_name_title":"اسم SSID",
+  "ssid1_pwd_title":"كلمة المرور",
+  "ssid1_pwd2_title":"تأكيد كلمة المرور",
+  "passwordTips":"(12 - 32 حرفًا)",
+  "passwordTips_8":"(8 - 32 حرفًا)",
+
+  "Please enter SSID Name!":"الرجاء إدخال اسم SSID!",
+  "ssidNameTips":"(1 - 32 حرفًا)",
+  "ssidpasswordTips":"(يمكنك إدخال 12-63 حرفًا)",
+  "ssidpasswordTips_8":"(يمكنك إدخال 8-63 حرفًا)",
+  "accountNameTips":"(1 - 32 حرفًا)",
+  "modifyPassword_success":"تم تغيير كلمة المرور بنجاح",
+  "invalid_value_alert":"بعض القيم غير صالحة!",
+  "password_error":"خطأ في تغيير كلمة المرور، يرجى المحاولة مرة أخرى!",
+  "password_involvespace":"لا يمكن أن تحتوي كلمة المرور على مسافة، يرجى المحاولة مرة أخرى!",
+
+  "bswifi_title":"توجيه النطاق",
+  "bandsteering_button":"تشغيل/إيقاف توجيه النطاق",
+  "skip":"تخطي",
+  "account_modify_prompt":"في هذه الصفحة يمكنك تعديل معلمات WiFi وكلمات مرور حسابات المستخدمين."
+
+}
+

@@ -1,0 +1,26 @@
+{
+  "recontrol_prompt":"Sur cette page, vous pouvez activer/désactiver l'accès web via le WAN : désactivé, l'interface web n'est pas accessible depuis le WAN ; activé, elle l'est.",
+  "recontrol_prompt_romania":"Sur cette page, vous pouvez activer/désactiver l'accès web via le WAN uniquement en HTTPS.",
+  "rcEnable_title":"Contrôle à distance",
+  
+  "rc_enable":"Activer",
+
+  "rc_disable":"Désactiver",
+  
+  "recontrolApply":"Appliquer",
+  "recontrolCancel":"Annuler",
+
+  "https_prompt":"Sur cette page, vous pouvez activer/désactiver HTTPS.",
+
+  "webport_Prompt":"Vous pouvez aussi configurer le port de communication web (HTTP).",
+  "web_portTitle":"Port de communication WEB actif",
+  "web_portchangeTitle":"Port de communication WEB modifié",
+  "web_portchangeTips":"(Veuillez saisir 1024-65535 ou 80)",
+  "Change_confirm":"La configuration modifiée prendra effet après redémarrage.",
+  "web_portIllegalAlert":"Veuillez saisir 1024-65535 ou 80 !",
+  "web_PortNullAlert":"Veuillez saisir une valeur de port !"
+  
+}
+
+
+

@@ -1,0 +1,14 @@
+{
+  "apply":"تطبيق",
+  "cancel":"إلغاء",
+  
+  "v4StaticRoutePrompt":"في هذه الصفحة يمكنك إعداد مسار IPv4 الافتراضي.",
+
+  "dr_enableTitle":"تفعيل المسار الافتراضي",
+  "dr_wanTitle":"اسم WAN",
+  "dr_wanDefaultTitle":"يرجى الاختيار",
+  
+  "dr_wannameNUllAlert":"يرجى اختيار WAN!"
+  
+}
+

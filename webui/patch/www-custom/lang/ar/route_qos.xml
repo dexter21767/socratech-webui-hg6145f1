@@ -1,0 +1,41 @@
+{
+  "pps_apply":"تطبيق",
+  "pps_cancel":"إلغاء",
+  
+  "route_qos_prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل QoS التوجيه!",
+  "route_qos_title":"QoS التوجيه",  
+  "qos_c_enable":"تفعيل",
+  "qos_c_disable":"تعطيل",
+
+  "route_qosPrompt":"في هذه الصفحة يمكنك إعداد QoS التوجيه!",
+  "pf_add":"إضافة",
+  "pf_delete":"حذف",
+  "pf_deleteAll":"حذف الكل",
+  "route_qosListHead":"قائمة QoS التوجيه",
+  "qostypetitle":"النوع",
+  "qosPrioritytitle":"الأولوية",
+  "qosprotocoltitle":"البروتوكول",
+  "qossrciptitle":"IP المصدر ",
+  "qossrcporttitle":"منفذ المصدر",
+  "qosdisiptitle":"IP الهدف",
+  "qosdisporttitle":"المنفذ الهدف",
+  "qoscontroltitle":"تفعيل",
+   "qos_apply":"تطبيق",
+  "qos_cancel":"إلغاء",
+  
+  "pf_mostRulesAlert":"يمكنك إضافة 6 قواعد كحد أقصى!",
+  "pf_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "pf_noChooseAlert":"يرجى اختيار قاعدة ثم حذفها!",
+  "priority_alert":"الرجاء إدخال الأولوية.",
+
+  "pf_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+  "pf_PortNullAlert":"الرجاء إدخال قيمة للمنفذ!",
+  "pf_endPortTooSmallAlert":"يجب ألا يكون منفذ البداية أكبر من منفذ النهاية!",
+  "pf_portIllegalAlert":"نطاق المنافذ الصالح من 1 إلى 65535.",
+  "pf_PortNullAlert":"الرجاء إدخال قيمة للمنفذ!",
+  "pf_8021PriorityIllegalAlert":"نطاق الأولوية الصالح من 0 إلى 7!",
+  "pf_hscpPriorityIllegalAlert":"نطاق الأولوية الصالح من 0 إلى 63!",
+  "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القواعد المحددة؟"
+
+}
+

@@ -1,0 +1,19 @@
+{
+	"portal_configPrompt": "في هذه الصفحة يمكنك إعداد البوابة. يعرض المتصفح صفحة ويب خاصة حسب نوع جهازك عند الوصول إلى الإنترنت لأول مرة.",
+	"Enable_Portal_title": "تفعيل البوابة",
+	"default_redirection_url_title": "عنوان URL لإعادة التوجيه الافتراضي",
+	"inet_apply": "تطبيق",
+	"inet_cancel": "إلغاء",
+	"portal_configListHead": "قائمة إعداد البوابة",
+	"fw_filterID": "المعرف",
+	"dev_type": "نوع الجهاز",
+	"redirect_url": "عنوان URL لإعادة التوجيه",
+	"illegal_value_alert":"بعض القيم غير صالحة!",
+	"app_most8RulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+	"no_rules_alert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+	"no_selected_rules_alert":"لم يتم اختيار أي قاعدة، لا يمكن الحذف!",
+	"delete_alert":"هل أنت متأكد من حذف القاعدة المحددة؟",
+	"repeat_with_the_existing_rules":"مكرر مع القواعد الحالية. يرجى إعادة الإعداد!",
+	"portal_add":"إضافة",
+	"portal_delete":"حذف"
+}

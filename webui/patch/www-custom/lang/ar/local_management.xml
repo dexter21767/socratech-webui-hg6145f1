@@ -1,0 +1,12 @@
+{
+  "localmanagement_Prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل الوصول عبر Telnet والويب.",
+  "localmanagement_enable":"تفعيل",
+  "localmanagement_disable":"تعطيل",
+  "localmanagement_apply":"تطبيق",
+  "localmanagement_cancel":"إلغاء",
+  "lan_telnet_title":"مفتاح Telnet لـ LAN",
+  "wan_telnet_title":"مفتاح Telnet لـ WAN",
+  "lan_web_title":"مفتاح الويب لـ LAN",
+  "wan_web_title":"مفتاح الويب لـ WAN",
+  "lan_web_disable_tips":"إذا عطّلت مفتاح الويب لـ LAN فلن تتمكن من الوصول إلى واجهة الويب من جهة LAN."
+}

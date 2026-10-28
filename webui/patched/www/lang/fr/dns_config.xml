@@ -1,0 +1,22 @@
+{
+	"dns_configPrompt": "Sur cette page, vous pouvez configurer la politique de transfert des paquets DNS côté LAN ou côté SSID non liés au port WAN.",
+	"dns_template": "Modèle DNS",
+	"dns_apply": "Appliquer",
+	"dns_cancel": "Annuler",
+	"dns_search_listHead": "Configuration de la liste de recherche DNS",
+	"static_dns_configHead": "Configuration DNS statique",
+	"dns_searchPrompt": "Sur cette page, vous pouvez configurer la liste de recherche DNS. Il est conseillé de définir en priorité le nom WAN ; si le nom WAN et le serveur DNS sont tous deux configurés, le nom WAN prévaut.",
+	"static_dnsPrompt": "Sur cette page, vous pouvez configurer un DNS statique.",
+	"fw_filterID": "ID",
+	"domain_name": "Nom de domaine",
+	"ipaddr": "Adresse IP",
+	"wan_name": "Nom WAN",
+	"dns_server": "Serveur DNS",
+	"illegal_value_alert":"Certaines valeurs sont invalides !",
+	"fw_most8RulesAlert":"Vous pouvez configurer jusqu'à 8 règles !",
+	"no_rules_alert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+	"no_selected_rules_alert":"Aucune règle n'est sélectionnée, suppression impossible !",
+	"delete_alert":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+	"dns_add":"Ajouter",
+	"dns_delete":"Supprimer"
+}

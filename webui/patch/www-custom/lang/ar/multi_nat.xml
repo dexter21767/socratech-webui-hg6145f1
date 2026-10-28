@@ -1,0 +1,30 @@
+{
+  "muti_natPrompt":"في هذه الصفحة يمكنك إعداد Multi NAT.",
+  "Muti_natListHead":"قائمة قواعد Multi NAT",
+  "mn_descrip_title":"الوصف",
+  "mn_Type_title":"نوع القاعدة",
+  "mn_locips_title":"IP المحلي الأول",
+  "mn_locipe_title":"IP المحلي الأخير",  
+  "mn_pubips_title":"IP العام الأول",
+  "mn_pubipe_title":"IP العام الأخير",
+
+  "pf_add":"إضافة",
+  "pf_delete":"حذف",
+  "pf_deleteAll":"حذف الكل",
+
+  "pf_apply":"تطبيق",
+  "pf_cancel2":"إلغاء",
+
+  "pf_mostRulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+  "pf_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "pf_noChooseAlert":"يرجى اختيار قاعدة قبل الحذف!",
+  "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+
+  "pf_ipIllegalAlert":"الرجاء إدخال IP صالح!",  
+  "pf_endPortTooSmallAlert":"يجب ألا يكون عنوان البداية أكبر من عنوان النهاية!",
+  "IP_longAlert":"نطاق عناوين IP طويل جدًا، يرجى التأكد من أنه لا يتجاوز 256!",
+  "Please creat INTERNET WAN first!":"يرجى إنشاء WAN للإنترنت أولًا!",
+
+  "description_tips":"( 0-31 حرفًا من الأحرف والأرقام و'-' و'_')",
+  "descripIllegalAlert":"الرجاء إدخال وصف صالح!"
+}  

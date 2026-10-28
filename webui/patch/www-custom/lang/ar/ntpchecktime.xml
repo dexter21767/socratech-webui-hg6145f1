@@ -1,0 +1,68 @@
+{
+	  "checktime_prompt":"في هذه الصفحة يمكنك إعداد وظائف NTP.",
+	  "ntpchecktime_title":"مزامنة الوقت عبر NTP",
+
+	  "checkboxTips":"تفعيل مزامنة الوقت عبر NTP",
+	  "firstNTPServer_Title":"خادم NTP الأول",
+	  "secondNTPServer_Title":"خادم NTP الثاني",
+	  "thirdNTPServer_Title":"خادم NTP الثالث",
+	  "fourthNTPServer_Title":"خادم NTP الرابع",
+	  "fifthNTPServer_Title":"خادم NTP الخامس",
+	  
+	  "timeZoneTitle":"المنطقة الزمنية",
+	  "secondsTips":"ثوانٍ (1-99999)",
+
+	  "GMTm12title":"(GMT-12:00) غرب خط التاريخ الدولي",
+	  "GMTm11title":"(GMT-11:00) جزر ميدواي، ساموا",
+	  "GMTm10title":"(GMT-10:00) هاواي",
+	  "GMTm9title":"(GMT-09:00) ألاسكا",
+	  "GMTm8title":"(GMT-08:00) توقيت المحيط الهادئ",
+	  "GMTm7title":"(GMT-07:00) التوقيت الجبلي",
+	  "GMTm6title":"(GMT-06:00) أمريكا الوسطى",
+	  "GMTm5title":"(GMT-05:00) شرق إنديانا، كولومبيا",
+	  "GMTm4title":"(GMT-04:00) توقيت الأطلسي، غرب البرازيل",
+	  "GMTm3title":"(GMT-03:00) شرق البرازيل، غرينلاند",
+	  "GMTm3title_arg":"(GMT-03:00) بوينس آيرس، الأرجنتين",
+	  "GMTm2title":"(GMT-02:00) وسط الأطلسي",
+	  "GMTm1title":"(GMT-01:00) جزر الأزور",
+	  "GMT0title":"(GMT) غامبيا، ليبيريا، المغرب",
+
+	  "GMT1title":"(GMT+01:00) ألمانيا",
+	  "GMT2title":"(GMT+02:00) اليونان، أوكرانيا، تركيا",
+	  "GMT2title_ple":"(GMT+02:00) القدس",
+	  "GMT2title_eg":"(GMT+02:00) القاهرة",
+	  "GMT3title":"(GMT+03:00) توقيت موسكو الشتوي",
+	  "GMT4title":"(GMT+04:00) أرمينيا",
+	  "GMT5title":"(GMT+05:00) باكستان، روسيا",
+
+	  "GMT6title":"(GMT+06:00) بنغلاديش، روسيا",
+	  "GMT7title":"(GMT+07:00) بانكوك، هانوي، جاكرتا",
+	  "GMT8title":"(GMT+08:00) بكين، تشونغتشينغ، هونغ كونغ، أورومتشي",
+	  "GMT9title":"(GMT+09:00) اليابان، كوريا",
+	  "GMT10title":"(GMT+10:00) غوام، روسيا",
+	  "GMT11title":"(GMT+11:00) جزر سليمان",
+	  "GMT12title":"(GMT+12:00) نيوزيلندا",
+	  
+	  "GMT13title":"(GMT+13:00) نوكوألوفا",
+
+	  "ntpCurTime_Title":"الوقت الحالي",
+	  "ntpWanChannelTitle":"اتصالات WAN المرتبطة",
+	  "checkDaylight":"التوقيت الصيفي",
+	  "checkDaylight_Tip":"(مثل 2017-08-01T13:50:00)",
+	  "start_Time":"وقت البدء",
+	  "end_Time":"وقت الانتهاء",
+	  
+	  "ntp_nofirstserveralert":"الرجاء إدخال خادم NTP الأول.",
+	  "ntp_nosecondserveralert":"الرجاء إدخال خادم NTP الثاني.",
+	  "ntp_noperiodalert":"الرجاء إدخال فترة المزامنة التلقائية.",
+	  "ntp_illegalperiodalert":"الرجاء إدخال فترة مزامنة تلقائية صالحة.",
+	  "daylightsavingstimeIllegalAlert":"الرجاء إدخال توقيت صيفي صالح.",
+	  
+  	  "ntpsave_apply":"مزامنة الوقت", 
+  	  "ntp_cancel":"مزامنة وقت النظام",
+  	  "ntp_check_time":"مزامنة الوقت عبر NTP",
+  	  "invalid_data_alert":"بعض القيم غير صالحة، يرجى المحاولة مرة أخرى!",
+	  "app_wan":"اتصالات WAN المرتبطة"
+
+}
+

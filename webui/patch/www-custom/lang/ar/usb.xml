@@ -1,0 +1,58 @@
+{
+  "usb disable":"تعطيل",
+  "usb enable":"تفعيل",
+  "usb add":"إضافة",
+  "usb edit":"تعديل",
+  "usb del":"حذف",
+  "usb apply":"تطبيق",
+  "usb cancel":"إلغاء",
+  "usb reset":"إعادة تعيين",
+  
+  "usb_loadPrompt":"في هذه الصفحة يمكنك رفع الملفات إلى خادم FTP أو تنزيلها منه.",
+  "usb_storgeHead":"تخزين USB",
+  "usb_typeTitle":"النوع",
+  "usb_ftpUserTitle":"اسم المستخدم",
+  "usb_ftpPwdTitle":"كلمة المرور",
+  "usb_ftpIPTitle":"IP خادم FTP",
+  "usb_ftpPortTitle":"منفذ خادم FTP",
+  "usb_localFileTitle":"اسم الملف المحلي",
+  "usb_remoteFileTitle":"اسم الملف البعيد",
+  "usb_diskNoTitle":"رقم القرص",
+  
+  "usb_ftpUserTips":" (يمكنك إدخال 1-32 حرفًا من الأحرف والأرقام و'_')",
+  "usb_ftpPwdTips":" (يمكنك إدخال 0-32 حرفًا من الأحرف والأرقام و'_')",
+  "usb_ftpPortTips":" (0 ~ 65535)",
+  "usb_ftpIPTips":" (صيغة عشرية)",
+  "usb_localFileTips":" (يمكنك إدخال 1-128 حرفًا من الأحرف والأرقام و'_' و'/' و'-')",
+  "usb_remoteFileTips":" (يمكنك إدخال 1-128 حرفًا من الأحرف والأرقام و'_' و'/' و'-')",
+  "usb_fileTips":" (يمكنك إدخال 1-128 حرفًا من الأحرف والأرقام و'_' و'/')",    
+
+  "usb_userIllegalAlert":"الرجاء إدخال اسم مستخدم صالح!",
+  "usb_pwdIllegalAlert":"الرجاء إدخال كلمة مرور صالحة!",
+  "usb_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+  "usb_portIllegalAlert":"نطاق المنافذ الصالح من 0 إلى 65535.",
+  "usb_fileIllegalAlert":"الرجاء إدخال اسم ملف صالح!",
+  
+  "usb_cfgBakPrompt":"في هذه الصفحة يمكنك تنزيل ملف الإعدادات الحالي إلى جهاز USB.",
+  "usb_cfgBakTitle":"مجلد النسخ الاحتياطي على USB",
+  "usb_cfgBak":"تنزيل النسخة الاحتياطية",
+  "usb_idle":"لا يوجد USB",
+  "usb_cfgBakSuccess":"تم تنزيل ملف الإعدادات بنجاح!",
+  
+  "usb_serverError":"خطأ في الخادم!",
+  "usb_serverError1":"خطأ في الخادم 1!",
+  "usb_serverError2":"خطأ في الخادم 2!",
+  "usb_serverError3":"خطأ في الخادم 3!",
+  
+  "usb_cfgRestorePrompt":"في هذه الصفحة يمكنك تحديث جهازك بملف الإعدادات المحفوظ على USB.",
+  "usb_cfgRestoreTitle":"مجلد الاستعادة على USB",
+  "usb_filenameTitle":"ملف الإعدادات",
+  "usb_cfgRestore":"استعادة",
+  "usb_cfgRestoreSuccess":"تمت استعادة ملف الإعدادات بنجاح!",
+  "usb_openFileFail":"تعذر فتح الملف المحدد!",
+  "usb_readFileFail":"تعذرت قراءة الملف المحدد!",
+  "usb_restoreFail":"فشلت استعادة ملف الإعدادات!",
+  
+ "rebooting":"يتم إعادة تعيين النظام... يرجى الانتظار قليلًا ثم تسجيل الدخول مجددًا."
+ 
+}

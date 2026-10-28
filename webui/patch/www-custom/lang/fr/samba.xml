@@ -1,0 +1,20 @@
+{
+	"samba_prompt": "Sur cette page, vous pouvez activer ou désactiver le service Samba ; assurez-vous d'abord d'avoir branché un périphérique de stockage amovible sur le port USB !",
+	"samba_enable": "Activer Samba",
+	"usb_part": "Partition USB",
+	"enable": "Activer",
+	"disable": "Désactiver",
+	"btn_apply": "Appliquer",
+	"btn_cancel": "Annuler",
+	"Open_Samba":"Ouvrir Samba",
+	"samba_userTitle":"Nom d'utilisateur",
+	"samba_pwdTitle":"Mot de passe",
+	"samba_userTips":"(Vous pouvez saisir 1 à 32 caractères : alphanumériques et '_')",
+  	"samba_pwdTips":"(Vous pouvez saisir 1 à 8 caractères : alphanumériques et '_')",
+  	"invalid_data_alert":"Certaines valeurs sont invalides, veuillez réessayer !",
+  	"samba_head":"Serveur Samba",
+  	"samba_enableTitle":"Activer",
+  	"samba_disableTitle":"Désactiver",
+  	"samba_apply":"Appliquer",
+  	"samba_cancel":"Annuler"
+}

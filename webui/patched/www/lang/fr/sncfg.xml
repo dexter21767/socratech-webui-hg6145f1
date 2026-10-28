@@ -1,0 +1,44 @@
+{
+  "sncfg_prompt":"Sur cette page, vous pouvez modifier les paramètres d'authentification de l'ONU auprès de l'OLT. Les changements prennent effet après redémarrage.",
+  "sncfg_prompt_user":"Vous pouvez modifier les paramètres d'authentification de l'ONU auprès de l'OLT. Les changements prennent effet après redémarrage. Ne modifiez pas le mot de passe : cela affecterait le service. Merci !",
+  
+  "sncfg_apply":"Appliquer",
+  "sncfg_cancel":"Annuler",
+  
+  "sncfg_authMethod":"Méthode d'authentification",
+  "sncfg_loid":"LOID",
+  "sncfg_loidTips":" (Vous pouvez saisir 1 à 24 caractères latins de base)",
+  "sncfg_lopwd":"Mot de passe logique",
+  "sncfg_lopwdTips":" (Vous pouvez saisir 0 à 12 caractères latins de base)",
+  "sncfg_pwd":"Clé d'accès",
+  "sncfg_pwdTips":" (Vous pouvez saisir 0 à 10 caractères : alphanumériques, '-' et '_')",
+  "oltcfg_phySN":"SN physique",
+  "oltcfg_phySNTips":"  (Vous pouvez saisir 12 ou 16 caractères parmi '0'-'9' 'a'-'f' 'A'-'F' 'h' 't' 'H' 'T')",
+  
+  "sncfg_restore":"Restaurer",
+  "sncfg_restoreTips":" (Ce bouton restaure la configuration par défaut de cette page)",
+
+  "sncfg_snTitle":"Authentification LOID",
+  "sncfg_pwdTitle":"Authentification par mot de passe",
+  "oltcfg_phySNTitle":"Authentification par SN physique",
+  "sncfg_restoreTitle":"Restaurer la configuration",
+
+  "sncfg_restartConfirm":"Paramètres d'authentification modifiés avec succès ! Redémarrer l'ONU ? Reconnectez-vous à l'interface web après le redémarrage de l'ONU !",
+
+  "sncfg_loidNullAlert":"Veuillez saisir le LOID !",
+  "sncfg_loidIllegalAlert":"LOID invalide !",
+  "sncfg_lopwdIllegalAlert":"Mot de passe logique invalide !",
+  "sncfg_pwdCfgNullAlert":"Veuillez saisir la clé d'accès !",
+  "sncfg_pwdCfgIllegalAlert":"Clé d'accès invalide !",
+  "sncfg_loidchnAlert":"LOID invalide ! Veuillez saisir des caractères latins de base !",
+  "sncfg_speCharAlert":"Veuillez saisir des caractères latins de base, sauf ",
+  "sncfg_phySNNullAlert":"Veuillez saisir le SN physique !",
+  "sncfg_phySNCfgIllegalAlert":"SN physique invalide !",
+  "sncfg_value_invilid":"Certaines valeurs sont invalides, veuillez vérifier et les ressaisir.",
+
+  "physncfg_checkeror":"Erreur : la valeur saisie est invalide, veuillez réessayer !",
+  "sncfg_setFailedInfo":"Erreur : échec de l'application des paramètres d'authentification ! Redémarrez l'appareil et réessayez !",
+  "change_eye":"œil",
+  "registerPrompt":"Sur cette page, vous pouvez enregistrer l'appareil."
+}
+

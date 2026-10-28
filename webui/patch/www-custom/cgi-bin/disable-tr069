@@ -2,6 +2,9 @@
 
 # Read GET parameters
 QUERY="$QUERY_STRING"
+# translations (WebUI Options pages share _i18n.sh)
+i18n_head() { :; }
+I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
 
 ACTION=""
 case "$QUERY" in
@@ -48,8 +51,9 @@ cat <<EOF
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TR069 Patch</title>
+    <title data-i18n="tr_page_title">TR069 Patch</title>
     <meta charset="UTF-8">
+$(i18n_head)
     <style>
         body { font-family: Arial; background:#f4f4f4; text-align:center; }
         .box { margin-top:10px; padding:20px; background:white; display:inline-block;
@@ -62,10 +66,10 @@ cat <<EOF
 </head>
 <body>
     <div class="box">
-        <h2>TR-069 auto-enabling patch</h2>
-        <p>This patch prevents TR-069 from auto-enabling</p>
-        <p><strong>Please backup your configuration file !</strong></p>
-        <p>Current status: <strong>$CURRENT_STATUS</strong></p>
+        <h2 data-i18n="tr_title">TR-069 auto-enabling patch</h2>
+        <p data-i18n="tr_desc">This patch prevents TR-069 from auto-enabling</p>
+        <p><strong data-i18n="backup_warn">Please backup your configuration file !</strong></p>
+        <p><span data-i18n="cur_status">Current status:</span> <strong data-i18n="st_$CURRENT_STATUS">$CURRENT_STATUS</strong></p>
 EOF
 
 # Show response message
@@ -76,22 +80,22 @@ EOF
 #fi
 
 if [ "$CURRENT_STATUS" = "enabled" ]; then
-    echo "<p style='color:green;'>Patch applied</p>"
+    echo "<p style='color:green;' data-i18n='tr_applied'>Patch applied</p>"
 else
-    button='<a class="enable" href="?action=enable">Apply patch</a>'
+    button='<a class="enable" href="?action=enable" data-i18n="tr_apply_btn">Apply patch</a>'
 fi
 
 # Show control links
 cat <<EOF
         $button
         <hr>
-        <h2>TR-069 reset values</h2>
-        <p>This will set the url to localhost, port to 0, usernames & passwords to empty values</p>
-        <p><strong>Please backup your configuration file !</strong></p>
+        <h2 data-i18n="tr_reset_title">TR-069 reset values</h2>
+        <p data-i18n="tr_reset_desc">This will set the url to localhost, port to 0, usernames &amp; passwords to empty values</p>
+        <p><strong data-i18n="backup_warn">Please backup your configuration file !</strong></p>
         $(if [ "$ACTION" = "reset" ]; then
-			echo "<p style='color:green;'>Configuration applied !</p>"
+			echo "<p style='color:green;' data-i18n='tr_reset_ok'>Configuration applied !</p>"
 		fi)
-        <a class="enable" href="?action=reset">Reset values</a>
+        <a class="enable" href="?action=reset" data-i18n="tr_reset_btn">Reset values</a>
     </div>
 </body>
 </html>

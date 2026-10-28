@@ -1,0 +1,22 @@
+{
+  "upnpEnableApply":"Apply",
+  "upnpEnableCancel":"Cancel",
+   "upnpcfg_remove":"Remove Configuration",
+  "upnp_prompt":"On this page, you could configure UPnP enable/disable.",
+  
+  "dlna_prompt":"On this page, you could enable or disable DLNA service. Please make sure that you have inserted the removable storage device and USB port first!",
+  "usb_pathTitle":"USB Partition",
+  "dlnaEnable_title":"DLNA Service",
+  "dlna_pathTitle":"Media Shared Directory",
+  "dlna_path_noalert":"Please input valid media shared directory!",
+  
+  "upnp_enable":"Enable",
+  "upnp_disable":"Disable",
+  "upnp_wan_title":"WAN Name",
+
+  "igmp_prompt":"On this page, you could configure multicust mode.",
+  "upnpEnable_title":"IGMP Mode",
+  "upnpEnable_title2":"MLD Mode",
+  "igmp_apply":"Apply"
+
+}

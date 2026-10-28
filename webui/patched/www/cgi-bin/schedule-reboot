@@ -4,6 +4,9 @@ CONFIG_FILE="/fhconf/crontab_conf"
 [ -f "$CONFIG_FILE" ] || touch "$CONFIG_FILE"
 
 SHELL_HEADER="SHELL=/bin/sh"
+# translations (WebUI Options pages share _i18n.sh)
+i18n_head() { :; }
+I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
 
 urldecode() {
     printf "$(echo "$1" | sed "s/+/ /g; s/%\([0-9a-fA-F][0-9a-fA-F]\)/\\\\x\1/g")"
@@ -88,6 +91,9 @@ echo ""
 cat <<EOF
 <html>
 <head>
+<meta charset="UTF-8">
+<title data-i18n="sr_title">Schedule Reboot</title>
+$(i18n_head)
 <style>
     body { font-family: sans-serif; background: #f4f7f6; padding: 20px; }
     .container { max-width: 450px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -100,23 +106,23 @@ cat <<EOF
 </head>
 <body>
     <div class="container">
-        <h2>Schedule Reboot</h2>
+        <h2 data-i18n="sr_title">Schedule Reboot</h2>
         <form method="POST" id="rebootForm">
             <div class="section">
                 <label>
                     <input type="checkbox" name="enable" id="enableToggle" value="on" $C_EN> 
-                    <b>Enable</b>
+                    <b data-i18n="btn_enable">Enable</b>
                 </label>
             </div>
 
             <div id="settingsGroup" class="section $([ -z "$C_EN" ] && echo "disabled-group")">
                 <div class="section">
-                    Time (HH:MM): <input type="number" name="hour" min="0" max="23" value="$C_HOUR" $IS_DISABLED> :
+                    <span data-i18n="sr_time">Time (HH:MM):</span> <input type="number" name="hour" min="0" max="23" value="$C_HOUR" $IS_DISABLED> :
                     <input type="number" name="min" min="0" max="59" value="$C_MIN" $IS_DISABLED>
                 </div>
 
                 <div class="section">
-                    <label><input type="checkbox" name="everyday" id="everydayToggle" value="on" $([ "$C_DAYS" = "*" ] && echo "checked") $IS_DISABLED> Everyday</label>
+                    <label><input type="checkbox" name="everyday" id="everydayToggle" value="on" $([ "$C_DAYS" = "*" ] && echo "checked") $IS_DISABLED> <span data-i18n="sr_everyday">Everyday</span></label>
                     <div class="day-box" id="dayBox">
 EOF
 
@@ -126,14 +132,14 @@ for d in 1 2 3 4 5 6 0; do
     if [ "$C_DAYS" = "*" ]; then CHECK="checked"; 
     else echo "$C_DAYS" | grep -q "$d" && CHECK="checked"; fi
     
-    echo "<label><input type='checkbox' name='day$d' value='on' $CHECK $IS_DISABLED> $n</label>"
+    echo "<label><input type='checkbox' name='day$d' value='on' $CHECK $IS_DISABLED> <span data-i18n='day$d'>$n</span></label>"
 done
 
 cat <<EOF
                     </div>
                 </div>
             </div>
-            <button type="submit" class="submit-btn">Save</button>
+            <button type="submit" class="submit-btn" data-i18n="btn_save">Save</button>
         </form>
     </div>
 

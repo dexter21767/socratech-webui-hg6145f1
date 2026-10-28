@@ -1,0 +1,23 @@
+{
+	"policy_route_config_prompt": "Sur cette page, vous pouvez configurer une route par politique pour un service (Internet, IPTV...). Cette route envoie les paquets du service vers l'OLT via le port WAN indiqué.",
+	"policy_list_title": "Liste des routes par politique",
+	"service_route_config_prompt": "Sur cette page, vous pouvez configurer une route pour un service. Les paquets du service sont alors envoyés vers l'OLT via le port WAN indiqué.",
+	"service_list_title": "Liste des routes par service",
+	"app_apply": "Appliquer",
+	"app_cancel": "Annuler",
+	"vendor_id": "ID fournisseur",
+	"wan_name": "Nom WAN",
+	"service_type": "Type de service",
+	"illegal_value_alert":"Certaines valeurs sont invalides !",
+	"wan_name_is_empty_alert": "Le nom WAN ne peut pas être vide !",
+	"app_most32RulesAlert":"Vous pouvez configurer jusqu'à 32 règles !",
+	"wanName_illegal_alert":"Veuillez vérifier qu'une connexion WAN n'a qu'une seule configuration !",
+	"delete_alert":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+	"no_rules_alert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+	"no_selected_rules_alert":"Aucune règle n'est sélectionnée, suppression impossible !",
+	"vendor_tips":"(Chaîne de l'option 60 : *VendorID*, *VendorID*, *VendorID* ou VendorID)",
+	"Vendor_ID_different":"L'ID fournisseur doit être différent si le nom WAN est le même.",
+	"repeat_with_the_existing_rules":"Doublon avec une règle existante. Veuillez reconfigurer !",
+	"app_add":"Ajouter",
+	"app_delete":"Supprimer"
+}

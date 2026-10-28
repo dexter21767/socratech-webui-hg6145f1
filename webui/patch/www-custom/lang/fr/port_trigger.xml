@@ -1,0 +1,39 @@
+{
+  "pt_PortTriggerPrompt":"Sur cette page, vous pouvez configurer le déclenchement de ports.",
+
+  "fw_filterListHead":"Liste des règles de déclenchement de ports",
+  "PFdescrip":"Description",
+  "The_trigger_Port":"Port déclencheur",
+  "The_open_Port":"Port ouvert",
+  "The_TriggerProtocol":"Protocole déclencheur",
+  "The_openProtocol":"Protocole ouvert",
+  "Enable":"Activer",
+
+  "pf_DescriptionTitle":"Description",
+  "pf_triPortTitle":"Port déclencheur",
+  "pf_openPortTitle":"Port ouvert",
+  "pf_triprotocolTitle":"Protocole déclencheur",
+  "pf_openprotocolTitle":"Protocole ouvert",
+  "pf_enabelTitle":"Activer",
+
+  "pf_add":"Ajouter",
+  "pf_delete":"Supprimer",
+  "pf_deleteAll":"Tout supprimer",
+
+  "pf_apply":"Appliquer",
+  "pf_cancel2":"Annuler",
+
+  "pf_mostRulesAlert":"Vous pouvez configurer 8 règles au maximum !",
+  "pf_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "pf_noChooseAlert":"Veuillez sélectionner une règle avant de supprimer !",
+  "pf_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+
+  "pf_ipIllegalAlert":"Veuillez saisir une IP valide !",
+  "pf_PortNullAlert":"Veuillez saisir une valeur de port valide !",
+  "pf_endPortTooSmallAlert":"Le port de début ne doit pas être supérieur au port de fin !",
+  "pf_portIllegalAlert":"La plage de ports valide est 1 - 65535 !",
+  "Please creat INTERNET WAN first !":"Veuillez d'abord créer un WAN INTERNET !",
+ 
+  "description_tips":"( 0 à 31 caractères : alphanumériques, '-' et '_')",
+  "descripIllegalAlert":"Veuillez saisir une description valide !"
+}

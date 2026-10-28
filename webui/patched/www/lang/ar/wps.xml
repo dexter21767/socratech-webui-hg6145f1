@@ -1,0 +1,34 @@
+{
+  "WPSconnect":"اتصال",
+  "WPSCancel":"إلغاء",
+  "wps_apply":"تطبيق",
+  
+  "WPS_enable_head":"تفعيل WPS",
+  "wps_enable_title":"تفعيل",
+  "wps_disable_title":"تعطيل",
+  "WPS_cfg_head":"إعداد WPS",
+
+  "wps_statetitle":"حالة WPS",
+  "wps_prompt":"في هذه الصفحة يمكنك إعداد WPS. ",
+  "wps_prompt_ap":"في هذه الصفحة يمكنك الاستعلام عن WPS. ",
+  "pin_code":"رمز PIN",
+  "wps_PINtitel":"رمز PIN (PIN)",
+  "wps_PINTips":"الرجاء إدخال أرقام 0-9 (8 خانات).",
+  "wps_PINer":"رمز PIN",
+  "wps_buttontitel":"الإعداد بالضغط على زر (PBC)",
+  "wps_nopinalert":" الرجاء إدخال رمز PIN!",
+  "wps_pinillegal":"رمز PIN غير صالح!",
+
+  "Connecting":"جارٍ الاتصال...",
+  "Time_Out":"انتهت المهلة",
+  "connection_Successful":"تم الاتصال بنجاح",
+  "connection_fail":"فشل الاتصال",
+
+  "not_hide_24g_SSID1":"يرجى عدم إخفاء SSID1 لـ 2.4G!",
+  "not_hide_5g_SSID1":"يرجى عدم إخفاء SSID1 لـ 5G!",
+
+  "wps_PIN1_prompt":"(يمكنك إدخال أرقام 0-9 (8 خانات).)",
+  "wps_bandSelec_head":"اختيار نطاق WPS"
+}
+
+

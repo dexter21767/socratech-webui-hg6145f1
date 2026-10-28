@@ -168,3 +168,21 @@ body {
     margin: 0 auto;
     position: relative;
 }
+
+/* ===== Language selector ===== */
+.uilang-sel {
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    height: 28px; padding: 0 26px 0 30px;
+    border: 1px solid #cfe3d3; border-radius: 14px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300a335' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20'/%3E%3C/svg%3E") no-repeat 10px center;
+    background-size: 14px;
+    font: 600 12px "Segoe UI", Roboto, Arial, sans-serif; color: #2d5a3a;
+    cursor: pointer; transition: border-color .2s, box-shadow .2s;
+}
+.uilang-wrap { position: relative; display: inline-block; direction: ltr; }
+.uilang-wrap:after {
+    content: ""; position: absolute; right: 11px; top: 11px; pointer-events: none;
+    border: solid #5a7a63; border-width: 0 1.5px 1.5px 0; padding: 2.5px; transform: rotate(45deg);
+}
+.uilang-sel:hover { border-color: #00a335; }
+.uilang-sel:focus { outline: none; border-color: #00a335; box-shadow: 0 0 0 3px rgba(0,163,53,.15); }

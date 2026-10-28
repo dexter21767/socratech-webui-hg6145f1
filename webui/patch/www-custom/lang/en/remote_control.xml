@@ -1,0 +1,26 @@
+{
+  "recontrol_prompt":"On this page, you can enable/disable visit web through wan, you can not visit web through wan if you disable remote control, and you can visit web through wan if you enable remote control.",
+  "recontrol_prompt_romania":"On this page, you can enable/disable WEB access through wan only by https.",
+  "rcEnable_title":"Remote Control",
+  
+  "rc_enable":"Enable",
+
+  "rc_disable":"Disable",
+  
+  "recontrolApply":"Apply",
+  "recontrolCancel":"Cancel",
+
+  "https_prompt":"On this page, you can enable/disable Https.",
+
+  "webport_Prompt":"And you could configure web communication port(HTTP).",
+  "web_portTitle":"WEB Valid Communication Port",
+  "web_portchangeTitle":"WEB Communication Port You Modified",
+  "web_portchangeTips":"(Please input 1024-65535 or 80)",
+  "Change_confirm":"The configuration you have modifyed will be effective after reboot.",
+  "web_portIllegalAlert":"Please input 1024-65535 or 80!",
+  "web_PortNullAlert":"Please input a value of the port!"
+  
+}
+
+
+

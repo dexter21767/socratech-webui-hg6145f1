@@ -1,0 +1,34 @@
+{
+  "WPSconnect":"Connect",
+  "WPSCancel":"Cancel",
+  "wps_apply":"Apply",
+  
+  "WPS_enable_head":"WPS Enable",
+  "wps_enable_title":"Enable",
+  "wps_disable_title":"Disable",
+  "WPS_cfg_head":"WPS Configuration",
+
+  "wps_statetitle":"WPS State",
+  "wps_prompt":"On this page, you could configure WPS. ",
+  "wps_prompt_ap":"On this page, you could query WPS. ",
+  "pin_code":"PIN Code",
+  "wps_PINtitel":"PIN code(PIN)",
+  "wps_PINTips":"Please input Number 0-9 (8 Characters).",
+  "wps_PINer":"PIN Code",
+  "wps_buttontitel":"Push Button Config(PBC)",
+  "wps_nopinalert":" Please enter PIN code!",
+  "wps_pinillegal":"PIN code is illegal!",
+
+  "Connecting":"Connecting...",
+  "Time_Out":"Time Out",
+  "connection_Successful":"Connection Successful",
+  "connection_fail":"Connection Fail",
+
+  "not_hide_24g_SSID1":"Please don't hide 2.4G SSID1 !",
+  "not_hide_5g_SSID1":"Please don't hide 5G SSID1 !",
+
+  "wps_PIN1_prompt":"(You can input number 0-9 (8 characters).)",
+  "wps_bandSelec_head":"WPS Band Select"
+}
+
+

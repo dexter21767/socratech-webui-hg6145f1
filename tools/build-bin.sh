@@ -38,9 +38,11 @@ mount /www /www
 chmod +x "$TARGET_DIR"/cgi-bin/* 2>/dev/null
 # whole cgi-bin as a directory, so every custom CGI (incl. voip-switch) is served
 mount --bind "$TARGET_DIR/cgi-bin" /www/cgi-bin
-# every other overlay file that has a stock counterpart (skip *.back.* backups)
+# whole lang dir too, so new languages (fr/ar) appear (new dirs can't be bound per-file)
+[ -d "$TARGET_DIR/lang" ] && mount --bind "$TARGET_DIR/lang" /www/lang
+# every other overlay file that has a stock counterpart (skip cgi-bin, lang, *.back.*)
 cd "$TARGET_DIR" || exit 1
-for f in $(find . -type f ! -path './cgi-bin/*' ! -name '*.back.*'); do
+for f in $(find . -type f ! -path './cgi-bin/*' ! -path './lang/*' ! -name '*.back.*'); do
 	f="${f#./}"
 	[ -e "/www/$f" ] && mount --bind "$TARGET_DIR/$f" "/www/$f"
 done

@@ -1,0 +1,37 @@
+{
+  "catv_prompt":"Vous pouvez modifier la puissance RF sur cette page.",
+  "catv_enable_title":"Activer la puissance RF",
+  "catv_enableTitle":"Activer",
+  "catv_disableTitle":"Désactiver",
+  "catv_rfoffset_title":"Plage d'ajustement de la puissance RF",
+  "catv_rfoffset_tips":"[-127,127]",
+  "catv_apply":"Appliquer",
+  "catv_cancel":"Annuler",
+  "value_illegal":"Certaines valeurs sont invalides, veuillez réessayer !",
+
+  "led_switch_prompt":"Vous pouvez activer/désactiver les LED sur cette page.",
+  "led_switch_enable_title":"Activer les LED",
+
+  "preset_prompt":"Vous pouvez modifier l'activation du préréglage et la durée du bouton de réinitialisation sur cette page.",
+  "preset_enable_title":"Activer le préréglage",
+  "preset_time_title":"Durée du bouton de réinitialisation",
+  "restart_tips":"(Prend effet après redémarrage)",
+  "preset_time_tips":"[5,300] secondes (prend effet après redémarrage)",
+  "rebooting":"Le système redémarre... Veuillez patienter puis vous reconnecter après le redémarrage.",
+  "restore_apply":"Restaurer",  
+  "restore_confirm":"Si vous restaurez la configuration par défaut, votre configuration personnalisée sera perdue. Voulez-vous vraiment restaurer la configuration par défaut ?",
+  "user_account_enable_prompt":"Vous pouvez activer le compte utilisateur sur cette page. (Le mot de passe par défaut du compte utilisateur est user1234)",
+  "user_account_enable_title":"Activation du compte utilisateur",
+
+  "unknown_error_alert":"Erreur inconnue",
+  "preconfigure_prompt":"Sur cette page, vous pouvez effectuer une préconfiguration et exporter le fichier de préconfiguration vers votre PC.",
+  "preconfigure_enable_title":"Activer la préconfiguration",
+  "preconfigure_button":"Télécharger la préconfiguration",
+  "preconfigure_tips0":"Remarque :",
+  "preconfigure_tips1":"1. Cochez Activer la préconfiguration, cliquez sur Appliquer, choisissez Oui et l'appareil redémarrera.",
+  "preconfigure_tips2":"2. Après le redémarrage, connectez-vous en administrateur avec le mot de passe par défaut et modifiez la configuration web à partir de la configuration par défaut.",
+  "preconfigure_tips3":"3. Après modification, exportez la préconfiguration depuis la page de préconfiguration.",
+  "preconfigure_tips4":"4. Désactivez la préconfiguration, cliquez sur Appliquer, choisissez Oui et l'appareil redémarrera.",
+  "takes_effect_after_restart":"La nouvelle configuration prendra effet après un redémarrage de l'appareil. Voulez-vous vraiment l'appliquer et redémarrer ?"
+
+}

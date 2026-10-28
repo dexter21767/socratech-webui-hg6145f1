@@ -1,0 +1,41 @@
+{
+  "pps_apply":"Appliquer",
+  "pps_cancel":"Annuler",
+  
+  "route_qos_prompt":"Sur cette page, vous pouvez activer/désactiver la QoS de routage !",
+  "route_qos_title":"QoS de routage",  
+  "qos_c_enable":"Activer",
+  "qos_c_disable":"Désactiver",
+
+  "route_qosPrompt":"Sur cette page, vous pouvez configurer la QoS de routage !",
+  "pf_add":"Ajouter",
+  "pf_delete":"Supprimer",
+  "pf_deleteAll":"Tout supprimer",
+  "route_qosListHead":"Liste QoS de routage",
+  "qostypetitle":"Type",
+  "qosPrioritytitle":"Priorité",
+  "qosprotocoltitle":"Protocole",
+  "qossrciptitle":"IP source ",
+  "qossrcporttitle":"Port source",
+  "qosdisiptitle":"IP cible",
+  "qosdisporttitle":"Port cible",
+  "qoscontroltitle":"Activer",
+   "qos_apply":"Appliquer",
+  "qos_cancel":"Annuler",
+  
+  "pf_mostRulesAlert":"Vous pouvez ajouter 6 règles au maximum !",
+  "pf_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "pf_noChooseAlert":"Veuillez sélectionner une règle puis la supprimer !",
+  "priority_alert":"Veuillez saisir la priorité.",
+
+  "pf_ipIllegalAlert":"Veuillez saisir une IP valide !",
+  "pf_PortNullAlert":"Veuillez saisir une valeur de port !",
+  "pf_endPortTooSmallAlert":"Le port de début ne doit pas être supérieur au port de fin !",
+  "pf_portIllegalAlert":"La plage de ports valide est 1 à 65535.",
+  "pf_PortNullAlert":"Veuillez saisir une valeur de port !",
+  "pf_8021PriorityIllegalAlert":"La plage de priorité valide est 0 à 7 !",
+  "pf_hscpPriorityIllegalAlert":"La plage de priorité valide est 0 à 63 !",
+  "pf_deleteRuleConfirm":"Voulez-vous vraiment supprimer les règles sélectionnées ?"
+
+}
+

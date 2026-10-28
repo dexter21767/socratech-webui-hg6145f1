@@ -1,0 +1,15 @@
+{
+	"WifiCoverageConfig_prompt": "في هذه الصفحة يمكنك إدارة تغطية WiFi الذكية، إذ يمكنك تمكين ONT من العمل مع نقاط وصول خارجية لبناء شبكة WiFi وتوسيع تغطيتها.",
+	"ExternalAPListHead": "قائمة نقاط الوصول الخارجية",
+	"btn_apply": "تطبيق",
+	"btn_cancel": "إلغاء",
+	"no_title": "الرقم",
+	"device_model_title": "طراز الجهاز",
+	"serial_num_title": "الرقم التسلسلي",
+	"status_title": "الحالة",
+	"online_duration": "مدة الاتصال",
+	"time_out": "انتهت المهلة!",
+	"force_switching_value_invalid": "قيمة التبديل الإجباري خاطئة، يجب أن تكون بين -100 و-66.",
+	"conditioned_switching_value_invalid": "قيمة التبديل المشروط خاطئة، يجب أن تكون بين -84 و-60.",
+	"config_status": "حالة الإعداد"
+}

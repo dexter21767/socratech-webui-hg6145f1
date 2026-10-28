@@ -1,0 +1,55 @@
+{
+  "content_trans_apply":"Appliquer",
+  "content_trans_cancel":"Annuler",
+  
+  "update_prompt":"Sur cette page, vous pouvez sélectionner un fichier local et cliquer sur le bouton pour mettre à jour le logiciel de l'équipement. Ne coupez pas l'alimentation et n'effectuez aucune autre opération pendant la mise à jour, afin de ne pas endommager l'appareil.",
+  "update_chooseFile":"Choisir un fichier et mettre à jour",
+  "update_info":"La mise à jour prend du temps, veuillez patienter...",
+  "update_back":"Retour",
+  
+  "update_format_illegal":"Format de fichier invalide, veuillez en sélectionner un autre !",
+  "update_success":"Mise à jour réussie !",
+  "update_fail":"Échec de la mise à jour du fichier, veuillez réessayer.",
+  "update_restart":" Veuillez redémarrer l'appareil !",
+  "update_api_error":" Veuillez vérifier que le fichier de mise à jour est correct !",
+  "update_space_not_enough":" Espace insuffisant sur l'appareil ! Redémarrez et réessayez !",
+  "update_restartConfirm":" Redémarrer l'ONU ? Reconnectez-vous à l'interface web après le redémarrage de l'ONU !",
+  "update_restartAlert":" Mise à jour réussie ! L'ONU va redémarrer automatiquement.",
+  "update_restart_AP_Alert":" Mise à jour réussie ! L'AP va redémarrer automatiquement.",
+  
+  "down_cfgFilePrompt":"Sur cette page, vous pouvez sauvegarder des fichiers de configuration de l'appareil vers le PC après avoir ouvert l'outil FTP.",
+  "down_cfgFileHead":"Sauvegarde de la configuration",
+  "down_cfgFileUserTitle":"Nom d'utilisateur",
+  "down_cfgFilePwdTitle":"Mot de passe",
+  "down_cfgFileIPTitle":"IP de l'hôte local",
+  "down_cfgFileNameTitle":"Nom du fichier", 
+  
+  "down_cfgFileUserTips":" (Vous pouvez saisir 1 à 20 caractères : alphanumériques, '_' et '.')",
+  "down_cfgFilePwdTips":" (Vous pouvez saisir 0 à 20 caractères : alphanumériques, '_' et '.')",
+  "down_cfgFileIPTips":" (Format décimal)",
+  "down_cfgFileNameTips":" (Vous pouvez saisir 1 à 64 caractères : alphanumériques, '_' et '.')",
+  
+  "down_cfgFileUserIllegalAlert":"Veuillez saisir un nom d'utilisateur valide !",
+  "down_cfgFilePwdIllegalAlert":"Veuillez saisir un mot de passe valide !",
+  "down_cfgFileIPIllegalAlert":"Veuillez saisir une IP valide !",
+  "down_cfgFileFileIllegalAlert":"Veuillez saisir un nom de fichier valide !",
+  
+  "cfg_download_prompt":"Vous pouvez télécharger le fichier de configuration actuel sur l'ordinateur local.",
+  "cfg_download":"Sauvegarde de la configuration",
+  
+  "cfg_upload_prompt":"Si vous sélectionnez un fichier de configuration, votre terminal sera mis à jour avec ce fichier sauvegardé.",
+  "cfg_upload_title":"Mettre à jour le fichier de configuration",
+  "cfg_uploadTips":"Le nom du fichier de configuration ne peut contenir que '_' et des caractères alphanumériques.",
+  "cfg_upload_import":"Importer",
+  "cfg_upload_load":"Chargement ",
+  "cfg_upload_fileIllegalAlert":"Veuillez sélectionner le bon fichier de configuration !",
+  "cfg_upload_complete":"Mise à jour du fichier de configuration terminée !",
+  "cfg_upload_failed":"Échec de la mise à jour du fichier de configuration !",
+  
+  "rebooting":"Le système redémarre... Veuillez patienter puis vous reconnecter après le redémarrage.",
+  "updata_file":"Mettre à jour le fichier",
+  "upgrade_nofile_err":"Veuillez sélectionner un fichier",
+  "choose_file":"Choisir un fichier"
+
+}  
+

@@ -1,0 +1,49 @@
+{
+  "backPage":"Retour",
+  "inputTips":"Veuillez saisir le mot de passe fourni par l'opérateur !",
+  "loidTitle":"LOID",
+  "pwdTitle":"Mot de passe",
+  "regist_submit":"Activer",
+  "regist_reset":"Réinitialiser",
+  
+  "oltAuthing":"Enregistrement auprès de l'OLT.",
+  "oltAuthFailed":"Échec de l'enregistrement auprès de l'OLT.",
+ 
+  "oltAuthFailed_info":"Enregistrement auprès de l'OLT. Veuillez vérifier le LOID et le mot de passe !",
+  "oltAuthFailed_loid":"Enregistrement auprès de l'OLT (erreur LOID). Veuillez vérifier le LOID et le mot de passe !",
+  "oltAuthFailed_lopwd":"Enregistrement auprès de l'OLT (erreur de mot de passe logique). Veuillez vérifier le LOID et le mot de passe !",
+  "oltAuthFailed_loid_conflict":"Enregistrement auprès de l'OLT (conflit LOID). Veuillez vérifier le LOID et le mot de passe !",
+  "oltAuthFailed_physn_conflict":"Enregistrement auprès de l'OLT (conflit SN physique). Veuillez vérifier la saisie !",
+  "oltAuthFailed_noresource":"Enregistrement auprès de l'OLT (aucune ressource), veuillez réessayer !",
+  "oltAuthFailed_type":"Enregistrement auprès de l'OLT (erreur de type d'ONU).",
+  "oltAuthFailed_physn":"Enregistrement auprès de l'OLT (erreur SN physique). Veuillez vérifier la saisie !",
+  "oltAuthFailed_phypwd":"Enregistrement auprès de l'OLT (erreur de mot de passe physique). Veuillez vérifier la saisie !",
+  "oltAuthFailed_phypwd_conflict":"Enregistrement auprès de l'OLT (conflit de mot de passe physique). Veuillez vérifier la saisie !",
+  "oltAuthFailed_default":"Enregistrement auprès de l'OLT, veuillez réessayer !",
+
+  "serviceDistributingIncomplete":"La dernière distribution de service n'est pas terminée, veuillez vous réenregistrer après avoir restauré toute la configuration via l'interface web.",
+  "registTimeout":"Délai d'activation dépassé.",
+  "registAlready":"Vous êtes enregistré avec succès, inutile de vous réenregistrer.",
+  "registAlready2":"Vous êtes enregistré avec succès, inutile de vous réenregistrer. Pour vous réenregistrer, restaurez toute la configuration puis réessayez.",
+  
+  "getACSIPing":"Obtention de l'adresse IP du canal de gestion.",
+  "getACSIPFailed":"Échec de l'obtention de l'adresse IP du canal de gestion.",
+  "getACSIPSuccess":"Adresse IP du canal de gestion obtenue avec succès.",
+  "retryRestTimes":"Veuillez réessayer (tentatives restantes : ",
+  "retryExceedMaxTimes":"Vous avez atteint le nombre maximal de tentatives d'authentification, veuillez contacter le service client !",
+  "ACSAuthSuccessWaitingDistribute":"Enregistrement réussi. En attente de la distribution du service.",
+  "ACSAuthSuccess":"Enregistrement réussi.",
+  "serviceDistributing":"Enregistrement réussi. Distribution du service en cours.",
+  "serviceDistributeSuccess":"Enregistrement réussi. Distribution du service réussie.",
+  "serviceDistributeFailed":"Échec de la distribution du service.",
+  
+  "ACSAuthFailed_pwd":"Le mot de passe utilisateur n'existe pas !",
+  "ACSAuthFailed_loid":"Le LOID utilisateur n'existe pas !",
+  "ACSAuthFailed_loidpwd":"Le LOID et le mot de passe utilisateur ne correspondent pas !",
+  "ACSAuthFailed_password":"Le mot de passe n'existe pas !",
+  "ACSAuthing":"Enregistrement auprès de l'ACS en cours.",
+  "ACSAuthFailed":"Échec de l'enregistrement auprès de l'ACS.",
+ 
+  "loidNullAlert":"Le LOID est vide ! Veuillez saisir le LOID !"
+}
+

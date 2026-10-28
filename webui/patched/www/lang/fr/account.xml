@@ -1,0 +1,86 @@
+{
+  "account_prompt":"Sur cette page, vous pouvez configurer le nom et le mot de passe du compte utilisateur.",
+
+  "ac_add":"Ajouter",
+  "ac_del":"Supprimer",
+  "name_title":"Nom d'utilisateur",
+  "old_name_title":"Ancien nom d'utilisateur",
+  "accountSelf_newnameTitle":"Nouveau nom d'utilisateur",
+  "ac_pwd":"Nouveau mot de passe",
+  "ac_lanPwd":"Nouveau mot de passe LAN",
+  "ac_pwd2":"Confirmer le nouveau mot de passe",
+  "ac_lanPwd2":"Confirmer le mot de passe LAN",
+  
+  "accountSelf_oldWanPwdTitle":"Ancien mot de passe WAN",
+  "accountSelf_newWanPwdTitle":"Nouveau mot de passe WAN",
+  "accountSelf_newWanPwd2Title":"Confirmer le mot de passe WAN",
+  
+  "user_most8RulesAlert":"Vous pouvez configurer jusqu'à 8 utilisateurs !",
+  "no_count_alert":"Aucun compte à supprimer !",
+  "selcet_alert":"Veuillez sélectionner un compte à supprimer !",
+  "confirm_dele":"Voulez-vous vraiment supprimer le compte sélectionné ?",
+  "unequal_alert":"La confirmation diffère du nouveau mot de passe !",
+
+  "initial_login_modify_password_pldt":"Lors de la première connexion à ce compte, vous devez modifier le mot de passe, le nom du SSID et le mot de passe d'authentification !",
+  
+  "accountSelf_newPwdRepeateAlert":"Le mot de passe ne peut pas contenir une suite de plus de 3 caractères répétés, croissants ou décroissants, comme 'aaaa', '6666', '1234', '4321', 'abcd', 'RQPO' !",
+  "accountSelf_newPwdRegularAlert":"Le mot de passe ne peut pas être un mot de passe courant !",
+  
+  "account_manage_title":"Gestion des comptes",
+  "cancelValue":"Annuler",
+  "btnApply1":"Appliquer",
+
+  "accountSelf_oldPwdTitle":"Ancien mot de passe",
+  "accountSelf_oldLanPwdTitle":"Ancien mot de passe LAN",
+  "accountSelf_pwdTips":"(8 à 32 caractères)",
+  "accountSelf_pwdTips_MALAY_TM":"(18 à 32 caractères)",
+  "accountSelf_pwdTips_6":"(6 à 32 caractères)",
+  "accountSelf_pwdTips_TL_TRUE":"(Différent du mot de passe LAN)",
+  
+  "accountSelf_userNullAlert":"Veuillez saisir le nom d'utilisateur !",  
+  "accountSelf_oldPwdNullAlert":"Veuillez saisir l'ancien mot de passe !",  
+  "accountSelf_newPwdNullAlert":"Veuillez saisir le nouveau mot de passe !", 
+  "accountSelf_userIllegalAlert":"Nom d'utilisateur invalide !",
+  "accountSelf_newPwdIllegalAlert":"Mot de passe invalide !",   
+  "accountSelf_newPwdLenIllegalAlert":"Longueur du mot de passe invalide !",
+  "accountSelf_newPwdSpaceAlert":"Le mot de passe ne doit pas contenir d'espaces !",  
+  "accountSelf_pwdMismatchedAlert":"La confirmation diffère du nouveau mot de passe !",
+  "accountSelf_pwdMatchedOldPwdAlert":" Le nouveau mot de passe ne doit pas être identique à l'ancien !",
+  "accountSelf_wanlanPwdSameAlert":"Le mot de passe WAN ne doit pas être identique au mot de passe LAN !",
+
+  "accountSelf_prompt":"Sur cette page, vous pouvez configurer le compte actuel.",
+  "accountSelf_prompt_true":"Veuillez saisir le mot de passe WAN pour activer l'accès WAN.",
+
+  "same_pwd":"Le mot de passe saisi est identique à l'original, veuillez en définir un nouveau !",
+  "no_pwd":"Le mot de passe ne peut pas être vide, veuillez en saisir un nouveau !",
+  "Please input 5 or 13 characters of":"Veuillez saisir 5 ou 13 caractères pour",
+  "contains invalid characters.":"contient des caractères invalides.",
+  "wep_pwd_tips":"(Vous pouvez saisir 5 ou 13 caractères)",
+  "wpa_pwd_tips":"(Vous pouvez saisir 8 à 64 caractères)",
+  "secure wpapsk key length":"Veuillez saisir au moins 8 caractères pour la clé WPA-PSK !",
+  
+  "2gwifi_title":"SSID1 2.4G",
+  "5gwifi_title":"SSID1 5G",
+  "ssid1_name_title":"Nom du SSID",
+  "ssid1_pwd_title":"Mot de passe",
+  "ssid1_pwd2_title":"Confirmer le mot de passe",
+  "passwordTips":"(12 à 32 caractères)",
+  "passwordTips_8":"(8 à 32 caractères)",
+
+  "Please enter SSID Name!":"Veuillez saisir le nom du SSID !",
+  "ssidNameTips":"(1 à 32 caractères)",
+  "ssidpasswordTips":"(Vous pouvez saisir 12 à 63 caractères)",
+  "ssidpasswordTips_8":"(Vous pouvez saisir 8 à 63 caractères)",
+  "accountNameTips":"(1 à 32 caractères)",
+  "modifyPassword_success":"Mot de passe modifié avec succès",
+  "invalid_value_alert":"Certaines valeurs sont invalides !",
+  "password_error":"Erreur lors de la modification du mot de passe, veuillez réessayer !",
+  "password_involvespace":"Le mot de passe ne peut pas contenir d'espace, veuillez réessayer !",
+
+  "bswifi_title":"Orientation de bande",
+  "bandsteering_button":"Orientation de bande on/off",
+  "skip":"Passer",
+  "account_modify_prompt":"Sur cette page, vous pouvez modifier les paramètres WiFi et les mots de passe des comptes utilisateurs."
+
+}
+

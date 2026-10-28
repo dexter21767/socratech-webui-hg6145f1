@@ -1,0 +1,11 @@
+{
+  "IPSEC basic apply":"تطبيق",
+  "IPSEC basic cancel":"إلغاء",
+  
+  "IPSEC_prompt":"في هذه الصفحة يمكنك إعداد مفتاح تمرير IPSec.",
+
+  "IPSECEnable_title":"IPSec",
+  
+  "IPSEC_enable":"تفعيل",
+  "IPSEC_disable":"تعطيل"
+}

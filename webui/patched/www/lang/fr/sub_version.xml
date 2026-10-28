@@ -1,0 +1,9 @@
+{
+	"sub_version_prompt":"Vous pouvez activer/désactiver la sous-version logicielle ici.",
+	"rc_enable":"Activer",
+ 	"rc_disable":"Désactiver",
+ 	"sub_version":"Sous-version logicielle",
+ 	"recontrolApply":"Appliquer",
+  	"recontrolCancel":"Annuler"
+
+}

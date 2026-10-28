@@ -1,0 +1,14 @@
+{
+  "apply":"Appliquer",
+  "cancel":"Annuler",
+  
+  "v4StaticRoutePrompt":"Sur cette page, vous pouvez configurer la route IPv4 par défaut.",
+
+  "dr_enableTitle":"Activer la route par défaut",
+  "dr_wanTitle":"Nom WAN",
+  "dr_wanDefaultTitle":"Veuillez choisir",
+  
+  "dr_wannameNUllAlert":"Veuillez choisir un WAN !"
+  
+}
+

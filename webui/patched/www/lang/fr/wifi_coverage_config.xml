@@ -1,0 +1,15 @@
+{
+	"WifiCoverageConfig_prompt": "Sur cette page, vous pouvez gérer la couverture WiFi intelligente : l'ONT peut fonctionner avec des AP externes pour construire un réseau WiFi et étendre la couverture.",
+	"ExternalAPListHead": "Liste des AP externes",
+	"btn_apply": "Appliquer",
+	"btn_cancel": "Annuler",
+	"no_title": "N°",
+	"device_model_title": "Modèle de l'appareil",
+	"serial_num_title": "Numéro de série",
+	"status_title": "État",
+	"online_duration": "Durée en ligne",
+	"time_out": "Délai dépassé !",
+	"force_switching_value_invalid": "Valeur de bascule forcée erronée, elle doit être comprise entre -100 et -66.",
+	"conditioned_switching_value_invalid": "Valeur de bascule conditionnelle erronée, elle doit être comprise entre -84 et -60.",
+	"config_status": "État de la configuration"
+}

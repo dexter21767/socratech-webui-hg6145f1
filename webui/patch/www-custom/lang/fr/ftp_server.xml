@@ -1,0 +1,35 @@
+{
+  "ftpServer_Prompt":"Sur cette page, vous pouvez configurer la fonction FTP.",
+  "ftpServer_head":"Serveur FTP",
+  "ftpServer_enableTitle":"Activer",
+  "ftpServer_disableTitle":"Désactiver",
+  "ftpServer_userTitle":"Nom d'utilisateur",
+  "ftpServer_userTips":"(Vous pouvez saisir 1 à 32 caractères : alphanumériques et '_')",
+  "ftpServer_pwdTitle":"Mot de passe",
+  "ftpServer_pwdTips":"(Vous pouvez saisir 1 à 8 caractères : alphanumériques et '_')",
+  "ftpServer_apply":"Appliquer",
+  "ftpServer_cancel":"Annuler",
+  "ftpServer_userNullAlert":"Veuillez saisir le nom d'utilisateur !",
+  "ftpServer_userIllegalAlert":"Veuillez saisir 1 à 32 caractères : alphanumériques et '_' !",
+  "ftpServer_passNullAlert":"Veuillez saisir le mot de passe !",
+  "ftpServer_passIllegalAlert":"Veuillez saisir 1 à 8 caractères : alphanumériques et '_' !",
+  "invalid_data_alert":"Certaines valeurs sont invalides, veuillez réessayer.",
+
+  "ftpServer_pwdCfgIllegalAlert":"Mot de passe du serveur FTP invalide !",
+
+  "no_usb_device":"veuillez d'abord brancher le périphérique USB !",
+  "ftp_url_illegal":"URL FTP invalide !",
+
+  "ftpClient_head":"Client FTP",
+  "ftpClient_urlTitle": "URL FTP",
+  "ftpClient_portTitle": "ID du port",
+  "ftpClient_userTitle": "Nom d'utilisateur",
+  "ftpClient_pwdTitle": "Mot de passe",
+  "ftpClient_pathTitle": "Chemin",
+  "ftpClient_staTitle": "État",
+  "ftpClient_download": "Télécharger",
+  "ftpClient_portTips": "(1~65535)",
+  "ftpClient_urlTips": "(1 à 256 caractères)",
+  "ftpClient_userTips": "(1 à 32 caractères)",
+  "ftpClient_pwdTips": "(1 à 32 caractères)"
+}

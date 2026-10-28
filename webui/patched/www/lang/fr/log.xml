@@ -1,0 +1,38 @@
+{
+  "log_prompt":"Sur cette page, vous pouvez consulter les journaux.",
+  "fault_info_prompt":"Sur cette page, vous pouvez collecter et consulter les informations de panne.",
+  "start_btn_text": "Démarrer",
+  "syslog_prompt":"Sur cette page, vous pouvez définir et consulter les journaux système.",
+  "log_download":"Télécharger",
+  "log_listHead":"Informations du journal",
+  "log_downloaderroralert":"Erreur de téléchargement !",
+
+  "log_apply":"Appliquer",
+  "log_cancel":"Annuler",
+  
+  "logcfg_prompt":"Sur cette page, vous pouvez activer/désactiver le journal web et définir son niveau.",
+  "log_title":"JOURNAL",
+  "logEnableTitle":"Activer",
+  "logDisableTitle":"Désactiver",
+  "logLevelTitle":"Niveau de journal",
+  
+  "log_debugPrompt":"Vous pouvez consulter les journaux de débogage sur cette page.",
+  "log_debugListHead":"Informations du journal de débogage",
+  "log_enalbe": "Activer le journal",
+  "log_level": "Niveau de journal",
+  "show_level": "Niveau d'affichage",
+  "clear_log": "Effacer le fichier journal",
+  "download_log": "Télécharger le fichier journal",
+  "refresh_log": "Actualiser",
+  "unknown_error_alert":"Erreur inconnue",
+
+  "remote_head":"Serveur Syslog distant",
+  "remote_enableTitle":"Activer",
+  "remote_disableTitle":"Désactiver",
+  "remote_addressTitle":"Adresse du serveur distant",
+  "invalid_data_alert":"Certaines valeurs sont invalides, veuillez réessayer !",
+  "remote_portTitle":"Port du serveur distant",
+  "remote_apply":"Appliquer",
+  "remote_cancel":"Annuler"
+}
+

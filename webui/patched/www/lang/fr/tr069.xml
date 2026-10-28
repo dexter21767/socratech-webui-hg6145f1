@@ -1,0 +1,63 @@
+{
+  "tr069_basic_apply":"Appliquer",
+  "tr069_basic_cancel":"Annuler",
+
+  "tr069_title":"Paramètres TR069 de base",
+  "tr069_prompt":"Sur cette page, vous pouvez configurer l'URL, l'utilisateur, le mot de passe, ainsi que l'utilisateur et le mot de passe de demande de connexion des paramètres TR069 de base.",
+  "tr069_prompt_readonly":"Vous pouvez consulter ici l'URL, l'utilisateur, le mot de passe, ainsi que l'utilisateur et le mot de passe de demande de connexion des paramètres TR069 de base.",
+  "tr069_prompt_cfgfile":"Sur cette page, vous pouvez configurer la configuration TR069 effective.",
+
+  "tr069_basic":" TR069 de base",
+  
+  "tr069url_title":"URL",
+  "tr069userName_title":"Nom d'utilisateur",
+  "tr069password_title":"Mot de passe",
+  "tr069conReqUsr_title":"Utilisateur de demande de connexion",
+  "tr069conReqPwd_title":"Mot de passe de demande de connexion",
+  
+  "tr069_noURL":"Veuillez saisir l'URL !",
+  "tr069_urlillegal":"URL invalide !",
+  "tr069_nousername":"Veuillez saisir le nom d'utilisateur !",
+  "tr069_noRequestUsername":"Veuillez saisir l'utilisateur de demande de connexion !",
+  "tr069_noinforminterval":"Veuillez saisir l'intervalle d'Inform TR069 !",
+
+  "tr069InformEnable_title":"Activer l'Inform",
+  "tr069InformInterval_title":"Intervalle d'Inform",
+  "tr069Enable_title":"Activer TR069",
+  "tr069CertificateEnable_title":"Activer le certificat",
+  
+  "tr069_enable":"Activer",
+  "tr069_disable":"Désactiver",
+  
+  "tr069auth_Title":"Authentification des demandes de connexion",
+  "tr069_getRPCMethods":"GetRPCMethods",
+  "ConnectionRequestPath_title":"Chemin de demande de connexion",
+  "ConnectionRequestPort_title":"Port de demande de connexion",
+  "InformInterval_alert":"Veuillez saisir un intervalle d'Inform TR069 valide (1 - 2147483647) ! ",
+  "Please_enter_valid_port_value":"Veuillez saisir un port valide : 1-65535 !",
+  "Please_enter_connectionRequestPassword":"Veuillez saisir le mot de passe de demande de connexion !",
+  "Please_input_path":"Veuillez saisir le chemin !",
+  "Please_input_password!":"Veuillez saisir le mot de passe !",
+  
+  "certi_prompt":"Vous pouvez importer le certificat TR069.",
+  "certi_title":"Importation du certificat TR069",
+  "certi_import":"Importer",
+  "certi_load":"Chargement ",
+  "certi_fileIllegalAlert":"Veuillez sélectionner le bon fichier de certificat !",
+  "certi_complete":"Importation du certificat terminée !",
+
+  "tr069_inform_prompt":"Sur cette page, vous pouvez déclencher un Inform manuel TR069.",
+  "NoWan_alert":"Le WAN TR069 n'existe pas !",
+  "NoIP_alert":"Le WAN TR069 n'a pas d'IP !",
+  "Timeout_alert":"Délai d'Inform dépassé !",
+  "InformSuccess_infor":"Inform réussi ! Heure de l'Inform :",
+  "tr069ManualTriggerInform_title":"Inform manuel TR069",
+  "ManualTriggerInform":"Inform",
+
+  "remote_manage_prompt":"Sur cette page, vous pouvez consulter l'état de la connexion à distance et du provisionnement des services.",
+  "ur_status_title":"État des rapports spontanés",
+  "asc_status_title":"État de connexion ACS",
+  "sp_status_title":"État du provisionnement des services"
+  
+}
+

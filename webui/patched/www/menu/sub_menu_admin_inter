@@ -234,13 +234,13 @@
 	"custom": {
 		"childMenuPosition": "both",
 		"secondmenus":[
-			{"name": "azaz", "title":"Options",
+			{"name": "azaz", "title":"webui_opts_group",
 				"thirdmenus": [
-					{"name":"schedulereboot", "title":"Schedule Reboot", "src": "/cgi-bin/schedule-reboot"},
-					{"name":"voipswitch", "title":"VoIP Line / Softphone", "src": "/cgi-bin/voip-switch"},
-					{"name":"sshaccess", "title":"SSH Access", "src": "/cgi-bin/ssh-access"},
-					{"name":"tr069disable", "title":"Disable TR069", "src": "/cgi-bin/disable-tr069"},
-					{"name":"install", "title":"Custom WebUI persistence", "src": "/cgi-bin/install"}
+					{"name":"schedulereboot", "title":"opt_schedule_reboot", "src": "/cgi-bin/schedule-reboot"},
+					{"name":"voipswitch", "title":"opt_voip_switch", "src": "/cgi-bin/voip-switch"},
+					{"name":"sshaccess", "title":"opt_ssh_access", "src": "/cgi-bin/ssh-access"},
+					{"name":"tr069disable", "title":"opt_disable_tr069", "src": "/cgi-bin/disable-tr069"},
+					{"name":"install", "title":"opt_persistence", "src": "/cgi-bin/install"}
 				]
 			}
 		]

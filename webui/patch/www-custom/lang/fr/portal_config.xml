@@ -1,0 +1,19 @@
+{
+	"portal_configPrompt": "Sur cette page, vous pouvez configurer le portail. Le navigateur affiche une page web spécifique selon le type d'appareil lors du premier accès à Internet.",
+	"Enable_Portal_title": "Activer le portail",
+	"default_redirection_url_title": "URL de redirection par défaut",
+	"inet_apply": "Appliquer",
+	"inet_cancel": "Annuler",
+	"portal_configListHead": "Liste de configuration du portail",
+	"fw_filterID": "ID",
+	"dev_type": "Type d'appareil",
+	"redirect_url": "Adresse URL de redirection",
+	"illegal_value_alert":"Certaines valeurs sont invalides !",
+	"app_most8RulesAlert":"Vous pouvez configurer jusqu'à 8 règles !",
+	"no_rules_alert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+	"no_selected_rules_alert":"Aucune règle n'est sélectionnée, suppression impossible !",
+	"delete_alert":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+	"repeat_with_the_existing_rules":"Doublon avec une règle existante. Veuillez reconfigurer !",
+	"portal_add":"Ajouter",
+	"portal_delete":"Supprimer"
+}

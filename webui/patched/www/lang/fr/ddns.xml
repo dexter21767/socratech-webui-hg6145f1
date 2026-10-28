@@ -1,0 +1,56 @@
+{
+  "ddns_apply":"Appliquer",
+  "ddns_cancel":"Annuler",
+  "ddnscfg_remove":"Supprimer la configuration",
+  
+  "ddns_prompt":"Vous pouvez configurer le DDNS ici. ",
+
+  "Enable":"Activer",
+  "Disable":"Désactiver",
+  
+  "ddns_hostTips":"(par ex. abc.dyndns.co.za)",
+  
+  "ddns_passwordTips":"(1 à 32 caractères)",
+  "ddns_usernameTips":"(1 à 32 caractères)",
+  "ddns_domain":"Domaine",
+  "ddns_hostTitle":"Hôte",  
+
+  "ddns_password":"Mot de passe",
+  "ddns_interface":"Interface WAN",
+  "ddns_username":"Nom d'utilisateur",
+
+  "ddns_server":"Adresse du serveur",
+  "ddns_protocolTitle":"Protocole",
+  "Server_url_title":"URL du serveur",
+  
+  "Please enter username!":"Veuillez saisir le nom d'utilisateur !",
+  "Please enter password!":"Veuillez saisir le mot de passe !",
+  "Please enter host domain!":"Veuillez saisir l'hôte !",
+
+  "Please enter domain!":"Veuillez saisir le domaine !",
+  "Please enter serveraddr!":"Veuillez saisir l'adresse du serveur !",
+  "Please enter url!":"Veuillez saisir l'URL !",
+  
+  "username is illegal!":"Nom d'utilisateur invalide !",
+  "Password is illegal!":"Mot de passe invalide !",
+  "Host Domain Name is illegal!":"Nom de domaine de l'hôte invalide !",
+  "ddns_providerTitle":"Fournisseur DDNS",
+  "Please enter provider":"Veuillez saisir le fournisseur !",
+  
+  "ddns_interfaceNUllAlert":"Veuillez configurer l'interface WAN !",
+  
+  "ddns_state_prompt":"Vous pouvez obtenir les informations DDNS ici.",
+  "ddns_infoTitle":"Infos DDNS",
+  "ddns_updateTitle":"Infos de mise à jour",
+  "ddns_init":"Init",
+  "ddns_modify":"Mise à jour en cours",
+  "ddns_success":"Mise à jour réussie",
+  "ddns_param_error":"Erreur de paramètre",
+  "ddns_cfgfile_error":"Erreur du fichier de configuration",
+  "ddns_ifname_error":"Erreur de nom d'interface",
+  "ddns_devIP_error":"Impossible d'obtenir l'IP de l'hôte",
+  "ddns_connect_error":"Échec de connexion au serveur",
+  "ddns_response_error":"Échec de la mise à jour",
+  "ddns_noResp_error":"Le serveur ne répond pas",
+  "ddns_memory_error":"Mémoire insuffisante"
+}

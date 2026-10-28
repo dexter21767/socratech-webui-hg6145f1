@@ -1,0 +1,68 @@
+{
+	  "checktime_prompt":"Sur cette page, vous pouvez configurer les fonctions NTP.",
+	  "ntpchecktime_title":"Synchronisation NTP",
+
+	  "checkboxTips":"Activer la synchronisation NTP",
+	  "firstNTPServer_Title":"Premier serveur NTP",
+	  "secondNTPServer_Title":"Deuxième serveur NTP",
+	  "thirdNTPServer_Title":"Troisième serveur NTP",
+	  "fourthNTPServer_Title":"Quatrième serveur NTP",
+	  "fifthNTPServer_Title":"Cinquième serveur NTP",
+	  
+	  "timeZoneTitle":"Fuseau horaire",
+	  "secondsTips":"Secondes (1-99999)",
+
+	  "GMTm12title":"(GMT-12:00) Ligne de changement de date ouest",
+	  "GMTm11title":"(GMT-11:00) Îles Midway, Samoa",
+	  "GMTm10title":"(GMT-10:00) Hawaï",
+	  "GMTm9title":"(GMT-09:00)Alaska",
+	  "GMTm8title":"(GMT-08:00) Heure du Pacifique",
+	  "GMTm7title":"(GMT-07:00) Heure des Rocheuses",
+	  "GMTm6title":"(GMT-06:00) Amérique centrale",
+	  "GMTm5title":"(GMT-05:00) Indiana Est, Colombie",
+	  "GMTm4title":"(GMT-04:00) Heure de l'Atlantique, Brésil Ouest",
+	  "GMTm3title":"(GMT-03:00) Brésil Est, Groenland",
+	  "GMTm3title_arg":"(GMT-03:00) Buenos Aires, Argentine",
+	  "GMTm2title":"(GMT-02:00) Atlantique central",
+	  "GMTm1title":"(GMT-01:00) Îles des Açores",
+	  "GMT0title":"(GMT) Gambie, Libéria, Maroc",
+
+	  "GMT1title":"(GMT+01:00) Allemagne",
+	  "GMT2title":"(GMT+02:00) Grèce, Ukraine, Turquie",
+	  "GMT2title_ple":"(GMT+02:00) Jérusalem",
+	  "GMT2title_eg":"(GMT+02:00) Le Caire",
+	  "GMT3title":"(GMT+03:00) Heure d'hiver de Moscou",
+	  "GMT4title":"(GMT+04:00) Arménie",
+	  "GMT5title":"(GMT+05:00) Pakistan, Russie",
+
+	  "GMT6title":"(GMT+06:00) Bangladesh, Russie",
+	  "GMT7title":"(GMT+07:00)Bangkok, Hanoi, Jakarta",
+	  "GMT8title":"(GMT+08:00) Pékin, Chongqing, Hong Kong, Urumqi",
+	  "GMT9title":"(GMT+09:00) Japon, Corée",
+	  "GMT10title":"(GMT+10:00) Guam, Russie",
+	  "GMT11title":"(GMT+11:00) Îles Salomon",
+	  "GMT12title":"(GMT+12:00) Nouvelle-Zélande",
+	  
+	  "GMT13title":"(GMT+13:00)Nukualofa",
+
+	  "ntpCurTime_Title":"Heure actuelle",
+	  "ntpWanChannelTitle":"Connexions WAN liées",
+	  "checkDaylight":"Heure d'été",
+	  "checkDaylight_Tip":"(par ex. 2017-08-01T13:50:00)",
+	  "start_Time":"Heure de début",
+	  "end_Time":"Heure de fin",
+	  
+	  "ntp_nofirstserveralert":"Veuillez saisir le premier serveur NTP.",
+	  "ntp_nosecondserveralert":"Veuillez saisir le deuxième serveur NTP.",
+	  "ntp_noperiodalert":"Veuillez saisir la période de synchronisation automatique.",
+	  "ntp_illegalperiodalert":"Veuillez saisir une période de synchronisation automatique valide.",
+	  "daylightsavingstimeIllegalAlert":"Veuillez saisir une heure d'été valide.",
+	  
+  	  "ntpsave_apply":"Synchronisation", 
+  	  "ntp_cancel":"Synchronisation de l'heure système",
+  	  "ntp_check_time":"Synchronisation NTP",
+  	  "invalid_data_alert":"Certaines valeurs sont invalides, veuillez réessayer !",
+	  "app_wan":"Connexions WAN liées"
+
+}
+

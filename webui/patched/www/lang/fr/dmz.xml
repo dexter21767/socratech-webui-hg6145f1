@@ -1,0 +1,31 @@
+{
+  "dmz_prompt":"Vous pouvez définir ici l'IP d'un hôte en DMZ.",
+  "dmzEnable_title":"Activer la DMZ",
+  "dmz_enable":"Activer",
+  "dmz_disable":"Désactiver",
+  "dmz_auto":"Auto",
+  "dmz_hostTips":"IP de l'hôte DMZ",
+  "dmz_add":"Ajouter",
+  "dmz_delete":"Supprimer",
+  "dmz_deleteAll":"Tout supprimer",
+  "dmz_most4rulealert":"Vous pouvez configurer jusqu'à 4 règles !",
+  "fw_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "no_selected_rules_alert":"Aucune règle n'est sélectionnée, suppression impossible !",
+  "fw_noChooseAlert":"Veuillez sélectionner une règle puis la supprimer !",
+  "fw_ipIllegalAlert":"Veuillez saisir une IP valide !",
+  "fw_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+  "dmzRuleListHead":"Liste des règles DMZ",
+  "dmz_wannameTips":"Nom WAN",
+  "dmz_iprepeat":"L'IP saisie est en double, veuillez en essayer une autre.",
+  "dmz_wannamerepeat":"Le nom WAN choisi est en double, veuillez en essayer un autre.",
+  
+  "dmz_apply":"Appliquer",
+  "dmz_cancel":"Annuler",
+  "reset_rf":"Réinitialiser",
+  "dmz_noipalert":"Veuillez saisir une adresse IP !",
+  "dmz_ipillegalalert":"Veuillez saisir une adresse IP valide !",
+  "rf_prompt":"Vous pouvez modifier la puissance RF sur cette page.",
+  "rf_hostTips":"Plage d'ajustement de la puissance RF",
+  "rf_IllegalAlert":"Veuillez saisir une plage d'ajustement de puissance RF correcte [-127,127]."
+}
+

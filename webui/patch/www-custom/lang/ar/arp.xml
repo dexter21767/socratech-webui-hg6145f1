@@ -1,0 +1,41 @@
+{
+	"arp_configPrompt": "في هذه الصفحة يمكنك إعداد معلمات ARP الثابتة، بما في ذلك عنوان IP وعنوان MAC.",
+	"arp_config_ListHead": "قائمة إعداد ARP",
+	"fw_filterID": "المعرف",
+	"ipaddr": "عنوان IP",
+	"macaddr": "عنوان MAC",
+	"macaddr_macTips": " (مثل 00:24:21:19:BD:E4)",
+	"firewall_apply": "تطبيق",
+	"firewall_cancel": "إلغاء",
+	"arp_aging_prompt": "في هذه الصفحة يمكنك إعداد مدة تقادم ARP لمنفذ WAN.",
+	"arp_aging_list_title": "قائمة تقادم ARP",
+	"app_id": "المعرف",
+	"wan_name": "اسم WAN",
+	"arp_aging_time_s": "مدة تقادم ARP (ثانية)",
+	"arp_aging_time": "مدة تقادم ARP",
+	
+	"IP_used_Alert":"عنوان IP مستخدم بالفعل.",
+	"MAC_used_Alert":"عنوان MAC مستخدم بالفعل.",
+	"IP_illegal_Alert":"عنوان IP هذا ليس ضمن نطاق العناوين.",
+	"illegal_value_alert":"بعض القيم غير صالحة!",
+	
+	"no_rules_alert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+	"no_selected_rules_alert":"لم يتم اختيار أي قاعدة، لا يمكن الحذف!",
+	"delete_alert":"هل أنت متأكد من حذف القاعدة المحددة؟",
+	"delete_alert_all":"هل أنت متأكد من حذف جميع هذه القواعد؟",
+	"fw_most8RulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+
+	 "repeat_with_the_existing_rules":"مكرر مع القواعد الحالية. يرجى إعادة الإعداد!",
+	
+	"arp_aging_timeTips": "(5-1440s)",
+	"wan_name_is_empty_alert": "لا يمكن ترك اسم WAN فارغًا!",
+	"arp_add":"إضافة",
+	"arp_delete":"حذف",
+	"arp_delete_all":"حذف الكل",
+	"arp_Enable_title":"تفعيل ARP",
+	"arp_Enable":"تفعيل",
+	"arp_Disable":"تعطيل",
+	"arp_aging_Enable_title":"تفعيل تقادم ARP",
+	"arp_aging_Enable":"تفعيل",
+	"arp_aging_Disable":"تعطيل"
+}

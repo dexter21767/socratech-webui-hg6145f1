@@ -1,0 +1,23 @@
+{
+	"policy_route_config_prompt": "في هذه الصفحة يمكنك إعداد مسار حسب السياسة لخدمة ما، مثل الإنترنت وIPTV. يُستخدم هذا المسار لإرسال حزم الخدمة إلى OLT عبر منفذ WAN المحدد.",
+	"policy_list_title": "قائمة قواعد التوجيه حسب السياسة",
+	"service_route_config_prompt": "في هذه الصفحة يمكنك إعداد مسار لخدمة ما. بعد ذلك تُرسل حزم الخدمة إلى OLT عبر منفذ WAN المحدد.",
+	"service_list_title": "قائمة التوجيه حسب الخدمة",
+	"app_apply": "تطبيق",
+	"app_cancel": "إلغاء",
+	"vendor_id": "معرف المورد",
+	"wan_name": "اسم WAN",
+	"service_type": "نوع الخدمة",
+	"illegal_value_alert":"بعض القيم غير صالحة!",
+	"wan_name_is_empty_alert": "لا يمكن ترك اسم WAN فارغًا!",
+	"app_most32RulesAlert":"يمكنك إعداد 32 قاعدة كحد أقصى!",
+	"wanName_illegal_alert":"يرجى التأكد من أن لكل اتصال WAN إعدادًا واحدًا فقط!",
+	"delete_alert":"هل أنت متأكد من حذف القاعدة المحددة؟",
+	"no_rules_alert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+	"no_selected_rules_alert":"لم يتم اختيار أي قاعدة، لا يمكن الحذف!",
+	"vendor_tips":"(سلسلة الخيار 60: *VendorID* أو *VendorID* أو *VendorID* أو VendorID)",
+	"Vendor_ID_different":"يجب أن يختلف معرف المورد إذا كان اسم WAN هو نفسه.",
+	"repeat_with_the_existing_rules":"مكرر مع القواعد الحالية. يرجى إعادة الإعداد!",
+	"app_add":"إضافة",
+	"app_delete":"حذف"
+}

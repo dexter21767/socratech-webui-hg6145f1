@@ -1,0 +1,12 @@
+{
+  "webport_Prompt":"Sur cette page, vous pouvez configurer le port de communication web (HTTP) ; un redémarrage est nécessaire.",
+  "web_portTitle":"Port de communication WEB actif",
+  "web_portchangeTitle":"Port de communication WEB modifié",
+  "web_portchangeTips":"(Veuillez saisir 1024-65535 ou 80)",
+  "Change_confirm":"Le port modifié prendra effet après le redémarrage.",
+  "web_portIllegalAlert":"Veuillez saisir 1024-65535 ou 80 !",
+  "web_PortNullAlert":"Veuillez saisir une valeur de port !",
+  "webport_apply":"Appliquer",
+  "webport_cancel":"Annuler"
+} 
+

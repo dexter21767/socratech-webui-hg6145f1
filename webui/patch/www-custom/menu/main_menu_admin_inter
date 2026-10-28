@@ -4,5 +4,5 @@
 	"security" : {"mainDivId":"security_main_div", "hasChildMenu":true, "title":"Security", "selectClass": "first_menu_primary_select"},
 	"app" : {"mainDivId":"app_main_div", "hasChildMenu":true, "title":"Application", "selectClass": "first_menu_primary_select"},
 	"manage" : {"mainDivId":"manage_main_div", "hasChildMenu":true, "title":"management", "selectClass": "first_menu_primary_select"},
-	"custom" : {"mainDivId":"custom_main_div", "hasChildMenu":true, "title":"WebUI Options", "selectClass": "first_menu_primary_select"}
-}
+	"custom" : {"mainDivId":"custom_main_div", "hasChildMenu":true, "title":"webui_options", "selectClass": "first_menu_primary_select"}
+}

@@ -1,0 +1,11 @@
+{
+  "redirect_prompt":"On this page, you could configure redirect and redirect page.",
+  "redirect_title":"Redirect",
+  "re_enable":"Enable",
+  "re_disable":"Disable",
+  "redirectApply":"Apply",
+  "redirectCancel":"Cancel",
+  "redirect_nourlalert":"Please enter URL!"
+
+}
+

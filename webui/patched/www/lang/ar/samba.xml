@@ -1,0 +1,20 @@
+{
+	"samba_prompt": "في هذه الصفحة يمكنك تفعيل أو تعطيل خدمة Samba، تأكد أولًا من توصيل جهاز تخزين قابل للإزالة بمنفذ USB!",
+	"samba_enable": "تفعيل Samba",
+	"usb_part": "قسم USB",
+	"enable": "تفعيل",
+	"disable": "تعطيل",
+	"btn_apply": "تطبيق",
+	"btn_cancel": "إلغاء",
+	"Open_Samba":"فتح Samba",
+	"samba_userTitle":"اسم المستخدم",
+	"samba_pwdTitle":"كلمة المرور",
+	"samba_userTips":"(يمكنك إدخال 1-32 حرفًا من الأحرف والأرقام و'_')",
+  	"samba_pwdTips":"(يمكنك إدخال 1-8 أحرف من الأحرف والأرقام و'_')",
+  	"invalid_data_alert":"بعض القيم غير صالحة، يرجى المحاولة مرة أخرى!",
+  	"samba_head":"خادم Samba",
+  	"samba_enableTitle":"تفعيل",
+  	"samba_disableTitle":"تعطيل",
+  	"samba_apply":"تطبيق",
+  	"samba_cancel":"إلغاء"
+}

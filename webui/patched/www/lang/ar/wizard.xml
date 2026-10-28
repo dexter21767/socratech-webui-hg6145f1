@@ -1,0 +1,49 @@
+{
+  "wizard_prompt":"في هذه الصفحة يمكنك إجراء الإعداد السريع.",
+  "quick_setup":"الإعداد السريع",
+  "wan_configuration":"إعداد WAN",
+  "inet_user":"اسم المستخدم",
+  "inet_password":"كلمة المرور",
+  "operator_mode_combo":"الوضع المركب",
+  "operator_mode_bridge":"وضع الجسر",
+  "operator_mode_rg":"وضع RG",
+  "operator_mode_ap":"وضع AP",
+
+  "wifi_5g_gbit_port1":"LAN 1",
+  "wifi_5g_itv":"LAN 2",
+  "wifi_5g_gbit_port3":"LAN 3",
+  "wifi_5g_gbit_port4":"LAN 4",
+  
+  "wifi_gbit_port":"LAN 1",
+  "wifi_iTV":"LAN 2",
+  "wifi_100m_port2":"LAN 3",
+  "wifi_100m_port3":"LAN 4",
+
+  "wifi_10g_lan":"LAN 10G",
+
+  "DHCP_FE_title":"ربط LAN",
+  "DHCP_SSID_title":"ربط SSID",
+  "wan_SSID_24g_title":"ربط SSID لـ 2.4G",
+  "wan_SSID_5g_title":"ربط SSID لـ 5G",
+
+  "band_steering":"توجيه النطاق",
+  "bandsteering_button":"تشغيل/إيقاف توجيه النطاق",
+  "security_netName":"اسم SSID",
+  "secure_wpa_pass_phrase":"عبارة المرور",
+  "wpa_passphraseTips":"(يمكنك إدخال 8-63 حرفًا)",
+  "ssidNameTips":"(1 - 32 حرفًا)",
+  "ssid_24g_title":"إعدادات اللاسلكي 2.4GHz",
+  "ssid_5g_title":"إعدادات اللاسلكي 5GHz",
+
+  "repeated_binding_port_alert1":"المنفذ المرتبط يتعارض مع الوصلة",
+  "repeated_binding_port_alert2":"، يرجى التعديل والمحاولة مرة أخرى!",
+  "invalid_value_alert":"بعض العناصر تحتوي على قيم غير صالحة، يرجى إعادة إدخالها.",
+  "set_quick_setup_failed":"فشل الإعداد السريع!",
+  "relogin_after_device_reboot":"الجهاز قيد إعادة التشغيل! يرجى الانتظار قليلًا ثم تسجيل الدخول مجددًا بعد إعادة التشغيل.",
+  "takes_effect_after_device_restart":"تسري الإعدادات الجديدة بعد إعادة تشغيل الجهاز. هل أنت متأكد من الإرسال وإعادة تشغيل الجهاز؟",
+
+
+  "recontrolApply":"تطبيق",
+  "back":"رجوع",
+  "recontrolCancel":"إلغاء"
+}

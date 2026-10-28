@@ -1,0 +1,55 @@
+{
+  "content_trans_apply":"تطبيق",
+  "content_trans_cancel":"إلغاء",
+  
+  "update_prompt":"في هذه الصفحة يمكنك اختيار ملف محلي والنقر على الزر لترقية برنامج الجهاز. لا تفصل الطاقة ولا تُجرِ أي عمليات أخرى أثناء الترقية حتى لا يتلف الجهاز ويصبح غير قابل للاستخدام.",
+  "update_chooseFile":"اختيار ملف والترقية",
+  "update_info":"تستغرق الترقية بعض الوقت، يرجى الانتظار...",
+  "update_back":"رجوع",
+  
+  "update_format_illegal":"صيغة الملف غير صالحة، يرجى إعادة الاختيار!",
+  "update_success":"تمت الترقية بنجاح!",
+  "update_fail":"فشلت ترقية الملف، يرجى المحاولة مرة أخرى.",
+  "update_restart":" يرجى إعادة تشغيل الجهاز!",
+  "update_api_error":" يرجى التحقق من صحة ملف الترقية!",
+  "update_space_not_enough":" لا توجد مساحة كافية على الجهاز! يرجى إعادة التشغيل والمحاولة مرة أخرى!",
+  "update_restartConfirm":" هل تريد إعادة تشغيل ONU؟ يرجى تسجيل الدخول إلى واجهة الويب بعد إعادة تشغيل ONU!",
+  "update_restartAlert":" تمت الترقية بنجاح! ستتم إعادة تشغيل ONU تلقائيًا.",
+  "update_restart_AP_Alert":" تمت الترقية بنجاح! ستتم إعادة تشغيل AP تلقائيًا.",
+  
+  "down_cfgFilePrompt":"في هذه الصفحة يمكنك نسخ ملفات الإعدادات احتياطيًا من الجهاز إلى الحاسوب بعد تشغيل أداة FTP.",
+  "down_cfgFileHead":"النسخ الاحتياطي للإعدادات",
+  "down_cfgFileUserTitle":"اسم المستخدم",
+  "down_cfgFilePwdTitle":"كلمة المرور",
+  "down_cfgFileIPTitle":"IP المضيف المحلي",
+  "down_cfgFileNameTitle":"اسم الملف", 
+  
+  "down_cfgFileUserTips":" (يمكنك إدخال 1-20 حرفًا من الأحرف والأرقام و'_' و'.')",
+  "down_cfgFilePwdTips":" (يمكنك إدخال 0-20 حرفًا من الأحرف والأرقام و'_' و'.')",
+  "down_cfgFileIPTips":" (صيغة عشرية)",
+  "down_cfgFileNameTips":" (يمكنك إدخال 1-64 حرفًا من الأحرف والأرقام و'_' و'.')",
+  
+  "down_cfgFileUserIllegalAlert":"الرجاء إدخال اسم مستخدم صالح!",
+  "down_cfgFilePwdIllegalAlert":"الرجاء إدخال كلمة مرور صالحة!",
+  "down_cfgFileIPIllegalAlert":"الرجاء إدخال IP صالح!",
+  "down_cfgFileFileIllegalAlert":"الرجاء إدخال اسم ملف صالح!",
+  
+  "cfg_download_prompt":"يمكنك تنزيل ملف الإعدادات الحالي إلى الحاسوب المحلي.",
+  "cfg_download":"النسخ الاحتياطي للإعدادات",
+  
+  "cfg_upload_prompt":"إذا اخترت مسار ملف الإعدادات، فسيتم تحديث جهازك بملف الإعدادات المحفوظ.",
+  "cfg_upload_title":"تحديث ملف الإعدادات",
+  "cfg_uploadTips":"يمكن أن يحتوي اسم ملف الإعدادات على '_' والأحرف والأرقام فقط.",
+  "cfg_upload_import":"استيراد",
+  "cfg_upload_load":"جارٍ التحميل ",
+  "cfg_upload_fileIllegalAlert":"يرجى اختيار ملف الإعدادات الصحيح!",
+  "cfg_upload_complete":"اكتمل تحديث ملف الإعدادات!",
+  "cfg_upload_failed":"فشل تحديث ملف الإعدادات!",
+  
+  "rebooting":"يتم إعادة تشغيل النظام... يرجى الانتظار قليلًا ثم تسجيل الدخول مجددًا بعد إعادة التشغيل.",
+  "updata_file":"تحديث الملف",
+  "upgrade_nofile_err":"يرجى اختيار ملف",
+  "choose_file":"اختيار ملف"
+
+}  
+

@@ -9,6 +9,9 @@
 
 export PATH=/fhrom/bin:/fhrom/fhshell:/bin:/sbin:/usr/bin:/usr/sbin:$PATH
 export LD_LIBRARY_PATH=/fhrom/lib:/lib:/usr/lib:$LD_LIBRARY_PATH
+# translations (WebUI Options pages share _i18n.sh)
+i18n_head() { :; }
+I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
 
 VOIP_IF="veip0.114"
 TABLE=190
@@ -92,7 +95,7 @@ revert_quiet() {
 
 apply_lan() {
 	PHONE="$1"
-	VIP=$(voip_ip); [ -n "$VIP" ] || { MSG="No IP on $VOIP_IF - is the voice line up?"; MCLASS="err"; return; }
+	VIP=$(voip_ip); [ -n "$VIP" ] || { MSG="No IP on $VOIP_IF - is the voice line up?"; MKEY=vs_err_noip; MARG="$VOIP_IF"; MCLASS="err"; return; }
 	revert_quiet
 	mv /var/VOIP_RUN /var/VOIP_RUN.off 2>/dev/null
 	sh /fhrom/fhshell/voice_init.sh stop sip >/dev/null 2>&1
@@ -103,7 +106,7 @@ apply_lan() {
 	ip route flush cache 2>/dev/null
 	echo "$PHONE $VIP" > "$STATE"
 	persist_lan "$PHONE"
-	MSG="LAN mode on. $PHONE now owns the line (kept across reboots). The RJ11 handset is off."
+	MSG="LAN mode on. $PHONE now owns the line (kept across reboots). The RJ11 handset is off."; MKEY=vs_ok_lan; MARG="$PHONE"
 	MCLASS="ok"
 }
 
@@ -112,7 +115,7 @@ apply_rj11() {
 	persist_off
 	mv /var/VOIP_RUN.off /var/VOIP_RUN 2>/dev/null
 	sh /fhrom/fhshell/voice_init.sh start sip >/dev/null 2>&1
-	MSG="RJ11 mode restored. The handset re-registers in a few seconds."
+	MSG="RJ11 mode restored. The handset re-registers in a few seconds."; MKEY=vs_ok_rj11
 	MCLASS="ok"
 }
 
@@ -120,18 +123,18 @@ apply_rj11() {
 LOGIN=$(/www/cgi-bin/is_logined.cgi 2>/dev/null | sed -n 's/.*"result":"\([0-9]\)".*/\1/p' | head -1)
 if [ "$LOGIN" = "0" ]; then
 	echo "Content-type: text/html"; echo ""
-	echo "<html><body style='font-family:sans-serif;padding:30px'><h3>Please log in to the router UI first.</h3></body></html>"
+	echo "<html><head><meta charset='UTF-8'>$(i18n_head)</head><body style='font-family:sans-serif;padding:30px'><h3 data-i18n='login_first'>Please log in to the router UI first.</h3></body></html>"
 	exit 0
 fi
 
 # --- handle Apply ---
-MSG=""; MCLASS=""
+MSG=""; MCLASS=""; MKEY=""; MARG=""
 if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
 	read -n "$CONTENT_LENGTH" POST_DATA
 	MODE=$(getp mode)
 	IP=$(getp ip)
 	if [ "$MODE" = "lan" ]; then
-		if valid_ip "$IP"; then apply_lan "$IP"; else MSG="Enter a valid LAN IP, e.g. 192.168.2.50"; MCLASS="err"; fi
+		if valid_ip "$IP"; then apply_lan "$IP"; else MSG="Enter a valid LAN IP, e.g. 192.168.2.50"; MKEY=vs_err_ip; MCLASS="err"; fi
 	elif [ "$MODE" = "rj11" ]; then
 		apply_rj11
 	fi
@@ -144,10 +147,10 @@ else
 	CUR_MODE="rj11"; CUR_IP=""
 fi
 SIP_PROC=$(pidof sip 2>/dev/null)
-[ -n "$SIP_PROC" ] && SIP_STATE="running (PID $SIP_PROC)" || SIP_STATE="stopped"
+[ -n "$SIP_PROC" ] && { SIP_STATE="running (PID $SIP_PROC)"; SIP_KEY=vs_sip_run; } || { SIP_STATE="stopped"; SIP_KEY=vs_sip_stop; }
 LINE_STATUS=$(getv "$B.Line.1.Status")
 [ -z "$LINE_STATUS" ] && LINE_STATUS="unknown"
-[ -f "$BOOT" ] && PERSIST="on (re-applies at boot)" || PERSIST="off"
+[ -f "$BOOT" ] && { PERSIST="on (re-applies at boot)"; PKEY=vs_persist_on; } || { PERSIST="off"; PKEY=persist_off; }
 
 # --- credentials (read on the device; this is your own line) ---
 NUMBER=$(getv "$B.Line.1.DirectoryNumber")
@@ -169,7 +172,8 @@ cat <<EOF
 <html>
 <head>
 <meta charset="UTF-8">
-<title>VoIP Line / Softphone</title>
+<title data-i18n="vs_title">VoIP Line / Softphone</title>
+$(i18n_head)
 <style>
 	body { font-family: sans-serif; background:#f1f5f9; color:#0f172a; margin:0; }
 	.container { max-width:560px; margin:30px auto; background:#fff; padding:24px;
@@ -195,49 +199,49 @@ cat <<EOF
 </head>
 <body>
 <div class="container">
-	<h2>VoIP Line / Softphone</h2>
+	<h2 data-i18n="vs_title">VoIP Line / Softphone</h2>
 EOF
 
-[ -n "$MSG" ] && echo "<div class='msg $MCLASS'>$(esc "$MSG")</div>"
+[ -n "$MSG" ] && echo "<div class='msg $MCLASS' data-i18n='$MKEY' data-arg='$(esc "$MARG")'>$(esc "$MSG")</div>"
 
 cat <<EOF
 	<div class="status">
-		<b>Current mode:</b> $([ "$CUR_MODE" = "lan" ] && echo "LAN softphone ($(esc "$CUR_IP"))" || echo "RJ11 handset")<br>
-		<b>ONT SIP client:</b> $SIP_STATE<br>
-		<b>Line status:</b> $(esc "$LINE_STATUS")<br>
-		<b>Persistence:</b> $PERSIST
+		<b data-i18n="vs_lbl_mode">Current mode:</b> $([ "$CUR_MODE" = "lan" ] && echo "<span data-i18n='vs_mode_lan' data-arg='$(esc "$CUR_IP")'>LAN softphone ($(esc "$CUR_IP"))</span>" || echo "<span data-i18n='vs_mode_rj11'>RJ11 handset</span>")<br>
+		<b data-i18n="vs_lbl_sip">ONT SIP client:</b> <span data-i18n="$SIP_KEY" data-arg="$SIP_PROC">$SIP_STATE</span><br>
+		<b data-i18n="vs_lbl_line">Line status:</b> <span data-i18n="line_$(esc "$LINE_STATUS")">$(esc "$LINE_STATUS")</span><br>
+		<b data-i18n="lbl_persist">Persistence:</b> <span data-i18n="$PKEY">$PERSIST</span>
 	</div>
 
 	<form method="POST" id="f">
-		<label for="mode">Use the line from</label>
+		<label for="mode" data-i18n="vs_use_from">Use the line from</label>
 		<select name="mode" id="mode" onchange="toggleIp()">
-			<option value="rj11" $RJ_SEL>RJ11 handset (physical phone)</option>
-			<option value="lan" $LAN_SEL>LAN softphone (app on your network)</option>
+			<option value="rj11" $RJ_SEL data-i18n="vs_opt_rj11">RJ11 handset (physical phone)</option>
+			<option value="lan" $LAN_SEL data-i18n="vs_opt_lan">LAN softphone (app on your network)</option>
 		</select>
 
 		<div id="ipwrap">
-			<label for="ip">Softphone local IP address</label>
+			<label for="ip" data-i18n="vs_ip">Softphone local IP address</label>
 			<input type="text" name="ip" id="ip" value="$(esc "$CUR_IP")" placeholder="192.168.2.50">
-			<div class="note">Static LAN IP of the device running the softphone (gateway 192.168.2.1).</div>
+			<div class="note" data-i18n="vs_ip_note">Static LAN IP of the device running the softphone (gateway 192.168.2.1).</div>
 		</div>
 
-		<div class="warn">Switching to LAN mode takes the line from the RJ11 handset (one registration per line). Your choice is kept across reboots.</div>
-		<button type="submit" class="apply">Apply</button>
+		<div class="warn" data-i18n="vs_warn">Switching to LAN mode takes the line from the RJ11 handset (one registration per line). Your choice is kept across reboots.</div>
+		<button type="submit" class="apply" data-i18n="btn_apply">Apply</button>
 	</form>
 
 	<div class="creds">
-		<h3>Softphone credentials</h3>
-		<div class="row"><span>Username / number</span><input type="text" readonly value="$(esc "$NUMBER")"></div>
-		<div class="row"><span>Auth username</span><input type="text" readonly value="$(esc "$AUTHUSER")"></div>
-		<div class="row"><span>Password</span><input type="password" id="pw" readonly value="$(esc "$PASSWORD")"></div>
-		<div class="row"><span></span><label style="font-weight:normal;font-size:13px;margin:0"><input type="checkbox" onclick="document.getElementById('pw').type=this.checked?'text':'password'"> Show password</label></div>
-		<div class="row"><span>Domain / registrar</span><input type="text" readonly value="$(esc "$DOMAIN")"></div>
-		<div class="row"><span>Outbound proxy</span><input type="text" readonly value="$(esc "$PROXY"):$(esc "$PROXYPORT")"></div>
-		<div class="row"><span>Transport</span><input type="text" readonly value="UDP"></div>
-		<div class="row"><span>Local SIP port</span><input type="text" readonly value="5060"></div>
-		<div class="row"><span>RTP port range</span><input type="text" readonly value="20000-30000"></div>
-		<div class="row"><span>Register expiry</span><input type="text" readonly value="$(esc "$EXPIRES")"></div>
-		<div class="note"><b>STUN / ICE must be OFF</b> &mdash; with STUN on, outbound calls work but incoming calls fail. Codecs: PCMA (G.711 A-law) then PCMU.</div>
+		<h3 data-i18n="vs_creds">Softphone credentials</h3>
+		<div class="row"><span data-i18n="vs_c_number">Username / number</span><input type="text" readonly value="$(esc "$NUMBER")"></div>
+		<div class="row"><span data-i18n="vs_c_auth">Auth username</span><input type="text" readonly value="$(esc "$AUTHUSER")"></div>
+		<div class="row"><span data-i18n="vs_c_pw">Password</span><input type="password" id="pw" readonly value="$(esc "$PASSWORD")"></div>
+		<div class="row"><span></span><label style="font-weight:normal;font-size:13px;margin:0"><input type="checkbox" onclick="document.getElementById('pw').type=this.checked?'text':'password'"> <span data-i18n="vs_show_pw">Show password</span></label></div>
+		<div class="row"><span data-i18n="vs_c_domain">Domain / registrar</span><input type="text" readonly value="$(esc "$DOMAIN")"></div>
+		<div class="row"><span data-i18n="vs_c_proxy">Outbound proxy</span><input type="text" readonly value="$(esc "$PROXY"):$(esc "$PROXYPORT")"></div>
+		<div class="row"><span data-i18n="vs_c_transport">Transport</span><input type="text" readonly value="UDP"></div>
+		<div class="row"><span data-i18n="vs_c_sipport">Local SIP port</span><input type="text" readonly value="5060"></div>
+		<div class="row"><span data-i18n="vs_c_rtp">RTP port range</span><input type="text" readonly value="20000-30000"></div>
+		<div class="row"><span data-i18n="vs_c_expiry">Register expiry</span><input type="text" readonly value="$(esc "$EXPIRES")"></div>
+		<div class="note" data-i18n="vs_stun_note" data-i18n-html><b>STUN / ICE must be OFF</b> &mdash; with STUN on, outbound calls work but incoming calls fail. Codecs: PCMA (G.711 A-law) then PCMU.</div>
 	</div>
 </div>
 

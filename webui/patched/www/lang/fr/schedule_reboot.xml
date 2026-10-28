@@ -1,0 +1,15 @@
+{
+  	"schedule_reboot_head":"Redémarrage programmé",
+  	"schedule_reboot_enableTitle":"Activer",
+  	"schedule_reboot_disableTitle":"Désactiver",
+  	"fw_day":"Jour",
+  	"fw_time":"Heure",
+	"hour":"Heure",
+	"min":"Min",
+  	"invalid_data_alert":"Certaines valeurs sont invalides, veuillez réessayer.",
+  	"fw_dayErrorAlert":"Veuillez choisir au moins un jour !",
+  	"schedule_reboot_apply":"Appliquer",
+  	"schedule_reboot_cancel":"Annuler",
+  	"schedule_reboot_Prompt":"Sur cette page, vous pouvez configurer le redémarrage programmé."
+}
+

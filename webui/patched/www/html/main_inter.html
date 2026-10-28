@@ -23,6 +23,19 @@
 					<a id="fast_setting"  onclick="fast_setting()"  style="float: left; padding-left: 620px;display: none;"><font>Fast Setting</font></a>
 					<div id="device_name" style="float: left; font-size: 20px; display: none;" ></div>
 					<a id="logout"  onclick="realLogout()"><font i18n="quit">quit</font></a>
+					<span class="uilang-wrap" style="float:right;margin:11px 12px 0 0;line-height:normal;"><select id="uilang_sel" class="uilang-sel" onchange="setUiLang(this.value)" title="Language">
+						<option value="en">English</option>
+						<option value="fr">Français</option>
+						<option value="ar">العربية</option>
+					</select></span>
+					<script>
+					(function(){
+						function gc(n){try{var m=document.cookie.match('(?:^|;)\\s*'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):'';}catch(e){return '';}}
+						if(typeof window.setUiLang!=='function'){window.setUiLang=function(v){try{document.cookie='uilang='+v+';path=/;max-age=31536000';}catch(e){}try{(window.top||window).location.reload();}catch(e){location.reload();}};}
+						var cur=gc('uilang')||'en';var s=document.getElementById('uilang_sel');if(s)s.value=cur;
+						if(cur==='ar'){try{document.documentElement.setAttribute('dir','rtl');document.body&&document.body.setAttribute('dir','rtl');}catch(e){}}
+					})();
+					</script>
 				</div>
 				<div class="fir-menu">
 					<ul></ul>

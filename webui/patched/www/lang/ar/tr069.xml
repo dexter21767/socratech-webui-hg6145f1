@@ -1,0 +1,63 @@
+{
+  "tr069_basic_apply":"تطبيق",
+  "tr069_basic_cancel":"إلغاء",
+
+  "tr069_title":"إعدادات TR069 الأساسية",
+  "tr069_prompt":"في هذه الصفحة يمكنك إعداد عنوان URL واسم المستخدم وكلمة المرور واسم مستخدم وكلمة مرور طلب الاتصال في إعدادات TR069 الأساسية.",
+  "tr069_prompt_readonly":"يمكنك هنا عرض عنوان URL واسم المستخدم وكلمة المرور واسم مستخدم وكلمة مرور طلب الاتصال في إعدادات TR069 الأساسية.",
+  "tr069_prompt_cfgfile":"في هذه الصفحة يمكنك إعداد التهيئة الفعالة لـ TR069.",
+
+  "tr069_basic":" TR069 أساسي",
+  
+  "tr069url_title":"URL",
+  "tr069userName_title":"اسم المستخدم",
+  "tr069password_title":"كلمة المرور",
+  "tr069conReqUsr_title":"اسم مستخدم طلب الاتصال",
+  "tr069conReqPwd_title":"كلمة مرور طلب الاتصال",
+  
+  "tr069_noURL":"الرجاء إدخال عنوان URL!",
+  "tr069_urlillegal":"عنوان URL غير صالح!",
+  "tr069_nousername":"الرجاء إدخال اسم المستخدم!",
+  "tr069_noRequestUsername":"الرجاء إدخال اسم مستخدم طلب الاتصال!",
+  "tr069_noinforminterval":"الرجاء إدخال فاصل إبلاغ TR069!",
+
+  "tr069InformEnable_title":"تفعيل الإبلاغ",
+  "tr069InformInterval_title":"فاصل الإبلاغ",
+  "tr069Enable_title":"تفعيل TR069",
+  "tr069CertificateEnable_title":"تفعيل الشهادة",
+  
+  "tr069_enable":"تفعيل",
+  "tr069_disable":"تعطيل",
+  
+  "tr069auth_Title":"مصادقة طلب الاتصال",
+  "tr069_getRPCMethods":"GetRPCMethods",
+  "ConnectionRequestPath_title":"مسار طلب الاتصال",
+  "ConnectionRequestPort_title":"منفذ طلب الاتصال",
+  "InformInterval_alert":"الرجاء إدخال فاصل إبلاغ TR069 صالح (1 - 2147483647)! ",
+  "Please_enter_valid_port_value":"الرجاء إدخال قيمة منفذ صالحة: 1-65535!",
+  "Please_enter_connectionRequestPassword":"الرجاء إدخال كلمة مرور طلب الاتصال!",
+  "Please_input_path":"الرجاء إدخال المسار!",
+  "Please_input_password!":"الرجاء إدخال كلمة المرور!",
+  
+  "certi_prompt":"يمكنك استيراد شهادة TR069.",
+  "certi_title":"استيراد شهادة TR069",
+  "certi_import":"استيراد",
+  "certi_load":"جارٍ التحميل ",
+  "certi_fileIllegalAlert":"يرجى اختيار ملف الشهادة الصحيح!",
+  "certi_complete":"اكتمل استيراد الشهادة!",
+
+  "tr069_inform_prompt":"في هذه الصفحة يمكنك تشغيل إبلاغ TR069 يدوي.",
+  "NoWan_alert":"WAN لـ TR069 غير موجود!",
+  "NoIP_alert":"WAN لـ TR069 ليس له IP!",
+  "Timeout_alert":"انتهت مهلة الإبلاغ!",
+  "InformSuccess_infor":"تم الإبلاغ بنجاح! وقت الإبلاغ:",
+  "tr069ManualTriggerInform_title":"إبلاغ TR069 يدوي",
+  "ManualTriggerInform":"إبلاغ",
+
+  "remote_manage_prompt":"في هذه الصفحة يمكنك عرض حالة الاتصال عن بُعد وحالة توفير الخدمات.",
+  "ur_status_title":"حالة التقارير التلقائية",
+  "asc_status_title":"حالة الاتصال بـ ACS",
+  "sp_status_title":"حالة توفير الخدمات"
+  
+}
+

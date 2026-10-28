@@ -628,6 +628,18 @@
 
   	"ssid_name_title":"SSID Name",
   	"ssid_pwd_title":"SSID Password",
-  	"ssid_pwd2_title":"SSID Password Confirm"
-  	
-}  
+  	"ssid_pwd2_title":"SSID Password Confirm",
+	"login_footer": "Custom WebUI by Adel",
+	"login_dialog_title": "Fiberhome HG6145F1 Custom WebUI",
+	"login_show_changelog": "▶ Show Changelog",
+	"login_hide_changelog": "▼ Hide Changelog",
+	"login_support": "If you found this helpful and would like to support what I do, feel free to buy me a coffee ☕",
+	"login_close": "Close",
+	"webui_options": "WebUI Options",
+	"webui_opts_group": "Options",
+	"opt_schedule_reboot": "Schedule Reboot",
+	"opt_voip_switch": "VoIP Line / Softphone",
+	"opt_ssh_access": "SSH Access",
+	"opt_disable_tr069": "Disable TR069",
+	"opt_persistence": "Custom WebUI persistence"
+}

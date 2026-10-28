@@ -1,0 +1,49 @@
+{
+  "backPage":"رجوع",
+  "inputTips":"الرجاء إدخال كلمة المرور المقدمة من المشغل!",
+  "loidTitle":"LOID",
+  "pwdTitle":"كلمة المرور",
+  "regist_submit":"تنشيط",
+  "regist_reset":"إعادة تعيين",
+  
+  "oltAuthing":"جارٍ التسجيل لدى OLT.",
+  "oltAuthFailed":"فشل التسجيل لدى OLT.",
+ 
+  "oltAuthFailed_info":"جارٍ التسجيل لدى OLT. يرجى التحقق من LOID وكلمة المرور!",
+  "oltAuthFailed_loid":"جارٍ التسجيل لدى OLT (خطأ في LOID). يرجى التحقق من LOID وكلمة المرور!",
+  "oltAuthFailed_lopwd":"جارٍ التسجيل لدى OLT (خطأ في كلمة المرور المنطقية). يرجى التحقق من LOID وكلمة المرور!",
+  "oltAuthFailed_loid_conflict":"جارٍ التسجيل لدى OLT (تعارض LOID). يرجى التحقق من LOID وكلمة المرور!",
+  "oltAuthFailed_physn_conflict":"جارٍ التسجيل لدى OLT (تعارض الرقم التسلسلي الفعلي). يرجى التحقق من الإدخال!",
+  "oltAuthFailed_noresource":"جارٍ التسجيل لدى OLT (لا توجد موارد)، يرجى المحاولة مرة أخرى!",
+  "oltAuthFailed_type":"جارٍ التسجيل لدى OLT (خطأ في نوع ONU).",
+  "oltAuthFailed_physn":"جارٍ التسجيل لدى OLT (خطأ في الرقم التسلسلي الفعلي). يرجى التحقق من الإدخال!",
+  "oltAuthFailed_phypwd":"جارٍ التسجيل لدى OLT (خطأ في كلمة المرور الفعلية). يرجى التحقق من الإدخال!",
+  "oltAuthFailed_phypwd_conflict":"جارٍ التسجيل لدى OLT (تعارض كلمة المرور الفعلية). يرجى التحقق من الإدخال!",
+  "oltAuthFailed_default":"جارٍ التسجيل لدى OLT، يرجى المحاولة مرة أخرى!",
+
+  "serviceDistributingIncomplete":"لم يكتمل توزيع الخدمة الأخير، يرجى إعادة التسجيل بعد الدخول إلى الويب واستعادة جميع الإعدادات.",
+  "registTimeout":"انتهت مهلة التنشيط.",
+  "registAlready":"تم تسجيلك بنجاح، لا حاجة لإعادة التسجيل.",
+  "registAlready2":"تم تسجيلك بنجاح، لا حاجة لإعادة التسجيل. لإعادة التسجيل، يرجى استعادة جميع الإعدادات ثم المحاولة مرة أخرى.",
+  
+  "getACSIPing":"جارٍ الحصول على عنوان IP لقناة الإدارة.",
+  "getACSIPFailed":"فشل الحصول على عنوان IP لقناة الإدارة.",
+  "getACSIPSuccess":"تم الحصول على عنوان IP لقناة الإدارة بنجاح.",
+  "retryRestTimes":"يرجى المحاولة مرة أخرى (عدد المحاولات المتبقية: ",
+  "retryExceedMaxTimes":"لقد استنفدت الحد الأقصى لمحاولات المصادقة، يرجى الاتصال بخدمة العملاء!",
+  "ACSAuthSuccessWaitingDistribute":"تم التسجيل بنجاح. في انتظار توزيع الخدمة.",
+  "ACSAuthSuccess":"تم التسجيل بنجاح.",
+  "serviceDistributing":"تم التسجيل بنجاح. جارٍ توزيع الخدمة.",
+  "serviceDistributeSuccess":"تم التسجيل بنجاح. تم توزيع الخدمة بنجاح.",
+  "serviceDistributeFailed":"فشل توزيع الخدمة.",
+  
+  "ACSAuthFailed_pwd":"كلمة مرور المستخدم غير موجودة!",
+  "ACSAuthFailed_loid":"LOID المستخدم غير موجود!",
+  "ACSAuthFailed_loidpwd":"فشل مطابقة LOID وكلمة مرور المستخدم!",
+  "ACSAuthFailed_password":"كلمة المرور غير موجودة!",
+  "ACSAuthing":"جارٍ التسجيل لدى ACS.",
+  "ACSAuthFailed":"فشل التسجيل لدى ACS.",
+ 
+  "loidNullAlert":"LOID فارغ! الرجاء إدخال LOID!"
+}
+

@@ -1,0 +1,41 @@
+{
+	"arp_configPrompt": "Sur cette page, vous pouvez configurer des entrées ARP statiques (adresse IP et adresse MAC).",
+	"arp_config_ListHead": "Liste de configuration ARP",
+	"fw_filterID": "ID",
+	"ipaddr": "Adresse IP",
+	"macaddr": "Adresse MAC",
+	"macaddr_macTips": " (par ex. 00:24:21:19:BD:E4)",
+	"firewall_apply": "Appliquer",
+	"firewall_cancel": "Annuler",
+	"arp_aging_prompt": "Sur cette page, vous pouvez configurer la durée de vieillissement ARP d'un port WAN.",
+	"arp_aging_list_title": "Liste de vieillissement ARP",
+	"app_id": "ID",
+	"wan_name": "Nom WAN",
+	"arp_aging_time_s": "Durée de vieillissement ARP (s)",
+	"arp_aging_time": "Durée de vieillissement ARP",
+	
+	"IP_used_Alert":"Cette adresse IP est déjà utilisée.",
+	"MAC_used_Alert":"Cette adresse MAC est déjà utilisée.",
+	"IP_illegal_Alert":"Cette IP n'est pas dans la plage d'adresses.",
+	"illegal_value_alert":"Certaines valeurs sont invalides !",
+	
+	"no_rules_alert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+	"no_selected_rules_alert":"Aucune règle n'est sélectionnée, suppression impossible !",
+	"delete_alert":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+	"delete_alert_all":"Voulez-vous vraiment supprimer toutes ces règles ?",
+	"fw_most8RulesAlert":"Vous pouvez configurer jusqu'à 8 règles !",
+
+	 "repeat_with_the_existing_rules":"Doublon avec une règle existante. Veuillez reconfigurer !",
+	
+	"arp_aging_timeTips": "(5-1440s)",
+	"wan_name_is_empty_alert": "Le nom WAN ne peut pas être vide !",
+	"arp_add":"Ajouter",
+	"arp_delete":"Supprimer",
+	"arp_delete_all":"Tout supprimer",
+	"arp_Enable_title":"Activer l'ARP",
+	"arp_Enable":"Activer",
+	"arp_Disable":"Désactiver",
+	"arp_aging_Enable_title":"Activer le vieillissement ARP",
+	"arp_aging_Enable":"Activer",
+	"arp_aging_Disable":"Désactiver"
+}

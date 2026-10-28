@@ -1,0 +1,35 @@
+{
+  "ftpServer_Prompt":"في هذه الصفحة يمكنك إعداد وظيفة FTP.",
+  "ftpServer_head":"خادم FTP",
+  "ftpServer_enableTitle":"تفعيل",
+  "ftpServer_disableTitle":"تعطيل",
+  "ftpServer_userTitle":"اسم المستخدم",
+  "ftpServer_userTips":"(يمكنك إدخال 1-32 حرفًا من الأحرف والأرقام و'_')",
+  "ftpServer_pwdTitle":"كلمة المرور",
+  "ftpServer_pwdTips":"(يمكنك إدخال 1-8 أحرف من الأحرف والأرقام و'_')",
+  "ftpServer_apply":"تطبيق",
+  "ftpServer_cancel":"إلغاء",
+  "ftpServer_userNullAlert":"الرجاء إدخال اسم المستخدم!",
+  "ftpServer_userIllegalAlert":"الرجاء إدخال 1-32 حرفًا من الأحرف والأرقام و'_'!",
+  "ftpServer_passNullAlert":"الرجاء إدخال كلمة المرور!",
+  "ftpServer_passIllegalAlert":"الرجاء إدخال 1-8 أحرف من الأحرف والأرقام و'_'!",
+  "invalid_data_alert":"بعض القيم غير صالحة، يرجى المحاولة مرة أخرى.",
+
+  "ftpServer_pwdCfgIllegalAlert":"كلمة مرور خادم FTP غير صالحة!",
+
+  "no_usb_device":"يرجى توصيل جهاز USB أولًا!",
+  "ftp_url_illegal":"عنوان URL لـ FTP غير صالح!",
+
+  "ftpClient_head":"عميل FTP",
+  "ftpClient_urlTitle": "عنوان URL لـ FTP",
+  "ftpClient_portTitle": "معرف المنفذ",
+  "ftpClient_userTitle": "اسم المستخدم",
+  "ftpClient_pwdTitle": "كلمة المرور",
+  "ftpClient_pathTitle": "المسار",
+  "ftpClient_staTitle": "الحالة",
+  "ftpClient_download": "تنزيل",
+  "ftpClient_portTips": "(1~65535)",
+  "ftpClient_urlTips": "(1-256 حرفًا)",
+  "ftpClient_userTips": "(1 - 32 حرفًا)",
+  "ftpClient_pwdTips": "(1 - 32 حرفًا)"
+}

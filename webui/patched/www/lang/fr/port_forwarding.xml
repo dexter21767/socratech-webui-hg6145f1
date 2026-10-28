@@ -1,0 +1,88 @@
+{
+  "rule_add":"Ajouter",
+  "rule_delete":"Supprimer",
+  "rule_deleteAll":"Tout supprimer",
+
+  "apply":"Appliquer",
+  "cancel":"Annuler",
+  
+  "rule_most4RulesAlert":"Vous pouvez configurer jusqu'à 4 règles !",
+  "rule_most8RulesAlert":"Vous pouvez configurer jusqu'à 8 règles !",
+  "rule_most12RulesAlert":"Vous pouvez configurer jusqu'à 12 règles !",
+  "rule_most16RulesAlert":"Vous pouvez configurer jusqu'à 16 règles !",
+  "rule_most20RulesAlert":"Vous pouvez configurer jusqu'à 20 règles !",
+  "rule_most32RulesAlert":"Vous pouvez configurer jusqu'à 32 règles !",
+  "rule_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "rule_noChooseAlert":"Veuillez sélectionner une règle avant de supprimer !",
+  "rule_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+  
+  "pf_PortforwardingPrompt":"Sur cette page, vous pouvez configurer la redirection de ports.",
+
+  "fw_filterListHead":"Liste des règles de redirection de ports",
+  "PFdescrip":"Description",
+  "The_private_Port":"Port privé",
+  "The_public_Port":"Port public",
+  "Protocol":"Protocole",
+  "Enable":"Activer",
+
+  "pf_DescriptionTitle":"Description",
+  "pf_PriPortTitle":"Port privé",
+  "pf_PubPortTitle":"Port public",
+  "pf_protocolTitle":"Protocole",
+  "pf_enabelTitle":"Activer",
+
+  "pf_add":"Ajouter",
+  "pf_delete":"Supprimer",
+  "pf_deleteAll":"Tout supprimer",
+
+  "pf_apply":"Appliquer",
+  "pf_cancel2":"Annuler",
+
+  "pf_mostRulesAlert":"Vous pouvez configurer 12 règles au maximum !",
+  "pf_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "pf_noChooseAlert":"Veuillez sélectionner une règle avant de supprimer !",
+  "pf_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+
+  "pf_ipIllegalAlert":"Veuillez saisir une IP valide !",
+  "pf_maskIllegalAlert":"Veuillez saisir un masque de sous-réseau valide !",
+  "pf_PortNullAlert":"Veuillez saisir une valeur de port valide !",
+  "pf_endPortTooSmallAlert":"Le port de début ne doit pas être supérieur au port de fin !",
+  "pf_portIllegalAlert":"La plage de ports valide est 1 - 65535 !",
+  "pf_portRepeadAlert":"Plusieurs ports sont en double ! Veuillez les ressaisir !",
+  "pf_wanIllegalAlert":"Veuillez sélectionner un WAN valide !",
+
+  "portMappingPrompt":"Sur cette page, vous pouvez configurer le mappage de ports.",
+  "pm_ruleListHead":"Liste des règles de mappage de ports",
+  "pm_descripTitle":"Description",
+  "Protocol":"Protocole",
+  "pm_pubIPTitle":"IP publique",
+  "pm_pubPortTitle":"Port public",
+  "pm_priIPTitle":"IP privée",
+  "pm_priPortTitle":"Port privé",
+
+  "description_tips":"( 0 à 31 caractères : alphanumériques, '-' et '_')",
+  "descripIllegalAlert":"Veuillez saisir une description valide !",
+  "pm_portStartIllegalAlert":"La plage valide du port de début est 1 - 65535 !",
+  "pm_portEndIllegalAlert":"La plage valide du port de fin est 0 - 65535 !",
+  
+  "v4StaticRoutePrompt":"Sur cette page, vous pouvez configurer les routes statiques IPv4.",
+  "v4_sr_ruleListHead":"Liste des routes statiques IPv4",
+  
+  "wanDisableTitle":"Le WAN actuel n'est pas actif",
+  "ruleEnable":"Actif",
+  "ruleDisable":"Inactif",
+  
+  "wannameTitle":"Nom WAN",
+  "ipTitle":"Adresse IP",
+  "gwTitle":"Passerelle",
+  "maskTitle":"Masque de sous-réseau",
+  "stateTitle":"État",
+  "Please creat INTERNET WAN first!":"Veuillez d'abord créer un WAN INTERNET !",
+  
+  "bandwidthIllegalAlert":"Veuillez saisir une bande passante valide !",
+
+  "wifi_acl_Prompt":"Sur cette page, vous pouvez activer/désactiver l'ACL WiFi et ses règles.",
+  "wifi_acl_enable_title":"Liste noire/blanche",
+  "Disable":"Désactiver",
+  "wifi_acl_ruleListHead":"Liste de contrôle d'accès"
+}

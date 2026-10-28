@@ -1,0 +1,15 @@
+{
+  	"schedule_reboot_head":"إعادة التشغيل المجدولة",
+  	"schedule_reboot_enableTitle":"تفعيل",
+  	"schedule_reboot_disableTitle":"تعطيل",
+  	"fw_day":"يوم",
+  	"fw_time":"الوقت",
+	"hour":"ساعة",
+	"min":"دقيقة",
+  	"invalid_data_alert":"بعض القيم غير صالحة، يرجى المحاولة مرة أخرى.",
+  	"fw_dayErrorAlert":"يرجى اختيار يوم واحد على الأقل!",
+  	"schedule_reboot_apply":"تطبيق",
+  	"schedule_reboot_cancel":"إلغاء",
+  	"schedule_reboot_Prompt":"في هذه الصفحة يمكنك إعداد إعادة التشغيل المجدولة."
+}
+

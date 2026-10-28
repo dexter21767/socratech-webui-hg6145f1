@@ -1,0 +1,30 @@
+{
+  "muti_natPrompt":"Sur cette page, vous pouvez configurer le Multi NAT.",
+  "Muti_natListHead":"Liste des règles Multi NAT",
+  "mn_descrip_title":"Description",
+  "mn_Type_title":"Type de règle",
+  "mn_locips_title":"IP locale de début",
+  "mn_locipe_title":"IP locale de fin",  
+  "mn_pubips_title":"IP publique de début",
+  "mn_pubipe_title":"IP publique de fin",
+
+  "pf_add":"Ajouter",
+  "pf_delete":"Supprimer",
+  "pf_deleteAll":"Tout supprimer",
+
+  "pf_apply":"Appliquer",
+  "pf_cancel2":"Annuler",
+
+  "pf_mostRulesAlert":"Vous pouvez configurer 8 règles au maximum !",
+  "pf_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+  "pf_noChooseAlert":"Veuillez sélectionner une règle avant de supprimer !",
+  "pf_deleteRuleConfirm":"Voulez-vous vraiment supprimer la règle sélectionnée ?",
+
+  "pf_ipIllegalAlert":"Veuillez saisir une IP valide !",  
+  "pf_endPortTooSmallAlert":"L'adresse de début ne doit pas être supérieure à l'adresse de fin !",
+  "IP_longAlert":"La plage d'adresses IP est trop grande, elle doit contenir au maximum 256 adresses !",
+  "Please creat INTERNET WAN first!":"Veuillez d'abord créer un WAN INTERNET !",
+
+  "description_tips":"( 0 à 31 caractères : alphanumériques, '-' et '_')",
+  "descripIllegalAlert":"Veuillez saisir une description valide !"
+}  

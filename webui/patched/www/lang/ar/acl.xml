@@ -1,0 +1,42 @@
+{
+ "acl_funcPrompt":"في هذه الصفحة يمكنك تفعيل/تعطيل ACL والقواعد المفعلة.",
+ "acl_usePrompt":"فعّل ACL قبل إعداد القواعد. يمكنك النقر على الزر لإضافة قواعد، أو حذف الصف المحدد أو حذف الكل، أو تعديل القاعدة بعد تحديد صف. أخيرًا انقر على زر الإرسال لإرسال جميع إعداداتك.",
+  
+ "acl_refresh":"تحديث",
+ "acl_submit":"إرسال",
+ "acl_apply":"تطبيق",
+ "acl_cancel":"إلغاء",
+ "acl_add":"إضافة",
+ "acl_delete":"حذف",
+ "acl_deleteAll":"حذف الكل",
+  
+ "acl_switchTitle":"تفعيل ACL",
+ "acl_disableTitle":"تعطيل",  
+ "acl_enableTitle":"تفعيل",
+ "acl_modeTitle":"وضع ACL",
+ "acl_modeBlackTitle":"القائمة السوداء",
+ "aacl_modeWhiteTitle":"القائمة البيضاء",
+ "acl_typeTitle":"نوع ACL",
+ "acl_listHead":"قائمة قواعد ACL",
+ "acl_portTitle":"المنفذ",
+  
+ "acl_portTips":" (يمكن إنشاء ثماني قواعد كحد أقصى لكل منفذ)",
+ "acl_ipTips":" (صيغة عشرية، مثل 10.10.10.2)",
+ "acl_macTips":" (مثل 00:24:21:19:BD:E4)",
+ "acl_vidTips":" (1 - 4095)",
+  
+ "acl_mostRulesAlert":"يمكنك إعداد 32 قاعدة كحد أقصى!",
+ "acl_portMostRulesAlert":"تم إنشاء 8 قواعد! لا يمكن إنشاء المزيد!",
+ "acl_ruleRepeatAlert":"مكرر مع القواعد الحالية. يرجى إعادة الإعداد!",
+ "acl_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+ "acl_noChooseAlert":"يرجى اختيار قاعدة واحدة على الأقل!",
+ "acl_ipNullAlert":"الرجاء إدخال IP!",
+ "acl_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+ "acl_macNullAlert":"الرجاء إدخال MAC!",
+ "acl_macIllegalAlert":"صيغة عنوان MAC غير صحيحة! الصيغة 00:24:21:19:BD:E4",
+ "acl_vidIllegalAlert1":"النطاق الصالح لمعرف VLAN من 1 إلى 4095.",
+ "acl_vidIllegalAlert2":"الرجاء إدخال عدد صحيح موجب.",  
+  
+ "acl_deleteRuleConfirm":"هل أنت متأكد من حذف القواعد المحددة؟",
+ "acl_changeTypeConfirm":"سيؤدي تغيير نوع ACL إلى إزالة القواعد الأصلية، هل تريد المتابعة؟"
+}

@@ -1,0 +1,66 @@
+{
+"qos_prompt":"في هذه الصفحة يمكنك إعداد معلمات QoS.",
+
+"qos_classDSCPTips":"(0-63)",
+"qos_class802Title2":"وسم 802.1p", 
+"qos_class802Tips":"(0-7)",
+"qos_classType1Title":"الفئة 1",
+"qos_classMin1Title2":"القيمة الدنيا", 
+"qos_classMax1Title2":"القيمة القصوى", 
+"qos_classProtocol1Title2":"البروتوكول", 
+"qos_classType2Title":"الفئة 2",
+"qos_classType3Title":"الفئة 3",
+
+"qos_cfgApplyTitle":"تطبيق إعدادات QoS",
+"qos_dixableTitle":"تعطيل",
+"qos_classRuleListHead":"تصنيف تدفقات البيانات",
+"qos_classNoTitle":"فهرس تدفق البيانات",
+"qos_classQueueTitle":"طابور الإدخال",
+"qos_classDSCPTitle2":"وسم DSCP/TC", 
+"qos_classTypeNoTitle":"الفئة",
+"qos_classTypeTitle":"النوع",
+
+"qos_priServiceTitle2":"اسم الخدمة", 
+"qos_priRuleListHead":"أولوية الخدمة", 
+
+"qos_weiQueueHead":"الطابور", 
+"qos_weiWeightHead":"الوزن (%)", 
+"qos_weiEnableHead":"تفعيل", 
+"qos_priPriorityHead":"الأولوية", 
+"qos_planTitle":"وضع الجدولة", 
+"qos_planPriorityTip":"الأولوية", 
+"qos_planWeightTip":"الوزن", 
+"qos_802FlagTitle":"تفعيل وسم 802.1p", 
+"qos_dsctFlagTitle":"تفعيل وسم DSCP/TC", 
+"qos_bandwidthTitle":"إجمالي عرض النطاق", 
+"qos_modeTitle":"وضع QoS", 
+"qos_cfgHead":"إعدادات الطوابير", 
+
+"qos_class_add":"إضافة", 
+"qos_class_delete":"حذف", 
+"qos_class_deleteAll":"حذف الكل",
+
+"qos_classRuleApply":"تطبيق", 
+"qos_classRuleCancel":"إلغاء",
+
+"option_chose":"يرجى الاختيار",    
+"qos_802Flag_option":"وسم بالقيمة 0",
+"qos_802Flag_option2":"تمرير القيمة الحالية بشفافية",
+"qos_802Flag_option3":"وسم بقيمة جديدة",
+"qos_classType1_option1":"عنوان MAC المصدر",
+"qos_classType1_option2":"802.1p",
+"qos_classType1_option3":"عنوان IP المصدر",
+"qos_classType1_option4":"عنوان IP الوجهة",
+"qos_classType1_option5":"منفذ المصدر",
+"qos_classType1_option6":"منفذ الوجهة",
+"qos_classType1_option7":"واجهة LAN",
+
+ "rule_most4RulesAlert":"يمكنك إعداد 4 قواعد كحد أقصى!",
+ "rule_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+ "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+ "rule_noChooseAlert":"يرجى اختيار قاعدة قبل الحذف!",
+
+ "qos_class_prompt":"في هذه الصفحة يمكنك عرض تصنيفات QoS وحذفها وإضافتها. ملاحظة: يمكنك إعداد 6 إدخالات كحد أقصى لكل QoS و3 شروط لكل تصنيف. عند إضافة تصنيف جديد يجب إعداد شرط واحد على الأقل."
+
+}
+

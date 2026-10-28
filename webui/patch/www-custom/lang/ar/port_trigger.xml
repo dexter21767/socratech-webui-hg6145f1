@@ -1,0 +1,39 @@
+{
+  "pt_PortTriggerPrompt":"في هذه الصفحة يمكنك إعداد تشغيل المنافذ.",
+
+  "fw_filterListHead":"قائمة قواعد تشغيل المنافذ",
+  "PFdescrip":"الوصف",
+  "The_trigger_Port":"المنفذ المُشغِّل",
+  "The_open_Port":"المنفذ المفتوح",
+  "The_TriggerProtocol":"بروتوكول التشغيل",
+  "The_openProtocol":"البروتوكول المفتوح",
+  "Enable":"تفعيل",
+
+  "pf_DescriptionTitle":"الوصف",
+  "pf_triPortTitle":"المنفذ المُشغِّل",
+  "pf_openPortTitle":"المنفذ المفتوح",
+  "pf_triprotocolTitle":"بروتوكول التشغيل",
+  "pf_openprotocolTitle":"البروتوكول المفتوح",
+  "pf_enabelTitle":"تفعيل",
+
+  "pf_add":"إضافة",
+  "pf_delete":"حذف",
+  "pf_deleteAll":"حذف الكل",
+
+  "pf_apply":"تطبيق",
+  "pf_cancel2":"إلغاء",
+
+  "pf_mostRulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+  "pf_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "pf_noChooseAlert":"يرجى اختيار قاعدة قبل الحذف!",
+  "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+
+  "pf_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+  "pf_PortNullAlert":"الرجاء إدخال قيمة منفذ صالحة!",
+  "pf_endPortTooSmallAlert":"يجب ألا يكون منفذ البداية أكبر من منفذ النهاية!",
+  "pf_portIllegalAlert":"نطاق المنافذ الصالح هو 1 - 65535!",
+  "Please creat INTERNET WAN first !":"يرجى إنشاء WAN للإنترنت أولًا!",
+ 
+  "description_tips":"( 0-31 حرفًا من الأحرف والأرقام و'-' و'_')",
+  "descripIllegalAlert":"الرجاء إدخال وصف صالح!"
+}

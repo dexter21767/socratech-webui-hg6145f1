@@ -1,0 +1,49 @@
+{
+  "wizard_prompt":"Sur cette page, vous pouvez effectuer la configuration rapide.",
+  "quick_setup":"Configuration rapide",
+  "wan_configuration":"Configuration WAN",
+  "inet_user":"Nom d'utilisateur",
+  "inet_password":"Mot de passe",
+  "operator_mode_combo":"Mode combo",
+  "operator_mode_bridge":"Mode pont",
+  "operator_mode_rg":"Mode RG",
+  "operator_mode_ap":"Mode AP",
+
+  "wifi_5g_gbit_port1":"LAN 1",
+  "wifi_5g_itv":"LAN 2",
+  "wifi_5g_gbit_port3":"LAN 3",
+  "wifi_5g_gbit_port4":"LAN 4",
+  
+  "wifi_gbit_port":"LAN 1",
+  "wifi_iTV":"LAN 2",
+  "wifi_100m_port2":"LAN 3",
+  "wifi_100m_port3":"LAN 4",
+
+  "wifi_10g_lan":"LAN 10G",
+
+  "DHCP_FE_title":"Liaison LAN",
+  "DHCP_SSID_title":"Liaison SSID",
+  "wan_SSID_24g_title":"Liaison SSID 2.4G",
+  "wan_SSID_5g_title":"Liaison SSID 5G",
+
+  "band_steering":"Orientation de bande",
+  "bandsteering_button":"Orientation de bande on/off",
+  "security_netName":"Nom du SSID",
+  "secure_wpa_pass_phrase":"Phrase secrète",
+  "wpa_passphraseTips":"(Vous pouvez saisir 8 à 63 caractères)",
+  "ssidNameTips":"(1 à 32 caractères)",
+  "ssid_24g_title":"Paramètres sans fil 2.4GHz",
+  "ssid_5g_title":"Paramètres sans fil 5GHz",
+
+  "repeated_binding_port_alert1":"Le port lié est en conflit avec la liaison",
+  "repeated_binding_port_alert2":", veuillez corriger et réessayer !",
+  "invalid_value_alert":"Certains éléments ont des valeurs invalides, veuillez les ressaisir.",
+  "set_quick_setup_failed":"Échec de la configuration rapide !",
+  "relogin_after_device_reboot":"L'appareil redémarre ! Veuillez patienter puis vous reconnecter après le redémarrage.",
+  "takes_effect_after_device_restart":"La nouvelle configuration prendra effet après un redémarrage de l'appareil. Voulez-vous vraiment l'appliquer et redémarrer ?",
+
+
+  "recontrolApply":"Appliquer",
+  "back":"Retour",
+  "recontrolCancel":"Annuler"
+}

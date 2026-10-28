@@ -1,0 +1,22 @@
+{
+	"dns_configPrompt": "في هذه الصفحة يمكنك إعداد سياسة تمرير حزم DNS من جهة LAN أو جهة SSID غير المرتبطة بمنفذ WAN.",
+	"dns_template": "قالب DNS",
+	"dns_apply": "تطبيق",
+	"dns_cancel": "إلغاء",
+	"dns_search_listHead": "إعداد قائمة بحث DNS",
+	"static_dns_configHead": "إعداد DNS الثابت",
+	"dns_searchPrompt": "في هذه الصفحة يمكنك إعداد قائمة بحث DNS. يُنصح بإعطاء الأولوية لاسم WAN، وإذا تم إعداد اسم WAN وخادم DNS معًا فإن اسم WAN هو الذي يسري.",
+	"static_dnsPrompt": "في هذه الصفحة يمكنك إعداد DNS ثابت.",
+	"fw_filterID": "المعرف",
+	"domain_name": "اسم النطاق",
+	"ipaddr": "عنوان IP",
+	"wan_name": "اسم WAN",
+	"dns_server": "خادم DNS",
+	"illegal_value_alert":"بعض القيم غير صالحة!",
+	"fw_most8RulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+	"no_rules_alert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+	"no_selected_rules_alert":"لم يتم اختيار أي قاعدة، لا يمكن الحذف!",
+	"delete_alert":"هل أنت متأكد من حذف القاعدة المحددة؟",
+	"dns_add":"إضافة",
+	"dns_delete":"حذف"
+}

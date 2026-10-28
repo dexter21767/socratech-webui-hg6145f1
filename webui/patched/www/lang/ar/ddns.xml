@@ -1,0 +1,56 @@
+{
+  "ddns_apply":"تطبيق",
+  "ddns_cancel":"إلغاء",
+  "ddnscfg_remove":"إزالة الإعداد",
+  
+  "ddns_prompt":"يمكنك هنا إعداد DDNS. ",
+
+  "Enable":"تفعيل",
+  "Disable":"تعطيل",
+  
+  "ddns_hostTips":"(مثل abc.dyndns.co.za)",
+  
+  "ddns_passwordTips":"(1 - 32 حرفًا)",
+  "ddns_usernameTips":"(1 - 32 حرفًا)",
+  "ddns_domain":"النطاق",
+  "ddns_hostTitle":"المضيف",  
+
+  "ddns_password":"كلمة المرور",
+  "ddns_interface":"واجهة WAN",
+  "ddns_username":"اسم المستخدم",
+
+  "ddns_server":"عنوان الخادم",
+  "ddns_protocolTitle":"البروتوكول",
+  "Server_url_title":"عنوان URL للخادم",
+  
+  "Please enter username!":"الرجاء إدخال اسم المستخدم!",
+  "Please enter password!":"الرجاء إدخال كلمة المرور!",
+  "Please enter host domain!":"الرجاء إدخال المضيف!",
+
+  "Please enter domain!":"الرجاء إدخال النطاق!",
+  "Please enter serveraddr!":"الرجاء إدخال عنوان الخادم!",
+  "Please enter url!":"الرجاء إدخال عنوان URL!",
+  
+  "username is illegal!":"اسم المستخدم غير صالح!",
+  "Password is illegal!":"كلمة المرور غير صالحة!",
+  "Host Domain Name is illegal!":"اسم نطاق المضيف غير صالح!",
+  "ddns_providerTitle":"مزود DDNS",
+  "Please enter provider":"الرجاء إدخال المزود!",
+  
+  "ddns_interfaceNUllAlert":"يرجى إعداد واجهة WAN!",
+  
+  "ddns_state_prompt":"يمكنك هنا الحصول على معلومات DDNS.",
+  "ddns_infoTitle":"معلومات DDNS",
+  "ddns_updateTitle":"معلومات التحديث",
+  "ddns_init":"تهيئة",
+  "ddns_modify":"جارٍ التحديث",
+  "ddns_success":"تم التحديث بنجاح",
+  "ddns_param_error":"خطأ في المعلمة",
+  "ddns_cfgfile_error":"خطأ في ملف الإعدادات",
+  "ddns_ifname_error":"خطأ في اسم الواجهة",
+  "ddns_devIP_error":"تعذر الحصول على IP المضيف",
+  "ddns_connect_error":"فشل الاتصال بالخادم",
+  "ddns_response_error":"فشل التحديث",
+  "ddns_noResp_error":"الخادم لا يستجيب",
+  "ddns_memory_error":"خطأ نفاد الذاكرة"
+}

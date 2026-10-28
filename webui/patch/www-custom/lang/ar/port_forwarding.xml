@@ -1,0 +1,88 @@
+{
+  "rule_add":"إضافة",
+  "rule_delete":"حذف",
+  "rule_deleteAll":"حذف الكل",
+
+  "apply":"تطبيق",
+  "cancel":"إلغاء",
+  
+  "rule_most4RulesAlert":"يمكنك إعداد 4 قواعد كحد أقصى!",
+  "rule_most8RulesAlert":"يمكنك إعداد 8 قواعد كحد أقصى!",
+  "rule_most12RulesAlert":"يمكنك إعداد 12 قاعدة كحد أقصى!",
+  "rule_most16RulesAlert":"يمكنك إعداد 16 قاعدة كحد أقصى!",
+  "rule_most20RulesAlert":"يمكنك إعداد 20 قاعدة كحد أقصى!",
+  "rule_most32RulesAlert":"يمكنك إعداد 32 قاعدة كحد أقصى!",
+  "rule_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "rule_noChooseAlert":"يرجى اختيار قاعدة قبل الحذف!",
+  "rule_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+  
+  "pf_PortforwardingPrompt":"في هذه الصفحة يمكنك إعداد إعادة توجيه المنافذ.",
+
+  "fw_filterListHead":"قائمة قواعد إعادة توجيه المنافذ",
+  "PFdescrip":"الوصف",
+  "The_private_Port":"المنفذ الخاص",
+  "The_public_Port":"المنفذ العام",
+  "Protocol":"البروتوكول",
+  "Enable":"تفعيل",
+
+  "pf_DescriptionTitle":"الوصف",
+  "pf_PriPortTitle":"المنفذ الخاص",
+  "pf_PubPortTitle":"المنفذ العام",
+  "pf_protocolTitle":"البروتوكول",
+  "pf_enabelTitle":"تفعيل",
+
+  "pf_add":"إضافة",
+  "pf_delete":"حذف",
+  "pf_deleteAll":"حذف الكل",
+
+  "pf_apply":"تطبيق",
+  "pf_cancel2":"إلغاء",
+
+  "pf_mostRulesAlert":"يمكنك إعداد 12 قاعدة كحد أقصى!",
+  "pf_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "pf_noChooseAlert":"يرجى اختيار قاعدة قبل الحذف!",
+  "pf_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+
+  "pf_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+  "pf_maskIllegalAlert":"الرجاء إدخال قناع شبكة فرعية صالح!",
+  "pf_PortNullAlert":"الرجاء إدخال قيمة منفذ صالحة!",
+  "pf_endPortTooSmallAlert":"يجب ألا يكون منفذ البداية أكبر من منفذ النهاية!",
+  "pf_portIllegalAlert":"نطاق المنافذ الصالح هو 1 - 65535!",
+  "pf_portRepeadAlert":"بعض المنافذ مكررة! يرجى إعادة الإدخال!",
+  "pf_wanIllegalAlert":"يرجى اختيار WAN صالح!",
+
+  "portMappingPrompt":"في هذه الصفحة يمكنك إعداد تعيين المنافذ.",
+  "pm_ruleListHead":"قائمة قواعد تعيين المنافذ",
+  "pm_descripTitle":"الوصف",
+  "Protocol":"البروتوكول",
+  "pm_pubIPTitle":"IP العام",
+  "pm_pubPortTitle":"المنفذ العام",
+  "pm_priIPTitle":"IP الخاص",
+  "pm_priPortTitle":"المنفذ الخاص",
+
+  "description_tips":"( 0-31 حرفًا من الأحرف والأرقام و'-' و'_')",
+  "descripIllegalAlert":"الرجاء إدخال وصف صالح!",
+  "pm_portStartIllegalAlert":"النطاق الصالح لمنفذ البداية هو 1 - 65535!",
+  "pm_portEndIllegalAlert":"النطاق الصالح لمنفذ النهاية هو 0 - 65535!",
+  
+  "v4StaticRoutePrompt":"في هذه الصفحة يمكنك إعداد مسارات IPv4 الثابتة.",
+  "v4_sr_ruleListHead":"قائمة قواعد مسارات IPv4 الثابتة",
+  
+  "wanDisableTitle":"WAN الحالي غير فعال",
+  "ruleEnable":"فعال",
+  "ruleDisable":"غير فعال",
+  
+  "wannameTitle":"اسم WAN",
+  "ipTitle":"عنوان IP",
+  "gwTitle":"البوابة",
+  "maskTitle":"قناع الشبكة الفرعية",
+  "stateTitle":"الحالة",
+  "Please creat INTERNET WAN first!":"يرجى إنشاء WAN للإنترنت أولًا!",
+  
+  "bandwidthIllegalAlert":"الرجاء إدخال عرض نطاق صالح!",
+
+  "wifi_acl_Prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل ACL لـ WiFi والقواعد المفعلة.",
+  "wifi_acl_enable_title":"القائمة السوداء/البيضاء",
+  "Disable":"تعطيل",
+  "wifi_acl_ruleListHead":"قائمة التحكم في الوصول"
+}

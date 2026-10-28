@@ -1,0 +1,9 @@
+{
+	"sub_version_prompt":"يمكنك هنا تفعيل/تعطيل الإصدار الفرعي للبرنامج.",
+	"rc_enable":"تفعيل",
+ 	"rc_disable":"تعطيل",
+ 	"sub_version":"الإصدار الفرعي للبرنامج",
+ 	"recontrolApply":"تطبيق",
+  	"recontrolCancel":"إلغاء"
+
+}

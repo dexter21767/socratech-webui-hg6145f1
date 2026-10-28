@@ -1,0 +1,39 @@
+{
+  "pt_PortTriggerPrompt":"On this page, you could configure port trigger.",
+
+  "fw_filterListHead":"Port Trigger Rules List",
+  "PFdescrip":"Description",
+  "The_trigger_Port":"Trigger Port",
+  "The_open_Port":"Open Port",
+  "The_TriggerProtocol":"Trigger Protocol",
+  "The_openProtocol":"Open Protocol",
+  "Enable":"Enable",
+
+  "pf_DescriptionTitle":"Description",
+  "pf_triPortTitle":"Trigger Port",
+  "pf_openPortTitle":"Open Port",
+  "pf_triprotocolTitle":"Trigger Protocol",
+  "pf_openprotocolTitle":"Open Protocol",
+  "pf_enabelTitle":"Enable",
+
+  "pf_add":"Add",
+  "pf_delete":"Delete",
+  "pf_deleteAll":"Delete All",
+
+  "pf_apply":"Apply",
+  "pf_cancel2":"Cancel",
+
+  "pf_mostRulesAlert":"You can configure 8 rules at most!",
+  "pf_noRuleAlert":"There are no rules at present. You cannot delete them.",
+  "pf_noChooseAlert":"Please select a rule before deleting!",
+  "pf_deleteRuleConfirm":"Are you sure you want to delete the selected rule?",
+
+  "pf_ipIllegalAlert":"Please enter a valid IP!",
+  "pf_PortNullAlert":"Please enter a valid port value!",
+  "pf_endPortTooSmallAlert":"The starting port should not be greater than the end port!",
+  "pf_portIllegalAlert":"Valid port range is 1 - 65535!",
+  "Please creat INTERNET WAN first !":"Please creat INTERNET WAN first !",
+ 
+  "description_tips":"( 0-31 characters, including alphanumeric, '-' and '_')",
+  "descripIllegalAlert":"Please enter valid description!"
+}

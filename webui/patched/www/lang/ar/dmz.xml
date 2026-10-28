@@ -1,0 +1,31 @@
+{
+  "dmz_prompt":"يمكنك هنا تعيين IP مضيف في DMZ.",
+  "dmzEnable_title":"تفعيل DMZ",
+  "dmz_enable":"تفعيل",
+  "dmz_disable":"تعطيل",
+  "dmz_auto":"تلقائي",
+  "dmz_hostTips":"IP مضيف DMZ",
+  "dmz_add":"إضافة",
+  "dmz_delete":"حذف",
+  "dmz_deleteAll":"حذف الكل",
+  "dmz_most4rulealert":"يمكنك إعداد 4 قواعد كحد أقصى!",
+  "fw_noRuleAlert":"لا توجد قواعد حاليًا. لا يمكن الحذف.",
+  "no_selected_rules_alert":"لم يتم اختيار أي قاعدة، لا يمكن الحذف!",
+  "fw_noChooseAlert":"يرجى اختيار قاعدة ثم حذفها!",
+  "fw_ipIllegalAlert":"الرجاء إدخال IP صالح!",
+  "fw_deleteRuleConfirm":"هل أنت متأكد من حذف القاعدة المحددة؟",
+  "dmzRuleListHead":"قائمة قواعد DMZ",
+  "dmz_wannameTips":"اسم WAN",
+  "dmz_iprepeat":"عنوان IP الذي أدخلته مكرر، يرجى تجربة عنوان آخر.",
+  "dmz_wannamerepeat":"اسم WAN الذي اخترته مكرر، يرجى تجربة اسم آخر.",
+  
+  "dmz_apply":"تطبيق",
+  "dmz_cancel":"إلغاء",
+  "reset_rf":"إعادة تعيين",
+  "dmz_noipalert":"الرجاء إدخال عنوان IP!",
+  "dmz_ipillegalalert":"الرجاء إدخال عنوان IP صالح!",
+  "rf_prompt":"يمكنك تعديل قدرة RF في هذه الصفحة.",
+  "rf_hostTips":"نطاق ضبط قدرة RF",
+  "rf_IllegalAlert":"الرجاء إدخال نطاق ضبط صحيح لقدرة RF [-127,127]."
+}
+

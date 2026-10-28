@@ -1,0 +1,38 @@
+{
+  "log_prompt":"في هذه الصفحة يمكنك عرض السجلات.",
+  "fault_info_prompt":"في هذه الصفحة يمكنك جمع معلومات الأعطال وعرضها.",
+  "start_btn_text": "بدء",
+  "syslog_prompt":"في هذه الصفحة يمكنك ضبط سجلات النظام وعرضها.",
+  "log_download":"تنزيل",
+  "log_listHead":"معلومات السجل",
+  "log_downloaderroralert":"خطأ في التنزيل!",
+
+  "log_apply":"تطبيق",
+  "log_cancel":"إلغاء",
+  
+  "logcfg_prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل سجل الويب وتحديد مستواه.",
+  "log_title":"السجل",
+  "logEnableTitle":"تفعيل",
+  "logDisableTitle":"تعطيل",
+  "logLevelTitle":"مستوى السجل",
+  
+  "log_debugPrompt":"يمكنك عرض سجلات التصحيح في هذه الصفحة.",
+  "log_debugListHead":"معلومات سجل التصحيح",
+  "log_enalbe": "تفعيل السجل",
+  "log_level": "مستوى السجل",
+  "show_level": "مستوى العرض",
+  "clear_log": "مسح ملف السجل",
+  "download_log": "تنزيل ملف السجل",
+  "refresh_log": "تحديث",
+  "unknown_error_alert":"خطأ غير معروف",
+
+  "remote_head":"خادم Syslog البعيد",
+  "remote_enableTitle":"تفعيل",
+  "remote_disableTitle":"تعطيل",
+  "remote_addressTitle":"عنوان الخادم البعيد",
+  "invalid_data_alert":"بعض القيم غير صالحة، يرجى المحاولة مرة أخرى!",
+  "remote_portTitle":"منفذ الخادم البعيد",
+  "remote_apply":"تطبيق",
+  "remote_cancel":"إلغاء"
+}
+

@@ -1,0 +1,42 @@
+{
+ "acl_funcPrompt":"Sur cette page, vous pouvez activer/désactiver l'ACL et ses règles.",
+ "acl_usePrompt":"Activez l'ACL avant de configurer les règles. Vous pouvez ajouter des règles, supprimer la ligne sélectionnée ou tout supprimer, ou modifier une règle après avoir sélectionné une ligne. Cliquez enfin sur Envoyer pour soumettre toute la configuration.",
+  
+ "acl_refresh":"Actualiser",
+ "acl_submit":"Envoyer",
+ "acl_apply":"Appliquer",
+ "acl_cancel":"Annuler",
+ "acl_add":"Ajouter",
+ "acl_delete":"Supprimer",
+ "acl_deleteAll":"Tout supprimer",
+  
+ "acl_switchTitle":"Activer l'ACL",
+ "acl_disableTitle":"Désactiver",  
+ "acl_enableTitle":"Activer",
+ "acl_modeTitle":"Mode ACL",
+ "acl_modeBlackTitle":"Liste noire",
+ "aacl_modeWhiteTitle":"Liste blanche",
+ "acl_typeTitle":"Type d'ACL",
+ "acl_listHead":"Liste des règles ACL",
+ "acl_portTitle":"Port",
+  
+ "acl_portTips":" (Chaque port peut avoir jusqu'à huit règles)",
+ "acl_ipTips":" (Format décimal, par ex. 10.10.10.2)",
+ "acl_macTips":" (par ex. 00:24:21:19:BD:E4)",
+ "acl_vidTips":" (1 - 4095)",
+  
+ "acl_mostRulesAlert":"Vous pouvez configurer 32 règles au maximum !",
+ "acl_portMostRulesAlert":"8 règles ont été créées ! Impossible d'en créer davantage !",
+ "acl_ruleRepeatAlert":"Doublon avec une règle existante. Veuillez reconfigurer !",
+ "acl_noRuleAlert":"Il n'y a aucune règle actuellement. Rien à supprimer.",
+ "acl_noChooseAlert":"Veuillez choisir au moins une règle !",
+ "acl_ipNullAlert":"Veuillez saisir l'IP !",
+ "acl_ipIllegalAlert":"Veuillez saisir une IP valide !",
+ "acl_macNullAlert":"Veuillez saisir la MAC !",
+ "acl_macIllegalAlert":"Format d'adresse MAC incorrect ! Format : 00:24:21:19:BD:E4",
+ "acl_vidIllegalAlert1":"La plage valide d'ID VLAN est 1 à 4095.",
+ "acl_vidIllegalAlert2":"Veuillez saisir un entier positif.",  
+  
+ "acl_deleteRuleConfirm":"Voulez-vous vraiment supprimer les règles sélectionnées ?",
+ "acl_changeTypeConfirm":"Changer le type d'ACL supprimera les règles existantes, voulez-vous continuer ?"
+}

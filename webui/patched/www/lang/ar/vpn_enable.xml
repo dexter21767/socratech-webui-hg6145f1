@@ -1,0 +1,12 @@
+{
+  "VPN basic apply":"تطبيق",
+  "VPN basic cancel":"إلغاء",
+  "VPN_prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل تمرير VPN.", 
+  "VPNEnable_title":"تمرير VPN",
+  "VPN_enable":"تفعيل",
+  "VPN_disable":"تعطيل",
+  
+  "Tr069 qos prompt":"في هذه الصفحة يمكنك تفعيل/تعطيل تمرير QoS.",
+  "Tr069 qoS enable title":"تفعيل QoS"
+   
+}

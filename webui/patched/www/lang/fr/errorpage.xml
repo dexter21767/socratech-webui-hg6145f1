@@ -1,0 +1,51 @@
+{
+  "accessHead":"Avis d'accès à l'appareil",
+  "errorCode":"Code d'erreur ",
+  "backPage":"Retour",
+  "Next":"Suivant",
+  
+  "timeout":"Votre session a expiré, veuillez actualiser la page et réessayer !",
+
+  "0000":"Accès réussi !",
+  "9999":"Échec de l'accès ! Veuillez réessayer !",
+  
+  "0001":"Échec de l'accès ! Erreur système interne. Veuillez contacter l'opérateur.",
+  "0002":"Erreur inconnue !",
+  "0003":"Le paramètre saisi est invalide !",
+  
+  "1001":"Échec de l'établissement de la connexion. Vérifiez la connexion et ses paramètres.",
+  "1002":"Échec de la création du fichier !",
+  "1003":"Le fichier n'existe pas !",
+  "1004":"Échec du démarrage/arrêt du serveur !",
+  "1005":"Échec de la configuration des paramètres !",
+  "1006":"Échec de la lecture des paramètres !",
+
+  "2001":"Impossible d'obtenir le nom d'utilisateur depuis le cookie !",
+  "2002":"Ancien mot de passe erroné ! Saisissez le mot de passe correct du compte actuel puis réessayez !",
+  "2003":"Mot de passe erroné !",
+  "2004":" Nom d'utilisateur erroné !",
+  "2005":" Ce nom d'utilisateur existe déjà ! ",
+  "2006":" Erreur de modification du nom du SSID !",
+  "2007":" Erreur de modification du mot de passe du SSID !",
+  "2008":"Le mot de passe WAN ne doit pas être identique au mot de passe LAN !",
+  "2009":"C'est la première fois que vous créez le mot de passe WAN, saisissez simplement un nouveau mot de passe !",
+ 
+  "3001":"Échec de l'enregistrement auprès de l'OLT !",
+  "3002":"Les informations d'enregistrement ont été envoyées !",
+
+  "4001":"Les informations WAN ont changé, veuillez actualiser !",
+  "4002":"Erreur interne, veuillez consulter cpe.log !",
+  "4003":"Veuillez ajouter un WAN en mode routage PPPoE Internet.",
+  "4004":"Veuillez saisir à nouveau le mot de passe PPPoE.",
+
+  "5001":"Ce port est déjà utilisé !",
+  
+  "6001":"Veuillez vérifier le protocole VoIP !",
+  
+  "9001":" Cette MAC est déjà liée.",
+  "9002":" Cette IP est déjà liée.",
+  "9003":" Cette IP est déjà attribuée. ",
+  "9005":" L'IP LAN et l'IP de liaison DHCP sont sur des segments différents.",
+  
+  "9004":" Veuillez saisir une adresse IPv6 valide, par ex. 2001::1. "
+}
