@@ -39,9 +39,12 @@ serves. Translations live in `webui/patched/www/lang/<code>/`. Compare against
 at runtime (bind-mounts over a read-only `/www`) and does **not** survive a
 reboot unless the boot-time applier is installed.
 
-Two files sit in the patch but were **not** bind-mounted on the live router on
-2026-10-28, so the stock versions are still served:
-`js/admin_management_inter.js` and `js/wlanAdvancedSettings_5G_inter.js`.
+Two overlay files were omitted from the applier's bind-mount list, so their
+tweaks weren't served: `js/admin_management_inter.js` (admin session-timeout
+setting) and `js/wlanAdvancedSettings_5G_inter.js` (5 GHz SSID isolation + Wi-Fi
+password reveal). `installer/custom-webui.sh` now bind-mounts both. Note the
+compiled boot applier (`installer/custom-webui.applier.elf`) still omits them,
+so a device relying on it needs these two re-mounted after each boot.
 
 ## How the patch is delivered
 
