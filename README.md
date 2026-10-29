@@ -20,6 +20,7 @@
   - **Info**: الإصدار، تاريخ البناء، والتحقق من وجود تحديثات.
   - **VoIP Line / Softphone**: استخدام خط الهاتف من تطبيق على هاتفك أو حاسوبك.
   - **SSH Access**: الوصول إلى الموجّه عبر SSH (داخل الشبكة المحلية فقط).
+  - **Serial Console (UART)**: إبقاء المنفذ التسلسلي مفعّلًا لإنقاذ الموجّه، حتى بعد إعادة ضبط المصنع إن أردت.
   - **Disable TR069**: منع التفعيل التلقائي لـ TR-069.
   - **Schedule Reboot**: إعادة تشغيل الموجّه تلقائيًا في وقت تحدده.
   - **Custom WebUI persistence**: الإبقاء على الواجهة بعد إعادة التشغيل.
@@ -74,6 +75,7 @@
 ### إزالة الواجهة
 
 إذا كانت الاستمرارية مفعّلة اضغط **Disable** في **Custom WebUI persistence**، ثم أعد تشغيل الموجّه. ستعود الواجهة الأصلية.
+إعادة ضبط المصنع قد لا تزيل الواجهة المعدلة، لذا عطّل الاستمرارية أولًا.
 
 ### واجهت مشكلة؟
 
@@ -127,6 +129,8 @@ Join the community: [Facebook group](https://www.facebook.com/groups/socratech) 
   - **Info**: version, build date and an update check.
   - **VoIP Line / Softphone**: use your phone line from an app on your phone or PC.
   - **SSH Access**: SSH into the router (LAN only).
+  - **Serial Console (UART)**: keep the serial port enabled as a rescue console,
+    optionally even after a factory reset.
   - **Disable TR069**: stop TR-069 from re-enabling itself.
   - **Schedule Reboot**: reboot the router automatically at a set time.
   - **Custom WebUI persistence**: keep the custom UI after a reboot.
@@ -198,7 +202,8 @@ By default the custom UI disappears when the router reboots. To keep it:
 ### Remove it
 
 If persistence is on, click **Disable** in **Custom WebUI persistence**, then
-reboot the router. The stock UI comes back.
+reboot the router. The stock UI comes back. A factory reset may not remove the
+custom UI, so turn persistence off first.
 
 ### Something wrong?
 
@@ -244,4 +249,5 @@ work are not covered; see [NOTICE.md](NOTICE.md).
   delivered, translations, router quirks, releases
 - [docs/BUILD.md](docs/BUILD.md): the `.bin` format and build
 - [docs/SSH.md](docs/SSH.md): the SSH Access page
+- [docs/UART.md](docs/UART.md): the Serial Console (UART) page
 - [docs/VOIP.md](docs/VOIP.md): the VoIP Line / Softphone page

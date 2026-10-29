@@ -30,6 +30,7 @@ tools/
 docs/
   BUILD.md           the .bin format and build, verified end to end
   SSH.md             the SSH Access page
+  UART.md            the Serial Console (UART) page
   VOIP.md            the VoIP Line / Softphone page
 .github/workflows/
   release.yml        builds and attaches the .bin to each GitHub release
@@ -82,6 +83,24 @@ adds `@reboot /fhconf/custom-webui` to `/fhconf/crontab_conf`. Because it
 copies whatever was installed at that moment, **after installing a new version
 you must Disable then Enable persistence** or the old version returns at the
 next reboot. Disabling removes the hook and the copy.
+
+### Factory resets and `/fhconf`
+
+Everything we persist lives in `/fhconf` (`custom-webui`, `ssh-access.on` and
+its hash, `voip-switch.boot`, `crontab_conf`). The firmware has two reset paths
+(`libcfgmgr_cli.so`):
+
+- **restore default**: resets the settings database (`usrconfig_conf`); nothing
+  found in this path touches other `/fhconf` files, so our files appear to
+  survive it (not yet verified on a device).
+- **restore preconfig**: deletes everything in `/fhconf` except `data/` and
+  `u_config_conf` (`find … | xargs rm -rf`), copies every default from
+  `/fhrom/fhconf/`, then restores the ISP preconfig from `/fhdata`.
+
+Which one the reset button and the web "Restore" page use is not yet known
+(`sysmgr` passes a `restore_mode`). At boot `fhconf_init.sh` only copies a
+default file when it is missing. Files with the immutable flag
+(`chattr +i`, supported by UBIFS) survive both paths; see [UART.md](UART.md).
 
 ### Orphaned overlay files (upstream installers)
 

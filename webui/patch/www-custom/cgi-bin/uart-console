@@ -1,0 +1,133 @@
+#!/bin/sh
+# uart-console - WebUI Options page: keep the serial console (UART) enabled.
+# The firmware's console init (libfhdrv_kdrv_cli_impl.so) reads uart_enable
+# from /fhconf/uart.conf at boot and runs `echo 0 0 >/proc/driver/uart/enable`
+# when it is 0 (the shipped default). We write uart_enable=1 and switch UART 0
+# on right away. "Lock" sets the immutable flag (chattr +i) so even the full
+# preconfig factory wipe (rm -rf + cp of /fhconf) can't reset it.
+
+export PATH=/fhrom/bin:/fhrom/fhshell:/bin:/sbin:/usr/bin:/usr/sbin:$PATH
+export LD_LIBRARY_PATH=/fhrom/lib:/lib:/usr/lib:$LD_LIBRARY_PATH
+# translations (WebUI Options pages share _i18n.sh)
+i18n_head() { :; }
+I18N="${CGI_DIR:-/www/cgi-bin}/_i18n.sh"; [ -f "$I18N" ] && . "$I18N"
+
+CONF="${UART_CONF:-/fhconf/uart.conf}"
+PROC="${UART_PROC:-/proc/driver/uart/enable}"
+
+esc() { printf '%s' "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'; }
+getp() { echo "$POST_DATA" | tr '&' '\n' | sed -n "s/^$1=//p" | head -1; }
+
+uart_val() { sed -n 's/^uart_enable=//p' "$CONF" 2>/dev/null | head -1; }
+locked() { lsattr "$CONF" 2>/dev/null | cut -d' ' -f1 | grep -q i; }
+
+# write uart_enable=$1, apply it now, and set the lock if $2 = on
+apply() {
+	chattr -i "$CONF" 2>/dev/null
+	printf '[config]\nuart_enable=%s\n' "$1" > "$CONF" || return 1
+	echo "0 $1" > "$PROC" 2>/dev/null
+	[ "$2" = "on" ] && chattr +i "$CONF" 2>/dev/null
+	return 0
+}
+
+# ---- login gate ----
+LOGIN=$(/www/cgi-bin/is_logined.cgi 2>/dev/null | sed -n 's/.*"result":"\([0-9]\)".*/\1/p' | head -1)
+if [ "$LOGIN" = "0" ]; then
+	echo "Content-type: text/html"; echo ""
+	echo "<html><head><meta charset='UTF-8'>$(i18n_head)</head><body style='font-family:sans-serif;padding:30px'><h3 data-i18n='login_first'>Please log in to the router UI first.</h3></body></html>"
+	exit 0
+fi
+
+# ---- handle Enable / Disable ----
+MSG=""; MCLASS=""; MKEY=""
+if [ "$REQUEST_METHOD" = "POST" ] && [ -n "$CONTENT_LENGTH" ]; then
+	read -n "$CONTENT_LENGTH" POST_DATA
+	ACTION=$(getp action)
+	if [ "$ACTION" = "enable" ]; then
+		LOCK=$(getp lock)
+		if apply 1 "$LOCK"; then
+			if [ "$LOCK" = "on" ]; then
+				MSG="UART enabled and locked against factory resets."; MKEY=uart_ok_lock
+			else
+				MSG="UART enabled."; MKEY=uart_ok_on
+			fi
+			MCLASS="ok"
+		else
+			MSG="Could not write $CONF."; MKEY=uart_err_write; MCLASS="err"
+		fi
+	elif [ "$ACTION" = "disable" ]; then
+		if apply 0 off; then
+			MSG="UART disabled."; MKEY=uart_ok_off; MCLASS="ok"
+		else
+			MSG="Could not write $CONF."; MKEY=uart_err_write; MCLASS="err"
+		fi
+	fi
+fi
+
+# ---- status ----
+ON=""; [ "$(uart_val)" = "1" ] && ON=1
+LOCKED=""; locked && LOCKED=1
+
+echo "Content-type: text/html"
+echo ""
+cat <<EOF
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title data-i18n="uart_title">Serial Console (UART)</title>
+$(i18n_head)
+<style>
+	body { font-family: sans-serif; background:#f1f5f9; color:#0f172a; margin:0; }
+	.container { max-width:520px; margin:30px auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+	h2 { text-align:center; margin-top:0; }
+	.msg { padding:10px 12px; border-radius:8px; margin-bottom:16px; font-weight:bold; }
+	.ok { background:#dcfce7; color:#166534; } .err { background:#fee2e2; color:#b91c1c; }
+	.status { background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:16px; font-size:14px; }
+	.desc { font-size:14px; color:#334155; }
+	.opt { display:block; margin:14px 0 0; font-size:14px; }
+	.btn { color:#fff; border:none; padding:11px; width:100%; border-radius:6px; cursor:pointer; margin-top:16px; font-size:15px; }
+	.on { background:#16a34a; } .off { background:#dc2626; }
+	.warn { background:#fef9c3; color:#854d0e; padding:8px 10px; border-radius:6px; font-size:13px; margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="container">
+	<h2 data-i18n="uart_title">Serial Console (UART)</h2>
+EOF
+
+[ -n "$MSG" ] && echo "<div class='msg $MCLASS' data-i18n='$MKEY'>$(esc "$MSG")</div>"
+
+cat <<EOF
+	<p class="desc" data-i18n="uart_desc">The firmware switches the router's serial port (UART) off after boot. Turn it on to get a console over a USB-serial adapter, handy to rescue the router if SSH and the web UI stop working.</p>
+	<div class="status">
+		<b>UART:</b> $([ -n "$ON" ] && echo "<span data-i18n='uart_on'>on</span>" || echo "<span data-i18n='uart_off'>off</span>")<br>
+		<b data-i18n="uart_lbl_lock">Survives factory reset:</b> $([ -n "$LOCKED" ] && echo "<span data-i18n='uart_locked'>yes (locked)</span>" || echo "<span data-i18n='uart_unlocked'>no</span>")
+	</div>
+EOF
+
+if [ -n "$ON" ]; then
+	cat <<EOF
+	<form method="POST">
+		<input type="hidden" name="action" value="enable">
+		<label class="opt"><input type="checkbox" name="lock" value="on" $([ -n "$LOCKED" ] && echo checked)> <span data-i18n="uart_lock_opt">Keep enabled even after a factory reset</span></label>
+		<button class="btn on" data-i18n="uart_btn_save">Save</button>
+	</form>
+	<form method="POST"><input type="hidden" name="action" value="disable"><button class="btn off" data-i18n="uart_btn_off">Disable UART</button></form>
+EOF
+else
+	cat <<EOF
+	<form method="POST">
+		<input type="hidden" name="action" value="enable">
+		<label class="opt"><input type="checkbox" name="lock" value="on"> <span data-i18n="uart_lock_opt">Keep enabled even after a factory reset</span></label>
+		<button class="btn on" data-i18n="uart_btn_on">Enable UART</button>
+	</form>
+EOF
+fi
+
+cat <<EOF
+	<div class="warn" data-i18n="uart_warn">Needs physical access: open the case and connect a 3.3 V USB-serial adapter (TX, RX, GND; usually 115200 baud). Never connect 5 V or RS-232 levels. With the lock on, a factory reset no longer turns UART off; turn the lock off here to undo it.</div>
+</div>
+</body>
+</html>
+EOF
