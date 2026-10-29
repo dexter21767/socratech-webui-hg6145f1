@@ -643,5 +643,6 @@
 	"credit_numberonedz": "WebUI personnalisée d'origine et persistance après redémarrage",
 	"credit_mrsmiiith": "accès SSH",
 	"opt_info": "Infos",
-	"login_community": "Rejoignez la communauté Socratech :"
+	"login_community": "Rejoignez la communauté Socratech :",
+	"opt_uart": "Console série (UART)"
 }

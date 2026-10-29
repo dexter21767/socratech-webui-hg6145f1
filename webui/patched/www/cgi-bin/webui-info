@@ -49,6 +49,15 @@ SSH_RUN=""; [ -f /var/run/ssh-access.pid ] && kill -0 "$(cat /var/run/ssh-access
 [ -n "$SSH_RUN" ] && SSH_ROW=$(row opt_ssh_access "SSH Access" info_on "on" "" on) \
 	|| SSH_ROW=$(row opt_ssh_access "SSH Access" info_off "off" "" off)
 
+UART_V=$(sed -n 's/^uart_enable=//p' /fhconf/uart.conf 2>/dev/null | head -1)
+if [ "$UART_V" = "1" ]; then
+	lsattr /fhconf/uart.conf 2>/dev/null | cut -d' ' -f1 | grep -q i \
+		&& UART_ROW=$(row opt_uart "Serial Console (UART)" info_uart_locked "on (survives factory reset)" "" on) \
+		|| UART_ROW=$(row opt_uart "Serial Console (UART)" info_on "on" "" on)
+else
+	UART_ROW=$(row opt_uart "Serial Console (UART)" info_off "off" "" off)
+fi
+
 [ "$(getv InternetGatewayDevice.X_FH_FiLink.X_FH_link_enable)" = "0" ] \
 	&& TR_ROW=$(row opt_disable_tr069 "Disable TR069" info_tr_applied "patch applied" "" on) \
 	|| TR_ROW=$(row opt_disable_tr069 "Disable TR069" info_tr_not "not applied" "" off)
@@ -135,6 +144,7 @@ $(i18n_head)
 	<table>
 		$VOIP_ROW
 		$SSH_ROW
+		$UART_ROW
 		$TR_ROW
 		$SR_ROW
 		$PE_ROW

@@ -643,5 +643,6 @@
 	"credit_numberonedz": "original custom WebUI and reboot persistence",
 	"credit_mrsmiiith": "SSH access",
 	"opt_info": "Info",
-	"login_community": "Join the Socratech community:"
+	"login_community": "Join the Socratech community:",
+	"opt_uart": "Serial Console (UART)"
 }
