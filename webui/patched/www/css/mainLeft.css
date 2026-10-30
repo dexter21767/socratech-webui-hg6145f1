@@ -186,3 +186,44 @@ body {
 }
 .uilang-sel:hover { border-color: #00a335; }
 .uilang-sel:focus { outline: none; border-color: #00a335; box-shadow: 0 0 0 3px rgba(0,163,53,.15); }
+
+/* ===== Phone / narrow screens ===== */
+/* The breadcrumb (label.nav-title) is a location bar that opens a full-screen menu:
+   main tabs on top, then the tab's groups as a list that expands to its pages.
+   #menu_toggle holds the open state, so no script is needed to open or close it. */
+.menu-toggle { display: none; }
+.nav-title { display: block; }
+@media (max-width: 960px) {
+    body { min-width: 0; }
+    .body { width: auto; height: 100vh; height: 100dvh; display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto auto minmax(0, 1fr); }
+    .header, .top-menu, .conter, .content { display: contents; }
+    #logo { grid-area: 1 / 1; width: 110px !important; height: 50px; background-size: contain; background-position: center; }
+    .logout { grid-area: 1 / 2; width: auto; }
+    #logout { padding: 0 12px; }
+    .nav-title { grid-area: 2 / 1 / 3 / 3; position: relative; height: auto; padding: 0 44px; line-height: 44px; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    .nav-title:before { content: ""; position: absolute; left: 13px; top: 21px; width: 18px; height: 2px; background: #fff; box-shadow: 0 -6px #fff, 0 6px #fff; }
+    .nav-title:after { content: ""; position: absolute; right: 17px; top: 14px; padding: 4px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+    .main_iframe { grid-area: 3 / 1 / 5 / 3; height: 100%; }
+    .fir-menu, .left-meun, .footer { display: none; }
+    .menu-toggle:checked ~ .body .main_iframe { visibility: hidden; }
+    .menu-toggle:checked ~ .body .nav-title:after { top: 19px; transform: rotate(-135deg); }
+    .menu-toggle:checked ~ .body .fir-menu { display: block; grid-area: 3 / 1 / 4 / 3; height: auto; padding: 8px; background: #f3f8f4; border-bottom: 1px solid #e3e3e3; }
+    .menu-toggle:checked ~ .body .left-meun { display: block; grid-area: 4 / 1 / 5 / 3; width: auto; height: auto; overflow-y: auto; background: #fff; }
+    .fir-menu ul { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fir-menu ul>li { width: auto; height: auto; padding: 0 12px; line-height: 30px; border: 1px solid #007a39; border-radius: 16px; background: #fff; color: #007a39; }
+    .fir-menu ul>li.fir-menu-open { background: #007a39; color: #fff; }
+    .sec-menu { border-top: 0; }
+    .sec-menu>li { margin: 0; }
+    .sec-menu>li>span { position: relative; padding: 0 40px 0 16px; line-height: 46px; text-indent: 0; background: #fff; color: #333; border-bottom: 1px solid #e3e3e3; }
+    .sec-menu>li>span:after { content: ""; position: absolute; right: 18px; top: 19px; padding: 3px; border: solid #999; border-width: 0 2px 2px 0; transform: rotate(-45deg); }
+    .sec-menu>li:has(> .thr-menu-open)>span { color: #007a39; }
+    .sec-menu>li:has(> .thr-menu-open)>span:after { top: 17px; border-color: #007a39; transform: rotate(45deg); }
+    .thr-menu>li { height: auto; margin: 0; padding-left: 32px; line-height: 42px; text-indent: 0; background: #f3f8f4; color: #333; border-bottom: 1px solid #e3e3e3; }
+    .thr-menu .thr-menu-select { width: auto; background: #007a39; color: #fff; }
+    [dir=rtl] .nav-title:before { left: auto; right: 13px; }
+    [dir=rtl] .nav-title:after { right: auto; left: 17px; }
+    [dir=rtl] .sec-menu>li>span { padding: 0 16px 0 40px; }
+    [dir=rtl] .sec-menu>li>span:after { right: auto; left: 18px; transform: rotate(135deg); }
+    [dir=rtl] .sec-menu>li:has(> .thr-menu-open)>span:after { transform: rotate(45deg); }
+    [dir=rtl] .thr-menu>li { padding: 0 32px 0 0; }
+}
