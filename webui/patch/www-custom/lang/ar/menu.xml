@@ -629,8 +629,6 @@
   	"ssid_name_title":"اسم SSID",
   	"ssid_pwd_title":"كلمة مرور SSID",
   	"ssid_pwd2_title":"تأكيد كلمة مرور SSID",
-	"login_show_changelog": "▶ عرض سجل التغييرات",
-	"login_hide_changelog": "▼ إخفاء سجل التغييرات",
 	"login_close": "إغلاق",
 	"webui_options": "خيارات الواجهة",
 	"webui_opts_group": "الخيارات",
@@ -644,5 +642,6 @@
 	"credit_mrsmiiith": "الوصول عبر SSH",
 	"opt_info": "معلومات",
 	"login_community": "انضم إلى مجتمعنا:",
+	"login_source": "الشيفرة المصدرية على",
 	"opt_uart": "وحدة التحكم التسلسلية (UART)"
 }

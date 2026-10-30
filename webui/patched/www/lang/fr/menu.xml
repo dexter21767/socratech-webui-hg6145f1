@@ -629,8 +629,6 @@
   	"ssid_name_title":"Nom du SSID",
   	"ssid_pwd_title":"Mot de passe du SSID",
   	"ssid_pwd2_title":"Confirmer le mot de passe du SSID",
-	"login_show_changelog": "▶ Afficher le journal des modifications",
-	"login_hide_changelog": "▼ Masquer le journal des modifications",
 	"login_close": "Fermer",
 	"webui_options": "Options WebUI",
 	"webui_opts_group": "Options",
@@ -644,5 +642,6 @@
 	"credit_mrsmiiith": "accès SSH",
 	"opt_info": "Infos",
 	"login_community": "Rejoignez la communauté Socratech :",
+	"login_source": "Code source sur",
 	"opt_uart": "Console série (UART)"
 }
