@@ -1676,3 +1676,23 @@ input[type="checkbox"]:checked::after{
     height: 9px;
     font-size: 14px;
 }
+
+/* ===== Phone / narrow screens ===== */
+@media (max-width: 600px) {
+	.main_config_body { padding: 8px; }
+	.main_item, .main_item_lan { height: auto; overflow: hidden; }
+	.main_item_name, .main_item_content, .main_item_name_lan, .main_item_content_lan {
+		width: calc(100% - 2px); height: auto; min-height: 24px; padding-bottom: 3px; margin-bottom: 1px;
+	}
+	.main_config_body table { display: block; max-width: 100%; overflow-x: auto; }
+	input, select, textarea { max-width: 100%; }
+	#loading_window_div, #pop_window_div { position: fixed; min-width: 0; min-height: 0; }
+	#pop_window_content_div { width: auto; max-width: 490px; height: auto; top: 20vh; margin: 0 12px; }
+	#pop_window_body, #pop_window_show_div, #pop_window_message, #pop_window_option { width: auto; height: auto; float: none; }
+	#pop_window_body { overflow: hidden; padding: 0 12px 12px; }
+	#pop_window_icon { display: none; }
+	#pop_window_message { padding: 20px 0; }
+	#pop_window_option { overflow: hidden; }
+	.pop_window_action { width: calc(50% - 5px); }
+	.pop_window_action:last-child { margin-right: 0; }
+}
