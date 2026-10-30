@@ -160,23 +160,6 @@ dialog::backdrop {
     text-align: center;
 }
 
-.changelog {
-    display: none;
-    background: #f5f5f5;
-    padding: 10px;
-    border-radius: 6px;
-    max-height: 150px;
-    overflow-y: auto;
-    font-size: 13px;
-}
-
-.toggle-btn {
-    cursor: pointer;
-    color: #007bff;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
 .credits {
     font-size: 13px;
     margin-top: 12px;
@@ -255,34 +238,9 @@ dialog::backdrop {
     <div class="dialog-header">Socratech WebUI &middot; HG6145F1</div>
 
     <p style="font-size:14px;text-align:center;">
+        <span i18n="login_source">Source code on</span>
+        <a href="https://github.com/dexter21767/socratech-webui-hg6145f1" target="_blank">GitHub</a>
     </p>
-
-    <div class="toggle-btn" onclick="toggleChangelog()" i18n="login_show_changelog">▶ Show Changelog</div>
-
-    <div class="changelog" id="changelogBox">
-        <b>27/04/2026</b><br>
-        - Schedule reboot<br>
-        - SSID Isolation save settings fix<br>
-        - QOS enable/disable setting fix<br>
-        - UI changes in login page<br><br>
-
-        <b>30/03/2026</b><br>
-        - TR-069 auto-enabling patch<br>
-        - Custom webui persistency across reboots (optionnal)<br><br>
-
-        <b>01/03/2026</b><br>
-        - Enable SSID Isolation<br>
-        - Enable Custom Dynamic DNS<br>
-        - Enable QoS settings<br>
-        - Enable parental control<br>
-        - Enable DLNA/Samba/NAT/ALG<br>
-        - Enable System Log view<br><br>
-
-        <b>15/02/2026 - Initial version</b><br>
-        - New login page + small UI changes<br>
-        - Enable Custom DNS (Cloudflare, Google...)<br>
-        - PPPOE/Voip password retrieval
-    </div>
 
     <div class="credits">
         <b i18n="login_credits">Credits</b>
@@ -299,21 +257,6 @@ dialog::backdrop {
         <button onclick="closeDialog()" i18n="login_close">Close</button>
     </div>
 </dialog>
-
-<script>
-function toggleChangelog() {
-    var box = document.getElementById("changelogBox");
-    var btn = document.querySelector(".toggle-btn");
-
-    if (box.style.display === "block") {
-        box.style.display = "none";
-        btn.innerHTML = "login_show_changelog".i18n();
-    } else {
-        box.style.display = "block";
-        btn.innerHTML = "login_hide_changelog".i18n();
-    }
-}
-</script>
 
 </body>
 </html>
